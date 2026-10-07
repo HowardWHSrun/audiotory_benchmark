@@ -4,9 +4,9 @@ A shared research workspace for understanding SONIC and designing the auditory s
 
 **[Open our experiment setup](https://howardwhsrun.github.io/audiotory_benchmark/web/)** · **[Read the paper notes](Paper_Notes.md)** · **[Review the setup requirements](Auditory_Setup_Requirements.md)**
 
-The homepage explains **our planned experiment**: controlled sounds delivered to sedated sheep, acoustic measurements near the ear position, and neural recordings aligned to the stimulus. Select a component to see its role and what still needs to be chosen or verified.
+The homepage shows **our planned experiment** in one diagram. Select a component for its role and the choice still open.
 
-**Paper reference** is a separate section containing the SONIC explanation, published results, and an optional interactive illustration. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
+**Paper reference** keeps the setup, illustration, and results in collapsed sections. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
 
 ![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)
 

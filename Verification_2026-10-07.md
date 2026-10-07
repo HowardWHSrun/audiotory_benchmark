@@ -8,12 +8,14 @@ This record concerns the educational application and project documentation. It i
 - Browser script syntax checks passed.
 - A headless Chrome check loaded both views without script errors: Our experiment and Paper reference.
 - Verified the homepage and legacy `#experiment` route open Our experiment; `#paper` and legacy `#results` open Paper reference. The skip link focuses main content while preserving the current view.
-- Selected all seven equipment components and checked the corresponding role, open choices, and selected state. The homepage contains no paper performance scores or transplanted hardware settings.
+- Confirmed the default homepage fits within a 1440 × 1000 desktop viewport and shows only the goal, planned status, diagram, and short labels. Removed the always-visible workflow and decision lists.
+- Selected all seven equipment components and checked their compact detail dialogs, selected state, close button, Escape dismissal, and focus return. No component or dialog is open initially. Checked dialog width at all four viewport sizes.
+- The homepage contains no paper performance scores or transplanted hardware settings.
 - Verified keyboard operation of the duration control and checked alphabet selection, 50/5 ms observation selection, step, play, and pause within the paper illustration.
-- Confirmed the paper illustration starts collapsed. Playback pauses when it closes or when leaving Paper reference.
+- Confirmed all three paper sections start collapsed: setup, illustration, and results. The legacy `#results` route opens the results disclosure. Playback pauses when the illustration closes or when leaving Paper reference.
 - Confirmed illustrative input changes leave the published achieved ITR values unchanged.
 - Confirmed eight session bars and the exact-value table match the manuscript's Table 1.
-- Checked Our experiment and Paper reference at 320, 390, 768, and 1440 pixel viewport widths, including the paper illustration both collapsed and expanded: twelve layout cases, with no page-level horizontal overflow.
+- Checked Our experiment and Paper reference at 320, 390, 768, and 1440 pixel viewport widths, including the paper illustration and results expanded independently: sixteen layout cases, with no page-level horizontal overflow.
 - Reviewed desktop and mobile captures for text, controls, diagram, and results layout. The long timeline can be scrolled horizontally on narrow screens.
 - Confirmed the application runs directly from `web/index.html` with the file protocol, without a server or external network dependencies.
 - Confirmed the saved paper is reachable from the served application. Static validation checks its SHA256 remains `3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731`.
@@ -29,6 +31,6 @@ The 56/11 ms intrinsic delay definitions exclude physiology and computation. The
 
 ## Publication checks
 
-The GitHub workflow reruns the model, syntax, source, and link checks before publishing. Its execution and deployed version are available in the repository's Actions and Pages deployment records. The live walkthrough is https://howardwhsrun.github.io/audiotory_benchmark/web/.
+The GitHub workflow reruns the model, syntax, source, and link checks before publishing. Its execution and deployed version are available in the repository's Actions and Pages deployment records. The live site is https://howardwhsrun.github.io/audiotory_benchmark/web/.
 
 The temporary browser captures and local site bundle are excluded from Git. A representative screenshot is retained in `docs/images/walkthrough.png` for the repository README.

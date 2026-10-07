@@ -41,6 +41,12 @@
 - Retained unknown local equipment choices and the distinction between awake source animals and the planned sedated preparation. No hardware or neural-performance assumption was added.
 - Legacy `#experiment` links now lead to our experiment setup; the paper material remains separately accessible. Updated the repository overview and preview to match this focus.
 
+## 2026-10-07 America/Chicago - minimal website revision
+
+- Howard asked to reduce the amount of information further. The homepage now centers on a short goal and the setup diagram, with component details shown only when selected.
+- Removed the always-visible workflow and decision summaries from the website; the detailed planning documents remain in the repository. Paper methods, illustration, and results are collapsed by default.
+- Kept the planned-sedated-sheep status, unknown equipment, microphone acoustic checks, and paper/Rice distinction accessible without repeating long explanations on the homepage.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

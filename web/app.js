@@ -30,6 +30,7 @@
     const anchorTarget = document.getElementById(view);
     const anchorView = anchorTarget && anchorTarget.closest('.view');
     if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper'].includes(view)) return;
+    const showResults = view === 'results';
     // Existing shared links continue to work after moving the Rice setup home.
     view = view === 'paper' || view === 'results' ? 'paper' : 'setup';
     $$('.view').forEach((section) => { section.hidden = section.id !== view; });
@@ -40,19 +41,22 @@
       else button.removeAttribute('aria-current');
     });
     if (view !== 'paper') setPlaying(false);
+    if (view !== 'setup' && $('#component-detail').open) $('#component-detail').close();
+    if (showResults) $('#paper-results-disclosure').open = true;
     if (location.hash !== `#${view}`) history.replaceState(null, '', `#${view}`);
     if (focus) $('#main').focus({ preventScroll: true });
   }
 
   const components = {
-    computer: { index: '01 / SOUND SOURCE', title: 'Stimulus computer', role: 'Prepare a known tone sequence and its intended start times. Keep tone identity and trial order as ground truth for later analysis.', confirm: 'Choose software, waveform specifications, and how event markers reach the acquisition system.' },
-    dac: { index: '02 / WAVEFORM OUTPUT', title: 'DAC / audio output', role: 'Convert the digital waveform into an electrical signal for sound delivery.', confirm: 'Confirm the available output device, usable bandwidth, sample rate, output routing, and clock access.' },
-    speaker: { index: '03 / SOUND DELIVERY', title: 'Amplifier + speaker', role: 'Deliver the tones through the air. Use an amplifier if the chosen speaker requires one, and measure the delivered sound at the ear position.', confirm: 'Choose the actual models, geometry, usable frequency range, and operating level from calibration evidence.' },
-    sheep: { index: '04 / NEURAL RESPONSE', title: 'Sedated sheep', role: 'The planned preparation receives sound while auditory-cortex activity is recorded. A sound-isolation box or behavioral rig is not required for this plan.', confirm: 'Agree on sedation and monitoring with the experiment owners. Establish response timing and suitable analysis windows in this preparation.' },
-    interface: { index: '05 / NEURAL MEASUREMENT', title: 'Neural interface', role: 'Measure the auditory-cortex response and pass neural signals to the recording system.', confirm: 'Confirm the actual interface, channel coverage, sampling settings, references, and access to timestamped data.' },
-    recorder: { index: '06 / DATA CAPTURE', title: 'Recorder', role: 'Save neural data together with event timing, a synchronized reference, or aligned acquisition signals.', confirm: 'Specify marker inputs and clock sharing. Measure offset, jitter, drift, and missing-event handling before interpreting neural response times.' },
-    microphone: { index: 'SOUND CHECK / AT THE EAR POSITION', title: 'Calibration microphone', role: 'Measure delivered sound level, frequency response, and the actual acoustic onset near the ear position.', confirm: 'Choose a calibrated microphone and acquisition route. Confirm its usable range and synchronization with event and neural timestamps.' }
+    computer: { title: 'Stimulus computer', role: 'Prepare known tones and their intended start times.', confirm: 'Choose software, waveform settings, and event-marker output.' },
+    dac: { title: 'DAC / audio output', role: 'Convert the digital waveform into an electrical signal.', confirm: 'Choose the device, bandwidth, sampling rate, and clock connection.' },
+    speaker: { title: 'Speaker', role: 'Deliver sound through the air, using an amplifier if needed.', confirm: 'Choose the speaker, ear–speaker geometry, usable frequencies, and calibrated level.' },
+    sheep: { title: 'Sedated sheep', role: 'Record sound-evoked cortical responses under sedation; the reference paper used awake sheep.', confirm: 'Agree on sedation and response windows; no sound-isolation box or behavioral rig is required.' },
+    interface: { title: 'Neural interface', role: 'Measure auditory-cortex signals and pass them to the recorder.', confirm: 'Identify the device, channel coverage, sampling settings, and data access.' },
+    recorder: { title: 'Recorder', role: 'Save neural activity alongside trial timing.', confirm: 'Choose marker routing and clock alignment, then measure offset, jitter, and drift.' },
+    microphone: { title: 'Microphone near ear', role: 'Measure actual sound onset, level, and frequency response near the ear position.', confirm: 'Choose a calibrated microphone and synchronize its acquisition with neural timestamps.' }
   };
+  let componentTrigger = null;
 
   function selectComponent(key) {
     const component = components[key];
@@ -62,10 +66,11 @@
       button.classList.toggle('selected', active);
       button.setAttribute('aria-pressed', String(active));
     });
-    $('#component-index').textContent = component.index;
     $('#component-title').textContent = component.title;
     $('#component-role').textContent = component.role;
     $('#component-confirm').textContent = component.confirm;
+    componentTrigger = $(`[data-component="${key}"]`);
+    if (!$('#component-detail').open) $('#component-detail').showModal();
   }
 
   function frequencyForTone(index) {
@@ -211,6 +216,19 @@
 
   $$('.nav-tab').forEach((button) => button.addEventListener('click', () => switchView(button.dataset.view)));
   $$('[data-component]').forEach((button) => button.addEventListener('click', () => selectComponent(button.dataset.component)));
+  $('#component-close').addEventListener('click', () => $('#component-detail').close());
+  $('#component-detail').addEventListener('close', () => {
+    $$('[data-component]').forEach((button) => {
+      button.classList.remove('selected');
+      button.setAttribute('aria-pressed', 'false');
+    });
+    if (componentTrigger && !$('#setup').hidden) componentTrigger.focus({ preventScroll: true });
+  });
+  $('#component-detail').addEventListener('click', (event) => {
+    if (event.target !== event.currentTarget) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) event.currentTarget.close();
+  });
   $$('[data-go-view]').forEach((button) => button.addEventListener('click', () => {
     switchView(button.dataset.goView, true);
     window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' });

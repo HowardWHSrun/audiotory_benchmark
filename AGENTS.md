@@ -9,6 +9,7 @@ Howard asked on October 7, 2026 for this project's work to be kept on GitHub fro
 - The visual walkthrough is in `web/`. GitHub Pages publishes checked changes from `main`; verify deployment when changing the walkthrough.
 - The homepage should explain **our planned experiment setup**. Keep the SONIC explanation, published results, and illustrative paper controls together in a separate **Paper reference** section.
 - The default page is Our experiment. Legacy `#experiment` links should also open our setup, so existing browser tabs do not keep showing the paper walkthrough as the homepage.
+- Keep the website sparse: a short goal and setup diagram on the homepage, component explanations shown on selection, and paper details collapsed by default. Detailed planning records belong in the repository documents.
 - Keep temporary renders, browser captures, dependency folders, credentials, and local build output out of commits. Do not treat synthetic displays as experimental data.
 - Do not change neighboring research projects for this work.
 

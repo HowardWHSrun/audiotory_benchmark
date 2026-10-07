@@ -2,11 +2,13 @@
 
 A shared research workspace for understanding SONIC and designing the auditory stimulus setup for Rice's planned sheep measurements.
 
-**[Open the visual walkthrough](https://howardwhsrun.github.io/audiotory_benchmark/web/)** · **[Read the paper notes](Paper_Notes.md)** · **[Review the setup requirements](Auditory_Setup_Requirements.md)**
+**[Open our experiment setup](https://howardwhsrun.github.io/audiotory_benchmark/web/)** · **[Read the paper notes](Paper_Notes.md)** · **[Review the setup requirements](Auditory_Setup_Requirements.md)**
 
-The walkthrough shows how sounds become neural recordings and decoded predictions, lets you inspect illustrative timing, and presents the paper's published results. Its animated activity is synthetic. It does not play sounds, connect to instruments, or report Rice experimental results.
+The homepage explains **our planned experiment**: controlled sounds delivered to sedated sheep, acoustic measurements near the ear position, and neural recordings aligned to the stimulus. Select a component to see its role and what still needs to be chosen or verified.
 
-![Interactive SONIC walkthrough with tone controls and the sound-to-decoder path](docs/images/walkthrough.png)
+**Paper reference** is a separate section containing the SONIC explanation, published results, and an optional interactive illustration. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
+
+![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)
 
 ## Current direction
 
@@ -38,7 +40,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 - [Verification record](Verification_2026-10-07.md): model, browser, layout, source, and link checks.
 - [Source register](sources/README.md): pinned manuscript, citation, and team-message evidence.
 
-## Use the walkthrough locally
+## Use the site locally
 
 Open `web/index.html` in a browser. No installation or build step is needed. You can also serve the project folder:
 
@@ -57,7 +59,7 @@ python3 scripts/validate_site.py
 python3 scripts/build_site.py
 ```
 
-The GitHub workflow checks the source and publishes the walkthrough on pushes to `main`. Build output and temporary browser captures are not committed.
+The GitHub workflow checks the source and publishes the site on pushes to `main`. Build output and temporary browser captures are not committed.
 
 ## Sources and interpretation
 

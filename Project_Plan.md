@@ -29,7 +29,7 @@ Use these labels throughout the project:
 | Workstream | Concrete output | Completion evidence |
 |---|---|---|
 | Paper review | Verified method ledger and explanation of the sound-to-neural-decoding experiment. | [Paper notes](Paper_Notes.md) with page citations and explicit gaps. |
-| Visual walkthrough | Browsable explanation of stimuli, delivery, recording, timing and analysis. | Working educational visualization with examples labeled as illustrations; separate from hardware playback or real-recording analysis. |
+| Experiment website | Main page explains our planned sedated-sheep setup, sound/calibration paths, recording alignment, and open equipment choices. SONIC explanation and results stay within a separate Paper reference section. | Working setup diagram with component details; paper illustrations labeled and distinct from hardware playback or real-recording analysis. |
 | Local inventory | Models, interfaces, calibration resources and practical gaps. | [Inventory](Equipment_Software_Inventory.md) supported by inspection, manuals or direct team input. |
 | Sound generation | Waveform/sequence specification, delivery path and run manifest. | Exact parameters recorded; missing paper details resolved or declared as Rice adaptations. |
 | Speaker and measurement | Suitable speaker/amplifier proposal and microphone/calibration method. | Frequency coverage, placement, level convention and measurement capability documented. |
@@ -38,7 +38,7 @@ Use these labels throughout the project:
 | Sheep response pilot | Documented sound-evoked recordings in the intended sedated condition. | Recorded response, quality and timing; any decoding uses a declared evaluation protocol. This stage is not complete. |
 | Visual/rodent feasibility | Focused notes on stimulus delivery, response timing and access requirements. | Intended-setup evidence and relevant lab expertise; no informal impression becomes a surgical procedure. |
 
-The visual walkthrough supports understanding and planning. It does not establish that bench stimulus code, calibrated hardware or animal recordings exist.
+The website supports planning our experiment, with the paper as a reference. It does not establish that bench stimulus code, calibrated hardware or animal recordings exist.
 
 ## Focused McGinley follow-up
 

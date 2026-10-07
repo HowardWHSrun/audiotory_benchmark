@@ -34,6 +34,13 @@
 - Added repository working instructions, scientific model checks, local link/source validation, and a static GitHub Pages publishing workflow. Verification and publication evidence are recorded in `Verification_2026-10-07.md` when complete.
 - No external messages, calendar bookings, orders, animal experiments, or bench tests were performed. The image filename in the supplied conversation was not accompanied by an image; no claim about its contents is made.
 
+## 2026-10-07 America/Chicago - setup-first website revision
+
+- Howard requested a cleaner website with our planned experiment as the main section and the paper explanation confined to one separate section.
+- Reorganized the site around Our experiment and Paper reference. The main page presents the planned sedated-sheep sound, calibration, recording, and timing paths; published settings and results remain in Paper reference.
+- Retained unknown local equipment choices and the distinction between awake source animals and the planned sedated preparation. No hardware or neural-performance assumption was added.
+- Legacy `#experiment` links now lead to our experiment setup; the paper material remains separately accessible. Updated the repository overview and preview to match this focus.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

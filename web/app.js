@@ -23,7 +23,15 @@
   let timer = null;
 
   function switchView(view, focus = false) {
-    if (!['experiment', 'setup', 'results'].includes(view)) view = 'experiment';
+    if (view === 'main') {
+      $('#main').focus({ preventScroll: true });
+      return;
+    }
+    const anchorTarget = document.getElementById(view);
+    const anchorView = anchorTarget && anchorTarget.closest('.view');
+    if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper'].includes(view)) return;
+    // Existing shared links continue to work after moving the Rice setup home.
+    view = view === 'paper' || view === 'results' ? 'paper' : 'setup';
     $$('.view').forEach((section) => { section.hidden = section.id !== view; });
     $$('.nav-tab').forEach((button) => {
       const active = button.dataset.view === view;
@@ -31,9 +39,33 @@
       if (active) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');
     });
-    if (view !== 'experiment') setPlaying(false);
+    if (view !== 'paper') setPlaying(false);
     if (location.hash !== `#${view}`) history.replaceState(null, '', `#${view}`);
     if (focus) $('#main').focus({ preventScroll: true });
+  }
+
+  const components = {
+    computer: { index: '01 / SOUND SOURCE', title: 'Stimulus computer', role: 'Prepare a known tone sequence and its intended start times. Keep tone identity and trial order as ground truth for later analysis.', confirm: 'Choose software, waveform specifications, and how event markers reach the acquisition system.' },
+    dac: { index: '02 / WAVEFORM OUTPUT', title: 'DAC / audio output', role: 'Convert the digital waveform into an electrical signal for sound delivery.', confirm: 'Confirm the available output device, usable bandwidth, sample rate, output routing, and clock access.' },
+    speaker: { index: '03 / SOUND DELIVERY', title: 'Amplifier + speaker', role: 'Deliver the tones through the air. Use an amplifier if the chosen speaker requires one, and measure the delivered sound at the ear position.', confirm: 'Choose the actual models, geometry, usable frequency range, and operating level from calibration evidence.' },
+    sheep: { index: '04 / NEURAL RESPONSE', title: 'Sedated sheep', role: 'The planned preparation receives sound while auditory-cortex activity is recorded. A sound-isolation box or behavioral rig is not required for this plan.', confirm: 'Agree on sedation and monitoring with the experiment owners. Establish response timing and suitable analysis windows in this preparation.' },
+    interface: { index: '05 / NEURAL MEASUREMENT', title: 'Neural interface', role: 'Measure the auditory-cortex response and pass neural signals to the recording system.', confirm: 'Confirm the actual interface, channel coverage, sampling settings, references, and access to timestamped data.' },
+    recorder: { index: '06 / DATA CAPTURE', title: 'Recorder', role: 'Save neural data together with event timing, a synchronized reference, or aligned acquisition signals.', confirm: 'Specify marker inputs and clock sharing. Measure offset, jitter, drift, and missing-event handling before interpreting neural response times.' },
+    microphone: { index: 'SOUND CHECK / AT THE EAR POSITION', title: 'Calibration microphone', role: 'Measure delivered sound level, frequency response, and the actual acoustic onset near the ear position.', confirm: 'Choose a calibrated microphone and acquisition route. Confirm its usable range and synchronization with event and neural timestamps.' }
+  };
+
+  function selectComponent(key) {
+    const component = components[key];
+    if (!component) return;
+    $$('[data-component]').forEach((button) => {
+      const active = button.dataset.component === key;
+      button.classList.toggle('selected', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    $('#component-index').textContent = component.index;
+    $('#component-title').textContent = component.title;
+    $('#component-role').textContent = component.role;
+    $('#component-confirm').textContent = component.confirm;
   }
 
   function frequencyForTone(index) {
@@ -178,6 +210,7 @@
   }
 
   $$('.nav-tab').forEach((button) => button.addEventListener('click', () => switchView(button.dataset.view)));
+  $$('[data-component]').forEach((button) => button.addEventListener('click', () => selectComponent(button.dataset.component)));
   $$('[data-go-view]').forEach((button) => button.addEventListener('click', () => {
     switchView(button.dataset.goView, true);
     window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
@@ -205,6 +238,9 @@
   }));
   $('#play-button').addEventListener('click', () => setPlaying(!state.playing));
   $('#next-button').addEventListener('click', () => { setPlaying(false); advance(); });
+  $('#paper-walkthrough').addEventListener('toggle', (event) => {
+    if (!event.target.open) setPlaying(false);
+  });
   window.addEventListener('hashchange', () => switchView(location.hash.slice(1)));
   document.addEventListener('visibilitychange', () => { if (document.hidden) setPlaying(false); });
   renderControls();
@@ -212,5 +248,5 @@
   renderStage();
   renderTimeline();
   renderResults();
-  switchView(location.hash.slice(1) || 'experiment');
+  switchView(location.hash.slice(1) || 'setup');
 })();

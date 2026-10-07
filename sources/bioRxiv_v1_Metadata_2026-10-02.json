@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "status": "ok",
+      "category": "all"
+    }
+  ],
+  "collection": [
+    {
+      "title": "SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces",
+      "authors": "Perkins, S. M.; Trumpis, M.; Reitman, M. E.; Jarosiewicz, B.; Patel, A. N.; Weiss, A.; Scott, J. W.; Nishimura, K.; Angle, M. R.; Qiao, S.; Gilja, V.",
+      "author_corresponding": "Vikash Gilja",
+      "author_corresponding_institution": "Paradromics, Inc.",
+      "doi": "10.1101/2025.09.30.679683",
+      "date": "2025-10-02",
+      "version": "1",
+      "type": "new results",
+      "license": "cc_by_nc_nd",
+      "category": "bioengineering",
+      "jatsxml": "https://www.biorxiv.org/content/early/2025/10/02/2025.09.30.679683.source.xml",
+      "abstract": "Brain-computer interfaces (BCIs) can restore function for individuals with neuro-logical disorders and have the potential to transform the way people interact with digital systems. However, the development of advanced BCI applications, such as fluent speech synthesis, is dependent on the underlying information transfer capacity of the physical neural interface employed. A significant barrier to progress has been the lack of standardized, application-agnostic methods for benchmarking BCI system performance prior to clinical trials. Here, we introduce SONIC, a novel preclinical benchmarking paradigm designed to evaluate the information transfer rate (ITR) of a BCI system. This paradigm treats the brain and BCI as a noisy communication channel, where information is sent into the brain via precisely controlled sensory stimuli and read out by the neural interface. We implemented this paradigm in an ovine model by presenting rapid sequences of pure tones while recording neural activity from the primary auditory cortex with the Paradromics Connexus(C) BCI, a fully implanted system utilizing high-density intracortical micro-electrode arrays with wireless power and data transmission. A convolutional neural network was used to decode tones based on neural features. Our results demonstrate an achieved ITR of over 200 bits per second (bps), which is the highest reported BCI ITR to date. For reference, this rate exceeds the linguistic information content of human speech. This ITR is achieved with a total neural interface, filtering, and data aggregation delay of 56 milliseconds. Further analysis demonstrated that ITR remains high (> 100 bps) for the lowest total delay tested (11 ms), supporting the needs of latency-sensitive applications (e.g., direct speech synthesis). This work establishes a new benchmark for BCI performance and demonstrates that the Connexus BCI possesses the bandwidth necessary to support highly advanced applications. This benchmark provides a robust framework for preclinical BCI evaluation, enabling principled system design optimization to accelerate the translation of next-generation neurotechnology.",
+      "published": "NA",
+      "server": "bioRxiv"
+    }
+  ]
+}

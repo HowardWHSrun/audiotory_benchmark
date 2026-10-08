@@ -43,6 +43,8 @@ Howard asked us to assume the mouse setup must be assembled. Each function below
 | Calibration/support | Reference, mounts, cables, power, storage | Traceable level measurement, stable geometry, data records |
 | Behavior camera/enclosure | Optional | Include only if needed; verify camera frame timing if used |
 
+Pricing is recorded separately in the [expanded equipment list](Mouse_Equipment_Pricing_2026-10-08.md). Public price listings do not change the availability status above.
+
 ## Educational software
 
 The project includes a visual experiment walkthrough. Illustrative sounds, figures and calculations should be labeled as examples. A frontend does not confirm an experimental playback program, calibrated output, acquisition synchronization or a neural-data decoder. Keep these statuses distinct.

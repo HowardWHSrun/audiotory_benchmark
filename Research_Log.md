@@ -94,6 +94,14 @@
 - Verification passed: desktop LaTeX compilation, export of the same source, visual review of both pages, five correct PDF source-link targets, no overfull content, repository validation of 129 references and the unchanged SONIC checksum, and diff checks. A separate content review checked the paper/BCM/Rice distinction and clarified the ES1 range wording. Temporary compiler/render files remain outside the repository.
 - No equipment access, purchase, hardware connection, acoustic measurement, animal procedure, external message, or website content change was performed.
 
+## 2026-10-08 America/Chicago - expanded equipment list and pricing
+
+- Howard requested a more extensive equipment list with prices. Researched new-item public listings and manufacturer list prices for sound delivery, acoustic measurement/calibration, timing connections, neural recording comparisons, computer/storage, optional video, software, and setup support.
+- Added a dated pricing record with exact SKUs, unit/package basis, original currency, links, bundled contents, stock limits, and quote/model-open labels. Excluded used listings and avoided counting alternatives or bundled accessories twice.
+- Included partial subtotals rather than an unsupported complete budget. TDT and most B&K items require quotes; the Rice neural system, implant, mouse preparation, and final frequency band remain open.
+- Kept the two-page outline and added four pricing pages. Desktop LaTeX compilation and PDF export succeeded; visual review covered all six pages with no overflow. Programmatic checks confirmed the four pricing sections, six correct subtotals, 38 HTTPS PDF links, and continued removal of "Start here." Repository validation passed for 182 references and the unchanged SONIC checksum; diff checks passed. Independent acoustic and supporting-equipment reviews found no material corrections. Temporary renders and compiler files remain outside the repository.
+- No vendor contact, quote request, purchase, hardware connection, or experiment was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

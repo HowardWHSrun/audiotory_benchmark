@@ -2,13 +2,15 @@
 \usepackage[margin=0.85in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{enumitem,xcolor,hyperref}
+\usepackage{enumitem,xcolor,hyperref,tabularx,booktabs}
 \definecolor{muted}{RGB}{82,88,94}
 \hypersetup{colorlinks=true,urlcolor=black,pdftitle={Mouse auditory experiment: simple setup draft},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{7pt}
 \setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt}
-\pagestyle{empty}
+\pagestyle{plain}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}{>{\raggedright\arraybackslash}p{1.22in}}
 \newcommand{\topic}[1]{\vspace{7pt}{\large\bfseries #1}\par}
 \newcommand{\sonicref}[1]{{\small\color{muted}(Methods #1)}}
 \newcommand{\equipref}[1]{{\small\color{muted}(#1)}}
@@ -78,5 +80,148 @@ Xiaorong forwarded Tinghan's equipment list. We will use it to compare options; 
 
 \vspace{6pt}\hrule\vspace{3pt}
 {\footnotesize\color{muted}Equipment candidates are from the forwarded BCM list; linked specifications were checked October 8, 2026. Mouse state, frequency range, and final hardware remain open.}
+
+\newpage
+{\LARGE\bfseries Prices: sound delivery}\par
+{\color{muted}Checked October 8, 2026; one new item/package per row}\par
+
+Prices are USD unless marked EUR. \textbf{Quote} means no public numerical price was verified. Shipping and taxes are extra unless stated by the seller. Choose one sound path; the rows are alternatives.
+
+{\small\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}L P L@{}}
+\toprule
+\textbf{Item} & \textbf{Price} & \textbf{What it covers / status} \\
+\midrule
+\href{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{TDT ES1} & Quote & Speaker through the air; intended use from 4 kHz. \\
+\href{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{TDT EC1} & Quote & Tubing/coupler speaker; alternative to ES1. \\
+\href{https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/}{TDT ED1} & Quote & Driver for ES1/EC1; needs waveform input. \\
+\href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{TDT ZB1PS} & Quote & Powered chassis for ED1 or SA1. \\
+\href{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{TDT MF1} & Quote & SONIC speaker; specify package and check availability. \\
+\href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{TDT SA1} & Quote & SONIC amplifier; also needs zBus power. \\
+\href{https://www.digikey.com/en/products/detail/peerless-by-tymphany/XT25TG30-04/6557547}{Peerless XT25TG30-04} & \$28.47 & Bare tweeter; DigiKey showed zero stock. \\
+\href{https://www.madisoundspeakerstore.com/soft-dome-tweeters-scanspeak/scan-speak-r2004/602200-19mm-small-ring-radiator-tweeter/}{Scan-Speak R2004/602200} & \$178.60 & Bare tweeter; stock unconfirmed. \\
+\href{https://www.sweetwater.com/store/detail/SLA1--art-sla-1-100-watt-power-amplifier}{ART SLA-1} & \$279.99 & Conventional amplifier candidate; in stock displayed. \\
+\href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI USB-6361, 781442-01} & \$3,030.42 & Timed output/DAQ; dealer price includes duties/tariffs. \\
+\href{https://digilent.com/shop/analog-discovery-3/}{Digilent Analog Discovery 3} & \$379.00 & Optional bench waveform device; final playback suitability unverified. \\
+\bottomrule
+\end{tabularx}}
+
+\topic{What else goes with these?}
+\begin{itemize}
+\item ES1/EC1 use ED1; MF1 uses SA1. Either TDT route needs zBus power. Confirm supplied speaker cables and stands before adding extra charges.
+\item Either bare tweeter needs a suitable conventional amplifier, wiring, and mounting. ART is a candidate; it does not drive ES1/EC1.
+\item NI and AD3 are output alternatives. AD3 sequence length and tone-marker timing need bench checks before use in the final setup.
+\end{itemize}
+{\footnotesize\color{muted}Item names link to listings/docs. TDT pricing uses its \href{https://www.tdt.com/request-a-quote/}{quote route}. Prices do not establish calibrated frequency coverage or equipment access.}
+
+\newpage
+{\LARGE\bfseries Prices: sound measurement}\par
+{\color{muted}Choose one complete microphone and recording path}\par
+
+Avisoft values are its \href{https://avisoft.com/price-list-ordering-information/}{published USD prices}. \textbf{Edu} is a conditional educational price; Rice eligibility needs confirming.
+
+{\small\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\linewidth}{@{}L P L@{}}
+\toprule
+\textbf{Item / SKU} & \textbf{Price} & \textbf{Included / needed} \\
+\midrule
+116Hm base, 41165/41166 & \$7,200\newline\$6,360 edu & Recorder interface; microphone extra; software included. \\
+116Hm kit, 51165/51166 & \$8,160\newline\$7,320 edu & Microphone/preamp, cable, stand, and software included. \\
+CM16/CMPA, 40011 & \$1,080 & Mic kit for USG; already in the complete 116Hm kit. \\
+Mic power module, 40017 & \$1,320 & Possible B\&K-preamp-to-USG conditioning. \\
+CM16/CMPA-5V, 40013 & \$1,800 & External-DAQ mic package; no anti-alias filter. \\
+CM16/CMPA40-5V, 40014 & \$2,160 & Adds gain; no anti-alias filter. \\
+CM16/CMPA48AAF-5V, 40026 & \$2,580 & Gain/filter package for compatible external acquisition. \\
+40 kHz reference, 60105 & \$552 & One-frequency acoustic reference. \\
+\href{https://www.bksv.com/-/media/literature/Product-Data/bp1851.ashx}{B\&K 4939} & Quote & Cartridge; preamp, conditioning, and ADC extra. \\
+\href{https://www.bksv.com/transducers/acoustic/microphones/microphone-set/4939-a-011}{B\&K 4939-A-011} & Quote & Includes 4939 and 2670 preamplifier. \\
+\href{https://www.hbkworld.com/ko/products/transducers/acoustic/microphone-preamplifiers/classic-type/2670}{B\&K 2670} & Quote & Standalone preamp; omit if already in the set. \\
+\href{https://www.hbkworld.com/en/products/instruments/sound-vibration-daq/nexus/2690-a-0f2-microphone}{NEXUS 2690-A-0F2} & Quote & Conditioner option; still needs acoustic ADC. \\
+\href{https://www.leasametric.com/en/product/bruel-kjaer-4231/}{B\&K 4231 calibrator} & EUR 1,764 & New listing; excludes VAT; availability to confirm. \\
+\href{https://www.bksv.com/doc/bp1311.pdf}{DP-0775 adaptor} & Quote & Quarter-inch adaptor for the 4939. \\
+\bottomrule
+\end{tabularx}}
+
+\begin{itemize}
+\item Complete packages replace their included parts. Do not add a second microphone, preamp, or software license.
+\item The filtered 40026 + NI path is an alternative to a USG recorder. Its gain, wiring, sampling, and software still need checking.
+\item A 40 kHz or 1 kHz reference checks one frequency. We still need calibration information across our chosen tone range.
+\end{itemize}
+
+\newpage
+{\LARGE\bfseries Prices: recording and data}\par
+{\color{muted}Examples for functions we still need to provide}\par
+
+The Intan items show what a separate neural system could cost. Our implant and recorder choice remain open.
+
+{\small\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}L P L@{}}
+\toprule
+\textbf{Item} & \textbf{Price} & \textbf{What remains} \\
+\midrule
+\href{https://www.intantech.com/pricing.html}{Intan C3004 RHD controller} & \$9,950 list & Includes USB/power cables; supplier confirmation needed. \\
+\href{https://www.intantech.com/pricing.html}{Intan C3314, 32-channel headstage} & \$940 list & Check electrode/implant connector. \\
+\href{https://www.intantech.com/pricing.html}{Intan C3203 SPI cable, 0.9 m} & \$215 list & One headstage connection. \\
+Electrode/probe and adapter & Model open & Choose with the team; not in Intan subtotal. \\
+\href{https://www.dell.com/en-us/shop/desktop-computers/spd/dellslimecs1250/ecs1250_so_16}{Dell Slim ECS1250, offer ecs1250\_so\_16} & \$549.99 offer & Windows 11, i3, 8 GB/512 GB; monitor extra. \\
+\href{https://www.samsung.com/us/memory-storage/portable-ssd/portable-ssd-t7-shield-usb-3-2-2tb-black-sku-mu-pe2t0s-am/}{Samsung T7 Shield 2 TB, MU-PE2T0S/AM} & \$574.99 listed & Delivery unavailable on Samsung page; reference only. \\
+Monitor / PC upgrades / backup storage & Model open & Match acquisition load and data volume. \\
+\href{https://www.edmundoptics.com/p/basler-ace-aca1300-200um-monochrome-usb-30-camera/3418/}{Basler acA1300-200um camera} & \$585.00 & Optional body; lens, USB/I/O cables, light, and mount extra. \\
+Camera accessories & Model open & Price after field of view and geometry are chosen. \\
+\href{https://www.intantech.com/recording_controller.html}{Intan RHX software} & Free & Hardware is priced separately. \\
+\href{https://digilent.com/shop/software/digilent-waveforms/}{Digilent WaveForms} & Free & For the AD3 bench path. \\
+RECORDER USGH & Included & Already counted with USG hardware. \\
+Stimulus/control and analysis software & Tool open & Development time and any paid license extra. \\
+\bottomrule
+\end{tabularx}}
+
+\begin{itemize}
+\item These are comparison prices, not selected models. Match the computer and headstage to the actual recording plan.
+\item Record tone markers in the neural data. Use suitable acoustic acquisition for microphone waveforms; neural inputs do not establish ultrasound capture.
+\item The sound, acoustic, neural, and optional video clocks still need an alignment check.
+\end{itemize}
+
+\newpage
+{\LARGE\bfseries Smaller parts and subtotals}\par
+{\color{muted}Final quantities depend on our connection diagram}\par
+
+{\small\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\linewidth}{@{}L P L@{}}
+\toprule
+\textbf{Part / support} & \textbf{Price} & \textbf{How to count it} \\
+\midrule
+\href{https://www.newark.com/pomona/2249-c-36/coaxial-cable-assembly-bnc-male/dp/35F1074}{Pomona 2249-C-36 BNC cable} & \$30.99 each & Example 0.9 m cable; count from wiring map. \\
+\href{https://avisoft.com/price-list-ordering-information/}{Avisoft 52002 DIN adapter} & \$48 each & USG timing connection option. \\
+\href{https://avisoft.com/price-list-ordering-information/}{Avisoft 50021 XLR-5 cable, 2 m} & \$60 each & Extra only if kit cable is unsuitable. \\
+\href{https://www.sweetwater.com/store/detail/MicStdDesk--on-stage-stands-ds7200b-adjustable-height-desktop-stand}{On-Stage DS7200B stand} & \$15.95 each & Extra only if needed; clamp/adapter separate. \\
+TDT speaker cable & Check package & May already be supplied. \\
+Speaker wiring / output-device adapters & Model open & Match chosen amplifier and DAC connectors. \\
+Clock/level interface, if needed & Model open & Match recorder inputs before pricing. \\
+Fixed mounts / clamps / base / baffle & Design open & Choose after geometry; omit bundled stands. \\
+Animal support equipment & Preparation open & Depends on later awake/sedated decision. \\
+Enclosure / acoustic treatment & Optional & Soundproof box not required by current direction. \\
+\bottomrule
+\end{tabularx}}
+
+\topic{Partial subtotals of priced parts}
+{\small\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\linewidth}{@{}L P@{}}
+\toprule
+\textbf{One of each named item} & \textbf{Subtotal} \\
+\midrule
+NI + 40026 filtered microphone package + 40 kHz reference & \$6,162.42 \\
+NI + complete 116Hm kit + 40 kHz reference & \$11,742.42 \\
+Same, using an eligible educational 116Hm kit & \$10,902.42 \\
+Intan controller + 32-channel headstage + SPI cable & \$11,105 list \\
+Peerless + ART amplifier & \$308.46 \\
+Scan-Speak + ART amplifier & \$458.59 \\
+\bottomrule
+\end{tabularx}}
+
+\begin{itemize}
+\item These sums cover only the named parts. Add remaining speaker, neural, computer, wiring, mounting, and calibration costs for the chosen path.
+\item Quote-only and model-open items are unpriced; they are not zero-cost items. Tax, shipping, and integration work are additional.
+\end{itemize}
+{\footnotesize\color{muted}Public prices checked October 8, 2026. No supplier quote, equipment order, or measured compatibility is implied.}
 
 \end{document}

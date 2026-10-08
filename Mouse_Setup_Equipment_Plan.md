@@ -49,4 +49,6 @@ For 116Hm, the DIN marker is embedded in 16-bit recorded samples and is unavaila
 
 A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal support requirements follow the later awake/sedated preparation decision.
 
-All listed chains are proposals. We have not selected final models, obtained prices/access commitments, connected hardware, or measured performance. Manufacturer documents were checked October 8, 2026.
+See the [expanded equipment list and prices](Mouse_Equipment_Pricing_2026-10-08.md) for public prices, quote-only items, package contents, and partial subtotals.
+
+All listed chains are proposals. Public price research does not establish access commitments, a supplier quotation, or a selected final configuration. We have not connected hardware or measured performance. Manufacturer documents were checked October 8, 2026.

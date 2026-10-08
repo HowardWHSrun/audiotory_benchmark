@@ -1,5 +1,11 @@
 # Source register
 
+## Equipment pricing snapshot
+
+[Expanded pricing record](../Mouse_Equipment_Pricing_2026-10-08.md), checked October 8, 2026. Each numeric price is linked to its manufacturer or direct seller. Avisoft prices are USD; Intan figures are manufacturer list prices with distributor confirmation required; Dell is an exact-configuration offer; the new B&K 4231 seller listing is EUR excluding VAT. No exchange-rate conversion, used-equipment substitution, or complete-system price is inferred.
+
+The record also uses official NI package information, Avisoft microphone-variant documentation, ART amplifier specifications, Intan recording specifications, and Basler trigger specifications to identify dependencies. Search-index and directly refreshed NI prices differed; the record uses the refreshed exact SKU price. Stock for the Scan-Speak listing is unconfirmed; Samsung's listed SSD showed delivery unavailable. No quote requests, vendor contacts, or orders were sent.
+
 ## BCM equipment suggestions and manufacturer checks
 
 Consulted October 8, 2026 for the [mouse equipment plan](../Mouse_Setup_Equipment_Plan.md) and the added equipment page in the [simple PDF](../output/pdf/Mouse_Auditory_Experiment.pdf).

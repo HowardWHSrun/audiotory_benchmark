@@ -23,32 +23,29 @@ We want to play a tone, record the brain's response with our lab's probes, and s
 {\small\fbox{Computer} $\rightarrow$ \fbox{NI sound output} $\rightarrow$ \fbox{Amplifier} $\rightarrow$ \fbox{Speaker} $\rightarrow$ \fbox{Mouse}}
 \end{center}
 \begin{itemize}
-\item The computer prepares the tones. The NI box sends the signal, the amplifier drives the speaker, and the speaker plays the sound.
-\item A microphone checks the sound where the animal's ear will be.
-\item A timing signal goes to the lab's brain recorder, so we can match each tone to the recorded response.
+\item \textbf{Our plan:} the computer prepares the tones. The NI box sends the signal through an SA1 amplifier to an MF2-M speaker.
+\item \textbf{SONIC:} used the same NI USB-6361 and SA1, with an MF1 speaker. \textit{(Methods 6.2, p.11)}
 \end{itemize}
 
 \topic{1. Decide what to play}
 \begin{itemize}
-\item Choose how high or low each tone is, how long it lasts, how loud it is, and the gap between tones.
-\item Prepare and save the full tone sequence before we play it. Keep it with the recordings so we can identify the tone for each trial.
+\item \textbf{Our plan:} choose each tone's frequency, duration, loudness, and the gap between tones. Prepare and save the sequence with the recordings so we know which tone belongs to each trial.
+\item \textbf{SONIC:} explored 1.4--32 kHz and used 10 ms tones for benchmarking, with 2 ms fades at each end. Tones were random and balanced within blocks, with no gaps between tones and 1 second of silence between blocks. \textit{(6.1--6.2, p.11)}
 \end{itemize}
 
 \topic{2. Check what reaches the ear}
 \begin{itemize}
-\item Fix the speaker in place and record its distance and angle.
-\item Put the microphone at the ear position. Check every tone's level and waveform, then adjust the output as needed.
-\item Keep the calibration and background-sound records with the experiment files.
+\item \textbf{Our plan:} fix the speaker's distance and angle. Use a microphone at the ear position to check every tone's level and waveform. Adjust the output and save the calibration and background-sound records.
+\item \textbf{SONIC:} reported about 80 dB SPL at the sheep-ear distance. The paper does not name its measurement microphone. \textit{(6.2, p.11)}
 \end{itemize}
 
 \topic{3. Match the sound to the brain recording}
 \begin{itemize}
-\item Have the NI box send a timing pulse when each tone starts, and record those pulses with the brain signals. First check that the lab recorder can accept them.
-\item The pulse marks the electrical start. Match the microphone recording to those pulses, then check when the sound actually arrives.
-\item Check that the sound and brain-recording times stay aligned throughout a recording.
+\item \textbf{Our plan:} record a timing pulse for each tone with the brain signals, after checking that the lab recorder can accept it. The pulse marks the electrical start. Align the microphone recording too, to check when the sound actually arrives and whether timing stays aligned.
+\item \textbf{SONIC:} recorded the electrical output waveform and trial-start signals with the NI box, then aligned them with Connexus brain recordings using a shared clock (PTP and 10 MHz). \textit{(6.2, p.11)}
 \end{itemize}
 
-{\small\color{muted}We still need to choose the mouse tone settings and whether the mouse is awake or sedated. Rice's sheep plan uses sedation; SONIC studied awake sheep. The appendix shows what SONIC did and what we would change.}
+{\small\color{muted}Our mouse tone settings and awake/sedated state are still undecided. Rice's sheep plan uses sedation; SONIC studied awake sheep (6.6, p.13). These comparisons refer to \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC bioRxiv v1}; the appendix gives the hardware details and sheep adaptations.}
 
 \newpage
 {\LARGE\bfseries What we would get}\par

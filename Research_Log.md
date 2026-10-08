@@ -143,6 +143,13 @@
 - Verification passed: desktop LaTeX compilation, export from the same source, visual review of all three pages, content/scope and budget checks, 12 HTTPS link annotations to eight correct destinations, and no overfull/underfull layout warnings. Independent readability review found no material issues. Repository validation passed for 202 references and the unchanged SONIC v1 manuscript; diff checks passed. Temporary renders remain outside the repository.
 - No new research, vendor contact, purchase, hardware connection, experiment, or website edit was performed.
 
+## 2026-10-08 America/Chicago - SONIC comparisons in Our sound setup
+
+- Howard requested the published SONIC choices beside the writing in "Our sound setup" so the two setups can be compared while reading. Added four paired "Our plan" and "SONIC" bullets for equipment, tone selection, sound at the ear, and recording alignment, with method-section/page references and a paper link.
+- Rechecked complete Methods 6.1-6.2 (p.11) and 6.6 (p.13) in the unchanged manuscript. Preserved the explored-versus-benchmark tone distinction and silence between blocks. Kept SONIC's electrical waveform/trial-marker acquisition and shared clock separate from our proposed microphone acoustic-arrival checks. The paper does not name its measurement microphone or specify direct marker input into its neural recorder.
+- Verification passed: native LaTeX compilation, three-page export, visual review of all pages, four comparison-pair and scientific-scope checks, 13 HTTPS annotations to eight destinations, no overfull/underfull warnings, and independent primary-source review. Budget and appendix page text are unchanged. Repository reference/checksum validation and diff checks passed; temporary renders remain outside the repository.
+- No vendor contact, purchase, hardware connection, experiment, or website edit was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

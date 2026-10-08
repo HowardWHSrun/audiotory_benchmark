@@ -10,35 +10,34 @@
 \setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt}
 \pagestyle{empty}
 \newcommand{\topic}[1]{\vspace{7pt}{\large\bfseries #1}\par}
+\newcommand{\sonicref}[1]{{\small\color{muted}(Methods #1)}}
 \begin{document}
 
 {\LARGE\bfseries Mouse auditory experiment}\par
 {\color{muted}A first plan \hfill October 8, 2026}\par
 
-We want to play short tones to a mouse and record how its brain responds, using SONIC as a starting point.
+We want to play short tones to a mouse and record its brain responses. SONIC tested awake sheep; our mouse state and tone settings remain open. \sonicref{6.6, p.13}
 
 \topic{1. Choose the sounds}
 \begin{itemize}
 \item Choose the frequency, duration, loudness, and gap between tones.
-\item Add short fades at both ends to avoid clicks.
-\item Save the sequence and settings so we can identify every tone.
-\item SONIC used 10 ms tones with 2 ms fades in awake sheep. Our mouse settings and awake versus anesthetized state remain open.
+\item \textbf{SONIC:} initially explored 1.4--32 kHz; benchmark tones were 10 ms sine waves with 2 ms fades at each end. \sonicref{6.1--6.2, p.11}
+\item \textbf{SONIC:} random frequencies, balanced within each block, with no silence between tones. \sonicref{6.1, p.11}
+\item Save the sequence before playback, as SONIC did. \sonicref{6.2, p.11}
 \end{itemize}
 
 \topic{2. Set up the speaker}
 \begin{itemize}
 \item Check what audio equipment the lab already has.
-\item Consider the TDT MF1 speaker and SA1 amplifier used in SONIC.
-\item Keep the speaker in a fixed position.
-\item Measure each tone's loudness with a suitable calibrated microphone at the ear position.
+\item \textbf{SONIC:} NI USB-6361 output at 192 kHz, TDT SA1 amplifier, and MF1 free-field speaker; about 80 dB SPL at sheep-ear distance. \sonicref{6.2, p.11}
+\item \textbf{Our plan:} assess that equipment, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
 \end{itemize}
 
 \topic{3. Keep everything on one timeline}
 \begin{itemize}
-\item Schedule each tone with an electrical timing pulse.
-\item Record the pulse alongside the neural signals.
-\item Synchronize the microphone recording to check when the sound actually reaches the ear.
-\item If we add behavior video, synchronize its frame times too.
+\item Schedule each tone with a timing pulse and record it alongside the neural signals.
+\item \textbf{SONIC:} recorded electrical sound output and trial-start markers; shared clock references aligned these with Connexus brain recordings. \sonicref{6.2, p.11}
+\item \textbf{Our additions:} synchronize a microphone recording to check actual sound arrival. Align video frame times too if we add behavior video.
 \end{itemize}
 
 \topic{Start here}
@@ -52,6 +51,6 @@ We want to play short tones to a mouse and record how its brain responds, using 
 \hrule
 \vspace{3pt}
 {\footnotesize\color{muted}
-\textbf{References:} \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC, bioRxiv v1}, Methods 6.1--6.2 (p.11) and 6.6 (p.13); \href{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{TDT speaker information}; \href{https://www.tdt.com/files/fastfacts/IODelays.pdf}{TDT timing information}. This is our proposed mouse setup.}
+\textbf{Reference:} Perkins et al. (2025), \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces}, bioRxiv v1. Page numbers above refer to the printed manuscript. Mouse choices and additions are proposals.}
 
 \end{document}

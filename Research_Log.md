@@ -76,6 +76,12 @@
 - Howard requested more bullet points. Converted the three setup sections and starting steps to 15 short, single-level bullets, preserving the simple wording and open mouse choices.
 - Desktop LaTeX compilation and PDF export succeeded. Checked the updated page visually and confirmed all bullets fit on one page without overflow. Temporary font/download resources and preview images remain outside the repository.
 
+## 2026-10-08 America/Chicago - SONIC choices beside the setup bullets
+
+- Howard requested references showing what SONIC chose to do. Added concise published choices beside the sound, equipment, and synchronization bullets, with six method-section/printed-page citations and a linked paper reference.
+- Included the explored frequency range, benchmark tone duration/fades, random balanced blocks without inter-tone silence, precomputed playback, NI/SA1/MF1 sound chain, reported sheep level, and electrical synchronization. Kept mouse settings open and labeled microphone arrival checks and optional video alignment as local additions.
+- Rechecked against SONIC v1 methods. Desktop compilation and PDF export succeeded; visual/content checks confirmed one readable page, the expected references, and no overflow. The original manuscript remains unchanged.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

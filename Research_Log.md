@@ -86,6 +86,14 @@
 
 - Howard approved the remaining draft and asked to remove "Start here." Deleted only that heading and its three bullets, then regenerated the PDF. Desktop compilation and visual review passed; the other content and SONIC references are unchanged.
 
+## 2026-10-08 America/Chicago - mouse equipment extension from scratch
+
+- Howard confirmed the short plan with a labmate and asked us to extend it assuming the lab needs to assemble the setup. Recorded the relevant equipment and provenance from Xiaorong's forward of Tinghan's BCM list, without private contact addresses, RSVP links, or tracking parameters.
+- Checked official TDT, Avisoft, Peerless/Tymphany, Scan-Speak, and B&K specifications. Distinguished ES1 free-field delivery from EC1 coupling; ED1 from the waveform DAC; and 116Hm acquisition from the 4939 microphone cartridge. Recorded driver power, microphone conditioning, calibration, and timing dependencies.
+- Added one equipment page to the simple PDF and updated two speaker bullets to reflect the from-scratch assumption. Preserved SONIC references, undecided mouse state/settings, and the removal of "Start here." Kept detailed compatibility notes in the repository equipment plan.
+- Verification passed: desktop LaTeX compilation, export of the same source, visual review of both pages, five correct PDF source-link targets, no overfull content, repository validation of 129 references and the unchanged SONIC checksum, and diff checks. A separate content review checked the paper/BCM/Rice distinction and clarified the ES1 range wording. Temporary compiler/render files remain outside the repository.
+- No equipment access, purchase, hardware connection, acoustic measurement, animal procedure, external message, or website content change was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

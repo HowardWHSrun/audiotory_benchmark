@@ -11,6 +11,7 @@
 \pagestyle{empty}
 \newcommand{\topic}[1]{\vspace{7pt}{\large\bfseries #1}\par}
 \newcommand{\sonicref}[1]{{\small\color{muted}(Methods #1)}}
+\newcommand{\equipref}[1]{{\small\color{muted}(#1)}}
 \begin{document}
 
 {\LARGE\bfseries Mouse auditory experiment}\par
@@ -28,9 +29,9 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 
 \topic{2. Set up the speaker}
 \begin{itemize}
-\item Check what audio equipment the lab already has.
+\item Plan as though we need to assemble the whole sound setup.
 \item \textbf{SONIC:} NI USB-6361 output at 192 kHz, TDT SA1 amplifier, and MF1 free-field speaker; about 80 dB SPL at sheep-ear distance. \sonicref{6.2, p.11}
-\item \textbf{Our plan:} assess that equipment, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
+\item \textbf{Our plan:} compare the equipment on the next page, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
 \end{itemize}
 
 \topic{3. Keep everything on one timeline}
@@ -45,5 +46,37 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 \vspace{3pt}
 {\footnotesize\color{muted}
 \textbf{Reference:} Perkins et al. (2025), \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces}, bioRxiv v1. Page numbers above refer to the printed manuscript. Mouse choices and additions are proposals.}
+
+\newpage
+{\LARGE\bfseries Equipment we need}\par
+{\color{muted}Mouse setup: building from scratch}\par
+
+Xiaorong forwarded Tinghan's equipment list. We will use it to compare options; access to those items still needs confirming.
+
+\topic{1. Play the tones}
+\begin{itemize}
+\item \textbf{Candidate path:} computer $\rightarrow$ timed sound output (DAC/DAQ) $\rightarrow$ ED1 driver $\rightarrow$ ES1 speaker.
+\item \textbf{ES1:} plays sound through the air. Its intended range starts at 4 kHz; SONIC's lowest tones fall below that range. \href{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{\equipref{TDT speaker specs}}
+\item \textbf{ED1:} also needs zBus power, such as ZB1PS, and the matching speaker cable. It does not generate the tones. \href{https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/}{\equipref{TDT driver specs}}
+\item \textbf{Other choices:} EC1 delivers sound through tubing. Peerless XT25TG30-04 and Scan-Speak R2004/602200 need a conventional amplifier; check their usable frequency range before choosing.
+\end{itemize}
+
+\topic{2. Measure the sound}
+\begin{itemize}
+\item \textbf{Avisoft option:} the complete UltraSoundGate 116Hm kit includes a CM16/CMPA microphone and preamplifier. The 116Hm alone is the recording interface. \href{https://avisoft.com/ultrasoundgate/116hm/}{\equipref{Avisoft kit details}}
+\item \textbf{B\&K option:} the 4939 microphone needs a compatible preamplifier, polarization supply, and recorder. \href{https://www.bksv.com/-/media/literature/Product-Data/bp1851.ashx}{\equipref{4939 datasheet}}
+\item Either path needs calibration records and a sound-level reference. Check each tone at the planned ear position.
+\end{itemize}
+
+\topic{3. Record the timing and brain signals}
+\begin{itemize}
+\item Choose the neural recorder and headstage, then match its event inputs to the tone-output system.
+\item Record tone markers in both sound and neural data. Check actual sound arrival and clock drift; a shared marker alone does not make two clocks identical.
+\item Include cables, power, fixed mounts, and data storage. Add a camera only if behavior is needed; align its frame times too.
+\item A soundproof box is not required by current team direction. Record background sound and the setup geometry.
+\end{itemize}
+
+\vspace{6pt}\hrule\vspace{3pt}
+{\footnotesize\color{muted}Equipment candidates are from the forwarded BCM list; linked specifications were checked October 8, 2026. Mouse state, frequency range, and final hardware remain open.}
 
 \end{document}

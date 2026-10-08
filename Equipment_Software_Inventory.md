@@ -1,6 +1,6 @@
 # Equipment and software inventory
 
-Updated October 7, 2026. **Primary target: sedated-sheep sound-evoked auditory-cortex responses.** Howard Wang and Jiaao Zhang jointly own the auditory investigation. Lan does not require a soundproof box or behavioral rig. McGinley students shared rodent-rig/calibration experience; this does not verify particular equipment for sheep. See [team source record](sources/Team_Clarifications_2026-10-07.md).
+Updated October 8, 2026. **Primary target: sedated-sheep sound-evoked auditory-cortex responses.** Howard Wang and Jiaao Zhang jointly own the auditory investigation. Lan does not require a soundproof box or behavioral rig. McGinley students shared rodent-rig/calibration experience; this does not verify particular equipment for sheep. See [team source record](sources/Team_Clarifications_2026-10-07.md).
 
 ## Auditory delivery and timing
 
@@ -26,6 +26,22 @@ Complete availability/model fields from inspection, specifications, records or d
 | Existing software/SOPs | Unknown | Unknown | Applicability, versions and validation evidence | Review available resources |
 
 For confirmed items, record owner/custodian, calibration status and constraints. State whether each satisfies a **paper fact** or **proposed Rice choice**. An unknown item does not imply a purchase.
+
+## Mouse setup: provision from scratch
+
+Howard asked us to assume the mouse setup must be assembled. Each function below is **not yet secured for planning purposes**; this is an assumption, not a completed physical inventory. The [BCM email](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) suggests candidates without confirming Rice access. See the [equipment plan](Mouse_Setup_Equipment_Plan.md) for dependencies and official sources.
+
+| Function | Candidate or unresolved choice | Provision to confirm |
+|---|---|---|
+| Stimulus computer/software | Unselected | OS, waveform generation, timed playback, saved configuration |
+| Analog playback output | Hardware-timed DAC/DAQ, model open | Frequency coverage, output range, event generation |
+| Free-field speaker path | ES1 + ED1 candidate | Intended tones at or above 4 kHz; zBus/ZB1PS power, matching speaker cable, calibration |
+| Other speaker paths | EC1, Peerless XT25TG30-04, Scan-Speak R2004/602200 | Coupling for EC1; suitable conventional amplifier for either tweeter; usable band |
+| Acoustic recording | 116Hm complete CM16/CMPA kit or 4939 measurement chain | Exact microphone, preamplifier/conditioning, ADC, gain and calibration |
+| Neural recording | Recorder/headstage/electrode chain unselected | Intended implant, event inputs, clock and file export |
+| Timing connections | Shared markers; clock strategy open | Voltage/connector compatibility, onset and drift verification |
+| Calibration/support | Reference, mounts, cables, power, storage | Traceable level measurement, stable geometry, data records |
+| Behavior camera/enclosure | Optional | Include only if needed; verify camera frame timing if used |
 
 ## Educational software
 

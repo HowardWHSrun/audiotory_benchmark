@@ -1,5 +1,18 @@
 # Source register
 
+## BCM equipment suggestions and manufacturer checks
+
+Consulted October 8, 2026 for the [mouse equipment plan](../Mouse_Setup_Equipment_Plan.md) and the added equipment page in the [simple PDF](../output/pdf/Mouse_Auditory_Experiment.pdf).
+
+- [Forwarded BCM equipment email record](BCM_Acoustic_Equipment_Email_2026-10-08.md): user-supplied suggestions from Tinghan via Xiaorong. BCM inventory does not establish Rice access. Only relevant provenance and clean equipment links are retained.
+- TDT: [ES1/EC1 documentation](https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/), [ED1](https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/), and [ZB1PS](https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/). Field/coupler roles, operating band, matched driver, and power dependencies.
+- Peerless/Tymphany: [XT25TG30-04 manufacturer listing](https://products.peerless-audio.com/transducer/535). Exact model, nominal impedance, and stated frequency range.
+- Scan-Speak: [R2004/602200 manufacturer page](https://www.scan-speak.dk/product/r2004-602200/) and [exact-model datasheet](https://www.scan-speak.dk/datasheet/pdf/r2004-602200.pdf). Do not substitute R2004/602000.
+- Avisoft: [116Hm base interface and complete kit](https://avisoft.com/ultrasoundgate/116hm/), [manual](https://www.avisoft.com/usgmanual_116Hm.pdf), [40017 mic power module](https://avisoft.com/ultrasound-microphones/1-4-mic-power-module/), [calibration settings](https://www.avisoft.com/Help/RECORDER/trigger_level_calibration.htm), and [external-clock settings](https://www.avisoft.com/Help/RECORDER/advanced_usgh_device_settings.htm). Interface/microphone distinction, conditioning, calibration, and timing dependencies.
+- Brüel & Kjær/HBK: [Type 4939 datasheet BP 1851–13](https://www.bksv.com/-/media/literature/Product-Data/bp1851.ashx), dated 2021-10. Cartridge, external polarization, classical preamplifiers, and individual calibration data. The English product-page retrieval was unavailable; the official datasheet was readable.
+
+Manufacturer specifications describe candidate components. No local chain compatibility, calibrated output, timestamp accuracy, or experimental result has been measured.
+
 ## Mouse adaptation sources
 
 Consulted October 8, 2026 for the [mouse setup proposal](../Mouse_Stimulus_Setup_Proposal.md). These primary studies and official technical documents support design questions; their experimental settings do not establish Rice equipment compatibility or a validated mouse protocol.

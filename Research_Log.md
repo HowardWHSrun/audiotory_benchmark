@@ -102,6 +102,14 @@
 - Kept the two-page outline and added four pricing pages. Desktop LaTeX compilation and PDF export succeeded; visual review covered all six pages with no overflow. Programmatic checks confirmed the four pricing sections, six correct subtotals, 38 HTTPS PDF links, and continued removal of "Start here." Repository validation passed for 182 references and the unchanged SONIC checksum; diff checks passed. Independent acoustic and supporting-equipment reviews found no material corrections. Temporary renders and compiler files remain outside the repository.
 - No vendor contact, quote request, purchase, hardware connection, or experiment was performed.
 
+## 2026-10-08 America/Chicago - clarify complete equipment choices
+
+- Howard found the component list confusing and asked whether we need one, several, or all the sound-measurement items. Reorganized the reading PDF into explicit complete setups and added a selection guide before the detailed price catalog.
+- Measurement choices are alternatives: complete 116Hm kit; filtered 40026 package with compatible NI acquisition; or a specialist B&K set with matched conditioning/acquisition. Identified included microphone/preamp/recorder/cables/stand/software, duplicate parts to omit, and one shared NI device counted once.
+- Grouped sound delivery into complete ES1/ED1/power, MF1/SA1/power, and conventional-tweeter/amplifier choices. Kept AD3 optional and calibration as a separate band-appropriate choice, with the 40 kHz reference optional.
+- Preserved individual prices in the detailed repository catalog; no hardware purchase or completed compatibility result is implied.
+- Verification passed: desktop LaTeX compilation, PDF export, visual review of all six pages, seven subtotal checks, 32 HTTPS PDF links, no overfull or underfull content, repository validation of 183 references and the unchanged SONIC checksum, and diff checks. Temporary renders remain outside the repository; the website is unchanged.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

@@ -8,6 +8,32 @@ Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Eq
 - Shipping, sales/import taxes, and installation are excluded unless the seller explicitly includes them. Newark states its displayed prices include applicable duties/tariffs. The EUR calibrator price excludes VAT; no currency conversion is assumed.
 - Choose one sound path and one acoustic measurement path. Do not sum every alternative or buy an extra part already included in a kit.
 
+## What would we actually get?
+
+**Choose one sound-delivery setup and one sound-measurement setup.** A setup may contain several parts that work together. The item tables below are a price reference, not a checklist to buy every row.
+
+### Sound measurement: choose A, B, or C
+
+| Choice | Get these together | Already included / do not add |
+|---|---|---|
+| **A: complete Avisoft kit — most bundled option** | **1 × 116Hm complete kit**, 51165 ($8,160) or eligible educational 51166 ($7,320) | Includes microphone, preamplifier, acoustic recorder, cable, stand, and software. Do not add another base 116Hm, 40011 microphone, 40017 module, or any B&K parts. |
+| **B: microphone connected to NI — alternative to A** | **1 × 40026 filtered microphone package** ($2,580) **plus 1 × compatible NI USB-6361** ($3,030.42) | The 40026 includes microphone, preamplifier, filter, cables, and stand. NI records the sound. Use the same NI device counted for tone output if that configuration is verified; count it once. Do not add the 116Hm kit or the 40011/40013/40014/40017 parts. External power and acquisition configuration still need checking. |
+| **C: B&K specialist setup — alternative to A/B** | **1 × 4939-A-011 microphone/preamp set + 1 × matched conditioner + 1 × suitable acoustic ADC** | The set already contains the 4939 cartridge and 2670 preamplifier. Conditioner/ADC models and complete-chain compatibility need defining before a quote. Do not add a separate 4939 or 2670 again. |
+
+For the easiest package to understand and assemble, **A is the starting comparison**. B may reduce equipment cost by using the NI acquisition already planned, but needs more integration work. This is planning guidance, not a selected purchase. A/B's microphone specification starts at 2 kHz; lower intended tones need a different or separately characterized measurement choice.
+
+**Calibration is an additional choice for whichever route we use.** We need a sound-level reference and calibration records appropriate to our selected frequency band. The 60105 reference ($552) is an optional 40 kHz check, not a required part of every kit or proof of calibration at every frequency. The B&K 4231 and its quarter-inch adaptor belong to a separate compatible calibration arrangement; do not automatically buy both reference systems.
+
+### Sound delivery: choose one group
+
+| Choice | Parts to get together | Parts to leave out |
+|---|---|---|
+| **S1: TDT electrostatic** | 1 × ES1 + 1 × ED1 + 1 × ZB1PS | EC1 replaces ES1 only if tubing/coupled delivery is selected. No SA1, MF1, or ART in this group. |
+| **S2: SONIC reference chain** | 1 × MF1 + 1 × SA1 + 1 × ZB1PS | No ES1, EC1, ED1, or ART in this group. |
+| **S3: conventional tweeter** | (1 × Peerless **or** 1 × Scan-Speak) **plus** 1 × suitable ART amplifier | Choose one tweeter; do not buy two amplifiers. No ED1/SA1/ZB1PS in this group. |
+
+Each sound group still needs timed waveform output. The candidate is **one NI USB-6361**; if measurement choice B uses that same unit, count it only once. AD3 is a separate optional bench tool, not an automatic extra or verified replacement for the final NI system. Cables, mounts, acoustic output, and timing remain to be checked for the selected group.
+
 ## 1. Sound delivery and timed output
 
 | Item / exact model | Price for one | Role, package, and availability | Price source |
@@ -26,9 +52,9 @@ Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Eq
 
 Technical boundaries: ED1 drives TDT electrostatics; ART is a candidate for a conventional tweeter and is not an ES1 driver. ART's official specified response is 10 Hz–40 kHz, not the ES1's full ultrasound range. The Peerless manufacturer states 800–20,000 Hz; higher-band suitability remains unverified. AD3 is a bench comparison, not a demonstrated substitute for SONIC's playback system. See [ART specifications](https://artproaudio.com/installation/product/131226/sla1), [Peerless specifications](https://products.peerless-audio.com/transducer/535), and [AD3 datasheet](https://files.digilent.com/datasheets/Analog-Discovery-3-Datasheet.pdf).
 
-## 2. Acoustic measurement and calibration
+## 2. Acoustic components: reference prices only
 
-All numbered Avisoft prices below come from the [official USD price list](https://avisoft.com/price-list-ordering-information/). Kit contents are checked against the [116Hm description](https://avisoft.com/ultrasoundgate/116hm/) and [microphone variants](https://avisoft.com/ultrasound-microphones/cm16-cmpa/).
+All numbered Avisoft prices below come from the [official USD price list](https://avisoft.com/price-list-ordering-information/). Kit contents are checked against the [116Hm description](https://avisoft.com/ultrasoundgate/116hm/) and [microphone variants](https://avisoft.com/ultrasound-microphones/cm16-cmpa/). Use the A/B/C groups above to decide which rows belong in a selected setup; do not buy this entire table.
 
 | Item / exact SKU | Price for one | What to count |
 |---|---:|---|
@@ -53,7 +79,7 @@ CM16/CMPA's stated band begins at 2 kHz, so it is not an assumed calibrated refe
 
 ## 3. Neural recording, computer, storage, and optional video
 
-Intan is a **cost comparison** while the intended Rice implant/recorder remains open. It is not a selected replacement for team hardware.
+Intan is a **cost comparison** while the intended Rice implant/recorder remains open. If selected, the controller, one headstage, its SPI cable, and a compatible electrode go together. Add a shared computer and storage. The camera and its accessories are an optional group. This does not select a replacement for team hardware.
 
 | Item / model | Price for one | Included / remaining dependency | Source |
 |---|---:|---|---|
@@ -91,7 +117,7 @@ Intan's analog/digital event inputs are aligned with neural samples, but its sam
 
 ## 5. Subtotals of priced parts
 
-These are **partial subtotals**, not complete experiment budgets. Each includes one of each named item; alternatives are not combined.
+These are **partial subtotals**, not complete experiment budgets. Each includes one of each named item; alternatives are not combined. The 40 kHz reference in the examples is optional and must suit the intended calibration task. Count a shared NI device only once.
 
 | Combination | Arithmetic | Priced subtotal | Excludes |
 |---|---|---:|---|

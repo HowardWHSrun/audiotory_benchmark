@@ -37,7 +37,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 - [Mouse setup proposal](Mouse_Stimulus_Setup_Proposal.md): requested mouse adaptation, functional sound/timing paths, and staged verification; preparation and equipment remain open.
 - [Mouse experiment and equipment draft](output/pdf/Mouse_Auditory_Experiment.pdf) and [editable LaTeX source](output/pdf/Mouse_Auditory_Experiment.tex): the simple experiment outline followed by equipment and pricing tables, with SONIC method references.
 - [Mouse equipment plan](Mouse_Setup_Equipment_Plan.md): compatible candidate chains and missing functions, using the forwarded BCM equipment suggestions and official specifications.
-- [Equipment list and prices](Mouse_Equipment_Pricing_2026-10-08.md): new-item prices checked October 8, quote-only components, accessories, package contents, and partial subtotals.
+- [Equipment list and prices](Mouse_Equipment_Pricing_2026-10-08.md): choose one complete sound/measurement group, then use the dated price reference for its parts; included items and alternatives are explicit.
 - [Equipment and software inventory](Equipment_Software_Inventory.md): actual lab availability remains to be established.
 - [Bench-validation plan](Bench_Validation_Plan.md): proposed checks, with no completed bench or animal experiment claimed.
 - [Research log](Research_Log.md): provenance and changes.

@@ -22,7 +22,7 @@ Choose the usable frequency band before committing to the speaker/output combina
 
 ## Acoustic measurement
 
-Compare complete chains, not two items labeled "microphone."
+Choose **one** complete measurement route. The [A/B/C selection guide](Mouse_Equipment_Pricing_2026-10-08.md) spells out what comes together, what is included, and which other items to omit.
 
 - **Avisoft complete kit:** UltraSoundGate 116Hm plus CM16/CMPA microphone/preamplifier, cable, stand, and RECORDER USGH software. The base 116Hm is a one-channel USB acquisition interface; its kit must be specified explicitly. The manufacturer's listed computer support is Windows. [116Hm product and kit details](https://avisoft.com/ultrasoundgate/116hm/).
 - **B&K measurement chain:** 4939 cartridge → compatible classical preamplifier → external polarization/conditioning → acoustic ADC/recorder. The cartridge requires 200 V external polarization; 4939-A-011 includes a 2670 preamplifier. [4939 datasheet](https://www.bksv.com/-/media/literature/Product-Data/bp1851.ashx).

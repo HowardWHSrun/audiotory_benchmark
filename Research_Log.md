@@ -136,6 +136,13 @@
 - Verification passed: desktop LaTeX compilation, three-page export, visual review of all pages, 13 HTTPS link annotations to eight correct destinations, appendix attribution/transfer content checks, unchanged budget arithmetic, no overfull/underfull content, independent paper/hardware reviews, 202-reference repository validation, unchanged SONIC v1 source PDF, and diff checks. Temporary renders are outside the repository; the website is unchanged.
 - No vendor contact, purchase, hardware connection, or experiment was performed.
 
+## 2026-10-08 America/Chicago - more natural and intuitive sound plan
+
+- Howard asked for wording that feels more human and a plan that is easier to follow. Rewrote the three-page PDF around a simple sound-path diagram and three steps: choose the tones, check what reaches the ear, and match the sound to the brain recording.
+- Put each equipment role before its model name, shortened the explanations, and kept the SONIC comparison and sheep adaptations in the appendix. Equipment choices and budget are unchanged. Retained the lab-probe scope, estimate labels, electrical-versus-acoustic timing distinction, microphone's 2 kHz boundary, undecided mouse state, and sedated-sheep versus awake-SONIC distinction.
+- Verification passed: desktop LaTeX compilation, export from the same source, visual review of all three pages, content/scope and budget checks, 12 HTTPS link annotations to eight correct destinations, and no overfull/underfull layout warnings. Independent readability review found no material issues. Repository validation passed for 202 references and the unchanged SONIC v1 manuscript; diff checks passed. Temporary renders remain outside the repository.
+- No new research, vendor contact, purchase, hardware connection, experiment, or website edit was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

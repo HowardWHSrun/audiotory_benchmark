@@ -35,7 +35,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.
 - [Mouse setup proposal](Mouse_Stimulus_Setup_Proposal.md): requested mouse adaptation, functional sound/timing paths, and staged verification; preparation and equipment remain open.
-- [Mouse experiment and equipment draft](output/pdf/Mouse_Auditory_Experiment.pdf) and [editable LaTeX source](output/pdf/Mouse_Auditory_Experiment.tex): three pages, with the outline, sound-only budget using lab probes, and an appendix explaining the choices, SONIC hardware, and intended sheep reuse.
+- [Mouse experiment and equipment draft](output/pdf/Mouse_Auditory_Experiment.pdf) and [editable LaTeX source](output/pdf/Mouse_Auditory_Experiment.tex): three pages in plain language, with a sound-path diagram, sound-only budget using lab probes, and an appendix explaining the choices, SONIC hardware, and intended sheep reuse.
 - [Mouse equipment plan](Mouse_Setup_Equipment_Plan.md): compatible candidate chains and missing functions, using the forwarded BCM equipment suggestions and official specifications.
 - [Equipment list and prices](Mouse_Equipment_Pricing_2026-10-08.md): one proposed sound budget followed by detailed acoustic reference prices; every quote-only item has a clearly labeled planning estimate.
 - [Equipment and software inventory](Equipment_Software_Inventory.md): actual lab availability remains to be established.

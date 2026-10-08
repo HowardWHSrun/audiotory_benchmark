@@ -6,9 +6,11 @@ Mouse state and tone settings remain open. Rice's confirmed primary project rema
 
 ## Sound delivery
 
-Provisional free-field path:
+The simplified reading budget uses one MF2-M mono kit, SA1, ZB1PS, and NI USB-6361. SONIC used MF1; TDT lists MF2 as its current generation. This is a proposed budgeting choice, pending the frequency band and hardware checks. [MF2 product](https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/), [kit and SA1 support](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
 
-**Computer and saved waveforms → hardware-timed analog output (DAC/DAQ) → ED1 → ES1 → mouse-ear position.**
+Provisional free-field budgeting path:
+
+**Computer and saved waveforms → NI timed analog output → SA1 → MF2 → mouse-ear position**, with ZB1PS power for SA1. The earlier ES1/ED1 candidates remain alternatives in the reference table below.
 
 | Candidate | What the manufacturer establishes | What it means for our plan |
 |---|---|---|
@@ -22,7 +24,7 @@ Choose the usable frequency band before committing to the speaker/output combina
 
 ## Acoustic measurement
 
-Choose **one** complete measurement route. The [A/B/C selection guide](Mouse_Equipment_Pricing_2026-10-08.md) spells out what comes together, what is included, and which other items to omit.
+The [simple shopping budget](Mouse_Equipment_Pricing_2026-10-08.md) uses **one complete 116Hm kit**. Other routes below are alternatives retained for reference, not extra purchases. The kit's microphone specification starts at 2 kHz; lower required tones would change this choice.
 
 - **Avisoft complete kit:** UltraSoundGate 116Hm plus CM16/CMPA microphone/preamplifier, cable, stand, and RECORDER USGH software. The base 116Hm is a one-channel USB acquisition interface; its kit must be specified explicitly. The manufacturer's listed computer support is Windows. [116Hm product and kit details](https://avisoft.com/ultrasoundgate/116hm/).
 - **B&K measurement chain:** 4939 cartridge → compatible classical preamplifier → external polarization/conditioning → acoustic ADC/recorder. The cartridge requires 200 V external polarization; 4939-A-011 includes a 2670 preamplifier. [4939 datasheet](https://www.bksv.com/-/media/literature/Product-Data/bp1851.ashx).
@@ -49,6 +51,6 @@ For 116Hm, the DIN marker is embedded in 16-bit recorded samples and is unavaila
 
 A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal support requirements follow the later awake/sedated preparation decision.
 
-See the [expanded equipment list and prices](Mouse_Equipment_Pricing_2026-10-08.md) for public prices, quote-only items, package contents, and partial subtotals.
+See the [equipment budget and detailed reference prices](Mouse_Equipment_Pricing_2026-10-08.md) for one proposed shopping list, numerical estimates for quote-only/model-open items, bundled contents, and alternative subtotals. Estimates are our planning reserves, not vendor quotations.
 
 All listed chains are proposals. Public price research does not establish access commitments, a supplier quotation, or a selected final configuration. We have not connected hardware or measured performance. Manufacturer documents were checked October 8, 2026.

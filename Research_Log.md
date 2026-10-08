@@ -110,6 +110,15 @@
 - Preserved individual prices in the detailed repository catalog; no hardware purchase or completed compatibility result is implied.
 - Verification passed: desktop LaTeX compilation, PDF export, visual review of all six pages, seven subtotal checks, 32 HTTPS PDF links, no overfull or underfull content, repository validation of 183 references and the unchanged SONIC checksum, and diff checks. Temporary renders remain outside the repository; the website is unchanged.
 
+## 2026-10-08 America/Chicago - one simple shopping budget with estimates
+
+- Howard said the grouped alternatives were still too complicated and requested an estimate for every quote-only item. Reduced the reading PDF from six pages to two: the existing experiment outline and one proposed shopping list with quantities, purpose, and budget.
+- The proposed budget uses one MF2-M/SA1/ZB1PS sound chain, one NI output unit, one complete 116Hm kit, and an Intan neural-recording comparison. SONIC's actual MF1 choice remains identified; current MF2 kit/SA1 support was checked in TDT's documentation. The equipment subtotal is $32,545.42 (about $33,000); conditional basic animal support and a general reserve bring the working budget to $41,545.42 (about $42,000). Optional video is outside that figure.
+- Added numerical planning allowances for all 11 previously quote-only rows and the new MF2 candidate, plus model-open support functions. Clearly labeled these as our low-confidence reserves rather than vendor prices, with broad scenarios and provenance in the detailed catalog. Preserved public/list prices and bundled-content rules; alternatives remain only in the detailed notes.
+- Retained undecided mouse state/tone range, the 2 kHz microphone boundary, separate band-calibration work, unknown recorder/interface choices, and the distinction from Rice's sedated-sheep project. The animal allowance excludes full surgery/anesthesia infrastructure, housing, services, and ongoing costs; software/integration labor is outside the equipment subtotal.
+- Verification passed: desktop LaTeX compilation, two-page export, visual review of both pages, eight correct HTTPS PDF links, no overfull/underfull layout warnings, checks that all prior quote-only rows contain estimates, and equipment/reserve/video arithmetic. Independent review found no material issues or duplicate bundle charges. Repository validation passed for 195 references and the unchanged SONIC v1 manuscript; diff checks passed. Temporary renders remain outside the repository.
+- No vendor contact, quote request, purchase, animal/bench procedure, or website edit was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

@@ -33,7 +33,7 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 \begin{itemize}
 \item Plan as though we need to assemble the whole sound setup.
 \item \textbf{SONIC:} NI USB-6361 output at 192 kHz, TDT SA1 amplifier, and MF1 free-field speaker; about 80 dB SPL at sheep-ear distance. \sonicref{6.2, p.11}
-\item \textbf{Our plan:} compare the equipment on the next page, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
+\item \textbf{Our plan:} use the proposed shopping list on the next page, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
 \end{itemize}
 
 \topic{3. Keep everything on one timeline}
@@ -50,177 +50,47 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 \textbf{Reference:} Perkins et al. (2025), \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces}, bioRxiv v1. Page numbers above refer to the printed manuscript. Mouse choices and additions are proposals.}
 
 \newpage
-{\LARGE\bfseries Equipment we need}\par
-{\color{muted}Mouse setup: building from scratch}\par
+{\LARGE\bfseries One proposed shopping list}\par
+{\color{muted}Building the mouse setup from scratch \hfill USD}\par
 
-Xiaorong forwarded Tinghan's equipment list. We will use it to compare options; access to those items still needs confirming.
+Budget for one of each item or group below. \textbf{Est.} means our rough allowance, not a confirmed supplier price.
 
-\topic{1. Play the tones}
-\begin{itemize}
-\item \textbf{Candidate path:} computer $\rightarrow$ timed sound output (DAC/DAQ) $\rightarrow$ ED1 driver $\rightarrow$ ES1 speaker.
-\item \textbf{ES1:} plays sound through the air. Its intended range starts at 4 kHz; SONIC's lowest tones fall below that range. \href{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{\equipref{TDT speaker specs}}
-\item \textbf{ED1:} also needs zBus power, such as ZB1PS, and the matching speaker cable. It does not generate the tones. \href{https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/}{\equipref{TDT driver specs}}
-\item \textbf{Other choices:} EC1 delivers sound through tubing. Peerless XT25TG30-04 and Scan-Speak R2004/602200 need a conventional amplifier; check their usable frequency range before choosing.
-\end{itemize}
-
-\topic{2. Measure the sound}
-\begin{itemize}
-\item Choose \textbf{one complete setup}: A (116Hm kit), B (filtered microphone + NI), or C (B\&K chain). The measurement page shows what to get together.
-\item Parts already included in a kit do not need buying again. The other setups are alternatives.
-\item Each setup needs calibration records and a sound-level reference. Check each tone at the planned ear position.
-\end{itemize}
-
-\topic{3. Record the timing and brain signals}
-\begin{itemize}
-\item Choose the neural recorder and headstage, then match its event inputs to the tone-output system.
-\item Record tone markers in both sound and neural data. Check actual sound arrival and clock drift; a shared marker alone does not make two clocks identical.
-\item Include cables, power, fixed mounts, and data storage. Add a camera only if behavior is needed; align its frame times too.
-\item A soundproof box is not required by current team direction. Record background sound and the setup geometry.
-\end{itemize}
-
-\vspace{6pt}\hrule\vspace{3pt}
-{\footnotesize\color{muted}Equipment candidates are from the forwarded BCM list; linked specifications were checked October 8, 2026. Mouse state, frequency range, and final hardware remain open.}
-
-\newpage
-{\LARGE\bfseries Choose one sound setup}\par
-{\color{muted}Parts in each group work together; groups are alternatives}\par
-
-Choose \textbf{S1, S2, S3a, or S3b}. Get one of each part named in your chosen group.
-
-{\small\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{@{}L L P@{}}
+{\small\renewcommand{\arraystretch}{1.27}
+\begin{tabularx}{\linewidth}{@{}L L >{\raggedleft\arraybackslash}p{0.95in}@{}}
 \toprule
-\textbf{Choice} & \textbf{Get these together} & \textbf{Parts subtotal} \\
+\textbf{What we get} & \textbf{What it does} & \textbf{Budget} \\
 \midrule
-S1: TDT through-air speaker & \href{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{ES1} + \href{https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/}{ED1} + \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS power} & All need quotes \\
-S1 tubing alternative & EC1 replaces ES1; keep ED1 and ZB1PS & All need quotes \\
-S2: SONIC reference & \href{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{MF1} + \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1} + ZB1PS power & All need quotes \\
-S3a: conventional tweeter & \href{https://www.digikey.com/en/products/detail/peerless-by-tymphany/XT25TG30-04/6557547}{Peerless XT25TG30-04} (\$28.47) + \href{https://www.sweetwater.com/store/detail/SLA1--art-sla-1-100-watt-power-amplifier}{ART SLA-1} (\$279.99) & \$308.46 \\
-S3b: different tweeter & \href{https://www.madisoundspeakerstore.com/soft-dome-tweeters-scanspeak/scan-speak-r2004/602200-19mm-small-ring-radiator-tweeter/}{Scan-Speak R2004/602200} (\$178.60) + ART SLA-1 (\$279.99) & \$458.59 \\
+1 TDT MF2-M speaker kit & Plays the tones. & \$1,500 est. \\
+1 TDT SA1 amplifier & Drives the speaker. & \$2,000 est. \\
+1 TDT ZB1PS power unit & Powers the amplifier. & \$750 est. \\
+1 NI USB-6361 & Sends tones and timing signals. & \$3,030 \\
+1 complete Avisoft 116Hm kit & Records sound at the ear position. & \$8,160 \\
+Calibration support & Checks the sound levels. & \$1,500 est. \\
+1 Intan recording set & Controller, 32-channel headstage, and cable for brain signals. & \$11,105 \\
+1 electrode and adapter & Connects the brain recording to the headstage. & \$1,500 est. \\
+1 computer, monitor, and storage set & Runs the setup; includes a backup drive. & \$2,000 est. \\
+Cables, timing connections, and mounts & Connects equipment and fixes its position. & \$1,000 est. \\
+\midrule
+\textbf{Equipment subtotal} & \textbf{Rounded budget} & \textbf{\$33,000} \\
 \bottomrule
 \end{tabularx}}
 
-\topic{Add one timed sound-output device}
+\topic{What is already included?}
 \begin{itemize}
-\item \textbf{NI USB-6361: \$3,030.42.} SKU 781442-01. Add one waveform-output device for the chosen sound group. \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{\equipref{dealer listing}}
-\item If measurement choice B uses this same NI unit, count it \textbf{once}, not again as another recording device.
+\item The Avisoft kit includes the microphone, preamp, sound recorder, cable, stand, and software. Buy \textbf{one kit}.
+\item The MF2-M kit includes a stand and connection accessories. No extra speaker or microphone is needed for this budget.
 \end{itemize}
 
-\topic{What is separate or optional?}
+\topic{What could add to the cost?}
 \begin{itemize}
-\item Check the chosen package's cables and mounts; add only what is missing.
-\item \textbf{AD3: \$379, optional bench tool.} It is not an automatic extra or a verified replacement for the final NI setup. \href{https://digilent.com/shop/analog-discovery-3/}{\equipref{Digilent}}
-\item These groups remain proposals. ES1's intended range starts at 4 kHz; each chosen speaker needs acoustic and timing checks.
-\end{itemize}
-{\footnotesize\color{muted}Prices checked October 8, 2026, in USD; tax/shipping extra unless included by the seller. Peerless showed zero stock; Scan-Speak stock is unconfirmed. TDT uses its \href{https://www.tdt.com/request-a-quote/}{quote route}.}
-
-\newpage
-{\LARGE\bfseries Choose one measurement setup}\par
-{\color{muted}Choose A, B, or C; do not buy every component listed}\par
-
-\topic{A. One complete Avisoft kit}
-\begin{itemize}
-\item \textbf{Get 1 complete 116Hm kit: \$8,160}, or \$7,320 if eligible for educational pricing. Choose SKU 51165 or 51166.
-\item \textbf{Already included:} microphone, preamplifier, acoustic recorder, cable, stand, and recording software.
-\item \textbf{Do not add:} a separate 116Hm base, CM16 microphone, mic power module, or B\&K parts.
+\item Allow \textbf{\$5,000 extra} for animal support equipment; the mouse preparation is still undecided.
+\item Keep \textbf{\$4,000 reserve} for price changes, shipping, and tax: working budget \textbf{about \$42,000}.
+\item Optional behavior camera with accessories: \textbf{about \$1,100 extra}.
 \end{itemize}
 
-\topic{B. One microphone package with NI acquisition}
-\begin{itemize}
-\item \textbf{Get 1 filtered 40026 package: \$2,580, plus 1 compatible NI USB-6361: \$3,030.42.} NI + microphone subtotal: \$5,610.42.
-\item \textbf{Already in 40026:} microphone, preamplifier, filter, cables, and stand. NI records its output; power and acquisition settings need checking.
-\item Use the \textbf{same NI unit} counted for sound output if that configuration is verified. Do not also get the 116Hm kit or the other microphone variants.
-\end{itemize}
+{\footnotesize\color{muted}
+\textbf{Before buying:} Intan is a budget example. The microphone's stated band starts at 2 kHz; lower tones need a different choice. Calibration and timing need checking. Animal support excludes housing, full surgery/anesthesia infrastructure, and ongoing costs. A soundproof box is not required.
 
-\topic{C. A specialist B\&K setup}
-\begin{itemize}
-\item Get \textbf{1 set of 4939-A-011 + 1 matched conditioner + 1 suitable acoustic recorder}. Models and complete-chain quotes still need defining.
-\item The set includes the 4939 microphone and 2670 preamplifier. Do not add those two parts separately. This is an alternative to A/B.
-\end{itemize}
-
-\topic{Calibration is a separate choice}
-\begin{itemize}
-\item Add a reference suited to our tone range. The \textbf{\$552 generator checks 40 kHz only}; it is an optional reference, not part of every setup.
-\item A/B's microphone specification starts at 2 kHz. We need another or separately characterized choice if lower tones are required.
-\end{itemize}
-{\footnotesize\color{muted}A is the most bundled option; B needs more integration. Both still need a computer and timing checks. \href{https://avisoft.com/ultrasoundgate/116hm/}{Kit contents}, \href{https://avisoft.com/ultrasound-microphones/cm16-cmpa/}{microphone variants}, and \href{https://avisoft.com/price-list-ordering-information/}{USD prices}. Detailed component prices are retained in the repository catalog.}
-
-\newpage
-{\LARGE\bfseries Prices: recording and data}\par
-{\color{muted}Examples for functions we still need to provide}\par
-
-If we choose the Intan example, the \textbf{controller + headstage + SPI cable + electrode} go together. Add a shared computer and storage. Camera/accessories are optional. Our implant and recorder choice remain open.
-
-{\small\renewcommand{\arraystretch}{1.22}
-\begin{tabularx}{\linewidth}{@{}L P L@{}}
-\toprule
-\textbf{Item} & \textbf{Price} & \textbf{What remains} \\
-\midrule
-\href{https://www.intantech.com/pricing.html}{Intan C3004 RHD controller} & \$9,950 list & Includes USB/power cables; supplier confirmation needed. \\
-\href{https://www.intantech.com/pricing.html}{Intan C3314, 32-channel headstage} & \$940 list & Check electrode/implant connector. \\
-\href{https://www.intantech.com/pricing.html}{Intan C3203 SPI cable, 0.9 m} & \$215 list & One headstage connection. \\
-Electrode/probe and adapter & Model open & Choose with the team; not in Intan subtotal. \\
-\href{https://www.dell.com/en-us/shop/desktop-computers/spd/dellslimecs1250/ecs1250_so_16}{Dell Slim ECS1250, offer ecs1250\_so\_16} & \$549.99 offer & Windows 11, i3, 8 GB/512 GB; monitor extra. \\
-\href{https://www.samsung.com/us/memory-storage/portable-ssd/portable-ssd-t7-shield-usb-3-2-2tb-black-sku-mu-pe2t0s-am/}{Samsung T7 Shield 2 TB, MU-PE2T0S/AM} & \$574.99 listed & Delivery unavailable on Samsung page; reference only. \\
-Monitor / PC upgrades / backup storage & Model open & Match acquisition load and data volume. \\
-\href{https://www.edmundoptics.com/p/basler-ace-aca1300-200um-monochrome-usb-30-camera/3418/}{Basler acA1300-200um camera} & \$585.00 & Optional body; lens, USB/I/O cables, light, and mount extra. \\
-Camera accessories & Model open & Price after field of view and geometry are chosen. \\
-\href{https://www.intantech.com/recording_controller.html}{Intan RHX software} & Free & Hardware is priced separately. \\
-\href{https://digilent.com/shop/software/digilent-waveforms/}{Digilent WaveForms} & Free & For the AD3 bench path. \\
-RECORDER USGH & Included & Already counted with USG hardware. \\
-Stimulus/control and analysis software & Tool open & Development time and any paid license extra. \\
-\bottomrule
-\end{tabularx}}
-
-\begin{itemize}
-\item These are comparison prices, not selected models. Match the computer and headstage to the actual recording plan.
-\item Record tone markers in the neural data. Use suitable acoustic acquisition for microphone waveforms; neural inputs do not establish ultrasound capture.
-\item The sound, acoustic, neural, and optional video clocks still need an alignment check.
-\end{itemize}
-
-\newpage
-{\LARGE\bfseries Smaller parts and subtotals}\par
-{\color{muted}Final quantities depend on our connection diagram}\par
-
-For a full setup, combine \textbf{one sound group + one measurement route + one neural chain + shared computer/storage}, then add missing support parts.
-
-{\small\renewcommand{\arraystretch}{1.18}
-\begin{tabularx}{\linewidth}{@{}L P L@{}}
-\toprule
-\textbf{Part / support} & \textbf{Price} & \textbf{How to count it} \\
-\midrule
-\href{https://www.newark.com/pomona/2249-c-36/coaxial-cable-assembly-bnc-male/dp/35F1074}{Pomona 2249-C-36 BNC cable} & \$30.99 each & Example 0.9 m cable; count from wiring map. \\
-\href{https://avisoft.com/price-list-ordering-information/}{Avisoft 52002 DIN adapter} & \$48 each & USG timing connection option. \\
-\href{https://avisoft.com/price-list-ordering-information/}{Avisoft 50021 XLR-5 cable, 2 m} & \$60 each & Extra only if kit cable is unsuitable. \\
-\href{https://www.sweetwater.com/store/detail/MicStdDesk--on-stage-stands-ds7200b-adjustable-height-desktop-stand}{On-Stage DS7200B stand} & \$15.95 each & Extra only if needed; clamp/adapter separate. \\
-TDT speaker cable & Check package & May already be supplied. \\
-Speaker wiring / output-device adapters & Model open & Match chosen amplifier and DAC connectors. \\
-Clock/level interface, if needed & Model open & Match recorder inputs before pricing. \\
-Fixed mounts / clamps / base / baffle & Design open & Choose after geometry; omit bundled stands. \\
-Animal support equipment & Preparation open & Depends on later awake/sedated decision. \\
-Enclosure / acoustic treatment & Optional & Soundproof box not required by current direction. \\
-\bottomrule
-\end{tabularx}}
-
-\topic{Partial subtotals of priced parts}
-{\small\renewcommand{\arraystretch}{1.18}
-\begin{tabularx}{\linewidth}{@{}L P@{}}
-\toprule
-\textbf{Example combinations; not all to buy} & \textbf{Subtotal} \\
-\midrule
-B: NI + 40026 package + optional 40 kHz reference & \$6,162.42 \\
-NI for playback + A kit + optional 40 kHz reference & \$11,742.42 \\
-Same, using an eligible educational 116Hm kit & \$10,902.42 \\
-Intan controller + 32-channel headstage + SPI cable & \$11,105 list \\
-Peerless + ART amplifier & \$308.46 \\
-Scan-Speak + ART amplifier & \$458.59 \\
-\bottomrule
-\end{tabularx}}
-
-\begin{itemize}
-\item Choose one measurement subtotal; do not add A and B together. Count any shared NI device once. The 40 kHz reference is optional.
-\item These are partial examples. Add remaining speaker, neural, computer, wiring, mounting, and band-calibration costs. Unpriced parts are not free; tax/shipping and integration are extra.
-\end{itemize}
-{\footnotesize\color{muted}Public prices checked October 8, 2026. No supplier quote, equipment order, or measured compatibility is implied.}
+\textbf{Sources, October 8, 2026:} \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{TDT kit}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{amplifier}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{power}, \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI}, \href{https://avisoft.com/ultrasoundgate/116hm/}{Avisoft kit}, \href{https://avisoft.com/price-list-ordering-information/}{prices}, \href{https://www.intantech.com/pricing.html}{Intan}. SONIC used MF1; MF2 is our current candidate. Estimates/alternatives are detailed in the repository. This mouse draft is separate from Rice's sedated-sheep plan.}
 
 \end{document}

@@ -66,6 +66,11 @@
 - Checked the final PDF visually and programmatically: one page, all sections present, three correct embedded source-link targets, and no overfull content. Repository validation passed for 86 references and the unchanged SONIC checksum; all six existing model checks passed. Kept compiler logs, downloads, and preview images outside the repository.
 - No equipment purchase, hardware connection, bench/animal experiment, external message, or website content change was performed.
 
+## 2026-10-08 America/Chicago - plain language PDF revision
+
+- Howard asked for a simpler document written more naturally. Replaced the control table and detailed checklist with three short sections using direct "we" wording. Kept speaker choice provisional, mouse state open, and sheep reference values separate from mouse choices.
+- Recompiled the same LaTeX source and replaced the one-page PDF. Increased the body text to 12 pt and added more space. Desktop compilation and PDF export succeeded; visual review and content checks confirmed a readable page with no overflow.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

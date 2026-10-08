@@ -1,64 +1,43 @@
-\documentclass[11pt,letterpaper]{article}
-\usepackage[margin=0.7in]{geometry}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=0.85in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{array,booktabs,enumitem,xcolor,hyperref}
+\usepackage{enumitem,xcolor,hyperref}
 \definecolor{muted}{RGB}{82,88,94}
 \hypersetup{colorlinks=true,urlcolor=black,pdftitle={Mouse auditory experiment: simple setup draft},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
-\renewcommand{\arraystretch}{1.18}
-\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\parskip}{7pt}
 \pagestyle{empty}
-\newcommand{\topic}[1]{\vspace{5pt}{\large\bfseries #1}\par\vspace{1pt}}
+\newcommand{\topic}[1]{\vspace{7pt}{\large\bfseries #1}\par}
 \begin{document}
 
 {\LARGE\bfseries Mouse auditory experiment}\par
-{\color{muted}Simple setup draft \hfill October 8, 2026}\par
+{\color{muted}A first plan \hfill October 8, 2026}\par
 
-\textbf{Goal.} Play known tones to a mouse and record the auditory cortical response, with a reliable timestamp for each sound. This is a proposed mouse adaptation of SONIC; awake versus anesthetized state remains undecided.
+We want to play short tones to a mouse and record how its auditory cortex responds. We'll use SONIC as a starting point and work out what suits our mouse setup.
 
-\topic{1. Define the tones}
-\begin{tabular}{@{}p{0.21\linewidth}p{0.38\linewidth}p{0.35\linewidth}@{}}
-\toprule
-\textbf{Control} & \textbf{SONIC reference} & \textbf{Our mouse draft} \\
-\midrule
-Frequency & Explored 1.4--32 kHz & Select a frequency set \\
-Tone duration & 10 ms in benchmark sessions & Adjustable duration \\
-Sound level & Approximately 80 dB SPL & Choose a measured target \\
-Gap between tones & 0 ms within each block & Adjustable silent gap \\
-Start/end ramps & 2 ms at each end & Define shape and duration \\
-\bottomrule
-\end{tabular}
+\topic{1. Choose the sounds}
+We'll make a program that lets us choose each tone's pitch, how long it plays, how loud it is, and the silence between tones. Each tone will fade in and out briefly to avoid clicks. We'll save the sequence so we know which sound was played each time.
 
-{\small Paper values come from awake sheep. Mouse settings remain open; the paper does not specify the ramp shape. Save the tone sequence in advance, with a trial number and settings for every tone.}
+SONIC used 10 ms tones with 2 ms fades at each end in awake sheep. Those are useful reference values. We still need to choose our mouse settings and decide whether the mouse will be awake or anesthetized.
 
-\topic{2. Set up the sound path}
-\begin{center}
-\small
-Saved tones $\longrightarrow$ DAC/audio output $\longrightarrow$ amplifier $\longrightarrow$ speaker $\longrightarrow$ mouse
-\end{center}
-\vspace{-6pt}
-Evaluate the \textbf{TDT MF1 speaker and SA1 amplifier} used in SONIC, starting with available lab equipment. Check the full chain's frequency coverage. Keep speaker placement fixed and use a suitable calibrated microphone at the ear reference position to measure each selected frequency's sound level.
+\topic{2. Set up the speaker}
+We'll first check what audio equipment the lab already has. The TDT MF1 speaker and SA1 amplifier used in SONIC are one option to consider.
 
-\topic{3. Align sound and neural recordings}
-Use hardware-timed playback to generate each tone and an electrical timing marker on the same schedule. Capture the marker with the neural recording. Record the microphone signal with a verified clock relationship to the neural data, then measure the delay from marker to actual sound arrival.
+We'll keep the speaker in a fixed position and use a suitable calibrated microphone where the mouse's ear will be. This lets us check how loud each tone actually is.
 
-Save trial number, frequency, duration, level, gap, ramp settings, marker time, and measured acoustic onset. If behavior video is added, align camera frame timing to this same timeline. Exact connections depend on the recorder and camera models.
+\topic{3. Put the sound and brain recordings on one timeline}
+The playback device will schedule each tone together with a small electrical timing pulse. The brain recorder will save that pulse alongside the neural signals.
 
-\topic{4. Start in three steps}
-\begin{enumerate}
-\item Identify the available speaker, microphone, audio output, and neural recorder.
-\item On the bench, check delivered tones, levels, timing, and electrical pickup in the recording path.
-\item With the team's mouse protocol, characterize responses to separated tones before choosing a faster sequence and response window.
-\end{enumerate}
+We'll also align the microphone recording with the neural recording to check when the sound actually reaches the ear. If we add behavior video later, we'll align its frame times with the same timeline.
 
-{\small\textbf{Still open:} mouse strain/age and state, final tone settings, recorder, and any behavior task. A simple enclosure may help repeatable positioning; current team direction does not require sound isolation.}
+\vspace{7pt}
+\textbf{Our first step} is to identify the brain recorder and available audio equipment. Then we'll test the sound and timing on the bench, including unwanted electrical pickup. Once those checks work, the team can use its mouse protocol to start with tones separated by silence and see how the brain responds.
 
-\vspace{3pt}
+\vspace{6pt}
 \hrule
 \vspace{3pt}
 {\footnotesize\color{muted}
-\textbf{Sources:} \href{https://doi.org/10.1101/2025.09.30.679683}{Perkins et al., SONIC, bioRxiv v1} (2025), Methods 6.1--6.2, p.11, and 6.6, p.13. Hardware and timing guidance: \href{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{TDT MF1 specifications}; \href{https://www.tdt.com/files/fastfacts/IODelays.pdf}{TDT I/O delays}. Microphone onset checks and the separated-tone progression are proposed Rice additions.}
+\textbf{References:} \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC, bioRxiv v1}, Methods 6.1--6.2 (p.11) and 6.6 (p.13); \href{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{TDT speaker information}; \href{https://www.tdt.com/files/fastfacts/IODelays.pdf}{TDT timing information}. This is our proposed mouse setup.}
 
 \end{document}

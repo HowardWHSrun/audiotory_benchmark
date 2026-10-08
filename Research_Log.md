@@ -82,6 +82,10 @@
 - Included the explored frequency range, benchmark tone duration/fades, random balanced blocks without inter-tone silence, precomputed playback, NI/SA1/MF1 sound chain, reported sheep level, and electrical synchronization. Kept mouse settings open and labeled microphone arrival checks and optional video alignment as local additions.
 - Rechecked against SONIC v1 methods. Desktop compilation and PDF export succeeded; visual/content checks confirmed one readable page, the expected references, and no overflow. The original manuscript remains unchanged.
 
+## 2026-10-08 America/Chicago - remove the starting steps
+
+- Howard approved the remaining draft and asked to remove "Start here." Deleted only that heading and its three bullets, then regenerated the PDF. Desktop compilation and visual review passed; the other content and SONIC references are unchanged.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

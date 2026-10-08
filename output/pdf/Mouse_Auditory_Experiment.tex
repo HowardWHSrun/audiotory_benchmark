@@ -7,6 +7,7 @@
 \hypersetup{colorlinks=true,urlcolor=black,pdftitle={Mouse auditory experiment: simple setup draft},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{7pt}
+\setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt}
 \pagestyle{empty}
 \newcommand{\topic}[1]{\vspace{7pt}{\large\bfseries #1}\par}
 \begin{document}
@@ -14,25 +15,38 @@
 {\LARGE\bfseries Mouse auditory experiment}\par
 {\color{muted}A first plan \hfill October 8, 2026}\par
 
-We want to play short tones to a mouse and record how its auditory cortex responds. We'll use SONIC as a starting point and work out what suits our mouse setup.
+We want to play short tones to a mouse and record how its brain responds, using SONIC as a starting point.
 
 \topic{1. Choose the sounds}
-We'll make a program that lets us choose each tone's pitch, how long it plays, how loud it is, and the silence between tones. Each tone will fade in and out briefly to avoid clicks. We'll save the sequence so we know which sound was played each time.
-
-SONIC used 10 ms tones with 2 ms fades at each end in awake sheep. Those are useful reference values. We still need to choose our mouse settings and decide whether the mouse will be awake or anesthetized.
+\begin{itemize}
+\item Choose the frequency, duration, loudness, and gap between tones.
+\item Add short fades at both ends to avoid clicks.
+\item Save the sequence and settings so we can identify every tone.
+\item SONIC used 10 ms tones with 2 ms fades in awake sheep. Our mouse settings and awake versus anesthetized state remain open.
+\end{itemize}
 
 \topic{2. Set up the speaker}
-We'll first check what audio equipment the lab already has. The TDT MF1 speaker and SA1 amplifier used in SONIC are one option to consider.
+\begin{itemize}
+\item Check what audio equipment the lab already has.
+\item Consider the TDT MF1 speaker and SA1 amplifier used in SONIC.
+\item Keep the speaker in a fixed position.
+\item Measure each tone's loudness with a suitable calibrated microphone at the ear position.
+\end{itemize}
 
-We'll keep the speaker in a fixed position and use a suitable calibrated microphone where the mouse's ear will be. This lets us check how loud each tone actually is.
+\topic{3. Keep everything on one timeline}
+\begin{itemize}
+\item Schedule each tone with an electrical timing pulse.
+\item Record the pulse alongside the neural signals.
+\item Synchronize the microphone recording to check when the sound actually reaches the ear.
+\item If we add behavior video, synchronize its frame times too.
+\end{itemize}
 
-\topic{3. Put the sound and brain recordings on one timeline}
-The playback device will schedule each tone together with a small electrical timing pulse. The brain recorder will save that pulse alongside the neural signals.
-
-We'll also align the microphone recording with the neural recording to check when the sound actually reaches the ear. If we add behavior video later, we'll align its frame times with the same timeline.
-
-\vspace{7pt}
-\textbf{Our first step} is to identify the brain recorder and available audio equipment. Then we'll test the sound and timing on the bench, including unwanted electrical pickup. Once those checks work, the team can use its mouse protocol to start with tones separated by silence and see how the brain responds.
+\topic{Start here}
+\begin{itemize}
+\item Identify the neural recorder and available audio equipment.
+\item Test the sound, timing, and unwanted electrical pickup on the bench.
+\item Once those checks work, use the team's mouse protocol to start with tones separated by silence.
+\end{itemize}
 
 \vspace{6pt}
 \hrule

@@ -71,6 +71,11 @@
 - Howard asked for a simpler document written more naturally. Replaced the control table and detailed checklist with three short sections using direct "we" wording. Kept speaker choice provisional, mouse state open, and sheep reference values separate from mouse choices.
 - Recompiled the same LaTeX source and replaced the one-page PDF. Increased the body text to 12 pt and added more space. Desktop compilation and PDF export succeeded; visual review and content checks confirmed a readable page with no overflow.
 
+## 2026-10-08 America/Chicago - bullet point PDF revision
+
+- Howard requested more bullet points. Converted the three setup sections and starting steps to 15 short, single-level bullets, preserving the simple wording and open mouse choices.
+- Desktop LaTeX compilation and PDF export succeeded. Checked the updated page visually and confirmed all bullets fit on one page without overflow. Temporary font/download resources and preview images remain outside the repository.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

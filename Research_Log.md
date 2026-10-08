@@ -57,6 +57,15 @@
 - Verification passed: six existing scientific-model checks, validation of 84 references and the unchanged SONIC v1 PDF checksum, and whitespace/diff checks. Scientific and hardware review identified a useful recorder-artifact bench check, now included in the proposal.
 - No hardware connection, sound playback, calibration measurement, animal experiment, external message, order, or website change was performed.
 
+## 2026-10-08 America/Chicago - simple LaTeX experiment draft
+
+- Howard requested a very simple LaTeX file and PDF describing the proposed mouse experiment after checking SONIC's methods. Created an editable standalone source and a one-page PDF under `output/pdf/`.
+- Rechecked SONIC v1 Sections 6.1-6.2 in the unchanged source manuscript. The five-control table labels sheep reference values separately from open mouse choices. MF1/SA1 remain candidate equipment; acoustic onset checks and the separated-tone progression are proposed Rice additions.
+- Included sound delivery, clock-aligned hardware markers and microphone timing, three starting steps, and a short list of open decisions. Mouse state, equipment, behavior, and enclosure choices remain open.
+- The desktop LaTeX compiler confirmed success. Exported the PDF from the same source with the official Tectonic 0.17.0 compiler, downloaded into a temporary folder and verified against the release asset's SHA256 digest.
+- Checked the final PDF visually and programmatically: one page, all sections present, three correct embedded source-link targets, and no overfull content. Repository validation passed for 86 references and the unchanged SONIC checksum; all six existing model checks passed. Kept compiler logs, downloads, and preview images outside the repository.
+- No equipment purchase, hardware connection, bench/animal experiment, external message, or website content change was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

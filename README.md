@@ -35,6 +35,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.
 - [Mouse setup proposal](Mouse_Stimulus_Setup_Proposal.md): requested mouse adaptation, functional sound/timing paths, and staged verification; preparation and equipment remain open.
+- [One-page mouse experiment draft](output/pdf/Mouse_Auditory_Experiment.pdf) and [editable LaTeX source](output/pdf/Mouse_Auditory_Experiment.tex): five tone controls, speaker setup, timing alignment, and three starting steps.
 - [Equipment and software inventory](Equipment_Software_Inventory.md): actual lab availability remains to be established.
 - [Bench-validation plan](Bench_Validation_Plan.md): proposed checks, with no completed bench or animal experiment claimed.
 - [Research log](Research_Log.md): provenance and changes.

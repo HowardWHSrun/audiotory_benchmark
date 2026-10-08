@@ -127,6 +127,15 @@
 - Verification passed: desktop LaTeX compilation, two-page export, visual review of both pages, seven HTTPS PDF links, no overfull/underfull content, checks for removal of neural purchases and retention of acoustic estimates, sound/reserve/reuse arithmetic, 190-reference repository validation, unchanged SONIC v1 manuscript, and diff checks. Independent scope review found no material issues. Website content is unchanged; temporary renders stay outside the repository.
 - No vendor contact, purchase, physical connection, or experiment was performed.
 
+## 2026-10-08 America/Chicago - equipment rationale and intended sheep reuse
+
+- Howard requested an appendix explaining the speaker/amplifier/power choices, listing SONIC's actual hardware, and designing the mouse sound setup for later sheep reuse. Added one appendix page; the reading PDF is now three pages and keeps the simple shopping list and existing sound budget.
+- Rechecked the saved primary manuscript, Methods 6.2 (p.11) and 6.6 (p.13), plus current official TDT/Avisoft documentation. The appendix distinguishes SONIC's MF1/SA1/NI/TM2500C from our proposed MF2-M, ZB1PS, and Avisoft kit. The exact paper power unit and measurement microphone are unreported; the GPS server is a paper reference, not a new purchase.
+- Explained MF2's stated broad band, documented SA1 compatibility, and its zBus power dependency. Intended sheep reuse requires new placement/calibration at the sheep-ear position and fresh timing checks. The 2 kHz microphone limit does not cover SONIC's 1.4 kHz tones; lower-frequency needs must be resolved before purchasing that kit. Hardware reuse does not establish the same physiology or response windows in sedated Rice sheep versus SONIC's awake sheep.
+- Updated the supporting plan, proposal, pricing record, and README. Lab probes remain in use; neural/animal purchases remain outside the sound budget. No cross-species performance or equipment compatibility measurement is claimed.
+- Verification passed: desktop LaTeX compilation, three-page export, visual review of all pages, 13 HTTPS link annotations to eight correct destinations, appendix attribution/transfer content checks, unchanged budget arithmetic, no overfull/underfull content, independent paper/hardware reviews, 202-reference repository validation, unchanged SONIC v1 source PDF, and diff checks. Temporary renders are outside the repository; the website is unchanged.
+- No vendor contact, purchase, hardware connection, or experiment was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

@@ -6,6 +6,8 @@ This is a proposed engineering design. The confirmed primary Rice target remains
 
 Howard also clarified that we will use the lab's own probes and focus this work on the sound setup. The purchase budget covers sound delivery, measurement, calibration, and timing connections; neural and animal-preparation hardware are outside it. Exact lab recorder/headstage interfaces still need confirming.
 
+The intended design is a mouse sound setup whose equipment can later be reused for the primary sedated-sheep work. Transfer requires fresh acoustic calibration at the sheep-ear position, appropriate frequency/level choices, and timing checks with that recording system. It is not a demonstrated cross-species protocol; see the [equipment rationale and transfer plan](Mouse_Setup_Equipment_Plan.md).
+
 ## What transfers from SONIC
 
 The source is the unchanged [SONIC bioRxiv v1 manuscript](sources/SONIC_2025_bioRxiv_v1.pdf), printed pp.11-13, Sections 6.1-6.6. [Paper notes](Paper_Notes.md) retain the full method ledger and unresolved details.

@@ -2,7 +2,7 @@
 
 October 8, 2026. Howard clarified that we will use the lab's own probes and mainly need to assemble the sound setup. Treat sound functions as needing provision until access is confirmed. Neural-hardware and animal-preparation purchases are outside this budget. The [forwarded BCM list](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) gives candidates, not confirmed Rice equipment. The [short PDF](output/pdf/Mouse_Auditory_Experiment.pdf) is the reading version; this note keeps the supporting details.
 
-Mouse state and tone settings remain open. Rice's confirmed primary project remains sedated-sheep auditory measurements; this is the requested mouse adaptation.
+Mouse state and tone settings remain open. Rice's confirmed primary project remains sedated-sheep auditory measurements. Howard wants the mouse sound setup designed with later sheep reuse in mind; transfer is an engineering aim, not a validated result.
 
 ## Sound delivery
 
@@ -11,6 +11,16 @@ The simplified reading budget uses one MF2-M mono kit, SA1, ZB1PS, and NI USB-63
 Provisional free-field budgeting path:
 
 **Computer and saved waveforms → NI timed analog output → SA1 → MF2 → mouse-ear position**, with ZB1PS power for SA1. The earlier ES1/ED1 candidates remain alternatives in the reference table below.
+
+### Why this proposed speaker group?
+
+- **MF2-M:** one through-air speaker kit, with a stand/accessories and a stated 1–80 kHz band. That includes SONIC's 1.4–32 kHz band and is a useful design basis for a shared mouse/sheep sound system. Manufacturer reference conditions do not establish output in our geometry. [MF2 range and package](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
+- **SA1:** TDT supports this amplifier with MF2. It supplies speaker-driving power from the NI waveform; SONIC also used SA1. [MF2 support](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/), [SA1](https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/).
+- **ZB1PS:** SA1 requires System 3 zBus power; this powered chassis supplies it and houses the module. It is a hardware dependency in our proposed chain. [SA1 power](https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/), [ZB1PS](https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/).
+
+### What SONIC actually used
+
+The manuscript's Methods 6.2 (printed p.11) names NI USB-6361 output at 192 kHz, SA1 at 0 dB attenuation, MF1 in free-field use at about 80 dB SPL at sheep-ear distance, and a TimeMachines TM2500C providing PTP/10 MHz clock references. It records electrical sound-output/trial-start loopback for alignment. **MF2-M, ZB1PS, and our Avisoft measurement kit are proposed Rice choices:** the exact power unit and measurement microphone are not named in the paper. Its 80 dB level is a published condition, not a selected mouse or sedated-sheep exposure. [Saved SONIC v1](sources/SONIC_2025_bioRxiv_v1.pdf), [paper notes](Paper_Notes.md).
 
 | Candidate | What the manufacturer establishes | What it means for our plan |
 |---|---|---|
@@ -50,6 +60,13 @@ Schedule tone markers with playback hardware and record them in the neural and a
 For 116Hm, the DIN marker is embedded in 16-bit recorded samples and is unavailable in 8-bit mode. Current Avisoft settings also support an external sample clock at 16 times the desired WAV sampling rate, with a separate ADC-start input. This is a possible synchronization route, not a confirmed match to our unknown neural recorder. [116Hm manual](https://www.avisoft.com/usgmanual_116Hm.pdf), [external-clock documentation](https://www.avisoft.com/Help/RECORDER/advanced_usgh_device_settings.htm).
 
 A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal preparation follows the later awake/sedated decision and is outside this sound-shopping budget.
+
+## Reusing the mouse sound setup for sheep
+
+- Intend to reuse speaker, amplifier, powered chassis, NI, computer, and acoustic recorder, with the lab's probes for neural recordings. This does not confirm recorder/headstage interfaces or transfer performance.
+- Adapt the mounts, distance, angle, and measurement position. Calibrate every selected tone at the sheep-ear position, verify clean output there, and recheck acoustic onset and alignment to the sheep recording timeline. A mouse calibration cannot be copied to the sheep geometry. [TDT configuration-specific calibration](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
+- Resolve the lowest tone before buying the measurement kit: MF2's stated band begins at 1 kHz, but CM16/CMPA begins at 2 kHz. SONIC's 1.4 kHz tones and other tones below 2 kHz need another suitably calibrated microphone. Reusing the 116Hm recorder with that microphone may be possible, but its configuration/cost needs confirmation. [Microphone specification](https://avisoft.com/ultrasound-microphones/cm16-cmpa/).
+- Select animal-specific stimulus levels and response windows with the team. The mouse preparation is undecided; Rice's sheep will be sedated, while SONIC's were awake. Hardware reuse does not establish equal neural responses, decoder performance, or achieved ITR. See the [team direction](sources/Team_Clarifications_2026-10-07.md) and SONIC Methods 6.6 (p.13).
 
 See the [equipment budget and detailed reference prices](Mouse_Equipment_Pricing_2026-10-08.md) for one proposed shopping list, numerical estimates for quote-only/model-open items, bundled contents, and alternative subtotals. Estimates are our planning reserves, not vendor quotations.
 

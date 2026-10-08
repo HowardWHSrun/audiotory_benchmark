@@ -1,6 +1,6 @@
 # Mouse sound equipment list and prices
 
-Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) for the sound setup we need to assemble. Howard clarified that we will use the lab's own probes; neural-equipment purchases are outside this budget. The [two-page PDF](output/pdf/Mouse_Auditory_Experiment.pdf) contains the experiment outline and one proposed shopping budget.
+Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) for the sound setup we need to assemble. Howard clarified that we will use the lab's own probes; neural-equipment purchases are outside this budget. The [three-page PDF](output/pdf/Mouse_Auditory_Experiment.pdf) contains the outline, shopping budget, and an appendix explaining the choices, SONIC equipment, and intended reuse for sheep.
 
 - Prices are for **one new item/package**, unless stated otherwise. USD is the default; the B&K calibrator listing is explicitly EUR.
 - **Estimate; quote still needed** means a numerical supplier price is unverified, so our planning reserve is shown. **Model open** estimates are allowances for a function before choosing a part.
@@ -32,7 +32,9 @@ For now, use **this one sound setup** for budgeting. Use our lab's probes for th
 - **Reserve:** keep another **$2,500** for price changes, shipping, tax, or missing accessories. Sound equipment + reserve = **$22,440.42; working budget about $22,500**. This reserve does not guarantee every final quote fits.
 - **Optional video:** a $585 camera body + $500 accessory allowance = $1,085; allow **about $1,100** if behavior video is added. Not in the $22,500 budget. A soundproof box is not required by current team direction.
 
-**Before buying:** confirm how the tone markers connect to the lab recording system. The Avisoft microphone's specification starts at 2 kHz; lower tones need a different measurement choice. Calibration support needs a band-specific plan. The mouse state and tone settings remain open; this draft is separate from Rice's primary sedated-sheep plan. Hardware/timing compatibility has not been measured.
+**Before buying:** confirm how the tone markers connect to the lab recording system. The Avisoft microphone's specification starts at 2 kHz; lower tones need a different measurement choice. Calibration support needs a band-specific plan. Mouse state and tone settings remain open; the intended sheep reuse serves Rice's primary sedated-sheep plan. Hardware/timing compatibility has not been measured.
+
+**Mouse-to-sheep aim:** reuse the sound equipment after adapting placement, recalibrating every tone, and verifying timing with the sheep recorder. This budget does not demonstrate transfer or cover a changed microphone configuration for tones below 2 kHz. The [equipment plan](Mouse_Setup_Equipment_Plan.md) and PDF appendix explain the proposed parts and distinguish them from SONIC's reported hardware.
 
 **Why MF2?** SONIC used MF1. TDT lists MF2 as its current generation, and the MF2-M kit supports SA1. We use one MF2-M for the present budget while MF1 availability is unconfirmed. [TDT current speaker](https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/), [kit contents and amplifier support](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
 

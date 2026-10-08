@@ -4,7 +4,7 @@
 \usepackage{lmodern}
 \usepackage{enumitem,xcolor,hyperref,tabularx,booktabs}
 \definecolor{muted}{RGB}{82,88,94}
-\hypersetup{colorlinks=true,urlcolor=black,pdftitle={Mouse auditory experiment: simple setup draft},pdfauthor={Rice auditory benchmarking project}}
+\hypersetup{colorlinks=true,urlcolor=black,pdftitle={Auditory sound setup: mouse plan and sheep reuse},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{7pt}
 \setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt}
@@ -19,7 +19,7 @@
 {\LARGE\bfseries Mouse auditory experiment}\par
 {\color{muted}A first plan \hfill October 8, 2026}\par
 
-We want to play short tones to a mouse and record its brain responses with our lab's probes. We are planning the sound setup. SONIC tested awake sheep; our mouse state and tone settings remain open. \sonicref{6.6, p.13}
+We plan the sound setup for mice using our lab's probes, with the aim of reusing the sound equipment for sedated sheep. SONIC tested awake sheep; our mouse state and tone settings remain open. \sonicref{6.6, p.13}
 
 \topic{1. Choose the sounds}
 \begin{itemize}
@@ -31,7 +31,7 @@ We want to play short tones to a mouse and record its brain responses with our l
 
 \topic{2. Set up the speaker}
 \begin{itemize}
-\item Plan as though we need to assemble the whole sound setup.
+\item Choose sound equipment with later sheep use in mind; the appendix explains the proposed parts.
 \item \textbf{SONIC:} NI USB-6361 output at 192 kHz, TDT SA1 amplifier, and MF1 free-field speaker; about 80 dB SPL at sheep-ear distance. \sonicref{6.2, p.11}
 \item \textbf{Our plan:} use the proposed shopping list on the next page, keep speaker placement fixed, and measure each tone with a calibrated microphone at the mouse-ear position.
 \end{itemize}
@@ -63,7 +63,7 @@ Budget for one of each item or group below. \textbf{Est.} means our rough allowa
 1 TDT MF2-M speaker kit & Plays the tones. & \$1,500 est. \\
 1 TDT SA1 amplifier & Drives the speaker. & \$2,000 est. \\
 1 TDT ZB1PS power unit & Powers the amplifier. & \$750 est. \\
-1 NI USB-6361 & Controls tones and timing. & \$3,030 \\
+1 NI USB-6361 & Tone output and timing. & \$3,030 \\
 1 complete Avisoft 116Hm kit & Records sound at the ear position. & \$8,160 \\
 Calibration support & Checks the sound levels. & \$1,500 est. \\
 1 computer, monitor, and storage set & Runs playback and saves data. & \$2,000 est. \\
@@ -94,6 +94,44 @@ Cables, timing connections, and mounts & Connects equipment and fixes its positi
 {\footnotesize\color{muted}
 \textbf{Before buying:} Confirm the lab recorder's timing input. The microphone's stated band starts at 2 kHz; lower tones need a different choice. Calibration and timing need checking. A soundproof box is not required.
 
-\textbf{Sources, October 8, 2026:} \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{TDT kit}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{amplifier}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{power}, \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI}, \href{https://avisoft.com/ultrasoundgate/116hm/}{Avisoft kit}, \href{https://avisoft.com/price-list-ordering-information/}{prices}. SONIC used MF1; MF2 is our current candidate. Estimates/alternatives are detailed in the repository. This mouse draft is separate from Rice's sedated-sheep plan.}
+\textbf{Sources, October 8, 2026:} \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{TDT kit}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{amplifier}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{power}, \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI}, \href{https://avisoft.com/ultrasoundgate/116hm/}{Avisoft kit}, \href{https://avisoft.com/price-list-ordering-information/}{prices}. SONIC used MF1; MF2 is our current candidate. Estimates/alternatives are detailed in the repository. We aim to reuse the sound hardware for Rice's sedated-sheep measurements after new calibration and timing checks.}
+
+\newpage
+{\LARGE\bfseries Appendix: why these parts?}\par
+{\color{muted}Mouse setup first; intended reuse for sheep}\par
+
+\topic{Why the speaker, amplifier, and power unit?}
+\begin{itemize}
+\item \textbf{MF2-M speaker:} one speaker plays tones through the air. TDT lists a 1--80 kHz range, including SONIC's 1.4--32 kHz band. This broad range is useful for a shared mouse/sheep setup. Actual output still needs measuring.
+\item \textbf{SA1 amplifier:} turns the NI waveform into power that drives the speaker. TDT explicitly supports SA1 with MF2; SONIC also used SA1.
+\item \textbf{ZB1PS power unit:} SA1 needs TDT's zBus power. This chassis supplies it and houses the amplifier.
+\end{itemize}
+
+\topic{What SONIC used, and what we propose}
+{\small\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.03in} L L@{}}
+\toprule
+\textbf{Part} & \textbf{SONIC reported} & \textbf{Our proposal} \\
+\midrule
+Speaker & TDT MF1, through-air use & TDT MF2-M, current model \\
+Amplifier & TDT SA1, 0 dB attenuation & TDT SA1 \\
+Power unit & Exact model not named & ZB1PS, per TDT's requirement \\
+Tone output & NI USB-6361, 192 kHz & NI USB-6361 for tones/markers \\
+Sound-check mic & Not named in the paper & Avisoft 116Hm complete kit \\
+Clock reference & TimeMachines TM2500C; PTP and 10 MHz & Confirm lab clock/timing inputs \\
+\bottomrule
+\end{tabularx}}
+\par\vspace{5pt}
+{\small\color{muted}SONIC Methods 6.2, p.11. Its reported sheep level was about 80 dB SPL; this is not our selected mouse level. The GPS server is a paper reference, not an added purchase.}
+
+\topic{What changes when we move to sheep?}
+\begin{itemize}
+\item \textbf{Intended reuse:} speaker, amplifier, power unit, NI, computer, and sound recorder. We use our lab's probes.
+\item \textbf{Set up and measure again:} change mounts, distance, and angle; calibrate each tone at the sheep-ear position and recheck sound arrival and recorder timing.
+\item \textbf{Check the microphone first:} the kit's stated range starts at 2 kHz. SONIC's 1.4 kHz tones, or other lower sheep tones, need a suitable alternative microphone.
+\item \textbf{Choose settings separately:} our sheep will be sedated; SONIC's were awake. Reusing equipment does not establish the same brain responses or response windows.
+\end{itemize}
+
+{\footnotesize\color{muted}\textbf{Sources:} \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC v1}, Methods 6.2 (p.11), 6.6 (p.13); \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{MF2 range/compatibility}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 power}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS}, \href{https://avisoft.com/ultrasound-microphones/cm16-cmpa/}{microphone range}. Transfer is a design aim; it has not been demonstrated with our equipment.}
 
 \end{document}

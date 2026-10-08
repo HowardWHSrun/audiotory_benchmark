@@ -119,6 +119,14 @@
 - Verification passed: desktop LaTeX compilation, two-page export, visual review of both pages, eight correct HTTPS PDF links, no overfull/underfull layout warnings, checks that all prior quote-only rows contain estimates, and equipment/reserve/video arithmetic. Independent review found no material issues or duplicate bundle charges. Repository validation passed for 195 references and the unchanged SONIC v1 manuscript; diff checks passed. Temporary renders remain outside the repository.
 - No vendor contact, quote request, purchase, animal/bench procedure, or website edit was performed.
 
+## 2026-10-08 America/Chicago - sound budget using the lab's probes
+
+- Howard corrected the scope: we will use the lab's own probes, and this work mainly concerns the sound setup. Removed the Intan comparison, new probe/adapter allowance, and animal-support purchases from the current PDF and shopping catalog. Their earlier figures remain only in historical commits/log entries.
+- Revised the sound-equipment subtotal to $19,940.42 (about $20,000). A $2,500 reserve gives $22,440.42 (about $22,500). Computer/storage is a conditional $2,000 allowance that can be removed if a suitable lab setup is reused. Optional camera remains outside the core sound budget. All acoustic quote-only estimates are retained.
+- Updated the plan, proposal, inventory, and README. Planned use of lab probes is confirmed; exact probe/headstage/recorder models, accessory availability, timing-input compatibility, and physical validation remain unverified. Sound markers still need connecting to the lab recording timeline.
+- Verification passed: desktop LaTeX compilation, two-page export, visual review of both pages, seven HTTPS PDF links, no overfull/underfull content, checks for removal of neural purchases and retention of acoustic estimates, sound/reserve/reuse arithmetic, 190-reference repository validation, unchanged SONIC v1 manuscript, and diff checks. Independent scope review found no material issues. Website content is unchanged; temporary renders stay outside the repository.
+- No vendor contact, purchase, physical connection, or experiment was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

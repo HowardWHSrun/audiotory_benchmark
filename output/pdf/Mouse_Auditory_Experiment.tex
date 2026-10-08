@@ -19,7 +19,7 @@
 {\LARGE\bfseries Mouse auditory experiment}\par
 {\color{muted}A first plan \hfill October 8, 2026}\par
 
-We want to play short tones to a mouse and record its brain responses. SONIC tested awake sheep; our mouse state and tone settings remain open. \sonicref{6.6, p.13}
+We want to play short tones to a mouse and record its brain responses with our lab's probes. We are planning the sound setup. SONIC tested awake sheep; our mouse state and tone settings remain open. \sonicref{6.6, p.13}
 
 \topic{1. Choose the sounds}
 \begin{itemize}
@@ -38,7 +38,7 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 
 \topic{3. Keep everything on one timeline}
 \begin{itemize}
-\item Schedule each tone with a timing pulse and record it alongside the neural signals.
+\item Use our lab's probes. Confirm the recording system's timing input so it can record the tone markers alongside the neural signals.
 \item \textbf{SONIC:} recorded electrical sound output and trial-start markers; shared clock references aligned these with Connexus brain recordings. \sonicref{6.2, p.11}
 \item \textbf{Our additions:} synchronize a microphone recording to check actual sound arrival. Align video frame times too if we add behavior video.
 \end{itemize}
@@ -50,8 +50,8 @@ We want to play short tones to a mouse and record its brain responses. SONIC tes
 \textbf{Reference:} Perkins et al. (2025), \href{https://doi.org/10.1101/2025.09.30.679683}{SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces}, bioRxiv v1. Page numbers above refer to the printed manuscript. Mouse choices and additions are proposals.}
 
 \newpage
-{\LARGE\bfseries One proposed shopping list}\par
-{\color{muted}Building the mouse setup from scratch \hfill USD}\par
+{\LARGE\bfseries Sound setup: shopping list}\par
+{\color{muted}Use our lab's probes \hfill USD}\par
 
 Budget for one of each item or group below. \textbf{Est.} means our rough allowance, not a confirmed supplier price.
 
@@ -63,15 +63,13 @@ Budget for one of each item or group below. \textbf{Est.} means our rough allowa
 1 TDT MF2-M speaker kit & Plays the tones. & \$1,500 est. \\
 1 TDT SA1 amplifier & Drives the speaker. & \$2,000 est. \\
 1 TDT ZB1PS power unit & Powers the amplifier. & \$750 est. \\
-1 NI USB-6361 & Sends tones and timing signals. & \$3,030 \\
+1 NI USB-6361 & Controls tones and timing. & \$3,030 \\
 1 complete Avisoft 116Hm kit & Records sound at the ear position. & \$8,160 \\
 Calibration support & Checks the sound levels. & \$1,500 est. \\
-1 Intan recording set & Controller, 32-channel headstage, and cable for brain signals. & \$11,105 \\
-1 electrode and adapter & Connects the brain recording to the headstage. & \$1,500 est. \\
-1 computer, monitor, and storage set & Runs the setup; includes a backup drive. & \$2,000 est. \\
+1 computer, monitor, and storage set & Runs playback and saves data. & \$2,000 est. \\
 Cables, timing connections, and mounts & Connects equipment and fixes its position. & \$1,000 est. \\
 \midrule
-\textbf{Equipment subtotal} & \textbf{Rounded budget} & \textbf{\$33,000} \\
+\textbf{Sound setup subtotal} & \textbf{Rounded budget} & \textbf{\$20,000} \\
 \bottomrule
 \end{tabularx}}
 
@@ -81,16 +79,21 @@ Cables, timing connections, and mounts & Connects equipment and fixes its positi
 \item The MF2-M kit includes a stand and connection accessories. No extra speaker or microphone is needed for this budget.
 \end{itemize}
 
-\topic{What could add to the cost?}
+\topic{What do we already have?}
 \begin{itemize}
-\item Allow \textbf{\$5,000 extra} for animal support equipment; the mouse preparation is still undecided.
-\item Keep \textbf{\$4,000 reserve} for price changes, shipping, and tax: working budget \textbf{about \$42,000}.
+\item Our lab provides the probes. Neural hardware and animal preparation are outside this sound budget.
+\item Reuse a suitable lab computer and storage if available; then remove the \$2,000 allowance above.
+\end{itemize}
+
+\topic{Allow for extras}
+\begin{itemize}
+\item Keep \textbf{\$2,500 reserve} for price changes, shipping, and tax: sound budget \textbf{about \$22,500}.
 \item Optional behavior camera with accessories: \textbf{about \$1,100 extra}.
 \end{itemize}
 
 {\footnotesize\color{muted}
-\textbf{Before buying:} Intan is a budget example. The microphone's stated band starts at 2 kHz; lower tones need a different choice. Calibration and timing need checking. Animal support excludes housing, full surgery/anesthesia infrastructure, and ongoing costs. A soundproof box is not required.
+\textbf{Before buying:} Confirm the lab recorder's timing input. The microphone's stated band starts at 2 kHz; lower tones need a different choice. Calibration and timing need checking. A soundproof box is not required.
 
-\textbf{Sources, October 8, 2026:} \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{TDT kit}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{amplifier}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{power}, \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI}, \href{https://avisoft.com/ultrasoundgate/116hm/}{Avisoft kit}, \href{https://avisoft.com/price-list-ordering-information/}{prices}, \href{https://www.intantech.com/pricing.html}{Intan}. SONIC used MF1; MF2 is our current candidate. Estimates/alternatives are detailed in the repository. This mouse draft is separate from Rice's sedated-sheep plan.}
+\textbf{Sources, October 8, 2026:} \href{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{TDT kit}, \href{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{amplifier}, \href{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{power}, \href{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI}, \href{https://avisoft.com/ultrasoundgate/116hm/}{Avisoft kit}, \href{https://avisoft.com/price-list-ordering-information/}{prices}. SONIC used MF1; MF2 is our current candidate. Estimates/alternatives are detailed in the repository. This mouse draft is separate from Rice's sedated-sheep plan.}
 
 \end{document}

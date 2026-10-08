@@ -1,6 +1,6 @@
 # Mouse setup: equipment to assemble
 
-October 8, 2026. Howard asked us to plan from scratch after confirming the simple draft with a labmate. Treat every required function as needing provision until access is confirmed. The [forwarded BCM list](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) gives candidates, not confirmed Rice equipment. The [short PDF](output/pdf/Mouse_Auditory_Experiment.pdf) is the reading version; this note keeps the supporting details.
+October 8, 2026. Howard clarified that we will use the lab's own probes and mainly need to assemble the sound setup. Treat sound functions as needing provision until access is confirmed. Neural-hardware and animal-preparation purchases are outside this budget. The [forwarded BCM list](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) gives candidates, not confirmed Rice equipment. The [short PDF](output/pdf/Mouse_Auditory_Experiment.pdf) is the reading version; this note keeps the supporting details.
 
 Mouse state and tone settings remain open. Rice's confirmed primary project remains sedated-sheep auditory measurements; this is the requested mouse adaptation.
 
@@ -38,7 +38,7 @@ One 116Hm analog channel cannot independently capture both the microphone and an
 | Function to provide | Choice still needed |
 |---|---|
 | Tone generation and playback | Computer/OS, software, timed DAC/DAQ, output bandwidth, and saved sequence/configuration |
-| Neural recording | Electrode/headstage/recorder chain appropriate to the team's implant; event inputs and export format |
+| Connection to lab neural recording | Use the lab's own probes; confirm recorder/headstage interfaces, event inputs, clock, and export format. Their models and accessory availability remain unverified. |
 | Alignment | Compatible event outputs/inputs; clock-sharing or repeated-marker alignment; validated acoustic onset and drift |
 | Sound-level measurement | One complete microphone/conditioning/acquisition chain plus calibration records and reference |
 | Repeatable geometry | Speaker/microphone mounts, distance/orientation record, cables, power, and background-sound record |
@@ -49,7 +49,7 @@ Schedule tone markers with playback hardware and record them in the neural and a
 
 For 116Hm, the DIN marker is embedded in 16-bit recorded samples and is unavailable in 8-bit mode. Current Avisoft settings also support an external sample clock at 16 times the desired WAV sampling rate, with a separate ADC-start input. This is a possible synchronization route, not a confirmed match to our unknown neural recorder. [116Hm manual](https://www.avisoft.com/usgmanual_116Hm.pdf), [external-clock documentation](https://www.avisoft.com/Help/RECORDER/advanced_usgh_device_settings.htm).
 
-A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal support requirements follow the later awake/sedated preparation decision.
+A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal preparation follows the later awake/sedated decision and is outside this sound-shopping budget.
 
 See the [equipment budget and detailed reference prices](Mouse_Equipment_Pricing_2026-10-08.md) for one proposed shopping list, numerical estimates for quote-only/model-open items, bundled contents, and alternative subtotals. Estimates are our planning reserves, not vendor quotations.
 

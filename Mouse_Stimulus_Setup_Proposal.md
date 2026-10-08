@@ -4,6 +4,8 @@ October 8, 2026, America/Chicago. Howard requested a mouse adaptation to conside
 
 This is a proposed engineering design. The confirmed primary Rice target remains sedated sheep. Howard confirmed on October 8 that awake versus anesthetized/sedated mouse state is still undecided; mouse strain/age, recorder, and local equipment are also open decisions. The design does not select an animal exposure schedule or anesthesia procedure.
 
+Howard also clarified that we will use the lab's own probes and focus this work on the sound setup. The purchase budget covers sound delivery, measurement, calibration, and timing connections; neural and animal-preparation hardware are outside it. Exact lab recorder/headstage interfaces still need confirming.
+
 ## What transfers from SONIC
 
 The source is the unchanged [SONIC bioRxiv v1 manuscript](sources/SONIC_2025_bioRxiv_v1.pdf), printed pp.11-13, Sections 6.1-6.6. [Paper notes](Paper_Notes.md) retain the full method ledger and unresolved details.

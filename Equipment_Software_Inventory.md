@@ -27,23 +27,23 @@ Complete availability/model fields from inspection, specifications, records or d
 
 For confirmed items, record owner/custodian, calibration status and constraints. State whether each satisfies a **paper fact** or **proposed Rice choice**. An unknown item does not imply a purchase.
 
-## Mouse setup: provision from scratch
+## Mouse setup: sound equipment to provision
 
-Howard asked us to assume the mouse setup must be assembled. Each function below is **not yet secured for planning purposes**; this is an assumption, not a completed physical inventory. The [BCM email](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) suggests candidates without confirming Rice access. See the [equipment plan](Mouse_Setup_Equipment_Plan.md) for dependencies and official sources.
+Howard clarified on October 8 that we will use the lab's own probes and that the work mainly concerns the sound setup. Planned use of the probes is confirmed; their exact model, validation, and recording interfaces have not been inspected here. Sound-equipment availability remains unconfirmed. The [BCM email](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) suggests candidates without confirming Rice access. See the [equipment plan](Mouse_Setup_Equipment_Plan.md) for dependencies and official sources.
 
 | Function | Candidate or unresolved choice | Provision to confirm |
 |---|---|---|
 | Stimulus computer/software | Unselected | OS, waveform generation, timed playback, saved configuration |
 | Analog playback output | Hardware-timed DAC/DAQ, model open | Frequency coverage, output range, event generation |
-| Free-field speaker path | ES1 + ED1 candidate | Intended tones at or above 4 kHz; zBus/ZB1PS power, matching speaker cable, calibration |
+| Free-field speaker path | MF2-M + SA1 + ZB1PS budget candidate | Usable tone band, NI output connections, fixed geometry, calibration; ES1/ED1 retained as an alternative |
 | Other speaker paths | EC1, Peerless XT25TG30-04, Scan-Speak R2004/602200 | Coupling for EC1; suitable conventional amplifier for either tweeter; usable band |
 | Acoustic recording | 116Hm complete CM16/CMPA kit or 4939 measurement chain | Exact microphone, preamplifier/conditioning, ADC, gain and calibration |
-| Neural recording | Recorder/headstage/electrode chain unselected | Intended implant, event inputs, clock and file export |
+| Lab probes | Planned use confirmed by Howard | Exact lab probe model, headstage/recorder interface, event input, clock, and file export; not a new purchase in the sound budget |
 | Timing connections | Shared markers; clock strategy open | Voltage/connector compatibility, onset and drift verification |
 | Calibration/support | Reference, mounts, cables, power, storage | Traceable level measurement, stable geometry, data records |
 | Behavior camera/enclosure | Optional | Include only if needed; verify camera frame timing if used |
 
-Pricing is recorded separately in the [expanded equipment list](Mouse_Equipment_Pricing_2026-10-08.md). Public price listings do not change the availability status above.
+Pricing is recorded separately in the [sound equipment list](Mouse_Equipment_Pricing_2026-10-08.md). A suitable lab computer/storage setup can be reused if available. Public price listings do not change equipment availability; neural-hardware and animal-preparation purchases are outside the current budget.
 
 ## Educational software
 

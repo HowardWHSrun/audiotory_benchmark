@@ -1,6 +1,6 @@
-# Mouse equipment list and prices
+# Mouse sound equipment list and prices
 
-Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) under Howard's assumption that we need to assemble the setup. The [two-page PDF](output/pdf/Mouse_Auditory_Experiment.pdf) contains the experiment outline and one proposed shopping budget.
+Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) for the sound setup we need to assemble. Howard clarified that we will use the lab's own probes; neural-equipment purchases are outside this budget. The [two-page PDF](output/pdf/Mouse_Auditory_Experiment.pdf) contains the experiment outline and one proposed shopping budget.
 
 - Prices are for **one new item/package**, unless stated otherwise. USD is the default; the B&K calibrator listing is explicitly EUR.
 - **Estimate; quote still needed** means a numerical supplier price is unverified, so our planning reserve is shown. **Model open** estimates are allowances for a function before choosing a part.
@@ -8,9 +8,9 @@ Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Eq
 - Shipping, sales/import taxes, and installation are excluded unless the seller explicitly includes them. Newark states its displayed prices include applicable duties/tariffs. The EUR calibrator price excludes VAT; no currency conversion is assumed.
 - Choose one sound path and one acoustic measurement path. Do not sum every alternative or buy an extra part already included in a kit.
 
-## One proposed shopping list
+## One proposed sound shopping list
 
-For now, use **this one setup** for budgeting. Get one of each item or group below. The alternative products further down are reference material.
+For now, use **this one sound setup** for budgeting. Use our lab's probes for the neural recordings. Get one of each item or group below. The alternative products further down are reference material.
 
 **Estimate** means our own rough budget allowance. It is not a supplier price, and a later quote may fall outside it. Public/list prices keep their source links below. No supplier was contacted.
 
@@ -22,18 +22,17 @@ For now, use **this one setup** for budgeting. Get one of each item or group bel
 | 1 × NI USB-6361, 781442-01 | Sends tones and timing signals | **$3,030.42 public price** |
 | 1 × complete Avisoft 116Hm kit, 51165 | Records sound at the ear position | **$8,160 public price** |
 | Calibration reference/service support | Checks microphone sensitivity and tone levels | **$1,500 estimate** |
-| 1 × Intan controller + 32-channel headstage + SPI cable | Example brain-recording chain | **$11,105 list price** |
-| 1 × electrode and implant adapter | Connects to the headstage | **$1,500 estimate** |
 | 1 × computer/monitor/storage set, including backup | Runs the setup and saves data | **$2,000 estimate** |
 | Cables, timing interfaces, and fixed mounts | Connects and holds the equipment | **$1,000 estimate** |
-| **Equipment subtotal** | Exact arithmetic of these prices/allowances | **$32,545.42; budget about $33,000** |
+| **Equipment subtotal** | Exact arithmetic of these prices/allowances | **$19,940.42; budget about $20,000** |
 
 - **Already included:** the Avisoft kit has the microphone, preamp, recorder, cable, stand, and software. MF2-M has a stand and connection accessories. Get one of each kit, not separate copies of its bundled parts.
-- **Animal support:** add a **$5,000 planning allowance** if needed; awake/sedated choice is still open. This is for basic support/heating/restraint equipment, not a complete animal facility, surgery/anesthesia infrastructure, or ongoing services.
-- **Reserve:** keep another **$4,000** for price changes, shipping, tax, or missing accessories. Equipment + animal-support allowance + reserve = **$41,545.42; working budget about $42,000**. This reserve does not guarantee every final quote fits.
-- **Optional video:** a $585 camera body + $500 accessory allowance = $1,085; allow **about $1,100** if behavior video is added. Not in the $42,000 budget. A soundproof box is not required by current team direction.
+- **Lab probes:** planned use of the lab's own probes is confirmed by Howard. Probe, headstage, recorder, and animal-preparation purchases are outside this sound budget; this does not establish that every recording accessory is available. Confirm the lab recording system's timing inputs, signal levels, and file export.
+- **Computer reuse:** the $2,000 computer/storage allowance is only needed if a suitable lab setup cannot be reused. Removing it gives $17,940.42 before reserve.
+- **Reserve:** keep another **$2,500** for price changes, shipping, tax, or missing accessories. Sound equipment + reserve = **$22,440.42; working budget about $22,500**. This reserve does not guarantee every final quote fits.
+- **Optional video:** a $585 camera body + $500 accessory allowance = $1,085; allow **about $1,100** if behavior video is added. Not in the $22,500 budget. A soundproof box is not required by current team direction.
 
-**Before buying:** Intan is a budget example until the team confirms the neural recorder. The Avisoft microphone's specification starts at 2 kHz; lower tones need a different measurement choice. Calibration support needs a band-specific plan. The mouse state and tone settings remain open; this draft is separate from Rice's primary sedated-sheep plan. Hardware/timing compatibility has not been measured.
+**Before buying:** confirm how the tone markers connect to the lab recording system. The Avisoft microphone's specification starts at 2 kHz; lower tones need a different measurement choice. Calibration support needs a band-specific plan. The mouse state and tone settings remain open; this draft is separate from Rice's primary sedated-sheep plan. Hardware/timing compatibility has not been measured.
 
 **Why MF2?** SONIC used MF1. TDT lists MF2 as its current generation, and the MF2-M kit supports SA1. We use one MF2-M for the present budget while MF1 availability is unconfirmed. [TDT current speaker](https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/), [kit contents and amplifier support](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
 
@@ -46,7 +45,7 @@ No current numerical new-item listing was found for the TDT/B&K quote-only parts
 - [4231 listing](https://www.leasametric.com/en/product/bruel-kjaer-4231/) is EUR 1,764 excluding VAT, plus EUR 245 optional calibration. Its $2,200/$300 USD reserves are approximate budget allocations, not exchange-rate conversions or confirmed US landed prices.
 - Calibration support $1,500 is an initial reserve for an appropriate reference/service arrangement; it is **not an offer for full-band calibration**. The optional $552 reference checks 40 kHz only. Custom service pricing depends on band/method, and may exceed the reserve. [Avisoft calibration guidance](https://www.avisoft.com/Help/RECORDER/trigger_level_calibration.htm), [NRC service scope](https://www.nrc.canada.ca/en/certifications-evaluations-standards/instrument-calibration-services/acoustics-ultrasound-vibration-calibration-services).
 - Computer/storage $2,000 is a package reserve, using the previously listed $549.99 computer and $574.99 primary SSD only as examples, with room for monitor/upgrades and another backup drive. It is not a selected configuration. The support-parts bundle is $200 wiring + $100 NI accessories + $300 timing-interface reserve + $400 fixtures = $1,000; do not add these individual reserves again.
-- Probe/adapter, camera accessories, animal support, optional enclosure, and software estimates are scope-based allowances; models and laboratory access remain undecided. These estimates do not include institutional labor or animal services.
+- Camera accessories, optional enclosure, and software estimates are scope-based allowances; models and laboratory access remain undecided. Neural and animal-preparation purchases are outside the revised scope. These estimates do not include institutional labor or animal services.
 
 ## Detailed reference catalog
 
@@ -101,16 +100,12 @@ The 40013/40014/40026 packages are alternatives to a separate UltraSoundGate int
 
 CM16/CMPA's stated band begins at 2 kHz, so it is not an assumed calibrated reference for SONIC's 1.4 kHz lower end. The 40 kHz reference and B&K's 1 kHz calibrator are different references; neither proves the complete system response across every selected frequency.
 
-## 3. Neural recording, computer, storage, and optional video
+## 3. Computer, storage, and optional video
 
-Intan is a **cost comparison** while the intended Rice implant/recorder remains open. If selected, the controller, one headstage, its SPI cable, and a compatible electrode go together. Add a shared computer and storage. The camera and its accessories are an optional group. This does not select a replacement for team hardware.
+Use a suitable lab computer and storage if available. The camera and its accessories are optional. The lab provides its own probes; new neural equipment is not part of this shopping list.
 
 | Item / model | Price for one | Included / remaining dependency | Source |
 |---|---:|---|---|
-| Intan RHD controller C3004 | $9,950 list | Controller with USB and power cables. Supplier confirmation through White Mountain Systems is required. | [Intan pricing](https://www.intantech.com/pricing.html) |
-| Intan RHD 32-channel headstage C3314 | $940 list | Check implant/electrode connector compatibility. | [Intan pricing](https://www.intantech.com/pricing.html) |
-| Intan RHD SPI cable C3203, 0.9 m | $215 list | One controller-to-headstage cable. | [Intan pricing](https://www.intantech.com/pricing.html) |
-| Electrode/probe and implant adapter | **$1,500 estimate** ($500–3,000), for one probe/adapter | Separate from controller/headstage; must follow team's recording plan. | Team choice pending |
 | Dell Slim ECS1250, offer ecs1250_so_16 | $549.99 offer | Windows 11 Home, i3-14100, 8 GB RAM, 512 GB SSD, keyboard/mouse. Monitor extra; performance/USB load needs matching. | [Dell exact offer](https://www.dell.com/en-us/shop/desktop-computers/spd/dellslimecs1250/ecs1250_so_16) |
 | Samsung T7 Shield 2 TB, MU-PE2T0S/AM | $574.99 listed | Reference price; Samsung showed delivery/pickup unavailable. Capacity and a separate backup plan still need deciding. | [Samsung](https://www.samsung.com/us/memory-storage/portable-ssd/portable-ssd-t7-shield-usb-3-2-2tb-black-sku-mu-pe2t0s-am/) |
 | Basler acA1300-200um, Edmund 33-978 | $585.00 | Optional camera body only. Needs lens, USB/I/O cables, mounting and illumination; trigger/frame timing needs validation. | [Edmund](https://www.edmundoptics.com/p/basler-ace-aca1300-200um-monochrome-usb-30-camera/3418/), [Basler](https://www.baslerweb.com/en-us/shop/aca1300-200um/) |
@@ -118,7 +113,7 @@ Intan is a **cost comparison** while the intended Rice implant/recorder remains 
 | Monitor and any computer upgrade | **$500 estimate** ($300–1,200), inside the PC bundle | Depends on acquisition requirements; not included in PC price. | Not yet selected |
 | Separate backup storage | **$300 estimate** ($100–500), inside the PC bundle | One additional backup drive; capacity/type open. | Package allowance |
 
-Intan's analog/digital event inputs are aligned with neural samples, but its sampling rate does not establish ultrasound capture. Use an appropriate acoustic ADC for microphone waveforms and validate alignment with neural markers. [Intan controller specifications](https://www.intantech.com/recording_controller.html).
+Use the lab's neural recording chain. Confirm that it can record the tone markers alongside neural samples. Acoustic waveforms use the dedicated sound recorder; verify alignment between the two streams.
 
 ## 4. Smaller parts, software, and setup support
 
@@ -133,23 +128,20 @@ Intan's analog/digital event inputs are aligned with neural samples, but its sam
 | NI terminal/connector accessories or AD3 BNC adapter | **$100 set estimate** ($35–200), inside the support bundle | Depends on output-device SKU and wiring choice. | Selection pending |
 | Clock distribution / level conversion, if required | **$300 estimate** ($100–500) if needed, inside the support bundle | Needed only if interfaces require it; verify electrical and timing requirements first. | Recorder interfaces pending |
 | Speaker fixture / base / clamps / baffle | **$400 set estimate** ($150–600), inside the support bundle | Package allowance until geometry and included parts are known. | Mechanical design pending |
-| Animal support, heating, restraint/head-fix equipment if needed | **$5,000 estimate** ($2,000–10,000), basic equipment only | Mouse state is undecided; obtain a team-specific equipment list later. | Preparation pending |
 | Enclosure or acoustic treatment | **$1,000 estimate** ($300–1,500), optional and outside main budget | No soundproof box is required by team direction. | [Team record](sources/Team_Clarifications_2026-10-07.md) |
 | RECORDER USGH | Included with USG | Do not add a separate license to the 116Hm package. | [Avisoft price list](https://avisoft.com/price-list-ordering-information/) |
-| Intan RHX | Free, open-source | Hardware still costs money. | [Intan controller](https://www.intantech.com/recording_controller.html) |
 | Digilent WaveForms | Free | For the AD3 bench path; custom timing work remains. | [Digilent software](https://digilent.com/shop/software/digilent-waveforms/) |
 | Stimulus/control software and analysis work | **$0 license** for a free-tool route; **$2,000 optional paid-license reserve**; labor separately budgeted | Internal development allowance: 20–80 hours; an illustrative outsourced reserve is $6,000 (40 hours × $150/hour), not a contractor quote or part of the equipment subtotal. Paid licenses are optional. | Workflow pending |
 
 ## 5. Subtotals of priced parts
 
-These are **partial subtotals**, not complete experiment budgets. Each includes one of each named item; alternatives are not combined. The 40 kHz reference in the examples is optional and must suit the intended calibration task. Count a shared NI device only once.
+These are **partial sound subtotals**, not complete experiment budgets. Each includes one of each named item; alternatives are not combined. The 40 kHz reference in the examples is optional and must suit the intended calibration task. Count a shared NI device only once.
 
 | Combination | Arithmetic | Priced subtotal | Excludes |
 |---|---|---:|---|
-| NI + filtered direct-DAQ microphone + 40 kHz reference | 3,030.42 + 2,580 + 552 | $6,162.42 | Speaker/amplifier, neural system, PC, cables/mounts, tax/shipping; integration and band calibration still unverified |
+| NI + filtered direct-DAQ microphone + 40 kHz reference | 3,030.42 + 2,580 + 552 | $6,162.42 | Speaker/amplifier, PC, cables/mounts, tax/shipping; integration and band calibration still unverified |
 | NI + 116Hm complete kit + 40 kHz reference | 3,030.42 + 8,160 + 552 | $11,742.42 standard | Same remaining costs |
 | Same, with eligible educational kit | 3,030.42 + 7,320 + 552 | $10,902.42 educational | Same remaining costs; discount eligibility unconfirmed |
-| Example Intan recording hardware | 9,950 + 940 + 215 | $11,105 list | Electrodes/adapters, PC, storage, and acoustic hardware |
 | Peerless + ART conventional sound pair | 28.47 + 279.99 | $308.46 | DAC, wiring/mounting/calibration; Peerless out of stock and high-frequency suitability unverified |
 | Scan-Speak + ART conventional sound pair | 178.60 + 279.99 | $458.59 | Same dependencies; speaker availability/band suitability unconfirmed |
 

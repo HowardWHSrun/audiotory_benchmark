@@ -47,6 +47,16 @@
 - Removed the always-visible workflow and decision summaries from the website; the detailed planning documents remain in the repository. Paper methods, illustration, and results are collapsed by default.
 - Kept the planned-sedated-sheep status, unknown equipment, microphone acoustic checks, and paper/Rice distinction accessible without repeating long explanations on the homepage.
 
+## 2026-10-08 America/Chicago - mouse stimulus setup proposal
+
+- Howard requested initial thinking about adapting the sound setup to mice while reviewing SONIC methods. Retained sedated sheep as the confirmed primary Rice target and kept mouse state, strain/age, and recorder open.
+- Howard confirmed in response to a setup question that awake versus anesthetized/sedated mouse state is still undecided. The proposal keeps sound-chain bench work independent of that later choice.
+- Rechecked complete SONIC v1 methods pages 11-13 in the unchanged local manuscript, including tone generation, synchronization, evaluation, and awake/alert source animals.
+- Added a mouse proposal with a functional sound/measurement/timing diagram, comparison with the paper, mouse-specific design questions, and staged bench, response, sequence, and decoding work.
+- Registered primary mouse studies and official hardware/calibration sources. Kept numerical paper settings, illustrative bandwidth examples, and proposed local choices distinct.
+- Verification passed: six existing scientific-model checks, validation of 84 references and the unchanged SONIC v1 PDF checksum, and whitespace/diff checks. Scientific and hardware review identified a useful recorder-artifact bench check, now included in the proposal.
+- No hardware connection, sound playback, calibration measurement, animal experiment, external message, order, or website change was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

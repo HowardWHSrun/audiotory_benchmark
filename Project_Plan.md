@@ -40,6 +40,8 @@ Use these labels throughout the project:
 
 The website supports planning our experiment, with the paper as a reference. It does not establish that bench stimulus code, calibrated hardware or animal recordings exist.
 
+On October 8, Howard requested initial thinking about a mouse stimulus setup while reviewing the paper's methods. The [mouse setup proposal](Mouse_Stimulus_Setup_Proposal.md) covers sound generation, calibrated delivery, recording alignment, and a progression from bench checks to separated-tone and sequence characterization. Mouse strain/age, state, and recorder remain open; the confirmed primary sheep target and existing team assignments are preserved.
+
 ## Focused McGinley follow-up
 
 McGinley students shared their rodent rig and calibration approach. Use this as practical input rather than copying an entire parts list. Prepare focused questions about speaker model and usable frequency range, microphone/calibration equipment, reference geometry, frequency-by-frequency level measurements and event-to-acoustic timing. These questions are prepared here; no external messages have been sent.

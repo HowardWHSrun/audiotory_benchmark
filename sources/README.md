@@ -1,5 +1,17 @@
 # Source register
 
+## Mouse adaptation sources
+
+Consulted October 8, 2026 for the [mouse setup proposal](../Mouse_Stimulus_Setup_Proposal.md). These primary studies and official technical documents support design questions; their experimental settings do not establish Rice equipment compatibility or a validated mouse protocol.
+
+- Bowen, Winkowski and Kanold (2020), [Functional organization of mouse primary auditory cortex in adult C57BL/6 and F1 (CBAxC57) mice](https://www.nature.com/articles/s41598-020-67819-4). Strain comparison, frequency representation, and sound-level sensitivity in awake adult mice.
+- Guo et al. (2012), [Robustness of cortical topography across fields, laminae, anesthetic states, and neurophysiological signal types](https://www.cmu.edu/dietrich/psychology/shinn/publications/pdfs/2012/2012jneurosci_guo.pdf). DOI 10.1523/JNEUROSCI.0065-12.2012. Frequency-map and response-property comparisons across tested states.
+- Phillips, Schreiner and Hasenstaub (2017), [Diverse effects of stimulus history in waking mouse auditory cortex](https://pubmed.ncbi.nlm.nih.gov/28566458/). DOI 10.1152/jn.00094.2017. Dependence of subsequent-tone responses on stimulus history.
+- NI, [Acquiring an Analog Signal: Bandwidth, Nyquist Sampling Theorem, and Aliasing](https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/analog-fundamentals/acquiring-an-analog-signal--bandwidth--nyquist-sampling-theorem-.html). Sampling and analog-bandwidth requirements.
+- TDT, [MF1 Multi-Field Magnetic Speakers](https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/). Manufacturer-stated ultrasonic and field-configuration capabilities.
+- TDT, [ABR guide with acoustic calibration guidance](https://www.tdt.com/files/manuals/ABRGuideRA4PA.pdf). Microphone and delivery-geometry considerations; not a cortical stimulus prescription.
+- TDT, [Input and Output Delays](https://www.tdt.com/files/fastfacts/IODelays.pdf). Hardware-specific digital and analog-converter delays; exact values are not transferred to Rice hardware.
+
 ## Paper - pinned version
 
 - Title: *SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces*.

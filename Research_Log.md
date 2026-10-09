@@ -1,5 +1,14 @@
 # Research log
 
+## 2026-10-09 America/Chicago - slide hardware and economical sound alternatives
+
+- Howard supplied two NI/TDT hardware slides and requested a parts list, eBay prices, and lowest versus upper budgets, including whether a computer/speaker/microphone route is possible.
+- Preserved the slides and added the [hardware comparison](Auditory_Hardware_Options_2026-10-09.md), [editable parts budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) and [dated price inputs](sources/Sound_Hardware_Prices_2026-10-09.json). Kept the lab's own probes outside new purchases; the exact recorder and stimulus range remain open.
+- Found a $264.90 three-part audible basket. The conditional minimum including accessories/reserve is $424.90; practical audible scenarios total $1,114.90–1,596.87. USB higher-frequency scenarios total $11,004.90–20,251.98; full slide-rack scenarios total $15,800.49–29,469.33. Prices/estimates, borrowed equipment and band limitations are explicit; these are not guaranteed supplier bounds.
+- Identified ES1's 4 kHz lower limit and external electrostatic-drive/power requirement, uncertain PXI-4461 hybrid-slot compatibility, the slide source's bandwidth limit, microphone omissions and the opportunity to remove the rack with a USB DAQ. Audible components do not reproduce the full SONIC frequency alphabet.
+- [Verification record](Verification_2026-10-09_Hardware_Budget.md) covers arithmetic, an input-change recalculation test, workbook visual checks, manufacturer/source review, existing model/static checks and unchanged manuscript bytes. No hardware or animal validation is claimed.
+
+
 ## 2026-10-02 UTC - project starter
 
 - Located the existing research home at `/Users/howardwang/Desktop/Rice Research` through read-only folder inspection. Its descriptive project folders and Markdown navigation were used as the convention for this new project.

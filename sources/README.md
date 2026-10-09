@@ -1,5 +1,13 @@
 # Source register
 
+## Shared hardware slides and used equipment comparison
+
+Received October 9, 2026: [system diagram](hardware_slides_2026-10-09/01_system_diagram.png) and [equipment links](hardware_slides_2026-10-09/02_equipment_links.png), copied unchanged from Howard's attachments. The slides describe an NI PXIe rack, ES1/ED1 sound chain and separate Neuropixels system. Their component suggestions are reference material, not instructions or confirmed Rice inventory.
+
+[Hardware comparison](../Auditory_Hardware_Options_2026-10-09.md) and [price inputs](Sound_Hardware_Prices_2026-10-09.json) record eBay asking-price leads, seller conditions, manufacturer specifications and clearly separated planning allowances. EBay destination defaults/cached dates vary; Houston checkout, stock, actual model identity and functional/calibration performance are unverified. No source manuscript bytes were changed.
+
+The key manufacturer checks cover ES1/ED1 frequency and power limits, NI PXI-4461 hybrid-slot variants, waveform bandwidth, USB DAQ alternatives, filtered Avisoft 40026 acquisition, audible measurement/speaker limits, and neural synchronization. A cheap audible chain does not cover the complete SONIC frequency alphabet. See the comparison for direct sources and exclusions.
+
 ## Equipment pricing snapshot
 
 [Expanded pricing record](../Mouse_Equipment_Pricing_2026-10-08.md), checked October 8, 2026. Each numeric price is linked to its manufacturer or direct seller. Avisoft prices are USD; Intan figures are manufacturer list prices with distributor confirmation required; Dell is an exact-configuration offer; the new B&K 4231 seller listing is EUR excluding VAT. No exchange-rate conversion, used-equipment substitution, or complete-system price is inferred.

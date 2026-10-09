@@ -114,7 +114,7 @@
       }
     ],
     "known_subtotal_usd": "4826.83",
-    "complete_total_statement": "4826.83 + TDT MF1 + powered SA1/ZB1PS quote + signal/marker/Ethernet cabling + acoustic calibration equipment; shipping/tax/checkout tariffs excluded. Existing PC and own neural recorder reused.",
+    "complete_total_statement": "Current comparison includes 4840.36 USD sound parts with one output lead, or 7357.58 USD with our proposed new-amplifier measurement kit; add MF1-M and complete powered SA1/ZB1PS quotes, microphone/marker/Ethernet connections, delivery/tax/added tariffs and labor. Existing compatible computer and own neural recorder reused.",
     "precision": {
       "paper_measured_end_to_end_alignment": "Not reported quantitatively: no acoustic-to-neural jitter or drift bound in Methods. Paper does not identify a microphone model or report a microphone-based onset alignment test.",
       "NI_nominal_sample_grid_us": "5.208 at nominal 192 kSa/s; sample interval is not onset jitter guarantee. Read back actual coerced DAQ sample rate.",
@@ -169,9 +169,12 @@
         "item": "Exact BNC USB-6361 782255-01",
         "price_usd": "3498.95",
         "url": "https://www.ebay.com/itm/178144942290",
-        "condition": "new",
-        "availability": "Earlier snapshot; current retrieval carries a three-month-old crawl. Current stock not freshly confirmed.",
-        "notes": "China seller; title matches 782255-01 but MPN field Does Not Apply. Confirm actual SKU, included accessories, authenticity, shipping/import before treating as procurement-ready. Not used in recommended subtotal."
+        "condition": "Seller-new",
+        "availability": "Freshly opened page on 2026-10-09 displays two available; no reservation or checkout.",
+        "notes": "China seller; title and MPN field identify 782255-01. Seller lists 60-day buyer-paid returns. Actual SKU, accessory contents, condition/authenticity and delivery/import costs still need confirmation. Main subtotal retains the distributor offer.",
+        "savings_versus_main_usd": 245.47,
+        "alternative_sound_subtotal_usd": 4594.89,
+        "alternative_with_new_measurement_kit_usd": 7112.11
       },
       {
         "item": "TDT SA1 + PS25F legacy supply",
@@ -189,7 +192,7 @@
     ],
     "additional_exclusions": [
       "Microphone, preamplifier and acoustic calibrator not named in SONIC paper; any selected measurement kit must be labeled proposed reproduction addition.",
-      "BNC analog cables, PFI adapter/marker wiring and Ethernet are required configuration-specific additions; exact part numbers not reported.",
+      "One 13.53 USD BNC output lead is included through common_additions and comparison_totals. Remaining microphone, marker and Ethernet connections are configuration-specific and unpriced; exact part numbers are not reported by the paper.",
       "No current verifiable active used MF1 or SA1 listing found in eBay/LabX/broad seller search; this does not prove none exist.",
       "MF1 not declared discontinued: official product remains and says improved MF2 available.",
       "A full SONIC clone would also need Connexus neural system; own lab recorder is reused rather than copying that part."
@@ -289,22 +292,22 @@
         "order_url": "https://www.tdt.com/contact-tdt/orders/",
         "status": "No reliableactivepricedofferfound;quote required",
         "condition": "Supplierquote",
-        "note": "2018 TDT catalog states a6m connection cable is included, but current kit must be quoted. Prior1500–2500USD numbers were planning estimates, not verified prices."
+        "note": "2018 TDT catalog states a6m connection cable is included, but current kit must be quoted. Prior1500\u20132500USD numbers were planning estimates, not verified prices."
       }
     ],
     "priced_subtotal_usd": 7538.22,
     "unpriced_required": [
       "ES1 with matching cable: supplier quote",
-      "BNC output cable and recorder-specific connections",
-      "Measurement/calibration equipment omitted by slides"
+      "Microphone and recorder-specific connections; any missing chassis power cord; delivery/tax/added tariffs and labor",
+      "Our proposed measurement kit is separately added in comparison_totals; one 13.53 USD output lead is already included there."
     ],
     "sources": {
       "pxi4461_specs": {
         "url": "https://docs-be.ni.com/bundle/ni-4461-4462-specs/raw/resource/enus/373770k.pdf",
         "pages": {
-          "p24": "Internal timebase accuracy ±20ppm over operating temperature range; aging8ppm first year,5ppm max/year after. External timebase accuracy inherits external source.",
-          "p19": "DAC filter delay32samples for102.4<fs≤204.8kS/s; AO flatness±0.1dB max20Hz–92.1kHz at204.8kS/s relative to1kHz; −3dB bandwidth0.487fs.",
-          "p18": "AO gain amplitude accuracy at1kHz:±0.04dB max at Tcal±5C, valid24hours following self-calibration;±0.1dB max over full range.",
+          "p24": "Internal timebase accuracy \u00b120ppm over operating temperature range; aging8ppm first year,5ppm max/year after. External timebase accuracy inherits external source.",
+          "p19": "DAC filter delay32samples for102.4<fs\u2264204.8kS/s; AO flatness\u00b10.1dB max20Hz\u201392.1kHz at204.8kS/s relative to1kHz; \u22123dB bandwidth0.487fs.",
+          "p18": "AO gain amplitude accuracy at1kHz:\u00b10.04dB max at Tcal\u00b15C, valid24hours following self-calibration;\u00b10.1dB max over full range.",
           "p8": "ADC filter delay63samples above25.6kS/s.",
           "p1": "Accuracies valid up to1year from external calibration; specifications typical unless otherwise noted."
         }
@@ -323,15 +326,15 @@
       },
       "pxie1082_specs": {
         "url": "https://docs-be.ni.com/bundle/pxie-1082-seri/raw/resource/enus/372752c.pdf",
-        "detail": "External10MHz reference output±25ppm max, appendixA. Can import external10MHz; does not prove neural clock sharing."
+        "detail": "External10MHz reference output\u00b125ppm max, appendixA. Can import external10MHz; does not prove neural clock sharing."
       },
       "es1_specs": {
         "url": "https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/",
-        "detail": "Raw response4–110kHz±11dB. TDT warns signals below4kHz cause harmonic distortion and lifetime degradation. At-ear calibration required."
+        "detail": "Raw response4\u2013110kHz\u00b111dB. TDT warns signals below4kHz cause harmonic distortion and lifetime degradation. At-ear calibration required."
       },
       "ed1_specs": {
         "url": "https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/",
-        "detail": "Powered via zBus; input±10V,±4V recommended; attenuation0to−27dB in3dB steps. Only drivesES1/EC1."
+        "detail": "Powered via zBus; input\u00b110V,\u00b14V recommended; attenuation0to\u221227dB in3dB steps. Only drivesES1/EC1."
       },
       "ed1_seller_description": {
         "url": "https://itm.ebaydesc.com/itmdesc/156873696386?category=14970&cspheader=1&descgauge=1&domain=ebay.com&excSoj=1&excTrk=1&ittenable=true&lang=en&lsite=0&oneClk=2&secureDesc=1&seller=ntc_tech&t=0&ver=1",
@@ -343,13 +346,13 @@
       }
     },
     "precision": {
-      "frequency": "PXI4461 listed internal±20ppm gives clock-only±0.2Hz at10kHz and±0.64Hz at32kHz. Actual tone also depends on actual sample rate/waveform. Used-board calibration and aging unverified.",
+      "frequency": "PXI4461 listed internal\u00b120ppm gives clock-only\u00b10.2Hz at10kHz and\u00b10.64Hz at32kHz. Actual tone also depends on actual sample rate/waveform. Used-board calibration and aging unverified.",
       "grid": "At204800S/s:4.8828125microseconds/sample. This is not end-to-end timing accuracy.",
       "output_delay": "DAC digital filter delay32/204800=156.25microseconds; speaker and air delays additional. ADC filter delay63/204800=307.617microseconds if used. Offset differs from drift.",
       "free_run_drift": "Internal4461clock20ppm corresponds72ms/hour versus ideal. Accuracies valid within one year of externalcalibration; aging and current calibration of used board unknown. This is not measured recorder-relative drift.",
       "shared_reference": "A correctly configured common reference suppresses independent oscillator drift; trigger skew, filter differences and synthesizer rate rounding can remain. NI synchronization guidance describes small DDS rate-rounding drift. Measure residual alignment. Neural recorder still requires compatible clock or recorded references. Chassis25ppm corresponds90ms/hour versus ideal; routing not established by slides.",
-      "band": "ES1 is4–110kHz;4461 AO flatness specified only to92.1kHz at204.8kS/s. Conservative comparison band4–92.1kHz; below4kHz SONIC tones missing.",
-      "level": "ES1 raw±11dB response is not calibrated level accuracy. PXI4461 electric gain±0.04dB conditional specification is not±0.04dB SPL. Slides omit microphone/calibrator, so at-ear±dB is unknown.",
+      "band": "ES1 is4\u2013110kHz;4461 AO flatness specified only to92.1kHz at204.8kS/s. Conservative comparison band4\u201392.1kHz; below4kHz SONIC tones missing.",
+      "level": "ES1 raw\u00b111dB response is not calibrated level accuracy. PXI4461 electric gain\u00b10.04dB conditional specification is not\u00b10.04dB SPL. Slides omit microphone/calibrator, so at-ear\u00b1dB is unknown.",
       "neural_alignment": "Slides do not specify verified acoustic-to-neural jitter/drift. Our recorder input/clock type unknown; no achieved numeric alignment claim is supported."
     },
     "alternative_4461": {
@@ -401,8 +404,18 @@
         "condition": "New",
         "stock": "Freshly re-opened B&H new offer",
         "url": "https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html",
-        "note": "Main comparison uses945USD new amplifier. Earlier325USD used offer is conditional; see used_alternative.",
+        "note": "Main comparison uses the new 945 USD amplifier. Current used B&H alternative is 604.50 USD; the earlier unretrievable 325 USD eBay offer is historical only.",
         "used_alternative": {
+          "usd": 604.5,
+          "url": "https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html",
+          "seller": "B&H",
+          "item_identifier": "Used Cat #3529754",
+          "condition": "8+ / moderate wear",
+          "availability": "In stock displayed on freshly opened specific-unit page, 2026-10-09; not reserved.",
+          "warranty": "90-day B&H used warranty displayed",
+          "savings_versus_new_usd": 340.5
+        },
+        "earlier_used_alternative": {
           "usd": 325,
           "url": "https://www.ebay.com/itm/147529703873",
           "condition": "used, no returns",
@@ -503,12 +516,12 @@
       }
     ],
     "totals": {
-      "shared_measurement_used_mm1": 1897.22,
+      "shared_measurement_used_mm1": 2176.72,
       "shared_measurement_new_mm1": 2517.22,
-      "recommended_known_used_mm1": 5016.47,
+      "recommended_known_used_mm1": 5295.97,
       "recommended_known_new_mm1": 5636.47,
       "note": "Plus3TDT quotes,unknown neural-recorder timing cable/level adapter, tax/shipping/addedtariffs. Cannotstateexactfullsystemtotalorupperbudgetyet.",
-      "used_offer_status": "Conditional; used325offer not freshly retrievable."
+      "used_offer_status": "604.50 USD specific B&H used unit freshly retrievable; stock/condition/warranty are seller observations, not bench verification."
     },
     "shared_measurement_kit": "M50+MM1+R8090+HMIC010+micstand+2AA. Clearly an added recommendation,not microphone hardware identified in sourcepaper/slides. DAQ-specific adapter separate.",
     "additional_bnc_for_other_versions": {
@@ -568,21 +581,21 @@
   "common_additions": {
     "output_bnc_usd": 13.53,
     "output_bnc_url": "https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm",
-    "measurement_kit_used_preamp_usd": 1897.22,
+    "measurement_kit_used_preamp_usd": 2176.72,
     "measurement_kit_new_preamp_usd": 2517.22,
     "note": "Our added calibration equipment, not identified by paper or slides. DAQ-specific mic adapter and recorder wiring remain separate."
   },
   "comparison_totals": {
     "sonic_known_with_output_lead_usd": 4840.36,
-    "sonic_plus_shared_measurement_kit_used_usd": 6737.58,
+    "sonic_plus_shared_measurement_kit_used_usd": 7017.08,
     "slide_known_with_output_lead_usd": 7551.75,
-    "slide_plus_shared_measurement_kit_used_usd": 9448.97,
+    "slide_plus_shared_measurement_kit_used_usd": 9728.47,
     "recommended_known_new_preamp_usd": 5636.47,
-    "recommended_known_used_preamp_usd": 5016.47,
+    "recommended_known_used_preamp_usd": 5295.97,
     "note": "All subtotals exclude quote-required items, unresolved connections, shipping/tax/added tariffs and labor. No complete exact total or upper price limit is established.",
     "sonic_plus_shared_measurement_kit_new_usd": 7357.58,
     "slide_plus_shared_measurement_kit_new_usd": 10068.97,
-    "primary_measurement_choice": "New945USD microphone amplifier; used325USD option conditional on availability."
+    "primary_measurement_choice": "New 945 USD microphone amplifier in main baskets; freshly listed 604.50 USD used B&H alternative shown separately."
   },
   "audit_date": "2026-10-09",
   "timing_audit": "See ../Timing_and_Price_Audit_2026-10-09.md. Reported paper delay, sound/neural alignment uncertainty, clock drift and sample spacing are distinct.",
@@ -643,12 +656,39 @@
   "fresh_market_audit": {
     "date": "2026-10-09",
     "finding": "Reopened main NI/rack/newMM1/microphone/calibrator/cables/adapters/resistors listings; prices unchanged except same-modelJBL andAA replacements above. Listings may be cached; displayed price does not reserve stock.",
-    "retrieval_gaps": [
+    "main_shared_kit": "New 945 USD MM-1 in main baskets; current 604.50 USD B&H used alternative is outside the main basket.",
+    "earlier_retrieval_gaps": [
       "Earlier122.39Reverb speaker inaccessible, replaced by same-model99newSweetwater sale.",
       "Earlier325usedMM1 inaccessible, conditional savings only.",
       "Earlier3498.95eBay exactBNCoffer cached three months; unconfirmedcurrentlead.",
       "Earlier0.59MouserAAUSprice not recoverable; replaced by0.62DigiKeyAA."
     ],
-    "main_shared_kit": "Usesnew945MM1; conditionalused325alternative outsidemainbasket."
+    "faculty_revision": {
+      "date": "2026-10-09",
+      "used_mm1": {
+        "usd": 604.5,
+        "url": "https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html",
+        "seller": "B&H",
+        "item_identifier": "Used Cat #3529754",
+        "condition": "8+ / moderate wear",
+        "availability": "In stock displayed on freshly opened specific-unit page, 2026-10-09; not reserved.",
+        "warranty": "90-day B&H used warranty displayed",
+        "savings_versus_new_usd": 340.5
+      },
+      "exact_bnc_alternative": {
+        "url": "https://www.ebay.com/itm/178144942290",
+        "price_usd": 3498.95,
+        "availability": "Freshly opened page on 2026-10-09 displays two available; no reservation or checkout.",
+        "notes": "China seller; title and MPN field identify 782255-01. Seller lists 60-day buyer-paid returns. Actual SKU, accessory contents, condition/authenticity and delivery/import costs still need confirmation. Main subtotal retains the distributor offer."
+      },
+      "note": "Later observations supersede earlier retrieval gaps for these two specific offers. Asking prices may change; no vendor contact, checkout or hardware validation."
+    }
+  },
+  "faculty_document_revision": {
+    "date": "2026-10-09",
+    "audience": "Dr. Luan",
+    "structure": "Four pages: basic option, SONIC paper sound chain, McGinley supplied setup, proposed compact Rice setup. Explicit quantities, comparable shared-kit subtotals, decision prompts, linked source notes.",
+    "timing": "Measured Rice alignment/drift remains unknown. Paper processing delay, component specifications and proposed alignment goal remain separate.",
+    "subtotal_scope": "Specialized headline subtotals include the same new-amplifier measurement kit and exclude required supplier quotes, unresolved connections, delivery/tax/added tariffs and labor."
   }
 }

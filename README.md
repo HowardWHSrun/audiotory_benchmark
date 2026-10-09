@@ -10,6 +10,8 @@ The homepage shows **our planned experiment** in one diagram. Select a component
 
 ![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)
 
+**For Dr. Luan:** [four-page parts and budget PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) · [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). Explicit quantities, linked prices, comparable measurement-kit subtotals, timing limits and meeting decisions. Required supplier quotes remain outside the subtotals.
+
 ## Current direction
 
 Lan clarified that the primary purpose is **testing in sheep**, which will be **sedated during the measurements**. The aim is to measure auditory cortical responses to controlled sound stimuli. A soundproof box, behavioral rig, and sound isolation are not required for the planned work. The team should identify the sound delivery and measurement components needed from the Paradromics paper and seek focused advice about speakers and acoustic calibration.
@@ -31,8 +33,8 @@ These are supplied team assignments, not completed work or confirmed equipment a
 
 ## Project records
 
-- [Sound setup options](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): four pages covering the basic setup and three accurate versions—SONIC paper, McGinley supplied slides, and the recommendation—with plain-language bullet points, spelled-out units, exact public item prices, buying links, timing/drift explanations and clear quote gaps. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex), [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md), and [price provenance](sources/Accurate_Setup_Prices_2026-10-09.json). [Earlier DIY/slide planning](Auditory_Hardware_Options_2026-10-09.md) and the [rack budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain historical supporting records.
-- [Timing and price audit](Timing_and_Price_Audit_2026-10-09.md): corrects the omitted 56-millisecond paper result, distinguishes processing delay from alignment error and drift, and records refreshed buying links and conditional used offers.
+- [Sound setup options](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): four pages covering the basic setup and three specialized options—SONIC paper, McGinley supplied slides, and the compact Rice proposal—with plain-language bullet points, spelled-out units, exact public item prices, buying links, timing/drift explanations and clear quote gaps. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex), [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md), and [price provenance](sources/Accurate_Setup_Prices_2026-10-09.json). [Earlier DIY/slide planning](Auditory_Hardware_Options_2026-10-09.md) and the [rack budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain historical supporting records.
+- [Timing and price audit](Timing_and_Price_Audit_2026-10-09.md): corrects the omitted 56-millisecond paper result, distinguishes processing delay from alignment error and drift, and records refreshed buying links and the later faculty-document marketplace update.
 - [Project plan](Project_Plan.md): scope, assignments, deliverables, and open decisions.
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.

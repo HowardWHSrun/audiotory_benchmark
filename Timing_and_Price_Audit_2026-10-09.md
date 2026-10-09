@@ -31,9 +31,9 @@ Primary source: the unchanged [saved SONIC version 1 paper](sources/SONIC_2025_b
 - **Speaker range:** ES1 is specified from four kilohertz, so it misses the paper's lowest tones. MF1's raw ±13-decibel response is sourced specifically to the [2019 speaker guide](https://www.tdt.com/wp-content/uploads/2019/04/SpeakerGuide.pdf). Raw response variation is not calibrated accuracy.
 - **Measurement chain:** M50 and MM-1 nominal bandwidths do not establish their assembled response at 32 kilohertz. MM-1 response uses a 150-ohm test source; M50's balanced output is specified at 600 ohms. Check the combined chain. The calibrator's ±0.5-decibel specification applies to its one-kilohertz reference, not all tones.
 
-## Purchasing audit
+## Purchasing audit: earlier snapshot
 
-Main prices, quantities and basket arithmetic were independently checked against current retrievable manufacturer, distributor and marketplace pages. Reopening a listing does not reserve stock; cached pages and seller claims do not prove function or calibration. No checkout, vendor contact or purchase occurred.
+The later faculty revision below supersedes this subsection for the two refreshed marketplace alternatives. Main prices, quantities and basket arithmetic were independently checked against current retrievable manufacturer, distributor and marketplace pages. Reopening a listing does not reserve stock; cached pages and seller claims do not prove function or calibration. No checkout, vendor contact or purchase occurred.
 
 - Replaced the inaccessible $122.39 Reverb speaker with the same-model [new single JBL 305P MkII for $99 at Sweetwater](https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor). It is a limited-time sale.
 - Replaced the unrecoverable $0.59 battery offer with [two Panasonic cells at $0.62 each from DigiKey](https://www.digikey.com/en/products/detail/panasonic-energy/LR6XWA-2SB/2043739), minimum two.
@@ -53,3 +53,12 @@ Main prices, quantities and basket arithmetic were independently checked against
 | Recommendation with earlier used amplifier | $5,016.47 | Conditional availability; still incomplete |
 
 Exact item records and buying links are in the [current price provenance](sources/Accurate_Setup_Prices_2026-10-09.json) and [itemized comparison](Accurate_Setup_Comparison_2026-10-09.md). Older budget files and earlier research-log entries are historical snapshots, not the current shopping basket. No complete upper budget or achieved Rice precision is established.
+
+## Faculty revision: later marketplace refresh
+
+The revised four-page PDF is prepared for Dr. Luan, with explicit quantities, consistent sound-part and measurement-kit subtotals, source notes and a decision on each page. Its main baskets keep the new $945 microphone amplifier; this is a document and purchasing-evidence revision, not measured hardware performance.
+
+- A specific [B&H used MM-1, catalog #3529754, for $604.50](https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html) was freshly opened. The page displays in-stock status, moderate wear and a 90-day seller warranty. It saves $340.50 versus new, making the shared kit $2,176.72 and the compact proposal $5,295.97 before required quotes and excluded costs. The earlier $325 eBay offer remains historical.
+- The [seller-new exact-BNC eBay offer for $3,498.95](https://www.ebay.com/itm/178144942290) was freshly opened and displays two available, model 782255-01 and 60-day buyer-paid returns. This later observation supersedes the earlier cached-only retrieval gap. Accessories, actual condition/authenticity and import/delivery costs remain unverified. It saves $245.47; the SONIC subtotal with the same new-amplifier kit would be $7,112.11 instead of $7,357.58.
+- Main all-new-amplifier subtotals remain $7,357.58 SONIC, $10,068.97 supplied slides and $5,636.47 compact proposal. Using the currently listed used amplifier alone would give $7,017.08, $9,728.47 and $5,295.97 respectively. Required TDT quotes and unresolved connections still prevent a complete upper budget. Stock is not reserved.
+- No timing, drift or at-ear sound accuracy was measured. The paper's 56-millisecond processing delay and proposed one-millisecond corrected-alignment goal remain different quantities.

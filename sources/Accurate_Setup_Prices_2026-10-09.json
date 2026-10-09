@@ -690,6 +690,7 @@
     "structure": "Four pages: basic, SONIC, McGinley lab and compact setup. Plain memo layout, short notes, exact parts/counts/prices and one set of discussion questions on page 1.",
     "timing": "Measured Rice alignment/drift remains unknown. Paper processing delay, component specifications and proposed alignment goal remain separate.",
     "subtotal_scope": "Specialized headline subtotals include the same new-amplifier measurement kit and exclude required supplier quotes, unresolved connections, delivery/tax/added tariffs and labor.",
-    "editorial_revision": "Simplified headings, typography and wording on 2026-10-09. Price/quantity/quote/source inputs unchanged; no new pricing survey or hardware measurements."
+    "editorial_revision": "Simplified headings, typography and wording on 2026-10-09. Price/quantity/quote/source inputs unchanged; no new pricing survey or hardware measurements.",
+    "cost_clarification": "Replaced Still needed with Costs not included. Required table rows without confirmed supplier prices are marked No price; extra connections/delivery/tax/labor are separate; cheaper replacements are optional alternatives. All item quantities, numeric prices and subtotals are unchanged."
   }
 }

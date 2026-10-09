@@ -118,10 +118,40 @@
     "precision": {
       "paper_measured_end_to_end_alignment": "Not reported quantitatively: no acoustic-to-neural jitter or drift bound in Methods. Paper does not identify a microphone model or report a microphone-based onset alignment test.",
       "NI_nominal_sample_grid_us": "5.208 at nominal 192 kSa/s; sample interval is not onset jitter guarantee. Read back actual coerced DAQ sample rate.",
-      "NI_free_running_clock": "NI specification 50 ppm sampling-rate timing accuracy and 10 ns timing resolution; 50 ppm is 180 ms/hour relative to ideal time, NOT the locked SONIC expected residual drift or recorder-relative drift.",
+      "NI_free_running_clock": "NI50ppm timing accuracy, default typical at25degreesCelsius: calculated180ms/hour versus ideal time; not a guaranteed maximum, locked SONIC drift, or drift relative to our recorder.10ns timingresolution is a separate component property.",
       "TM_source": "Manufacturer brochure: PTP <1 us plus network jitter; GPS +/-20 ns RMS jitter. 10 MHz approx 2.4e-11 at 1 s refers to Allan stability plot, not hourly drift bound. Comparison lists OCXO 20 ppb. None is whole acoustic/neural alignment precision.",
       "compatibility": "TM 10 MHz is 3.3 V TTL. USB-6361 supports 10 MHz reference input through PFI PLL with appropriate routing/configuration. Rice own recorder must accept suitable reference/PTP or record shared markers; recorder compatibility not yet known.",
-      "acoustic": "MF1 free-field 1-65 kHz +/-13 dB raw response; paper stimulus range fits but calibration at ear remains necessary. SA1 spectral variation <0.1 dB 50 Hz-200 kHz is amplifier response, not SPL calibration accuracy."
+      "acoustic": "MF1 free-field1-65kHz +/-13dB raw response is from TDT2019SpeakerGuide, not a current calibrated at-ear accuracy; paper approximately80dB at ear has no quantified uncertainty.",
+      "paper_intrinsic_delay": {
+        "reported_ms": 56,
+        "components_ms": {
+          "neural_measurement": "less than 1",
+          "filtering": 5,
+          "binning": 5,
+          "decoder_context": 45
+        },
+        "source_pages": [
+          5,
+          7
+        ],
+        "meaning": "Intrinsic delay through neural measurement, filtering and data aggregation; excludes sensory physiology and computer runtime. The components sum to less than56; retain paper reported56 rather than treating it as an exact equality. Not acoustic-to-neural synchronization error.",
+        "reproduction_limit": "Paper uses Connexus neural system, excluded from this sound-chain budget. Our own recorder and processing must be measured; sound-chain purchase does not establish56ms."
+      },
+      "paper_short_window_delay": {
+        "reported_ms": 11,
+        "source_pages": [
+          8,
+          12
+        ],
+        "scope": "Sheep E, Session2; first40percent of trials, modified decoder, optimized single5ms bin. Above100bits/s in this narrower analysis, not main multisession result."
+      },
+      "paper_online_delay": {
+        "reported_ms": "less than100",
+        "source_pages": [
+          9
+        ],
+        "meaning": "Separate online evaluation of full neural interface+compute; depends on hardware/software. Physiological tone-to-neural delay is outside paper BCI delay definition."
+      }
     },
     "primary_evidence_urls": {
       "NI_specs": "https://download.ni.com/support/manuals/374650c.pdf",
@@ -129,7 +159,7 @@
       "NI_included_items": "https://www.ni.com/en/shop/hardware/voltage/model-usb-6361?partNumber=782256-01",
       "paper_NI_alias_cross_reference": "https://www.digikey.ie/en/products/detail/ni/782255-01/12817694",
       "MF1_specs": "https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/",
-      "TDT_speaker_guide": "https://www.tdt.com/files/fastfacts/SpeakerGuide.pdf",
+      "TDT_speaker_guide": "https://www.tdt.com/wp-content/uploads/2019/04/SpeakerGuide.pdf",
       "SA1_specs": "https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/",
       "TM_brochure": "https://timemachinescorp.com/wp-content/uploads/TM2500-Brochure.pdf",
       "TM_manual": "https://timemachinescorp.com/wp-content/uploads/TM2000BManual.pdf"
@@ -140,7 +170,7 @@
         "price_usd": "3498.95",
         "url": "https://www.ebay.com/itm/178144942290",
         "condition": "new",
-        "availability": "2 available on opened listing",
+        "availability": "Earlier snapshot; current retrieval carries a three-month-old crawl. Current stock not freshly confirmed.",
         "notes": "China seller; title matches 782255-01 but MPN field Does Not Apply. Confirm actual SKU, included accessories, authenticity, shipping/import before treating as procurement-ready. Not used in recommended subtotal."
       },
       {
@@ -153,7 +183,7 @@
       {
         "item": "Used USB-6361 at $1395",
         "url": "https://www.ebay.com/itm/304731172673",
-        "availability": "Used last-one offer",
+        "availability": "Earlier unrefreshed lead; current stock unconfirmed.",
         "notes": "Mass-terminated connector variant, not exact paper BNC. Do not label exact SONIC clone."
       }
     ],
@@ -193,7 +223,7 @@
         "qty": 1,
         "unit_usd": 699.99,
         "url": "https://www.ebay.com/itm/198252264097",
-        "status": "Active Buy It Now; web cache dated last month,so availability recheck before purchase",
+        "status": "Freshly reopened Buy It Now price699.99USD; seller availability must be rechecked before purchase.",
         "condition": "Used; seller tested; Willis,TX",
         "note": "Title explicitly names 186900-11L, which NI certification calls HYBRID SLOT. Actual board/rear connector was not visually inspected; confirm actual item. Displayed shipping19.99USD is for a different ZIP; Houston checkout was not performed."
       },
@@ -306,14 +336,18 @@
       "ed1_seller_description": {
         "url": "https://itm.ebaydesc.com/itmdesc/156873696386?category=14970&cspheader=1&descgauge=1&domain=ebay.com&excSoj=1&excTrk=1&ittenable=true&lang=en&lsite=0&oneClk=2&secureDesc=1&seller=ntc_tech&t=0&ver=1",
         "detail": "Confirms bundle contents, testing and30-day warranty; no additional accessories."
+      },
+      "synchronization": {
+        "url": "https://www.ni.com/en/support/documentation/supplemental/10/synchronization-explained.html",
+        "detail": "Share trigger versus sample clock/reference; Caveat2 DDS clock drift from rate rounding."
       }
     },
     "precision": {
       "frequency": "PXI4461 listed internal±20ppm gives clock-only±0.2Hz at10kHz and±0.64Hz at32kHz. Actual tone also depends on actual sample rate/waveform. Used-board calibration and aging unverified.",
       "grid": "At204800S/s:4.8828125microseconds/sample. This is not end-to-end timing accuracy.",
       "output_delay": "DAC digital filter delay32/204800=156.25microseconds; speaker and air delays additional. ADC filter delay63/204800=307.617microseconds if used. Offset differs from drift.",
-      "free_run_drift": "20ppm gives1.2ms/minute or72ms/hour versus ideal time on internal4461 clock. This is a calculated specification scale, not measured expected drift versus our recorder. Recorder ppm unknown; relative errors can add.",
-      "shared_reference": "If modules are actually locked to common reference, relative clock drift is removed at clock level. Neural recorder still needs compatible shared clock or recorded references. Chassis25ppm gives90ms/hour vs ideal; routing is not established by slides.",
+      "free_run_drift": "Internal4461clock20ppm corresponds72ms/hour versus ideal. Accuracies valid within one year of externalcalibration; aging and current calibration of used board unknown. This is not measured recorder-relative drift.",
+      "shared_reference": "A correctly configured common reference suppresses independent oscillator drift; trigger skew, filter differences and synthesizer rate rounding can remain. NI synchronization guidance describes small DDS rate-rounding drift. Measure residual alignment. Neural recorder still requires compatible clock or recorded references. Chassis25ppm corresponds90ms/hour versus ideal; routing not established by slides.",
       "band": "ES1 is4–110kHz;4461 AO flatness specified only to92.1kHz at204.8kS/s. Conservative comparison band4–92.1kHz; below4kHz SONIC tones missing.",
       "level": "ES1 raw±11dB response is not calibrated level accuracy. PXI4461 electric gain±0.04dB conditional specification is not±0.04dB SPL. Slides omit microphone/calibrator, so at-ear±dB is unknown.",
       "neural_alignment": "Slides do not specify verified acoustic-to-neural jitter/drift. Our recorder input/clock type unknown; no achieved numeric alignment claim is supported."
@@ -322,7 +356,7 @@
       "item": "PXI4461title77968701",
       "usd": 357,
       "url": "https://www.ebay.com/itm/388288868319",
-      "status": "Active2available; used,China;100USD displayed shipping to another ZIP;30-day buyer-paid returns.",
+      "status": "Earlier unrefreshed lead; old listing claimed2available. Current availability not confirmed in this audit.",
       "note": "Title ordering part779687-01 maps to hybrid variant per NI/Newark, but actual board was not visually inspected."
     }
   },
@@ -363,13 +397,17 @@
       {
         "part": "Sound Devices MM-1",
         "qty": 1,
-        "usd": 325,
-        "condition": "Used",
-        "stock": "Buy It Now",
-        "url": "https://www.ebay.com/itm/147529703873",
-        "note": "Seller christopherduke87;no returns;displayedshipping8.99 excluded. New945 B&Hstock.",
-        "new_usd": 945,
-        "new_url": "https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html"
+        "usd": 945,
+        "condition": "New",
+        "stock": "Freshly re-opened B&H new offer",
+        "url": "https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html",
+        "note": "Main comparison uses945USD new amplifier. Earlier325USD used offer is conditional; see used_alternative.",
+        "used_alternative": {
+          "usd": 325,
+          "url": "https://www.ebay.com/itm/147529703873",
+          "condition": "used, no returns",
+          "availability": "Earlier snapshot; fresh retrieval failed, current availability unconfirmed."
+        }
       },
       {
         "part": "REED R8090",
@@ -408,14 +446,14 @@
         "note": "M50 clip included;MF2 speaker stand included separately."
       },
       {
-        "part": "Panasonic LR6XWA/B2 AA battery",
+        "part": "Panasonic LR6XWA/2SB AA battery",
         "qty": 2,
-        "usd_each": 0.59,
-        "usd": 1.18,
+        "usd_each": 0.62,
+        "usd": 1.24,
         "condition": "New",
-        "stock": "Root verified stock",
-        "url": "https://www.mouser.com/ProductDetail/Panasonic-Battery/LR6XWA-B2?qs=1Zl%2FqaC79saZu5UEOwg5aw%3D%3D",
-        "note": "Price per battery;MM1 uses2AA. Possible tariff/shipping separate."
+        "stock": "133060 displayed; minimum2",
+        "url": "https://www.digikey.com/en/products/detail/panasonic-energy/LR6XWA-2SB/2043739",
+        "note": "Fresh US price0.62 per battery, quantity2; possiblecarttariff/shipping separate. Replaces unconfirmed0.59Mouser offer."
       },
       {
         "part": "NI 763830-01 US AC cord",
@@ -465,11 +503,12 @@
       }
     ],
     "totals": {
-      "shared_measurement_used_mm1": 1897.16,
-      "shared_measurement_new_mm1": 2517.16,
-      "recommended_known_used_mm1": 5016.41,
-      "recommended_known_new_mm1": 5636.41,
-      "note": "Plus3TDT quotes,unknown neural-recorder timing cable/level adapter, tax/shipping/addedtariffs. Cannotstateexactfullsystemtotalorupperbudgetyet."
+      "shared_measurement_used_mm1": 1897.22,
+      "shared_measurement_new_mm1": 2517.22,
+      "recommended_known_used_mm1": 5016.47,
+      "recommended_known_new_mm1": 5636.47,
+      "note": "Plus3TDT quotes,unknown neural-recorder timing cable/level adapter, tax/shipping/addedtariffs. Cannotstateexactfullsystemtotalorupperbudgetyet.",
+      "used_offer_status": "Conditional; used325offer not freshly retrievable."
     },
     "shared_measurement_kit": "M50+MM1+R8090+HMIC010+micstand+2AA. Clearly an added recommendation,not microphone hardware identified in sourcepaper/slides. DAQ-specific adapter separate.",
     "additional_bnc_for_other_versions": {
@@ -485,7 +524,8 @@
       "usd": 1395,
       "url": "https://www.ebay.com/itm/304731172673",
       "condition": "Used,lastone,OPTOSCIENCE",
-      "note": "Seller description explicitly says mass-terminated,no PSU or accessories. Need VHDCI cable,breakout,PSU,validation. Do not substitute1395into completeconfiguration subtotal."
+      "note": "Seller description explicitly says mass-terminated,no PSU or accessories. Need VHDCI cable,breakout,PSU,validation. Do not substitute1395into completeconfiguration subtotal.",
+      "availability": "Earlier unrefreshed lead; not a confirmed current purchasing option."
     },
     "spec_sources": {
       "ni": "https://download.ni.com/support/manuals/374650c.pdf",
@@ -496,15 +536,16 @@
       "r8090": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf"
     },
     "precision": {
-      "ni_clock": "50ppm accuracy => up to3ms/min or180ms/hour oscillator contribution relative to ideal,uncorrected. Relative neural-recorder drift depends on its clock;do not label these measured expected drift.",
+      "ni_clock": "Default typical-at25degreesCelsius50ppm corresponds3ms/min or180ms/hour versus ideal time. It is not a guaranteed maximum or measured recorder-relative drift; recorder clock unknown.",
       "sample_grid": "Proposed actual200kSa/s buffered AO/AI gives5us sample grid. Confirm driver actual rate;nominal192kSa/s is5.21us and may be coerced. Neither grid is acoustic-to-neural onset accuracy.",
       "ni_components": "16bit AO;max2.86MS/s onechannel/2MS/s two.10ns timingresolution and2ussettling are component specs,not acoustic latency/jitter.",
-      "sound_band": "MF2 freefield1-80kHz,THD<=1%1-65k under vendorconditions. M503Hz-50k;MM1-1dBat50krelative1k. Nominal coverageincludesSONIC1.4-32k.",
+      "sound_band": "Nominal MF2freefield1-80kHz,M503Hz-50kHz,MM1-1dBat50kHz under its published150ohm-source test. M50output specified600ohms; assembled-chain response and at-ear uncertainty require measurement. Manufacturer bandwidths do not prove whole-chain precision.",
       "level": "MF2 typical90dBSPLat10cm,+/-1Vpeak. Need at-ear lab geometry calibration;notpromise exact SPL.",
       "calibration": "R8090 +/-0.5dB at1kHz. M50 individualECF and calibration required. Wholebandat-earaccuracy,especially32kHz,notestablishedbythis.",
       "alignment": "GenerateprebufferedwaveformandmarkersfromDAQhardware;recordmarkersinneuralrecorder,micinDAQ;repeatedmarkersestimateoffset/drift. Measureactualacousticonset. Nowhole-system measuredjitter/latencyclaimed.",
       "software": "Python+NI-DAQmx possible;no paidLabVIEWassumed. Host NI-DAQmx compatibility and lab validation required. Software/labor excluded.",
-      "cheap_substitute": "No documented cheaper verified full1.4-32k speaker/amp topologyfound. MF2 supports suitablethirdpartyamps,butcheapampbandwidth/loadnotverified. Arduino/FPGAdoesnotfixspeakerbandwidth."
+      "cheap_substitute": "No documented cheaper verified full1.4-32k speaker/amp topologyfound. MF2 supports suitablethirdpartyamps,butcheapampbandwidth/loadnotverified. Arduino/FPGAdoesnotfixspeakerbandwidth.",
+      "alignment_goal": "Proposed corrected sound-to-neural timestamp residual<=1ms, untested. Different from SONIC reported56ms neural acquisition/filter/data-aggregation delay; do not rank these as same metric."
     },
     "unknowns": [
       "Neural recorder inputconnector/voltage/clock interface and resulting sync cable/adapter cost",
@@ -527,17 +568,87 @@
   "common_additions": {
     "output_bnc_usd": 13.53,
     "output_bnc_url": "https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm",
-    "measurement_kit_used_preamp_usd": 1897.16,
-    "measurement_kit_new_preamp_usd": 2517.16,
+    "measurement_kit_used_preamp_usd": 1897.22,
+    "measurement_kit_new_preamp_usd": 2517.22,
     "note": "Our added calibration equipment, not identified by paper or slides. DAQ-specific mic adapter and recorder wiring remain separate."
   },
   "comparison_totals": {
     "sonic_known_with_output_lead_usd": 4840.36,
-    "sonic_plus_shared_measurement_kit_used_usd": 6737.52,
+    "sonic_plus_shared_measurement_kit_used_usd": 6737.58,
     "slide_known_with_output_lead_usd": 7551.75,
-    "slide_plus_shared_measurement_kit_used_usd": 9448.91,
-    "recommended_known_new_preamp_usd": 5636.41,
-    "recommended_known_used_preamp_usd": 5016.41,
-    "note": "All subtotals exclude quote-required items, unresolved connections, shipping/tax/added tariffs and labor. No complete exact total or upper price limit is established."
+    "slide_plus_shared_measurement_kit_used_usd": 9448.97,
+    "recommended_known_new_preamp_usd": 5636.47,
+    "recommended_known_used_preamp_usd": 5016.47,
+    "note": "All subtotals exclude quote-required items, unresolved connections, shipping/tax/added tariffs and labor. No complete exact total or upper price limit is established.",
+    "sonic_plus_shared_measurement_kit_new_usd": 7357.58,
+    "slide_plus_shared_measurement_kit_new_usd": 10068.97,
+    "primary_measurement_choice": "New945USD microphone amplifier; used325USD option conditional on availability."
+  },
+  "audit_date": "2026-10-09",
+  "timing_audit": "See ../Timing_and_Price_Audit_2026-10-09.md. Reported paper delay, sound/neural alignment uncertainty, clock drift and sample spacing are distinct.",
+  "basic_refresh": {
+    "scope": "Latest page1readingPDF prices supersede the historical basic basket in older JSON files. Existing computer and brainrecorder reused.",
+    "items": [
+      {
+        "model": "Behringer UMC204HD",
+        "qty": 1,
+        "usd_each": 97.98,
+        "url": "https://www.ebay.com/itm/267676379715",
+        "condition": "new"
+      },
+      {
+        "model": "One JBL305P MkII powered studio monitor",
+        "qty": 1,
+        "usd_each": 99.0,
+        "url": "https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor",
+        "condition": "new, limited-time sale",
+        "availability": "In stock freshly opened; sale can change",
+        "replaces": "Earlier122.39Reverb listing inaccessible; no soldout inference"
+      },
+      {
+        "model": "Dayton EMM-6",
+        "qty": 1,
+        "usd_each": 66.93,
+        "url": "https://www.ebay.com/itm/221495576606",
+        "condition": "new"
+      },
+      {
+        "model": "Hosa HMIC-010",
+        "qty": 1,
+        "usd_each": 17.99,
+        "url": "https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft"
+      },
+      {
+        "model": "Hosa HSS-005",
+        "qty": 2,
+        "usd_each": 14.95,
+        "url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot"
+      },
+      {
+        "model": "Gator RI-MICTP-FBM stand",
+        "qty": 1,
+        "usd_each": 34.99,
+        "url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom"
+      }
+    ],
+    "parts_borrowed_calibrator_usd": 346.79,
+    "parts_purchased_calibrator_usd": 565.79,
+    "calibrator_usd": 219,
+    "estimated_shipping_tax_borrow_usd": 80,
+    "estimated_shipping_tax_buy_usd": 100,
+    "working_borrow_calibrator_usd": 426.79,
+    "working_buy_calibrator_usd": 665.79,
+    "exclusions": "Recorder-specific timing adapter, computer/recorder, labor; reserves are estimates, not checkout quotations."
+  },
+  "fresh_market_audit": {
+    "date": "2026-10-09",
+    "finding": "Reopened main NI/rack/newMM1/microphone/calibrator/cables/adapters/resistors listings; prices unchanged except same-modelJBL andAA replacements above. Listings may be cached; displayed price does not reserve stock.",
+    "retrieval_gaps": [
+      "Earlier122.39Reverb speaker inaccessible, replaced by same-model99newSweetwater sale.",
+      "Earlier325usedMM1 inaccessible, conditional savings only.",
+      "Earlier3498.95eBay exactBNCoffer cached three months; unconfirmedcurrentlead.",
+      "Earlier0.59MouserAAUSprice not recoverable; replaced by0.62DigiKeyAA."
+    ],
+    "main_shared_kit": "Usesnew945MM1; conditionalused325alternative outsidemainbasket."
   }
 }

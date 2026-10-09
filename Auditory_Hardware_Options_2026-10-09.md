@@ -17,7 +17,7 @@ All totals are USD for one sound stimulus channel. They exclude neural probes/he
 
 **For discussion: reserve about $1,500 for an audible first setup, or about $30,000 for the higher-cost slide architecture.** The latter is an upper planning scenario for the defined sound scope, not a hard maximum. ES1 availability, the compatible PXI-4461 version, calibration quotes, or missing recording equipment can change it. An all-new rack or specialist metrology chain can cost more.
 
-The [editable budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and all allowances. The [price inputs](sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add the alternative baskets together.
+The [complete seven-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [standalone editable LaTeX source](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) include the parts lists, four budget options, technical limits and clickable sources. The [editable budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and all allowances. The [price inputs](sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add the alternative baskets together.
 
 ## The minimum parts list
 

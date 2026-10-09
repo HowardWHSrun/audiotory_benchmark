@@ -11,4 +11,11 @@ October 9, 2026. Scope: hardware research and a parts budget based on the two su
 - Six existing scientific-model checks passed. Both browser code files passed syntax validation. Repository source/link validation and static-site build passed, with the pinned SONIC v1 PDF checksum unchanged. Diff whitespace checks passed. Browser interaction checks were not repeated because no website source changed.
 - The budgets describe one sound channel using the lab neural chain. All calibration, synchronization, unquoted speaker/driver, support and reserve inputs are labeled as assumptions or estimates. The approximately $30,000 high scenario is not a market ceiling or a manufacturer quotation.
 
-No vendor contact, order, equipment connection, acoustic test, neural recording or animal procedure was performed. Temporary authoring files, spreadsheet renders and inspection output remain outside the repository.
+## Complete PDF and LaTeX conversion
+
+- Created a standalone seven-page LaTeX source and PDF covering both parts lists, all four budget options, the complete higher-frequency cost breakdowns, frequency/compatibility limits, calibration/timing, Rice scope and source provenance. The original slides and editable spreadsheet are linked from the PDF.
+- The desktop editor's LaTeX compiler reported success. Exported the same source with official Tectonic 0.17.0 in a temporary folder. The final compilation has no overfull or underfull layout warnings.
+- Visually inspected all seven pages, including the final source-table revision. Programmatic checks confirmed seven nonempty pages, the expected parts and budget totals, and 64 HTTPS annotations to 50 destinations. A separate read-only coverage review found no material omissions or arithmetic/content errors against the research note and price inputs.
+- Repository source/link validation and diff whitespace checks passed; the pinned SONIC v1 PDF checksum is unchanged. Website source is unchanged, so browser interactions were not repeated.
+
+No vendor contact, order, equipment connection, acoustic test, neural recording or animal procedure was performed. Temporary authoring files, compiler/download resources, spreadsheet renders and PDF preview images remain outside the repository.

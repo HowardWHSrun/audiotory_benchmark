@@ -159,6 +159,13 @@
 - Verification passed: native LaTeX compilation, three-page export, visual review of all pages, four comparison-pair and scientific-scope checks, 13 HTTPS annotations to eight destinations, no overfull/underfull warnings, and independent primary-source review. Budget and appendix page text are unchanged. Repository reference/checksum validation and diff checks passed; temporary renders remain outside the repository.
 - No vendor contact, purchase, hardware connection, experiment, or website edit was performed.
 
+## 2026-10-09 America/Chicago - complete hardware comparison in PDF and LaTeX
+
+- Howard requested everything from the slide-hardware comparison in PDF and editable LaTeX. Added a standalone seven-page document with the minimum/practical audible baskets, USB and full-rack budgets, all slide parts, eBay/source links, timing/calibration requirements and frequency/compatibility limits.
+- Retained the lab neural-chain scope, asking-price versus estimate distinction, conditional minimum, approximately $30,000 upper planning scenario, SONIC band mismatch and awake-versus-sedated-sheep boundary. The PDF links the original slides, full research record, price inputs and editable spreadsheet.
+- Verification passed: desktop LaTeX compilation, export of the same source with Tectonic 0.17.0, visual review of all seven pages, expected part/budget/scope content checks, 64 HTTPS annotations to 50 destinations, no overfull/underfull warnings, and independent coverage review. Repository source/link validation, unchanged SONIC manuscript checksum and diff checks passed. Temporary compiler resources and renders are outside the repository; website source is unchanged.
+- No vendor contact, purchase, hardware connection or experiment was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

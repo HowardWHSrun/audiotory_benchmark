@@ -31,7 +31,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 
 ## Project records
 
-- [Auditory hardware options and budget](Auditory_Hardware_Options_2026-10-09.md): the supplied NI/TDT slides, current eBay price leads, and conditional audible versus higher-frequency sound budgets. [Editable parts budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx).
+- [Auditory hardware options and budget](Auditory_Hardware_Options_2026-10-09.md): the supplied NI/TDT slides, current eBay price leads, and conditional audible versus higher-frequency sound budgets. [Complete seven-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf), [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex), and [editable parts budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx).
 - [Project plan](Project_Plan.md): scope, assignments, deliverables, and open decisions.
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.

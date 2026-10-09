@@ -687,8 +687,9 @@
   "faculty_document_revision": {
     "date": "2026-10-09",
     "audience": "Dr. Luan",
-    "structure": "Four pages: basic option, SONIC paper sound chain, McGinley supplied setup, proposed compact Rice setup. Explicit quantities, comparable shared-kit subtotals, decision prompts, linked source notes.",
+    "structure": "Four pages: basic, SONIC, McGinley lab and compact setup. Plain memo layout, short notes, exact parts/counts/prices and one set of discussion questions on page 1.",
     "timing": "Measured Rice alignment/drift remains unknown. Paper processing delay, component specifications and proposed alignment goal remain separate.",
-    "subtotal_scope": "Specialized headline subtotals include the same new-amplifier measurement kit and exclude required supplier quotes, unresolved connections, delivery/tax/added tariffs and labor."
+    "subtotal_scope": "Specialized headline subtotals include the same new-amplifier measurement kit and exclude required supplier quotes, unresolved connections, delivery/tax/added tariffs and labor.",
+    "editorial_revision": "Simplified headings, typography and wording on 2026-10-09. Price/quantity/quote/source inputs unchanged; no new pricing survey or hardware measurements."
   }
 }

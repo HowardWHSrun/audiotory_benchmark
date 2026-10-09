@@ -1,45 +1,41 @@
 \documentclass[11pt,letterpaper]{article}
-\usepackage[margin=0.65in]{geometry}
+\usepackage[margin=0.72in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,tabularx,booktabs,array,xcolor,hyperref,fancyhdr}
-\renewcommand{\familydefault}{\sfdefault}
-\definecolor{linkblue}{RGB}{26,70,105}
-\definecolor{quiet}{RGB}{85,85,85}
-\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Auditory setup: parts and budget for discussion with Dr. Luan},pdfauthor={Rice auditory benchmarking project}}
+\definecolor{linkblue}{RGB}{30,60,80}
+\definecolor{quiet}{RGB}{80,80,80}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Auditory setup: parts and estimated cost},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{5pt}
 \setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.17}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \newcommand{\buy}[2]{\href{#1}{#2}}
 \newcommand{\money}[1]{\$#1}
-\newcommand{\heading}[1]{\par\vspace{3pt}{\large\bfseries #1}\par}
-\newcommand{\source}[1]{{\footnotesize\color{quiet}#1\par}}
+\newcommand{\heading}[1]{\par\vspace{4pt}{\normalsize\bfseries #1}\par}
+\newcommand{\source}[1]{\par{\footnotesize\color{quiet}#1\par}}
+\newcommand{\option}[2]{\par{\Large\bfseries #1}\par{\normalsize #2}\par\vspace{3pt}}
 \pagestyle{fancy}\fancyhf{}
-\fancyfoot[L]{\small Auditory setup proposal\quad October 9, 2026}
-\fancyfoot[R]{\small\thepage\ / 4}
+\fancyfoot[L]{\footnotesize Auditory setup\quad 9 October 2026}
+\fancyfoot[R]{\footnotesize\thepage}
 \renewcommand{\headrulewidth}{0pt}
-
-\newenvironment{points}{\begin{list}{$\bullet$}{\setlength{\leftmargin}{1.25em}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{1.5pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}}{\end{list}}
+\newenvironment{points}{\begin{list}{$\bullet$}{\setlength{\leftmargin}{1.2em}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{4pt}\setlength{\parsep}{0pt}\setlength{\topsep}{3pt}}}{\end{list}}
 \begin{document}
-{\LARGE\bfseries Auditory setup: parts and budget}\par
-{\large Prepared for discussion with Dr. Luan}\par
-\source{October 9, 2026. For planned auditory recordings in sedated sheep. All prices are in United States dollars. Blue product names link to sellers or supplier quote pages. All options reuse a compatible lab computer and our neural recorder; their connections remain to be confirmed.}
-\heading{Proposed next step}
-\begin{points}
-\item Confirm the required frequency range and the timing inputs available on our neural recorder.
-\item If tones below 20 kilohertz are sufficient, start with the basic option below. For the paper's 1.4--32 kilohertz range, obtain quotes for the compact proposal on page 4 and check what the lab already owns.
-\end{points}
-\heading{1. Basic setup: selected tones below 20 kilohertz}
-\textbf{Computer $\rightarrow$ sound interface $\rightarrow$ powered speaker}\par
-\textbf{Measurement microphone $\rightarrow$ sound interface; timing reference $\rightarrow$ neural recorder}
-\heading{Parts and price}
+\raggedright
+{\LARGE\bfseries Auditory setup}\par
+{\large Parts and estimated cost}\par
+\source{9 October 2026. Planned recordings in sedated sheep. Prices are in United States dollars; product names link to sellers or quote pages.}
+If we only need tones below 20 kilohertz, the basic setup is the least expensive starting point. If we need the paper's full 1.4--32 kilohertz range, I suggest getting quotes for the compact setup on page 4. All four options use a compatible lab computer and our neural recorder. Labor and recorder-specific connections are extra.
+\vspace{3pt}
+\option{1. Basic setup}{Parts: \money{346.79}, or \money{565.79} with a sound-level calibrator.}
+Computer $\rightarrow$ sound interface $\rightarrow$ powered speaker. The measurement microphone connects to the sound interface.
+\par
 {\small
-\begin{tabularx}{\linewidth}{@{}L P{0.55in} P{1.07in} R{0.76in}@{}}
+\begin{tabularx}{\linewidth}{@{}L P{0.45in} P{1.26in} R{0.72in}@{}}
 \toprule
-\textbf{Part and purpose} & \textbf{Number} & \textbf{Source / condition} & \textbf{Line cost} \\
+\textbf{Item} & \textbf{Count} & \textbf{Seller / condition} & \textbf{Cost (\$)} \\
 \midrule
 \buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD sound interface} & 1 & eBay / new & 97.98 \\
 \buy{https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor}{JBL 305P MkII powered speaker} & 1 & Sweetwater / new & 99.00 \\
@@ -48,42 +44,38 @@
 \buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Hosa HSS-005 audio cable, \money{14.95} each} & 2 & Sweetwater / new & 29.90 \\
 \buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand} & 1 & Sweetwater / new & 34.99 \\
 \midrule
-\textbf{Priced parts; borrowed calibrator} & & & \textbf{346.79} \\
+\textbf{Subtotal without calibrator} & & & \textbf{346.79} \\
 \buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{Optional: REED R8090 sound-level calibrator} & 1 & DigiKey / new & 219.00 \\
-\textbf{Priced parts; purchased calibrator} & & & \textbf{565.79} \\
+\textbf{Subtotal with calibrator} & & & \textbf{565.79} \\
 \bottomrule
 \end{tabularx}}
-\heading{Budget}
+
 \begin{points}
-\item \textbf{Borrowed calibrator:} \money{346.79} parts + \money{80} estimated delivery/tax reserve = \textbf{\money{426.79} working allowance}.
-\item \textbf{Purchased calibrator:} \money{565.79} parts + \money{100} estimated reserve = \textbf{\money{665.79} working allowance}. The recorder-specific timing connection is additional in either case.
+\item With a borrowed calibrator, allow \money{426.79}: parts plus an estimated \money{80} for delivery and tax.
+\item Buying the calibrator brings the allowance to \money{665.79}, including an estimated \money{100} reserve. The connection to our neural recorder is extra in both cases.
 \end{points}
-\heading{Timing and sound calibration}
+\heading{Timing}
 \begin{points}
-\item \textbf{Actual alignment and drift: unmeasured.} Computer buffering adds delay; one 256-sample buffer at 48,000 samples per second is 5.3 milliseconds. This is an illustration, not a measurement of this interface.
-\item Record repeated timing references with the neural signals and use the microphone near the ear to measure sound arrival. Air adds about three milliseconds per metre; the speaker and converters add further delay.
-\item Check the sound level of each tone at the ear. Recording the microphone only on the sound interface still requires alignment with the neural timeline.
+\item We have not measured this setup's timing error or drift. For scale, a 256-sample buffer at 48,000 samples per second lasts 5.3 milliseconds; that is a buffer example, not a measured interface delay.
+\item Measure sound arrival and each tone's level at the ear. Sound travel adds about three milliseconds per metre, on top of speaker and converter delays.
+\item Record repeated timing markers with the neural data to measure accumulating mismatch. A microphone recorded through the sound interface still needs to be aligned with the neural recording.
 \end{points}
-\heading{Decisions for the meeting}
+\heading{For our discussion}
 \begin{points}
-\item Confirm the frequency range, recorder timing inputs and parts already available in the lab.
-\item Set a spending limit for supplier quotes and choose which option to develop first.
+\item What frequency range do we need?
+\item What timing inputs does our recorder have?
+\item Which parts can we borrow, and what budget should we use?
 \end{points}
-\source{The speaker's \money{99} price is a limited-time sale. Delivery/tax reserves are estimates. Sources: \buy{https://portaudio.com/docs/latency.html}{computer buffering}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{sound travel}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{delay estimates}. A sound output is not automatically compatible with a digital timing input.}
+\source{The \money{99} speaker price is a limited-time sale. Delivery/tax reserves are estimates. A sound output cannot be assumed compatible with a digital timing input. References: \buy{https://portaudio.com/docs/latency.html}{buffering}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{sound travel}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{delay estimates}.}
 \newpage
-{\LARGE\bfseries 2. SONIC paper sound chain}\par
-{\large \textbf{\money{7,357.58} priced subtotal} + supplier quotes; measurement kit included.}\par
-\heading{Purpose}
-\begin{points}
-\item Follow the paper's sound-delivery hardware for its \textbf{1.4--32 kilohertz} tones: sound generation device $\rightarrow$ SA1 amplifier $\rightarrow$ MF1 speaker.
-\item Include the paper's satellite-based time reference. The paper's Connexus neural recorder is excluded; we would use our own system.
-\end{points}
-\heading{Parts and price}
-\source{One output channel. Starred items are our reproduction accessories, not exact accessories identified by the paper. National Instruments makes the USB-6361; Tucker-Davis Technologies supplies the speaker and amplifier.}
+\option{2. SONIC setup}{Subtotal: \money{7,357.58}, plus the supplier quotes below.}
+This follows the paper's USB-6361 sound device, SA1 amplifier and MF1 speaker for 1.4--32 kilohertz tones. It includes the paper's satellite-based time reference, but uses our recorder in place of Connexus.
+\source{One sound output channel. Starred items are accessories added to make the chain usable; their exact part numbers are not identified in the paper. National Instruments makes the sound device; Tucker-Davis Technologies makes the speaker and amplifier.}
+\par
 {\small
-\begin{tabularx}{\linewidth}{@{}L P{0.55in} P{1.07in} R{0.76in}@{}}
+\begin{tabularx}{\linewidth}{@{}L P{0.45in} P{1.26in} R{0.72in}@{}}
 \toprule
-\textbf{Part and purpose} & \textbf{Number} & \textbf{Source / condition} & \textbf{Line cost} \\
+\textbf{Item} & \textbf{Count} & \textbf{Seller / condition} & \textbf{Cost (\$)} \\
 \midrule
 \buy{https://www.newark.com/ni-now-part-of-emerson/782255-01/multifunction-i-o-device-usb-6361/dp/14AJ5490}{USB-6361 sound generation/recording, 782255-01} & 1 & Newark / new & 3,744.42 \\
 \buy{https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/}{TimeMachines TM2500C time reference} & 1 & New / backorder & 799.99 \\
@@ -96,87 +88,76 @@
 \buy{https://www.digikey.com/en/products/detail/ni/781233-02/18710754}{781233-02 cable noise filter}$^*$ & 1 & DigiKey / new & 38.25 \\
 \buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & 1 & Pro Audio / new & 13.53 \\
 \midrule
-\textbf{Priced sound parts} & & & \textbf{4,840.36} \\
-\hyperref[measurement]{Proposed measurement kit (page 4)} & 1 & New amplifier & 2,517.22 \\
-\textbf{Priced subtotal before quotes} & & & \textbf{7,357.58} \\
+\textbf{Sound parts subtotal} & & & \textbf{4,840.36} \\
+\hyperref[measurement]{Measurement kit (listed on page 4)} & 1 & New amplifier & 2,517.22 \\
+\textbf{Subtotal, excluding quote items} & & & \textbf{7,357.58} \\
 \bottomrule
 \end{tabularx}}
-\heading{Budget and remaining items}
+
+\heading{Still needed}
 \begin{points}
-\item \textbf{Supplier quotes required:} MF1-M speaker, SA1 amplifier and ZB1PS powered enclosure. Confirm speaker kit contents and included power/cable accessories.
-\item \textbf{Additional:} microphone connection, recorder timing connection, network wiring, delivery/tax and labor. The time reference is currently backordered.
+\item Quotes for the MF1-M speaker, SA1 amplifier and ZB1PS powered enclosure. Confirm the speaker kit's power and cable contents.
+\item Microphone and recorder connections, network wiring, delivery, tax and labor. The time reference is backordered.
+\item A \buy{https://www.ebay.com/itm/178144942290}{seller-new 782255-01 on eBay for \money{3,498.95}} would save \money{245.47}; its accessories and actual condition need confirmation.
 \end{points}
-\heading{Timing and sound calibration}
+\heading{Timing}
 \begin{points}
-\item \textbf{Paper result: 56 milliseconds of neural-processing delay.} This covers neural measurement, filtering and collecting data for decoding. It excludes sensory processing and computer calculation time; it is not a sound-to-neural timestamp error.
-\item \textbf{Alignment and drift:} the paper does not quantify remaining sound-to-neural timing error or long-session drift. Its time reference specifies below one microsecond plus network variation; this is not sound-arrival accuracy.
-\item Buying these sound parts does not reproduce the paper's neural-processing delay. Test our recorder alignment and at-ear sound level separately.
+\item SONIC reports 56 milliseconds for neural measurement, filtering and collecting data for the decoder. This excludes sensory processing and computer calculation time.
+\item The 56 milliseconds is not sound-to-neural timestamp error, and we cannot transfer that result to our recorder by buying the sound hardware.
+\item The paper does not quantify remaining alignment error or long-session drift. The time reference specifies below one microsecond plus network variation; that does not describe sound arrival at the ear.
 \end{points}
-\heading{Decision needed}
-\textbf{Is close reproduction of the paper's sound hardware worth the added time-reference cost?}\par
-\source{Sources: \buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC version 1, pages 5, 7--9 and 11}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound-device specifications}; \buy{https://timemachinescorp.com/wp-content/uploads/TM2500-Brochure.pdf}{time reference}; \buy{https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/}{speaker}. The separate 11-millisecond result was a one-session analysis. Typical free-running clock scale at 25 degrees Celsius: 180 milliseconds per hour versus ideal time, not recorder-relative drift. SONIC used awake sheep; Rice's sedated-sheep performance is unverified.}
-\source{Market alternative: \buy{https://www.ebay.com/itm/178144942290}{seller-new 782255-01 for \money{3,498.95}} saves \money{245.47}; confirm accessories and condition.}
+\source{The separate 11-millisecond result came from a one-session analysis. The sound device's typical free-running clock scale at 25 degrees Celsius is 180 milliseconds per hour versus ideal time; actual drift relative to our recorder is unknown. SONIC recorded awake sheep. The effects of sedation on our responses and timing remain unmeasured.}
+\source{References: \buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC version 1, pages 5, 7--9 and 11}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound device}; \buy{https://timemachinescorp.com/wp-content/uploads/TM2500-Brochure.pdf}{time reference}; \buy{https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/}{speaker}.}
 \newpage
-{\LARGE\bfseries 3. McGinley supplied setup}\par
-{\large \textbf{\money{10,068.97} priced subtotal} + supplier quotes; measurement kit included.}\par
-\heading{Purpose}
-\begin{points}
-\item Follow the supplied slides: compatible desktop computer $\rightarrow$ equipment chassis $\rightarrow$ ED1 driver $\rightarrow$ ES1 speaker.
-\item Retain the slides' audio and signal input/output modules. Our neural recorder replaces the slides' Neuropixels equipment.
-\end{points}
-\heading{Parts and price}
-\source{One output channel. Most chassis parts are used; seller testing does not establish current calibration. The desktop requires a compatible free expansion slot.}
+\option{3. McGinley lab setup}{Subtotal: \money{10,068.97}, plus the ES1 speaker quote.}
+The supplied slides use a desktop computer and equipment chassis connected to an ED1 driver and ES1 speaker. The list keeps both signal boards; our neural recorder replaces the Neuropixels equipment shown in the slides.
+\source{One sound output channel. Most chassis parts are used. The desktop needs a compatible free expansion slot. This route is worth considering if we already have substantial rack hardware.}
+\par
 {\small
-\begin{tabularx}{\linewidth}{@{}L P{0.55in} P{1.07in} R{0.76in}@{}}
+\begin{tabularx}{\linewidth}{@{}L P{0.45in} P{1.26in} R{0.72in}@{}}
 \toprule
-\textbf{Part and purpose} & \textbf{Number} & \textbf{Source / condition} & \textbf{Line cost} \\
+\textbf{Item} & \textbf{Count} & \textbf{Seller / condition} & \textbf{Cost (\$)} \\
 \midrule
 \buy{https://www.ebay.com/itm/406923647348}{PXIe-1082 equipment chassis} & 1 & eBay / used & 2,650.00 \\
 \buy{https://www.ebay.com/itm/335905594499}{PXIe-6363 signal input/output board} & 1 & eBay / used & 2,495.36 \\
 \buy{https://www.ebay.com/itm/198252264097}{PXI-4461 audio module, hybrid 186900-11L} & 1 & eBay / used & 699.99 \\
 \buy{https://www.ebay.com/itm/286812339947}{PXIe-8360 chassis connection module} & 1 & eBay / used & 493.20 \\
-\buy{https://www.ebay.com/itm/187559567628}{PCIe-8361 computer connection card} & 1 & eBay / seller-new & 197.00 \\
-\buy{https://www.ebay.com/itm/307193912690}{779500-03 rack cable, 3 metres} & 1 & eBay / seller-new & 89.85 \\
+\buy{https://www.ebay.com/itm/187559567628}{PCIe-8361 computer connection card} & 1 & eBay / listed new & 197.00 \\
+\buy{https://www.ebay.com/itm/307193912690}{779500-03 rack cable, 3 metres} & 1 & eBay / listed new & 89.85 \\
 \buy{https://www.ebay.com/itm/277089841525}{SHC68-68-EPM cable, 192061C-02} & 1 & eBay / used & 89.99 \\
 \buy{https://www.ebay.com/itm/358482820683}{BNC-2090A signal connection panel} & 1 & eBay / used$^\ddagger$ & 613.77 \\
 \buy{https://www.ebay.com/itm/156873696386}{ED1 driver + enclosure/power supply} & 1 & eBay / used & 209.06 \\
 \buy{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{ES1 speaker + matching cable} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
 \buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & 1 & Pro Audio / new & 13.53 \\
 \midrule
-\textbf{Priced sound parts} & & & \textbf{7,551.75} \\
-\hyperref[measurement]{Proposed measurement kit (page 4)} & 1 & New amplifier & 2,517.22 \\
-\textbf{Priced subtotal before quotes} & & & \textbf{10,068.97} \\
+\textbf{Sound parts subtotal} & & & \textbf{7,551.75} \\
+\hyperref[measurement]{Measurement kit (listed on page 4)} & 1 & New amplifier & 2,517.22 \\
+\textbf{Subtotal, excluding quote items} & & & \textbf{10,068.97} \\
 \bottomrule
 \end{tabularx}}
-\heading{Budget and remaining items}
+
+\heading{Still needed}
 \begin{points}
-\item \textbf{Supplier quote required:} ES1 speaker with its matching high-voltage cable. The ED1 bundle already includes its powered enclosure and supply.
-\item \textbf{Additional:} microphone/recorder connections, any missing chassis power cord, delivery/tax and labor. Confirm the actual audio module's hybrid connector and calibration before buying.
+\item An ES1 speaker quote with its matching high-voltage cable. The listed ED1 bundle includes its powered enclosure and supply.
+\item Microphone and recorder connections, any missing chassis power cord, delivery, tax and labor. Check the audio board's actual hybrid connector and calibration before buying.
 \end{points}
-\heading{Timing and sound calibration}
+\heading{Timing and frequency range}
 \begin{points}
-\item \textbf{Frequency limit:} ES1 is specified for \textbf{4--110 kilohertz}; it cannot cover the paper's 1.4--4 kilohertz tones. Audio-module flat output extends to 92.1 kilohertz at 204,800 samples per second.
-\item \textbf{Documented fixed delay:} the audio module's output filter adds \textbf{0.15625 milliseconds} at that rate. Speaker and air delay are additional; this is not whole-system timing accuracy.
-\item \textbf{Alignment, drift and at-ear sound accuracy: unmeasured.} Module clock settings, recorder connections and acoustic calibration need to be checked together.
+\item The ES1 covers 4--110 kilohertz, so it misses the paper's 1.4--4 kilohertz tones. The audio board's flat output extends to 92.1 kilohertz at 204,800 samples per second.
+\item At that rate, the output filter adds a fixed 0.15625 milliseconds. Speaker and air delays are additional; this is not the system's timing accuracy.
+\item We have not measured alignment, drift or sound-level accuracy at the ear. The boards' clock settings, recorder connections and acoustic calibration need to be checked together.
 \end{points}
-\heading{Decision needed}
-\textbf{Use this route only if its frequency range and chassis architecture fit our experiment, or substantial hardware is already available.}\par
-\source{Sources: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/01_system_diagram.png}{supplied diagram}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/02_equipment_links.png}{supplied parts slide}; \buy{https://docs-be.ni.com/bundle/ni-4461-4462-specs/raw/resource/enus/373770k.pdf}{audio module, pages 1, 19 and 24}; \buy{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{speaker}; \buy{https://www.ni.com/en/support/documentation/product-certifications/model.pxi-4461.html}{hybrid variant}. Internal-clock scale: 72 milliseconds per hour versus ideal time, conditional on calibration and aging; a different reference changes this figure. Recorder-relative drift is unknown. Speaker raw $\pm$11-decibel variation is not calibrated at-ear accuracy.}
-\source{$^\ddagger$Connection-panel seller lists no returns. Starred output cable is our addition; quotes/connections remain extra.}
+\source{The audio board's internal-clock scale is 72 milliseconds per hour versus ideal time, conditional on calibration and aging. A different reference changes this figure; drift relative to our recorder is unknown. The speaker's raw $\pm$11-decibel response variation is not calibrated at-ear accuracy. The connection-panel seller lists no returns. The starred output lead is our addition.}
+\source{References: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/01_system_diagram.png}{supplied diagram}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/02_equipment_links.png}{supplied parts slide}; \buy{https://docs-be.ni.com/bundle/ni-4461-4462-specs/raw/resource/enus/373770k.pdf}{audio board, pages 1, 19 and 24}; \buy{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{speaker}; \buy{https://www.ni.com/en/support/documentation/product-certifications/model.pxi-4461.html}{hybrid variant}.}
 \newpage
-{\LARGE\bfseries 4. Proposed compact Rice setup}\par
-{\large \textbf{\money{5,636.47} priced subtotal} + supplier quotes; measurement kit included.}\par
-\heading{Purpose}
-\begin{points}
-\item Cover the paper's \textbf{1.4--32 kilohertz} range with a computer-connected generation/recording device, SA1 amplifier and MF2-M speaker.
-\item Measure sound near the ear and record repeated timing references with the neural data. This proposed setup has not been built or validated.
-\end{points}
-\heading{Parts and price}\label{measurement}
-\source{Main comparison uses a new microphone amplifier. Dagger-marked items form the shared measurement kit: \money{2,517.22}. Line costs cover the number listed.}
+\option{4. Compact setup}{Subtotal: \money{5,636.47}, plus speaker, amplifier and enclosure quotes.}
+This is the option I suggest pricing if we need the full paper frequency range. It uses the computer-connected USB-6361, an SA1 amplifier and an MF2-M speaker, with a microphone near the ear and timing markers recorded with the neural data.
+\source{The main list uses a new microphone amplifier. Dagger-marked items make up the \money{2,517.22} measurement kit also included on pages 2 and 3. Costs cover the counts listed.}\label{measurement}
+\par
 {\small
-\begin{tabularx}{\linewidth}{@{}L P{0.55in} P{1.07in} R{0.76in}@{}}
+\begin{tabularx}{\linewidth}{@{}L P{0.45in} P{1.26in} R{0.72in}@{}}
 \toprule
-\textbf{Part and purpose} & \textbf{Number} & \textbf{Source / condition} & \textbf{Line cost} \\
+\textbf{Item} & \textbf{Count} & \textbf{Seller / condition} & \textbf{Cost (\$)} \\
 \midrule
 \buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{USB-6361 sound generation/recording, 781442-01} & 1 & Newark / new & 3,030.42 \\
 \buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{MF2-M speaker kit} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
@@ -193,22 +174,21 @@
 \buy{https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473}{Yageo 100,000-ohm resistor, \money{0.10} each} & 2 & DigiKey / new & 0.20 \\
 \buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & 1 & Newark / new & 51.00 \\
 \midrule
-\textbf{Priced subtotal before quotes} & & & \textbf{5,636.47} \\
+\textbf{Subtotal, excluding quote items} & & & \textbf{5,636.47} \\
 \bottomrule
 \end{tabularx}}
-\heading{Budget and remaining items}
+
+\heading{Still needed}
 \begin{points}
-\item \textbf{Supplier quotes required:} MF2-M speaker kit, SA1 amplifier and ZB1PS powered enclosure. Recorder connection, delivery/tax and labor are additional.
-\item \textbf{Used alternative:} a \buy{https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html}{\money{604.50} B\&H MM-1} reduces this subtotal to \textbf{\money{5,295.97}}; listed moderate wear, 90-day seller warranty. The shared kit becomes \money{2,176.72}.
+\item Quotes for the MF2-M speaker kit, SA1 amplifier and ZB1PS powered enclosure, plus the recorder connection, delivery, tax and labor. Device power/cable and speaker stand/cable are included; microphone wiring and bias returns need review.
+\item A \buy{https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html}{used MM-1 at B\&H for \money{604.50}} lowers the subtotal to \money{5,295.97}. It is listed with moderate wear and a 90-day seller warranty. The measurement kit would cost \money{2,176.72}.
 \end{points}
-\heading{Timing and sound calibration}
+\heading{Timing and calibration}
 \begin{points}
-\item \textbf{Frequency coverage:} speaker nominally 1--80 kilohertz; microphone to 50 kilohertz. The calibrator's \textbf{0.5-decibel specification applies at one kilohertz only}; full-band at-ear uncertainty remains unmeasured.
-\item \textbf{Candidate alignment goal:} sound arrival and neural timestamps within \textbf{one millisecond after correction}. This is a goal for discussion and testing, not achieved performance or SONIC's processing-delay measure.
-\item Check repeated timing references, microphone arrival, converter channel offsets and adapted microphone wiring. Actual residual alignment and drift are unknown.
+\item The speaker is nominally rated for 1--80 kilohertz and the microphone to 50 kilohertz. The calibrator's 0.5-decibel specification applies at one kilohertz only; it does not establish accuracy across all our tones.
+\item One possible test criterion is to align timestamps of sound arrival with the neural recording within one millisecond after correction. This has not been demonstrated and measures something different from SONIC's processing delay.
+\item Measure repeated markers, sound arrival and converter channel offsets. The setup has not been built or validated; its remaining alignment error and drift are unknown.
 \end{points}
-\heading{Decision needed}
-\textbf{Obtain this route's speaker/amplifier quotes if the full paper frequency range is required.}\par
-\source{Device power/cable and speaker stand/cable are included. Microphone lead and bias returns require wiring review. Arduino or a field-programmable gate array still needs analog/acoustic hardware and development.}
-\source{Sources: \buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{speaker}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{microphone}; \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{microphone amplifier}; \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{calibrator}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound device}. Clock scale: 180 milliseconds per hour versus ideal time, typical at 25 degrees Celsius; actual recorder drift is unknown. \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/Accurate_Setup_Comparison_2026-10-09.md}{Detailed comparison}.}
+\source{The sound device's clock scale is 180 milliseconds per hour versus ideal time, typical at 25 degrees Celsius; actual recorder-relative drift is unknown. Arduino or a field-programmable gate array would still need the analog sound hardware, acoustic calibration and program development.}
+\source{References: \buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{speaker}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{microphone}; \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{microphone amplifier}; \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{calibrator}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound device}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/Accurate_Setup_Comparison_2026-10-09.md}{detailed comparison}.}
 \end{document}

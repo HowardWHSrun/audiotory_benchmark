@@ -246,7 +246,7 @@
     }
   },
   "precision": {
-    "NI_USB_6361_clock": "50 ppm spec; ±0.5 Hz at 10 kHz / ±1.6 Hz at 32 kHz is only the clock contribution with actual-rate waveform synthesis.",
+    "NI_USB_6361_clock": "50 ppm listed under default typical-at-25C conditions; ±0.5 Hz at 10 kHz / ±1.6 Hz at 32 kHz is only a clock contribution illustration with actual-rate waveform synthesis, not a guaranteed whole-system bound.",
     "audio_interface_clock": "No guaranteed tolerance found in official specs inspected.",
     "R8090": "±0.5 dB at 1 kHz; not broadband at-ear SPL uncertainty; traceable certificate extra.",
     "sample_grids": "192kSa/s nominal=5.208us; proposed Arduino100kSa/s=10us. These are not alignment accuracy.",
@@ -262,5 +262,52 @@
     "MM1": "https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information",
     "Arduino": "https://github.com/arduino-libraries/Arduino_AdvancedAnalog/blob/main/docs/api.md",
     "FPGA_codec": "https://digilent.com/shop/pmod-i2s2-stereo-audio-input-and-output/"
+  },
+  "timing_clarification": {
+    "scope": "Two-page basic versus full-range revision; calculations, not achieved performance. Price snapshot unchanged from earlier October 9 checks.",
+    "basic_relative_clock_ppm": null,
+    "recorder_clock_ppm": null,
+    "actual_latency_jitter_drift": "Unmeasured for both candidate systems.",
+    "buffer_example": {
+      "frames_per_buffer": 256,
+      "sample_rate_Hz": 48000,
+      "one_buffer_ms": 5.333333333333333,
+      "two_buffers_ms": 10.666666666666666,
+      "meaning": "Buffer duration only, not total UMC latency or trial jitter."
+    },
+    "air_travel": {
+      "approximate_ms_per_metre": 3,
+      "meaning": "Propagation delay only; depends on temperature/geometry and does not include speaker/converter delay."
+    },
+    "drift_formula": "drift_ms = relative_error_ppm * elapsed_seconds / 1000",
+    "scenarios": [
+      {
+        "description": "NI 50 ppm figure versus ideal time",
+        "relative_ppm": 50,
+        "after_60s_ms": 3,
+        "after_3600s_ms": 180,
+        "status": "Specification-based illustration; NI defaults are typical at 25 C, not actual recorder alignment or a guaranteed bound."
+      },
+      {
+        "description": "Two hypothetical independent ±50ppm clocks at opposite errors",
+        "relative_ppm": 100,
+        "after_60s_ms": 6,
+        "after_3600s_ms": 360,
+        "status": "Recorder 50 ppm is unconfirmed; this is not a basic-interface specification or an actual prediction."
+      }
+    ],
+    "sync": "A shared start trigger alone does not stop rate drift. NI USB-6361 accepts a 10 MHz PFI reference; a compatible clock with the recorder or repeated recorded references are needed. Compatibility is unknown.",
+    "proposed_acceptance_goal": {
+      "corrected_residual_alignment_ms": 1,
+      "status": "Proposed only; no measurement or guarantee."
+    },
+    "recorder_connection": "Additional unselected cable/adapter; line audio is not TTL. A microphone captured only by USB leaves two timelines to align. A compatible neural auxiliary input can record an acoustic reference more directly.",
+    "sources": {
+      "NI_spec": "https://download.ni.com/support/manuals/374650c.pdf",
+      "NI_sync": "https://www.ni.com/en/support/documentation/supplemental/10/synchronization-explained.html",
+      "PortAudio_buffer": "https://portaudio.com/docs/latency.html",
+      "PortAudio_estimates": "https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html",
+      "NTi_acoustics": "https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf"
+    }
   }
 }

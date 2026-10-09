@@ -31,7 +31,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 
 ## Project records
 
-- [Sound setup: cost, precision and choices](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): three pages comparing an approximately $700 audible setup, Arduino/FPGA candidates and a quote-dependent full-SONIC-band setup, with current purchase links. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) and [checked price inputs](sources/Sound_Decision_Prices_2026-10-09.json). The [detailed slide comparison](Auditory_Hardware_Options_2026-10-09.md) and [earlier rack/ES1 budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain supporting records.
+- [Basic and full-range sound setups](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): two pages with parts, buying links, delay examples and honest drift calculations for the $450–700 basic and $11,000–12,000 quote-dependent full-range options. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) and [checked price inputs](sources/Sound_Decision_Prices_2026-10-09.json). The [detailed slide comparison](Auditory_Hardware_Options_2026-10-09.md) and [earlier rack/ES1 budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain supporting records.
 - [Project plan](Project_Plan.md): scope, assignments, deliverables, and open decisions.
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.

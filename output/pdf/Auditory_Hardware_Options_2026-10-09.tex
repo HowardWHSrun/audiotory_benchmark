@@ -1,132 +1,116 @@
 \documentclass[11pt,letterpaper]{article}
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,microtype,tabularx,booktabs,array,enumitem,xcolor,hyperref,fancyhdr}
+\usepackage{lmodern,microtype,tabularx,booktabs,array,xcolor,hyperref,fancyhdr}
 \renewcommand{\familydefault}{\sfdefault}
 \definecolor{linkblue}{RGB}{26,70,105}
-\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Sound setup: cost, precision and choices},pdfauthor={Rice auditory benchmarking project}}
+\definecolor{quiet}{RGB}{85,85,85}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Basic and full-range sound setups: parts and timing},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
+\setlength{\parskip}{5pt}
 \setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.12}
-\setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt}
+\renewcommand{\arraystretch}{1.1}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \newcommand{\buy}[2]{\href{#1}{#2}}
 \newcommand{\money}[1]{\$#1}
-\newcommand{\heading}[1]{\vspace{6pt}{\large\bfseries #1}\par}
+\newcommand{\heading}[1]{\vspace{5pt}{\large\bfseries #1}\par}
+\newcommand{\source}[1]{{\footnotesize\color{quiet}#1\par}}
 \pagestyle{fancy}\fancyhf{}
 \fancyfoot[L]{\small Rice sound setup\quad October 9, 2026}
-\fancyfoot[R]{\small\thepage}
+\fancyfoot[R]{\small\thepage\ / 2}
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
-{\LARGE\bfseries Sound setup: what we get for the money}\par
+{\LARGE\bfseries 1. Basic sound setup}\par
+{\large About \textbf{\money{450}} with a borrowed calibrator; \textbf{\money{700}} with our own.}\par
 
-\textbf{I would start with about \money{700} for selected tones below 20 kHz.} That buys a speaker, measurement microphone, USB interface and our own sound-level reference. If we need every SONIC tone through 32 kHz, the wider-band setup below is about \textbf{\money{11,000}--\money{12,000}, pending a TDT quote}. We can use our computer and lab neural recorder in either case.
+Use our computer and neural recorder. This is the simplest proposed setup for selected tones below 20 kHz. The microphone checks what reaches the ear.
 
-\heading{Our options}
+\textbf{Computer $\rightarrow$ USB interface $\rightarrow$ powered speaker}\par
+\textbf{Microphone near ear $\rightarrow$ interface $\rightarrow$ sound recording}
+
+\heading{Parts to buy}
+\source{Blue names are buying links. USD asking-price snapshot: October 9, 2026.}
 {\small
-\begin{tabularx}{\linewidth}{@{}P{1.40in} P{1.27in} L@{}}
+\begin{tabularx}{\linewidth}{@{}P{1.07in} L R{0.67in}@{}}
 \toprule
-\textbf{Option} & \textbf{Working budget} & \textbf{What it gets us} \\
+\textbf{Job} & \textbf{Part / seller} & \textbf{Price} \\
 \midrule
-PC + USB audio & About \money{450} with a borrowed reference; \money{700} with our own & The simplest candidate for selected 1.4--20 kHz tones. Speaker and microphone specifications stop short of SONIC's 32 kHz upper end. \\
-Arduino & \money{100}--\money{150} demo; about \money{850} with the better audio gear & Board-controlled playback and trigger signals. The small demo speaker/mic are uncalibrated; the \money{850} version keeps the equipment from the audible setup. Firmware and testing required. \\
-FPGA & About \money{1,200} with audible gear; boards alone \money{134.38} & Custom playback, capture and digital markers. Same speaker/mic limit as the audible setup. Requires FPGA code, clock setup and connection design. \\
-Full SONIC range & About \money{11,000}--\money{12,000}; quote dependent & A speaker and measurement chain covering 1.4--32 kHz, with NI hardware timing. A closer engineering starting point to the paper. \\
+Play and record & \buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD} -- eBay / Sweetwater, new & 97.98 \\
+Make the sound & \buy{https://reverb.com/item/97104266-jbl-305p-mkii-5-powered-studio-monitor-single}{One JBL 305P MkII powered speaker} -- Reverb, new/open box & 122.39 \\
+Measure sound & \buy{https://www.ebay.com/itm/221495576606}{Dayton EMM-6 microphone} -- eBay / Parts Express, new & 66.93 \\
+Mic cable & \buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 XLR cable} -- Sweetwater & 17.99 \\
+Audio cables & \buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Two Hosa HSS-005 TRS cables}, \money{14.95} each & 29.90 \\
+Hold the mic & \buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM stand} -- Sweetwater & 34.99 \\
+\midrule
+\textbf{Parts} & \textbf{Borrow the sound-level calibrator} & \textbf{370.18} \\
+Optional purchase & \buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 calibrator} -- DigiKey / REED, new & 219.00 \\
 \bottomrule
 \end{tabularx}}
 
-\heading{What precision can we actually claim?}
-\textbf{Tone frequency.} Cheap audio hardware can generate the chosen tones, but I found no guaranteed clock error in Hz for the proposed interface. NI specifies a 50 ppm clock: that contributes about \textbf{\(\pm\)0.5 Hz at 10 kHz or \(\pm\)1.6 Hz at 32 kHz}, provided we generate the waveform using the actual sample rate returned by the driver. These are clock calculations, not measured sound accuracy. \buy{https://download.ni.com/support/manuals/374650c.pdf}{NI specification}; \buy{https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P83OSAS\&l=en-US}{actual sample rate}.
+\textbf{Working totals:} \money{370.18} + \money{80} shipping/tax reserve = \textbf{\money{450.18}}. With our own calibrator: \money{589.18} + \money{100} reserve = \textbf{\money{689.18}}. A recorder-specific cable/adapter, if needed, is additional.
 
-\textbf{Sound level at the ear.} The \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{reference calibrator} is specified at \textbf{\(\pm\)0.5 dB at 1 kHz}. It does not guarantee every tone at the ear is within \(\pm\)0.5 dB. We still use the microphone's correction file and measure each tone at the chosen position. Whole-system SPL accuracy is unmeasured for every option.
+\heading{What could be misaligned?}
+\textbf{Start delay.} Buffering alone can add several milliseconds. One 256-sample buffer at 48 kHz lasts \textbf{5.3 ms}; two last 10.7 ms. Converter, speaker and air delays are additional. This is an example, not measured UMC latency. Air adds about \textbf{3 ms per metre} in either setup.
 
-\textbf{Sound-to-brain timing.} At 192,000 samples/s, waveform samples are \textbf{5.2 microseconds apart}; a proposed 100,000-sample/s Arduino design has a 10-microsecond grid. Neither is a claim of neural alignment accuracy. Record physical markers and check sound arrival/clock drift with our recorder. Faster digital triggers do not remove speaker or acoustic delay.
+\textbf{Trial variation.} How much the delay changes between trials is \textbf{unmeasured}. Preload the sequence and use wired audio. The moment the program calls ``play'' is not the sound's arrival time.
 
-\heading{What SONIC tells us}
-\buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC v1, Methods 6.1--6.2, p.11}: USB-6361 $\rightarrow$ SA1 $\rightarrow$ MF1; 1.4--32 kHz initial tones, 10 ms benchmark tones, 2 ms ramps, nominal 192,000 samples/s and about 80 dB at the ears. It used PTP/10 MHz synchronization and recorded output/trial references. It does \textbf{not} report measured \(\pm\)Hz, \(\pm\)dB or sound-to-neural jitter. Its sheep were awake; our sedated-sheep responses remain unverified. The large rack in the slides is not needed for this USB approach.
+\textbf{Clock drift.} The interface-to-recorder mismatch is \textbf{unknown}. For scale, a hypothetical \textbf{100 ppm relative mismatch} means \textbf{6 ms per minute, or 0.36 seconds per hour}, if uncorrected. This is an illustration, not a prediction for this hardware.
+
+\heading{How we align it}
+Generate a reference alongside each tone on the spare output and record it with the brain data. Measure its offset to sound arrival with the microphone. Recording the mic only on the USB interface still leaves two clocks to align. Audio output is not TTL; recorder inputs determine the adapter. A compatible neural-recorder mic input would give a more direct acoustic reference.
+
+\source{Timing sources: \buy{https://portaudio.com/docs/latency.html}{PortAudio buffer calculation}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{latency estimates}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{NTi acoustic delay}. Sound level still needs per-tone calibration at the ear.}
 
 \newpage
-{\LARGE\bfseries The affordable setup and DIY parts}\par
-\textbf{Blue part names are purchase links.} Prices below were checked on October 9. Item prices exclude checkout tax/shipping; the rounded working budgets include estimated reserves. No new computer or neural recorder is counted.
+{\LARGE\bfseries 2. Full SONIC sound range}\par
+{\large About \textbf{\money{11,000}--\money{12,000}}, pending the TDT quote.}\par
 
-\heading{The approximately \money{700} audible setup}
+This buys a proposed 1.4--32 kHz sound and measurement chain, plus hardware-timed playback. It does not, by itself, establish lower drift against our neural recorder.
+
+\heading{Parts and cost}
 {\small
-\begin{tabularx}{\linewidth}{@{}L R{0.67in} P{2.15in}@{}}
+\begin{tabularx}{\linewidth}{@{}P{1.07in} L R{0.82in}@{}}
 \toprule
-\textbf{Buy one unless stated} & \textbf{USD} & \textbf{Seller / what it does} \\
+\textbf{Job} & \textbf{Part / buying status} & \textbf{Price} \\
 \midrule
-\buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD} & 97.98 & eBay, Sweetwater; new. Playback, microphone preamp and recording. \\
-\buy{https://reverb.com/item/97104266-jbl-305p-mkii-5-powered-studio-monitor-single}{JBL 305P MkII, single speaker} & 122.39 & Reverb; new/open box, power cord included. Amplifier built in. \\
-\buy{https://www.ebay.com/itm/221495576606}{Dayton EMM-6 microphone} & 66.93 & eBay, Parts Express; new. Individual frequency correction file. \\
-\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 XLR cable} & 17.99 & Sweetwater; microphone cable. \\
-\buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Two Hosa HSS-005 TRS cables} & 29.90 & \money{14.95} each; speaker and electrical playback monitor. \\
-\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM stand} & 34.99 & Sweetwater; holds the microphone position. \\
-\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 calibrator} & 219.00 & DigiKey / REED; new, in stock. Borrow instead if available. \\
+Timed sound I/O & \buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI USB-6361, 781442-01} -- Newark, new & 3,030.42 \\
+Speaker & \buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{TDT MF2-M kit} -- \buy{https://www.tdt.com/contact-tdt/orders/}{quote / order} & 1,500 est. \\
+Amplifier & \buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{TDT SA1} -- \buy{https://www.tdt.com/contact-tdt/orders/}{quote / order} & 2,000 est. \\
+Amplifier power & \buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{TDT ZB1PS} -- \buy{https://www.tdt.com/contact-tdt/orders/}{quote / order} & 750 est. \\
+Measurement mic & \buy{https://www.ebay.com/itm/375116964435}{Earthworks M50} -- eBay, new & 1,299.00 \\
+Mic preamp & \buy{https://www.ebay.com/itm/147529703873}{Sound Devices MM-1} -- eBay, used / no returns & 325.00 \\
+Level reference & \buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090} -- same calibrator; count once & 219.00 \\
+Connections & Cables, power and fixtures -- allowance & 500.00 \\
 \midrule
-\textbf{Parts subtotal} & \textbf{589.18} & \textbf{\money{370.18} if we borrow the calibrator.} \\
+\textbf{Subtotal} & \textbf{Includes unquoted TDT allowances} & \textbf{9,623.42} \\
 \bottomrule
 \end{tabularx}}
 
-\money{589.18} + \money{100} shipping/tax reserve = \textbf{\money{689.18}, rounded to \money{700}}. With a borrowed reference: \money{370.18} + \money{80} reserve = \textbf{\money{450.18}}. Reuse a stable speaker surface and the interface's supplied USB cable. The recorder-specific timing cable/adapter is still unselected and additional.
+Add 15\% for shipping, tax and uncertainty: \textbf{\money{11,066.93}}. A \buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{new \money{945} MM-1} instead gives \textbf{\money{11,779.93}}. TDT figures are estimates, not vendor prices. Labor, any extra clock distribution and specialist calibration service are excluded. This is not a fixed upper limit.
 
-The \buy{https://jblpro.com/en-US/products/305p-mkii.html}{speaker} is specified through 20 kHz; the \buy{https://www.daytonaudio.com/product/911/emm-6-electret-measurement-microphone}{mic} through 20 kHz. Its half-inch tip nominally fits the calibrator; check the seal. The basic calibrator does not include a separate traceable certificate. Disable microphone monitoring, automatic gain and sound enhancement.
+\heading{How much drift should we expect?}
+\textbf{There is no measured Rice drift value yet.} NI lists 50 ppm timing accuracy, under its default typical-at-25\,$^\circ$C conditions. These calculations show clock-error scale before synchronization or correction:
 
-\heading{Can we build the playback and recording ourselves? Yes.}
-For a first \textbf{bench prototype}, use these four parts:\par
 {\small
-\begin{tabularx}{\linewidth}{@{}L R{0.67in} L@{}}
+\begin{tabularx}{\linewidth}{@{}L R{0.91in} R{0.91in}@{}}
 \toprule
-\textbf{Part} & \textbf{USD} & \textbf{Job} \\
+\textbf{Clock comparison} & \textbf{After 1 min} & \textbf{After 1 hour} \\
 \midrule
-\buy{https://store-usa.arduino.cc/products/giga-r1-wifi}{Arduino GIGA R1 WiFi} & 69.60 & Timed playback, capture and markers. \\
-\buy{https://www.adafruit.com/product/1063}{Adafruit MAX4466 mic/preamp} & 6.95 & Basic microphone signal for the board's input. \\
-\buy{https://www.adafruit.com/product/2130}{Adafruit PAM8302 amplifier} & 3.95 & Drives the small speaker. \\
-\buy{https://www.adafruit.com/product/3351}{Adafruit 3351 speaker} & 3.95 & Small 4-ohm speaker; usable tone band unverified. \\
+NI at 50 ppm versus ideal time & 3 ms & 180 ms \\
+Hypothetical NI and recorder at opposite 50 ppm errors & 6 ms & 360 ms \\
 \bottomrule
 \end{tabularx}}
 
-\textbf{\money{84.45} in parts}, plus \money{20}--\money{40} wiring/power allowance, then shipping/tax: about \textbf{\money{100}--\money{150}}. This tests the program and timing idea; it is not a calibrated replacement for the shopping list above. The board's 12-bit DAC/up-to-16-bit ADC do not establish effective analog accuracy.
+The second row assumes a recorder specification we have \textbf{not confirmed}. Neither row is a guaranteed bound or a prediction of our alignment. A shared start trigger alone does not prevent drift.
 
-\textbf{Arduino with the better audio gear:} keep the \money{589.18} setup for microphone power/capture, add the GIGA at \money{69.60}, \money{75} for output coupling/filtering and marker parts, and \money{100} reserve: \textbf{\money{833.78}}. Connection parts require design.
+\textbf{Prevent accumulating mismatch} by sharing a compatible clock, or use repeated recorded references to map the timelines. USB-6361 accepts a 10 MHz reference on PFI; recorder compatibility is open. Shared clocking still leaves acoustic delay and timing-measurement error.
 
-\textbf{FPGA version:} replace the \money{97.98} USB interface with a \buy{https://www.digikey.com/en/products/detail/digilent-inc/410-328-35/6133793}{Cmod A7 (\money{104})}, \buy{https://www.digikey.com/en/products/detail/digilent-inc/410-379/9445907}{I2S2 audio board (\money{30.38})} and \buy{https://www.ebay.com/itm/147529703873}{MM-1 mic preamp (\money{325})}. With the same speaker/mic/reference: \money{950.58} hardware + \money{100} connection allowance + \money{150} reserve = \textbf{\money{1,200.58}}. Requires adapted cables, FPGA code and testing; labor extra.
+\source{\buy{https://download.ni.com/support/manuals/374650c.pdf}{NI specifications, pp.1, 6, 14}; \buy{https://www.ni.com/en/support/documentation/supplemental/10/synchronization-explained.html}{NI synchronization}. Drift in milliseconds = relative error in ppm $\times$ elapsed seconds / 1,000.}
 
-\newpage
-{\LARGE\bfseries If we need the full SONIC sound range}\par
-\textbf{Computer $\rightarrow$ NI USB output $\rightarrow$ amplifier $\rightarrow$ speaker.}\par
-\textbf{Sound at ear $\rightarrow$ microphone $\rightarrow$ preamp $\rightarrow$ NI input.}\par
-Our lab recorder still records the brain, with a compatible physical timing reference.
+\heading{Which would I start with?}
+\textbf{The basic setup, if tones below 20 kHz answer our question.} Test its alignment first. A proposed goal is \textbf{1 ms or less residual error after correction}; this is not achieved or guaranteed. Choose the expensive chain for the full SONIC frequency range. Arduino/FPGA can control playback and markers; sound arrival and drift still need measurement.
 
-{\small
-\begin{tabularx}{\linewidth}{@{}L R{0.86in} P{2.15in}@{}}
-\toprule
-\textbf{Part, one each} & \textbf{USD} & \textbf{Buying status} \\
-\midrule
-\buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI USB-6361, 781442-01} & 3,030.42 & Newark; new screw-terminal model, Add to Cart. \\
-\buy{https://www.ebay.com/itm/375116964435}{Earthworks M50 microphone} & 1,299.00 & eBay; new. \buy{https://www.bhphotovideo.com/c/product/359562-REG/Earthworks_M50_M50_Measurment_Microphone.html}{B\&H alternative}. Half-inch calibrator adapter included. \\
-\buy{https://www.ebay.com/itm/147529703873}{Sound Devices MM-1 preamp} & 325.00 & eBay; used, no returns. Or \buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{\money{945} new at B\&H}. \\
-\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 calibrator} & 219.00 & Same reference as page 2; count once. \\
-\midrule
-\textbf{Priced instruments} & \textbf{4,873.42} & \textbf{Then add the actual TDT quote.} \\
-\midrule
-\buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{TDT MF2-M speaker kit} & 1,500 est. & \buy{https://www.tdt.com/contact-tdt/orders/}{Quote / order}. No reliable live used price found. \\
-\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{TDT SA1 amplifier} & 2,000 est. & \buy{https://www.tdt.com/contact-tdt/orders/}{Quote / order}. \\
-\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{TDT ZB1PS power chassis} & 750 est. & \buy{https://www.tdt.com/contact-tdt/orders/}{Quote / order}. Powers SA1. \\
-\bottomrule
-\end{tabularx}}
-
-\textbf{Budget:} \money{4,873.42} priced instruments + \money{4,250} TDT allowance + \money{500} wiring/power/mounts allowance = \money{9,623.42}. With a 15\% shipping/tax/uncertainty reserve: \textbf{\money{11,066.93}}. Substituting the new MM-1 gives \textbf{\money{11,779.93}}. These are planning totals, not fixed upper limits or vendor package quotes. A traceable full-band calibration service and labor are additional if required.
-
-\buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{MF2 covers 1--80 kHz free field}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{M50 covers 3 Hz--50 kHz}. The \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{MM-1} supplies the required 48 V/10 mA microphone power and has a specified response extending to 50 kHz. Use fixed gain, limiter/high-pass off and correctly wired differential NI input. Two AA batteries can power it. Measure the complete chain; specifications alone do not establish ear-position SPL accuracy.
-
-\heading{Where used equipment helps}
-The \money{325} preamp saves \money{620} against new. I also found a \buy{https://www.ebay.com/itm/304731172673}{USB-6361 at \money{1,395} used}, but it is a mass-terminated model without supply/accessories: it needs a different cable/breakout. Its price is not a complete replacement cost. A \buy{https://www.ebay.com/itm/318503133762}{USB-6211 at \money{600} used} is a cheaper engineering candidate, not the paper's device; \buy{https://www.ni.com/docs/en-US/bundle/usb-6211-specs/page/specs.html}{settling and shared-input limits} need checking at 32 kHz. Substituting it would bring the estimate to \textbf{\money{8,271.95}}, if those checks pass. Neither used NI device is counted in the main total. TDT components remain quote-only.
-
-\heading{What our own program would do}
-Prepare the tone list and waveforms on the computer, then preload a block. Let the Arduino's timer and buffered output schedule the samples; generate the marker from the same hardware event as each tone, rather than a USB message. Capture microphone/output references and save repeated markers with the neural data. \buy{https://github.com/arduino-libraries/Arduino_AdvancedAnalog/blob/main/docs/api.md}{Arduino's library} supplies buffered analog I/O, but common ADC/DAC timing and the marker need firmware work. FPGA audio needs similar code plus clock/codec setup; it has no demonstrated precision advantage here.
-
-\textbf{My choice:} start with the \money{700} audible setup if those tones answer our question. Build the \money{100}--\money{150} Arduino prototype alongside it if custom control matters. Spend on the full-range speaker/mic when tones above 20 kHz are required. All options need acoustic and recorder timing checks before their final precision can be claimed.
+\source{\buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC v1, Methods 6.2, p.11} used USB-6361, SA1, MF1 and PTP/10 MHz synchronization. It reports no measured acoustic-to-neural jitter or long-session drift. Rice's sedated sheep remain an adaptation of SONIC's awake, alert sheep. No setup here has been built or tested.}
 \end{document}

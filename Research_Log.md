@@ -174,6 +174,13 @@
 - Verification passed: desktop LaTeX compilation and same-source PDF export, visual review of all three pages, independent scientific/DIY review, arithmetic checks, expected content and direct priced-part link checks, 43 HTTPS annotations to 35 destinations, and no layout warnings. Repository validation and unchanged manuscript checksum were checked. Temporary renders/compiler resources remain outside the repository; website source is unchanged.
 - No hardware program was implemented or run, vendor contacted, part purchased, equipment connected or experiment performed.
 
+## 2026-10-09 America/Chicago - basic versus expensive parts and drift
+
+- Howard asked for a cleaner account of basic parts and expected misalignment, alongside expensive-system cost and drift. Replaced the three-page reading version with two pages, retaining direct buying links and unchanged $450–700 / quote-dependent $11,000–12,000 planning budgets. Detailed DIY options remain in the supporting research and JSON inputs.
+- Rechecked primary timing sources and the complete relevant SONIC methods. Separated startup delay, trial variation and accumulating clock mismatch. The 256-frame/48 kHz buffer examples, approximately 3 ms/metre air propagation and 50/100 ppm clock calculations are illustrative rather than Rice measurements. NI's default typical-at-25°C conditions, unknown recorder tolerance, shared-trigger limitation and additional recorder adapter are explicit.
+- A proposed ≤1 ms corrected residual-alignment goal is unverified. Full-band components and hardware timing do not automatically establish lower drift; a compatible common clock or recorded repeated references still matter. SONIC does not publish an acoustic-to-neural jitter or long-session drift value.
+- Verification passed: desktop compilation, two-page export, visual inspection of both pages, no layout warnings, independent scientific/parts review, 24 HTTPS annotations to 21 destinations, current-part link/arithmetic/scope checks, six model tests, 275-reference repository validation, unchanged source-paper checksum and whitespace checks. Website source is unchanged. No purchase, external message, implementation or experiment was performed.
+
 ## Next evidence update
 
 Complete the Rice inventory, confirm the sheep recording interface and geometry, and resolve the paper's waveform/calibration questions. Assess sedation as a documented adaptation. Agree on a discussion time from actual availability rather than the undated relative dates in the supplied messages. Keep completed project changes synchronized to GitHub.

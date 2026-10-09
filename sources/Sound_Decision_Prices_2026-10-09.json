@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-09",
+  "currency": "USD",
+  "scope": "One sound channel; reuse computer and lab neural recorder. Not a validated system or animal protocol. Checkout shipping/tax unconfirmed. Recorder-specific timing interface unselected.",
+  "parts": [
+    {
+      "id": "umc",
+      "item": "Behringer UMC204HD",
+      "unit_price": 97.98,
+      "condition": "new",
+      "seller": "eBay / Sweetwater",
+      "purchase_url": "https://www.ebay.com/itm/267676379715",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "jbl",
+      "item": "JBL 305P MkII single",
+      "unit_price": 122.39,
+      "condition": "new/open box",
+      "seller": "Reverb / The Muzic Store",
+      "purchase_url": "https://reverb.com/item/97104266-jbl-305p-mkii-5-powered-studio-monitor-single",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "emm",
+      "item": "Dayton EMM-6",
+      "unit_price": 66.93,
+      "condition": "new",
+      "seller": "eBay / Parts Express",
+      "purchase_url": "https://www.ebay.com/itm/221495576606",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "xlr",
+      "item": "Hosa HMIC-010",
+      "unit_price": 17.99,
+      "condition": "new",
+      "seller": "Sweetwater",
+      "purchase_url": "https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "trs",
+      "item": "Hosa HSS-005",
+      "unit_price": 14.95,
+      "condition": "new",
+      "seller": "Sweetwater",
+      "purchase_url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "stand",
+      "item": "Gator RI-MICTP-FBM",
+      "unit_price": 34.99,
+      "condition": "new",
+      "seller": "Sweetwater",
+      "purchase_url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "cal",
+      "item": "REED R8090",
+      "unit_price": 219,
+      "condition": "new",
+      "seller": "DigiKey Marketplace / REED",
+      "purchase_url": "https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "giga",
+      "item": "Arduino GIGA R1 WiFi",
+      "unit_price": 69.6,
+      "condition": "new",
+      "seller": "Arduino US",
+      "purchase_url": "https://store-usa.arduino.cc/products/giga-r1-wifi",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "max",
+      "item": "Adafruit MAX4466 microphone",
+      "unit_price": 6.95,
+      "condition": "new",
+      "seller": "Adafruit",
+      "purchase_url": "https://www.adafruit.com/product/1063",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "pam",
+      "item": "Adafruit PAM8302",
+      "unit_price": 3.95,
+      "condition": "new",
+      "seller": "Adafruit",
+      "purchase_url": "https://www.adafruit.com/product/2130",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "small_speaker",
+      "item": "Adafruit 3351 speaker",
+      "unit_price": 3.95,
+      "condition": "new",
+      "seller": "Adafruit",
+      "purchase_url": "https://www.adafruit.com/product/3351",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "fpga",
+      "item": "Cmod A7-35T 410-328-35",
+      "unit_price": 104,
+      "condition": "new",
+      "seller": "DigiKey",
+      "purchase_url": "https://www.digikey.com/en/products/detail/digilent-inc/410-328-35/6133793",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "i2s",
+      "item": "Pmod I2S2 410-379",
+      "unit_price": 30.38,
+      "condition": "new",
+      "seller": "DigiKey",
+      "purchase_url": "https://www.digikey.com/en/products/detail/digilent-inc/410-379/9445907",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "ni",
+      "item": "NI USB-6361 781442-01",
+      "unit_price": 3030.42,
+      "condition": "new",
+      "seller": "Newark",
+      "purchase_url": "https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "m50",
+      "item": "Earthworks M50",
+      "unit_price": 1299,
+      "condition": "new",
+      "seller": "eBay / Pure Wave Audio",
+      "purchase_url": "https://www.ebay.com/itm/375116964435",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "mm1_used",
+      "item": "Sound Devices MM-1",
+      "unit_price": 325,
+      "condition": "used; no returns",
+      "seller": "eBay",
+      "purchase_url": "https://www.ebay.com/itm/147529703873",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "mm1_new",
+      "item": "Sound Devices MM-1",
+      "unit_price": 945,
+      "condition": "new",
+      "seller": "B&H",
+      "purchase_url": "https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "ni_used",
+      "item": "NI USB-6361 mass-terminated",
+      "unit_price": 1395,
+      "condition": "used; no supply/accessories",
+      "seller": "eBay / OPTOSCIENCE",
+      "purchase_url": "https://www.ebay.com/itm/304731172673",
+      "basis": "displayed asking/public unit price"
+    },
+    {
+      "id": "ni6211",
+      "item": "NI USB-6211",
+      "unit_price": 600,
+      "condition": "used; not main recommendation",
+      "seller": "eBay / NextDayAutomation",
+      "purchase_url": "https://www.ebay.com/itm/318503133762",
+      "basis": "displayed asking/public unit price"
+    }
+  ],
+  "quote_only": [
+    {
+      "item": "TDT MF2-M",
+      "allowance": 1500
+    },
+    {
+      "item": "TDT SA1",
+      "allowance": 2000
+    },
+    {
+      "item": "TDT ZB1PS",
+      "allowance": 750
+    }
+  ],
+  "quote_url": "https://www.tdt.com/contact-tdt/orders/",
+  "options": {
+    "audible_borrow_reference": {
+      "parts": 370.18,
+      "reserve": 80,
+      "planning_total": 450.18
+    },
+    "audible_own_reference": {
+      "parts": 589.18,
+      "reserve": 100,
+      "planning_total": 689.18
+    },
+    "arduino_demo": {
+      "parts": 84.45,
+      "wiring_power_allowance_low": 20,
+      "wiring_power_allowance_high": 40,
+      "tax_shipping_additional": true,
+      "rounded_working_budget": "100–150"
+    },
+    "arduino_with_audible_gear": {
+      "parts": 658.78,
+      "coupling_filter_marker_allowance": 75,
+      "reserve": 100,
+      "planning_total": 833.78
+    },
+    "fpga_boards_only": {
+      "parts": 134.38,
+      "excludes": "microphone/preamp, speaker/amplifier, calibration, connectors, clock design and firmware"
+    },
+    "sonic_band_used_mm1": {
+      "priced_instruments": 4873.42,
+      "tdt_allowance": 4250,
+      "support_allowance": 500,
+      "subtotal": 9623.42,
+      "reserve_fraction": 0.15,
+      "planning_total": 11066.93
+    },
+    "sonic_band_new_mm1": {
+      "subtotal": 10243.42,
+      "reserve_fraction": 0.15,
+      "planning_total": 11779.93
+    },
+    "fpga_audible": {
+      "parts": 950.58,
+      "connection_allowance": 100,
+      "reserve": 150,
+      "planning_total": 1200.58,
+      "scope": "Replaces UMC with CmodA7+I2S2+usedMM1; same JBL/EMM6/reference. Code and wiring unbuilt. Cables require adapting; no labor priced."
+    },
+    "sonic_band_usb6211_candidate": {
+      "subtotal": 7193.0,
+      "reserve_fraction": 0.15,
+      "planning_total": 8271.95,
+      "scope": "Conditional cheaper candidate, replacing3030.42newUSB6361with600used6211. 32kHz output settling/THD and shared ADC rate must pass bench checks; not the main recommendation."
+    }
+  },
+  "precision": {
+    "NI_USB_6361_clock": "50 ppm spec; ±0.5 Hz at 10 kHz / ±1.6 Hz at 32 kHz is only the clock contribution with actual-rate waveform synthesis.",
+    "audio_interface_clock": "No guaranteed tolerance found in official specs inspected.",
+    "R8090": "±0.5 dB at 1 kHz; not broadband at-ear SPL uncertainty; traceable certificate extra.",
+    "sample_grids": "192kSa/s nominal=5.208us; proposed Arduino100kSa/s=10us. These are not alignment accuracy.",
+    "achieved_frequency_SPL_alignment_accuracy": "Unmeasured. No guaranteed whole-chain result.",
+    "full_band": "MF2 1–80kHz; M50 3Hz–50kHz covers SONIC1.4–32kHz; ES1 and CM16 not default full-band choices."
+  },
+  "primary_sources": {
+    "SONIC": "sources/SONIC_2025_bioRxiv_v1.pdf, Methods6.1–6.2p11,6.6p13",
+    "NI": "https://download.ni.com/support/manuals/374650c.pdf",
+    "REED": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+    "MF2": "https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/",
+    "M50": "https://earthworksaudio.com/measurement-microphones/m50/",
+    "MM1": "https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information",
+    "Arduino": "https://github.com/arduino-libraries/Arduino_AdvancedAnalog/blob/main/docs/api.md",
+    "FPGA_codec": "https://digilent.com/shop/pmod-i2s2-stereo-audio-input-and-output/"
+  }
+}

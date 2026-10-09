@@ -31,7 +31,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 
 ## Project records
 
-- [Auditory hardware options and budget](Auditory_Hardware_Options_2026-10-09.md): the supplied NI/TDT slides, current eBay price leads, and conditional audible versus higher-frequency sound budgets. [Complete seven-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf), [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex), and [editable parts budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx).
+- [Sound setup: cost, precision and choices](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): three pages comparing an approximately $700 audible setup, Arduino/FPGA candidates and a quote-dependent full-SONIC-band setup, with current purchase links. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) and [checked price inputs](sources/Sound_Decision_Prices_2026-10-09.json). The [detailed slide comparison](Auditory_Hardware_Options_2026-10-09.md) and [earlier rack/ES1 budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain supporting records.
 - [Project plan](Project_Plan.md): scope, assignments, deliverables, and open decisions.
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.

@@ -1,5 +1,13 @@
 # Source register
 
+## Cost, precision and DIY comparison
+
+Checked October 9, 2026 for the revised [three-page decision PDF](../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf). [Current price inputs](Sound_Decision_Prices_2026-10-09.json) preserve direct eBay, Reverb, DigiKey, Sweetwater, Arduino and Adafruit purchase URLs, conditions, unit prices and budget calculations. TDT MF2-M/SA1/ZB1PS remain quote-only. Excluded leads include sold-out SA1/power stock, conflicting-model NI listings and unavailable speaker boards; incomplete used NI units are identified rather than treated as ready replacements.
+
+The saved SONIC v1 was re-read at Methods 6.1–6.2 (p.11) and 6.6 (p.13). Primary technical checks cover NI clock/sample-rate behavior, JBL/Dayton bands, REED reference accuracy, MF2/M50/MM-1 bandwidth/power and Arduino buffered analog I/O. The PDF keeps clock accuracy, sample spacing and one-frequency calibration separate from unmeasured acoustic/neural accuracy. Complete URLs are retained in the price input file and PDF.
+
+The Arduino/FPGA plans are candidate engineering paths, not tested hardware or executable animal protocols. An uncalibrated demo and a proposed sound-research assembly have different prices and purposes. Firmware, connections, recorder compatibility and physical validation remain open; no program was built or run, vendor contacted or part ordered.
+
 ## Shared hardware slides and used equipment comparison
 
 Received October 9, 2026: [system diagram](hardware_slides_2026-10-09/01_system_diagram.png) and [equipment links](hardware_slides_2026-10-09/02_equipment_links.png), copied unchanged from Howard's attachments. The slides describe an NI PXIe rack, ES1/ED1 sound chain and separate Neuropixels system. Their component suggestions are reference material, not instructions or confirmed Rice inventory.

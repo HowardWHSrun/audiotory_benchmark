@@ -1,5 +1,20 @@
 # Auditory hardware options and budget
 
+## Current short decision guide
+
+The revised [three-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) lead with cost versus frequency, sound-level and timing capability. Howard selected all three precision measures and asked to compare economical setups with the full SONIC band, then added Arduino/FPGA possibilities. The lab provides its own neural recorder; its input details remain unknown.
+
+- **Selected audible tones:** $370.18 in listed parts with a borrowed reference, or $589.18 with a new REED R8090. Estimated shipping/tax reserves bring the working budgets to $450.18 and $689.18. The refreshed basket uses a Reverb open-box JBL and separately priced cables/stand. The recorder-specific timing interface is additional and unselected.
+- **Arduino:** $84.45 core parts for an uncalibrated bench demo; $104.45–124.45 with estimated wiring/power before shipping/tax. Keeping the better audible equipment and adding GIGA plus connection/reserve allowances gives $833.78. Its timed playback/markers need firmware, output conditioning and validation; the USB interface still powers and records the EMM-6.
+- **FPGA:** $134.38 Cmod A7/I2S2 boards only. A proposed audible assembly using the same speaker/mic/reference and a used MM-1 preamp is $950.58 hardware; connection/reserve allowances give $1,200.58. FPGA clock/I2S/buffering/markers and adapted cables remain engineering work, with no measured advantage claimed.
+- **Full SONIC-band candidate:** new USB-6361, M50, used MM-1 and R8090 are $4,873.42 in public prices. TDT MF2-M/SA1/ZB1PS are quote-only; the $4,250 allowance is not an observed vendor price. With $500 support and a 15% shipping/tax/uncertainty reserve, the provisional total is $11,066.93, or $11,779.93 using a new preamp. A $600 used USB-6211 could reduce the estimate to $8,271.95 only after checking its 32 kHz output settling/THD and shared input limits. These are not hard upper bounds.
+
+The [new price inputs](sources/Sound_Decision_Prices_2026-10-09.json) are the source for this simplified comparison. The earlier workbook and original rack/ES1 figures below are retained as a different architecture comparison; they do not contain the new DIY/M50 baskets.
+
+Re-read SONIC v1 Methods 6.1–6.2 (p.11) and 6.6 (p.13): it names USB-6361/SA1/MF1, nominal 192 kSa/s, approximately 80 dB at the ear, PTP/10 MHz synchronization and recorded output/trial references. It does not identify a calibration mic or publish measured ±Hz, ±dB or acoustic-to-neural jitter. Our precision figures distinguish [NI's 50 ppm clock contribution](https://download.ni.com/support/manuals/374650c.pdf), [actual sample-rate readback](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P83OSAS&l=en-US), nominal sample spacing, and the [R8090's ±0.5 dB 1 kHz reference](https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf) from unmeasured whole-system accuracy. Lab alignment still requires compatible physical references and acoustic-onset/drift checks. No program, hardware connection or experiment was executed.
+
+## Detailed comparison of the supplied slides
+
 October 9, 2026. **A computer, wired powered speaker and measurement microphone can support a much cheaper audible-sound setup.** For cortical measurements, retain the lab's neural recording system and connect sound timing to its recording timeline. The NI rack in the supplied slides is one implementation, not a requirement for every auditory experiment.
 
 The lowest priced three-part audio basket found is **$264.90 before accessories, delivery and tax**. About **$425** is a conditional starting budget if the lab supplies the computer, neural recorder, SPL reference and compatible timing connection. A more useful audible-sound working budget is **$1,100–1,600** with reference/timing allowances. These options cover selected audible tones, not the complete SONIC frequency alphabet or the slides' ultrasound capability.
@@ -17,7 +32,7 @@ All totals are USD for one sound stimulus channel. They exclude neural probes/he
 
 **For discussion: reserve about $1,500 for an audible first setup, or about $30,000 for the higher-cost slide architecture.** The latter is an upper planning scenario for the defined sound scope, not a hard maximum. ES1 availability, the compatible PXI-4461 version, calibration quotes, or missing recording equipment can change it. An all-new rack or specialist metrology chain can cost more.
 
-The [complete seven-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [standalone editable LaTeX source](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) include the parts lists, four budget options, technical limits and clickable sources. The [editable budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and all allowances. The [price inputs](sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add the alternative baskets together.
+The [earlier editable rack/ES1 budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and allowances for the four slide-comparison baskets below. Its [price inputs](sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add alternative baskets together. The current PDF at the top of this note uses the newer audible/DIY/full-SONIC comparison.
 
 ## The minimum parts list
 

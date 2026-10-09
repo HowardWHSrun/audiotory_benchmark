@@ -7,7 +7,7 @@
 \definecolor{quiet}{RGB}{85,85,85}
 \hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Sound setup options: basic, SONIC, McGinley and recommendation},pdfauthor={Rice auditory benchmarking project}}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{3pt}
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.1}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
@@ -15,23 +15,28 @@
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \newcommand{\buy}[2]{\href{#1}{#2}}
 \newcommand{\money}[1]{\$#1}
-\newcommand{\heading}[1]{\vspace{5pt}{\large\bfseries #1}\par}
+\newcommand{\heading}[1]{\par\vspace{4pt}{\large\bfseries #1}\par}
 \newcommand{\source}[1]{{\footnotesize\color{quiet}#1\par}}
 \pagestyle{fancy}\fancyhf{}
 \fancyfoot[L]{\small Rice sound setup\quad October 9, 2026}
 \fancyfoot[R]{\small\thepage\ / 4}
 \renewcommand{\headrulewidth}{0pt}
+
+\newenvironment{points}{\begin{list}{$\bullet$}{\setlength{\leftmargin}{1.25em}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\setlength{\topsep}{3pt}}}{\end{list}}
 \begin{document}
+
 {\LARGE\bfseries Basic sound setup}\par
 {\large About \textbf{\money{450}} with a borrowed calibrator; \textbf{\money{700}} with our own.}\par
-
-Use our computer and neural recorder. This is the simplest proposed setup for selected tones below 20 kHz. The microphone checks what reaches the ear.
-
-\textbf{Computer $\rightarrow$ USB interface $\rightarrow$ powered speaker}\par
-\textbf{Microphone near ear $\rightarrow$ interface $\rightarrow$ sound recording}
-
+\heading{What this buys}
+\begin{points}
+\item Use our existing computer and brain-recording system.
+\item Play selected tones below \textbf{20 kilohertz}. A higher frequency means a higher-pitched sound.
+\item A microphone near the ear checks the sound that actually arrives. A sound-level calibrator produces a known test sound to check the microphone.
+\end{points}
+\textbf{Computer $\rightarrow$ sound interface $\rightarrow$ powered speaker}\par
+\textbf{Microphone near ear $\rightarrow$ sound interface $\rightarrow$ sound recording}
 \heading{Parts to buy}
-\source{Blue names are buying links. USD asking-price snapshot: October 9, 2026.}
+\source{Blue names are buying links. Exact product codes are kept for ordering; explanations use full words. Prices are in United States dollars, checked October 9, 2026.}
 {\small
 \begin{tabularx}{\linewidth}{@{}P{1.07in} L R{0.67in}@{}}
 \toprule
@@ -40,150 +45,175 @@ Use our computer and neural recorder. This is the simplest proposed setup for se
 Play and record & \buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD} -- eBay / Sweetwater, new & 97.98 \\
 Make the sound & \buy{https://reverb.com/item/97104266-jbl-305p-mkii-5-powered-studio-monitor-single}{One JBL 305P MkII powered speaker} -- Reverb, new/open box & 122.39 \\
 Measure sound & \buy{https://www.ebay.com/itm/221495576606}{Dayton EMM-6 microphone} -- eBay / Parts Express, new & 66.93 \\
-Mic cable & \buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 XLR cable} -- Sweetwater & 17.99 \\
-Audio cables & \buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Two Hosa HSS-005 TRS cables}, \money{14.95} each & 29.90 \\
-Hold the mic & \buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM stand} -- Sweetwater & 34.99 \\
+Microphone cable & \buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable} -- Sweetwater & 17.99 \\
+Audio cables & \buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Two Hosa HSS-005 audio cables}, \money{14.95} each & 29.90 \\
+Microphone stand & \buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM stand} -- Sweetwater & 34.99 \\
 \midrule
 \textbf{Parts} & \textbf{Borrow the sound-level calibrator} & \textbf{370.18} \\
-Optional purchase & \buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 calibrator} -- DigiKey / REED, new & 219.00 \\
+Optional purchase & \buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 sound-level calibrator} -- DigiKey / REED, new & 219.00 \\
 \bottomrule
 \end{tabularx}}
-
-\textbf{Working totals:} \money{370.18} + \money{80} shipping/tax reserve = \textbf{\money{450.18}}. With our own calibrator: \money{589.18} + \money{100} reserve = \textbf{\money{689.18}}. A recorder-specific cable/adapter, if needed, is additional.
-
+\begin{points}
+\item \textbf{Borrow the calibrator:} \money{370.18} parts + \money{80} estimated shipping/tax = \textbf{\money{450.18}}.
+\item \textbf{Buy the calibrator:} \money{589.18} parts + \money{100} estimated shipping/tax = \textbf{\money{689.18}}.
+\item \textbf{Still extra:} any cable or adapter needed to connect timing signals to our brain recorder.
+\end{points}
 \heading{What could be misaligned?}
-\textbf{Start delay.} Buffering alone can add several milliseconds. One 256-sample buffer at 48 kHz lasts \textbf{5.3 ms}; two last 10.7 ms. Converter, speaker and air delays are additional. This is an example, not measured UMC latency. Air adds about \textbf{3 ms per metre} in either setup.
-
-\textbf{Trial variation.} How much the delay changes between trials is \textbf{unmeasured}. Preload the sequence and use wired audio. The moment the program calls ``play'' is not the sound's arrival time.
-
-\textbf{Clock drift.} The interface-to-recorder mismatch is \textbf{unknown}. For scale, a hypothetical \textbf{100 ppm relative mismatch} means \textbf{6 ms per minute, or 0.36 seconds per hour}, if uncorrected. This is an illustration, not a prediction for this hardware.
-
-\heading{How we align it}
-Generate a reference alongside each tone on the spare output and record it with the brain data. Measure its offset to sound arrival with the microphone. Recording the mic only on the USB interface still leaves two clocks to align. Audio output is not TTL; recorder inputs determine the adapter. A compatible neural-recorder mic input would give a more direct acoustic reference.
-
-\source{Timing sources: \buy{https://portaudio.com/docs/latency.html}{PortAudio buffer calculation}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{latency estimates}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{NTi acoustic delay}. Sound level still needs per-tone calibration at the ear.}
-
+\begin{points}
+\item \textbf{Start delay:} storing sound in a computer buffer adds delay. As an example, one buffer of 256 samples at 48,000 samples per second lasts \textbf{5.3 milliseconds}; two last 10.7 milliseconds. These are calculations, not measurements of this interface.
+\item \textbf{Sound travel:} the speaker and converters add delay. Air adds about \textbf{3 milliseconds per metre} from speaker to ear.
+\item \textbf{Loudness accuracy:} unknown until each tone is checked at the ear.
+\item \textbf{Changing delay between trials:} unknown until we test it. Preload the sound sequence and use wired connections.
+\item \textbf{Drift:} the sound and brain recorders may run at slightly different speeds. Our mismatch is unknown. For scale only, a hypothetical 0.01\% speed mismatch would cause \textbf{0.36 seconds of error in one hour} without correction.
+\end{points}
+\heading{How we check the timing}
+\begin{points}
+\item Send a timing reference beside each tone and record that reference with the brain signals.
+\item Use the microphone to measure the gap between the reference and sound arriving at the ear.
+\item Recording the microphone only on the sound interface leaves two timelines to align. A sound output is not automatically a compatible digital trigger; check the recorder input.
+\end{points}
+\source{Sources: \buy{https://portaudio.com/docs/latency.html}{computer buffering}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{delay estimates}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{sound travel}. Sound level must also be checked for each tone at the ear.}
 
 \newpage
-{\LARGE\bfseries Accurate version 1: SONIC}\par
-{\large \textbf{\money{4,840.36} priced so far} + TDT quotes + measurement.}\par
 
-Reproduce the paper's sound hardware: \textbf{USB-6361 BNC $\rightarrow$ SA1 $\rightarrow$ MF1}. The TM2500C supplies GPS/PTP and a 10 MHz reference. Reuse our neural recorder; the paper's Connexus system is outside this budget.
-
-\heading{Exact parts and buying links}
-\source{One of each unless stated. USD item prices checked October 9, 2026; shipping, tax and added tariffs excluded. ``Quote'' means no verified current public price.}
+{\LARGE\bfseries Accurate version 1: SONIC paper}\par
+{\large \textbf{\money{4,840.36} priced so far}; speaker/amplifier quotes and measurement equipment are extra.}\par
+\heading{What this buys}
+\begin{points}
+\item Reproduce the paper's sound chain: \textbf{sound device $\rightarrow$ speaker amplifier $\rightarrow$ speaker}.
+\item Add a satellite-based timing reference to help coordinate equipment clocks.
+\item Reuse our brain recorder. The paper's Connexus brain-recording system is outside this budget.
+\end{points}
+\heading{Parts to buy}
+\source{One of each. Prices are in United States dollars, checked October 9, 2026. National Instruments makes the sound device; Tucker-Davis Technologies makes the speaker/amplifier. ``Quote'' means ask the supplier for a price.}
 {\small
 \begin{tabularx}{\linewidth}{@{}L P{1.22in} R{0.79in}@{}}
 \toprule
-\textbf{Part} & \textbf{Condition / source} & \textbf{USD} \\
+\textbf{Part} & \textbf{Seller} & \textbf{Price} \\
 \midrule
-\buy{https://www.newark.com/ni-now-part-of-emerson/782255-01/multifunction-i-o-device-usb-6361/dp/14AJ5490}{NI USB-6361 BNC, 782255-01} & New / Newark & 3,744.42 \\
-\buy{https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/}{TimeMachines TM2500C reference} & New / backorder & 799.99 \\
-\buy{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{TDT MF1-M mono speaker kit} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT order / quote} & Quote \\
-\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{TDT SA1 amplifier} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT order / quote} & Quote \\
-\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{TDT ZB1PS powered chassis}$^*$ & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT order / quote} & Quote \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/781513-01/test-psu-desktop-mini-combicon/dp/14AJ5357}{NI 781513-01 power supply}$^*$ & New / Newark & 123.42 \\
-\buy{https://www.digikey.com/en/products/detail/ni/780534-01/16647424}{NI 780534-01 locking USB cable}$^*$ & New / DigiKey & 69.75 \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{NI 763830-01 US power cord}$^*$ & New / Newark & 51.00 \\
-\buy{https://www.digikey.com/en/products/detail/ni/781233-02/18710754}{NI 781233-02 ferrite}$^*$ & New / DigiKey & 38.25 \\
-\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & New / Pro Audio & 13.53 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/782255-01/multifunction-i-o-device-usb-6361/dp/14AJ5490}{USB-6361 sound device, 782255-01} & New / Newark & 3,744.42 \\
+\buy{https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/}{TimeMachines TM2500C time reference} & New / backorder & 799.99 \\
+\buy{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{MF1-M speaker kit} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure}$^*$ & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/781513-01/test-psu-desktop-mini-combicon/dp/14AJ5357}{781513-01 power supply}$^*$ & New / Newark & 123.42 \\
+\buy{https://www.digikey.com/en/products/detail/ni/780534-01/16647424}{780534-01 computer cable}$^*$ & New / DigiKey & 69.75 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord}$^*$ & New / Newark & 51.00 \\
+\buy{https://www.digikey.com/en/products/detail/ni/781233-02/18710754}{781233-02 noise filter}$^*$ & New / DigiKey & 38.25 \\
+\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & New / Pro Audio Solutions & 13.53 \\
 \midrule
-\textbf{Known-priced subtotal} & & \textbf{4,840.36} \\
+\textbf{Subtotal of priced parts} & & \textbf{4,840.36} \\
 \bottomrule
 \end{tabularx}}
-\source{$^*$Reproduction additions: these exact accessories are not named by the paper. Confirm package contents to avoid duplicates. MF1 kit normally includes its stand and speaker cable/adapter. TM2500C includes PSU, antenna and two SMB--BNC cables.}
-
-\textbf{Measurement equipment is extra.} The paper does not name its microphone or calibrator. Adding our page-4 measurement kit costs \money{1,897.16} with a used preamp, making \textbf{\money{6,737.52} known-priced}. Mic-to-DAQ, Ethernet and recorder-specific connections still need selection. MF1, SA1 and power quotes remain additional; there is \textbf{no confirmed complete price or upper limit}.
-
-\heading{What precision does it provide?}
-\textbf{Sound range:} the paper tested \textbf{1.4--32 kHz}. MF1's stated free-field response is 1--65 kHz, raw $\pm$13 dB. The paper used approximately 80 dB at the ear; it gives no calibrated $\pm$dB uncertainty.
-
-\textbf{Timing:} nominal 192 kSa/s means \textbf{5.21 $\mu$s sample spacing}. TM2500C specifies PTP below 1 $\mu$s \emph{plus network jitter}. Neither number establishes sound-to-neural alignment. The paper reports no quantified acoustic jitter or long-session drift.
-
-\textbf{Drift:} NI's free-running 50 ppm figure equals \textbf{3 ms/min or 180 ms/hour versus ideal time}. This is not SONIC's drift after locking to GPS. Our recorder needs a compatible reference or repeated recorded markers; its relative drift is unknown. Free-running clock-only tone error is $\pm$0.5 Hz at 10 kHz; GPS locking changes that reference.
-
-\source{Primary sources: \buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC v1, Methods 6.1--6.2}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{NI specs, typical at 25\,$^\circ$C unless noted}; \buy{https://timemachinescorp.com/wp-content/uploads/TM2500-Brochure.pdf}{TM2500C timing}; \buy{https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/}{MF1 specs}. Paper assembly 152805A-03L maps to the BNC model. An \buy{https://www.ebay.com/itm/178144942290}{eBay BNC offer at \money{3,498.95}} is a cheaper lead; confirm exact SKU and accessories. SONIC recorded awake, alert sheep; Rice sedation is an unverified adaptation.}
+\heading{What is still extra?}
+\begin{points}
+\item \textbf{Sound measurement:} our page-4 kit adds \money{1,897.16} with a used microphone amplifier. That brings priced parts to \textbf{\money{6,737.52}}, before the supplier quotes.
+\item \textbf{Connections:} microphone-to-sound-device, network and brain-recorder wiring still need selection. The timing reference is currently backordered.
+\item \textbf{Accessories:} starred parts are our reproduction additions, not exact accessories named by the paper. Confirm included cables, stands and power supplies to avoid buying duplicates.
+\end{points}
+\heading{How precise is it?}
+\begin{points}
+\item \textbf{Pitch range:} the paper tested \textbf{1.4--32 kilohertz}. It used about 80 decibels at the ear, but gives no measured sound-level uncertainty.
+\item \textbf{Alignment with brain recording:} the paper gives no measured timing error. The network time reference is specified below one microsecond plus network variation; that is not the accuracy of sound arrival.
+\item \textbf{Drift:} the independent sound-device clock specification corresponds to \textbf{180 milliseconds per hour versus ideal time}. This is not the paper's drift with satellite timing connected. Drift against our recorder remains unknown.
+\end{points}
+\source{Sources: \buy{https://doi.org/10.1101/2025.09.30.679683}{SONIC version 1, Methods 6.1--6.2}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound device specifications}; \buy{https://timemachinescorp.com/wp-content/uploads/TM2500-Brochure.pdf}{time reference}; \buy{https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/}{speaker}. A cheaper \buy{https://www.ebay.com/itm/178144942290}{\money{3,498.95} eBay sound-device listing} needs exact model/accessory confirmation. The independent-clock figure uses typical conditions at 25 degrees Celsius. The paper used awake sheep; Rice's sedated-sheep adaptation remains unverified. No complete price or upper limit is established.}
 
 \newpage
+
 {\LARGE\bfseries Accurate version 2: McGinley slides}\par
-{\large \textbf{\money{7,551.75} priced so far} + ES1 quote + measurement.}\par
-
-Reproduce the supplied rack: \textbf{PC $\rightarrow$ PXIe rack / PXI-4461 $\rightarrow$ ED1 $\rightarrow$ ES1}. The PXIe-6363 provides additional I/O. Our neural recorder replaces the slides' Neuropixels chain in this budget.
-
-\heading{Exact parts and buying links}
-\source{Qty 1 each. These are active asking-price leads; used calibration and function are unverified. Most rack parts are used, and several ship from China.}
+{\large \textbf{\money{7,551.75} priced so far}; speaker quote and measurement equipment are extra.}\par
+\heading{What this buys}
+\begin{points}
+\item Reproduce the supplied setup: \textbf{computer $\rightarrow$ equipment rack $\rightarrow$ speaker driver $\rightarrow$ speaker}.
+\item The rack holds a sound board and a separate signal input/output board.
+\item Reuse our brain recorder instead of buying the slides' Neuropixels system. A compatible desktop computer with a free expansion slot is required.
+\end{points}
+\heading{Parts to buy}
+\source{One of each. Prices are in United States dollars. Most rack parts are used; several ship from China. Seller claims do not verify operation or calibration.}
 {\small
 \begin{tabularx}{\linewidth}{@{}L P{1.2in} R{0.79in}@{}}
 \toprule
-\textbf{Part} & \textbf{Condition / source} & \textbf{USD} \\
+\textbf{Part} & \textbf{Seller} & \textbf{Price} \\
 \midrule
-\buy{https://www.ebay.com/itm/406923647348}{NI PXIe-1082 chassis} & Used / eBay & 2,650.00 \\
-\buy{https://www.ebay.com/itm/335905594499}{NI PXIe-6363 I/O module} & Used / eBay & 2,495.36 \\
-\buy{https://www.ebay.com/itm/198252264097}{NI PXI-4461, hybrid 186900-11L} & Used / eBay & 699.99 \\
-\buy{https://www.ebay.com/itm/286812339947}{NI PXIe-8360 controller} & Used / eBay & 493.20 \\
-\buy{https://www.ebay.com/itm/187559567628}{NI PCIe-8361 host card} & Seller-new / eBay & 197.00 \\
-\buy{https://www.ebay.com/itm/307193912690}{NI 779500-03 MXI cable, 3 m} & Seller-new / eBay & 89.85 \\
-\buy{https://www.ebay.com/itm/277089841525}{NI SHC68-68-EPM, 192061C-02, 2 m} & Used / eBay & 89.99 \\
-\buy{https://www.ebay.com/itm/358482820683}{NI BNC-2090A breakout} & Used / no returns & 613.77 \\
-\buy{https://www.ebay.com/itm/156873696386}{TDT ED1 + zBus + PS25F power bundle} & Used / eBay NTC & 209.06 \\
-\buy{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{TDT ES1 + matching high-voltage cable} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT order / quote} & Quote \\
-\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & New / Pro Audio & 13.53 \\
+\buy{https://www.ebay.com/itm/406923647348}{PXIe-1082 rack enclosure} & Used / eBay & 2,650.00 \\
+\buy{https://www.ebay.com/itm/335905594499}{PXIe-6363 signal input/output board} & Used / eBay & 2,495.36 \\
+\buy{https://www.ebay.com/itm/198252264097}{PXI-4461 sound board, 186900-11L} & Used / eBay & 699.99 \\
+\buy{https://www.ebay.com/itm/286812339947}{PXIe-8360 rack controller} & Used / eBay & 493.20 \\
+\buy{https://www.ebay.com/itm/187559567628}{PCIe-8361 computer connection card} & Seller-new / eBay & 197.00 \\
+\buy{https://www.ebay.com/itm/307193912690}{779500-03 rack cable, 3 metres} & Seller-new / eBay & 89.85 \\
+\buy{https://www.ebay.com/itm/277089841525}{SHC68-68-EPM cable, 192061C-02} & Used / eBay & 89.99 \\
+\buy{https://www.ebay.com/itm/358482820683}{BNC-2090A connection panel} & Used / no returns & 613.77 \\
+\buy{https://www.ebay.com/itm/156873696386}{ED1 driver + enclosure/power supply} & Used / eBay & 209.06 \\
+\buy{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{ES1 speaker + matching cable} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead}$^*$ & New / Pro Audio Solutions & 13.53 \\
 \midrule
-\textbf{Known-priced subtotal} & & \textbf{7,551.75} \\
+\textbf{Subtotal of priced parts} & & \textbf{7,551.75} \\
 \bottomrule
 \end{tabularx}}
-\source{$^*$Our added output lead. ED1 bundle includes chassis/power and an incidental HB7; no separate ZB1PS is counted. Confirm ES1 cable inclusion. One SHC cable follows the diagram; extra channel banks need another. Verify actual 4461 hybrid connector and recent calibration before buying.}
-
-\textbf{Measurement equipment is extra.} The slides show no mic/calibrator. Our page-4 kit adds \money{1,897.16}, making \textbf{\money{9,448.91} known-priced}. Mic/recorder wiring, any missing rack power cord and ES1 quote are additional. The host must be a compatible desktop with a free PCIe slot. Software, shipping, tax and labor are excluded.
-
-\heading{What precision does it provide?}
-\textbf{Sound range:} ES1 is specified for \textbf{4--110 kHz}, raw $\pm$11 dB. It misses SONIC's 1.4--4 kHz tones. The PXI-4461's stated output flatness extends to 92.1 kHz at its maximum rate. At-ear $\pm$dB accuracy is unknown; electrical flatness is not acoustic accuracy.
-
-\textbf{Timing:} at 204.8 kSa/s, spacing is \textbf{4.88 $\mu$s}. The DAC filter adds \textbf{156.25 $\mu$s} at that rate; speaker and air delay are additional. The slides give no measured sound-to-neural jitter.
-
-\textbf{Drift:} the 4461's internal $\pm$20 ppm specification corresponds to \textbf{1.2 ms/min or 72 ms/hour versus ideal time}, before aging/calibration uncertainty. Clock-only frequency error is $\pm$0.2 Hz at 10 kHz. Shared-rack clock settings and the recorder clock still determine relative drift; the slides do not establish either.
-
-\source{Sources: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/01_system_diagram.png}{supplied diagram}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/02_equipment_links.png}{supplied parts slide}; \buy{https://docs-be.ni.com/bundle/ni-4461-4462-specs/raw/resource/enus/373770k.pdf}{PXI-4461 specs, pp.19,24}; \buy{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{ES1 specs}; \buy{https://www.ni.com/en/support/documentation/product-certifications/model.pxi-4461.html}{hybrid variant}. NI accuracy conditions include calibration limits; used hardware is not verified to meet them.}
+\heading{What is still extra?}
+\begin{points}
+\item \textbf{Sound measurement:} our page-4 kit adds \money{1,897.16}, making \textbf{\money{9,448.91} priced so far}. The slides do not identify a microphone or sound-level calibrator.
+\item \textbf{Connections:} microphone/brain-recorder wiring and any missing rack power cord are extra. Confirm the speaker's matching cable is included.
+\item \textbf{Before buying:} confirm the sound board fits the rack and has valid calibration. The driver bundle includes its enclosure and power supply; do not buy another. The starred output cable is our addition.
+\end{points}
+\heading{How precise is it?}
+\begin{points}
+\item \textbf{Pitch range:} the speaker is specified for \textbf{4--110 kilohertz}. It misses the paper's lowest 1.4--4 kilohertz tones. The sound board's specified flat output extends to 92.1 kilohertz.
+\item \textbf{Start delay:} the sound board's output filter adds \textbf{0.15625 milliseconds} at its highest sample rate. Speaker and air delays are additional. The slides give no measured alignment with brain recording.
+\item \textbf{Drift:} the sound board's internal-clock specification corresponds to \textbf{72 milliseconds per hour versus ideal time}, before aging/calibration uncertainty. Clock settings and our recorder determine actual relative drift; that remains unknown.
+\item \textbf{Loudness at the ear:} accuracy is unmeasured. The speaker's uncorrected response variation is $\pm$11 decibels; that is not calibrated accuracy.
+\end{points}
+\source{Sources: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/01_system_diagram.png}{supplied diagram}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/hardware_slides_2026-10-09/02_equipment_links.png}{supplied parts slide}; \buy{https://docs-be.ni.com/bundle/ni-4461-4462-specs/raw/resource/enus/373770k.pdf}{sound board specifications, pages 19 and 24}; \buy{https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/}{speaker specifications}; \buy{https://www.ni.com/en/support/documentation/product-certifications/model.pxi-4461.html}{compatible board version}. Supplier quote, shipping, tax, software and labor remain extra.}
 
 \newpage
+
 {\LARGE\bfseries Accurate version 3: my recommendation}\par
-{\large \textbf{\money{5,636.41} priced so far} + MF2 / amplifier / power quotes.}\par
-
-For full 1.4--32 kHz coverage: \textbf{USB-6361 $\rightarrow$ SA1 $\rightarrow$ MF2-M}. Record an \textbf{M50 microphone via MM-1} on the DAQ and repeated timing markers on our neural recorder. This is a proposed build, not tested performance.
-
-\heading{Exact parts and buying links}
-\source{Qty 1 except batteries/resistors. Confirm actual sample rate in the driver. Main subtotal uses a new preamp. Blue names link directly to sellers or TDT's product/order route.}
+{\large \textbf{\money{5,636.41} priced so far}; speaker, speaker amplifier and powered enclosure need quotes.}\par
+\heading{What this buys}
+\begin{points}
+\item Cover the paper's \textbf{1.4--32 kilohertz} range with a compact computer-connected sound device.
+\item Measure sound with a microphone near the ear. Record repeated timing signals with our brain data to align the recordings.
+\item This is a proposed build. Its sound level and timing have not been tested.
+\end{points}
+\heading{Parts to buy}
+\source{United States dollars. One of each except batteries/resistors. Exact product model names are retained for ordering. Main subtotal uses a new microphone amplifier.}
 {\small
 \begin{tabularx}{\linewidth}{@{}L P{1.1in} R{0.79in}@{}}
 \toprule
-\textbf{Part} & \textbf{Condition / source} & \textbf{USD} \\
+\textbf{Part} & \textbf{Seller} & \textbf{Price} \\
 \midrule
-\buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{NI USB-6361 screw-terminal, 781442-01} & New / Newark & 3,030.42 \\
-\buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{TDT MF2-M mono speaker kit} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT quote} & Quote \\
-\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{TDT SA1 amplifier} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT quote} & Quote \\
-\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{TDT ZB1PS powered chassis} & \buy{https://www.tdt.com/contact-tdt/orders/}{TDT quote} & Quote \\
-\buy{https://www.ebay.com/itm/375116964435}{Earthworks M50 measurement mic}$^\dagger$ & New / eBay & 1,299.00 \\
-\buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{Sound Devices MM-1 preamp}$^\dagger$ & New / B\&H & 945.00 \\
-\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 calibrator}$^\dagger$ & New / DigiKey & 219.00 \\
-\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 XLR mic cable}$^\dagger$ & New / Sweetwater & 17.99 \\
-\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM mic stand}$^\dagger$ & New / Sweetwater & 34.99 \\
-\buy{https://www.mouser.com/ProductDetail/Panasonic-Battery/LR6XWA-B2?qs=1Zl\%2FqaC79saZu5UEOwg5aw\%3D\%3D}{Two Panasonic AA batteries, \money{0.59} each}$^\dagger$ & New / Mouser & 1.18 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{USB-6361 sound device, 781442-01} & New / Newark & 3,030.42 \\
+\buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{MF2-M speaker kit} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure} & \buy{https://www.tdt.com/contact-tdt/orders/}{Supplier quote} & Quote \\
+\buy{https://www.ebay.com/itm/375116964435}{Earthworks M50 measurement microphone}$^\dagger$ & New / eBay & 1,299.00 \\
+\buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{Sound Devices MM-1 microphone amplifier}$^\dagger$ & New / B\&H & 945.00 \\
+\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 sound-level calibrator}$^\dagger$ & New / DigiKey & 219.00 \\
+\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable}$^\dagger$ & New / Sweetwater & 17.99 \\
+\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand}$^\dagger$ & New / Sweetwater & 34.99 \\
+\buy{https://www.mouser.com/ProductDetail/Panasonic-Battery/LR6XWA-B2?qs=1Zl\%2FqaC79saZu5UEOwg5aw\%3D\%3D}{Two Panasonic microphone-amplifier batteries, \money{0.59} each}$^\dagger$ & New / Mouser & 1.18 \\
 \buy{https://www.digikey.com/en/products/detail/pomona-electronics/EM4970-36/6125831}{Pomona EM4970-36\# output lead} & New / DigiKey & 23.68 \\
-\buy{https://www.bhphotovideo.com/c/product/488060-REG/Hosa_Technology_PHX_106F_BULK_PNX_106FB_Phoenix_Connector.html}{Hosa PHX-106F-BULK mic output adapter} & New / B\&H & 13.95 \\
-\buy{https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473}{Two Yageo 100 k$\Omega$ bias resistors, \money{0.10} each} & New / DigiKey & 0.20 \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{NI 763830-01 US power cord} & New / Newark & 51.00 \\
+\buy{https://www.bhphotovideo.com/c/product/488060-REG/Hosa_Technology_PHX_106F_BULK_PNX_106FB_Phoenix_Connector.html}{Hosa PHX-106F-BULK microphone adapter} & New / B\&H & 13.95 \\
+\buy{https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473}{Two Yageo 100,000-ohm resistors, \money{0.10} each} & New / DigiKey & 0.20 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & New / Newark & 51.00 \\
 \midrule
-\textbf{Known-priced subtotal} & & \textbf{5,636.41} \\
+\textbf{Subtotal of priced parts} & & \textbf{5,636.41} \\
 \bottomrule
 \end{tabularx}}
-\source{$^\dagger$Shared measurement kit: \money{2,517.16} with a new preamp, or \money{1,897.16} with the \buy{https://www.ebay.com/itm/147529703873}{\money{325} used MM-1 (no returns)}. Used-preamp system subtotal: \money{5,016.41}. DAQ includes PSU/USB cable; M50 includes calibrator adapter; MF2 includes stand/speaker cable. Hosa's Phoenix plug needs removal and differential wiring/bias review; it is not a direct NI plug. Recorder-specific marker adapter is still unpriced. Keep preamp gain fixed, filter/limiter off; account for NI input scan timing.}
+\heading{Ways to reduce cost / what is missing}
+\begin{points}
+\item \textbf{Used microphone amplifier:} the \buy{https://www.ebay.com/itm/147529703873}{\money{325} used MM-1, no returns}, brings priced parts to \textbf{\money{5,016.41}}.
+\item \textbf{Shared measurement kit:} marked items cost \money{2,517.16} new or \money{1,897.16} with the used microphone amplifier. Same kit on pages 2 and 3.
+\item \textbf{Still missing:} supplier quotes and the brain-recorder timing adapter. The microphone adapter needs rewiring before use.
+\end{points}
+\heading{How precise should we expect it to be?}
+\begin{points}
+\item \textbf{Pitch and loudness:} the speaker covers 1--80 kilohertz; the microphone reaches 50 kilohertz. The sound-level calibrator is specified within \textbf{0.5 decibels at one kilohertz only}. Accuracy across all tones at the ear remains unmeasured.
+\item \textbf{Drift:} the independent sound-clock specification corresponds to \textbf{180 milliseconds per hour versus ideal time}. Use repeated recorded references to estimate and correct the mismatch; remaining error is unmeasured.
+\item \textbf{Timing goal:} \textbf{within one millisecond after correction} is our proposed acceptance goal, not achieved performance.
+\end{points}
+\source{Included: sound-device power supply/computer cable, microphone calibration adapter and speaker stand/cable. Shipping, tax, tariffs, software and labor are extra. No complete price or upper limit is established. Arduino or a field-programmable gate array still needs sound hardware, calibration and timing checks.}
+\source{Sources: \buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{speaker}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{microphone}; \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{microphone amplifier}; \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{sound-level calibrator}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound-device timing}. Clock figure assumes typical conditions at 25 degrees Celsius. Confirm computer compatibility. Detailed calculations: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/Accurate_Setup_Comparison_2026-10-09.md}{supporting comparison}.}
 
-\heading{What precision should we expect?}
-\textbf{Sound:} MF2's free-field band is \textbf{1--80 kHz}; M50 covers to 50 kHz. This covers SONIC's band. R8090's \textbf{$\pm$0.5 dB applies at 1 kHz}; whole-band at-ear accuracy remains unmeasured.
-
-\textbf{Timing and drift:} proposed actual 200 kSa/s gives \textbf{5 $\mu$s spacing}, not 5 $\mu$s alignment. Free-running NI 50 ppm means \textbf{180 ms/hour versus ideal time}; clock-only error is $\pm$0.5 Hz at 10 kHz. Record repeated markers and microphone arrivals to estimate offset/drift. Corrected alignment is unmeasured; \textbf{$\leq$1 ms is a proposed acceptance goal}.
-
-\textbf{Budget decision:} use the basic setup for selected audible tones; choose this version for the full SONIC band. No fixed upper budget is defensible until TDT quotes and recorder wiring are resolved. Arduino/FPGA can provide buffered playback/markers, but still needs suitable analog output, amplification, calibration and clock alignment; it is not yet a verified cheaper full-band alternative.
-
-\source{Specs: \buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{MF2}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{M50}; \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{MM-1}; \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{R8090}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{NI timing}. Our existing computer/recorder are reused; confirm NI-DAQmx host support. Software/labor, shipping, tax and added tariffs are excluded. No build or animal-ready protocol is claimed.}
 \end{document}

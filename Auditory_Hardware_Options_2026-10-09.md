@@ -1,6 +1,12 @@
 # Auditory hardware options and budget
 
-## Current short decision guide
+## Current comparison
+
+The [four-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now keeps the basic setup plus three accurate versions: SONIC paper, McGinley supplied slides, and the proposed MF2 recommendation. See the [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md) and [verified price inputs](sources/Accurate_Setup_Prices_2026-10-09.json). Exact public subtotals are separated from quote-required TDT parts and unresolved connections. No complete exact total or upper limit is established.
+
+## Historical short decision guide (superseded)
+
+The sections below preserve earlier allowance-based planning and DIY work. Their earlier PDF page counts, $11,000–12,000 and $30,000 scenarios are not the current reading version or exact prices.
 
 The revised [two-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) compare the basic and full-SONIC-range parts, cost, delay, trial variation and drift. The earlier DIY budgets remain in this research record and the price inputs. Howard selected all three precision measures and asked to compare economical setups with the full SONIC band, then added Arduino/FPGA possibilities. The lab provides its own neural recorder; its input details remain unknown.
 

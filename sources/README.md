@@ -1,6 +1,12 @@
 # Source register
 
-## Cost, precision and DIY comparison
+## Current three accurate versions
+
+Checked October 9, 2026. The [four-page PDF](../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) retains the basic option and separates SONIC paper, McGinley supplied slides, and the recommendation. [Current evidence](Accurate_Setup_Prices_2026-10-09.json) stores exact public item prices, quantities, conditions, availability, exclusions and primary precision sources; the [itemized comparison](../Accurate_Setup_Comparison_2026-10-09.md) explains the totals. All-new recommendation preamp and used/no-returns alternative are distinct. Accessories, mic kit additions, hardware variants, recorder wiring and quote-only TDT parts are explicit. No quote-only estimate is presented as an exact public price or a complete upper budget.
+
+Fresh methods review identifies SONIC's exact BNC USB-6361 assembly; the recommendation uses the cheaper screw-terminal variant with its different included PSU/cable. PXI-4461 hybrid compatibility, internal 20 ppm clock, 32-sample DAC delay and ES1's 4 kHz cutoff come from NI/TDT primary documentation. SONIC GPS/PTP source precision, converter sample spacing, raw speaker response and at-ear/neural uncertainty remain distinct. The original paper/slides do not identify the proposed M50/MM-1/R8090 measurement kit. Supplier stock and used condition are observations, not verified hardware performance. No vendor was contacted or part ordered.
+
+## Earlier cost, precision and DIY comparison (superseded reading versions)
 
 Checked October 9, 2026 for the revised [two-page decision PDF](../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf). [Current price inputs](Sound_Decision_Prices_2026-10-09.json) preserve direct eBay, Reverb, DigiKey, Sweetwater, Arduino and Adafruit purchase URLs, conditions, unit prices and budget calculations. TDT MF2-M/SA1/ZB1PS remain quote-only. Excluded leads include sold-out SA1/power stock, conflicting-model NI listings and unavailable speaker boards; incomplete used NI units are identified rather than treated as ready replacements.
 

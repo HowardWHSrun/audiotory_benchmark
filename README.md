@@ -31,7 +31,7 @@ These are supplied team assignments, not completed work or confirmed equipment a
 
 ## Project records
 
-- [Basic and full-range sound setups](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): two pages with parts, buying links, delay examples and honest drift calculations for the $450–700 basic and $11,000–12,000 quote-dependent full-range options. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) and [checked price inputs](sources/Sound_Decision_Prices_2026-10-09.json). The [detailed slide comparison](Auditory_Hardware_Options_2026-10-09.md) and [earlier rack/ES1 budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain supporting records.
+- [Sound setup options](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf): four pages covering the basic setup and three accurate versions—SONIC paper, McGinley supplied slides, and the recommendation—with exact public item prices, buying links, clock/timing specifications and clear quote gaps. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex), [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md), and [price provenance](sources/Accurate_Setup_Prices_2026-10-09.json). [Earlier DIY/slide planning](Auditory_Hardware_Options_2026-10-09.md) and the [rack budget workbook](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) remain historical supporting records.
 - [Project plan](Project_Plan.md): scope, assignments, deliverables, and open decisions.
 - [Paper notes](Paper_Notes.md): verified methods, results, limitations, and replication questions.
 - [Auditory setup requirements](Auditory_Setup_Requirements.md): waveform, sound delivery, calibration, and timing.

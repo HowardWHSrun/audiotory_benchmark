@@ -114,3 +114,9 @@ No vendor contact, order, program implementation or hardware execution, equipmen
 - Role evidence is recorded in sources/Item_Purpose_Audit_2026-10-10.md. Re-read pinned SONIC Methods 6.1–6.2 and checked saved lab slides and primary equipment manuals. Power-cable noise ferrite, amplifier-output microphone adapter, proposed ground-return resistors and Basic audio loopback are described accurately. This is a component-role check, not new stock/pricing verification or assembled-system testing.
 - Native compiler and Tectonic succeeded. Both final pages were rendered and inspected; no clipping, overlap or layout warnings. Integrity checks passed 42 item descriptions, two kit descriptions, four five-column headers, independently recalculated totals, seven marked estimates and all 35 buying destinations. There are 44 HTTPS annotations because two item links wrap over two lines. A checker expecting one annotation per row was corrected after inspecting the unchanged URL set.
 - Six model tests, 403-reference validation, unchanged pinned-paper checksum, 37-file build and whitespace review passed. Website source unchanged; temporary rendering and checking output excluded from Git. No external messages, supplier contacts, orders or bench/animal experiments.
+
+
+## Annotated caption edits, October 10
+
+- Changed only the four setup captions requested in Howard's PDF annotations. Retained all parts tables and budgets; the Basic caption now mentions the possibility of borrowing a calibrator, while its unchanged total still includes buying the listed calibrator.
+- Native compiler and Tectonic passed. Final two-page renders inspected; no clipping, overlap or layout warnings. Source comparison confirms no table/content changes beyond the four captions. PDF buying-link annotations are unchanged. Static reference validation and whitespace review passed.

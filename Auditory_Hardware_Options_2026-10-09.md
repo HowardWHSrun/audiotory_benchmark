@@ -2,7 +2,7 @@
 
 ## Current comparison
 
-The [four-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now keeps the basic setup plus three accurate versions: SONIC paper, McGinley supplied slides, and the proposed MF2 recommendation. See the [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md) and [verified price inputs](sources/Accurate_Setup_Prices_2026-10-09.json). Exact public subtotals are separated from quote-required TDT parts and unresolved connections. No complete exact total or upper limit is established.
+The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now lists McGinley, SONIC, basic and compact, with explicit estimated prices for previously unquoted required parts. See the [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md) and [verified price inputs](sources/Accurate_Setup_Prices_2026-10-09.json). The [October 10 planning record](sources/Planning_Estimates_2026-10-10.json) separates author-set estimates from observed seller prices. Unresolved connections and delivery/tax/labor remain extra; no hard upper limit is established.
 
 ## Historical short decision guide (superseded)
 

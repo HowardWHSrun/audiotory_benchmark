@@ -3,7 +3,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,tabularx,booktabs,array,xcolor,hyperref,fancyhdr}
 \definecolor{linkblue}{RGB}{30,60,80}
-\definecolor{quiet}{RGB}{75,75,75}
 \hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Auditory setup: parts list},pdfauthor={Howard Wang}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
@@ -14,89 +13,18 @@
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \newcommand{\buy}[2]{\href{#1}{#2}}
 \newcommand{\money}[1]{\$#1}
-\newcommand{\group}[2]{\par\vspace{8pt}{\large\bfseries #1}\par{\fontsize{10}{12}\selectfont #2}\par\vspace{2pt}}
-\newcommand{\note}[1]{\par{\fontsize{9.3}{11.5}\selectfont\color{quiet}#1\par}}
+\newcommand{\group}[2]{\par\vspace{10pt}{\large\bfseries #1}\par{\fontsize{10.5}{13}\selectfont #2}\par\vspace{2pt}}
 \pagestyle{fancy}\fancyhf{}
-\fancyfoot[L]{\fontsize{9}{11}\selectfont Auditory setup\quad Revised 10 October 2026}
 \fancyfoot[R]{\fontsize{9}{11}\selectfont\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
 \raggedright
 {\LARGE\bfseries Auditory setup}\par
-{\large Parts list}\par
-\note{Prices checked 9 October 2026, in United States dollars. Product names link to sellers. ``No price'' means a required supplier price is pending and excluded from the subtotal.}
-\group{Basic}{Tones below 20 kilohertz.}
+\group{McGinley lab}{The setup shown in the McGinley lab's slides, with a microphone kit added.}
 {\fontsize{10.5}{13}\selectfont
-\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.17in} R{0.77in}@{}}
+\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.20in} R{0.79in}@{}}
 \toprule
-\textbf{Item} & \textbf{Count} & \textbf{Seller} & \textbf{Cost (\$)} \\ \midrule
-\buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD sound interface} & 1 & eBay / new & 97.98 \\
-\buy{https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor}{JBL 305P MkII powered speaker} & 1 & Sweetwater / new & 99.00 \\
-\buy{https://www.ebay.com/itm/221495576606}{Dayton EMM-6 measurement microphone} & 1 & eBay / new & 66.93 \\
-\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable} & 1 & Sweetwater / new & 17.99 \\
-\buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Hosa HSS-005 audio cable, \money{14.95} each} & 2 & Sweetwater / new & 29.90 \\
-\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand} & 1 & Sweetwater / new & 34.99 \\
-\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{Optional: REED R8090 sound-level calibrator} & 1 & DigiKey / new & 219.00 \\
-\bottomrule
-\end{tabularx}}
-\note{\money{346.79} with a borrowed calibrator; \money{565.79} with the listed calibrator. Speaker price is a sale.}
-\group{Compact}{Paper's full 1.4--32 kilohertz range; proposed setup.}
-{\fontsize{10.5}{13}\selectfont
-\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.17in} R{0.77in}@{}}
-\toprule
-\textbf{Item} & \textbf{Count} & \textbf{Seller} & \textbf{Cost (\$)} \\ \midrule
-\buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{USB-6361 sound generation/recording, 781442-01} & 1 & Newark / new & 3,030.42 \\
-\buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{MF2-M speaker kit} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.ebay.com/itm/375116964435}{Earthworks M50 measurement microphone}\textsuperscript{*} & 1 & eBay / new & 1,299.00 \\
-\buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{Sound Devices MM-1 microphone amplifier}\textsuperscript{*} & 1 & B\&H / new & 945.00 \\
-\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 sound-level calibrator}\textsuperscript{*} & 1 & DigiKey / new & 219.00 \\
-\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable}\textsuperscript{*} & 1 & Sweetwater / new & 17.99 \\
-\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand}\textsuperscript{*} & 1 & Sweetwater / new & 34.99 \\
-\buy{https://www.digikey.com/en/products/detail/panasonic-energy/LR6XWA-2SB/2043739}{Panasonic LR6XWA/2SB battery, \money{0.62} each}\textsuperscript{*} & 2 & DigiKey / new & 1.24 \\
-\buy{https://www.digikey.com/en/products/detail/pomona-electronics/EM4970-36/6125831}{Pomona EM4970-36\# output lead} & 1 & DigiKey / new & 23.68 \\
-\buy{https://www.bhphotovideo.com/c/product/488060-REG/Hosa_Technology_PHX_106F_BULK_PNX_106FB_Phoenix_Connector.html}{Hosa PHX-106F-BULK microphone connection lead} & 1 & B\&H / new & 13.95 \\
-\buy{https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473}{Yageo 100,000-ohm resistor, \money{0.10} each} & 2 & DigiKey / new & 0.20 \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & 1 & Newark / new & 51.00 \\
-\midrule
-\textbf{Priced parts subtotal} & & & \textbf{5,636.47} \\
-\bottomrule
-\end{tabularx}}
-\note{\textsuperscript{*}These six items form the \money{2,517.22} measurement kit also included in the SONIC and McGinley totals.}\label{kit}
-\note{\buy{https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html}{Used MM-1 alternative: \money{604.50}}. Compact subtotal: \money{5,295.97}; moderate wear, 90-day seller warranty.}
-\vfill
-\note{Existing compatible computer and our recorder assumed. Recorder connections, extra adapters, delivery, tax/tariffs and labor are extra. Timing accuracy, drift and sound-level accuracy have not been measured.}
-\newpage
-{\Large\bfseries Parts list continued}\par
-\group{SONIC}{Paper's sound hardware for 1.4--32 kilohertz tones.}
-{\fontsize{10.5}{13}\selectfont
-\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.17in} R{0.77in}@{}}
-\toprule
-\textbf{Item} & \textbf{Count} & \textbf{Seller} & \textbf{Cost (\$)} \\ \midrule
-\buy{https://www.newark.com/ni-now-part-of-emerson/782255-01/multifunction-i-o-device-usb-6361/dp/14AJ5490}{USB-6361 sound generation/recording, 782255-01} & 1 & Newark / new & 3,744.42 \\
-\buy{https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/}{TimeMachines TM2500C time reference} & 1 & New / backorder & 799.99 \\
-\buy{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{MF1-M speaker kit} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/781513-01/test-psu-desktop-mini-combicon/dp/14AJ5357}{781513-01 power supply} & 1 & Newark / new & 123.42 \\
-\buy{https://www.digikey.com/en/products/detail/ni/780534-01/16647424}{780534-01 locking computer cable} & 1 & DigiKey / new & 69.75 \\
-\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & 1 & Newark / new & 51.00 \\
-\buy{https://www.digikey.com/en/products/detail/ni/781233-02/18710754}{781233-02 cable noise filter} & 1 & DigiKey / new & 38.25 \\
-\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead} & 1 & Pro Audio / new & 13.53 \\
-\midrule
-\hyperref[kit]{Measurement kit from page 1 (included once)} & 1 & New amplifier & 2,517.22 \\
-\midrule
-\textbf{Priced parts subtotal} & & & \textbf{7,357.58} \\
-\bottomrule
-\end{tabularx}}
-\note{Time reference backordered. Accessory part numbers and measurement kit are our additions. Kit contents need confirmation.}
-\note{\buy{https://www.ebay.com/itm/178144942290}{Seller-new sound device alternative: \money{3,498.95}}. Saves \money{245.47}; accessories and condition need confirmation.}
-\group{McGinley lab}{From the supplied slides. Speaker range: 4--110 kilohertz.}
-{\fontsize{10.5}{13}\selectfont
-\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.17in} R{0.77in}@{}}
-\toprule
-\textbf{Item} & \textbf{Count} & \textbf{Seller} & \textbf{Cost (\$)} \\ \midrule
+\textbf{Item} & \textbf{Count} & \textbf{Source} & \textbf{Cost (\$)} \\ \midrule
 \buy{https://www.ebay.com/itm/406923647348}{PXIe-1082 equipment chassis} & 1 & eBay / used & 2,650.00 \\
 \buy{https://www.ebay.com/itm/335905594499}{PXIe-6363 signal input/output board} & 1 & eBay / used & 2,495.36 \\
 \buy{https://www.ebay.com/itm/198252264097}{PXI-4461 audio module, hybrid 186900-11L} & 1 & eBay / used & 699.99 \\
@@ -106,15 +34,76 @@
 \buy{https://www.ebay.com/itm/277089841525}{SHC68-68-EPM cable, 192061C-02} & 1 & eBay / used & 89.99 \\
 \buy{https://www.ebay.com/itm/358482820683}{BNC-2090A signal connection panel} & 1 & eBay / used & 613.77 \\
 \buy{https://www.ebay.com/itm/156873696386}{ED1 driver + enclosure/power supply} & 1 & eBay / used & 209.06 \\
-\buy{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{ES1 speaker + matching cable} & 1 & \buy{https://www.tdt.com/contact-tdt/orders/}{Request price} & No price \\
+\buy{https://www.tdt.com/product/es1-ec1-electrostatic-speakers/}{ES1 speaker + matching cable} & 1 & Estimate & 500.00 \\
 \buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead} & 1 & Pro Audio / new & 13.53 \\
 \midrule
-\hyperref[kit]{Measurement kit from page 1 (included once)} & 1 & New amplifier & 2,517.22 \\
+\hyperref[mic-kit]{Added microphone and calibration kit} & 1 & See Compact & 2,517.22 \\
 \midrule
-\textbf{Priced parts subtotal} & & & \textbf{10,068.97} \\
+\textbf{Estimated parts total} & & & \textbf{10,568.97} \\
 \bottomrule
 \end{tabularx}}
-\note{ED1 includes enclosure and power supply. Used-board connector/calibration need confirmation; connection panel seller lists no returns.}
-\vfill
-\note{Subtotals exclude required rows marked ``No price'' and the extra costs noted on page 1. Detailed specifications and timing notes: \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/Accurate_Setup_Comparison_2026-10-09.md}{supporting comparison}.}
+\group{SONIC}{This follows the sound setup used in the SONIC paper. We could consider this setup.}
+{\fontsize{10.5}{13}\selectfont
+\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.20in} R{0.79in}@{}}
+\toprule
+\textbf{Item} & \textbf{Count} & \textbf{Source} & \textbf{Cost (\$)} \\ \midrule
+\buy{https://www.newark.com/ni-now-part-of-emerson/782255-01/multifunction-i-o-device-usb-6361/dp/14AJ5490}{USB-6361 sound generation/recording, 782255-01} & 1 & Newark / new & 3,744.42 \\
+\buy{https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/}{TimeMachines TM2500C time reference} & 1 & New / backorder & 799.99 \\
+\buy{https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/}{MF1-M speaker kit} & 1 & Estimate & 1,500.00 \\
+\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & 1 & Estimate & 2,000.00 \\
+\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure} & 1 & Estimate & 750.00 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/781513-01/test-psu-desktop-mini-combicon/dp/14AJ5357}{781513-01 power supply} & 1 & Newark / new & 123.42 \\
+\buy{https://www.digikey.com/en/products/detail/ni/780534-01/16647424}{780534-01 locking computer cable} & 1 & DigiKey / new & 69.75 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & 1 & Newark / new & 51.00 \\
+\buy{https://www.digikey.com/en/products/detail/ni/781233-02/18710754}{781233-02 cable noise filter} & 1 & DigiKey / new & 38.25 \\
+\buy{https://www.proaudiosolutions.com/Hosa-BNC-58-103-p/bnc-58-103.htm}{Hosa BNC-58-103 output lead} & 1 & Pro Audio / new & 13.53 \\
+\midrule
+\hyperref[mic-kit]{Added microphone and calibration kit} & 1 & See Compact & 2,517.22 \\
+\midrule
+\textbf{Estimated parts total} & & & \textbf{11,607.58} \\
+\bottomrule
+\end{tabularx}}
+\newpage
+\group{Basic}{For tones below 20 kilohertz.}
+{\fontsize{10.5}{13}\selectfont
+\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.20in} R{0.79in}@{}}
+\toprule
+\textbf{Item} & \textbf{Count} & \textbf{Source} & \textbf{Cost (\$)} \\ \midrule
+\buy{https://www.ebay.com/itm/267676379715}{Behringer UMC204HD sound interface} & 1 & eBay / new & 97.98 \\
+\buy{https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor}{JBL 305P MkII powered speaker} & 1 & Sweetwater / new & 99.00 \\
+\buy{https://www.ebay.com/itm/221495576606}{Dayton EMM-6 measurement microphone} & 1 & eBay / new & 66.93 \\
+\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable} & 1 & Sweetwater / new & 17.99 \\
+\buy{https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot}{Hosa HSS-005 audio cable, \money{14.95} each} & 2 & Sweetwater / new & 29.90 \\
+\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand} & 1 & Sweetwater / new & 34.99 \\
+\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 sound-level calibrator} & 1 & DigiKey / new & 219.00 \\
+\midrule
+\textbf{Parts total} & & & \textbf{565.79} \\
+\bottomrule
+\end{tabularx}}
+\group{Compact}{A simpler setup for the paper's full frequency range.}
+{\fontsize{10.5}{13}\selectfont
+\begin{tabularx}{\linewidth}{@{}L R{0.48in} P{1.20in} R{0.79in}@{}}
+\toprule
+\textbf{Item} & \textbf{Count} & \textbf{Source} & \textbf{Cost (\$)} \\ \midrule
+\buy{https://www.newark.com/ni-now-part-of-emerson/781442-01/multifunction-i-o-device-usb-6361/dp/14AJ5341}{USB-6361 sound generation/recording, 781442-01} & 1 & Newark / new & 3,030.42 \\
+\buy{https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/}{MF2-M speaker kit} & 1 & Estimate & 1,500.00 \\
+\buy{https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/}{SA1 speaker amplifier} & 1 & Estimate & 2,000.00 \\
+\buy{https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/}{ZB1PS powered enclosure} & 1 & Estimate & 750.00 \\
+\buy{https://www.digikey.com/en/products/detail/pomona-electronics/EM4970-36/6125831}{Pomona EM4970-36\# output lead} & 1 & DigiKey / new & 23.68 \\
+\buy{https://www.bhphotovideo.com/c/product/488060-REG/Hosa_Technology_PHX_106F_BULK_PNX_106FB_Phoenix_Connector.html}{Hosa PHX-106F-BULK microphone connection lead} & 1 & B\&H / new & 13.95 \\
+\buy{https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473}{Yageo 100,000-ohm resistor, \money{0.10} each} & 2 & DigiKey / new & 0.20 \\
+\buy{https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639}{763830-01 United States power cord} & 1 & Newark / new & 51.00 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Microphone and calibration kit}} \\
+\buy{https://www.ebay.com/itm/375116964435}{Earthworks M50 measurement microphone} & 1 & eBay / new & 1,299.00 \\
+\buy{https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html}{Sound Devices MM-1 microphone amplifier} & 1 & B\&H / new & 945.00 \\
+\buy{https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951}{REED R8090 sound-level calibrator} & 1 & DigiKey / new & 219.00 \\
+\buy{https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft}{Hosa HMIC-010 microphone cable} & 1 & Sweetwater / new & 17.99 \\
+\buy{https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom}{Gator RI-MICTP-FBM microphone stand} & 1 & Sweetwater / new & 34.99 \\
+\buy{https://www.digikey.com/en/products/detail/panasonic-energy/LR6XWA-2SB/2043739}{Panasonic LR6XWA/2SB battery, \money{0.62} each} & 2 & DigiKey / new & 1.24 \\
+\midrule
+\textbf{Estimated parts total} & & & \textbf{9,886.47} \\
+\bottomrule
+\end{tabularx}}
+\label{mic-kit}
 \end{document}

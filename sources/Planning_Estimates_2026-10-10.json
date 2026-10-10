@@ -1,0 +1,68 @@
+{
+  "revision_date": "2026-10-10",
+  "currency": "USD",
+  "price_basis": "Existing observed seller prices from 2026-10-09 plus author-set planning estimates for previously unpriced required parts. These estimates are not manufacturer quotations or verified current new prices.",
+  "estimate_display": "Source column says Estimate; totals including these values say Estimated parts total. Dates and provenance remain here rather than in the short PDF.",
+  "estimates": [
+    {
+      "item": "TDT MF1-M mono speaker kit",
+      "quantity": 1,
+      "unit_estimate": 1500,
+      "basis": "Author-set allowance by analogy to the existing MF2-M allowance; no verified public priced offer found. Older model is not assumed cheaper or available.",
+      "product_url": "https://www.tdt.com/product/mf1-multi-field-magnetic-speakers/"
+    },
+    {
+      "item": "TDT MF2-M mono speaker kit",
+      "quantity": 1,
+      "unit_estimate": 1500,
+      "basis": "Retains the prior conservative author-set allowance in Sound_Decision_Prices_2026-10-09.json. No public new price or current used offer verified.",
+      "product_url": "https://www.tdt.com/product/mf2-multi-field-magnetic-speakers/"
+    },
+    {
+      "item": "TDT SA1 speaker amplifier",
+      "quantity": 1,
+      "unit_estimate": 2000,
+      "basis": "Retains the prior conservative author-set procurement allowance. Historical used SA1+PS25F seller offer was $406.12 and sold out; it is not a current new price.",
+      "product_url": "https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/",
+      "historical_seller_url": "https://www.ntc-tech.com/products/tucker-davis-technologies-sa1-stereo-power-amplifier-with-ps25f-power-supply"
+    },
+    {
+      "item": "TDT ZB1PS powered enclosure",
+      "quantity": 1,
+      "unit_estimate": 750,
+      "basis": "Retains prior complete powered-chassis planning allowance. No current standalone priced offer verified. Ended used multi-item bundle is not a new standalone price.",
+      "product_url": "https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/",
+      "historical_ended_url": "https://www.ebay.com/itm/187474412541"
+    },
+    {
+      "item": "TDT ES1 speaker with matching cable",
+      "quantity": 1,
+      "unit_estimate": 500,
+      "basis": "Author-set planning allowance including matched cable, informed by the 2024 primary paper approximate speaker cost of $195. Not an inflation calculation, current price or supplier guarantee. Replaces unsupported prior $1500\u20132500 allowance.",
+      "product_url": "https://www.tdt.com/product/es1-ec1-electrostatic-speakers/",
+      "historical_primary_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11136495/#app1",
+      "primary_table": "Appendix 1 table 1: electrostatic loudspeakers $195 per unit, ED1 drivers $650, 25W supply $325; multimodal mapping identifies ES1 and ED1.",
+      "cable_source": "https://www.tdt.com/files/tdtcatalog.pdf"
+    }
+  ],
+  "measurement_kit": {
+    "items": [
+      "Earthworks M50",
+      "Sound Devices MM-1",
+      "REED R8090",
+      "Hosa HMIC-010",
+      "Gator RI-MICTP-FBM",
+      "two Panasonic cells"
+    ],
+    "total": 2517.22,
+    "scope": "Our addition, included once in each specialized option. Listed individually under Compact."
+  },
+  "parts_totals": {
+    "McGinley": 10568.97,
+    "SONIC": 11607.58,
+    "Basic": 565.79,
+    "Compact": 9886.47
+  },
+  "scope": "Existing compatible computer and neural recorder reused. These are parts totals; recorder-specific connections/adapters, shipping, tax, added tariffs and labor remain extra. No achieved acoustic/neural precision claimed.",
+  "actions": "Research and document revision only. No vendor contact, order, hardware connection or experiment."
+}

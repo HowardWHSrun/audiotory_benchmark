@@ -10,7 +10,7 @@ The homepage shows **our planned experiment** in one diagram. Select a component
 
 ![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)
 
-**For Dr. Luan:** [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) · [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). Basic, compact, SONIC and McGinley parts with quantities, sellers, linked prices and subtotals. Detailed timing explanations remain in the supporting comparison. Required supplier quotes remain outside the subtotals. Wording revised October 10; prices checked October 9.
+**For Dr. Luan:** [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) · [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). McGinley and SONIC first, basic and compact last. Required unquoted parts now have marked planning estimates included in the totals. [Estimate basis](sources/Planning_Estimates_2026-10-10.json); [detailed timing comparison](Accurate_Setup_Comparison_2026-10-09.md).
 
 ## Current direction
 

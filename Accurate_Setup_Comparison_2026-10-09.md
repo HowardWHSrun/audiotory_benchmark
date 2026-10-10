@@ -1,6 +1,23 @@
 # Auditory setup comparison: three specialized options
 
-Checked October 9, 2026. One sound output channel, reusing our computer and neural recorder. These are public USD item asking prices; delivery, tax, added tariffs, labor, quote-only TDT parts and unresolved connections are excluded. No price is a delivered quotation or a reservation. The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) groups basic and compact on page 1, SONIC and McGinley on page 2. It was simplified October 10 for Dr. Luan; this comparison retains the detailed timing and calibration notes. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Detailed source/price record](sources/Accurate_Setup_Prices_2026-10-09.json).
+The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now puts McGinley and SONIC on page 1, basic and compact on page 2. At Howard's request, previously unpriced required TDT parts have author-set estimates included in the totals. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Estimate basis](sources/Planning_Estimates_2026-10-10.json). [Observed seller-price record](sources/Accurate_Setup_Prices_2026-10-09.json).
+
+## Current planning parts totals
+
+| Setup | Observed priced parts | Added TDT estimates | Estimated parts total |
+|---|---:|---:|---:|
+| McGinley | $10,068.97 | ES1/cable $500 | $10,568.97 |
+| SONIC | $7,357.58 | MF1-M $1,500; SA1 $2,000; ZB1PS $750 | $11,607.58 |
+| Basic | $565.79 | None; calibrator included | $565.79 |
+| Compact | $5,636.47 | MF2-M $1,500; SA1 $2,000; ZB1PS $750 | $9,886.47 |
+
+All options reuse a compatible computer and our neural recorder. Specialized totals each include one $2,517.22 microphone/calibration kit. Recorder-specific connections/adapters, delivery, tax, added tariffs and labor remain extra. These are estimated parts budgets, not manufacturer quotes or hard upper limits. Public seller observations remain the October 9 snapshot.
+
+MF2-M, SA1 and ZB1PS retain earlier author-set allowances. MF1-M uses the same $1,500 allowance as MF2-M by analogy; no public current priced offer was verified. ES1/cable is assigned a $500 planning allowance informed by [Vickers and McCormick's 2024 primary paper, Appendix 1 Table 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC11136495/#app1), which reports an approximate $195 per electrostatic speaker and identifies ES1 in its equipment list. The $500 figure includes a matching cable allowance; it is our choice, not an inflation calculation or current seller price. Earlier $1,500–2,500 ES1 estimates are superseded for this short document. The [historical used SA1/PS25F offer](https://www.ntc-tech.com/products/tucker-davis-technologies-sa1-stereo-power-amplifier-with-ps25f-power-supply) is sold out and does not establish a current new price.
+
+## Observed-price baskets and technical evidence
+
+The following October 9 observations exclude supplier quotes and retain scientific details omitted from the short parts list. They are not delivered quotations or reservations.
 
 | Version | Known-priced subtotal | With proposed measurement kit | What remains unpriced |
 |---|---:|---:|---|
@@ -8,7 +25,7 @@ Checked October 9, 2026. One sound output channel, reusing our computer and neur
 | McGinley supplied-slide sound chain | $7,551.75 | $10,068.97, new preamp | ES1/cable quote; mic/recorder connections; any missing rack cord |
 | Recommended sound + measurement chain | $5,636.47, new preamp | Included | MF2-M, SA1/ZB1PS quotes; recorder interface |
 
-The main comparison uses the $945 new MM-1 amplifier. A freshly listed [B&H used unit for $604.50](https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html) reduces the compact proposal to $5,295.97, saving $340.50. Its specific-unit page displays moderate wear, in-stock status and a 90-day seller warranty; these are seller observations, not hardware verification. The earlier unretrievable $325 eBay offer is retained only in the historical source record. These are incomplete subtotals, not complete budgets or upper limits. Older $11,000–12,000 and $30,000 planning scenarios used explicitly labeled allowances and are superseded as current price comparisons. A defensible exact final total requires actual TDT quotes and a recorder-interface decision.
+The main comparison uses the $945 new MM-1 amplifier. A freshly listed [B&H used unit for $604.50](https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1_single_channel_portable_microphone.html) reduces the compact proposal to $5,295.97, saving $340.50. Its specific-unit page displays moderate wear, in-stock status and a 90-day seller warranty; these are seller observations, not hardware verification. The earlier unretrievable $325 eBay offer is retained only in the historical source record. These observed-price subtotals exclude unquoted parts. The current estimated parts budgets above add explicit allowances; earlier reserve-based $11,000–12,000 and $30,000 scenarios remain historical. An exact delivered total still requires supplier quotations and a recorder-interface decision.
 
 ## 1. SONIC paper version
 

@@ -687,12 +687,13 @@
   "faculty_document_revision": {
     "date": "2026-10-09",
     "audience": "Dr. Luan",
-    "structure": "Two pages of parts lists: basic and compact on page 1; SONIC and McGinley on page 2. Short descriptions, exact quantities, sellers, linked prices and subtotals. Compact measurement-kit items are marked and reused once in each specialized total.",
+    "structure": "Two pages: McGinley and SONIC on page 1, basic and compact on page 2. Brief descriptions and parts tables only; no visible check dates, footnotes or borrowed-calibrator variants. Microphone kit grouped within Compact and included once in each specialized total.",
     "timing": "Measured Rice alignment/drift remains unknown. Paper processing delay, component specifications and proposed alignment goal remain separate.",
-    "subtotal_scope": "Specialized headline subtotals include the same new-amplifier measurement kit and exclude required supplier quotes, unresolved connections, delivery/tax/added tariffs and labor.",
+    "subtotal_scope": "October 10 PDF estimated parts totals now include author-set allowances for required unquoted TDT items, plus the shared new-amplifier measurement kit. Recorder-specific connections, delivery/tax/added tariffs and labor remain additional in the detailed scope record.",
     "editorial_revision": "Simplified headings, typography and wording on 2026-10-09. Price/quantity/quote/source inputs unchanged; no new pricing survey or hardware measurements.",
     "cost_clarification": "Replaced Still needed with Costs not included. Required table rows without confirmed supplier prices are marked No price; extra connections/delivery/tax/labor are separate; cheaper replacements are optional alternatives. All item quantities, numeric prices and subtotals are unchanged.",
     "tone_revision": "2026-10-10: written as Howard's update to Dr. Luan. Removed the discussion heading and question checklist, changed directives to descriptions and retained the recommendation. Prices remain the October 9 snapshot; quantities, tables, links and scientific caveats are unchanged.",
-    "parts_only_revision": "2026-10-10: removed the chart, recommendation and long explanations at Howard's request. All 42 original part rows retain quantities, sellers, line prices and product/quote links. Detailed precision, drift, calibration and source conditions remain in the linked comparison; the PDF retains unknown measured timing and open-cost scope. Prices were not refreshed."
+    "parts_only_revision": "2026-10-10: removed the chart, recommendation and long explanations at Howard's request. All 42 original part rows retain quantities, sellers, line prices and product/quote links. Detailed precision, drift, calibration and source conditions remain in the linked comparison; the PDF retains unknown measured timing and open-cost scope. Prices were not refreshed.",
+    "estimated_budget_revision": "2026-10-10: user explicitly requested numeric estimates instead of No price / Request price. Source column says Estimate; estimated parts totals are McGinley 10568.97, SONIC 11607.58, Basic 565.79, Compact 9886.47 USD. Basis in Planning_Estimates_2026-10-10.json. Original October 9 seller-price observations are unchanged."
   }
 }

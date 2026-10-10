@@ -1,6 +1,6 @@
 # Auditory setup comparison: three specialized options
 
-Checked October 9, 2026. One sound output channel, reusing our computer and neural recorder. These are public USD item asking prices; delivery, tax, added tariffs, labor, quote-only TDT parts and unresolved connections are excluded. No price is a delivered quotation or a reservation. The [four-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) keeps the basic option on page 1 and gives each specialized option its own page, prepared for discussion with Dr. Luan. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Detailed source/price record](sources/Accurate_Setup_Prices_2026-10-09.json).
+Checked October 9, 2026. One sound output channel, reusing our computer and neural recorder. These are public USD item asking prices; delivery, tax, added tariffs, labor, quote-only TDT parts and unresolved connections are excluded. No price is a delivered quotation or a reservation. The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) groups basic and compact on page 1, SONIC and McGinley on page 2. It was simplified October 10 for Dr. Luan; this comparison retains the detailed timing and calibration notes. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Detailed source/price record](sources/Accurate_Setup_Prices_2026-10-09.json).
 
 | Version | Known-priced subtotal | With proposed measurement kit | What remains unpriced |
 |---|---:|---:|---|

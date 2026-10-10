@@ -89,3 +89,11 @@ No vendor contact, order, program implementation or hardware execution, equipmen
 - Compared all four LaTeX tables byte-for-byte with the prior committed source: product/quote links, quantities, prices and subtotals are unchanged. All 55 destinations remain, with 69 HTTPS annotations in the exported PDF. Scientific caveats and open costs remain; prices were not refreshed.
 - Exact current source compiled successfully with the native compiler and Tectonic. All four exported pages were rendered and visually inspected; no clipping, overlap, overfull or underfull warnings. Page numbering, revised footer and unchanged source-paper checksum passed integrity checks.
 - Six model tests passed, repository validation checked 360 references and the unchanged manuscript, and the static build produced 35 files. Website source and interactions are unchanged. Temporary renders and compiler resources remain outside Git. No external message, supplier contact, order or experiment was performed.
+
+
+## Two-page parts-only revision, October 10
+
+- Latest user clarification superseded the chart request: deliver only parts lists with brief descriptions. Final PDF has basic/compact on page 1 and SONIC/McGinley on page 2. It retains the quantities, seller conditions, exact prices and buying/quote links for all 42 original rows. No pricing refresh was performed.
+- Programmatic comparison passed all original part tuples and exact subtotal arithmetic. The $2,517.22 marked measurement kit is counted once in each specialized subtotal; required unpriced rows and extra costs are explicit. Detailed timing and calibration evidence remains in the linked supporting comparison; the PDF does not claim measured performance.
+- Native compiler and Tectonic export passed. Both final pages were rendered and visually inspected with no clipping, overlap or layout warnings. PDF checks passed two pages, page numbers, expected costs, 52 HTTPS annotations to 39 destinations and all 38 buying/quote destinations. Independent final review found no material concerns.
+- Six model tests, 360-reference/source validation, unchanged pinned-paper checksum, 35-file static build and whitespace checks passed. Website source did not change. Temporary renders and authoring tools remain outside Git. No supplier contact, external message, order, hardware connection or experiment was performed.

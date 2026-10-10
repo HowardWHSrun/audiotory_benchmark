@@ -1,6 +1,6 @@
 # Auditory setup comparison: three specialized options
 
-The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now puts McGinley and SONIC on page 1, basic and compact on page 2. At Howard's request, previously unpriced required TDT parts have author-set estimates included in the totals. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Estimate basis](sources/Planning_Estimates_2026-10-10.json). [Observed seller-price record](sources/Accurate_Setup_Prices_2026-10-09.json).
+The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now puts McGinley and SONIC on page 1, basic and compact on page 2. Each table now includes a short item description, verified against the [paper, slides and equipment documentation](sources/Item_Purpose_Audit_2026-10-10.md). At Howard's request, previously unpriced required TDT parts have author-set estimates included in the totals. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Estimate basis](sources/Planning_Estimates_2026-10-10.json). [Observed seller-price record](sources/Accurate_Setup_Prices_2026-10-09.json).
 
 ## Current planning parts totals
 

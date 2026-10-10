@@ -18,7 +18,7 @@
 \newcommand{\source}[1]{\par{\footnotesize\color{quiet}#1\par}}
 \newcommand{\option}[2]{\par{\Large\bfseries #1}\par{\normalsize #2}\par\vspace{3pt}}
 \pagestyle{fancy}\fancyhf{}
-\fancyfoot[L]{\footnotesize Auditory setup\quad 9 October 2026}
+\fancyfoot[L]{\footnotesize Auditory setup\quad Revised 10 October 2026}
 \fancyfoot[R]{\footnotesize\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \newenvironment{points}{\begin{list}{$\bullet$}{\setlength{\leftmargin}{1.2em}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{3pt}\setlength{\parsep}{0pt}\setlength{\topsep}{3pt}}}{\end{list}}
@@ -26,8 +26,8 @@
 \raggedright
 {\LARGE\bfseries Auditory setup}\par
 {\large Parts and estimated cost}\par
-\source{9 October 2026. Planned recordings in sedated sheep. Prices are in United States dollars; product names link to sellers. ``No price'' marks a required part whose price needs to be confirmed.}
-Use the basic setup if tones below 20 kilohertz are enough. For the paper's 1.4--32 kilohertz range, I suggest pricing the compact setup on page 4. All options assume we can reuse a compatible lab computer and our neural recorder. Labor and recorder connections are extra.
+\source{Prices checked 9 October 2026. Planned recordings in sedated sheep. Prices are in United States dollars; product names link to sellers. ``No price'' marks a required part whose price needs to be confirmed.}
+I compared a basic audio setup with the SONIC setup, the setup in the McGinley lab slides and a compact alternative. The basic setup may be enough if we only need tones below 20 kilohertz. For the paper's 1.4--32 kilohertz range, I suggest getting the remaining prices for the compact setup on page 4. All options assume we can reuse a compatible lab computer and our neural recorder. Labor and recorder connections are extra.
 \vspace{3pt}
 \option{1. Basic setup}{Parts: \money{346.79}, or \money{565.79} with a sound-level calibrator.}
 Computer $\rightarrow$ sound interface $\rightarrow$ powered speaker. The measurement microphone connects to the sound interface.
@@ -51,21 +51,16 @@ Computer $\rightarrow$ sound interface $\rightarrow$ powered speaker. The measur
 \end{tabularx}}
 
 \begin{points}
-\item With a borrowed calibrator, allow \money{426.79}: parts plus an estimated \money{80} for delivery and tax.
+\item With a borrowed calibrator, the estimated cost is \money{426.79}: parts plus an estimated \money{80} for delivery and tax.
 \item Buying the calibrator brings the allowance to \money{665.79}, including an estimated \money{100} reserve. Both exclude the cable or adapter needed to connect timing markers to our neural recorder; the right connection depends on its inputs.
 \end{points}
 \heading{Timing}
 \begin{points}
 \item Timing error and drift are not known yet. We need to measure when sound reaches the ear and compare that time with the neural recording.
-\item Repeat timing markers throughout a session to check whether the recordings slowly move out of step. The microphone recording must also be aligned with the neural recording.
-\item Use the microphone at the ear to check the level of each tone.
+\item Repeated timing markers would let us check whether the recordings slowly move out of step. The microphone recording would also need to be aligned with the neural recording.
+\item The microphone would let us check the level of each tone at the ear.
 \end{points}
-\heading{For our discussion}
-\begin{points}
-\item What frequency range do we need?
-\item What timing inputs does our recorder have?
-\item Which parts can we borrow, and what budget should we use?
-\end{points}
+I'd appreciate your thoughts on the frequency range and budget. I can check which parts we already have, confirm the recorder connections and get the remaining supplier prices.
 \source{The \money{99} speaker price is a limited-time sale. Delivery/tax reserves are estimates. A sound output cannot be assumed compatible with a digital timing input. For scale: a 256-sample buffer at 48,000 samples per second lasts 5.3 milliseconds; this is not measured interface delay. Air adds about three milliseconds per metre, with further speaker/converter delay. References: \buy{https://portaudio.com/docs/latency.html}{buffering}; \buy{https://www.nti-audio.com/wp-content/uploads/download-manager-files/NTi_Audio_AppNote_Delay_Measurement.pdf}{sound travel}; \buy{https://portaudio.com/docs/v19-doxydocs/structPaStreamInfo.html}{delay estimates}.}
 \newpage
 \option{2. SONIC setup}{Parts with listed prices: \money{7,357.58}.}
@@ -99,9 +94,9 @@ This follows the paper's USB-6361 sound device, SA1 amplifier and MF1 speaker fo
 \item Required parts without confirmed prices: MF1-M speaker, SA1 amplifier and ZB1PS powered enclosure. They are listed above, but their prices must be added to the subtotal.
 \item Other costs: extra adapters or wiring for the measurement kit and our recorder, network wiring, delivery, tax and labor. The recorder connection depends on its inputs.
 \end{points}
-\source{Confirm the speaker kit's included cables and power accessories. The time reference is backordered.}
+\source{The speaker kit's included cables and power accessories still need confirmation. The time reference is backordered.}
 \heading{Lower-cost alternative}
-A \buy{https://www.ebay.com/itm/178144942290}{seller-new 782255-01 on eBay for \money{3,498.95}} would save \money{245.47}. This is an optional replacement for the device above; confirm its accessories and actual condition.
+A \buy{https://www.ebay.com/itm/178144942290}{seller-new 782255-01 on eBay for \money{3,498.95}} would save \money{245.47}. This is an optional replacement for the device above; its accessories and actual condition still need confirmation.
 \heading{Timing}
 \begin{points}
 \item SONIC reports 56 milliseconds for recording, filtering and collecting neural data for the decoder. This excludes sensory processing and computer calculation time.
@@ -142,7 +137,7 @@ The supplied slides use a desktop computer and equipment chassis connected to an
 \item Required part without a confirmed price: ES1 speaker with its matching high-voltage cable. It is listed above, but its price must be added to the subtotal.
 \item Other costs: extra adapters or wiring for the measurement kit and our recorder, any missing chassis power cord, delivery, tax and labor. The recorder connection depends on its inputs.
 \end{points}
-\source{The ED1 bundle already includes its enclosure and power supply. Check the audio board's actual hybrid connector and calibration before buying.}
+\source{The ED1 bundle already includes its enclosure and power supply. The audio board's actual hybrid connector and calibration still need confirmation before purchase.}
 \heading{Timing and frequency range}
 \begin{points}
 \item The ES1 covers 4--110 kilohertz. It cannot cover the paper's 1.4--4 kilohertz tones.
@@ -181,7 +176,7 @@ This is the option I suggest pricing if we need the full paper frequency range. 
 
 \heading{Costs not included}
 \begin{points}
-\item MF2-M speaker, SA1 amplifier and ZB1PS powered enclosure: required parts already listed above, without prices. Add their supplier prices to the subtotal.
+\item MF2-M speaker, SA1 amplifier and ZB1PS powered enclosure: required parts already listed above, without prices. Their supplier prices are not included in the subtotal.
 \item Other costs: the recorder connection, delivery, tax and labor.
 \end{points}
 \source{Device power/cable and speaker stand/cable are included. Microphone wiring and bias returns need review.}
@@ -192,6 +187,6 @@ The \buy{https://www.bhphotovideo.com/c/product/803529754-USE/sound_devices_mm_1
 \item Timing error and drift are unknown. One possible test target is to align sound-arrival timestamps with the neural recording within one millisecond after correction. This has not been demonstrated; it is different from SONIC's processing delay.
 \item The speaker is rated for 1--80 kilohertz and the microphone to 50 kilohertz. The calibrator's 0.5-decibel specification applies at one kilohertz only, not across all our tones.
 \end{points}
-\source{The setup has not been built or validated. Check repeated markers, sound arrival and converter channel offsets; full-band sound-level accuracy at the ear remains unmeasured. The sound device's clock scale is 180 milliseconds per hour versus ideal time, typical at 25 degrees Celsius; actual recorder-relative drift is unknown. Arduino or a field-programmable gate array would still need the analog sound hardware, acoustic calibration and program development.}
+\source{The setup has not been built or validated. Timing tests would need to compare repeated markers, sound arrival and converter channel offsets; full-band sound-level accuracy at the ear remains unmeasured. The sound device's clock scale is 180 milliseconds per hour versus ideal time, typical at 25 degrees Celsius; actual recorder-relative drift is unknown. Arduino or a field-programmable gate array would still need the analog sound hardware, acoustic calibration and program development.}
 \source{References: \buy{https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/}{speaker}; \buy{https://earthworksaudio.com/measurement-microphones/m50/}{microphone}; \buy{https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information}{microphone amplifier}; \buy{https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf}{calibrator}; \buy{https://download.ni.com/support/manuals/374650c.pdf}{sound device}; \buy{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/Accurate_Setup_Comparison_2026-10-09.md}{detailed comparison}.}
 \end{document}

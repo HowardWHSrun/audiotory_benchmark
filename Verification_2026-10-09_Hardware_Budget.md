@@ -81,3 +81,11 @@ No vendor contact, order, program implementation or hardware execution, equipmen
 - Final LaTeX compiled with both native and Tectonic compilers. All four final pages were rendered and visually inspected; no clipping, overlap or layout warnings. A temporary fifth page containing only references was corrected before export. Main timing notes are shorter; source notes retain 56/11-millisecond boundaries, conditional clock/filter values, full-band calibration limits and the untested alignment target. Pinned paper checksum is unchanged. Independent review found no lost material caveat; its connection/compatibility clarifications were incorporated.
 - This is an editorial change, not a new pricing survey, complete budget, purchase or measured result. Temporary checkers and renders remain outside Git. Website source and interactions are unchanged.
 - Final repository checks passed: six model tests, 360-reference/source validation, 35-file static build and diff whitespace check. No external message, supplier contact, order or experiment was performed.
+
+
+## October 10 wording revision for Dr. Luan
+
+- Removed the agenda-style heading and questions; revised directives into descriptions and suggestions. The document now reads as Howard’s setup update and recommendation to Dr. Luan. Independent read-only review found no material tone or content concerns.
+- Compared all four LaTeX tables byte-for-byte with the prior committed source: product/quote links, quantities, prices and subtotals are unchanged. All 55 destinations remain, with 69 HTTPS annotations in the exported PDF. Scientific caveats and open costs remain; prices were not refreshed.
+- Exact current source compiled successfully with the native compiler and Tectonic. All four exported pages were rendered and visually inspected; no clipping, overlap, overfull or underfull warnings. Page numbering, revised footer and unchanged source-paper checksum passed integrity checks.
+- Six model tests passed, repository validation checked 360 references and the unchanged manuscript, and the static build produced 35 files. Website source and interactions are unchanged. Temporary renders and compiler resources remain outside Git. No external message, supplier contact, order or experiment was performed.

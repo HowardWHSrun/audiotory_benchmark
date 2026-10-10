@@ -10,7 +10,7 @@ The homepage shows **our planned experiment** in one diagram. Select a component
 
 ![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)
 
-**For Dr. Luan:** [four-page parts and budget PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) · [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). Explicit quantities, linked prices, comparable measurement-kit subtotals, timing limits and meeting decisions. Required supplier quotes remain outside the subtotals.
+**For Dr. Luan:** [four-page parts and budget PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) · [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). Howard's setup update, with quantities, linked prices, comparable measurement-kit subtotals and timing limits. Required supplier quotes remain outside the subtotals. Wording revised October 10; prices checked October 9.
 
 ## Current direction
 

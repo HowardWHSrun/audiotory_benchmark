@@ -227,3 +227,11 @@ Complete the Rice inventory, confirm the sheep recording interface and geometry,
 - Howard found “Still needed” confusing. Required parts without confirmed prices now say “No price” in the table, with a plain definition on page 1. “Costs not included” names those parts and lists connection/delivery/tax/labor costs separately. “Lower-cost alternative” identifies optional replacements rather than implying they are missing parts. Main dollar figures are labeled “Parts with listed prices.”
 - Simplified the main timing notes while retaining detailed component figures and conditions in source notes. Clarified that reuse of a compatible computer is an assumption and that the additional microphone connection cost means adapters/wiring beyond the cable already included in the kit. No item quantities, numeric prices or subtotals changed.
 - Final repository checks passed: six model tests, 360-reference/source validation, 35-file static build and diff whitespace check. No external message, supplier contact, order or experiment was performed.
+
+
+## 2026-10-10 America/Chicago - tone revision for Dr. Luan
+
+- Howard asked that the parts list fit a student-to-professor conversation. Removed “For our discussion” and its question checklist. The opening now presents Howard’s comparison and recommendation; the short closing asks for Dr. Luan’s thoughts and offers follow-up work. Instruction-like wording elsewhere now describes requirements and possible checks.
+- Prices remain the October 9 snapshot. Exact tables, quantities, line prices, subtotals, required unpriced parts and all 55 link destinations are unchanged. The footer distinguishes the October 10 wording revision from the price-check date. Timing and calibration limitations remain explicit.
+- Native compilation and Tectonic export passed. All four pages were rendered and visually inspected without clipping, overlap or layout warnings. Integrity checks passed unchanged tables, 69 HTTPS annotations, revised wording/date and the unchanged pinned-paper checksum. Independent tone/content review found no material concerns.
+- Six existing model tests, 360-reference validation, the 35-file static build and whitespace review passed. Website source did not change. No price refresh, supplier contact, external message, purchase or hardware measurement was performed.

@@ -10,7 +10,10 @@
     "locators": "Section 3, Table 1, p.7; Sections 6.3-6.6, pp.11-13",
     "recording_channels": 421,
     "neural_samples_per_second_per_channel": 5200,
-    "mean_achieved_itr_bits_per_second": {"C": 201.9, "E": 230.1},
+    "mean_achieved_itr_bits_per_second": {
+      "C": 201.9,
+      "E": 230.1
+    },
     "task": "10 ms pure-tone sequences in two selected awake, alert sheep; intracortical A1 recording and held-out decoding",
     "note": "Achieved ITR is conditional on stimuli, recording site, processing and decoder. It is not raw digital streaming throughput."
   },
@@ -32,7 +35,10 @@
         "sorted_units": 1355,
         "stimulus": "drifting visual gratings in 24 directions",
         "presentation_seconds": 0.5,
-        "optimal_response_window_ms_after_onset": [200, 600],
+        "optimal_response_window_ms_after_onset": [
+          200,
+          600
+        ],
         "mean_angular_error_degrees": 2.3
       },
       "sonic_style_auditory_itr": "Not reported in this paper",
@@ -65,5 +71,51 @@
   },
   "conclusion": "No directly comparable SONIC-style auditory ITR was located in the relevant published work checked. This does not establish absence of unpublished lab results. More channels and faster sampling alone cannot predict whether a Rice experiment would exceed 201.9 or 230.1 bits/s.",
   "professor_question": "Have we measured held-out tone decoding and bias-corrected bits/s on our system, or do we currently have recording and evoked-response validation only?",
-  "verification": "Primary publisher text and public author manuscript checked; numerical comparison independently calculated; independent source review agreed. No website, review PDF, older preparation record, neighboring project or source manuscript changed."
+  "verification": "Primary publisher text and public author manuscript checked; numerical comparison independently calculated; independent source review agreed. No website, review PDF, older preparation record, neighboring project or source manuscript changed.",
+  "probe_comparison": {
+    "user_clarification": {
+      "date": "2026-10-15",
+      "family": "Penetrating NET threads",
+      "evidence": "Howard selected penetrating NET threads in this chat; exact revision and implant configuration remain unspecified."
+    },
+    "sonic_connexus": {
+      "source_locator": "Saved SONIC v1, Sections6.6-6.7,p13",
+      "geometry": "Solid platinum-iridium penetrating pins, Parylene-C insulated with deinsulated recording tips",
+      "channels": 421,
+      "array_diameter_mm": 7,
+      "overall_cortical_module_diameter_mm": 10,
+      "nominal_electrode_length_mm": 1.5,
+      "electrode_body_diameter_um": 40,
+      "neighbor_spacing_um": 300,
+      "estimated_a1_contacts": {
+        "C": 334,
+        "E": 341
+      },
+      "limits": "Nominal pin length is not verified insertion depth. Exposed tip area and quantitative stiffness are absent. Anatomical A1 coverage estimates are not functional channel yield."
+    },
+    "published_net_type_I": {
+      "reference": "Zhao et al.,2023 issue; public author manuscript Results p3 and Methods pp10-11",
+      "role": "Representative published lab NET design, not a verified specification for Howard's exact probe",
+      "module_channels": 128,
+      "shanks_per_module": 8,
+      "sites_per_shank": 16,
+      "shank_thickness_um": 1,
+      "shank_width_taper_um": [
+        60,
+        30
+      ],
+      "square_contact_side_um": 25,
+      "along_shank_contact_pitch_um": 60,
+      "between_shank_center_spacing_um": 150,
+      "approximately_sampled_vertical_plane_mm": [
+        1,
+        1
+      ],
+      "contact_material": "Gold with PEDOT:PSS coating",
+      "insertion": "Temporary 25um-diameter tungsten shuttles, removed after implantation",
+      "first_to_last_site_center_span_um_derived": 900,
+      "limits": "Contact square edge length is not a diameter; shank thickness is not cylindrical diameter; vertical-plane coverage is not physical shank length. Shank/module spacing and along-depth contact spacing are distinct axes. More contacts, closer placement and flexibility do not by themselves establish higher auditory ITR."
+    },
+    "interpretation": "Both are penetrating extracellular recording technologies. NET sites run along a flexible shank and allow depth-distributed sampling; Connexus records at the exposed tips of an array of metal pins. Published NET rodent studies support months-long recording stability, but no head-to-head Connexus comparison or Rice SONIC result is established. The 5376-channel surface micro-ECoG demonstration is a separate probe modality and is not Howard's selected penetrating NET family."
+  }
 }

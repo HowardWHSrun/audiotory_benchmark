@@ -54,3 +54,8 @@ The project includes a visual experiment walkthrough. Illustrative sounds, figur
 For Xiaorong and Jiaao's visual assessment, establish the current animal/setup before listing display/stimulus software, refresh timing, photodiode/onset measurement and synchronization. These details remain unknown.
 
 Lan also states that rodent sound isolation is unnecessary because comparable isolation is unavailable for sheep. Document background conditions in either case. McGinley students' informal surgery-feasibility impression is not a procedure or documented surgical plan. A possible craniotomy observation remains undated and unbooked.
+
+
+## Probe-family clarification - October 15, 2026
+
+Howard confirmed that the planned probes are **penetrating NET threads**, rather than the surface micro-ECoG array discussed in the 2026 platform paper. The exact NET design/revision, site dimensions, implantation geometry, connected channel count and recorder interfaces still need confirmation. Published NET dimensions are comparison references, not verified specifications of our particular devices. See [the probe comparison](sources/Luan_Lab_SONIC_Comparison_2026-10-15.json).

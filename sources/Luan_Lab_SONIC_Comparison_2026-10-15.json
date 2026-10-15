@@ -1,0 +1,69 @@
+{
+  "review_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "question": "How do published Lan Luan lab recording and decoding values compare with SONIC?",
+  "scope": "Published platforms coauthored by Rice's Lan Luan. These sources do not identify Howard's installed or available recorder/probe, or establish a Rice auditory ITR.",
+  "sonic": {
+    "source": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "doi": "10.1101/2025.09.30.679683",
+    "version": "bioRxiv v1, posted 2025-10-02",
+    "locators": "Section 3, Table 1, p.7; Sections 6.3-6.6, pp.11-13",
+    "recording_channels": 421,
+    "neural_samples_per_second_per_channel": 5200,
+    "mean_achieved_itr_bits_per_second": {"C": 201.9, "E": 230.1},
+    "task": "10 ms pure-tone sequences in two selected awake, alert sheep; intracortical A1 recording and held-out decoding",
+    "note": "Achieved ITR is conditional on stimuli, recording site, processing and decoder. It is not raw digital streaming throughput."
+  },
+  "luan_coauthored_platforms": [
+    {
+      "citation": "Zhao et al. Ultraflexible electrode arrays for months-long high-density electrophysiological mapping of thousands of neurons in rodents. Nature Biomedical Engineering 7, 520-532 (2023).",
+      "online_publication_date": "2022-10-03",
+      "issue_date": "2023-04",
+      "doi": "10.1038/s41551-022-00941-y",
+      "publisher_url": "https://www.nature.com/articles/s41551-022-00941-y",
+      "public_author_manuscript_url": "https://escholarship.org/content/qt9pf3m6nk/qt9pf3m6nk.pdf",
+      "locators": "Author manuscript printed pp.3-4: channel counts; p.6/Fig.4: visual decoding; p.12: acquisition; pp.13-14: visual stimuli and decoding. The repository PDF adds one cover page.",
+      "maximum_simultaneously_monitored_channels": 2304,
+      "neural_samples_per_second_per_channel": 20000,
+      "visual_decoding_example": {
+        "animal": "one awake mouse",
+        "implanted_contacts": 1280,
+        "contacts_connected_after_surgery": 1036,
+        "sorted_units": 1355,
+        "stimulus": "drifting visual gratings in 24 directions",
+        "presentation_seconds": 0.5,
+        "optimal_response_window_ms_after_onset": [200, 600],
+        "mean_angular_error_degrees": 2.3
+      },
+      "sonic_style_auditory_itr": "Not reported in this paper",
+      "limits": "Maximum platform channels are not the channel count in every demonstration. Sorted units are not equivalent to electrode contacts and include single and multi units. Visual angular error cannot be ranked against SONIC tone accuracy or bits/s."
+    },
+    {
+      "citation": "Fan et al. High-channel-count neural recording and stimulation platform with 5376 simultaneous recording channels. npj Biomedical Innovations 3, 46 (2026).",
+      "publication_date": "2026-08-03",
+      "doi": "10.1038/s44385-026-00103-8",
+      "publisher_url": "https://www.nature.com/articles/s44385-026-00103-8",
+      "lab_publication_entry": "https://www.luanlab.net/Items/41",
+      "locators": "Results: ASIC architecture and electrical benchmarks/Fig.2; Fig.4h; In vivo cortical mapping/Fig.5; Discussion; Methods: ASIC design and Brain mapping experiments",
+      "supported_simultaneous_acquisition_channels": 5376,
+      "neural_samples_per_second_per_channel": 20000,
+      "adc_bits": 12,
+      "reported_raw_streaming_bits_per_second_approximately": 1300000000,
+      "animal_demonstration": "Acute rat cortical surface micro-ECoG; mechanically evoked whisker, limb and trunk response maps",
+      "sonic_style_auditory_itr": "Not reported in this paper",
+      "limits": "Demonstration records population field potentials, not the same signal modality as SONIC intracortical spike-band features. Four of 84 ASIC columns are configured as electrical reference banks, and reported impedance yield is 92%; supported acquisition slots do not equal independently validated tissue contacts. Single-unit validation and in vivo electrical stimulation are future work."
+    }
+  ],
+  "derived_hardware_comparison": {
+    "sonic_voltage_samples_per_second": 2189200,
+    "fan_platform_nominal_voltage_samples_per_second": 107520000,
+    "fan_to_sonic_supported_channel_ratio": 12.76959619952494,
+    "fan_to_sonic_per_channel_sampling_ratio": 3.8461538461538463,
+    "fan_to_sonic_nominal_sample_count_ratio": 49.113831536634386,
+    "fan_nominal_12_bit_sample_payload_bits_per_second_before_framing": 1290240000,
+    "interpretation": "These are arithmetic comparisons of acquisition specifications, not predictions of recovered sensory information or ITR superiority."
+  },
+  "conclusion": "No directly comparable SONIC-style auditory ITR was located in the relevant published work checked. This does not establish absence of unpublished lab results. More channels and faster sampling alone cannot predict whether a Rice experiment would exceed 201.9 or 230.1 bits/s.",
+  "professor_question": "Have we measured held-out tone decoding and bias-corrected bits/s on our system, or do we currently have recording and evoked-response validation only?",
+  "verification": "Primary publisher text and public author manuscript checked; numerical comparison independently calculated; independent source review agreed. No website, review PDF, older preparation record, neighboring project or source manuscript changed."
+}

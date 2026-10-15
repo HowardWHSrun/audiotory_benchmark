@@ -29,13 +29,13 @@
     }
     const anchorTarget = document.getElementById(view);
     const anchorView = anchorTarget && anchorTarget.closest('.view');
-    if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper', 'parts'].includes(view)) return;
+    if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper', 'parts', 'compare'].includes(view)) return;
     const showResults = view === 'results';
     // Existing shared links continue to work after moving the Rice setup home.
-    view = view === 'parts' ? 'parts' : view === 'paper' || view === 'results' ? 'paper' : 'setup';
+    view = view === 'parts' || view === 'compare' ? view : view === 'paper' || view === 'results' ? 'paper' : 'setup';
     $$('.view').forEach((section) => { section.hidden = section.id !== view; });
     $$('.nav-tab').forEach((button) => {
-      const active = button.dataset.view === view;
+      const active = button.dataset.view === view || view === 'compare' && button.dataset.view === 'parts';
       button.classList.toggle('active', active);
       if (active) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');

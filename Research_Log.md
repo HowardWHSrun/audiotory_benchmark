@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-15 America/Chicago - compare all parts across the lists
+
+- Added [Compare all lists](https://howardwhsrun.github.io/audiotory_benchmark/web/#compare) as a separate view reached from the parts-page heading. The single table contains all 37 unique parts/photos in the existing three groups, with Basic, NI/Compact, McGinley, SONIC and budget-candidate columns. Each cell retains its own list's price, quantity, estimate flag and source/date. Shared parts are shaded; absent items are marked as not listed.
+- Kept distinct NI connector variants, MF1/MF2 and the ED1 bundle. Preserved Basic's calibrator purchase and all original totals. The $649.97 candidate value is explicitly a two-device subtotal. The comparison makes no compatibility or precision ranking.
+- [Verification](docs/verification/2026-10-15_Parts_Comparison.json) reconciles all rendered column sums/counts and 37 unique rows, checks sticky names/headings/totals at desktop, tablet and phone widths, and verifies comparison/back links plus legacy routes. All 11 existing automated checks, JavaScript syntax, source validation, build and whitespace checks passed. No hardware activity, vendor contact or order occurred.
+
 ## 2026-10-15 America/Chicago - organize parts by function
 
 - Grouped each setup gallery into sound hardware, sound measurement, and connections/power, with waveform and sound hardware first. Kept the two budget candidates as a simple two-part gallery. Aligned the part captions and retained the large photos, short functions, quantities, source links and prices.

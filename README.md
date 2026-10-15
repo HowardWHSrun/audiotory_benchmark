@@ -8,6 +8,8 @@ The homepage shows **our planned experiment** in one diagram. Select a component
 
 **[Open the parts and prices](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts)**: choose a setup to see large product pictures, short functions and prices. Every listed part has an image. The setup lists are grouped into sound hardware, sound measurement, and connections/power; the McGinley tab also links the original lab screenshots. Estimates are marked; each list has its own total. Basic uses the October 15 price refresh, with specialized budgets and newer consumer candidates kept separate.
 
+**[Compare all five lists](https://howardwhsrun.github.io/audiotory_benchmark/web/#compare)**: one table aligns all 37 parts, their functions and each list's quantities/prices. Shared parts are shaded; dashes mean not listed. The budget-candidate column is a two-device subtotal. Names, headings and totals stay visible while scrolling.
+
 **Paper reference** keeps the setup, illustration, and results in collapsed sections. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
 
 ![Our planned auditory experiment with sound, calibration, and neural recording paths](docs/images/walkthrough.png)

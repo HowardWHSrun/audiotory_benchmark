@@ -32,7 +32,8 @@ def validate():
     if not PAPER.exists() or sha256(PAPER.read_bytes()).hexdigest() != PAPER_SHA256:
         errors.append("Pinned SONIC v1 PDF is missing or its bytes changed.")
     required = ["web/index.html", "web/styles.css", "web/app.js", "web/model.js",
-                "web/parts.css", "web/parts.js", "web/parts-data.js", "web/assets/parts/sources.json"]
+                "web/parts.css", "web/parts.js", "web/parts-data.js", "web/assets/parts/sources.json",
+                "web/compare.js", "web/compare.css"]
     for name in required:
         if not (ROOT / name).is_file():
             errors.append(f"Missing application file: {name}")

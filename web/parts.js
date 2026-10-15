@@ -30,6 +30,7 @@
     { id:'measurement', title:'Sound measurement', parts:['emm6','m50','mm1','omnimic40k','r8090','mic-stand'] },
     { id:'connections', title:'Connections & power', parts:['pxie8360','pcie8361','mxi-cable','shc68-cable','bnc2090a','tm2500c','hmic010','hss005','pomona-output','phx106','bnc-output','bias-resistor','zb1ps','ni-power-supply','ni-power-cord','ni-usb-cable','ni-ferrite','aa-battery'] }
   ];
+  window.AuditoryPartsCatalog = {names,functions,groups};
   function card(p,candidate) {
     return `<li class="part-card" data-part-id="${p.id}"><a class="part-photo" href="${esc(p.url)}" target="_blank" rel="noopener" aria-label="Product source: ${esc(p.name)}">${picture(p)}</a><div class="part-caption"><h3>${esc(names[p.id] || p.name)}</h3><div class="part-price">${money(p.price)}${p.kind === 'estimate' ? '<small class="estimated-price">est.</small>' : ''}${p.qty>1 ? `<small>${p.qty} × ${money(p.unitPrice)}</small>` : ''}${candidate ? `<small>${p.id === 'edifier-mr3' ? 'powered pair' : 'package'}</small>` : ''}</div></div><p class="part-function">${esc(functions[p.id] || p.role)}</p></li>`;
   }

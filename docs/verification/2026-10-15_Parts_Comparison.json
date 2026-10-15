@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "route": "web/#compare",
+  "entry": "Compare all lists button on the parts page; Back to parts returns to the gallery",
+  "scope": "Exact parts across Basic, NI/Compact, McGinley, SONIC and the two budget candidates",
+  "rows": 37,
+  "images": 37,
+  "groups": ["Sound hardware", "Sound measurement", "Connections & power"],
+  "column_checks": {
+    "Basic": {"present_lines": 7, "sum": 558.84},
+    "NI_Compact": {"present_lines": 14, "sum": 9886.47},
+    "McGinley": {"present_lines": 17, "sum": 10568.97},
+    "SONIC": {"present_lines": 16, "sum": 11607.58},
+    "Budget_candidates": {"present_lines": 2, "sum": 649.97, "label": "2-device subtotal"}
+  },
+  "source_handling": "Each comparison cell uses the original list entry's line price, quantity, estimate flag, seller/date and source URL. OmniMic uses its recorded retailer catalog price link. Product names/functions/groups are shared with the gallery. USB-6361 connector variants and MF1/MF2 remain separate; ED1 enclosure/power bundle remains intact. No compatibility or performance ranking is implied.",
+  "verification": {
+    "tests": "11/11 existing model, budget and photo checks passed",
+    "syntax": "app.js, parts.js and compare.js passed node --check",
+    "static": "Source validation, static build and git diff --check passed; pinned manuscript unchanged",
+    "browser": "Codex in-app browser through the supported CUA API, local HTTP preview",
+    "default_desktop_client_width": 1265,
+    "responsive_viewport_overrides": [768, 390, 320],
+    "responsive_client_widths": [753, 375, 305],
+    "contents": "37 unique DOM row IDs and 37 images. Rendered price-cell counts and sums match all five source lists. No loaded image failures observed.",
+    "layout": "No page horizontal overflow. On desktop all five lists fit. Smaller layouts scroll inside the table; product names, column headings and totals stay visible. First and last columns were inspected at the narrowest width.",
+    "interaction": "Horizontal and vertical table scrolling, Back to parts, Compare all lists, active Parts navigation, direct #compare, legacy #experiment and #results routes passed.",
+    "source_check": "OmniMic numeric price link resolves to its recorded Parts Express catalog URL; two reference-photo labels remain visible.",
+    "visual_review": "Default desktop, tablet and both phone sizes inspected. Browser captures remain temporary."
+  },
+  "evidence_boundary": "Prices retain their dated observation/estimate basis. Dash means not listed in that option, not unnecessary. Candidate subtotal includes only two devices and omits NI/connections. This page adds no sound, hardware control, purchase, bench result or animal protocol."
+}

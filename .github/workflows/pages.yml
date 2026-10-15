@@ -31,6 +31,7 @@ jobs:
           node --check web/app.js
           node --check web/parts-data.js
           node --check web/parts.js
+          node --check web/compare.js
       - name: Validate source and links
         run: python3 scripts/validate_site.py
       - name: Build static walkthrough

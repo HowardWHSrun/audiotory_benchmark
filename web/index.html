@@ -8,6 +8,7 @@
   <title>Rice auditory experiment · SONIC reference</title>
   <link rel="stylesheet" href="styles.css?v=20261007-minimal">
   <link rel="stylesheet" href="parts.css?v=20261015-groups">
+  <link rel="stylesheet" href="compare.css?v=20261015">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,7 +45,7 @@
       </dialog>
     </section>
     <section class="view parts-view" id="parts" aria-labelledby="parts-title" hidden>
-      <div class="parts-heading"><h1 id="parts-title">Parts &amp; prices.</h1></div>
+      <div class="parts-heading"><h1 id="parts-title">Parts &amp; prices.</h1><button type="button" class="compare-link" data-go-view="compare">Compare all lists <span aria-hidden="true">↗</span></button></div>
       <nav class="parts-options" aria-label="Choose a parts list">
         <button type="button" data-parts-option="basic" aria-pressed="true">Basic</button>
         <button type="button" data-parts-option="compact" aria-pressed="false">NI / Compact</button>
@@ -55,6 +56,12 @@
       <div id="parts-list" aria-live="polite"></div>
       <p class="parts-footnote">USD · Dated prices; estimates marked “est.” · Shipping, tax and recorder adapters extra. <a href="../sources/Audio_Setup_Budget_Precision_2026-10-15.json">Price sources</a> · <a href="assets/parts/sources.json">Photo credits</a></p>
       <noscript><p><a href="../Accurate_Setup_Comparison_2026-10-09.md">Read the itemized parts list</a>.</p></noscript>
+    </section>
+    <section class="view compare-view" id="compare" aria-labelledby="compare-title" hidden>
+      <div class="parts-heading"><h1 id="compare-title">Compare parts.</h1><button type="button" class="compare-link" data-go-view="parts"><span aria-hidden="true">←</span> Back to parts</button></div>
+      <div id="comparison-table" class="comparison-scroll" role="region" aria-label="Compare all five parts lists" aria-describedby="comparison-note" tabindex="0"></div>
+      <p id="comparison-note" class="comparison-note">USD · Prices are for the listed quantities. <strong>est.</strong> = planning estimate. <strong>—</strong> = not listed in that option. Budget candidates are two devices, not a complete setup.</p>
+      <p class="parts-footnote">Prices retain their recorded dates; shipping, tax, recorder adapters and labor are extra. <a href="../sources/Audio_Setup_Budget_Precision_2026-10-15.json">Budget record</a> · <a href="../sources/Consumer_Ultrasonic_Speakers_2026-10-15.json">Speaker candidates</a> · <a href="../sources/Microphone_32kHz_NI_Comparison_2026-10-15.json">Microphone candidates</a> · <a href="assets/parts/sources.json">Photo credits</a><span class="comparison-swipe"> · Scroll sideways to compare all lists.</span></p>
     </section>
     <section class="view paper-view" id="paper" aria-labelledby="paper-title" hidden>
       <div class="intro paper-intro"><h1 id="paper-title">The SONIC paper.</h1><p class="lede">A tone-decoding benchmark in awake sheep. Explore its published setup, signal flow, and measured results.</p></div>
@@ -115,7 +122,8 @@
   <footer class="site-footer"><span>Rice research</span><div><a href="../sources/SONIC_2025_bioRxiv_v1.pdf" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.1101/2025.09.30.679683" target="_blank" rel="noopener">Source ↗</a><a id="github-link" href="https://github.com/HowardWHSrun/audiotory_benchmark" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
   <script src="model.js"></script>
   <script src="parts-data.js?v=20261015"></script>
-  <script src="app.js?v=20261015-simple"></script>
-  <script src="parts.js?v=20261015-groups"></script>
+  <script src="app.js?v=20261015-compare"></script>
+  <script src="parts.js?v=20261015-compare"></script>
+  <script src="compare.js?v=20261015"></script>
 </body>
 </html>

@@ -43,9 +43,10 @@
       "Default home and entry to parts list",
       "Legacy #experiment route",
       "Paper sections collapsed by default",
-      "Paper window control"
+      "Paper window control",
+      "Grouped parts preserve the exact source item set without omissions or duplicates"
     ],
-    "visual_inspection": "Desktop Basic and full McGinley galleries, narrow Basic gallery, and SONIC reference-image framing inspected. Captures remain ignored temporary files."
+    "visual_inspection": "Grouped desktop Basic and McGinley galleries inspected; all five lists checked at desktop, tablet and phone widths. Captures remain ignored temporary files."
   },
   "images": "All 37 unique listed parts have sourced product images; no placeholder icons remain. Two NI accessory photos are visibly marked Reference photo. Per-file URLs, family-photo limits and configuration caveats are in web/assets/parts/sources.json.",
   "evidence_boundary": "Prices are dated planning observations/estimates. Equipment inventory, borrowed availability, recorder interfaces, source-to-speaker bandwidth, acoustic accuracy and neural alignment remain unverified. OmniMic is a separate USB calibration candidate, not a validated direct-NI microphone replacement. Rice sedation differs from the awake SONIC preparation.",
@@ -64,5 +65,14 @@
     ],
     "coverage": "All 10 sound-chain parts from the original slides are present with pictures, as are the 7 measurement/accessory additions in the 17-line basket. Reused desktop and own neural recorder remain outside the priced sound basket.",
     "status": "Original saved images inspected; preserved unchanged and linked from the McGinley tab."
+  },
+  "organization": {
+    "groups": [
+      "Sound hardware",
+      "Sound measurement",
+      "Connections & power"
+    ],
+    "ordering": "Waveform source and sound hardware first; microphone/calibration hardware next; interfaces, cables and power last. The two budget candidates remain a simple two-part gallery.",
+    "coverage": "Browser verification compares rendered product IDs to every source item: no missing or duplicated parts in any list; photos, quantities and totals preserved."
   }
 }

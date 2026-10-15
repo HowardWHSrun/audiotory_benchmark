@@ -1,5 +1,10 @@
 # Research log
 
+## 2026-10-15 America/Chicago - organize parts by function
+
+- Grouped each setup gallery into sound hardware, sound measurement, and connections/power, with waveform and sound hardware first. Kept the two budget candidates as a simple two-part gallery. Aligned the part captions and retained the large photos, short functions, quantities, source links and prices.
+- Browser checks at 1440, 768, 390 and 320 pixels confirm every list matches its complete source item set, with no missing/duplicated parts, broken images, changed totals, page overflow or browser errors. Existing routes and paper controls still pass. All 11 automated checks, syntax checks, source validation and static build passed.
+
 ## 2026-10-15 America/Chicago - larger pictures for every part
 
 - Replaced the small-thumbnail table with a sparse gallery: large product image, part name, short function and price. Kept all five lists, quantities and totals. Filled the 23 missing images so every one of the 37 unique listed parts has a sourced picture; replaced the M50 lifestyle shot with its official product image.

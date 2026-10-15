@@ -1,0 +1,52 @@
+{
+  "checked_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "currency": "USD",
+  "purpose": "Howard asked for a budget speaker alternative to JBL and a simple explanation of +/-dB frequency response.",
+  "scope": "Candidate audible-band speakers for bench evaluation. No assembled acoustic performance or animal protocol is established. No product is qualified for the full SONIC frequency range by these listings.",
+  "candidates": [
+    {
+      "model": "Creative Pebble, original 2.0 model",
+      "product_url": "https://us.creative.com/p/speakers/creative-pebble",
+      "package": "Pair; built-in amplification; analog 3.5 mm audio input and USB power",
+      "manufacturer_nominal_frequency_hz": [100, 17000],
+      "frequency_tolerance_db": null,
+      "price_observation": "Manufacturer search retrieval shows 20.99 USD promotional price and 24.99 USD reference price, with 5.50 USD shipping displayed. Described conversationally as about 21-25 USD per pair before delivery/tax.",
+      "retrieval_limit": "Full manufacturer product text and specs recovered via search. Direct opening returned 403. Separate cached catalog availability/price conflicts with the product result; current purchasability and checkout total are unconfirmed.",
+      "role": "Much cheaper candidate for selected audible bench tones; reduced high-frequency coverage. Any interface-to-3.5 mm adapter and suitable USB power are additional configuration checks.",
+      "limit": "Not a substitute for the paper's tones extending to 27-32 kHz. Published nominal band has no retrieved +/-dB flatness tolerance, and no measured level/distortion/timing at the reference position."
+    },
+    {
+      "model": "Mackie CR3.5, Gen 3",
+      "product_url": "https://www.sweetwater.com/store/detail/CR35--mackie-cr3.5-3.5-inch-powered-studio-monitors",
+      "manufacturer_manual_url": "https://mackie.com/img/file_resources/CR_SERIES%20%28Gen3%29_MONITORS_OM.pdf",
+      "package": "Pair; one powered cabinet drives its passive companion; analog TRS/RCA/3.5 mm connections",
+      "observed_price_usd": 99.99,
+      "observed_availability": "In stock displayed on retrieved retailer page; unreserved",
+      "manufacturer_response_hz_minus3db": [70, 20000],
+      "manufacturer_response_hz_minus10db": [60, 20000],
+      "source_location": "Manufacturer manual Appendix B, printed page 18",
+      "limit": "Manufacturer uses -3 dB and -10 dB endpoint response labels; do not rewrite these as a verified +/-3 dB whole-band flatness guarantee. Price is for the pair, not a single cabinet. This does not reduce the purchase cost versus one 99 USD JBL."
+    }
+  ],
+  "JBL_reference": {
+    "model": "JBL 305P MkII",
+    "product_url": "https://www.sweetwater.com/store/detail/LSR305MK2--jbl-305p-mkii-5-inch-powered-studio-monitor",
+    "observed_price_usd_each": 99.00,
+    "observed_availability": "In stock, limited-time offer displayed; unreserved",
+    "package": "One powered speaker; two would be 198 USD before delivery/tax. Our basic comparison uses one.",
+    "manufacturer_spec_url": "https://www.jbl.com.mx/studio-monitors/305PMKII.html",
+    "response_hz_plus_minus3db": [49, 20000]
+  },
+  "plus_minus_db_explanation": {
+    "meaning": "Variation in the speaker's output versus a response reference across the specified frequency band under test conditions, using the same electrical input level. Not a measure of pitch error, timing error or random volume variation from trial to trial.",
+    "hypothetical_example": "If the response reference were 70 dB SPL, +/-3 dB would correspond to 67-73 dB SPL under that illustration's conditions. This is a teaching example, not a selected exposure level or a prediction for the animal position.",
+    "comparison_limit": "Smaller +/-dB means a flatter response only when comparing similar frequency bands and measurement conditions. JBL +/-3 dB over 49 Hz-20 kHz and MF1 +/-13 dB over 1-65 kHz cover different bands.",
+    "calibration": "Measure retained tones at fixed reference geometry and adjust per-frequency waveform levels. This can improve level matching within output/distortion limits; factory response figures are not assembled absolute SPL uncertainty."
+  },
+  "screened_but_not_selected": [
+    {"model": "PreSonus Eris 3.5 Gen 2", "reason": "Retailer results conflict between expired 99.99 USD promotion ending October 1 and 114.99 USD listing; neither establishes savings versus one 99 USD JBL.", "manufacturer_url": "https://www.presonus.com/products/eris-35-2nd-gen-pair"},
+    {"model": "Monoprice DT-3", "reason": "Manufacturer search listing 139.99 USD, not a cheaper upfront alternative to one 99 USD JBL.", "manufacturer_url": "https://www.monoprice.com/product?p_id=36571"}
+  ],
+  "actions": "Public-source research only; no purchase, vendor contact, hardware connection or experimental measurement. Earlier budgets and PDFs are unchanged."
+}

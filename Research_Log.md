@@ -1,5 +1,12 @@
 # Research log
 
+## 2026-10-15 America/Chicago - larger pictures for every part
+
+- Replaced the small-thumbnail table with a sparse gallery: large product image, part name, short function and price. Kept all five lists, quantities and totals. Filled the 23 missing images so every one of the 37 unique listed parts has a sourced picture; replaced the M50 lifestyle shot with its official product image.
+- Reopened both saved McGinley screenshots, verified all 10 original sound-chain parts against the current 17-line basket and linked both originals from its tab. The desktop and own neural recorder remain reuse assumptions outside the sound budget.
+- Recorded manufacturer/supplier provenance and exact-model, family and bundle limits in the [photo register](web/assets/parts/sources.json). The NI desktop supply is a visibly labeled reference photo, not an exact 781513-01 photo; the ferrite uses the NI-identified component photo with the same visible reference label. Prices and existing scientific claims were not refreshed or changed.
+- All 11 automated checks passed. Browser verification covers every list at 1440, 768, 390 and 320 pixels, image completeness, unchanged totals, original screenshot links and existing navigation/paper controls. Updated the [verification record](docs/verification/2026-10-15_Parts_Presentation.json). No hardware or animal work, purchasing or external contact occurred.
+
 ## 2026-10-15 America/Chicago - visual parts and prices
 
 - Added a [simple parts-and-prices page](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts) beside the existing experiment and paper views. Howard requested a clean view containing only parts, prices and functions: choose Basic, NI/Compact, McGinley, SONIC or budget candidates, then read the photo/name, short function and price. Each list retains all items and quantities, with estimated prices marked and an individual total.

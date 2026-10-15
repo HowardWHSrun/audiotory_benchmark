@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "scope": "Simple hardware parts, prices and functions in the existing GitHub Pages walkthrough",
+  "scope": "Large product-image gallery showing only parts, prices and functions in the existing GitHub Pages walkthrough",
   "route": "web/#parts",
   "content_basis": [
     "sources/Audio_Setup_Budget_Precision_2026-10-15.json",
@@ -21,7 +21,7 @@
     "checks": "Every quantity times unit price equals its line price; each basket equals its line sum; observed and estimated splits reconcile with dated source records."
   },
   "verification": {
-    "node_tests": "10/10 passed (6 scientific-model, 4 source/budget/photo checks)",
+    "node_tests": "11/11 passed (6 scientific-model, 5 source/budget/image checks)",
     "syntax": "web/app.js, web/parts.js and web/parts-data.js passed node --check",
     "source_validation": "Passed; pinned SONIC v1 manuscript checksum unchanged",
     "static_build": "Passed",
@@ -29,23 +29,25 @@
     "browser": "Installed Chrome via bundled Playwright, local HTTP preview",
     "viewport_widths_px": [
       1440,
+      768,
       390,
       320
     ],
-    "layout_scope": "All five lists at all three widths: no page horizontal overflow, no broken product images, no browser script errors or local HTTP failures.",
+    "layout_scope": "All five lists at all four widths: no page horizontal overflow, no missing or broken images, no browser script errors or local HTTP failures. Three columns on desktop, two on tablet, one on phone. Image areas are at least 236 pixels wide in the checked layouts (previous desktop thumbnails were 100 pixels wide).",
     "interactions": [
       "Five parts-list selectors",
       "Every line item and quantity displayed",
       "Each list total and candidate-only subtotal",
       "Product source links",
+      "Original McGinley diagram and parts-slide links",
       "Default home and entry to parts list",
       "Legacy #experiment route",
       "Paper sections collapsed by default",
-      "Paper window control and #results route"
+      "Paper window control"
     ],
-    "visual_inspection": "Desktop and narrow Basic lists inspected; lists show only the part/photo, short function, price and total. Captures remain ignored temporary files."
+    "visual_inspection": "Desktop Basic and full McGinley galleries, narrow Basic gallery, and SONIC reference-image framing inspected. Captures remain ignored temporary files."
   },
-  "images": "14 authentic manufacturer product-reference photos; per-file URLs and configuration caveats in web/assets/parts/sources.json",
+  "images": "All 37 unique listed parts have sourced product images; no placeholder icons remain. Two NI accessory photos are visibly marked Reference photo. Per-file URLs, family-photo limits and configuration caveats are in web/assets/parts/sources.json.",
   "evidence_boundary": "Prices are dated planning observations/estimates. Equipment inventory, borrowed availability, recorder interfaces, source-to-speaker bandwidth, acoustic accuracy and neural alignment remain unverified. OmniMic is a separate USB calibration candidate, not a validated direct-NI microphone replacement. Rice sedation differs from the awake SONIC preparation.",
   "actions": "Website implementation and software/source checks only. No vendor contact, order, sound playback, hardware control, bench work or animal experiment.",
   "lists": [
@@ -54,5 +56,13 @@
     "McGinley",
     "SONIC",
     "Budget candidates"
-  ]
+  ],
+  "mcginley_screenshots": {
+    "files": [
+      "sources/hardware_slides_2026-10-09/01_system_diagram.png",
+      "sources/hardware_slides_2026-10-09/02_equipment_links.png"
+    ],
+    "coverage": "All 10 sound-chain parts from the original slides are present with pictures, as are the 7 measurement/accessory additions in the 17-line basket. Reused desktop and own neural recorder remain outside the priced sound basket.",
+    "status": "Original saved images inspected; preserved unchanged and linked from the McGinley tab."
+  }
 }

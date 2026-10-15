@@ -60,3 +60,10 @@ test('every reference photo has a source and exists locally',()=>{
     assert.ok(fs.statSync(path.join(root,'web/assets/parts',p.file)).size>1000,p.file);
   }
 });
+
+test('every listed part has a real sourced photo',()=>{
+  const photos=read('web/assets/parts/sources.json').sources;
+  const files=new Set(photos.map(p=>p.file));
+  const items=[...Object.values(data.options).flatMap(option=>option.items),...data.candidates.items];
+  for(const p of items) assert.ok(files.has(`${p.id}.jpg`),`${p.id}: missing sourced photo`);
+});

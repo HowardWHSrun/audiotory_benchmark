@@ -6,7 +6,7 @@ A shared research workspace for understanding SONIC and designing the auditory s
 
 The homepage shows **our planned experiment** in one diagram. Select a component for its role and the choice still open.
 
-**[Open the parts and prices](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts)**: choose a setup to see its parts, product photos, short functions and prices. Estimates are marked; each list has its own total. Basic uses the October 15 price refresh, with specialized budgets and newer consumer candidates kept separate.
+**[Open the parts and prices](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts)**: choose a setup to see large product pictures, short functions and prices. Every listed part has an image; the McGinley tab also links the original lab screenshots. Estimates are marked; each list has its own total. Basic uses the October 15 price refresh, with specialized budgets and newer consumer candidates kept separate.
 
 **Paper reference** keeps the setup, illustration, and results in collapsed sections. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
 

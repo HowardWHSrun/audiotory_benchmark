@@ -1,5 +1,5 @@
 {
-  "purpose": "Authentic product identification photos for the parts presentation. Images remain copyright of their manufacturers. These are reference photos, not photos of owned or validated Rice hardware. No stock, price or performance claim is derived from the images.",
+  "purpose": "Authentic manufacturer and supplier product reference photos for the parts page. Images remain copyright of their source owners. These are identification images, not photos of owned or validated Rice hardware. Family and configuration limits are recorded per image. No stock, price or performance claim is derived from the images.",
   "sources": [
     {
       "file": "usb6361-terminal.jpg",
@@ -115,12 +115,12 @@
       "file": "m50.jpg",
       "model": "Earthworks M50",
       "source_page": "https://earthworksaudio.com/measurement-microphones/m50/",
-      "image_url": "https://earthworksaudio.com/wp-content/uploads/2012/05/M50-1080x483-1.jpg",
+      "image_url": "https://earthworksaudio.com/wp-content/uploads/2012/05/M50_EarthworksAudio_microphone.jpg",
       "provider": "manufacturer",
       "checked_date": "2026-10-15",
       "processing": "Resized only, converted to JPEG over white background; no content edits.",
-      "note": "",
-      "bytes": 62811
+      "note": "Manufacturer product identification photo on white background.",
+      "bytes": 17433
     },
     {
       "file": "jbl305.jpg",
@@ -154,6 +154,261 @@
       "processing": "Resized only, converted to JPEG over white background; no content edits.",
       "note": "Manufacturer photo shows free-field and closed-field configurations; MF1-M is the mono kit, not a two-speaker purchase.",
       "bytes": 23601
+    },
+    {
+      "file": "pxie1082.jpg",
+      "model": "NI PXIe-1082",
+      "source_page": "https://www.ni.com/en/shop/hardware/pxi-chassis/model-pxie-1082",
+      "image_url": "https://ni.scene7.com/is/image/ni/05190907?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 103852
+    },
+    {
+      "file": "pxie6363.jpg",
+      "model": "NI PXIe-6363",
+      "source_page": "https://www.ni.com/en/shop/hardware/voltage/model-pxie-6363",
+      "image_url": "https://ni.scene7.com/is/image/ni/06160905?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 133432
+    },
+    {
+      "file": "pxie8360.jpg",
+      "model": "NI PXIe-8360",
+      "source_page": "https://www.ni.com/en/shop/hardware/pxi-controllers/model-pxie-8360",
+      "image_url": "https://ni.scene7.com/is/image/ni/02160611_p?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 130914
+    },
+    {
+      "file": "pcie8361.jpg",
+      "model": "NI PCIe-8361",
+      "source_page": "https://www.ni.com/en/shop/hardware/pxi-controllers/model-pcie-8361",
+      "image_url": "https://ni.scene7.com/is/image/ni/10101701?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Manufacturer product page notes photo may vary from selection.",
+      "bytes": 69699
+    },
+    {
+      "file": "mxi-cable.jpg",
+      "model": "NI MXI-Express cable 779500-03",
+      "source_page": "https://www.ni.com/en/shop/hardware/cables/model-mxi-express-cable#779500-03",
+      "image_url": "https://ni.scene7.com/is/image/ni/04131725?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "NI metadata associates this image with part 779500-03; photo alone does not establish 3 m cable length.",
+      "bytes": 65259
+    },
+    {
+      "file": "shc68-cable.jpg",
+      "model": "NI SHC68-68-EPM",
+      "source_page": "https://www.ni.com/en/shop/hardware/cables/model-shc68-68-epm",
+      "image_url": "https://ni.scene7.com/is/image/ni/12210410?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Family reference image, not evidence of seller-specific 192061C-02 revision.",
+      "bytes": 58320
+    },
+    {
+      "file": "bnc2090a.jpg",
+      "model": "NI BNC-2090A",
+      "source_page": "https://www.ni.com/en/shop/hardware/connectors/model-bnc-2090a",
+      "image_url": "https://ni.scene7.com/is/image/ni/01190701_p?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 34352
+    },
+    {
+      "file": "ed1.jpg",
+      "model": "TDT ED1",
+      "source_page": "https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/",
+      "image_url": "https://www.tdt.com/docs/hardware/assets/images/Ppic_ED1.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Photo shows driver front only; historical budget bundle includes enclosure and power supply which this photo does not establish.",
+      "bytes": 12436
+    },
+    {
+      "file": "es1.jpg",
+      "model": "TDT ES1",
+      "source_page": "https://www.tdt.com/product/es1-ec1-electrostatic-speakers/",
+      "image_url": "https://www.tdt.com/wp-content/uploads/2019/04/es1_front.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Photo identifies ES1 speaker, not the matching cable or quoted bundle.",
+      "bytes": 42660
+    },
+    {
+      "file": "pxi4461.jpg",
+      "model": "NI PXI-4461, seller-listed 186900-11L",
+      "source_page": "https://www.ebay.com/itm/198252264097",
+      "image_url": "https://i.ebayimg.com/images/g/agwAAeSwjSppz-C8/s-l1600.jpg",
+      "provider": "seller",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Exact historical seller listing used for budget. Front photo identifies model only; hybrid rear connector, assembly revision and functionality are not validated by this image.",
+      "bytes": 66137
+    },
+    {
+      "file": "hmic010.jpg",
+      "model": "Hosa HMIC-010",
+      "source_page": "https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft",
+      "image_url": "https://media.sweetwater.com/m/products/image/a21d9a9001HgZ8hspIee8WcSbWpQToN6K54bpWcD.jpg?width=1000&quality=90",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 59384
+    },
+    {
+      "file": "hss005.jpg",
+      "model": "Hosa HSS-005",
+      "source_page": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot",
+      "image_url": "https://media.sweetwater.com/m/products/image/a6248b6b08laR331cFTFap95FHnIr6Ux3KlgCxS5.jpg?width=1000&quality=90",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 52595
+    },
+    {
+      "file": "mic-stand.jpg",
+      "model": "Gator RI-MICTP-FBM",
+      "source_page": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom",
+      "image_url": "https://media.sweetwater.com/m/products/image/9dcf01fc3fqOuLunEhIE5dAWV1HmvZzXFTwe7jdP.jpg?width=1000&quality=90",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 18188
+    },
+    {
+      "file": "pomona-output.jpg",
+      "model": "Pomona EM4970-36 BNC-to-wire lead",
+      "source_page": "https://www.digikey.com/en/products/detail/pomona-electronics/EM4970-36/6125831",
+      "image_url": "https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/958/395/501_4970_sml.jpg",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Distributor-provided representative 4970 series image on the EM4970-36 product page; cable length is not shown to scale.",
+      "bytes": 6627
+    },
+    {
+      "file": "bias-resistor.jpg",
+      "model": "Yageo MFR-25FBF52-100K",
+      "source_page": "https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100K/13473",
+      "image_url": "https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/475/045/MFR-25FRF52-100K_sml%28200x200%29.jpg",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Distributor-provided representative MFR-25 series 100 kOhm resistor image on this SKU page; filename uses the related FR packaging suffix. Use datasheet for exact specifications.",
+      "bytes": 5247
+    },
+    {
+      "file": "aa-battery.jpg",
+      "model": "Panasonic LR6XWA/2SB AA battery",
+      "source_page": "https://www.digikey.com/en/products/detail/panasonic-energy/LR6XWA-2SB/2043739",
+      "image_url": "https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/662/129/LR6XWA%5EB_sml%28200x200%29.jpg",
+      "provider": "distributor",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Distributor-provided representative LR6XWA family photo on the LR6XWA/2SB page; packaging and quantity follow the parts list.",
+      "bytes": 7649
+    },
+    {
+      "file": "phx106.jpg",
+      "model": "Hosa PHX-106F-BULK",
+      "source_page": "https://hosatech.com/products/analog-audio/adapters/installation-adapters/phx-106f-bulk/",
+      "image_url": "https://hosatech.com/wp-content/uploads/2014/03/PHX-106F-BULK-Full.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Shows the unmodified commercial lead; proposed custom wiring is not pictured.",
+      "bytes": 69675
+    },
+    {
+      "file": "bnc-output.jpg",
+      "model": "Hosa BNC-58-103",
+      "source_page": "https://hosatech.com/products/data/network-cable/bnc-58-100/",
+      "image_url": "https://hosatech.com/wp-content/uploads/2020/10/BNC-58-100-Full_RGB_1800.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Manufacturer BNC-58-100 family image; represents the connector style of the BNC-58-103 3-foot variant. Cable length is not shown to scale.",
+      "bytes": 83375
+    },
+    {
+      "file": "tm2500c.jpg",
+      "model": "TimeMachines TM2500C",
+      "source_page": "https://timemachinescorp.com/product/gps-ntpptp-network-time-server-10mz-output-tm2500/",
+      "image_url": "https://timemachinescorp.com/wp-content/uploads/tm-2500-front-1.png",
+      "provider": "manufacturer",
+      "note": "Manufacturer product page identifies this front photo as TM2500C.",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "bytes": 137647
+    },
+    {
+      "file": "ni-power-supply.jpg",
+      "model": "NI desktop power supply reference photo; not exact 781513-01",
+      "source_page": "https://www.ni.com/en/shop/powering-your-compactdaq-or-compactrio-system.html",
+      "image_url": "https://ni.scene7.com/is/image/ni/image_2_20150408201914?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "note": "Reference photo of an NI desktop power supply from official guidance Figure 2. Exact 781513-01 photo was unavailable; final connector, rating and housing may differ. Reference illustration only, not a substitute part.",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "bytes": 4216,
+      "reference_photo": true
+    },
+    {
+      "file": "ni-power-cord.jpg",
+      "model": "NI 763830-01 US IEC power cord",
+      "source_page": "https://www.newark.com/ni-now-part-of-emerson/763830-01/test-cable-assembly-power-cable/dp/13AJ3639",
+      "image_url": "https://www.newark.com/productimages/large/en_US/13AJ3639-40.jpg",
+      "provider": "distributor",
+      "note": "Photo from the exact-SKU Newark listing; seller labels product images illustrative. Original photo is 400 pixels wide.",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "bytes": 7799
+    },
+    {
+      "file": "ni-usb-cable.jpg",
+      "model": "NI 780534-01 2m Type A to Type B jackscrew USB cable",
+      "source_page": "https://www.ni.com/en/shop/hardware/cables/model-usb-a-to-usb-b-cable",
+      "image_url": "https://ni.scene7.com/is/image/ni/03241405?wid=1000&fmt=jpeg",
+      "provider": "manufacturer",
+      "note": "NI product data explicitly maps 780534-01 to imageName 03241405; manufacturer describes Type B Jackscrew.",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "bytes": 68270
+    },
+    {
+      "file": "ni-ferrite.jpg",
+      "model": "Fair-Rite 0443167251 clip-on ferrite; component identified by NI for 781233-02",
+      "source_page": "https://www.digikey.com/en/products/detail/fair-rite-products-corp/0443167251/8594063",
+      "image_url": "https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/941/554/0443167251_sml%28200x200%29.jpg",
+      "provider": "distributor",
+      "note": "Reference component photo. NI regulatory manual 377234a explicitly identifies Fair-Rite 0443167251 inside orderable NI 781233-02 (NI internal 711849-01). Source: https://docs-be.ni.com/bundle/pxie-1086dc-seri/raw/resource/enus/377234a.pdf . Distributor labels images representative; original is 200x200 pixels.",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "bytes": 4249,
+      "reference_photo": true
     }
   ]
 }

@@ -1,0 +1,69 @@
+{
+  "document": "SONIC professor meeting review notes",
+  "review_date": "2026-10-14",
+  "artifacts": {
+    "output/pdf/SONIC_Professor_Meeting_Review_Notes.pdf": {
+      "sha256": "6d0544a8d9a44c87e041ef9b728b55ee694637f29640ddcfce71951f64eb03f1",
+      "bytes": 64550
+    },
+    "output/pdf/SONIC_Professor_Meeting_Review_Notes.tex": {
+      "sha256": "ab50c5c37414ee44d399c45fba105fd2e386ea0647c2ce88e90307c5812743a5",
+      "bytes": 19566
+    }
+  },
+  "pages": 5,
+  "primary_source": {
+    "path": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "version": "bioRxiv v1, posted 2025-10-02",
+    "doi": "10.1101/2025.09.30.679683",
+    "sha256": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731",
+    "unchanged": true,
+    "license": "CC BY-NC-ND 4.0",
+    "read_pages": "4-13; methods and results checked independently"
+  },
+  "compilation": {
+    "native_desktop_diagnostics": "success on final source",
+    "export_engine": "Tectonic 0.17.0",
+    "latex_warnings": 0,
+    "body_font": "11 pt Latin Modern",
+    "paper": "US Letter"
+  },
+  "visual_review": {
+    "all_final_pages_rendered_and_inspected": true,
+    "renderer": "Poppler pdftoppm, 1500 px long side",
+    "matching_temporary_render_prefix": "tmp/pdfs/render/approved",
+    "findings": "Five deliberate pages; no clipped text, overlap, broken glyphs, overflowing tables or equations; footer totals match actual pages."
+  },
+  "content_checks": [
+    "Primary-source numerical and methodological audit passed",
+    "Independent teaching/scientific review passed",
+    "Toy four-tone example: 50% exact accuracy, 1 bit/tone, 100 bits/s at hypothetical 100 independent tones/s",
+    "Mean-to-bits-per-tone conversions and uniform input ceilings checked",
+    "Main eight-session and narrower Figure 5 delay results kept separate",
+    "Rice animal state listed for reconfirmation; older provenance records not rewritten",
+    "No measured Rice hardware, calibration or neural result claimed"
+  ],
+  "pdf_checks": {
+    "page_headers_and_footers": "passed",
+    "nonempty_pages": "passed",
+    "text_replacement_glyphs": 0,
+    "uri_annotations": [
+      "https://doi.org/10.1101/2025.09.30.679683",
+      "https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/output/pdf/Auditory_Hardware_Options_2026-10-09.pdf",
+      "https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/sources/Team_Clarifications_2026-10-07.md"
+    ]
+  },
+  "link_checks": {
+    "equipment_list": "HTTP 200",
+    "team_record": "HTTP 200",
+    "doi": "Redirects to bioRxiv; live destination returned HTTP 429. Saved source PDF used; no current publication claim."
+  },
+  "project_checks": {
+    "node --test tests/model.test.cjs": "6/6 passed",
+    "node --check web/app.js": "passed",
+    "python3 scripts/validate_site.py": "passed after adding the index entry; 406 references; unchanged source PDF verified",
+    "python3 scripts/build_site.py": "passed; 38 files built in ignored _site/",
+    "git diff --check": "passed"
+  },
+  "scope": "New review PDF, editable standalone LaTeX, repository index link and this verification record. No web source, original paper or prior design document modified. No bench/animal operations, purchases or external messages."
+}

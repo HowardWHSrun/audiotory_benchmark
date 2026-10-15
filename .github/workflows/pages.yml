@@ -24,11 +24,13 @@ jobs:
         with:
           node-version: '24'
       - name: Check scientific model
-        run: node --test tests/model.test.cjs
+        run: node --test tests/*.test.cjs
       - name: Check browser code
         run: |
           node --check web/model.js
           node --check web/app.js
+          node --check web/parts-data.js
+          node --check web/parts.js
       - name: Validate source and links
         run: python3 scripts/validate_site.py
       - name: Build static walkthrough

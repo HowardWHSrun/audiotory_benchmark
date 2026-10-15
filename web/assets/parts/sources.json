@@ -1,0 +1,159 @@
+{
+  "purpose": "Authentic product identification photos for the parts presentation. Images remain copyright of their manufacturers. These are reference photos, not photos of owned or validated Rice hardware. No stock, price or performance claim is derived from the images.",
+  "sources": [
+    {
+      "file": "usb6361-terminal.jpg",
+      "model": "NI USB-6361 screw-terminal variant",
+      "source_page": "https://www.ni.com/en/shop/hardware/voltage/model-usb-6361",
+      "image_url": "https://ni.scene7.com/is/image/ni/06171021?wid=900&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Manufacturer image shows enclosure with the terminal block removed.",
+      "bytes": 27575
+    },
+    {
+      "file": "usb6361-bnc.jpg",
+      "model": "NI USB-6361 BNC variant",
+      "source_page": "https://www.ni.com/en/shop/hardware/voltage/model-usb-6361",
+      "image_url": "https://ni.scene7.com/is/image/ni/05101216_6361?wid=900&fmt=jpeg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 62867
+    },
+    {
+      "file": "mf2.jpg",
+      "model": "TDT MF2 free-field and closed-field configurations",
+      "source_page": "https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/",
+      "image_url": "https://www.tdt.com/docs/hardware/assets/images/MF2_Side_By_Side.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Photo shows two configurations; MF2-M is the mono kit, not a two-speaker purchase.",
+      "bytes": 121398
+    },
+    {
+      "file": "sa1.jpg",
+      "model": "TDT SA1",
+      "source_page": "https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/",
+      "image_url": "https://www.tdt.com/docs/hardware/assets/images/Ppic_SA1.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 18751
+    },
+    {
+      "file": "zb1ps.jpg",
+      "model": "TDT ZB1PS",
+      "source_page": "https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/",
+      "image_url": "https://www.tdt.com/docs/hardware/assets/images/Ppic_ZB1PS.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 16823
+    },
+    {
+      "file": "umc204hd.jpg",
+      "model": "Behringer UMC204HD",
+      "source_page": "https://www.behringer.com/en/products/0805-AAS",
+      "image_url": "https://cdn-media.empowertribe.com/18d7fceda71f425fa7fbd7fdf9ed0a42/Image_BE_0805-AAS_UMC204HD_Top-Front_XL.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 93699
+    },
+    {
+      "file": "r8090.jpg",
+      "model": "REED R8090",
+      "source_page": "https://www.reedinstruments.com/product/reed-r8090-sound-level-calibrator",
+      "image_url": "https://www.reedinstruments.com/images/products/cache/reed-instruments/r8090/main-wide/reed-r8090-sound-level-calibrator.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 20545
+    },
+    {
+      "file": "edifier-mr3.jpg",
+      "model": "Edifier MR3 black pair",
+      "source_page": "https://us.edifier.com/products/mr3",
+      "image_url": "https://us.edifier.com/cdn/shop/files/MR3-black-3.jpg?v=1761554301&width=900",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "One active speaker and one passive companion.",
+      "bytes": 36895
+    },
+    {
+      "file": "omnimic40k.jpg",
+      "model": "Dayton OmniMic 40k microphone",
+      "source_page": "https://www.daytonaudio.com/product/2111/omnimic-40k-precision-measurement-microphone-system",
+      "image_url": "https://www.daytonaudio.com/images/product/large/2111_4_.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Manufacturer microphone detail photo; package includes additional accessories.",
+      "bytes": 8966
+    },
+    {
+      "file": "emm6.jpg",
+      "model": "Dayton EMM-6",
+      "source_page": "https://www.daytonaudio.com/product/911/emm-6-electret-measurement-microphone",
+      "image_url": "https://www.daytonaudio.com/images/product/large/911_1_.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 11241
+    },
+    {
+      "file": "m50.jpg",
+      "model": "Earthworks M50",
+      "source_page": "https://earthworksaudio.com/measurement-microphones/m50/",
+      "image_url": "https://earthworksaudio.com/wp-content/uploads/2012/05/M50-1080x483-1.jpg",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 62811
+    },
+    {
+      "file": "jbl305.jpg",
+      "model": "JBL 305P MkII",
+      "source_page": "https://www.jbl.com.br/305PMKII-.html",
+      "image_url": "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa36ef082/JBL_305PMKII_Hero.png?sh=535&sw=535",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "",
+      "bytes": 27634
+    },
+    {
+      "file": "mm1.jpg",
+      "model": "Sound Devices MM-1",
+      "source_page": "https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information",
+      "image_url": "https://support.sounddevices.com/hc/article_attachments/45051562979355",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Official guide cover image.",
+      "bytes": 47844
+    },
+    {
+      "file": "mf1.jpg",
+      "model": "TDT MF1",
+      "source_page": "https://www.tdt.com/docs/hardware/mf1-multi-field-magnetic-speakers/",
+      "image_url": "https://www.tdt.com/docs/hardware/assets/images/Ppic_MF1.png",
+      "provider": "manufacturer",
+      "checked_date": "2026-10-15",
+      "processing": "Resized only, converted to JPEG over white background; no content edits.",
+      "note": "Manufacturer photo shows free-field and closed-field configurations; MF1-M is the mono kit, not a two-speaker purchase.",
+      "bytes": 23601
+    }
+  ]
+}

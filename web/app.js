@@ -29,10 +29,10 @@
     }
     const anchorTarget = document.getElementById(view);
     const anchorView = anchorTarget && anchorTarget.closest('.view');
-    if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper'].includes(view)) return;
+    if (anchorTarget && anchorView && !anchorView.hidden && !['setup', 'paper', 'parts'].includes(view)) return;
     const showResults = view === 'results';
     // Existing shared links continue to work after moving the Rice setup home.
-    view = view === 'paper' || view === 'results' ? 'paper' : 'setup';
+    view = view === 'parts' ? 'parts' : view === 'paper' || view === 'results' ? 'paper' : 'setup';
     $$('.view').forEach((section) => { section.hidden = section.id !== view; });
     $$('.nav-tab').forEach((button) => {
       const active = button.dataset.view === view;
@@ -42,6 +42,12 @@
     });
     if (view !== 'paper') setPlaying(false);
     if (view !== 'setup' && $('#component-detail').open) $('#component-detail').close();
+    if (view !== 'parts') {
+      document.body.classList.remove('presenting-parts');
+      $('#parts-present').setAttribute('aria-pressed', 'false');
+      $('#parts-present').firstChild.textContent = 'Present ';
+      if ($('#part-detail').open) $('#part-detail').close();
+    }
     if (showResults) $('#paper-results-disclosure').open = true;
     if (location.hash !== `#${view}`) history.replaceState(null, '', `#${view}`);
     if (focus) $('#main').focus({ preventScroll: true });

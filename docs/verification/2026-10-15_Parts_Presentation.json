@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-15",
+  "scope": "Visual hardware presentation in the existing GitHub Pages walkthrough",
+  "route": "web/#parts",
+  "chapters": ["The setup", "Basic", "NI / Compact", "New candidates", "Compare", "Still needed"],
+  "content_basis": [
+    "sources/Audio_Setup_Budget_Precision_2026-10-15.json",
+    "sources/Consumer_Ultrasonic_Speakers_2026-10-15.json",
+    "sources/Microphone_32kHz_NI_Comparison_2026-10-15.json",
+    "sources/Planning_Estimates_2026-10-10.json",
+    "sources/Item_Purpose_Audit_2026-10-10.md",
+    "output/pdf/Auditory_Hardware_Options_2026-10-09.tex"
+  ],
+  "arithmetic": {
+    "Basic_with_calibrator": 558.84,
+    "Basic_borrowed_calibrator": 339.84,
+    "Compact_estimated": 9886.47,
+    "McGinley_estimated": 10568.97,
+    "SONIC_estimated": 11607.58,
+    "MR3_and_OmniMic_two_device_subtotal_only": 649.97,
+    "shared_measurement_kit_included_once_per_specialized_basket": 2517.22,
+    "checks": "Every quantity times unit price equals its line price; each basket equals its line sum; observed and estimated splits reconcile with dated source records."
+  },
+  "verification": {
+    "node_tests": "10/10 passed (6 scientific-model, 4 source/budget/photo checks)",
+    "syntax": "web/app.js, web/parts.js and web/parts-data.js passed node --check",
+    "source_validation": "Passed; pinned SONIC v1 manuscript checksum unchanged",
+    "static_build": "Passed",
+    "whitespace": "git diff --check passed",
+    "browser": "Installed Chrome via bundled Playwright, local HTTP preview",
+    "viewport_widths_px": [1440, 390, 320],
+    "layout_scope": "All six chapters at all three widths: no page horizontal overflow, no broken product images, no browser script errors or local HTTP failures. Detailed tables use their own horizontal scroll area on narrow screens.",
+    "interactions": [
+      "Six chapter buttons and previous/next controls",
+      "Arrow-key chapter navigation",
+      "Presentation mode and Escape exit",
+      "Basic purchased/borrowed calibrator total",
+      "Complete Basic, Compact and reference baskets",
+      "Part dialogs, Escape dismissal and focus return",
+      "Default and legacy #experiment routes",
+      "Paper sections collapsed by default",
+      "Paper tone duration, window controls and #results route"
+    ],
+    "visual_inspection": "Desktop setup, Compact, new candidates, still-needed chapter and presentation mode; narrow Basic and Compact screenshots inspected. Captures remain ignored temporary files."
+  },
+  "images": "14 authentic manufacturer product-reference photos; per-file URLs and configuration caveats in web/assets/parts/sources.json",
+  "evidence_boundary": "Prices are dated planning observations/estimates. Equipment inventory, borrowed availability, recorder interfaces, source-to-speaker bandwidth, acoustic accuracy and neural alignment remain unverified. OmniMic is a separate USB calibration candidate, not a validated direct-NI microphone replacement. Rice sedation differs from the awake SONIC preparation.",
+  "actions": "Website implementation and software/source checks only. No vendor contact, order, sound playback, hardware control, bench work or animal experiment."
+}

@@ -7,6 +7,7 @@
   <meta name="description" content="The planned Rice sedated-sheep auditory experiment, with a separate SONIC paper reference and interactive explainer.">
   <title>Rice auditory experiment · SONIC reference</title>
   <link rel="stylesheet" href="styles.css?v=20261007-minimal">
+  <link rel="stylesheet" href="parts.css?v=20261015">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,6 +15,7 @@
     <a class="brand" href="#setup" aria-label="Our auditory experiment home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Auditory benchmark<span class="brand-caption">RICE RESEARCH</span></a>
     <nav aria-label="Guide views" class="nav-tabs">
       <button type="button" class="nav-tab active" data-view="setup" aria-current="page">Our experiment</button>
+      <button type="button" class="nav-tab" data-view="parts">Parts &amp; options</button>
       <button type="button" class="nav-tab" data-view="paper">Paper reference</button>
     </nav>
     <a class="paper-link" href="https://github.com/HowardWHSrun/audiotory_benchmark" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
@@ -24,6 +26,7 @@
         <h1 id="setup-title">Our auditory experiment.</h1>
         <p class="lede">Play controlled sounds to a sedated sheep and record its auditory-cortex response.</p>
         <p class="direction-note">Planned setup · Equipment to confirm</p>
+        <button type="button" class="parts-entry" data-go-view="parts">Explore the parts <span aria-hidden="true">↗</span></button>
       </div>
       <section class="our-diagram" aria-label="Our planned sound and recording paths">
         <div class="equipment-route" role="group" aria-label="Our planned sound and neural recording path"><button type="button" class="equipment-node" data-component="computer" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="52" height="34" rx="4"/><path d="M30 47v9m-8 1h32"/><path d="M19 31l7-8 8 14 7-12 8 8 9-11"/></svg></span><strong>Stimulus computer</strong></button><span class="route-arrow " aria-hidden="true">→</span><button type="button" class="equipment-node " data-component="dac" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="14" width="52" height="41" rx="5"/><path d="M18 30h6v-9h8v18h8v-9h7"/><path d="M18 45c6-13 8 13 15 0s10 13 19 0"/><circle cx="58" cy="24" r="2"/></svg></span><strong>DAC / audio output</strong></button><span class="route-arrow " aria-hidden="true">→</span><button type="button" class="equipment-node " data-component="speaker" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 27h12l16-13v44L26 45H14z"/><path d="M50 26c7 6 7 14 0 20m8-27c13 11 13 23 0 34"/></svg></span><strong>Speaker</strong></button><span class="route-arrow acoustic-arrow" aria-hidden="true">→</span><button type="button" class="equipment-node " data-component="sheep" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="33" cy="40" rx="25" ry="17"/><path d="M49 31l7-12 13 5-3 18-13 4m5-25-8-5m15 9 8-6M17 55l-3 8m21-6-2 7m18-11 4 9"/><circle cx="61" cy="28" r="1.5"/></svg></span><strong>Sedated sheep</strong></button><span class="route-arrow " aria-hidden="true">→</span><button type="button" class="equipment-node " data-component="interface" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="19" y="15" width="37" height="37" rx="6"/><path d="M27 8v7m10-7v7m10-7v7M27 52v9m10-9v9m10-9v9M12 25h7m-7 10h7m-7 10h7m37-20h7m-7 10h7m-7 10h7"/><path d="M28 34h6l4-9 6 18 5-9"/></svg></span><strong>Neural interface</strong></button><span class="route-arrow " aria-hidden="true">→</span><button type="button" class="equipment-node " data-component="recorder" aria-pressed="false"><span class="equipment-icon"><svg viewBox="0 0 76 72" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="52" height="42" rx="4"/><path d="M19 28h8l3-8 6 18 5-12 5 6h11M19 44h38M29 61h18"/></svg></span><strong>Recorder</strong></button></div>
@@ -39,6 +42,22 @@
         <p id="component-role"></p>
         <div class="dialog-confirm"><span>To confirm</span><p id="component-confirm"></p></div>
       </dialog>
+    </section>
+    <section class="view parts-view" id="parts" aria-labelledby="parts-title" hidden>
+      <div class="parts-masthead"><div><p class="eyebrow">HARDWARE WALKTHROUGH · 15 OCT 2026</p><h1 id="parts-title">The parts behind the sound.</h1><p class="lede">What each part does, how it connects, and what we still need.</p></div><button type="button" id="parts-present" class="present-toggle" aria-pressed="false">Present <span aria-hidden="true">⤢</span></button></div>
+      <nav class="parts-chapters" aria-label="Presentation chapters">
+        <button type="button" data-chapter="0" aria-current="step"><span>01</span>The setup</button>
+        <button type="button" data-chapter="1"><span>02</span>Basic</button>
+        <button type="button" data-chapter="2"><span>03</span>NI / Compact</button>
+        <button type="button" data-chapter="3"><span>04</span>New candidates</button>
+        <button type="button" data-chapter="4"><span>05</span>Compare</button>
+        <button type="button" data-chapter="5"><span>06</span>Still needed</button>
+      </nav>
+      <div id="parts-stage" class="parts-stage" role="region" aria-label="Hardware presentation" aria-live="polite"></div>
+      <div class="parts-pagination"><p id="parts-progress">01 / 06</p><span class="keyboard-hint">Use ← → to move through</span><div><button type="button" id="parts-prev" aria-label="Previous chapter">←</button><button type="button" id="parts-next" aria-label="Next chapter">→</button></div></div>
+      <details class="parts-sources"><summary>Sources &amp; price basis</summary><p>Basic prices were refreshed October 15. Specialized baskets retain October 9 accessory prices and October 10 TDT estimates, with selected major prices rechecked October 15. New candidates use the October 15 records. All are planning figures; availability and delivered totals need confirmation.</p><p><a href="../sources/Audio_Setup_Budget_Precision_2026-10-15.json">Budget &amp; precision record</a> · <a href="../sources/Consumer_Ultrasonic_Speakers_2026-10-15.json">Speaker candidates</a> · <a href="../sources/Microphone_32kHz_NI_Comparison_2026-10-15.json">Microphones vs NI</a> · <a href="../Accurate_Setup_Comparison_2026-10-09.md">Original four-option comparison</a> · <a href="../sources/Item_Purpose_Audit_2026-10-10.md">Part roles</a> · <a href="assets/parts/sources.json">Photo credits</a></p><p>Parts budgets exclude the neural recorder, recorder-specific adapters, shipping, tax, extra import charges and labor. Photos identify products; they do not establish the exact purchased configuration. No Rice acoustic or neural performance has been measured here.</p></details>
+      <noscript><p>Enable JavaScript to explore the presentation, or read the <a href="../Accurate_Setup_Comparison_2026-10-09.md">itemized parts comparison</a>.</p></noscript>
+      <dialog id="part-detail" class="part-dialog" aria-labelledby="part-title"><button type="button" id="part-close" class="dialog-close" aria-label="Close part details" autofocus>×</button><div id="part-body"></div></dialog>
     </section>
     <section class="view paper-view" id="paper" aria-labelledby="paper-title" hidden>
       <div class="intro paper-intro"><h1 id="paper-title">The SONIC paper.</h1><p class="lede">A tone-decoding benchmark in awake sheep. Explore its published setup, signal flow, and measured results.</p></div>
@@ -98,6 +117,8 @@
   </main>
   <footer class="site-footer"><span>Rice research</span><div><a href="../sources/SONIC_2025_bioRxiv_v1.pdf" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.1101/2025.09.30.679683" target="_blank" rel="noopener">Source ↗</a><a id="github-link" href="https://github.com/HowardWHSrun/audiotory_benchmark" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
   <script src="model.js"></script>
-  <script src="app.js?v=20261007-minimal"></script>
+  <script src="parts-data.js?v=20261015"></script>
+  <script src="app.js?v=20261015"></script>
+  <script src="parts.js?v=20261015"></script>
 </body>
 </html>

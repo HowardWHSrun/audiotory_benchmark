@@ -6,7 +6,7 @@ A shared research workspace for understanding SONIC and designing the auditory s
 
 The homepage shows **our planned experiment** in one diagram. Select a component for its role and the choice still open.
 
-**[Open the visual parts presentation](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts)**: six short chapters with authentic product photos, click-to-open roles and connection details, complete parts baskets, a borrowed-calibrator budget toggle, the newer MR3/OmniMic candidates and unresolved equipment needs. Use **Present** for a cleaner meeting view and the arrow keys to advance. Basic uses the October 15 price refresh; specialized budgets retain clearly marked observations and estimates. All options remain planning candidates.
+**[Open the parts and prices](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts)**: choose a setup to see its parts, product photos, short functions and prices. Estimates are marked; each list has its own total. Basic uses the October 15 price refresh, with specialized budgets and newer consumer candidates kept separate.
 
 **Paper reference** keeps the setup, illustration, and results in collapsed sections. Its activity is synthetic. The site does not play sounds, connect to instruments, or report Rice experimental results.
 

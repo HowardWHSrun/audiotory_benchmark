@@ -1,11 +1,10 @@
 # Research log
 
-## 2026-10-15 America/Chicago - visual parts presentation
+## 2026-10-15 America/Chicago - visual parts and prices
 
-- Added the [six-chapter hardware presentation](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts) beside the existing experiment and paper views: connected setup, Basic, NI/Compact, newer budget candidates, alternative basket comparison and unresolved needs. Product photos open plain-language roles, source prices and connection limits; complete baskets retain every line item. Presentation mode and keyboard navigation support meeting use.
-- Used the October 15 Basic refresh ($558.84, or $339.84 with a suitable borrowed calibrator), retained the specialized mixed-date budgets and marked TDT allowances. Kept MR3/OmniMic's $649.97 two-device subtotal separate from complete setup totals, and compared its separate USB calibration path against M50/MM-1 into NI. Borrowing and ownership remain unconfirmed.
-- Added [manufacturer photo provenance](web/assets/parts/sources.json) and a [verification record](docs/verification/2026-10-15_Parts_Presentation.json). All ten automated model/data checks, JavaScript syntax checks, static validation/build and whitespace checks passed. Browser checks covered six chapters at 1440-, 390- and 320-pixel widths, both Basic totals, reference baskets, dialogs/focus, presentation controls, legacy routing and paper interactions. Temporary browser captures remain outside commits.
-- The pinned manuscript and existing hardware PDFs remain unchanged. Kept sedated Rice sheep distinct from awake SONIC sheep and nominal component bands distinct from measured response or synchronization. No supplier contact, purchase, hardware operation or experiment occurred.
+- Added a [simple parts-and-prices page](https://howardwhsrun.github.io/audiotory_benchmark/web/#parts) beside the existing experiment and paper views. Howard requested a clean view containing only parts, prices and functions: choose Basic, NI/Compact, McGinley, SONIC or budget candidates, then read the photo/name, short function and price. Each list retains all items and quantities, with estimated prices marked and an individual total.
+- Used the October 15 Basic refresh ($558.84 including calibrator), retained specialized mixed-date budgets and marked TDT allowances. MR3/OmniMic's $649.97 two-device subtotal remains separate from complete setups. Product names link to their source listings. The page makes no hardware-performance claim.
+- Added [manufacturer photo provenance](web/assets/parts/sources.json), source/budget checks and a [verification record](docs/verification/2026-10-15_Parts_Presentation.json). Temporary browser captures remain outside commits. The pinned manuscript and hardware PDFs remain unchanged. No supplier contact, purchase, hardware operation or experiment occurred.
 
 ## 2026-10-09 America/Chicago - slide hardware and economical sound alternatives
 

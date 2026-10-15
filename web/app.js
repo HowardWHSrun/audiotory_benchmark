@@ -42,12 +42,6 @@
     });
     if (view !== 'paper') setPlaying(false);
     if (view !== 'setup' && $('#component-detail').open) $('#component-detail').close();
-    if (view !== 'parts') {
-      document.body.classList.remove('presenting-parts');
-      $('#parts-present').setAttribute('aria-pressed', 'false');
-      $('#parts-present').firstChild.textContent = 'Present ';
-      if ($('#part-detail').open) $('#part-detail').close();
-    }
     if (showResults) $('#paper-results-disclosure').open = true;
     if (location.hash !== `#${view}`) history.replaceState(null, '', `#${view}`);
     if (focus) $('#main').focus({ preventScroll: true });

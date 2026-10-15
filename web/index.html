@@ -7,7 +7,7 @@
   <meta name="description" content="The planned Rice sedated-sheep auditory experiment, with a separate SONIC paper reference and interactive explainer.">
   <title>Rice auditory experiment · SONIC reference</title>
   <link rel="stylesheet" href="styles.css?v=20261007-minimal">
-  <link rel="stylesheet" href="parts.css?v=20261015">
+  <link rel="stylesheet" href="parts.css?v=20261015-simple">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,20 +44,17 @@
       </dialog>
     </section>
     <section class="view parts-view" id="parts" aria-labelledby="parts-title" hidden>
-      <div class="parts-masthead"><div><p class="eyebrow">HARDWARE WALKTHROUGH · 15 OCT 2026</p><h1 id="parts-title">The parts behind the sound.</h1><p class="lede">What each part does, how it connects, and what we still need.</p></div><button type="button" id="parts-present" class="present-toggle" aria-pressed="false">Present <span aria-hidden="true">⤢</span></button></div>
-      <nav class="parts-chapters" aria-label="Presentation chapters">
-        <button type="button" data-chapter="0" aria-current="step"><span>01</span>The setup</button>
-        <button type="button" data-chapter="1"><span>02</span>Basic</button>
-        <button type="button" data-chapter="2"><span>03</span>NI / Compact</button>
-        <button type="button" data-chapter="3"><span>04</span>New candidates</button>
-        <button type="button" data-chapter="4"><span>05</span>Compare</button>
-        <button type="button" data-chapter="5"><span>06</span>Still needed</button>
+      <div class="parts-heading"><h1 id="parts-title">Parts &amp; prices.</h1></div>
+      <nav class="parts-options" aria-label="Choose a parts list">
+        <button type="button" data-parts-option="basic" aria-pressed="true">Basic</button>
+        <button type="button" data-parts-option="compact" aria-pressed="false">NI / Compact</button>
+        <button type="button" data-parts-option="mcginley" aria-pressed="false">McGinley</button>
+        <button type="button" data-parts-option="sonic" aria-pressed="false">SONIC</button>
+        <button type="button" data-parts-option="candidates" aria-pressed="false">Budget candidates</button>
       </nav>
-      <div id="parts-stage" class="parts-stage" role="region" aria-label="Hardware presentation" aria-live="polite"></div>
-      <div class="parts-pagination"><p id="parts-progress">01 / 06</p><span class="keyboard-hint">Use ← → to move through</span><div><button type="button" id="parts-prev" aria-label="Previous chapter">←</button><button type="button" id="parts-next" aria-label="Next chapter">→</button></div></div>
-      <details class="parts-sources"><summary>Sources &amp; price basis</summary><p>Basic prices were refreshed October 15. Specialized baskets retain October 9 accessory prices and October 10 TDT estimates, with selected major prices rechecked October 15. New candidates use the October 15 records. All are planning figures; availability and delivered totals need confirmation.</p><p><a href="../sources/Audio_Setup_Budget_Precision_2026-10-15.json">Budget &amp; precision record</a> · <a href="../sources/Consumer_Ultrasonic_Speakers_2026-10-15.json">Speaker candidates</a> · <a href="../sources/Microphone_32kHz_NI_Comparison_2026-10-15.json">Microphones vs NI</a> · <a href="../Accurate_Setup_Comparison_2026-10-09.md">Original four-option comparison</a> · <a href="../sources/Item_Purpose_Audit_2026-10-10.md">Part roles</a> · <a href="assets/parts/sources.json">Photo credits</a></p><p>Parts budgets exclude the neural recorder, recorder-specific adapters, shipping, tax, extra import charges and labor. Photos identify products; they do not establish the exact purchased configuration. No Rice acoustic or neural performance has been measured here.</p></details>
-      <noscript><p>Enable JavaScript to explore the presentation, or read the <a href="../Accurate_Setup_Comparison_2026-10-09.md">itemized parts comparison</a>.</p></noscript>
-      <dialog id="part-detail" class="part-dialog" aria-labelledby="part-title"><button type="button" id="part-close" class="dialog-close" aria-label="Close part details" autofocus>×</button><div id="part-body"></div></dialog>
+      <div id="parts-list" aria-live="polite"></div>
+      <p class="parts-footnote">USD · Dated prices; estimates marked “est.” · Shipping, tax and recorder adapters extra. <a href="../sources/Audio_Setup_Budget_Precision_2026-10-15.json">Price sources</a> · <a href="assets/parts/sources.json">Photo credits</a></p>
+      <noscript><p><a href="../Accurate_Setup_Comparison_2026-10-09.md">Read the itemized parts list</a>.</p></noscript>
     </section>
     <section class="view paper-view" id="paper" aria-labelledby="paper-title" hidden>
       <div class="intro paper-intro"><h1 id="paper-title">The SONIC paper.</h1><p class="lede">A tone-decoding benchmark in awake sheep. Explore its published setup, signal flow, and measured results.</p></div>
@@ -118,7 +115,7 @@
   <footer class="site-footer"><span>Rice research</span><div><a href="../sources/SONIC_2025_bioRxiv_v1.pdf" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.1101/2025.09.30.679683" target="_blank" rel="noopener">Source ↗</a><a id="github-link" href="https://github.com/HowardWHSrun/audiotory_benchmark" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
   <script src="model.js"></script>
   <script src="parts-data.js?v=20261015"></script>
-  <script src="app.js?v=20261015"></script>
-  <script src="parts.js?v=20261015"></script>
+  <script src="app.js?v=20261015-simple"></script>
+  <script src="parts.js?v=20261015-simple"></script>
 </body>
 </html>

@@ -1,8 +1,7 @@
 {
   "date": "2026-10-15",
-  "scope": "Visual hardware presentation in the existing GitHub Pages walkthrough",
+  "scope": "Simple hardware parts, prices and functions in the existing GitHub Pages walkthrough",
   "route": "web/#parts",
-  "chapters": ["The setup", "Basic", "NI / Compact", "New candidates", "Compare", "Still needed"],
   "content_basis": [
     "sources/Audio_Setup_Budget_Precision_2026-10-15.json",
     "sources/Consumer_Ultrasonic_Speakers_2026-10-15.json",
@@ -28,22 +27,32 @@
     "static_build": "Passed",
     "whitespace": "git diff --check passed",
     "browser": "Installed Chrome via bundled Playwright, local HTTP preview",
-    "viewport_widths_px": [1440, 390, 320],
-    "layout_scope": "All six chapters at all three widths: no page horizontal overflow, no broken product images, no browser script errors or local HTTP failures. Detailed tables use their own horizontal scroll area on narrow screens.",
-    "interactions": [
-      "Six chapter buttons and previous/next controls",
-      "Arrow-key chapter navigation",
-      "Presentation mode and Escape exit",
-      "Basic purchased/borrowed calibrator total",
-      "Complete Basic, Compact and reference baskets",
-      "Part dialogs, Escape dismissal and focus return",
-      "Default and legacy #experiment routes",
-      "Paper sections collapsed by default",
-      "Paper tone duration, window controls and #results route"
+    "viewport_widths_px": [
+      1440,
+      390,
+      320
     ],
-    "visual_inspection": "Desktop setup, Compact, new candidates, still-needed chapter and presentation mode; narrow Basic and Compact screenshots inspected. Captures remain ignored temporary files."
+    "layout_scope": "All five lists at all three widths: no page horizontal overflow, no broken product images, no browser script errors or local HTTP failures.",
+    "interactions": [
+      "Five parts-list selectors",
+      "Every line item and quantity displayed",
+      "Each list total and candidate-only subtotal",
+      "Product source links",
+      "Default home and entry to parts list",
+      "Legacy #experiment route",
+      "Paper sections collapsed by default",
+      "Paper window control and #results route"
+    ],
+    "visual_inspection": "Desktop and narrow Basic lists inspected; lists show only the part/photo, short function, price and total. Captures remain ignored temporary files."
   },
   "images": "14 authentic manufacturer product-reference photos; per-file URLs and configuration caveats in web/assets/parts/sources.json",
   "evidence_boundary": "Prices are dated planning observations/estimates. Equipment inventory, borrowed availability, recorder interfaces, source-to-speaker bandwidth, acoustic accuracy and neural alignment remain unverified. OmniMic is a separate USB calibration candidate, not a validated direct-NI microphone replacement. Rice sedation differs from the awake SONIC preparation.",
-  "actions": "Website implementation and software/source checks only. No vendor contact, order, sound playback, hardware control, bench work or animal experiment."
+  "actions": "Website implementation and software/source checks only. No vendor contact, order, sound playback, hardware control, bench work or animal experiment.",
+  "lists": [
+    "Basic",
+    "NI / Compact",
+    "McGinley",
+    "SONIC",
+    "Budget candidates"
+  ]
 }

@@ -1,0 +1,76 @@
+{
+  "checked_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "currency": "USD",
+  "user_direction": "Always compare alternatives against our planned NI setup. NI USB-6361 remains the reference for subsequent component comparisons; it is not assumed owned or fully configured.",
+  "purpose": "Price the EMM-6 and M50, identify a lower-cost calibrated 32kHz measurement candidate and explain its connection/timing differences against NI.",
+  "reference_NI_measurement_path": {
+    "path": "Earthworks M50 -> Sound Devices MM-1 phantom power and microphone preamp -> NI USB-6361 analog input -> computer",
+    "status": "Proposed measurement addition; not microphone hardware identified in the SONIC paper. No assembled performance is measured.",
+    "M50_usd": 1299.00,
+    "MM1_usd": 945.00,
+    "microphone_and_preamp_subtotal_usd": 2244.00,
+    "subtotal_exclusions": "NI DAQ, calibration reference, cables/adapters, stand, batteries, tax, shipping and labor.",
+    "NI_role": "NI generates the stimulus and can acquire the conditioned microphone signal and electrical reference with configured hardware timing. Neural recorder markers/clock compatibility remain to be confirmed.",
+    "power_dependency": "The NI alone does not provide XLR microphone phantom power or the MM-1's microphone preamplification."
+  },
+  "microphones": [
+    {
+      "model": "Dayton EMM-6",
+      "retailer_url": "https://www.parts-express.com/Dayton-Audio-EMM-6-Electret-Measurement-Microphone-390-801",
+      "manufacturer_url": "https://www.daytonaudio.com/product/911/emm-6-electret-measurement-microphone",
+      "observed_price_usd": 59.98,
+      "published_band_hz": [18, 20000],
+      "calibration": "Individual serialized response/calibration data available.",
+      "connection": "Analog XLR, phantom-powered; a suitable preamp/conditioning stage is required before NI analog input.",
+      "32kHz_assessment": "Outside the specified range; not selected as the reference for 32kHz measurements.",
+      "retrieval": "Price and stock recovered via retailer product/catalog search text; direct product retrieval intermittently returns an empty page."
+    },
+    {
+      "model": "Earthworks M50",
+      "retailer_url": "https://www.bhphotovideo.com/c/product/359562-REG/Earthworks_M50_M50_Measurment_Microphone.html",
+      "manufacturer_url": "https://earthworksaudio.com/measurement-microphones/m50/",
+      "manual_url": "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_M50_may2022.pdf",
+      "observed_price_usd": 1299.00,
+      "observed_availability": "In stock on retrieved new-item page, unreserved",
+      "published_band_hz": [3, 50000],
+      "calibration": "Printed unit response and downloadable individual electronic calibration file.",
+      "connection": "Analog XLR; manufacturer specifies 24-48V phantom, 10mA. MM-1 supplies power/gain and line output to NI in our reference proposal.",
+      "32kHz_assessment": "Inside published microphone band; complete chain and reference-position uncertainty require verification.",
+      "manufacturer_document_conflict": "Current product page gives 65ohm balanced output and 600ohm minimum load; official May2022 PDF p4 explicitly labels output impedance600ohm. Historical notes followed that PDF. Confirm exact revision rather than treating either statement as an assembled measurement."
+    },
+    {
+      "model": "Dayton OmniMic 40k, SKU390-794",
+      "manufacturer_url": "https://www.daytonaudio.com/product/2111/omnimic-40k-precision-measurement-microphone-system",
+      "retailer_catalog_url": "https://www.parts-express.com/speaker-components/Speaker-Measurement-Design-Tools/measurement-microphones?order=pricelevel12%3Aasc&show=36",
+      "manual_url": "https://www.parts-express.com/pedocs/manuals/390-794--dayton-audio-omnimic-40k-manual.pdf",
+      "observed_price_usd": 499.98,
+      "price_scope": "Measurement package; manufacturer lists microphone, PhotoLink, test leads, USB cable, compact stand, clip and case. No separate MM-1 in this USB path.",
+      "observed_availability": "In stock in retrieved retailer catalog; no reservation or checkout. Direct retailer product page unavailable in this audit.",
+      "published_calibrated_band_hz": [5, 40000],
+      "manufacturer_accuracy_wording": "Calibrated frequency-response shape is normally within2dB across5Hz-40kHz. Absolute sensitivity is treated separately; this is not a guaranteed assembled absolute SPL uncertainty. Manual PDFpp84-85.",
+      "calibration": "Unit-specific frequency and sensitivity data; software manual describes .omm file, while product page also advertises serialized .txt data. Confirm supplied formats before third-party use.",
+      "connection": "USB with integrated ADC, 96000samples/s; connects to computer separately from NI.",
+      "software": "Bundled workflow recommends Windows10/11; reliable Mac/Linux or third-party raw capture remains unverified. Manual PDFp81.",
+      "sync_limit": "PhotoLink timing applies to sine-sweep FrequencyResponse mode, not general 10ms-pip/neural alignment. Manual PDFp9.",
+      "32kHz_assessment": "Documented lower-cost candidate for bench level/frequency calibration alongside NI playback. Not a direct replacement for the NI analog microphone input or a validated continuous arbitrary-tone recorder.",
+      "harmonic_limit": "A40kHz measurement ceiling cannot capture the64kHz second harmonic of a32kHz tone; do not claim complete32kHz THD characterization with this device.",
+      "budget_comparison": "499.98USD measurement package versus2244USD M50+MM1 subtotal, with different acquisition/synchronization capabilities."
+    }
+  ],
+  "MM1_price_and_specs": {
+    "retailer_url": "https://www.bhphotovideo.com/c/product/292989-REG/Sound_Devices_MM_1_MM_1_Single_Channel_Portable.html",
+    "manufacturer_url": "https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information",
+    "observed_price_usd": 945.00,
+    "observed_availability": "New item in stock; unreserved",
+    "spec_scope": "Mic-to-line response specified -1dB at50kHz relative to1kHz with150ohm source; 48V phantom can supply10mA. Verify gain, clipping, filter/limiter state and assembled response."
+  },
+  "screened_alternatives": [
+    {"model": "iSEMcon EMX-7150", "primary_url": "https://www.isemcon.com/datasheets/EMX7150-US-r04.pdf", "reason": "Primary range10Hz-20kHz; not established for calibrated32kHz use."},
+    {"model": "Earthworks M30", "primary_url": "https://earthworksaudio.com/measurement-microphones/", "reason": "Nominal30kHz upper range does not establish32kHz measurement."},
+    {"model": "Dodotronic Ultramic384K EVO", "primary_url": "https://www.dodotronic.com/product/ultramic-384k-evo/", "observed_price_eur": 220.00, "reason": "USB ultrasound recorder candidate, but retrieved product information did not establish unit-specific calibrated absolute32kHz sound level. Detecting ultrasound is distinct from calibrated measurement."},
+    {"model": "Avisoft MEMS P48 #40110", "primary_url": "https://avisoft.com/ultrasound-microphones/mems/", "price_url": "https://avisoft.com/price-list-ordering-information/", "observed_price_usd": 840.00, "published_band_hz": [250, 120000], "reason": "Analog ultrasound candidate requiring48V10mA conditioning; relative response compensation is shown, but unit-specific32kHz reference calibration was not established in this audit. Adding the same945USD preamp yields1785USD before NI/accessories."}
+  ],
+  "recommendation_scope": "Evaluate OmniMic40k as the lower-cost calibration tool, retaining NI as the stimulus/timing reference. For continuous acoustic waveforms acquired directly in NI, the M50+MM1 path remains our comparison baseline; cheaper calibrated analog substitutes were not qualified here. Its response-shape claim does not certify true cross-frequency matching within1dB, and M50 bandwidth/ECF likewise does not prove assembled absolute SPL accuracy. Both require actual setup verification.",
+  "actions": "Public-source research and project documentation only; no order, vendor contact, hardware connection or experiment. Historical PDFs and price snapshots remain unchanged."
+}

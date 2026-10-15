@@ -117,5 +117,27 @@
       "limits": "Contact square edge length is not a diameter; shank thickness is not cylindrical diameter; vertical-plane coverage is not physical shank length. Shank/module spacing and along-depth contact spacing are distinct axes. More contacts, closer placement and flexibility do not by themselves establish higher auditory ITR."
     },
     "interpretation": "Both are penetrating extracellular recording technologies. NET sites run along a flexible shank and allow depth-distributed sampling; Connexus records at the exposed tips of an array of metal pins. Published NET rodent studies support months-long recording stability, but no head-to-head Connexus comparison or Rice SONIC result is established. The 5376-channel surface micro-ECoG demonstration is a separate probe modality and is not Howard's selected penetrating NET family."
+  },
+  "neuralink_channel_context": {
+    "checked_date": "2026-10-15",
+    "latest_public_human_demonstration_channels": 3000,
+    "primary_source": {
+      "title": "Speaking With The Mind | Neuralink",
+      "url": "https://www.youtube.com/watch?v=_j806JHhCRo",
+      "video_id": "_j806JHhCRo",
+      "evidence": "Official video English captions, retrieved through vidIQ. Neuralink staff explains that each row represents an implant channel and explicitly states that Terry's implant contains 3000 channels. This supports a human demonstration, not universal deployment of the same version."
+    },
+    "earlier_n1_specification": {
+      "electrodes": 1024,
+      "threads": 64,
+      "sites_per_thread_derived": 16,
+      "source": "https://neuralink.com/updates/prime-study-progress-update/"
+    },
+    "roadmap_context": {
+      "date": "2026-01-28",
+      "source": "https://neuralink.com/updates/two-years-of-telepathy/",
+      "claim": "Announced an increase from1000 to3000electrodes in coming months. The subsequent official human demonstration, rather than this roadmap alone, supports the3000-channel answer."
+    },
+    "limits": "This is a publicly described channel count, not an independent usable-channel yield, number of unique neurons or SONIC-style achieved auditory ITR. The2019 3072-channel rat research system is a separate earlier platform."
   }
 }

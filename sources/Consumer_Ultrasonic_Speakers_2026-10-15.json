@@ -1,0 +1,51 @@
+{
+  "checked_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "purpose": "Howard asked whether commercial consumer devices can reach the ultrasonic speaker frequencies being discussed. This extends the earlier JBL/Mackie/Pebble comparison with new candidates, without changing historical budgets.",
+  "evidence_scope": "Published manufacturer claims and displayed prices; no bench validation, delivered quotation, purchase or vendor contact.",
+  "candidates": [
+    {
+      "model": "Edifier MR3",
+      "product_url": "https://us.edifier.com/products/mr3",
+      "manufacturer_manual_url": "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf",
+      "manufacturer_press_release_url": "https://admin-usweb.edifier.com/global/news/press/new-mr3-monitor-speaker",
+      "nominal_frequency_hz": [52, 40000],
+      "frequency_tolerance_db": null,
+      "observed_price": {"amount": 149.99, "currency": "USD", "package": "Powered speaker pair: one active, one passive companion", "availability": "In stock, ready to ship displayed on retrieved US product page; unreserved", "exclusions": "Tax, shipping and any source-specific connections"},
+      "amplification": "Built in, 18W+18W nominal. No separate SA1 is assumed required for this candidate.",
+      "connections": "Balanced analog TRS, RCA and 3.5 mm AUX; Bluetooth is also supported. Candidate experimental evaluation should use a wired input and measure the complete signal path.",
+      "processing": "Manufacturer describes 24bit/96kHz analog frontend and Class-D amplifier configuration. Manual specifies output power with DRC on and includes monitor/music/custom modes, EQ, room tuning and firmware updates. Short-pip envelope, level dependence and latency are unmeasured.",
+      "interpretation": "Nominal range encompasses 1.4-32kHz, making this a lower-cost candidate to test for the paper's tone band. The retrieved specs provide no numeric +/-dB tolerance, ultrasonic output-level/distortion curve or acoustic onset bound.",
+      "measurement_dependency": "A microphone and acquisition chain validated above20kHz are still needed; the basic EMM-6 does not establish 32kHz measurements. Check actual source-to-speaker path bandwidth rather than inferring it from a DAC sample rate."
+    },
+    {
+      "model": "Sony SS-CS5M2",
+      "product_url": "https://electronics.sony.com/audio/speakers/home-theater-speakers/p/sscs5m2",
+      "manufacturer_frequency_source": "https://www.sony.jp/content/dam/sony/contents/regional=FSMC/jp/master/catalog-pdf/HiFi-sou_2601.pdf",
+      "source_location": "Sony January2026 component catalog, PDFpage4, printedpages6-7, SS-CS5M2 column",
+      "nominal_frequency_hz": [53, 50000],
+      "frequency_tolerance_db": null,
+      "observed_price": {"amount": 279.99, "currency": "USD", "package": "Pair of passive bookshelf speakers", "availability": "Fresh US store price observed; stock and delivery not reserved", "exclusions": "Compatible amplifier, cables, tax and shipping"},
+      "price_limit": "Search caches show a199.99USD sale; fresh directstore observation is279.99USD. Do not substitute cached promotion for a confirmed current price.",
+      "amplification": "Separate compatible power amplifier required; rated impedance6ohms. An amplifier's actual ultrasonic bandwidth must be checked.",
+      "interpretation": "The M2 frequency range is verified from its own catalog column, rather than inherited from the older SS-CS5. No 32kHz at-ear level, distortion or short-tone performance has been verified."
+    },
+    {
+      "model": "Townshend Maximum Supertweeter",
+      "product_url": "https://townshendaudio.com/maximum-supertweeter/",
+      "shop_url": "https://townshendaudio.com/product/townshend-maximum-supertweeter/",
+      "claimed_frequency_response": [{"band_hz": [20000, 70000], "plus_minus_db": 3}, {"band_hz": [14000, 90000], "plus_minus_db": 6}],
+      "source_location": "Manufacturer page Technical Specifications section",
+      "observed_price": {"amount": 1265.00, "currency": "GBP", "package": "Shop listing; main product page describes pairs, but exact chosen shop package and delivered US cost remain unconfirmed", "exclusions": "Compatible amplifier/system, delivery and tax/import charges where additional"},
+      "amplification": "Passive ribbon add-on, normally connected to an already amplified speaker output. It is not a complete powered broadband speaker.",
+      "interpretation": "A commercial hi-fi example with a claimed band reaching65-90kHz. Its high-frequency-only band cannot cover the full1.4-32kHz stimulus set on its own. Manufacturer response and timing claims are not experimental verification.",
+      "source_limit": "Only the stated technical response, connection and price information is used. Marketing claims about ultrasonic hearing, neurological benefits, cryogenic cables or sound quality are not adopted as scientific evidence."
+    }
+  ],
+  "additional_screening": [
+    {"model": "Edifier S2000MKIII", "manufacturer_url": "https://www.edifier.com/int/global/p/bookshelf-speakers/s2000mkiii", "nominal_frequency_hz": [45, 40000], "note": "Powered consumer example, but MR3 is the lower-cost candidate identified. US price was not selected as a main purchasing recommendation."},
+    {"model": "Murata ultrasonic sensor/transmitter family", "manufacturer_url": "https://www.murata.com/en-eu/products/sensor/ultrasonic?sc_lang=en", "note": "Commercial40kHz transmitters are examples of producing ultrasound, but a nominal resonant frequency does not establish broadband reproduction of the randomized tone set. Not selected as a direct speaker substitute."}
+  ],
+  "decision_scope": "Consumer products should not be excluded solely because TDT research speakers were in the earlier comparison. MR3 is a promising lower-cost 32kHz-band candidate for measured wired bench evaluation; selection requires frequency-by-frequency level/distortion, actual10ms-pip waveform, latency/jitter and recorder alignment checks. These are not completed results.",
+  "actions": "Research and dated source documentation only. No purchase, message, vendor contact, hardware connection or animal/bench experiment. Earlier PDFs, price records and website source are unchanged."
+}

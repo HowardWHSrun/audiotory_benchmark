@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "status": "Documentation audit complete; physical sound-chain qualification not performed",
+  "user_request": "Verify that the recommended equipment can carry out the complete planned experiment.",
+  "scope": "Current work is sound generation, delivery and measurement. Neural recording/decoding integration remains deferred.",
+  "user_clarifications": {
+    "initial_stage": "Quick checkout in the mouse setup, followed by transfer of the audio equipment to sheep.",
+    "initial_speaker_distance": "Not decided yet, explicitly reported by Howard.",
+    "later_stage": "Primary Rice sheep measurements remain planned; sedation is a Rice adaptation from the awake, alert SONIC sheep.",
+    "calibration_geometry": "Calibrate at the mouse ear/reference position first, then independently at the sheep ear/reference position. Reuse hardware, not the old geometry-specific correction."
+  },
+  "previous_parts_record": "sources/Final_Sound_Only_M50_Setup_2026-10-16.json",
+  "conclusion": "Manufacturer specifications support a plausible compatible sound chain. No documented fatal 32 kHz fundamental or 10 ms digital-timing mismatch was found. MR3 output at the required level/geometry and actual short-pip behavior remain unverified, so the complete sound experiment cannot be certified from this audit.",
+  "paper_requirements": {
+    "source": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "locator": "Printed page 11, Sections 6.1-6.3",
+    "initial_band_khz": [
+      1.4,
+      32
+    ],
+    "refined_sheep_E_frequencies_khz": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10.5,
+      17,
+      18.2,
+      19.5,
+      20.9,
+      22.4,
+      24,
+      25.8,
+      27
+    ],
+    "pip_duration_ms": 10,
+    "silent_interval_between_pips_ms": 0,
+    "ramp_each_end_ms": 2,
+    "ramp_shape": "Unspecified in the paper",
+    "starting_phase": "Zero at each pip start",
+    "presentation_level": "Approximately 80 dB SPL at sheep-ear distance; neither a mouse prescription nor a confirmed Rice setting.",
+    "paper_dac_sample_rate_hz": 192000,
+    "block_length_tones": [
+      8000,
+      15000
+    ],
+    "minimum_blocks": 12,
+    "between_block_gap_seconds": 1,
+    "neural_feature_bin_ms": 5,
+    "unresolved": "Exact initial 37-frequency array, acoustic geometry, level convention and numerical acoustic timing/level tolerances are not supplied."
+  },
+  "evidence_matrix": [
+    {
+      "check": "M50/iD4 or iD14 power and input loading",
+      "status": "Documented compatible",
+      "evidence": "M50 requires nominal 24-48 V at 10 mA and load >=600 ohms; interfaces specify 48 V +/-4 V at 10 mA/channel and 2.8 kohm mic input.",
+      "sources": [
+        "https://earthworksaudio.com/measurement-microphones/m50/",
+        "https://audient.com/products/audio-interfaces/id4/tech-specs/",
+        "https://audient.com/products/audio-interfaces/id14/tech-specs/"
+      ]
+    },
+    {
+      "check": "32 kHz measurement fundamentals",
+      "status": "Supported by component specifications; delivered calibration still to inspect",
+      "evidence": "M50 is specified 3 Hz-50 kHz with individual chart/ECF. Interface preamp at minimum gain and ADC/DAC extend to 40 kHz. Actual fixed-gain response, serial correction file coverage and uncertainty are not measured.",
+      "sources": [
+        "https://earthworksaudio.com/measurement-microphones/m50/",
+        "https://earthworksaudio.com/support/ecf/",
+        "https://audient.com/products/audio-interfaces/id14/tech-specs/"
+      ]
+    },
+    {
+      "check": "10 ms digital waveform",
+      "status": "Exact sample arithmetic verified, hardware fidelity unverified",
+      "evidence": "At 96 kSa/s: 960 samples/pip, 192 samples per 2 ms ramp, 576 samples between ramps. Nyquist is 48 kHz, above the 32 kHz fundamental. Continuous precomputed playback avoids per-pip OS scheduling. A host buffer longer than 10 ms does not itself prevent the sequence.",
+      "sources": [
+        "https://audient.com/products/audio-interfaces/id14/overview/",
+        "https://python-sounddevice.readthedocs.io/en/latest/"
+      ]
+    },
+    {
+      "check": "MR3 frequency range",
+      "status": "Credible budget candidate; actual required SPL unverified",
+      "evidence": "Official response illustration shows 32 kHz near its midband level, but distance, drive, settings and uncertainty are absent. The 92.5 dB peak-at-1-m claim is not a 32 kHz output guarantee.",
+      "sources": [
+        "https://www.edifier.com/global/p/studio-monitors/mr3",
+        "https://new-edifier-us-oss.edifier.com/files/20240904/9a364d5a62c02117cf79f7f52b4cc913.jpg"
+      ]
+    },
+    {
+      "check": "MR3 short-pip response",
+      "status": "Not qualified by published evidence",
+      "evidence": "Manual specifies power with DRC on but no compression attack/release or bypass guarantee. Original Erin measurements extend to about 20 kHz and use long sweeps/multitone tests. They do not establish 32 kHz, 10 ms envelopes. Fixed delay longer than 10 ms does not itself prevent 100 pips/s.",
+      "sources": [
+        "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf",
+        "https://www.erinsaudiocorner.com/loudspeakers/edifier_mr3/"
+      ]
+    },
+    {
+      "check": "Recording level calibration",
+      "status": "Documented 1 kHz reference; full chain not physically calibrated",
+      "evidence": "R8090 supplies 94/114 dB at 1 kHz, stated +/-0.5 dB. Included M50 ADP1 nominally matches its half-inch port. Seal and before/after repeatability require checks. This is separate from the microphone frequency correction.",
+      "sources": [
+        "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+        "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_M50_may2022.pdf"
+      ]
+    },
+    {
+      "check": "Mac native playback/capture",
+      "status": "Manufacturer supports Mac; exact host remains untested",
+      "evidence": "A read-only inventory of this workstation found no Audient audio interface enumerated. Analog microphone/speaker presence cannot be determined from that inventory. This workstation reports macOS 27.0.1; the retrieved vendor OS list does not explicitly list that version. This is an unresolved qualification item, not evidence of incompatibility, and the eventual experiment Mac may differ.",
+      "sources": [
+        "https://support.audient.com/hc/en-us/articles/7931530978196-iD-Range-Compatibility",
+        "https://audient.github.io/audient-documentation-site/id14/"
+      ]
+    },
+    {
+      "check": "Electrical-to-acoustic timing reference",
+      "status": "iD14 revision enables a stronger test; actual channel matching and timing unverified",
+      "evidence": "iD4 has only one full-band mic/line input. Its instrument input can potentially carry a characterized lower-band marker but is not a specified full-band reference or TTL input. iD14 permits simultaneous microphone and full-band electrical-reference capture.",
+      "sources": [
+        "https://audient.com/products/audio-interfaces/id4/tech-specs/",
+        "https://audient.com/products/audio-interfaces/id14/tech-specs/",
+        "https://audient.github.io/audient-documentation-site/id14/front-panel/"
+      ]
+    },
+    {
+      "check": "Full-run stability and neural alignment",
+      "status": "Not verified",
+      "evidence": "Paper-style blocks imply 80-150 seconds each and about 16-30 minutes for 12 blocks. No full-duration duplex test or future neural marker/clock interface has been implemented or tested.",
+      "sources": [
+        "sources/SONIC_2025_bioRxiv_v1.pdf"
+      ]
+    }
+  ],
+  "revised_recommendation": {
+    "adoption_status": "M50 is user-selected. iD14 is a new recommendation for stronger bench verification; not a reported purchase or a claim of user adoption.",
+    "change": "Replace iD4 MKII with iD14 MKII and add one HSS-005 TRS cable. Retain M50, R8090, MR3 candidate, XLR cable and microphone stand.",
+    "reason": "Capture actual acoustic output and an electrical reference simultaneously. The iD4 remains viable for the original acoustic-only checkout; this revision is not a finding that it cannot play the sequence.",
+    "parts": [
+      {
+        "id": "microphone",
+        "item": "Earthworks M50 measurement microphone",
+        "quantity": 1,
+        "unit_usd": 1299.0,
+        "role": "Measure sound across the target range using the microphone's individual frequency correction.",
+        "buy_url": "https://www.bhphotovideo.com/c/product/359562-REG/Earthworks_M50_M50_Measurment_Microphone.html",
+        "manufacturer_url": "https://earthworksaudio.com/measurement-microphones/m50/",
+        "manual_url": "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_M50_may2022.pdf",
+        "availability": "In stock on retrieved retailer page; unreserved.",
+        "included": [
+          "Microphone clip",
+          "ADP1 half-inch calibrator adapter",
+          "Individual printed response chart; electronic calibration file available after registration"
+        ],
+        "specification": "3 Hz-50 kHz; analog XLR; 24-48 V phantom at 10 mA; minimum output load 600 ohms.",
+        "receipt_check": "Retain the serial-matched chart/file and inspect coverage through at least 32 kHz. No delivered unit's file has been inspected."
+      },
+      {
+        "id": "interface",
+        "item": "Audient iD14 MKII",
+        "quantity": 1,
+        "unit_usd": 349.0,
+        "role": "Playback and simultaneous full-band microphone/electrical-reference recording for stronger bench verification.",
+        "buy_url": "https://www.bhphotovideo.com/c/product/1641632-REG/audient_id14_mkii_2_channel_usb2_interface_and.html",
+        "manufacturer_url": "https://audient.com/products/audio-interfaces/id14/tech-specs/",
+        "manual_url": "https://audient.github.io/audient-documentation-site/id14/front-panel/",
+        "routing_url": "https://audient.github.io/audient-documentation-site/id14/system-panel-routing/",
+        "availability": "B&H retrieved page lists $349.00 in stock; unreserved. Sweetwater canonical page is $399.99; do not mix offers.",
+        "specification": "Two rear mic/line inputs, four TRS line outputs, maximum 96 kSa/s; minimum-gain preamp/ADC 10 Hz-40 kHz +/-0.5 dB, DAC +/-0.1 dB; 48 V +/-4 V at 10 mA/channel; minimum USB supply 0.9 A at 5 V.",
+        "phantom_power": "Independently switchable per microphone input. M50 input 1 on; electrical reference uses rear TRS line input 2, phantom off.",
+        "limits": "Native duplex behavior on the actual Mac, working-gain response, relative channel gain/delay and exact routing still require physical checks. This does not add TTL or a neural recorder clock interface.",
+        "included": [
+          "USB cable; retailer listing confirms included cable"
+        ]
+      },
+      {
+        "id": "speaker",
+        "item": "Edifier MR3 powered speaker pair",
+        "quantity": 1,
+        "unit_usd": 149.99,
+        "role": "Budget candidate for delivering the tones; start with one documented cabinet/channel for mono measurements.",
+        "buy_url": "https://us.edifier.com/products/mr3",
+        "manufacturer_url": "https://www.edifier.com/global/p/studio-monitors/mr3",
+        "manual_url": "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf",
+        "manufacturer_response_graph_url": "https://new-edifier-us-oss.edifier.com/files/20240904/9a364d5a62c02117cf79f7f52b4cc913.jpg",
+        "availability": "Official US store lists in stock; unreserved.",
+        "specification": "Nominal 52 Hz-40 kHz; built-in amplification; balanced quarter-inch TRS line input.",
+        "evidence_scope": "The official response illustration supports output near 32 kHz. Its geometry, drive level and uncertainty are unspecified, and it does not establish short-pip fidelity or the required SPL in our setup.",
+        "settings": "Use wired TRS, Monitor mode, documented EQ/room controls, fixed gains and recorded firmware/standby settings. Verify which input drives the selected cabinet.",
+        "limits": "Usable level, distortion, ringing and 10 ms sequence behavior at the reference position remain unmeasured. Upgrade only if the test identifies a limitation that another speaker addresses."
+      },
+      {
+        "id": "level_reference",
+        "item": "REED R8090 standard sound-level calibrator",
+        "quantity": 1,
+        "unit_usd": 219.0,
+        "role": "Establish/check the M50 plus interface level conversion at a fixed microphone gain.",
+        "buy_url": "https://www.globaltestsupply.com/product/reed-r8090-sound-level-calibrator",
+        "manufacturer_spec_url": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+        "availability": "Retailer lists in stock; unreserved.",
+        "included": [
+          "9 V battery"
+        ],
+        "specification": "94/114 dB at 1 kHz, +/-0.5 dB stated accuracy; half-inch microphone port.",
+        "fit_check": "M50 ADP1 and half-inch calibrator port nominally match; check insertion and seal on receipt.",
+        "limits": "Standard price excludes a separately priced traceable certificate. This 1 kHz level reference does not independently calibrate the 32 kHz frequency response or certify complete-chain uncertainty."
+      },
+      {
+        "id": "microphone_cable",
+        "item": "Hosa HMIC-010, 10 ft XLR female to XLR male",
+        "quantity": 1,
+        "unit_usd": 17.99,
+        "role": "M50 to the iD14 rear XLR microphone input 1.",
+        "buy_url": "https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft",
+        "availability": "In stock on retrieved retailer page; unreserved."
+      },
+      {
+        "id": "speaker_cable",
+        "item": "Hosa HSS-005, 5 ft balanced quarter-inch TRS male to TRS male",
+        "quantity": 2,
+        "unit_usd": 14.95,
+        "role": "One TRS cable connects the selected MR3 input; the other connects a duplicated DAC output to rear TRS line input 2 for an electrical reference.",
+        "buy_url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot",
+        "availability": "In stock on retrieved retailer page; unreserved."
+      },
+      {
+        "id": "microphone_stand",
+        "item": "Gator Frameworks Rok-It RI-MICTP-FBM boom microphone stand",
+        "quantity": 1,
+        "unit_usd": 34.99,
+        "role": "Hold the M50 at a repeatable reference position.",
+        "buy_url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom",
+        "availability": "In stock on retrieved retailer page; unreserved.",
+        "fit_check": "Exact supplied clip/stand thread pairing is unverified; allow a small thread adapter if needed."
+      }
+    ],
+    "budget": {
+      "listed_parts_usd": 2099.87,
+      "increment_over_previous_parts_usd": 93.96,
+      "support_allowance_usd": 50,
+      "tax_shipping_reserve_usd": 200,
+      "working_budget_usd": 2349.87,
+      "rounded_planning_budget_usd": 2400,
+      "basis": "Observed asking prices plus author-set reserves, not a delivered quotation or upper bound."
+    },
+    "reference_connections": [
+      "Output 1 -> MR3 selected cabinet/input",
+      "Duplicate the waveform on output 2 -> balanced TRS -> rear line input 2, phantom off, minimum gain",
+      "M50 -> rear XLR mic input 1, phantom on",
+      "Record both inputs simultaneously at native 96 kSa/s; mute direct/software input monitoring"
+    ],
+    "reference_limits": "Characterize the relative DAC output and ADC input gain/delay first. Output 2 is a duplicate electrical reference, not automatically an exact measurement of output 1. Output +12 dBu is below line-input +21 dBu maximum at minimum gain. No TTL or neural clock alignment is added."
+  },
+  "required_physical_checks": [
+    "Define mouse reference position/distance, stimulus alphabet, level convention and numerical pass tolerances with the lab. Do not inherit the sheep exposure setting as a mouse prescription.",
+    "Inspect delivered M50 serial chart/ECF through 32 kHz; check calibrator adapter seal, stand fit, USB power and exact host native 96 kSa/s duplex operation.",
+    "Fix interface/speaker gains and settings; characterize response and relative channel delay. Record reference calibration before and after testing. Prefer the 94 dB calibrator setting and verify headroom; 114 dB may clip at a gain used for 80 dB stimuli.",
+    "At the fixed ear/reference position, measure all retained frequencies, particularly 27/32 kHz, for target level, available headroom, clipping, spectral contamination within the measurable band and level compression.",
+    "Record actual continuous 10 ms sequences with 2 ms end ramps, including repeats and large low/high jumps. Assess duration, spacing, frequency-dependent delay, residual energy into the following pip, level consistency and missed events.",
+    "Repeat for the intended complete run, using 80-150 second blocks and a minimum 12-block duration when reproducing the paper block schedule; inspect underruns, stream discontinuities, drift and startup/idle behavior.",
+    "Use wired TRS, documented Monitor/neutral EQ settings and firmware, and disable standby as documented. Do not claim DRC has been bypassed.",
+    "Repeat acoustic calibration and sequence checks after transferring the hardware to the sheep geometry. Design neural timing/clock alignment separately before that portion of the experiment."
+  ],
+  "measurement_limits": [
+    "The 96 kSa/s adaptation is not bit-for-bit replication of the paper's 192 kSa/s DAC.",
+    "The M50/96 kSa/s capture cannot measure the 64 kHz second harmonic of 32 kHz; this is not complete ultrasonic THD qualification.",
+    "Microphone magnitude correction and a 1 kHz level reference do not alone verify speaker phase/transient behavior or neural responses."
+  ],
+  "actions": "Research, read-only local audio inventory and nominal calculations only. No purchase, supplier outreach, software installation, audio output, physical calibration or animal experiment occurred.",
+  "nominal_level_calculation": {
+    "scope": "Calculated nominal 1 kHz headroom, not a physical or 32 kHz measurement",
+    "assumptions": "M50 typical34mV/Pa; preampgain30dB; +12dBu interface inputfullscale atminimumgain; actual serialsensitivity/gain may differ.",
+    "at_80_dB_SPL": {
+      "pressure_Pa": 0.2,
+      "microphone_mV_RMS": 6.8,
+      "input_dBu": -41.14,
+      "estimated_dBFS_at_30_dB_gain": -23.14
+    },
+    "at_94_dB_SPL": {
+      "estimated_dBFS_at_30_dB_gain": -9.14
+    },
+    "at_114_dB_SPL": {
+      "estimated_dBFS_at_30_dB_gain": 10.86
+    },
+    "implication": "Check levels and prefer the94dB calibrator setting; 114dB may clip at a gain chosen for80dB stimuli. Do not change gain between reference calibration and stimulus recording without recalibrating."
+  }
+}

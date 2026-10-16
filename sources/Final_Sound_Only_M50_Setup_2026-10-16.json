@@ -161,5 +161,7 @@
     "The iD4 plan does not establish TTL markers or alignment to a future neural recorder.",
     "The sound-only plan does not qualify animal use. Rice sedation remains an adaptation from the paper's awake, alert sheep."
   ],
-  "actions": "Research and planning only. No order, vendor contact, software installation, sound playback, bench measurement or animal experiment occurred."
+  "actions": "Research and planning only. No order, vendor contact, software installation, sound playback, bench measurement or animal experiment occurred.",
+  "followup_qualification_audit": "sources/Sound_Chain_Qualification_Audit_2026-10-16.json",
+  "followup_note": "Subsequent audit records the initial mouse checkout, independent sheep recalibration, unverified MR3 qualification and a proposed iD14/two-TRS-cable revision. This original $2005.91 iD4 parts snapshot is preserved."
 }

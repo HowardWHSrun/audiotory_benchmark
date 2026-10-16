@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "scope": "Documentation audit, independent review, read-only host inventory and nominal calculations only",
+  "source_record": "sources/Sound_Chain_Qualification_Audit_2026-10-16.json",
+  "checks": {
+    "source_json_parse": "passed",
+    "revised_parts_usd": 2099.87,
+    "increment_over_preserved_iD4_parts_usd": 93.96,
+    "working_budget_usd": 2349.87,
+    "exact_decimal_budget_reconciliation": "passed",
+    "prior_2005_91_parts_snapshot": "preserved; follow-up pointer added",
+    "reference_cabling": "two balanced TRS cables; microphone cable role corrected to iD14 XLR input 1",
+    "sample_arithmetic": "passed: 48 kHz Nyquist above32 kHz;960samples/pip;192samples/ramp",
+    "paper_block_duration_arithmetic": "passed:80-150s/block;12blocks approximately16-30min plusgaps",
+    "nominal_1kHz_headroom_calculation": "passed;94dB setting has nominalheadroom at30dBgain,114dB mayclip;notphysicalmeasurement",
+    "existing_model_and_parts_tests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "repository_reference_validation": "passed; pinned SONIC v1 PDF unchanged",
+    "git_diff_check": "passed",
+    "independent_reviews": "paper requirements, speaker evidence and microphone/interface/calibrator reviewed; proposed iD14 reference path reviewed; naming correction applied"
+  },
+  "host_inventory": "No Audient audio interface enumerated on this workstation. This does not establish the presence or absence of analog microphones/speakers.",
+  "physical_chain_qualification": "not performed",
+  "speaker_qualification": "not established by published evidence",
+  "not_performed": [
+    "Purchase",
+    "Supplier outreach",
+    "Software installation",
+    "Audio playback",
+    "Physical calibration",
+    "Timing/acoustic recording",
+    "Animal experiment"
+  ],
+  "website": "Unchanged; no deployment or browser-layout validation claim",
+  "conclusion": "Documented compatibility and calculations are consistent. Full experiment readiness is not verified; actual geometry, serial calibration, native host behavior, speaker output, timing and run stability require measurements."
+}

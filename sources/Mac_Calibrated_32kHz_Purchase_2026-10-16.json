@@ -82,6 +82,66 @@
     {"candidate": "Earthworks M30 Gen 2", "reason": "Credible cheaper candidate: current specs are +/-1 dB through 30 kHz and -3 dB cutoff at least 40 kHz, with individual calibration chart. However, the supplied chart/ECF high-frequency endpoint is not public, so supplied calibration through 32 kHz remains unverified. Do not conflate this G2 model with legacy M30.", "source": "https://earthworksaudio.com/wp-content/uploads/2025/11/Earthworks_Audio_M30_G2__11042025-1.pdf"},
     {"candidate": "PLACID PCR45", "reason": "Nominal 50 kHz and calibration options, but no retrieved public price, stock or supplied 32 kHz calibration detail; quote candidate rather than easy budget purchase.", "source": "https://placidinstruments.com/overview/phantom-microphones"}
   ],
+  "alternatives_and_confidence_review": {
+    "trigger": "Howard asked for other options and whether the complete setup is certain to work.",
+    "conclusion": "Documented electrical and Mac compatibility support a candidate build. Calibrated 32 kHz, 10 ms acoustic delivery is not guaranteed or physically verified; MR3 output at the actual reference geometry is the largest remaining uncertainty.",
+    "cheaper_microphones": [
+      {
+        "item": "Earthworks M30 Gen 2, new",
+        "unit_usd": 699.00,
+        "buy_url": "https://www.sweetwater.com/store/detail/M30G2--earthworks-m30-g2-measurement-microphone",
+        "availability": "Fresh direct page lists in stock.",
+        "savings_against_new_M50_usd": 600.00,
+        "conditional_working_budget_usd": 1605.91,
+        "condition": "Obtain the unit's calibration/correction data through at least 32 kHz before selecting it for that requirement. Published individual chart and -3 dB cutoff >=40 kHz support a credible candidate but do not establish the supplied chart endpoint.",
+        "limit": "The stated +/-1 dB flat band ends at 30 kHz. The comparison budget assumes all other items and allowances unchanged and no additional calibration cost."
+      },
+      {
+        "item": "Earthworks QTC40, new",
+        "unit_usd": 999.00,
+        "buy_url": "https://www.frontendaudio.com/earthworks-qtc40-omnidirectional-microphone/",
+        "availability": "Fresh direct seller page lists in stock; unreserved.",
+        "manufacturer_manual_url": "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_QTC40_may2022.pdf",
+        "savings_against_new_M50_usd": 300.00,
+        "conditional_working_budget_usd": 1905.91,
+        "condition": "Manufacturer manual lists a calibration chart and 3 Hz-40 kHz response, but a supplied unit-specific correction dataset through 32 kHz or ECF availability was not established. Confirm the actual calibration documents and necessary calibrator adapter before selecting it.",
+        "limit": "This is an analog recording-microphone candidate, not a verified replacement for the documented M50 measurement-calibration workflow. Comparison excludes extra calibration/accessory cost."
+      },
+      {
+        "item": "Earthworks M50, used, Guitar Center item 122168860",
+        "unit_usd": 1099.99,
+        "buy_url": "https://www.guitarcenter.com/Used/Earthworks/Used-Earthworks-M50-Measurement-Microphone-Condenser-Microphone.gc",
+        "availability": "Direct listing has add-to-cart, condition Used-Great, location Concord CA. Unique unit; unreserved.",
+        "savings_against_new_M50_usd": 199.01,
+        "conditional_working_budget_usd": 2006.90,
+        "condition": "Verify serial-specific calibration availability, actual condition and included ADP1/chart/accessories. Seller condition language does not establish current measurement calibration.",
+        "limit": "Comparison budget excludes additional recalibration or missing-accessory cost, so savings may be reduced."
+      }
+    ],
+    "compatibility_evidence": {
+      "M50_iD4": "M50 requires 24-48 V phantom at 10 mA and at least 600-ohm load. iD4 specifies 48 V +/-4 V at 10 mA and 2.8-kohm mic input; mic/ADC/DAC bands include 32 kHz.",
+      "Mac_iD4": "Official setup/manual supports Mac playback and recording at 96 kSa/s, with adequate USB power. The exact host configuration remains to be checked.",
+      "iD4_MR3": "Balanced TRS line connection is supported. MR3 nominal 40 kHz range does not quantify usable 32 kHz level, ultrasonic response tolerance, ringing or short-pip timing.",
+      "sources": ["https://earthworksaudio.com/measurement-microphones/m50/", "https://audient.com/products/audio-interfaces/id4/tech-specs/", "https://www.edifier.com/global/p/studio-monitors/mr3"]
+    },
+    "stronger_speaker_fallback": {
+      "parts": "TDT MF2-M speaker kit + SA1 amplifier + ZB1PS power chassis",
+      "pricing": "Current supplier quotes needed; not a verified budget offer.",
+      "evidence": "MF2 documents 1-80 kHz free-field band and <=1% THD over 1-65 kHz under its stated conditions. SA1 accepts analog BNC input and can operate without a PC interface.",
+      "connection": "Mac/iD4/M50 may be retained; properly wired TRS-to-BNC connection and gain levels require implementation. A speaker substitution does not inherently require buying NI hardware.",
+      "limits": "Manufacturer conditions are not our achieved output or acceptance results. The actual reference geometry still needs calibration.",
+      "sources": ["https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/", "https://www.tdt.com/docs/hardware/sa1-stereo-amplifier/"]
+    },
+    "acceptance_before_claiming_success": [
+      "Define reference distance/orientation, target level and level convention, retained frequency list, pip/ramp envelope and intended run length.",
+      "Use serial-specific microphone calibration and a fixed, level-calibrated gain chain.",
+      "Capture raw acoustics at every retained frequency, including 27/32 kHz, and measure envelope, duration/spacing, level and in-band artifacts.",
+      "Run a representative continuous 10 ms sequence; compare its manifest with recorded events for omissions and timing variation. A proposed <=1 ms spacing/variation target is an unverified commissioning goal, not a paper requirement.",
+      "Check relevant warm-start, idle/standby and restart cases. Keep fixed delay separate from pip width and trial-to-trial variation.",
+      "If MR3 fails a required frequency/level/timing condition, replace it or explicitly revise the retained stimulus set; do not label the failed chain qualified."
+    ],
+    "actions": "Public research and review only; no supplier message, order, audio operation, measured pass/fail result or hardware guarantee."
+  },
   "ten_ms": {
     "iD4_at_96kSa_s": {"pip_samples": 960, "two_ms_ramp_samples": 192},
     "method": "Precompute a continuous sequence and capture the microphone waveform with fixed settings. Inspect the actual reference-position envelope, duration, spacing, ringing and event completeness, including highest retained frequencies.",

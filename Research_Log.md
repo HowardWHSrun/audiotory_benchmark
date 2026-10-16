@@ -1,5 +1,13 @@
 # Research log
 
+## 2026-10-16 America/Chicago - purchased calibrated microphone for Mac
+
+- Howard requested a budget Mac microphone with calibration through 32 kHz, available to buy rather than borrow, plus direct speaker/interface buying links. The [buying review](sources/Mac_Calibrated_32kHz_Purchase_2026-10-16.json) found no inexpensive USB candidate satisfying all requirements. It records the screened candidates and the difference between ultrasonic capture and supplied calibration.
+- The clearest documented chain is Earthworks M50 ($1,299), Audient iD4 MKII ($269.99 B&H; $299.99 Sweetwater), Edifier MR3 pair ($149.99) and REED R8090 ($219), listed in stock and unreserved. The four items total $1,937.98; retained accessory observations bring priced parts to $2,005.91. Author-set support/tax/shipping reserves yield a $2,205.91 working plan, rounded to $2,200. This is not a delivered quotation or completed qualification.
+- Audient's official specifications establish 10 mA phantom supply and mic/ADC/DAC bandwidth through 40 kHz. The iD4 replaces the UMC in this M50 recommendation. UMC remains a $97.98 playback-only alternative; its retrieved phantom-current capability does not close M50 compatibility.
+- Current M30 Gen 2 documentation improves the cheaper-candidate evidence: individual chart, flat response through 30 kHz and -3 dB cutoff at least 40 kHz. Its delivered chart/ECF endpoint is not public, so this review does not promote it to verified supplied 32 kHz calibration. Actual M50 serial calibration data, complete gain-chain level calibration and 10 ms acoustic delivery still need setup verification. No order, supplier contact or bench operation occurred.
+- Verification passed: exact main/accessory/reserve sums, 96 kSa/s pip/ramp sample arithmetic, saved-record links, all 11 existing model/parts tests, 442-reference source validation and whitespace checks. These are research/document checks, not measured hardware results.
+
 ## 2026-10-15 America/Chicago - Mac host confirmed
 
 - Howard confirmed Mac. Added a [Mac-specific sound plan](sources/Budget_Sound_Only_Mac_2026-10-15.json) and marked the preceding Windows/OmniMic basket as conditional. The MR3 and UMC204HD remain playback candidates. Dodotronic's Ultramic192K EVO is an economical raw-recording candidate at a freshly displayed EUR180; its standard USB audio interface and vendor-listed Mac/Audacity workflow support evaluation on the intended host.

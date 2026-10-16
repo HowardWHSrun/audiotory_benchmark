@@ -1,0 +1,91 @@
+{
+  "checked_date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "user_requirements": ["Mac host", "Sound setup only", "Microphone with supplied calibration covering 32 kHz", "Own equipment rather than borrowing a microphone", "Budget-conscious and straightforward purchase availability", "Direct speaker and playback-interface buying links"],
+  "finding": "No inexpensive USB microphone meeting all requirements was verified. The clearest readily purchasable reference candidate is Earthworks M50 with a documented compatible Mac audio interface. This is a recommendation, not a purchase or assembled qualification.",
+  "recommended_parts": [
+    {
+      "item": "Earthworks M50 measurement microphone",
+      "quantity": 1,
+      "unit_usd": 1299.00,
+      "buy_url": "https://www.bhphotovideo.com/c/product/359562-REG/Earthworks_M50_M50_Measurment_Microphone.html",
+      "alternate_buy_url": "https://www.sweetwater.com/store/detail/M50--earthworks-m50-measurement-microphone",
+      "availability": "B&H and Sweetwater list in stock; unreserved.",
+      "manufacturer_url": "https://earthworksaudio.com/measurement-microphones/m50/",
+      "evidence": "Manufacturer specifies 3 Hz-50 kHz, individual printed response chart and downloadable per-unit ECF after registration, and 24-48 V phantom at 10 mA. Included ADP1 is a half-inch calibrator adapter.",
+      "limits": "No particular delivered unit's ECF was accessed. Retain the actual serial-specific chart/file and check relevant frequency coverage upon receipt. Microphone calibration is distinct from complete analog-gain-chain SPL calibration."
+    },
+    {
+      "item": "Audient iD4 MKII playback and microphone interface",
+      "quantity": 1,
+      "unit_usd": 269.99,
+      "buy_url": "https://www.bhphotovideo.com/c/product/1641633-REG/audient_id4_mkii_1_channel_usb2_interface_and.html",
+      "alternate_buy_url": "https://www.sweetwater.com/store/detail/iD4mk2--audient-id4-mkii-usb-c-audio-interface",
+      "alternate_price_usd": 299.99,
+      "availability": "Both retailers list in stock; B&H price is lower in this check.",
+      "manufacturer_url": "https://audient.com/products/audio-interfaces/id4/tech-specs/",
+      "manufacturer_setup_url": "https://support.audient.com/hc/en-us/articles/360055049691-iD4-MKII-Basic-Setup",
+      "evidence": "48 V +/-4 V at 10 mA/channel; microphone preamp at minimum gain and ADC specified 10 Hz-40 kHz +/-0.5 dB; DAC 10 Hz-40 kHz +/-0.1 dB; maximum 96 kSa/s. Official instructions support Mac. USB-C cable included; sufficient USB power is required.",
+      "role": "Replaces the UMC204HD in the recommended M50 chain; performs playback, microphone power, gain and digitization. Do not add both interfaces to the recommended total.",
+      "limits": "One microphone/line input; second input is instrument-only and specified to 20 kHz. Gain-dependent assembled response must be measured. Internal direct-monitoring latency is not speaker acoustic timing."
+    },
+    {
+      "item": "Edifier MR3 powered speaker pair",
+      "quantity": 1,
+      "unit_usd": 149.99,
+      "buy_url": "https://us.edifier.com/products/mr3",
+      "availability": "Official US store displays in stock, ready to ship; unreserved.",
+      "evidence": "Manufacturer nominal range 52 Hz-40 kHz and balanced TRS input. Use one documented cabinet/channel for initial mono bench measurements.",
+      "limits": "Advertised band does not establish calibrated 32 kHz output or 10 ms-pip acoustic fidelity. Existing MR3 timing/firmware/standby bench checks still apply."
+    },
+    {
+      "item": "REED R8090 standard sound-level calibrator",
+      "quantity": 1,
+      "unit_usd": 219.00,
+      "buy_url": "https://www.globaltestsupply.com/product/reed-r8090-sound-level-calibrator",
+      "availability": "Seller displays in stock; unreserved.",
+      "manufacturer_spec_url": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+      "role": "Own a 1 kHz level reference to establish/check microphone plus interface sensitivity at the chosen fixed gain. M50 ADP1 and calibrator half-inch port nominally match; check seal.",
+      "limits": "Standard price excludes separately priced traceable certificate. One-frequency reference does not independently calibrate 32 kHz response or certify whole-chain absolute uncertainty."
+    }
+  ],
+  "budget": {
+    "main_three_parts_usd": 1718.98,
+    "four_parts_including_owned_level_reference_usd": 1937.98,
+    "accessory_price_date": "2026-10-15; retained observations, not refreshed quotations",
+    "accessories": [
+      {"item": "Hosa HMIC-010 XLR cable", "quantity": 1, "unit_usd": 17.99, "role": "M50 to microphone input"},
+      {"item": "Hosa HSS-005 TRS cable", "quantity": 1, "unit_usd": 14.95, "role": "Interface output to selected MR3 input"},
+      {"item": "Gator RI-MICTP-FBM boom stand", "quantity": 1, "unit_usd": 34.99, "role": "Reference microphone placement"}
+    ],
+    "priced_parts_with_accessories_usd": 2005.91,
+    "support_USB_adapter_allowance_usd": 50.00,
+    "tax_shipping_uncertainty_reserve_usd": 150.00,
+    "working_budget_usd": 2205.91,
+    "rounded_working_budget_usd": 2200.00,
+    "basis": "Observed main-item asking prices plus older accessory observations. 50 and 150 USD amounts are author-set allowances, not quotes or a delivered-price upper bound.",
+    "exclusions": ["Existing Mac purchase", "Traceable certificate or external calibration services", "Software/integration labor", "Neural hardware", "Animal/facility costs"]
+  },
+  "cheaper_playback_only_option": {
+    "item": "Behringer UMC204HD",
+    "buy_url": "https://www.sweetwater.com/store/detail/UMC204HD--behringer-u-phoria-umc204hd-usb-audio-interface",
+    "unit_usd": 97.98,
+    "availability": "Fresh direct Sweetwater page displays in stock.",
+    "assessment": "Remains the inexpensive playback-only choice previously discussed. Its retrieved specifications do not establish M50's required 10 mA phantom supply; this review therefore selects iD4 for the complete M50 path rather than assuming direct compatibility."
+  },
+  "screening": [
+    {"candidate": "miniDSP UMIK-2", "price_usd": 195.00, "reason": "Mac and 192 kSa/s support, but supplied calibration stops at 20 kHz; accurate ultrasound requires custom calibration.", "source": "https://www.minidsp.com/images/documents/miniDSP%20UMIK-2-User%20Manual.pdf"},
+    {"candidate": "Cross-Spectrum UMIK-2", "reason": "Sales page displays a 2026 sold-out notice, and no documented supplied 32 kHz calibration offering was established.", "source": "https://cross-spectrum.com/measurement/calibrated_umik2.html"},
+    {"candidate": "Dodotronic Ultramic EVO", "reason": "Useful Mac raw-ultrasound recording candidate, but supplied per-unit 32 kHz response/SPL calibration not established.", "source": "https://www.dodotronic.com/product/ultramic-192k-evo/"},
+    {"candidate": "Dayton OmniMic 40k", "reason": "Calibrated high-frequency measurement package, but bundled software recommends Windows and warns of unreliable Macintosh/Linux use.", "source": "https://www.parts-express.com/pedocs/manuals/390-794--dayton-audio-omnimic-40k-manual.pdf"},
+    {"candidate": "MicBooster Clippy Ultra XLR", "reason": "Nominal ultrasonic bandwidth and 1 kHz matching do not establish supplied individual 32 kHz calibration.", "source": "https://micbooster.com/product/clippy-ultra-xlr/"},
+    {"candidate": "Earthworks M30 Gen 2", "reason": "Credible cheaper candidate: current specs are +/-1 dB through 30 kHz and -3 dB cutoff at least 40 kHz, with individual calibration chart. However, the supplied chart/ECF high-frequency endpoint is not public, so supplied calibration through 32 kHz remains unverified. Do not conflate this G2 model with legacy M30.", "source": "https://earthworksaudio.com/wp-content/uploads/2025/11/Earthworks_Audio_M30_G2__11042025-1.pdf"},
+    {"candidate": "PLACID PCR45", "reason": "Nominal 50 kHz and calibration options, but no retrieved public price, stock or supplied 32 kHz calibration detail; quote candidate rather than easy budget purchase.", "source": "https://placidinstruments.com/overview/phantom-microphones"}
+  ],
+  "ten_ms": {
+    "iD4_at_96kSa_s": {"pip_samples": 960, "two_ms_ramp_samples": 192},
+    "method": "Precompute a continuous sequence and capture the microphone waveform with fixed settings. Inspect the actual reference-position envelope, duration, spacing, ringing and event completeness, including highest retained frequencies.",
+    "status": "Digital arithmetic only; no physical acoustic validation. 40 kHz ADC bandwidth cannot capture 64 kHz second harmonic of a 32 kHz tone, so do not claim complete high-frequency THD."
+  },
+  "actions": "Research and documented recommendations only. No vendor outreach, ordering, hardware operation, calibrated Rice sound measurement or 10 ms delivery claim."
+}

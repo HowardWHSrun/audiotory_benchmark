@@ -1,5 +1,12 @@
 # Research log
 
+## 2026-10-15 America/Chicago - sound-only budget and 10 ms delivery checks
+
+- Howard reported his professor's direction to start basic, then explicitly limited the immediate build to sound playback and measurement. Added a [sound-only buying list and bench plan](sources/Budget_Sound_Only_10ms_2026-10-15.json) around MR3, UMC204HD and OmniMic 40k: $812.84 listed parts; author-set support/connection/reserve amounts bring the working plan to about $1,000 with a borrowed level reference, or about $1,250 adding the standard R8090 before an unpriced compatible adapter.
+- Separated SONIC's 10 ms tone pips from its 5 ms neural feature bins. At 96/192 kSa/s, a 10 ms pip is exactly 960/1,920 waveform samples; these calculations do not verify acoustic duration, spacing or onset.
+- Checked the OmniMic manual's oscilloscope mode, Windows requirements and sine-sweep-only PhotoLink timing, and Edifier's playback-delay/standby FAQ. The microphone package is conditional on host compatibility; continuous raw-pip capture/export must be demonstrated for full-run quantitative timing verification. No equipment was ordered or operated, and no acoustic performance is claimed.
+- [Verification](docs/verification/2026-10-15_Budget_Sound_Only_10ms.json): exact budget/sample-count arithmetic, record links, all 11 existing model/parts tests, source validation, static build and whitespace checks passed. Independent review found no material budget or source-interpretation issues; physical verification remains pending.
+
 ## 2026-10-15 America/Chicago - compare all parts across the lists
 
 - Added [Compare all lists](https://howardwhsrun.github.io/audiotory_benchmark/web/#compare) as a separate view reached from the parts-page heading. The single table contains all 37 unique parts/photos in the existing three groups, with Basic, NI/Compact, McGinley, SONIC and budget-candidate columns. Each cell retains its own list's price, quantity, estimate flag and source/date. Shared parts are shaded; absent items are marked as not listed.

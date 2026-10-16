@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "scope": "Research documentation, budget arithmetic and waveform sample-count derivations only.",
+  "source_record": "sources/Budget_Sound_Only_10ms_2026-10-15.json",
+  "checks": {
+    "JSON_parse": "passed",
+    "listed_parts_sum_usd": 812.84,
+    "working_budget_with_borrowed_reference_usd": 1012.84,
+    "working_budget_plus_optional_R8090_before_unpriced_adapter_usd": 1231.84,
+    "exact_decimal_budget_reconciliation": "passed",
+    "ten_ms_sample_counts": "960 samples at 96 kHz; 1920 at 192 kHz; passed exact-decimal checks",
+    "two_ms_ramp_sample_counts": "192 samples at 96 kHz; 384 at 192 kHz; passed exact-decimal checks",
+    "README_and_log_record_links": "passed",
+    "existing_node_model_and_parts_tests": {"passed": 11, "failed": 0},
+    "static_site_validator": "passed: 438 references and unchanged pinned SONIC v1 PDF",
+    "static_build": "passed: 89 files; ignored _site output excluded from version control",
+    "git_diff_check": "passed"
+  },
+  "implementation_note": "System PATH had no node executable; tests ran using the bundled workspace Node runtime returned by load_workspace_dependencies.",
+  "not_performed": ["Hardware purchase", "Sound playback", "Physical wiring", "Acoustic calibration", "Acoustic 10 ms duration/spacing validation", "Continuous microphone raw-capture qualification", "Neural-recorder synchronization", "Animal experiments"],
+  "conclusion": "Budget and digital sample arithmetic are consistent. Candidate hardware remains unqualified for the selected acoustic tone range and pip fidelity."
+}

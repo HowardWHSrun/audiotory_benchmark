@@ -1,0 +1,134 @@
+{
+  "checked_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "currency": "USD",
+  "user_direction": {
+    "professor_direction_as_reported_by_Howard": "Start with the basic setup.",
+    "current_build_scope": "Sound playback and acoustic measurement only. Howard explicitly deferred neural hardware and recorder integration.",
+    "frequency_assumption": "Budget for evaluating the Edifier MR3 through 32 kHz; final retained tone list is subject to measured performance.",
+    "computer_OS": "Not confirmed; Windows 10/11 is assumed for the bundled OmniMic workflow. A question was sent to Howard in this chat."
+  },
+  "recommendation": {
+    "status": "Candidate buying list and animal-free bench plan, not an assembled or validated system.",
+    "playback_path": "Existing compatible computer -> UMC204HD USB audio interface -> wired balanced TRS input on MR3 active cabinet -> chosen cabinet at reference geometry.",
+    "measurement_path": "OmniMic 40k at reference position -> separate USB connection to Windows computer -> serial-specific calibration and measurement software.",
+    "speaker_use": "Select and document one cabinet/channel for initial mono tests. Check channel routing physically; do not assume both cabinets should play simultaneously.",
+    "borrow_first": "Prefer borrowing a calibrated microphone that covers 32 kHz if available. It can reduce cost and qualify the candidate sound path before buying a measurement package.",
+    "microphone_purchase_condition": "Confirm the intended Windows workflow and demonstrate continuous raw waveform capture/export if saved full-run timing analysis is required. The supplied oscilloscope is documented; continuous raw export is not established by this review."
+  },
+  "parts": [
+    {
+      "item": "Edifier MR3 powered speaker pair",
+      "quantity": 1,
+      "unit_usd": 149.99,
+      "purpose": "Candidate 52 Hz-40 kHz sound output with built-in amplification.",
+      "url": "https://us.edifier.com/products/mr3",
+      "price_evidence": "Official US product page freshly opened; displayed 149.99 USD and in-stock status, unreserved.",
+      "kind": "observed"
+    },
+    {
+      "item": "Behringer UMC204HD",
+      "quantity": 1,
+      "unit_usd": 97.98,
+      "purpose": "Wired waveform playback up to 192 kSa/s and electrical line-input bench loopback.",
+      "url": "https://www.sweetwater.com/store/detail/UMC204HD--behringer-u-phoria-umc204hd-usb-audio-interface",
+      "price_evidence": "Current retailer search result displays 97.98 USD and in-stock status; no checkout.",
+      "kind": "observed"
+    },
+    {
+      "item": "Dayton OmniMic 40k measurement package, 390-794",
+      "quantity": 1,
+      "unit_usd": 499.98,
+      "purpose": "Calibrated high-frequency level/response measurements and oscilloscope view of acoustic pips.",
+      "url": "https://www.parts-express.com/Dayton-Audio-OmniMic-40k-Precision-Measurement-System-to-40k-Hz-390-794",
+      "price_evidence": "Current Parts Express brand catalog result displays 499.98 USD, part 390-794 and in-stock status. Direct product retrieval remains intermittent.",
+      "catalog_url": "https://www.parts-express.com/brand/Dayton-Audio?order=createddate%3Aasc&page=2",
+      "kind": "observed"
+    },
+    {
+      "item": "Hosa HSS-005 balanced TRS cable",
+      "quantity": 2,
+      "unit_usd": 14.95,
+      "purpose": "One speaker cable and one optional electrical loopback cable; not a neural-recorder connection.",
+      "url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot",
+      "price_evidence": "Fresh direct product page displays 14.95 USD each and in-stock status.",
+      "kind": "observed"
+    },
+    {
+      "item": "Gator RI-MICTP-FBM boom microphone stand",
+      "quantity": 1,
+      "unit_usd": 34.99,
+      "purpose": "Repeatable reference-position placement; confirm supplied microphone clip fits. OmniMic package also includes a compact stand.",
+      "url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom",
+      "price_evidence": "Fresh direct product page displays 34.99 USD and in-stock status.",
+      "kind": "observed"
+    }
+  ],
+  "budget": {
+    "listed_parts_subtotal_usd": 812.84,
+    "speaker_support_allowance_usd": 50.0,
+    "USB_adapters_and_small_items_allowance_usd": 25.0,
+    "delivery_tax_uncertainty_reserve_usd": 125.0,
+    "working_budget_with_borrowed_level_reference_usd": 1012.84,
+    "rounded_working_budget_usd": 1000.0,
+    "optional_level_reference": {
+      "candidate": "REED R8090 standard SKU",
+      "observed_usd": 219.0,
+      "url": "https://www.globaltestsupply.com/product/reed-r8090-sound-level-calibrator",
+      "price_evidence_url": "https://www.digikey.com/en/products/detail/reed-instruments/R8090/13164951",
+      "purchase_condition": "Confirm a suitable microphone body adapter and seal first. Adapter cost is not established. A standard unit does not include the separately priced traceable certificate.",
+      "working_budget_plus_reference_before_unpriced_adapter_usd": 1231.84,
+      "rounded_working_budget_plus_reference_usd": 1250.0
+    },
+    "allowance_basis": "50 USD support, 25 USD small connections and 125 USD reserve are author-set planning amounts, not vendor quotations or a delivered-price upper bound.",
+    "exclusions": ["Computer purchase", "Calibration service or traceable certificate", "Unpriced calibrator adapter", "Software/integration labor", "Any additional device required if the OmniMic raw-capture workflow is unsuitable", "Neural recording hardware and synchronization", "Animal and facility costs"],
+    "assumptions": "Existing compatible Windows computer; suitable borrowed level reference for the lower total; no new audio XLR microphone lead or MM-1 preamp is required by the USB OmniMic path."
+  },
+  "ten_ms": {
+    "paper_fact": "SONIC v1 uses consecutive 10 ms sine pips with 2 ms ramps at both ends. Its neural features use 5 ms bins; 10 ms pips do not mean 10 ms total latency.",
+    "paper_source": "../Paper_Notes.md, methods ledger; pinned v1 Sections 6.1-6.3, p11.",
+    "sample_counts": [
+      {"sample_rate_hz": 96000, "pip_samples": 960, "ramp_samples": 192},
+      {"sample_rate_hz": 192000, "pip_samples": 1920, "ramp_samples": 384}
+    ],
+    "presentation_rate_per_second": 100,
+    "implementation": "Precompute the full sequence and stream it continuously through the selected audio device. Each pip occupies an exact sample range. Do not use an operating-system timer to launch individual 10 ms sounds.",
+    "ramp_shape": "Paper does not specify it. A chosen raised-cosine or other envelope would be a declared Rice choice; no waveform program or animal exposure is selected here.",
+    "latency_distinction": "A fixed playback delay can exceed 10 ms while preserving 10 ms durations and spacing. Variation, dropouts and acoustic smearing must be measured separately from that fixed delay.",
+    "verification_status": "Sample arithmetic is verified in this record. No physical 10 ms acoustic performance has been measured."
+  },
+  "primary_evidence_and_limits": {
+    "MR3": {
+      "url": "https://www.edifier.com/global/p/studio-monitors/mr3",
+      "facts": "Nominal 52 Hz-40 kHz; balanced TRS input; internal 24-bit/96 kHz processing. FAQ acknowledges playback delay, recommends firmware updates and describes delays after 15 minutes of network standby.",
+      "limit": "No numeric ultrasonic response tolerance, selected-tone output level or 10 ms pip fidelity is established. Use wired input, document firmware/mode/EQ, and test standby behavior."
+    },
+    "UMC204HD": {
+      "url": "https://www.behringer.com/en/products/0805-AAS",
+      "facts": "Two-input/four-output USB audio interface with up to 24-bit/192 kHz conversion.",
+      "limit": "A sample-rate specification alone does not qualify analog output response at 32 kHz. Measure loopback and the complete acoustic path before retaining high-frequency tones; bandwidth values from unverified manual columns are not adopted."
+    },
+    "OmniMic_40k": {
+      "url": "https://daytonaudio.com/product/2111/omnimic-40k-precision-measurement-microphone-system",
+      "manual_url": "https://www.parts-express.com/pedocs/manuals/390-794--dayton-audio-omnimic-40k-manual.pdf",
+      "manual_PDF_pages_1_based": {"hardware_96ksps": 6, "PhotoLink_scope": 9, "oscilloscope": 47, "Windows_compatibility": 81, "accuracy": [85, 86]},
+      "facts": "96 kSa/s, calibrated range to 40 kHz, unit-specific calibration, oscilloscope for sound waveforms with trigger/free-run and freeze. Bundled workflow recommends Windows 10/11 and warns of unreliable Macintosh/Linux use.",
+      "limits": ["Oscilloscope display is documented; continuous raw arbitrary-pip export was not established.", "PhotoLink timing is for sine-sweep Frequency Response mode, not general pip synchronization.", "A 40 kHz ceiling cannot measure the 64 kHz second harmonic of a 32 kHz tone.", "Frequency-response calibration does not establish assembled absolute SPL uncertainty or a 1 dB cross-frequency guarantee."]
+    }
+  },
+  "bench_acceptance_plan": [
+    "Confirm host OS, driver, actual sample rate, explicit channel routing, physical output limits and monitoring disabled before wiring electrical loopback.",
+    "Check output-to-line-input loopback through 32 kHz, with documented gain/pad and clipping limits. This checks electrical delivery, not sound arrival.",
+    "Load the microphone serial calibration, establish reference geometry and verify sensitivity using a suitable reference/adapter. Choose and document a sound-level convention for short pips.",
+    "Measure long isolated tones at all candidate frequencies first; retain only frequencies with usable signal and level. Record background and in-band artifacts.",
+    "Inspect actual 10 ms ramped pips and representative frequency transitions acoustically, including 27/32 kHz, at the reference position. Assess duration/spacing, envelope, ringing and clipping.",
+    "Before asserting full-run timing validation, demonstrate continuous acoustic waveform capture and saved evidence. Compare actual sequence with its manifest to count missing/duplicate events and measure interval stability over a representative run.",
+    "Predeclare onset/envelope rules and tolerances. A proposed 1 ms duration/spacing tolerance is a commissioning target only, not an achieved result or a paper requirement.",
+    "Check warm startup and relevant idle/standby/restart cases; document mode, EQ, gain, firmware and sample-rate configuration. Have another team member reproduce the setup."
+  ],
+  "comparison_with_NI": {
+    "reference": "Existing proposed USB-6361 + TDT + M50/MM-1 comparison remains a reference, not confirmed equipment.",
+    "tradeoff": "This budget sound-only candidate replaces the NI playback unit with USB audio and uses a separate USB measurement device. It lacks an established shared acquisition clock/marker path, but that is deferred from this build. Both architectures still require acoustic verification."
+  },
+  "actions": "Research, budget arithmetic and documentation only. No hardware operation, sound playback, purchase, external message, animal experiment or achieved timing claim."
+}

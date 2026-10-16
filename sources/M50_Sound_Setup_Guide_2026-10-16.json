@@ -2,10 +2,16 @@
   "date": "2026-10-16",
   "document": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
   "source_audit": "sources/Sound_Chain_Qualification_Audit_2026-10-16.json",
-  "intended_pages": 7,
+  "intended_pages": 2,
   "parts_total_usd": "2099.87",
   "working_budget_usd": "2349.87",
-  "photo_provenance": "web/assets/parts/sources.json",
+  "revision": "two-page plain-language guide",
+  "visible_source_ids": [
+    "S2",
+    "S7",
+    "S4",
+    "S10"
+  ],
   "source_references": [
     {
       "id": "S1",
@@ -100,6 +106,6 @@
   ],
   "scientific_scope": "Documentation and setup plan only; physical qualification pending; initial mouse checkout then independently calibrated sheep geometry",
   "software_scope": "Architecture and workflow described; no stimulus control implementation or audio playback performed",
-  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
-  "actual_pages": 7
+  "actual_pages": 2,
+  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf"
 }

@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-16 America/Chicago - simplify the M50 setup guide
+
+- Howard found the guide too detailed. Replaced the seven-page reading version with two clear pages: exact parts and short reasons, then a simple connection diagram and four setup steps. The PDF and editable Word links stay the same. Listed parts remain $2,099.87, with about $2,400 to plan for; no price refresh or equipment change was needed.
+- Preserved M50 selection, iD14 recommendation, conditional MR3 qualification, independent phantom settings, simultaneous microphone/reference recording, 10 ms pips with 2 ms ramps at each end, calibration and mouse-to-sheep recalibration. Detailed evidence remains in the source audit and previous guide revision in Git history.
+- Rendered and inspected both final pages. Exact quantities/costs, all 11 unique buying/specification destinations, image description, source boundaries, builder syntax, all 11 existing model/parts tests, 454 repository references, unchanged paper checksum and whitespace checks passed. The PDF has 12 link annotations because one buying link wraps. The website and physical equipment are unchanged.
+
 ## 2026-10-16 America/Chicago - complete M50 parts and setup guide
 
 - Howard requested a more complete list explaining why the specific speaker and microphone were chosen and how the equipment will be set up. Created a seven-page [PDF guide](output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf) and [editable Word version](output/documents/2026-10-16/M50_Sound_Setup_Guide.docx), with a reproducible builder and [source record](sources/M50_Sound_Setup_Guide_2026-10-16.json). All seven buying pages were refreshed; asking prices and stock indications were unchanged, with $2,099.87 in parts and a $2,349.87 estimate after the existing allowances.

@@ -1,7 +1,7 @@
 {
   "date": "2026-10-16",
   "timezone": "America/Chicago",
-  "scope": "Editorial trim of the two-page equipment guide; document verification only",
+  "scope": "Add a source-verified SONIC benchmark reference to the two-page equipment guide; document verification only",
   "outputs": {
     "docx": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
     "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf"
@@ -14,13 +14,13 @@
     "parts_total_usd": "2099.87",
     "working_estimate_usd": "2349.87",
     "exact_decimal_budget": "passed",
-    "docx_external_links": 17,
-    "pdf_external_links": 18,
-    "all_buying_and_source_destinations": "passed exact comparison of seven buying destinations, four selected-device specification destinations and six alternative destinations; one wrapped PDF link has two annotations",
+    "docx_external_links": 18,
+    "pdf_external_links": 19,
+    "all_buying_and_source_destinations": "passed exact comparison of seven buying destinations, four selected-device specifications, six alternatives and the SONIC paper; one wrapped PDF link has two annotations",
     "image_alt_descriptions": 1,
     "repeating_table_headers": 1,
     "title_and_paragraph_borders": "none",
-    "independent_technical_reviews": "passed; MR3 condition remains in table and setup checks after duplicated paragraph removal",
+    "independent_technical_reviews": "passed direct source check of printed pages 7 11 and 13; paper stimuli kept separate from proposed Rice choices",
     "builder_AST_parse": "passed",
     "existing_model_and_parts_tests": {
       "passed": 11,
@@ -28,20 +28,25 @@
     },
     "repository_reference_validation": "passed; 454 references and pinned SONIC v1 PDF unchanged",
     "git_diff_check": "passed",
-    "pdf_word_count": 463,
+    "pdf_word_count": 609,
     "pdf_text_verification": "passed after normalizing PDF line-wrap whitespace",
-    "unique_link_destinations": 17,
+    "unique_link_destinations": 18,
     "comparison_evidence": "unchanged from the preceding verified October 16 revision; no new specification or price research",
     "all_seven_choice_rationales": "passed exact source-manifest to DOCX cell comparison",
     "removed_extra_paragraphs": "passed all four requested deletions",
     "simplified_accessory_descriptions": "passed",
     "core_four_comparisons": "unchanged from prior revision",
-    "page_two_text": "unchanged from prior revision"
+    "page_two_text": "unchanged from prior revision",
+    "parts_table": "unchanged from prior revision",
+    "paper_reference": "checked directly against saved v1 printed pages 7 11 and 13; independently reviewed",
+    "Sheep_E_frequencies": "14 values match source PDF and displayed list exactly",
+    "tone_duration_vs_neural_bins": "10 ms pips and 5 ms neural bins distinguished",
+    "paper_numeric_array_limit": "No reconstructed 37-frequency array; exact Sheep E array copied as factual numbers and matched against source"
   },
   "render_runtime": "Bundled Python and LibreOffice wrapper /Users/howardwang/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
   "sha256": {
-    "docx": "67aa5ead66657af0e0372574ab38a26f59418d5e2ad6d5423af2a9c0d6752f5f",
-    "pdf": "2dfa44562bc2ea1aa7d9a852ec8abd8bd5713c3250bb8a9dded5fab41addb9ee"
+    "docx": "35e43cf9a763950e4e269d8dca0814ed1913fde32909583fd39f303b8a8aaf30",
+    "pdf": "e2b7cfcb6d6eb2c4e6f9e6b93509adff9c28d64988ff64e6f2a9bc39c98a9905"
   },
   "scientific_limits": [
     "MR3 actual acoustic output and 10 ms fidelity unmeasured",
@@ -50,7 +55,7 @@
     "Mouse distance level convention and tolerances remain lab decisions",
     "Neural synchronization and animal use not qualified"
   ],
-  "actions": "Editorial document revision only; no purchase vendor outreach audio playback or animal experiment",
+  "actions": "Document revision and read-only paper verification only; no purchase vendor outreach audio playback or animal experiment",
   "website": "Unchanged; no browser/deployment claim",
   "temporary_renders": "Outside repository; omitted from commits"
 }

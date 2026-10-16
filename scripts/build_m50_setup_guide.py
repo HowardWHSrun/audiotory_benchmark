@@ -91,6 +91,28 @@ COMPARISONS = [
     },
 ]
 
+PAPER_REFERENCE = {
+    "version": "SONIC bioRxiv v1 posted 2025-10-02",
+    "local_source": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "locators": "Printed pages 7, 11 Sections 6.1 to 6.3, and 13 Section 6.6",
+    "subjects": "Two awake, alert sheep; 421-channel Connexus recording from auditory cortex",
+    "exploration_duration_ms": {"minimum": 4, "maximum": 24, "step": 2},
+    "benchmark_pip_ms": 10,
+    "ramp_each_end_ms": 2,
+    "starting_phase": "zero",
+    "neural_feature_bin_ms": 5,
+    "sheep_C": {"frequency_count": 37, "described_range_khz": [1.4, 32], "described_step_octaves": "1/8"},
+    "sheep_E_frequencies_khz": [2, 4, 6, 8, 9, 10.5, 17, 18.2, 19.5, 20.9, 22.4, 24, 25.8, 27],
+    "order": "Uniformly random frequencies balanced within each block; no inter-tone silence",
+    "pips_per_block": [8000, 15000],
+    "minimum_blocks_per_session": 12,
+    "silence_between_blocks_s": 1,
+    "dac_sample_rate_hz": 192000,
+    "playback_chain": ["NI USB-6361", "TDT SA1 amplifier", "TDT MF1 free-field speaker"],
+    "reported_level": "Approximately 80 dB SPL at sheep-ear distance",
+    "unreported_details": ["Exact 37-frequency numeric array", "Ramp shape"],
+}
+
 
 def font(size):
     return ImageFont.truetype(str(FONT), size)
@@ -218,7 +240,8 @@ def numbered_paragraph(doc,text,num_id):
 
 
 def page(doc,title):
-    doc.add_page_break(); heading(doc,title)
+    p=heading(doc,title)
+    p.paragraph_format.page_break_before=True
 
 
 def table(doc, headers, rows, widths, links=None):
@@ -320,6 +343,21 @@ def build():
     table(doc,["Part and buying link","Other options and why this fits","Qty","Cost"],rows,
           [2.1,3.65,.4,1.05],links=[p["buy_url"] for p in parts])
 
+    heading(doc,"SONIC paper experiment",2)
+    p=paragraph(doc,"Two awake, alert sheep heard tones while a 421-channel Connexus implant recorded auditory cortex. A decoder predicted the tone frequency.")
+    p.paragraph_format.space_after=Pt(3)
+    for lead,body in [
+        ("Benchmark stimuli: ", "10 ms sine pips (100/s), zero starting phase, 2 ms ramps at both ends, and no silence between pips. Neural features used 5 ms bins."),
+        ("Frequencies: ", "Sheep C used 37 frequencies over about 1.4–32 kHz in 1/8-octave steps. Sheep E used 2, 4, 6, 8, 9, 10.5, 17, 18.2, 19.5, 20.9, 22.4, 24, 25.8 and 27 kHz."),
+        ("Blocks: ", "Uniformly random frequencies, balanced within each block. 8,000–15,000 pips per block; at least 12 blocks per session; 1 s silence between blocks."),
+        ("Playback: ", "Precomputed waveform at 192 kHz: NI USB-6361 → TDT SA1 amplifier → MF1 speaker; about 80 dB SPL at the sheep’s ears."),
+    ]:
+        p=paragraph(doc,lead+body,bold_lead=lead)
+        p.paragraph_format.space_after=Pt(3)
+    p=doc.add_paragraph(); p.style=doc.styles["Caption"]
+    hyperlink(p,"SONIC v1",SOURCES[0][2])
+    p.add_run(" — pp. 7, 11 (§6.1–6.3), 13 (§6.6). Exact 37-frequency array and ramp shape are not listed.")
+
     # Page 2
     page(doc,"Put it together")
     picture(doc,diagram(),7.05,"Connections for sound playback and recording",
@@ -356,9 +394,10 @@ def build():
         "date":"2026-10-16","document":str(dest.relative_to(ROOT)),
         "source_audit":str(AUDIT.relative_to(ROOT)),"intended_pages":2,
         "parts_total_usd":str(subtotal),"working_budget_usd":"2349.87",
-        "revision":"two-page plain-language guide with alternatives and choice rationale",
-        "visible_source_ids":["S2","S7","S4","S10","S16","S17","S15","S18","S19","S20"],
+        "revision":"two-page guide with equipment choices and a separate SONIC stimulus reference",
+        "visible_source_ids":["S1","S2","S7","S4","S10","S16","S17","S15","S18","S19","S20"],
         "comparisons":COMPARISONS,
+        "paper_reference":PAPER_REFERENCE,
         "comparison_checked_date":"2026-10-16",
         "speaker_price_comparison":{
             "MR3_official_store_usd":"149.99",

@@ -5,8 +5,9 @@
   "intended_pages": 2,
   "parts_total_usd": "2099.87",
   "working_budget_usd": "2349.87",
-  "revision": "two-page plain-language guide with alternatives and choice rationale",
+  "revision": "two-page guide with equipment choices and a separate SONIC stimulus reference",
   "visible_source_ids": [
+    "S1",
     "S2",
     "S7",
     "S4",
@@ -95,6 +96,63 @@
       "source_ids": []
     }
   ],
+  "paper_reference": {
+    "version": "SONIC bioRxiv v1 posted 2025-10-02",
+    "local_source": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "locators": "Printed pages 7, 11 Sections 6.1 to 6.3, and 13 Section 6.6",
+    "subjects": "Two awake, alert sheep; 421-channel Connexus recording from auditory cortex",
+    "exploration_duration_ms": {
+      "minimum": 4,
+      "maximum": 24,
+      "step": 2
+    },
+    "benchmark_pip_ms": 10,
+    "ramp_each_end_ms": 2,
+    "starting_phase": "zero",
+    "neural_feature_bin_ms": 5,
+    "sheep_C": {
+      "frequency_count": 37,
+      "described_range_khz": [
+        1.4,
+        32
+      ],
+      "described_step_octaves": "1/8"
+    },
+    "sheep_E_frequencies_khz": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10.5,
+      17,
+      18.2,
+      19.5,
+      20.9,
+      22.4,
+      24,
+      25.8,
+      27
+    ],
+    "order": "Uniformly random frequencies balanced within each block; no inter-tone silence",
+    "pips_per_block": [
+      8000,
+      15000
+    ],
+    "minimum_blocks_per_session": 12,
+    "silence_between_blocks_s": 1,
+    "dac_sample_rate_hz": 192000,
+    "playback_chain": [
+      "NI USB-6361",
+      "TDT SA1 amplifier",
+      "TDT MF1 free-field speaker"
+    ],
+    "reported_level": "Approximately 80 dB SPL at sheep-ear distance",
+    "unreported_details": [
+      "Exact 37-frequency numeric array",
+      "Ramp shape"
+    ]
+  },
   "comparison_checked_date": "2026-10-16",
   "speaker_price_comparison": {
     "MR3_official_store_usd": "149.99",

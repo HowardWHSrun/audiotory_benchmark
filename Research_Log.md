@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-16 America/Chicago - add the SONIC benchmark stimuli
+
+- Howard requested the published SONIC experiment and stimuli in the guide. Added a clearly labeled paper section with awake/alert sheep, 421-channel recording and tone decoding, 10 ms sine pips, zero start phase, 2 ms end ramps, the initial 37-frequency description, Sheep E's exact 14 frequencies, randomized balanced blocks, block lengths/gaps and 192 kHz NI/TDT playback at approximately 80 dB SPL.
+- Re-read saved v1 printed pages 7, 11 and 13 and obtained an independent source check. The 10 ms sound duration is distinguished from 5 ms neural feature bins. The absent full 37-number array and ramp shape remain explicit; paper settings are separate from our proposed Mac sound chain.
+- Kept two pages, all parts-table text and the setup/checks page. Corrected the page-break method to avoid an empty overflow page. Both final pages were rendered and visually inspected; the 14 frequencies match the source and manifest exactly. Links, preserved deletions/costs, source checksum and existing repository checks passed. The saved paper, website and hardware are unchanged.
+
 ## 2026-10-16 America/Chicago - trim extra notes and cable descriptions
 
 - Howard requested removing the four paragraphs below the parts table and simplifying the wire explanations. Removed the budget/total paragraph, included-items paragraph, repeated selection/testing note and price/buying-link note. XLR, TRS and stand rows now state only their function.

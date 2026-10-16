@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-16",
+  "document": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
+  "source_audit": "sources/Sound_Chain_Qualification_Audit_2026-10-16.json",
+  "intended_pages": 7,
+  "parts_total_usd": "2099.87",
+  "working_budget_usd": "2349.87",
+  "photo_provenance": "web/assets/parts/sources.json",
+  "source_references": [
+    {
+      "id": "S1",
+      "title": "SONIC v1 methods",
+      "url": "https://doi.org/10.1101/2025.09.30.679683",
+      "scope": "Saved PDF printed p 11 Sections 6.1 to 6.3; p 13 Section 6.6"
+    },
+    {
+      "id": "S2",
+      "title": "Earthworks M50 specifications",
+      "url": "https://earthworksaudio.com/measurement-microphones/m50/",
+      "scope": "Bandwidth power load and individual calibration"
+    },
+    {
+      "id": "S3",
+      "title": "Earthworks serial calibration request",
+      "url": "https://earthworksaudio.com/support/ecf/",
+      "scope": "Request the file for the delivered microphone"
+    },
+    {
+      "id": "S4",
+      "title": "Edifier MR3 specifications and delay FAQ",
+      "url": "https://www.edifier.com/global/p/studio-monitors/mr3",
+      "scope": "Range inputs processing firmware and standby"
+    },
+    {
+      "id": "S5",
+      "title": "Edifier MR3 response illustration",
+      "url": "https://new-edifier-us-oss.edifier.com/files/20240904/9a364d5a62c02117cf79f7f52b4cc913.jpg",
+      "scope": "Supports 32 kHz output under unspecified conditions"
+    },
+    {
+      "id": "S6",
+      "title": "Erin original MR3 measurements",
+      "url": "https://www.erinsaudiocorner.com/loudspeakers/edifier_mr3/",
+      "scope": "Independent measurements end near 20 kHz"
+    },
+    {
+      "id": "S7",
+      "title": "Audient iD14 MKII specifications",
+      "url": "https://audient.com/products/audio-interfaces/id14/tech-specs/",
+      "scope": "Inputs outputs power and frequency response"
+    },
+    {
+      "id": "S8",
+      "title": "Audient connections and phantom power",
+      "url": "https://audient.github.io/audient-documentation-site/id14/front-panel/",
+      "scope": "Independent phantom switches and front DI behavior"
+    },
+    {
+      "id": "S9",
+      "title": "Audient output routing",
+      "url": "https://audient.github.io/audient-documentation-site/id14/system-panel-routing/",
+      "scope": "DAW Thru and monitoring configuration"
+    },
+    {
+      "id": "S10",
+      "title": "REED R8090 specifications",
+      "url": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+      "scope": "Level accuracy frequency port and battery"
+    },
+    {
+      "id": "S11",
+      "title": "Python sounddevice playback and recording",
+      "url": "https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html",
+      "scope": "Initial playrec checks and continuous streams"
+    },
+    {
+      "id": "S12",
+      "title": "Earthworks M50 user guide",
+      "url": "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_M50_may2022.pdf",
+      "scope": "Included clip adapter and calibration information"
+    },
+    {
+      "id": "S13",
+      "title": "Dayton EMM-6 specifications",
+      "url": "https://www.parts-express.com/pedocs/manuals/390-801--dayton-audio-emm-6-quick-reference-guide.pdf",
+      "scope": "18 Hz to 20 kHz and individual calibration file"
+    },
+    {
+      "id": "S14",
+      "title": "Edifier MR3 user manual",
+      "url": "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf",
+      "scope": "Monitor mode and power rating with DRC on"
+    },
+    {
+      "id": "S15",
+      "title": "Audient iD4 MKII specifications",
+      "url": "https://audient.com/products/audio-interfaces/id4/tech-specs/",
+      "scope": "Earlier one full band input comparison"
+    }
+  ],
+  "scientific_scope": "Documentation and setup plan only; physical qualification pending; initial mouse checkout then independently calibrated sheep geometry",
+  "software_scope": "Architecture and workflow described; no stimulus control implementation or audio playback performed",
+  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+  "actual_pages": 7
+}

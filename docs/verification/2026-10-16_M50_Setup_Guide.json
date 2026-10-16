@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "scope": "Equipment guide document verification only",
+  "outputs": {
+    "docx": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
+    "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf"
+  },
+  "source_record": "sources/M50_Sound_Setup_Guide_2026-10-16.json",
+  "checks": {
+    "rendered_pages": 7,
+    "all_final_page_pngs_reviewed": "passed at original image detail",
+    "part_quantities_unit_prices_line_totals": "passed against independently refreshed source basket",
+    "parts_total_usd": "2099.87",
+    "working_estimate_usd": "2349.87",
+    "exact_decimal_budget": "passed",
+    "docx_external_links": 22,
+    "pdf_external_links": 22,
+    "all_buying_and_source_destinations": "passed exact set comparison",
+    "image_alt_descriptions": 4,
+    "repeating_table_headers": 5,
+    "title_and_paragraph_borders": "none",
+    "independent_technical_reviews": "passed",
+    "builder_AST_parse": "passed",
+    "existing_model_and_parts_tests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "repository_reference_validation": "passed; pinned SONIC v1 PDF unchanged",
+    "git_diff_check": "passed"
+  },
+  "render_runtime": "Bundled Python and LibreOffice wrapper /Users/howardwang/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+  "sha256": {
+    "docx": "d458f894b8c8c2b47020122955fd65ea48e09af5c71f92c57065b62556f800e2",
+    "pdf": "86616c6cd0f1d2696f8d06c3256974a591316b7f1d340b20f34d4c0e2fc97a8e"
+  },
+  "scientific_limits": [
+    "MR3 actual acoustic output and 10 ms fidelity unmeasured",
+    "Delivered M50 serial ECF not inspected",
+    "Native Mac and operating gain behavior untested",
+    "Mouse distance level convention and tolerances remain lab decisions",
+    "Neural synchronization and animal use not qualified"
+  ],
+  "actions": "Document creation and research only; no purchase vendor outreach audio playback or animal experiment",
+  "website": "Unchanged; no browser/deployment claim",
+  "temporary_renders": "Outside repository; omitted from commits"
+}

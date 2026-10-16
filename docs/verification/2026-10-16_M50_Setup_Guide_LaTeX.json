@@ -26,8 +26,8 @@
   "compiler_source": "https://github.com/tectonic-typesetting/tectonic/releases/tag/tectonic%400.17.0",
   "compiler_archive_sha256": "a3f1cac7c5678f01661a92212f58480ae3b0634115d880dbc59e2953ded45667",
   "sha256": {
-    "tex": "9e09b8f94424d0477451f43065c0f90e3fa33a05b0e2ef6868023e1b93fd91ad",
-    "pdf": "721a5c304747550dde827afee69e758f6a84bf8f077367c1d4c9c96645a4a393"
+    "tex": "40a68de10630092fe38c7d0123910020667f84063dea668125b2e337dde41d7f",
+    "pdf": "f847fac5bd710f97c1f053bcac8cae415f2f34663110bbc236171912884a761b"
   },
   "limits": "Format conversion and documentation verification only; no physical qualification playback purchase or vendor contact",
   "temporary_builds": "Outside repository"

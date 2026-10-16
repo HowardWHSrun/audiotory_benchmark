@@ -39,6 +39,56 @@ SOURCES = [
     ("S13", "Dayton EMM-6 specifications", "https://www.parts-express.com/pedocs/manuals/390-801--dayton-audio-emm-6-quick-reference-guide.pdf", "18 Hz to 20 kHz and individual calibration file"),
     ("S14", "Edifier MR3 user manual", "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf", "Monitor mode and power rating with DRC on"),
     ("S15", "Audient iD4 MKII specifications", "https://audient.com/products/audio-interfaces/id4/tech-specs/", "Earlier one full band input comparison"),
+    ("S16", "miniDSP UMIK-2 manual", "https://www.minidsp.com/images/documents/miniDSP%20UMIK-2-User%20Manual.pdf", "Printed page 17 supplied calibration ends at 20 kHz"),
+    ("S17", "Earthworks M30 G2 manual", "https://earthworksaudio.com/wp-content/uploads/2025/11/Earthworks_Audio_M30_G2__11042025-1.pdf", "Pages 2 to 3 individual chart and bandwidth; supplied calibration endpoint unspecified"),
+    ("S18", "Original Edifier MR4 specifications", "https://www.edifier.com/global/p/studio-monitors/mr4", "Original MR4 range ends at 20 kHz; distinct from MR4 MKII"),
+    ("S19", "Edifier MR5 specifications and listed price", "https://us.edifier.com/products/mr5", "40 kHz nominal endpoint; official store displayed USD 349.99 on October 16"),
+    ("S20", "Extech 407766 specifications and listed price", "https://prod.extech.com/products/407766/", "1 kHz reference and +/-0.5 dB at 94 dB; manufacturer displayed USD 519 on October 16"),
+]
+
+COMPARISONS = [
+    {
+        "chosen": "Earthworks M50",
+        "alternatives": ["miniDSP UMIK-2", "Earthworks M30 G2"],
+        "reason": "UMIK-2 factory calibration stops at 20 kHz; M30 G2 calibration at 32 kHz is unconfirmed. M50 offers a 50 kHz range and individual calibration with our Mac interface.",
+        "source_ids": ["S2", "S3", "S16", "S17"],
+    },
+    {
+        "chosen": "Audient iD14 MKII",
+        "alternatives": ["Audient iD4 MKII"],
+        "reason": "iD4 can do the basic sound checkout, but has one full-band mic/line input. iD14 gives two for recording the mic and electrical timing reference together.",
+        "source_ids": ["S7", "S15"],
+    },
+    {
+        "chosen": "Edifier MR3 powered pair",
+        "alternatives": ["Original Edifier MR4", "Edifier MR5"],
+        "reason": "Original MR4 stops at 20 kHz. MR5 ($349.99) also specifies 40 kHz. MR3 saves $200 and covers our target on paper; 10 ms acoustic tests are still required.",
+        "source_ids": ["S4", "S5", "S18", "S19"],
+    },
+    {
+        "chosen": "REED R8090",
+        "alternatives": ["Extech 407766", "REED R8090-NIST"],
+        "reason": "Extech 407766 ($519 listed) also provides a 1 kHz level check. R8090 costs less; both state +/-0.5 dB at 94 dB. R8090-NIST adds a certificate at extra cost.",
+        "source_ids": ["S10", "S20"],
+    },
+    {
+        "chosen": "Hosa HMIC-010",
+        "alternatives": ["Equivalent XLR microphone cable"],
+        "reason": "Equivalent XLR mic cables work. This budget cable connects M50 to the interface; the brand is not essential.",
+        "source_ids": [],
+    },
+    {
+        "chosen": "Hosa HSS-005",
+        "alternatives": ["Equivalent balanced quarter-inch TRS cables"],
+        "reason": "Equivalent balanced 1/4-inch TRS cables work. We need two: one for the speaker and one for the electrical reference.",
+        "source_ids": [],
+    },
+    {
+        "chosen": "Gator RI-MICTP-FBM",
+        "alternatives": ["Existing stable boom microphone stand"],
+        "reason": "An existing stable boom stand is fine. This inexpensive model holds the mic at the ear/reference position.",
+        "source_ids": [],
+    },
 ]
 
 
@@ -262,20 +312,12 @@ def build():
     names=["Earthworks M50", "Audient iD14 MKII", "Edifier MR3 powered pair",
            "REED R8090", "Hosa HMIC-010 XLR\n10 ft", "Hosa HSS-005 TRS\n5 ft",
            "Gator RI-MICTP-FBM\nboom mic stand"]
-    reasons=[
-        "Measures above 32 kHz and has microphone-specific calibration data.",
-        "Works with Mac; plays sound and records the mic plus an electrical reference.",
-        "Affordable powered speaker with a specified range extending above 32 kHz.",
-        "Checks the recording level scale using a known 1 kHz sound.",
-        "Connects the microphone to the interface.",
-        "One cable for the speaker; one for the electrical reference.",
-        "Holds the microphone at a repeatable ear/reference position.",
-    ]
+    reasons=[item["reason"] for item in COMPARISONS]
     rows=[]
     for name,reason,item in zip(names,reasons,parts):
         cost=Decimal(str(item["unit_usd"]))*item["quantity"]
         rows.append([name,reason,item["quantity"],f"${cost:,.2f}"])
-    table(doc,["Part and buying link","Why we need it","Qty","Cost"],rows,
+    table(doc,["Part and buying link","Other options and why this fits","Qty","Cost"],rows,
           [2.1,3.65,.4,1.05],links=[p["buy_url"] for p in parts])
     paragraph(doc,"Parts total: $2,099.87. Plan for about $2,400 including estimated tax, shipping and small setup supplies.",bold_lead="Parts total:")
     paragraph(doc,"Included: M50 clip and calibrator adapter, iD14 USB-C cable, and calibrator battery. Use the existing Mac and provide a stable speaker support.",bold_lead="Included:")
@@ -305,14 +347,37 @@ def build():
         if i: p.add_run("  ·  ")
         _,title,url,_=next(item for item in SOURCES if item[0]==key)
         hyperlink(p,{"S2":"M50","S7":"iD14","S4":"MR3","S10":"R8090"}[key],url)
+    p=doc.add_paragraph(); p.style=doc.styles["Caption"]
+    p.add_run("Alternatives: ")
+    for i,(key,label) in enumerate((("S16","UMIK-2"),("S17","M30 G2"),("S15","iD4"),
+                                  ("S18","original MR4"),("S19","MR5"),("S20","Extech 407766"))):
+        if i: p.add_run("  ·  ")
+        _,_,url,_=next(item for item in SOURCES if item[0]==key)
+        hyperlink(p,label,url)
     dest=OUT/"M50_Sound_Setup_Guide.docx"
     doc.save(dest)
     manifest={
         "date":"2026-10-16","document":str(dest.relative_to(ROOT)),
         "source_audit":str(AUDIT.relative_to(ROOT)),"intended_pages":2,
         "parts_total_usd":str(subtotal),"working_budget_usd":"2349.87",
-        "revision":"two-page plain-language guide",
-        "visible_source_ids":["S2","S7","S4","S10"],
+        "revision":"two-page plain-language guide with alternatives and choice rationale",
+        "visible_source_ids":["S2","S7","S4","S10","S16","S17","S15","S18","S19","S20"],
+        "comparisons":COMPARISONS,
+        "comparison_checked_date":"2026-10-16",
+        "speaker_price_comparison":{
+            "MR3_official_store_usd":"149.99",
+            "MR5_official_store_usd":"349.99",
+            "difference_usd":"200.00",
+            "source":"https://us.edifier.com/products/mr5",
+            "scope":"Dated official store observations; neither model physically qualified for this sequence",
+        },
+        "calibrator_price_comparison":{
+            "REED_R8090_usd":"219.00",
+            "REED_source":"https://www.globaltestsupply.com/product/reed-r8090-sound-level-calibrator",
+            "Extech_407766_manufacturer_display_usd":"519.00",
+            "Extech_source":"https://prod.extech.com/products/407766/",
+            "scope":"Dated seller/manufacturer observations, not a market-wide lowest-price comparison or delivered quote",
+        },
         "source_references":[dict(id=k,title=t,url=u,scope=s) for k,t,u,s in SOURCES],
         "scientific_scope":"Documentation and setup plan only; physical qualification pending; initial mouse checkout then independently calibrated sheep geometry",
         "software_scope":"Architecture and workflow described; no stimulus control implementation or audio playback performed",

@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-16 America/Chicago - add alternatives to the concise setup guide
+
+- Howard requested the main other options and why the selected devices make sense. Kept the guide to two pages and replaced generic role descriptions with short comparisons: M50 versus UMIK-2/M30 G2, iD14 versus iD4, MR3 versus original MR4/MR5, and R8090 versus Extech 407766 or the certificate option. Equivalent cables and an existing stable boom stand are acceptable substitutes.
+- Rechecked primary specification/manual evidence. UMIK-2 factory calibration stops at 20 kHz; M30 G2 coverage at 32 kHz remains unconfirmed. MR3 remains conditional on actual acoustic tests. Official Edifier prices show MR5 at $349.99 and MR3 at $149.99; Extech displays $519 while the REED seller still lists $219. These are dated observations, not lowest-market-price or delivered quotes. Selected parts and the about $2,400 planning budget are unchanged.
+- Rendered and visually reviewed both pages; exact parts/prices, every comparison, all buying/specification/alternative link destinations, calibration/timing limits and the unchanged paper checksum passed. Detailed verification is in the existing guide verification record. No website changes, hardware playback, purchase or supplier contact occurred.
+
 ## 2026-10-16 America/Chicago - simplify the M50 setup guide
 
 - Howard found the guide too detailed. Replaced the seven-page reading version with two clear pages: exact parts and short reasons, then a simple connection diagram and four setup steps. The PDF and editable Word links stay the same. Listed parts remain $2,099.87, with about $2,400 to plan for; no price refresh or equipment change was needed.

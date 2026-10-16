@@ -57,5 +57,6 @@
   ],
   "actions": "Document revision and read-only paper verification only; no purchase vendor outreach audio playback or animal experiment",
   "website": "Unchanged; no browser/deployment claim",
-  "temporary_renders": "Outside repository; omitted from commits"
+  "temporary_renders": "Outside repository; omitted from commits",
+  "format_followup": "The PDF was subsequently replaced by the LaTeX export; this record describes the prior Word-derived PDF snapshot in Git history. See 2026-10-16_M50_Setup_Guide_LaTeX.json."
 }

@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-16 America/Chicago - convert the setup guide to LaTeX
+
+- Howard requested LaTeX. Created a self-contained local project with main.tex, preserving the current two-page content, equipment comparison, short wire descriptions, separate SONIC reference and setup steps. The connection diagram is now editable TikZ. The existing PDF link now serves the LaTeX export; Word remains a preserved content snapshot.
+- Compiled successfully with the desktop editor and exported with verified official Tectonic 0.17.0. Reviewed both final rendered pages and matched every nonempty content paragraph/table cell against Word after typography normalization. All buying/source destinations, prior removals, current costs and the pinned manuscript checksum are preserved; final compilation has no warnings or layout errors.
+- Kept compiler binaries, logs and renders outside Git. Verification is recorded in docs/verification/2026-10-16_M50_Setup_Guide_LaTeX.json. The website, source paper and physical equipment are unchanged.
+
 ## 2026-10-16 America/Chicago - add the SONIC benchmark stimuli
 
 - Howard requested the published SONIC experiment and stimuli in the guide. Added a clearly labeled paper section with awake/alert sheep, 421-channel recording and tone decoding, 10 ms sine pips, zero start phase, 2 ms end ramps, the initial 37-frequency description, Sheep E's exact 14 frequencies, randomized balanced blocks, block lengths/gaps and 192 kHz NI/TDT playback at approximately 80 dB SPL.

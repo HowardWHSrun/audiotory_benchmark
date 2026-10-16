@@ -293,5 +293,9 @@
   "scientific_scope": "Documentation and setup plan only; physical qualification pending; initial mouse checkout then independently calibrated sheep geometry",
   "software_scope": "Architecture and workflow described; no stimulus control implementation or audio playback performed",
   "actual_pages": 2,
-  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf"
+  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+  "latex_project": "output/pdf/2026-10-16/M50_Sound_Setup_Guide",
+  "latex_main": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
+  "active_pdf_source": "LaTeX",
+  "docx_status": "Preserved content snapshot from before the LaTeX conversion; future guide edits use main.tex"
 }

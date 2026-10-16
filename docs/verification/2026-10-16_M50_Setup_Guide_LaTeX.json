@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-16",
+  "scope": "LaTeX conversion only; content and equipment choices preserved",
+  "source": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
+  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+  "checks": {
+    "desktop_editor_compilation": "success",
+    "export_compiler": "Tectonic 0.17.0 arm64 official release; archive SHA256 verified",
+    "compiler_warnings": 0,
+    "rendered_pages": 2,
+    "both_final_pages_visually_reviewed": "passed",
+    "all_nonempty_content_paragraphs_and_table_cells": "matched against the prior DOCX snapshot after whitespace typography normalization",
+    "native_editable_diagram": "TikZ; no image dependencies",
+    "unique_https_destinations": 18,
+    "pdf_link_annotations": 19,
+    "all_buying_and_source_links": "exact destination set preserved",
+    "user_removed_extra_paragraphs": "remain absent",
+    "pinned_SONIC_source": "unchanged",
+    "existing_model_and_parts_tests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "repository_validation": "passed 454 references and unchanged pinned PDF",
+    "git_diff_check": "passed"
+  },
+  "compiler_source": "https://github.com/tectonic-typesetting/tectonic/releases/tag/tectonic%400.17.0",
+  "compiler_archive_sha256": "a3f1cac7c5678f01661a92212f58480ae3b0634115d880dbc59e2953ded45667",
+  "sha256": {
+    "tex": "9e09b8f94424d0477451f43065c0f90e3fa33a05b0e2ef6868023e1b93fd91ad",
+    "pdf": "721a5c304747550dde827afee69e758f6a84bf8f077367c1d4c9c96645a4a393"
+  },
+  "limits": "Format conversion and documentation verification only; no physical qualification playback purchase or vendor contact",
+  "temporary_builds": "Outside repository"
+}

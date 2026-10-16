@@ -1,5 +1,12 @@
 # Research log
 
+## 2026-10-15 America/Chicago - Mac host confirmed
+
+- Howard confirmed Mac. Added a [Mac-specific sound plan](sources/Budget_Sound_Only_Mac_2026-10-15.json) and marked the preceding Windows/OmniMic basket as conditional. The MR3 and UMC204HD remain playback candidates. Dodotronic's Ultramic192K EVO is an economical raw-recording candidate at a freshly displayed EUR180; its standard USB audio interface and vendor-listed Mac/Audacity workflow support evaluation on the intended host.
+- Priced USD parts total $312.86, plus the separate EUR180 microphone offer. An author-set $250 microphone allowance and $200 support/reserve amounts produce a $762.86 prototype planning budget, rounded to $800. This does not close calibrated 32 kHz measurement: suitable reference borrowing is unarranged, and calibration/purchase costs remain unquoted. The Ultramic's generic response and nominal bandwidth are not unit-specific SPL calibration.
+- The 192 kSa/s microphone supports a candidate raw-waveform route for checking 10 ms pips (1,920 samples), but it has an independent clock from playback. Actual Mac enumeration, native-rate recording, acoustic fidelity and calibrated levels remain bench checks. No equipment was ordered or operated.
+- Verification passed: separate USD/EUR subtotals, author-set allowance arithmetic, 10/2 ms sample calculations, host-override links, all 11 existing model/parts tests, 441-reference source validation and whitespace checks. The pinned paper is unchanged; these are documentation checks only.
+
 ## 2026-10-15 America/Chicago - sound-only budget and 10 ms delivery checks
 
 - Howard reported his professor's direction to start basic, then explicitly limited the immediate build to sound playback and measurement. Added a [sound-only buying list and bench plan](sources/Budget_Sound_Only_10ms_2026-10-15.json) around MR3, UMC204HD and OmniMic 40k: $812.84 listed parts; author-set support/connection/reserve amounts bring the working plan to about $1,000 with a borrowed level reference, or about $1,250 adding the standard R8090 before an unpriced compatible adapter.

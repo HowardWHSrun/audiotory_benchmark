@@ -1,0 +1,63 @@
+{
+  "checked_date": "2026-10-15",
+  "timezone": "America/Chicago",
+  "user_confirmed_host": "Mac",
+  "scope": "Sound playback and acoustic measurement only; candidate tones through 32 kHz and 10 ms pip delivery. No neural hardware integration.",
+  "supersedes_for_current_host": "Budget_Sound_Only_10ms_2026-10-15.json assumed Windows for the OmniMic bundled software. Its earlier budget is conditional and is not the current Mac purchasing recommendation.",
+  "recommendation": {
+    "playback": "Keep the candidate Edifier MR3 and Behringer UMC204HD. Use wired TRS playback from a precomputed continuous sequence.",
+    "measurement_first_choice": "Borrow a calibrated microphone/measurement chain with documented coverage at 32 kHz for initial frequency and level qualification. Access and cost are unknown.",
+    "budget_raw_recording_candidate": "Dodotronic Ultramic192K EVO: native 192 kSa/s USB waveform capture and nominal 95 kHz bandwidth; short-pip timing and relative amplitude recording candidate.",
+    "calibration_limit": "No supplied unit-specific 32 kHz sensitivity/response calibration or calibration service was established for the Ultramic. It does not complete calibrated SPL measurement by itself.",
+    "OmniMic": "Do not select the 499.98 USD OmniMic package solely for its bundled software on this Mac. Its official manual recommends Windows and warns of unreliable Macintosh/Linux use.",
+    "qualification": "USB class compatibility and vendor Mac software listings support a candidate workflow. Actual Mac/macOS, device enumeration, native-rate continuous recording and full acoustic performance remain bench checks."
+  },
+  "candidate_parts": [
+    {"item": "Edifier MR3 powered pair", "quantity": 1, "price": 149.99, "currency": "USD", "url": "https://us.edifier.com/products/mr3"},
+    {"item": "Behringer UMC204HD", "quantity": 1, "price": 97.98, "currency": "USD", "url": "https://www.sweetwater.com/store/detail/UMC204HD--behringer-u-phoria-umc204hd-usb-audio-interface"},
+    {"item": "Hosa HSS-005 balanced TRS cable", "quantity": 2, "price": 14.95, "currency": "USD", "url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot"},
+    {"item": "Gator RI-MICTP-FBM boom stand", "quantity": 1, "price": 34.99, "currency": "USD", "url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom", "condition": "Suitable clip/holder for Ultramic body needs confirmation."},
+    {"item": "Dodotronic Ultramic192K EVO", "quantity": 1, "price": 180.00, "currency": "EUR", "url": "https://www.dodotronic.com/product/ultramic-192k-evo/", "price_evidence": "Fresh official product page: 180 EUR and add-to-cart control. Destination-specific tax/shipping/import cost and delivery are unconfirmed."}
+  ],
+  "budget": {
+    "observed_USD_parts_subtotal": 312.86,
+    "observed_EUR_microphone_subtotal": 180.00,
+    "price_basis": "MR3/interface/cable/stand prices were checked earlier in this same research session. Microphone is a fresh official EUR offer. Currencies are not added together.",
+    "microphone_USD_planning_allowance": 250.00,
+    "microphone_allowance_basis": "Author-set USD purchasing allowance for the 180 EUR offer; not a live FX conversion or a delivered quote.",
+    "support_USB_holder_allowance_USD": 75.00,
+    "delivery_tax_uncertainty_reserve_USD": 125.00,
+    "working_prototype_budget_USD": 762.86,
+    "rounded_working_prototype_budget_USD": 800.00,
+    "calibrated_measurement_budget": "Open. Assumes suitable reference access can be borrowed; purchasing or obtaining high-frequency calibration is additional and unquoted.",
+    "exclusions": ["Existing Mac purchase", "Calibration reference/service", "Unpriced microphone-calibrator adapters", "Extra microphone or conditioning required for calibrated measurement", "Software/integration labor", "Neural recording and animal work"],
+    "limit": "Approximately 800 USD is a planning budget for playback/raw-timing prototyping with reference access borrowed, not a guaranteed full calibrated setup or maximum delivered price."
+  },
+  "Mac_workflow": [
+    "Confirm the intended Mac/macOS can enumerate both USB devices; use appropriate data-capable USB adapters and stable power.",
+    "Set and verify each device's native supported format in Audio MIDI Setup. Disable recording enhancements and automatic gain where applicable.",
+    "Record untouched Ultramic PCM/WAV continuously with Mac audio software such as Audacity. Play the precomputed 96/192 kSa/s stimulus sequence through the UMC in a separate configured playback stream/process if necessary.",
+    "Save waveform files, the stimulus manifest, actual sample rates, gains, channel maps and geometry. Inspect the acoustic sequence and quantify duration, spacing, ringing and event completeness.",
+    "Treat the microphone and interface as independent clocks even if both nominally run at 192 kSa/s. A software aggregate device or resampling does not establish shared physical timing.",
+    "Use a calibrated 32 kHz-capable reference to establish frequency-dependent levels. A 1 kHz calibrator alone cannot correct unknown 32 kHz response."
+  ],
+  "ten_ms": {
+    "at_192000_samples_per_second": {"pip_samples": 1920, "two_ms_ramp_samples": 384},
+    "status": "Digital sample arithmetic is exact. Measured acoustic duration, spacing and stability remain unverified.",
+    "frequency_limit": "Vendor microphone bandwidth covers 32 kHz nominally; usable MR3 output and calibrated whole-chain response must still be measured."
+  },
+  "official_sources": {
+    "EVO_shared_user_guide_v2_1": "https://www.dodotronic.com/Download/Ultramic384_EVO_User_Guide.pdf",
+    "EVO_manual_facts": "Manual p2 specifies 192 kSa/s and 95 kHz bandwidth for UM192K; p3 describes standard driverless UAC1.1 USB audio; later pages describe Audacity/raw PCM capture. Generic response plots are not unit calibration.",
+    "vendor_Mac_software_list": "https://www.dodotronic.com/bioacoustic-software/",
+    "vendor_Mac_evidence": "Audacity is explicitly listed under Mac Software. This is not an exact-host hardware verification.",
+    "Audacity_Mac_download": "https://www.audacityteam.org/download/mac/",
+    "Apple_audio_device_format_settings": "https://support.apple.com/guide/audio-midi-setup/set-up-audio-devices-ams59f301fda/mac",
+    "OmniMic_manual": "https://www.parts-express.com/pedocs/manuals/390-794--dayton-audio-omnimic-40k-manual.pdf"
+  },
+  "screened_alternative": {
+    "UMIK_2": "Mac-compatible, but its official manual limits supplied calibration to 20 kHz and requires a custom calibration file for accurate ultrasonic measurement. A 192 kHz sample rate alone does not qualify it for calibrated 32 kHz use.",
+    "manual_url": "https://www.minidsp.com/images/documents/miniDSP%20UMIK-2-User%20Manual.pdf"
+  },
+  "actions": "Research and documentation only. No software install, hardware operation, sound playback, purchase, supplier contact, calibration, or achieved 10 ms acoustic result."
+}

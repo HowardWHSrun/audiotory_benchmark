@@ -6,7 +6,8 @@
     "professor_direction_as_reported_by_Howard": "Start with the basic setup.",
     "current_build_scope": "Sound playback and acoustic measurement only. Howard explicitly deferred neural hardware and recorder integration.",
     "frequency_assumption": "Budget for evaluating the Edifier MR3 through 32 kHz; final retained tone list is subject to measured performance.",
-    "computer_OS": "Not confirmed; Windows 10/11 is assumed for the bundled OmniMic workflow. A question was sent to Howard in this chat."
+    "computer_OS": "Howard subsequently confirmed Mac. The Windows/OmniMic basket below is conditional; use Budget_Sound_Only_Mac_2026-10-15.json for the current host-specific recommendation.",
+    "current_host_plan": "Budget_Sound_Only_Mac_2026-10-15.json"
   },
   "recommendation": {
     "status": "Candidate buying list and animal-free bench plan, not an assembled or validated system.",

@@ -18,7 +18,7 @@ The homepage shows **our planned experiment** in one diagram. Select a component
 
 ## Current direction
 
-**Immediate build: sound playback and measurement only.** Howard reported his professor's approval to start basic and deferred neural hardware integration. The [sound-only budget and 10 ms bench plan](sources/Budget_Sound_Only_10ms_2026-10-15.json) lists an MR3/USB-audio/OmniMic 40k candidate at about $1,000 with a borrowed level reference. Windows compatibility and saved acoustic timing capture remain to be qualified; 10 ms waveform sample counts are not measured speaker performance.
+**Immediate build: sound playback and measurement only, using a Mac.** Howard reported his professor's approval to start basic and deferred neural hardware integration. The [Mac sound-only plan](sources/Budget_Sound_Only_Mac_2026-10-15.json) retains MR3/USB-audio playback and shortlists Ultramic192K EVO for raw acoustic recordings, with an approximately $800 prototype planning budget. Calibrated measurement through 32 kHz still requires suitable borrowed reference access or an additional quoted solution. The [earlier Windows/OmniMic candidate](sources/Budget_Sound_Only_10ms_2026-10-15.json) is conditional; digital sample counts do not establish acoustic 10 ms performance.
 
 Lan clarified that the primary purpose is **testing in sheep**, which will be **sedated during the measurements**. The aim is to measure auditory cortical responses to controlled sound stimuli. A soundproof box, behavioral rig, and sound isolation are not required for the planned work. The team should identify the sound delivery and measurement components needed from the Paradromics paper and seek focused advice about speakers and acoustic calibration.
 

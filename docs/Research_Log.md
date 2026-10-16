@@ -1,5 +1,11 @@
 # Research log
 
+## 2026-10-16 America/Chicago - clean math-paper typography for the guide
+
+- Howard requested a cleaner PDF with the font used in a math paper. Restyled the active two-page guide in Latin Modern Roman, with a restrained centered title, simple table rules, aligned costs, monochrome diagram strokes and plain page numbering. The existing PDF filename and editable LaTeX source remain current.
+- Preserved all seven parts, quantities, line costs, comparison wording, setup steps, paper reference, diagram content, prior content removals and all 18 unique hyperlink destinations. In the same task, Howard asked to remove the Goal paragraph, What to get heading and Before testing paragraph; those are now absent. No other substantive text changed.
+- Desktop and export compilation passed. All fonts are embedded; both final pages passed visual review and independent review. Verification is recorded in [the styling check](verification/2026-10-16_M50_Math_Paper_Style.json). Temporary renders and compiler output remain ignored. No hardware operation or purchasing occurred.
+
 ## 2026-10-16 America/Chicago - organize the project folder
 
 - Howard requested cleanup of the messy workspace. Added concise START_HERE, project, document and output indexes; moved working plans into docs/experiment, paper notes into docs/paper, older proposals into dated docs/history folders, and the research log into docs. The detailed old README is preserved in the dated history.

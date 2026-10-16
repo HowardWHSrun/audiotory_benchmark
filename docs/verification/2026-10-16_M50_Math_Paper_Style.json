@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "scope": "Clean math-paper typography plus Howard-requested removal of the Goal paragraph, What to get heading and Before testing paragraph",
+  "source": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
+  "pdf": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final Part List V1.pdf",
+  "changes": [
+    "Latin Modern Roman text with embedded Latin Modern math fonts",
+    "Centered restrained title and consistent section headings",
+    "White booktabs table with right-aligned line costs and no grid or shading",
+    "Thin monochrome diagram strokes and unobtrusive clickable links",
+    "Simple centered page numbers",
+    "Remove the Goal paragraph, What to get heading and entire Before testing paragraph at Howard\u2019s request"
+  ],
+  "checks": {
+    "pages": 2,
+    "parts_rows_unchanged": 7,
+    "paper_reference_unchanged": true,
+    "setup_steps_unchanged": true,
+    "diagram_content_unchanged": true,
+    "unique_https_targets": 18,
+    "pdf_link_annotations": 19,
+    "link_target_set_preserved": true,
+    "fonts": [
+      "/AKHCZK+LMRoman9-Regular",
+      "/BZIVMZ+LMRoman10-Italic",
+      "/IHAIZV+LMRoman12-Bold",
+      "/IXFAWU+LMRoman10-Bold",
+      "/TQTHRL+LMRoman10-Regular",
+      "/VDVGTR+LMMathSymbols9-Regular",
+      "/YEUUOC+LMMathSymbols10-Regular"
+    ],
+    "all_fonts_embedded": true,
+    "compiler_warnings": 0,
+    "desktop_editor_compilation": "success",
+    "export_compiler": "Tectonic 0.17.0",
+    "both_final_pages_visually_reviewed": "passed",
+    "independent_visual_review": "passed; no clipping, overlap or orphaned unit labels",
+    "prior_content_removals_preserved": true,
+    "equipment_selection_and_prices_unchanged": true,
+    "requested_removals_confirmed": true,
+    "model_and_parts_tests": "11/11 passed",
+    "source_site_validation": "passed: 512 links, 67 evidence paths",
+    "static_build": "passed: 145 files, 20 legacy document URLs",
+    "pinned_manuscript_unchanged": true,
+    "bundle_validation": "passed: 526 links, 67 evidence paths"
+  },
+  "before_sha256": {
+    "tex": "b98c4d1bf975d849914275ab6ea07d0b5c2e60ca8fd5233b5d98446ceac9b3e9",
+    "pdf": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
+  },
+  "after_sha256": {
+    "tex": "ad038e676459300bdabf9f174a8a5137fe2af6939d452afdf67beff9a8c6b584",
+    "pdf": "141bff3d93924cc072f62e594f31855799993c432b7d695960f7da3a99899686"
+  },
+  "limits": "Documentation formatting only; no equipment order, sound playback, bench qualification or animal experiment. Temporary renders and logs are ignored."
+}

@@ -106,5 +106,16 @@
     "untracked_local_papers_excluded": true
   },
   "actions": "File organization and software checks only; no purchase, external messages, audio playback or animal experiment",
-  "deployment": "Pending push; verify the workflow and hosted document hashes after publishing"
+  "deployment": {
+    "organization_commit": "ae438fcd99b0ebcd59a228131bc275b06213c80a",
+    "workflow_run": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/38940424800",
+    "conclusion": "success",
+    "verified_at_utc": "2026-10-16T17:33:22.478034+00:00",
+    "hosted_files_checked": 28,
+    "http_status": "all 200",
+    "hosted_file_hashes": "all match the locally validated publication bundle",
+    "legacy_document_urls_checked": 20,
+    "current_pdf_sha256": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9",
+    "pinned_paper_sha256": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731"
+  }
 }

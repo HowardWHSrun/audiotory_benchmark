@@ -4,7 +4,7 @@ Howard correctly identified the paper's reported **56-millisecond delay**. The e
 
 ## What the paper actually reports
 
-Primary source: the unchanged [saved SONIC version 1 paper](sources/SONIC_2025_bioRxiv_v1.pdf), [original DOI](https://doi.org/10.1101/2025.09.30.679683). Page numbers below are PDF pages, starting at the title page.
+Primary source: the unchanged [saved SONIC version 1 paper](../../../sources/SONIC_2025_bioRxiv_v1.pdf), [original DOI](https://doi.org/10.1101/2025.09.30.679683). Page numbers below are PDF pages, starting at the title page.
 
 | Figure | Meaning and evidence | What it does not establish |
 |---|---|---|
@@ -52,7 +52,7 @@ The later faculty revision below supersedes this subsection for the two refreshe
 | Recommendation with new microphone amplifier | $5,636.47 | Speaker/amplifier/enclosure quotes and recorder interface extra |
 | Recommendation with earlier used amplifier | $5,016.47 | Conditional availability; still incomplete |
 
-Exact item records and buying links are in the [current price provenance](sources/Accurate_Setup_Prices_2026-10-09.json) and [itemized comparison](Accurate_Setup_Comparison_2026-10-09.md). Older budget files and earlier research-log entries are historical snapshots, not the current shopping basket. No complete upper budget or achieved Rice precision is established.
+Exact item records and buying links are in the [current price provenance](../../../sources/Accurate_Setup_Prices_2026-10-09.json) and [itemized comparison](Accurate_Setup_Comparison_2026-10-09.md). Older budget files and earlier research-log entries are historical snapshots, not the current shopping basket. No complete upper budget or achieved Rice precision is established.
 
 ## Faculty revision: later marketplace refresh
 

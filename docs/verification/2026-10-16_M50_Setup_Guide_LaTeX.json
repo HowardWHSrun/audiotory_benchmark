@@ -2,7 +2,7 @@
   "date": "2026-10-16",
   "scope": "Clarify microphone cable and 48 V input power labels in the LaTeX guide",
   "source": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
-  "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+  "pdf": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final Part List V1.pdf",
   "checks": {
     "desktop_editor_compilation": "success",
     "export_compiler": "Tectonic 0.17.0 arm64 official release; archive SHA256 verified",
@@ -33,5 +33,6 @@
     "pdf": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
   },
   "limits": "Format conversion and documentation verification only; no physical qualification playback purchase or vendor contact",
-  "temporary_builds": "Outside repository"
+  "temporary_builds": "Outside repository",
+  "organization_note": "Paths relocated on 2026-10-16; verified PDF and TeX bytes unchanged. Historical evidence paths resolve through docs/organization/2026-10-16_path_moves.json."
 }

@@ -2,7 +2,7 @@
 
 Updated October 7, 2026. **Proposed animal-free check; no bench-test evidence is recorded here.** The primary destination is a sedated-sheep auditory experiment. The bench check establishes sound delivery and timing, not a neural response or information transfer rate.
 
-Lan does not require a soundproof box or behavioral rig. Validate the free-field arrangement and document background conditions and reference geometry. See [team clarifications](sources/Team_Clarifications_2026-10-07.md) and [setup requirements](Auditory_Setup_Requirements.md).
+Lan does not require a soundproof box or behavioral rig. Validate the free-field arrangement and document background conditions and reference geometry. See [team clarifications](../../sources/Team_Clarifications_2026-10-07.md) and [setup requirements](Auditory_Setup_Requirements.md).
 
 ## Inputs to settle
 
@@ -48,7 +48,7 @@ Use measured acoustics to assess delivery. Approximately 80 dB SPL, 192 kHz play
 
 The next separate stage is the team's sheep response experiment under the intended animal-use protocol. Record actual animal state and delivery; establish response latency, quality and a usable window before selecting decoding. The source sheep were awake/alert, so no sedated neural performance follows from a passing audio bench test.
 
-If ITR is later evaluated, preserve stimulus IDs, timing evidence and contiguous block boundaries; keep test data out of fitting and declare window selection/preprocessing. Main SONIC analysis and the reduced Figure 5 sweep are different protocols; see [paper notes](Paper_Notes.md).
+If ITR is later evaluated, preserve stimulus IDs, timing evidence and contiguous block boundaries; keep test data out of fitting and declare window selection/preprocessing. Main SONIC analysis and the reduced Figure 5 sweep are different protocols; see [paper notes](../paper/Paper_Notes.md).
 
 ## Validation record
 

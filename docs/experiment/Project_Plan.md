@@ -1,6 +1,6 @@
 # Project plan
 
-Updated October 7, 2026 (Houston). Sources: [Lan's initial request](sources/Lan_Message_2026-10-01.md), [team clarifications received October 7](sources/Team_Clarifications_2026-10-07.md), and [SONIC bioRxiv v1](Paper_Notes.md).
+Updated October 7, 2026 (Houston). Sources: [Lan's initial request](../../sources/Lan_Message_2026-10-01.md), [team clarifications received October 7](../../sources/Team_Clarifications_2026-10-07.md), and [SONIC bioRxiv v1](../paper/Paper_Notes.md).
 
 ## Primary purpose and evidence status
 
@@ -28,7 +28,7 @@ Use these labels throughout the project:
 
 | Workstream | Concrete output | Completion evidence |
 |---|---|---|
-| Paper review | Verified method ledger and explanation of the sound-to-neural-decoding experiment. | [Paper notes](Paper_Notes.md) with page citations and explicit gaps. |
+| Paper review | Verified method ledger and explanation of the sound-to-neural-decoding experiment. | [Paper notes](../paper/Paper_Notes.md) with page citations and explicit gaps. |
 | Experiment website | Main page explains our planned sedated-sheep setup, sound/calibration paths, recording alignment, and open equipment choices. SONIC explanation and results stay within a separate Paper reference section. | Working setup diagram with component details; paper illustrations labeled and distinct from hardware playback or real-recording analysis. |
 | Local inventory | Models, interfaces, calibration resources and practical gaps. | [Inventory](Equipment_Software_Inventory.md) supported by inspection, manuals or direct team input. |
 | Sound generation | Waveform/sequence specification, delivery path and run manifest. | Exact parameters recorded; missing paper details resolved or declared as Rice adaptations. |
@@ -40,7 +40,7 @@ Use these labels throughout the project:
 
 The website supports planning our experiment, with the paper as a reference. It does not establish that bench stimulus code, calibrated hardware or animal recordings exist.
 
-On October 8, Howard requested initial thinking about a mouse stimulus setup while reviewing the paper's methods. The [mouse setup proposal](Mouse_Stimulus_Setup_Proposal.md) covers sound generation, calibrated delivery, recording alignment, and a progression from bench checks to separated-tone and sequence characterization. Mouse strain/age, state, and recorder remain open; the confirmed primary sheep target and existing team assignments are preserved.
+On October 8, Howard requested initial thinking about a mouse stimulus setup while reviewing the paper's methods. The [mouse setup proposal](../history/2026-10-08/Mouse_Stimulus_Setup_Proposal.md) covers sound generation, calibrated delivery, recording alignment, and a progression from bench checks to separated-tone and sequence characterization. Mouse strain/age, state, and recorder remain open; the confirmed primary sheep target and existing team assignments are preserved.
 
 ## Focused McGinley follow-up
 

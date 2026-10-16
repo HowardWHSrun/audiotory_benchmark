@@ -2,7 +2,7 @@
 
 Pinned source: Sean M. Perkins et al. (2025), *SONIC: A Benchmarking Paradigm for Brain-Computer Interfaces*, bioRxiv, DOI [10.1101/2025.09.30.679683](https://doi.org/10.1101/2025.09.30.679683), **v1** (`2025.09.30.679683v1`). [Abstract](https://www.biorxiv.org/content/10.1101/2025.09.30.679683v1.abstract) · [PDF route](https://www.biorxiv.org/content/10.1101/2025.09.30.679683v1.full.pdf).
 
-Posted October 2, 2025. This is a preprint, not peer reviewed. The [18-page source PDF](sources/SONIC_2025_bioRxiv_v1.pdf) is saved locally. The parent researcher's findings were checked against the materialized v1 PDF on 2026-10-02 UTC; page numbers below are the manuscript's printed pages.
+Posted October 2, 2025. This is a preprint, not peer reviewed. The [18-page source PDF](../../sources/SONIC_2025_bioRxiv_v1.pdf) is saved locally. The parent researcher's findings were checked against the materialized v1 PDF on 2026-10-02 UTC; page numbers below are the manuscript's printed pages.
 
 Rice adaptation notes were updated October 7, 2026 from supplied team clarifications. The pinned paper facts and results remain distinct from that new direction.
 
@@ -61,7 +61,7 @@ Record exact settings together with their experimental context. Do not combine t
 
 ## Rice adaptations - proposals, not paper facts
 
-**Confirmed team direction received October 7, 2026:** the primary Rice task is measuring sound-evoked auditory-cortex responses in **sedated sheep**. Lan does not require a soundproof box or behavioral rig. This updates the project target, not the source paper. SONIC sheep were **awake and alert** (Section 6.6, p.13), and the manuscript supplies no sedated result. See [team clarification record](sources/Team_Clarifications_2026-10-07.md).
+**Confirmed team direction received October 7, 2026:** the primary Rice task is measuring sound-evoked auditory-cortex responses in **sedated sheep**. Lan does not require a soundproof box or behavioral rig. This updates the project target, not the source paper. SONIC sheep were **awake and alert** (Section 6.6, p.13), and the manuscript supplies no sedated result. See [team clarification record](../../sources/Team_Clarifications_2026-10-07.md).
 
 Sedated sheep are an adaptation. Establish local recorded response timing and a useful observation window; do not transfer the published windows, accuracy or ITR as expected performance. Sedation may affect evoked responses, so record the condition when interpreting local timing and decoding. No sedated measurement is claimed here.
 

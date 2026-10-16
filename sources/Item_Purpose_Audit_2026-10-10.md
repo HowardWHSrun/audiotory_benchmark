@@ -37,7 +37,7 @@ ES1's lower limit does not cover the paper's 1.4–4 kilohertz tones. Computer c
 | Hosa PHX-106F-BULK | Proposed modified lead from MM-1 line output to the recording input; Phoenix connector must be removed/replaced and wiring checked | [Connector listing](https://www.bhphotovideo.com/c/product/488060-REG/Hosa_Technology_PHX_106F_BULK_PNX_106FB_Phoenix_Connector.html), [MM-1 manual](https://support.sounddevices.com/hc/en-us/articles/45051602821275-MM-1-User-Guide-and-Technical-Information) |
 | Two 100,000-ohm resistors | Proposed ground-reference return paths for the floating microphone-amplifier output | NI X Series floating-source input guidance and MM-1 output specification; proposed connection, not validated hardware |
 
-The short PDF marks custom microphone-input wiring and proposed resistors in their descriptions. Source-version microphone/recorder adapters remain outside the existing budget scope, as documented in the [detailed comparison](../Accurate_Setup_Comparison_2026-10-09.md). No new cost or timing claim is made.
+The short PDF marks custom microphone-input wiring and proposed resistors in their descriptions. Source-version microphone/recorder adapters remain outside the existing budget scope, as documented in the [detailed comparison](../docs/history/2026-10-09/Accurate_Setup_Comparison_2026-10-09.md). No new cost or timing claim is made.
 
 ## Basic and measurement parts
 

@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-16",
+  "purpose": "Reversible project organization; old paths in dated evidence remain historical",
+  "base_commit": "58fe8cf5c89ea67277edfbd0ce0f5b048de08ad6",
+  "moves": [
+    {
+      "from": "Project_Plan.md",
+      "to": "docs/experiment/Project_Plan.md",
+      "sha256_before": "04418daa82d29d0ff7a7ffb10c3eb8c87d81539f4ec3317f8f7d0597b0f612f4",
+      "sha256_after": "535a248bdd157c0fd6b1fb7f6d22824bf630f96bf3c2da1e51905b22f9ac20b4",
+      "change": "links rebased"
+    },
+    {
+      "from": "Auditory_Setup_Requirements.md",
+      "to": "docs/experiment/Auditory_Setup_Requirements.md",
+      "sha256_before": "c9f7bec6821ff869743bbc32a67110b476d00450e19e44e567a4f57d8b289510",
+      "sha256_after": "b9103d6ad26cc0cc9217228e95f3be22c9a0646878681d68d980758a9e257a37",
+      "change": "links rebased"
+    },
+    {
+      "from": "Bench_Validation_Plan.md",
+      "to": "docs/experiment/Bench_Validation_Plan.md",
+      "sha256_before": "d664dcf705fdb29f517dfd38e86d001b417039ceec62ec7eaf1b37063e0e82f8",
+      "sha256_after": "66babdf20728b8c46b089d22302a7978195116249b561e75f450cd0ae17aae66",
+      "change": "links rebased"
+    },
+    {
+      "from": "Equipment_Software_Inventory.md",
+      "to": "docs/experiment/Equipment_Software_Inventory.md",
+      "sha256_before": "7db088608e8f8dcd421f7872e0113d2a9ac7092d7bab6b341fc74f4e7a396b81",
+      "sha256_after": "09a77ac1f0ba5c684383d7ef552cfd12f4e7b035c2c1795307a1abbad18dda10",
+      "change": "links rebased"
+    },
+    {
+      "from": "Paper_Notes.md",
+      "to": "docs/paper/Paper_Notes.md",
+      "sha256_before": "70884f85bd0258d198c84a7bfdb54f90de35f41e222c1ee33ab49c7457612e91",
+      "sha256_after": "6fafb68713a7272752bc801a86cea5e59f9adddbd940374aa216dcb473268584",
+      "change": "links rebased"
+    },
+    {
+      "from": "Research_Log.md",
+      "to": "docs/Research_Log.md",
+      "sha256_before": "dc8b006afe87b60a8b8ddc851cb568c8bfb4193b654118303edd25ddf5877e1b",
+      "sha256_after": "6ab1d7a1dbb230d396c49f3264c566c2741daff563212b51894652e0333a2e8b",
+      "change": "links rebased and organization log entry added"
+    },
+    {
+      "from": "Mouse_Equipment_Pricing_2026-10-08.md",
+      "to": "docs/history/2026-10-08/Mouse_Equipment_Pricing_2026-10-08.md",
+      "sha256_before": "0e675a86d6c0c60a5534017e9bd0c8d9105a0711d01e28ec8f23f2e015d6ec6f",
+      "sha256_after": "2393489f1420f1095411241e2363ad3aea3152dc55dcb1dfd4b052591ed71028",
+      "change": "links rebased"
+    },
+    {
+      "from": "Mouse_Setup_Equipment_Plan.md",
+      "to": "docs/history/2026-10-08/Mouse_Setup_Equipment_Plan.md",
+      "sha256_before": "664846e38d02851d7a8f89717be21628065c50867968b625ca4e8ef9aac22d28",
+      "sha256_after": "6bfa8c4394e64d6fb46f364a7cac03c9189ae97eb0814c4ef5a1bff283537bc0",
+      "change": "links rebased"
+    },
+    {
+      "from": "Mouse_Stimulus_Setup_Proposal.md",
+      "to": "docs/history/2026-10-08/Mouse_Stimulus_Setup_Proposal.md",
+      "sha256_before": "373d084ea1e09345b2cfa48f5b8879128e894cd3414735f43b555211a2e71450",
+      "sha256_after": "45d8a16f8bde861d77950e1c0b0e0ba249ae459ffa4ba7b5efe1874dff469a9b",
+      "change": "links rebased"
+    },
+    {
+      "from": "Accurate_Setup_Comparison_2026-10-09.md",
+      "to": "docs/history/2026-10-09/Accurate_Setup_Comparison_2026-10-09.md",
+      "sha256_before": "88a644684a0882de9f06485a03adc9c7193475a62ce0a09dc38aa04530cb38e2",
+      "sha256_after": "341c714213c60384cfcaeab904726d0291322cee0cc51a87f6322698051063ee",
+      "change": "links rebased"
+    },
+    {
+      "from": "Auditory_Hardware_Options_2026-10-09.md",
+      "to": "docs/history/2026-10-09/Auditory_Hardware_Options_2026-10-09.md",
+      "sha256_before": "b21f3f06a9ea276fe125508ed35a7a7976ef97d167981b85d4eb64af415f03f6",
+      "sha256_after": "2f643fbf9446d58a4eb2a12ce95ecf8e4a220bad37b1a42a6279a022682435c2",
+      "change": "links rebased"
+    },
+    {
+      "from": "Timing_and_Price_Audit_2026-10-09.md",
+      "to": "docs/history/2026-10-09/Timing_and_Price_Audit_2026-10-09.md",
+      "sha256_before": "c1f0c05c22b2138759ceb855a72d9728da673556c4569a0df3128b2dd441bbb1",
+      "sha256_after": "190fd324bea05896985f36c1868e891150e01f5a577a3d6183d613f9e981e010",
+      "change": "links rebased"
+    },
+    {
+      "from": "Verification_2026-10-07.md",
+      "to": "docs/verification/2026-10-07_Walkthrough.md",
+      "sha256_before": "7af7587d83939733856e028860a71a9c0b32cac5f63a072cd3987e1794e2fd96",
+      "sha256_after": "7af7587d83939733856e028860a71a9c0b32cac5f63a072cd3987e1794e2fd96",
+      "change": "links rebased"
+    },
+    {
+      "from": "Verification_2026-10-09_Hardware_Budget.md",
+      "to": "docs/verification/2026-10-09_Hardware_Budget.md",
+      "sha256_before": "2539656fdb2a6365353912ae221e4b9d05a3f5e9466bfbcbe493bae02e18a198",
+      "sha256_after": "2539656fdb2a6365353912ae221e4b9d05a3f5e9466bfbcbe493bae02e18a198",
+      "change": "links rebased"
+    },
+    {
+      "from": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+      "to": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final Part List V1.pdf",
+      "observed_user_source": "output/documents/2026-10-16/Final Part List V1.pdf",
+      "sha256_before": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9",
+      "sha256_after": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9",
+      "change": "bytes unchanged"
+    },
+    {
+      "from": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
+      "to": "output/archive/2026-10-16/Word_Setup_Guide/M50_Sound_Setup_Guide.docx",
+      "sha256_before": "35e43cf9a763950e4e269d8dca0814ed1913fde32909583fd39f303b8a8aaf30",
+      "sha256_after": "35e43cf9a763950e4e269d8dca0814ed1913fde32909583fd39f303b8a8aaf30",
+      "change": "bytes unchanged"
+    },
+    {
+      "from": "output/documents/2026-10-16/assets/sound_setup_connections.png",
+      "to": "output/archive/2026-10-16/Word_Setup_Guide/assets/sound_setup_connections.png",
+      "sha256_before": "36ca90b888ae89da3d9268e611a64eca6074f0dc78ca1a8de4bc0c19dab77be5",
+      "sha256_after": "36ca90b888ae89da3d9268e611a64eca6074f0dc78ca1a8de4bc0c19dab77be5",
+      "change": "bytes unchanged"
+    },
+    {
+      "from": "output/documents/2026-10-16/assets/ten_ms_envelope_schematic.png",
+      "to": "output/archive/2026-10-16/Word_Setup_Guide/assets/ten_ms_envelope_schematic.png",
+      "sha256_before": "427f5f3920e16efdad327b98607071137e39b02a590e21ee0860ad6652708340",
+      "sha256_after": "427f5f3920e16efdad327b98607071137e39b02a590e21ee0860ad6652708340",
+      "change": "bytes unchanged"
+    },
+    {
+      "from": "outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx",
+      "to": "output/spreadsheets/2026-10-09/Sound_Setup_Budget_2026-10-09.xlsx",
+      "sha256_before": "d119cb64934edf31c119a3a453a54452e75f295a2840e3129a5ffc191dce9310",
+      "sha256_after": "d119cb64934edf31c119a3a453a54452e75f295a2840e3129a5ffc191dce9310",
+      "change": "bytes unchanged"
+    },
+    {
+      "from": "scripts/build_m50_setup_guide.py",
+      "to": "scripts/archive/build_m50_word_guide.py",
+      "sha256_before": "a3f5a665e0e6212cc43fd94e69f385e9f47b3225a466725361af29580886c1ab",
+      "sha256_after": "f1631460306b7ca6f969edbeb901dae72e62aafa39d02893c260f99d4ff239ea",
+      "change": "legacy builder destination updated"
+    }
+  ],
+  "copies": [
+    {
+      "from": "README.md",
+      "to": "docs/history/2026-10-16/Project_Overview_Before_Organization.md",
+      "purpose": "Preserve the detailed pre-organization overview with rebased links",
+      "sha256_source_before": "07c8a9fecb21d6453a1288712af9af8e4e50030cf7b78f09a169205009f3367b",
+      "sha256_after": "7e717a37f1a72ec21b5ec59e63e14d36ee69adbb6560e9cafcb63a9073dbeba5"
+    }
+  ],
+  "local_storage": {
+    "tmp": "ignored .work/tmp",
+    "previous_site_build": "ignored .work/previous-site-build",
+    "Papers": "left untouched and unpublished"
+  },
+  "compatibility": "Static build generates legacy URL copies or Markdown pointers for moved tracked files; workspace uses new paths."
+}

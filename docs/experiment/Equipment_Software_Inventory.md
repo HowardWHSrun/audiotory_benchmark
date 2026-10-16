@@ -1,6 +1,6 @@
 # Equipment and software inventory
 
-Updated October 8, 2026. **Primary target: sedated-sheep sound-evoked auditory-cortex responses.** Howard Wang and Jiaao Zhang jointly own the auditory investigation. Lan does not require a soundproof box or behavioral rig. McGinley students shared rodent-rig/calibration experience; this does not verify particular equipment for sheep. See [team source record](sources/Team_Clarifications_2026-10-07.md).
+Updated October 8, 2026. **Primary target: sedated-sheep sound-evoked auditory-cortex responses.** Howard Wang and Jiaao Zhang jointly own the auditory investigation. Lan does not require a soundproof box or behavioral rig. McGinley students shared rodent-rig/calibration experience; this does not verify particular equipment for sheep. See [team source record](../../sources/Team_Clarifications_2026-10-07.md).
 
 ## Auditory delivery and timing
 
@@ -29,7 +29,7 @@ For confirmed items, record owner/custodian, calibration status and constraints.
 
 ## Mouse setup: sound equipment to provision
 
-Howard clarified on October 8 that we will use the lab's own probes and that the work mainly concerns the sound setup. Planned use of the probes is confirmed; their exact model, validation, and recording interfaces have not been inspected here. Sound-equipment availability remains unconfirmed. The [BCM email](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) suggests candidates without confirming Rice access. See the [equipment plan](Mouse_Setup_Equipment_Plan.md) for dependencies and official sources.
+Howard clarified on October 8 that we will use the lab's own probes and that the work mainly concerns the sound setup. Planned use of the probes is confirmed; their exact model, validation, and recording interfaces have not been inspected here. Sound-equipment availability remains unconfirmed. The [BCM email](../../sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) suggests candidates without confirming Rice access. See the [equipment plan](../history/2026-10-08/Mouse_Setup_Equipment_Plan.md) for dependencies and official sources.
 
 | Function | Candidate or unresolved choice | Provision to confirm |
 |---|---|---|
@@ -43,7 +43,7 @@ Howard clarified on October 8 that we will use the lab's own probes and that the
 | Calibration/support | Reference, mounts, cables, power, storage | Traceable level measurement, stable geometry, data records |
 | Behavior camera/enclosure | Optional | Include only if needed; verify camera frame timing if used |
 
-Pricing is recorded separately in the [sound equipment list](Mouse_Equipment_Pricing_2026-10-08.md). A suitable lab computer/storage setup can be reused if available. Public price listings do not change equipment availability; neural-hardware and animal-preparation purchases are outside the current budget.
+Pricing is recorded separately in the [sound equipment list](../history/2026-10-08/Mouse_Equipment_Pricing_2026-10-08.md). A suitable lab computer/storage setup can be reused if available. Public price listings do not change equipment availability; neural-hardware and animal-preparation purchases are outside the current budget.
 
 ## Educational software
 
@@ -58,4 +58,4 @@ Lan also states that rodent sound isolation is unnecessary because comparable is
 
 ## Probe-family clarification - October 15, 2026
 
-Howard confirmed that the planned probes are **penetrating NET threads**, rather than the surface micro-ECoG array discussed in the 2026 platform paper. The exact NET design/revision, site dimensions, implantation geometry, connected channel count and recorder interfaces still need confirmation. Published NET dimensions are comparison references, not verified specifications of our particular devices. See [the probe comparison](sources/Luan_Lab_SONIC_Comparison_2026-10-15.json).
+Howard confirmed that the planned probes are **penetrating NET threads**, rather than the surface micro-ECoG array discussed in the 2026 platform paper. The exact NET design/revision, site dimensions, implantation geometry, connected channel count and recorder interfaces still need confirmation. Published NET dimensions are comparison references, not verified specifications of our particular devices. See [the probe comparison](../../sources/Luan_Lab_SONIC_Comparison_2026-10-15.json).

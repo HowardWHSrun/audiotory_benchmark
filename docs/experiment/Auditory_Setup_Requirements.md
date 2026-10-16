@@ -1,8 +1,8 @@
 # Auditory setup requirements
 
-Updated October 7, 2026. Howard Wang and Jiaao Zhang jointly own the auditory investigation. The **confirmed Rice target is sedated sheep** and measuring auditory-cortex responses to sound. A soundproof box and behavioral rig are not required by Lan's direction. See [team clarifications](sources/Team_Clarifications_2026-10-07.md).
+Updated October 7, 2026. Howard Wang and Jiaao Zhang jointly own the auditory investigation. The **confirmed Rice target is sedated sheep** and measuring auditory-cortex responses to sound. A soundproof box and behavioral rig are not required by Lan's direction. See [team clarifications](../../sources/Team_Clarifications_2026-10-07.md).
 
-This is a **proposed design**, not an installed or validated setup. SONIC's settings come from awake sheep; [paper notes](Paper_Notes.md) separate that evidence from the Rice adaptation.
+This is a **proposed design**, not an installed or validated setup. SONIC's settings come from awake sheep; [paper notes](../paper/Paper_Notes.md) separate that evidence from the Rice adaptation.
 
 ## Paper starting point and Rice implications
 

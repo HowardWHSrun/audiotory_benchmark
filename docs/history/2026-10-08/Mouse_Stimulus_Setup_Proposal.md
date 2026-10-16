@@ -10,7 +10,7 @@ The intended design is a mouse sound setup whose equipment can later be reused f
 
 ## What transfers from SONIC
 
-The source is the unchanged [SONIC bioRxiv v1 manuscript](sources/SONIC_2025_bioRxiv_v1.pdf), printed pp.11-13, Sections 6.1-6.6. [Paper notes](Paper_Notes.md) retain the full method ledger and unresolved details.
+The source is the unchanged [SONIC bioRxiv v1 manuscript](../../../sources/SONIC_2025_bioRxiv_v1.pdf), printed pp.11-13, Sections 6.1-6.6. [Paper notes](../../paper/Paper_Notes.md) retain the full method ledger and unresolved details.
 
 | SONIC method | Implication for the mouse design |
 |---|---|
@@ -59,7 +59,7 @@ The paper's MF1 speaker is worth checking against local inventory: TDT specifies
 
 Measure each candidate frequency at the intended ear reference position with a microphone, conditioner/preamplifier, and ADC that cover the range. Define the level convention and measurement interval for ramped pips; save gain, distance, orientation, spectrum, clipping/distortion checks, and background sound. Equal digital amplitudes can produce different acoustic levels, so any per-frequency adjustment must be supported by measurements. Recheck relevant changes in speaker placement or configuration. TDT's calibration guide illustrates the dependence of calibration on microphone placement and delivery geometry. [TDT acoustic calibration guide](https://www.tdt.com/files/manuals/ABRGuideRA4PA.pdf).
 
-Lan's supplied direction does not require rodent sound isolation. Preserve that direction while measuring room/background conditions and using repeatable geometry. [Team clarification](sources/Team_Clarifications_2026-10-07.md).
+Lan's supplied direction does not require rodent sound isolation. Preserve that direction while measuring room/background conditions and using repeatable geometry. [Team clarification](../../../sources/Team_Clarifications_2026-10-07.md).
 
 Keep these events distinct: playback request, hardware marker, electrical waveform onset, microphone-detected acoustic onset, and recorded neural response. Define clocks, units, channel identities, and onset-detection rules. Measure marker-to-acoustic delay, variability, missing events, and drift under the intended hardware configuration. Account for acquisition/filter delay in the microphone path. TDT documents different digital and converter delays for its devices; its tabulated values cannot be transferred to other hardware. [TDT input and output delays](https://www.tdt.com/files/fastfacts/IODelays.pdf).
 
@@ -77,10 +77,10 @@ The progression is our proposal, not a mouse protocol established by SONIC. Phil
 
 Include a recorder-approved bench check with a suitable nonbiological input/load for stimulus- and marker-synchronous electrical pickup before interpreting sound-locked signals as neural responses. The team's later measurement plan should distinguish genuine responses from remaining artifacts.
 
-For later decoding, retain entire contiguous sequence blocks within data partitions when feature windows overlap, select settings without using the held-out test data, and declare preprocessing. With silence between tones, information per tone divided only by tone duration is not the actual elapsed presentation rate; report the interval and rate denominator explicitly. See SONIC Sections 6.4-6.5 and [paper notes](Paper_Notes.md). No mouse response or ITR is measured here.
+For later decoding, retain entire contiguous sequence blocks within data partitions when feature windows overlap, select settings without using the held-out test data, and declare preprocessing. With silence between tones, information per tone divided only by tone duration is not the actual elapsed presentation rate; report the interval and rate denominator explicitly. See SONIC Sections 6.4-6.5 and [paper notes](../../paper/Paper_Notes.md). No mouse response or ITR is measured here.
 
 ## Immediate deliverable for Howard and Jiaao
 
 Prepare one equipment-and-interface table containing the existing playback output, amplifier, speaker, calibrated microphone chain, acoustic ADC, and neural recorder. Include actual models, usable frequency coverage, event inputs, clock interfaces, owners, and unresolved gaps. Pair it with this functional diagram and a proposed animal-free calibration/timing check.
 
-The questions that determine the next revision are the mouse strain and age, awake versus anesthetized/sedated state, neural recording modality and event inputs, available speaker and microphone models, and intended delivery geometry. These remain open. The current [inventory](Equipment_Software_Inventory.md) and [bench plan](Bench_Validation_Plan.md) provide the shared record format.
+The questions that determine the next revision are the mouse strain and age, awake versus anesthetized/sedated state, neural recording modality and event inputs, available speaker and microphone models, and intended delivery geometry. These remain open. The current [inventory](../../experiment/Equipment_Software_Inventory.md) and [bench plan](../../experiment/Bench_Validation_Plan.md) provide the shared record format.

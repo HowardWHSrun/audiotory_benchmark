@@ -1,4 +1,6 @@
-"""Build the editable equipment and setup guide from the current audited basket.
+"""Historical Word snapshot builder; maintain the active guide in LaTeX.
+
+Active source: output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex.
 
 Use the bundled workspace Python runtime with python-docx and Pillow installed.
 This creates documentation only. It does not control or play audio hardware.
@@ -18,8 +20,8 @@ from docx.shared import Inches, Pt, RGBColor
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "output/documents/2026-10-16"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "output/archive/2026-10-16/Word_Setup_Guide"
 ASSETS = OUT / "assets"
 AUDIT = ROOT / "sources/Sound_Chain_Qualification_Audit_2026-10-16.json"
 FONT = Path("/System/Library/Fonts/Supplemental/Arial.ttf")
@@ -417,7 +419,7 @@ def build():
         "scientific_scope":"Documentation and setup plan only; physical qualification pending; initial mouse checkout then independently calibrated sheep geometry",
         "software_scope":"Architecture and workflow described; no stimulus control implementation or audio playback performed",
     }
-    (ROOT/"sources/M50_Sound_Setup_Guide_2026-10-16.json").write_text(json.dumps(manifest,indent=2)+"\n")
+    (OUT/"source_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
     print(dest)
 
 

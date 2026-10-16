@@ -21,7 +21,7 @@ Recorded October 8, 2026 from the forwarded email Howard supplied in this conver
 | Microphone | Avisoft UltraSoundGate 116Hm | [Avisoft product page](https://avisoft.com/ultrasoundgate/116hm/) |
 | Microphone | Brüel & Kjær Type 4939 | [HBK product page](https://www.hbkworld.com/en/products/transducers/acoustic/microphone-cartridges/free-field/4939) |
 
-The category labels above preserve the email. Manufacturer review clarifies that **116Hm is an acquisition interface**, with a separate complete-kit option including a microphone; **4939 is a microphone cartridge**. See the [equipment plan](../Mouse_Setup_Equipment_Plan.md).
+The category labels above preserve the email. Manufacturer review clarifies that **116Hm is an acquisition interface**, with a separate complete-kit option including a microphone; **4939 is a microphone cartridge**. See the [equipment plan](../docs/history/2026-10-08/Mouse_Setup_Equipment_Plan.md).
 
 ## Limits of this evidence
 

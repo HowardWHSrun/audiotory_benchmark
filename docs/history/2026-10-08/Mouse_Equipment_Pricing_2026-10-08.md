@@ -1,6 +1,6 @@
 # Mouse sound equipment list and prices
 
-Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) for the sound setup we need to assemble. Howard clarified that we will use the lab's own probes; neural-equipment purchases are outside this budget. The [three-page PDF](output/pdf/Mouse_Auditory_Experiment.pdf) contains the outline, shopping budget, and an appendix explaining the choices, SONIC equipment, and intended reuse for sheep.
+Prices checked October 8, 2026. This expands the [equipment plan](Mouse_Setup_Equipment_Plan.md) for the sound setup we need to assemble. Howard clarified that we will use the lab's own probes; neural-equipment purchases are outside this budget. The [three-page PDF](../../../output/pdf/Mouse_Auditory_Experiment.pdf) contains the outline, shopping budget, and an appendix explaining the choices, SONIC equipment, and intended reuse for sheep.
 
 - Prices are for **one new item/package**, unless stated otherwise. USD is the default; the B&K calibrator listing is explicitly EUR.
 - **Estimate; quote still needed** means a numerical supplier price is unverified, so our planning reserve is shown. **Model open** estimates are allowances for a function before choosing a part.
@@ -130,7 +130,7 @@ Use the lab's neural recording chain. Confirm that it can record the tone marker
 | NI terminal/connector accessories or AD3 BNC adapter | **$100 set estimate** ($35–200), inside the support bundle | Depends on output-device SKU and wiring choice. | Selection pending |
 | Clock distribution / level conversion, if required | **$300 estimate** ($100–500) if needed, inside the support bundle | Needed only if interfaces require it; verify electrical and timing requirements first. | Recorder interfaces pending |
 | Speaker fixture / base / clamps / baffle | **$400 set estimate** ($150–600), inside the support bundle | Package allowance until geometry and included parts are known. | Mechanical design pending |
-| Enclosure or acoustic treatment | **$1,000 estimate** ($300–1,500), optional and outside main budget | No soundproof box is required by team direction. | [Team record](sources/Team_Clarifications_2026-10-07.md) |
+| Enclosure or acoustic treatment | **$1,000 estimate** ($300–1,500), optional and outside main budget | No soundproof box is required by team direction. | [Team record](../../../sources/Team_Clarifications_2026-10-07.md) |
 | RECORDER USGH | Included with USG | Do not add a separate license to the 116Hm package. | [Avisoft price list](https://avisoft.com/price-list-ordering-information/) |
 | Digilent WaveForms | Free | For the AD3 bench path; custom timing work remains. | [Digilent software](https://digilent.com/shop/software/digilent-waveforms/) |
 | Stimulus/control software and analysis work | **$0 license** for a free-tool route; **$2,000 optional paid-license reserve**; labor separately budgeted | Internal development allowance: 20–80 hours; an illustrative outsourced reserve is $6,000 (40 hours × $150/hour), not a contractor quote or part of the equipment subtotal. Paid licenses are optional. | Workflow pending |

@@ -21,7 +21,7 @@ window.AuditoryPartsData = {
   "sources": {
     "parts": "../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf",
     "editableParts": "../output/pdf/Auditory_Hardware_Options_2026-10-09.tex",
-    "comparison": "../Accurate_Setup_Comparison_2026-10-09.md",
+    "comparison": "../docs/history/2026-10-09/Accurate_Setup_Comparison_2026-10-09.md",
     "purposeAudit": "../sources/Item_Purpose_Audit_2026-10-10.md",
     "observedPrices": "../sources/Accurate_Setup_Prices_2026-10-09.json",
     "estimates": "../sources/Planning_Estimates_2026-10-10.json",

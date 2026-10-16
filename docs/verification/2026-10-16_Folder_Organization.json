@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-16",
+  "scope": "Folder organization, file preservation, portable links and static publication only",
+  "relocation_map": "docs/organization/2026-10-16_path_moves.json",
+  "entry_point": "START_HERE.md",
+  "current_guide": {
+    "pdf": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final Part List V1.pdf",
+    "tex": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex"
+  },
+  "preservation": {
+    "moved_tracked_files": 20,
+    "binary_and_TeX_files_exact_bytes": 54,
+    "local_paper_files_unchanged": 3,
+    "local_papers_published": false,
+    "AGENTS_unchanged": true,
+    "research_files_deleted": 0,
+    "moved_notes": "all prior text preserved except link destinations; dated organization entry added to research log",
+    "parts_data": "unchanged except the comparison document path",
+    "user_pdf_name": "Final Part List V1.pdf preserved"
+  },
+  "checks": {
+    "existing_model_and_parts_tests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "python_and_javascript_syntax": "passed",
+    "native_latex_compilation": "success; source bytes unchanged",
+    "repository_links_and_evidence_paths": "passed",
+    "built_bundle_links_and_evidence_paths": "passed",
+    "browser": {
+      "viewports": [
+        {
+          "name": "desktop",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "legacy_experiment_route": "passed",
+          "all_five_parts_lists": "passed",
+          "comparison_rows": 37,
+          "paper_collapsed": "passed",
+          "page_overflow": false
+        },
+        {
+          "name": "phone",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "legacy_experiment_route": "passed",
+          "all_five_parts_lists": "passed",
+          "comparison_rows": 37,
+          "paper_collapsed": "passed",
+          "page_overflow": false
+        }
+      ],
+      "downloads": [
+        {
+          "role": "parts",
+          "url": "/output/pdf/Auditory_Hardware_Options_2026-10-09.pdf",
+          "status": 200
+        },
+        {
+          "role": "editableParts",
+          "url": "/output/pdf/Auditory_Hardware_Options_2026-10-09.tex",
+          "status": 200
+        },
+        {
+          "role": "comparison",
+          "url": "/docs/history/2026-10-09/Accurate_Setup_Comparison_2026-10-09.md",
+          "status": 200
+        },
+        {
+          "role": "current PDF or compatibility URL",
+          "url": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf",
+          "status": 200,
+          "sha256": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
+        },
+        {
+          "role": "current PDF or compatibility URL",
+          "url": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
+          "status": 200,
+          "sha256": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
+        },
+        {
+          "role": "current PDF or compatibility URL",
+          "url": "output/documents/2026-10-16/Final%20Part%20List%20V1.pdf",
+          "status": 200,
+          "sha256": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
+        }
+      ],
+      "errors": []
+    },
+    "validator_failure_probes": [
+      "missing downloadable PDF rejected",
+      "broken nested Markdown link rejected",
+      "missing JSON evidence source rejected"
+    ],
+    "desktop_and_phone_screenshots": "reviewed; stored only in ignored .work/organization",
+    "independent_review": "no substantive issue",
+    "git_diff_check": "passed"
+  },
+  "site_build": {
+    "folder": ".work/site",
+    "legacy_document_urls": 20,
+    "untracked_local_papers_excluded": true
+  },
+  "actions": "File organization and software checks only; no purchase, external messages, audio playback or animal experiment",
+  "deployment": "Pending push; verify the workflow and hosted document hashes after publishing"
+}

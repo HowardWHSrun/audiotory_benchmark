@@ -1,6 +1,6 @@
 # Mouse setup: equipment to assemble
 
-October 8, 2026. Howard clarified that we will use the lab's own probes and mainly need to assemble the sound setup. Treat sound functions as needing provision until access is confirmed. Neural-hardware and animal-preparation purchases are outside this budget. The [forwarded BCM list](sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) gives candidates, not confirmed Rice equipment. The [short PDF](output/pdf/Mouse_Auditory_Experiment.pdf) is the reading version; this note keeps the supporting details.
+October 8, 2026. Howard clarified that we will use the lab's own probes and mainly need to assemble the sound setup. Treat sound functions as needing provision until access is confirmed. Neural-hardware and animal-preparation purchases are outside this budget. The [forwarded BCM list](../../../sources/BCM_Acoustic_Equipment_Email_2026-10-08.md) gives candidates, not confirmed Rice equipment. The [short PDF](../../../output/pdf/Mouse_Auditory_Experiment.pdf) is the reading version; this note keeps the supporting details.
 
 Mouse state and tone settings remain open. Rice's confirmed primary project remains sedated-sheep auditory measurements. Howard wants the mouse sound setup designed with later sheep reuse in mind; transfer is an engineering aim, not a validated result.
 
@@ -20,7 +20,7 @@ Provisional free-field budgeting path:
 
 ### What SONIC actually used
 
-The manuscript's Methods 6.2 (printed p.11) names NI USB-6361 output at 192 kHz, SA1 at 0 dB attenuation, MF1 in free-field use at about 80 dB SPL at sheep-ear distance, and a TimeMachines TM2500C providing PTP/10 MHz clock references. It records electrical sound-output/trial-start loopback for alignment. **MF2-M, ZB1PS, and our Avisoft measurement kit are proposed Rice choices:** the exact power unit and measurement microphone are not named in the paper. Its 80 dB level is a published condition, not a selected mouse or sedated-sheep exposure. [Saved SONIC v1](sources/SONIC_2025_bioRxiv_v1.pdf), [paper notes](Paper_Notes.md).
+The manuscript's Methods 6.2 (printed p.11) names NI USB-6361 output at 192 kHz, SA1 at 0 dB attenuation, MF1 in free-field use at about 80 dB SPL at sheep-ear distance, and a TimeMachines TM2500C providing PTP/10 MHz clock references. It records electrical sound-output/trial-start loopback for alignment. **MF2-M, ZB1PS, and our Avisoft measurement kit are proposed Rice choices:** the exact power unit and measurement microphone are not named in the paper. Its 80 dB level is a published condition, not a selected mouse or sedated-sheep exposure. [Saved SONIC v1](../../../sources/SONIC_2025_bioRxiv_v1.pdf), [paper notes](../../paper/Paper_Notes.md).
 
 | Candidate | What the manufacturer establishes | What it means for our plan |
 |---|---|---|
@@ -30,7 +30,7 @@ The manuscript's Methods 6.2 (printed p.11) names NI USB-6361 output at 192 kHz,
 | Peerless XT25TG30-04 | Manufacturer lists 4 Ω and a frequency range of 800–20,000 Hz. [Exact-model listing](https://products.peerless-audio.com/transducer/535) | Needs a suitable conventional amplifier. The listing does not establish calibrated 32 kHz output. |
 | Scan-Speak R2004/602200 | Exact-model 4 Ω ring radiator. [Manufacturer page](https://www.scan-speak.dk/product/r2004-602200/), [datasheet](https://www.scan-speak.dk/datasheet/pdf/r2004-602200.pdf) | Needs a suitable conventional amplifier and measurement over our chosen band. Do not substitute the different R2004/602000 model's data. |
 
-Choose the usable frequency band before committing to the speaker/output combination. A speaker's upper-frequency specification does not establish the DAC's bandwidth: at 192 kSa/s, the theoretical Nyquist boundary is 96 kHz, with practical filter margin also required. SONIC used 192 kSa/s with NI USB-6361, SA1, and MF1; that is a separate published chain, not the BCM ES1/ED1 path. See [paper notes](Paper_Notes.md).
+Choose the usable frequency band before committing to the speaker/output combination. A speaker's upper-frequency specification does not establish the DAC's bandwidth: at 192 kSa/s, the theoretical Nyquist boundary is 96 kHz, with practical filter margin also required. SONIC used 192 kSa/s with NI USB-6361, SA1, and MF1; that is a separate published chain, not the BCM ES1/ED1 path. See [paper notes](../../paper/Paper_Notes.md).
 
 ## Acoustic measurement
 
@@ -59,14 +59,14 @@ Schedule tone markers with playback hardware and record them in the neural and a
 
 For 116Hm, the DIN marker is embedded in 16-bit recorded samples and is unavailable in 8-bit mode. Current Avisoft settings also support an external sample clock at 16 times the desired WAV sampling rate, with a separate ADC-start input. This is a possible synchronization route, not a confirmed match to our unknown neural recorder. [116Hm manual](https://www.avisoft.com/usgmanual_116Hm.pdf), [external-clock documentation](https://www.avisoft.com/Help/RECORDER/advanced_usgh_device_settings.htm).
 
-A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal preparation follows the later awake/sedated decision and is outside this sound-shopping budget.
+A soundproof box, sound isolation, and behavioral rig are not required by [current team direction](../../../sources/Team_Clarifications_2026-10-07.md). Any enclosure remains a placement option; background sound and geometry still need documenting. Animal preparation follows the later awake/sedated decision and is outside this sound-shopping budget.
 
 ## Reusing the mouse sound setup for sheep
 
 - Intend to reuse speaker, amplifier, powered chassis, NI, computer, and acoustic recorder, with the lab's probes for neural recordings. This does not confirm recorder/headstage interfaces or transfer performance.
 - Adapt the mounts, distance, angle, and measurement position. Calibrate every selected tone at the sheep-ear position, verify clean output there, and recheck acoustic onset and alignment to the sheep recording timeline. A mouse calibration cannot be copied to the sheep geometry. [TDT configuration-specific calibration](https://www.tdt.com/docs/hardware/mf2-multi-field-magnetic-speakers/).
 - Resolve the lowest tone before buying the measurement kit: MF2's stated band begins at 1 kHz, but CM16/CMPA begins at 2 kHz. SONIC's 1.4 kHz tones and other tones below 2 kHz need another suitably calibrated microphone. Reusing the 116Hm recorder with that microphone may be possible, but its configuration/cost needs confirmation. [Microphone specification](https://avisoft.com/ultrasound-microphones/cm16-cmpa/).
-- Select animal-specific stimulus levels and response windows with the team. The mouse preparation is undecided; Rice's sheep will be sedated, while SONIC's were awake. Hardware reuse does not establish equal neural responses, decoder performance, or achieved ITR. See the [team direction](sources/Team_Clarifications_2026-10-07.md) and SONIC Methods 6.6 (p.13).
+- Select animal-specific stimulus levels and response windows with the team. The mouse preparation is undecided; Rice's sheep will be sedated, while SONIC's were awake. Hardware reuse does not establish equal neural responses, decoder performance, or achieved ITR. See the [team direction](../../../sources/Team_Clarifications_2026-10-07.md) and SONIC Methods 6.6 (p.13).
 
 See the [equipment budget and detailed reference prices](Mouse_Equipment_Pricing_2026-10-08.md) for one proposed shopping list, numerical estimates for quote-only/model-open items, bundled contents, and alternative subtotals. Estimates are our planning reserves, not vendor quotations.
 

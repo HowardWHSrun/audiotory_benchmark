@@ -2,7 +2,7 @@
 
 ## Current parts and budget comparison
 
-The [two-page parts list](../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now orders McGinley, SONIC, basic and compact. Every item now has a brief purpose description; [role verification](Item_Purpose_Audit_2026-10-10.md) checks the paper, supplied slides and primary equipment documentation. The October 10 revision removes visible dates, footnotes and borrowed-calibrator alternatives, and includes explicitly marked planning estimates for required TDT parts. [Planning estimate record](Planning_Estimates_2026-10-10.json) stores amounts, basis and limitations; [observed price evidence](Accurate_Setup_Prices_2026-10-09.json) retains October 9 seller observations unchanged. The [detailed comparison](../Accurate_Setup_Comparison_2026-10-09.md) separates planning totals from exact observed-price baskets and preserves timing/calibration evidence. Estimated amounts are author-set allowances, not supplier quotations, delivered totals or hard upper bounds.
+The [two-page parts list](../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now orders McGinley, SONIC, basic and compact. Every item now has a brief purpose description; [role verification](Item_Purpose_Audit_2026-10-10.md) checks the paper, supplied slides and primary equipment documentation. The October 10 revision removes visible dates, footnotes and borrowed-calibrator alternatives, and includes explicitly marked planning estimates for required TDT parts. [Planning estimate record](Planning_Estimates_2026-10-10.json) stores amounts, basis and limitations; [observed price evidence](Accurate_Setup_Prices_2026-10-09.json) retains October 9 seller observations unchanged. The [detailed comparison](../docs/history/2026-10-09/Accurate_Setup_Comparison_2026-10-09.md) separates planning totals from exact observed-price baskets and preserves timing/calibration evidence. Estimated amounts are author-set allowances, not supplier quotations, delivered totals or hard upper bounds.
 
 Fresh methods review identifies SONIC's exact BNC USB-6361 assembly; the recommendation uses the cheaper screw-terminal variant with its different included PSU/cable. PXI-4461 hybrid compatibility, internal 20 ppm clock, 32-sample DAC delay and ES1's 4 kHz cutoff come from NI/TDT primary documentation. SONIC reported 56/11-millisecond processing delays, GPS/PTP source precision, converter sample spacing, raw speaker response and at-ear/neural uncertainty remain distinct. Component clock calculations are conditional; common references do not establish zero residual error. The original paper/slides do not identify the proposed M50/MM-1/R8090 measurement kit. Supplier stock and used condition are observations, not verified hardware performance. No vendor was contacted or part ordered.
 
@@ -20,19 +20,19 @@ The latest reading version focuses on two setups and distinguishes delay, trial 
 
 Received October 9, 2026: [system diagram](hardware_slides_2026-10-09/01_system_diagram.png) and [equipment links](hardware_slides_2026-10-09/02_equipment_links.png), copied unchanged from Howard's attachments. The slides describe an NI PXIe rack, ES1/ED1 sound chain and separate Neuropixels system. Their component suggestions are reference material, not instructions or confirmed Rice inventory.
 
-[Hardware comparison](../Auditory_Hardware_Options_2026-10-09.md) and [price inputs](Sound_Hardware_Prices_2026-10-09.json) record eBay asking-price leads, seller conditions, manufacturer specifications and clearly separated planning allowances. EBay destination defaults/cached dates vary; Houston checkout, stock, actual model identity and functional/calibration performance are unverified. No source manuscript bytes were changed.
+[Hardware comparison](../docs/history/2026-10-09/Auditory_Hardware_Options_2026-10-09.md) and [price inputs](Sound_Hardware_Prices_2026-10-09.json) record eBay asking-price leads, seller conditions, manufacturer specifications and clearly separated planning allowances. EBay destination defaults/cached dates vary; Houston checkout, stock, actual model identity and functional/calibration performance are unverified. No source manuscript bytes were changed.
 
 The key manufacturer checks cover ES1/ED1 frequency and power limits, NI PXI-4461 hybrid-slot variants, waveform bandwidth, USB DAQ alternatives, filtered Avisoft 40026 acquisition, audible measurement/speaker limits, and neural synchronization. A cheap audible chain does not cover the complete SONIC frequency alphabet. See the comparison for direct sources and exclusions.
 
 ## Equipment pricing snapshot
 
-[Expanded pricing record](../Mouse_Equipment_Pricing_2026-10-08.md), checked October 8, 2026. Each numeric price is linked to its manufacturer or direct seller. Avisoft prices are USD; Intan figures are manufacturer list prices with distributor confirmation required; Dell is an exact-configuration offer; the new B&K 4231 seller listing is EUR excluding VAT. No exchange-rate conversion, used-equipment substitution, or complete-system price is inferred.
+[Expanded pricing record](../docs/history/2026-10-08/Mouse_Equipment_Pricing_2026-10-08.md), checked October 8, 2026. Each numeric price is linked to its manufacturer or direct seller. Avisoft prices are USD; Intan figures are manufacturer list prices with distributor confirmation required; Dell is an exact-configuration offer; the new B&K 4231 seller listing is EUR excluding VAT. No exchange-rate conversion, used-equipment substitution, or complete-system price is inferred.
 
 The record also uses official NI package information, Avisoft microphone-variant documentation, ART amplifier specifications, Intan recording specifications, and Basler trigger specifications to identify dependencies. Search-index and directly refreshed NI prices differed; the record uses the refreshed exact SKU price. Stock for the Scan-Speak listing is unconfirmed; Samsung's listed SSD showed delivery unavailable. No quote requests, vendor contacts, or orders were sent.
 
 ## BCM equipment suggestions and manufacturer checks
 
-Consulted October 8, 2026 for the [mouse equipment plan](../Mouse_Setup_Equipment_Plan.md) and the added equipment page in the [simple PDF](../output/pdf/Mouse_Auditory_Experiment.pdf).
+Consulted October 8, 2026 for the [mouse equipment plan](../docs/history/2026-10-08/Mouse_Setup_Equipment_Plan.md) and the added equipment page in the [simple PDF](../output/pdf/Mouse_Auditory_Experiment.pdf).
 
 - [Forwarded BCM equipment email record](BCM_Acoustic_Equipment_Email_2026-10-08.md): user-supplied suggestions from Tinghan via Xiaorong. BCM inventory does not establish Rice access. Only relevant provenance and clean equipment links are retained.
 - TDT: [ES1/EC1 documentation](https://www.tdt.com/docs/hardware/ec1-es1-electrostatic-speaker/), [ED1](https://www.tdt.com/docs/hardware/ed1-electrostatic-speaker-driver/), and [ZB1PS](https://www.tdt.com/docs/hardware/zb1ps-powered-zbus-device-chassis/). Field/coupler roles, operating band, matched driver, and power dependencies.
@@ -45,7 +45,7 @@ Manufacturer specifications describe candidate components. No local chain compat
 
 ## Mouse adaptation sources
 
-Consulted October 8, 2026 for the [mouse setup proposal](../Mouse_Stimulus_Setup_Proposal.md). These primary studies and official technical documents support design questions; their experimental settings do not establish Rice equipment compatibility or a validated mouse protocol.
+Consulted October 8, 2026 for the [mouse setup proposal](../docs/history/2026-10-08/Mouse_Stimulus_Setup_Proposal.md). These primary studies and official technical documents support design questions; their experimental settings do not establish Rice equipment compatibility or a validated mouse protocol.
 
 - Bowen, Winkowski and Kanold (2020), [Functional organization of mouse primary auditory cortex in adult C57BL/6 and F1 (CBAxC57) mice](https://www.nature.com/articles/s41598-020-67819-4). Strain comparison, frequency representation, and sound-level sensitivity in awake adult mice.
 - Guo et al. (2012), [Robustness of cortical topography across fields, laminae, anesthetic states, and neurophysiological signal types](https://www.cmu.edu/dietrich/psychology/shinn/publications/pdfs/2012/2012jneurosci_guo.pdf). DOI 10.1523/JNEUROSCI.0065-12.2012. Frequency-map and response-property comparisons across tested states.
@@ -94,6 +94,6 @@ Consulted October 8, 2026 for the [mouse setup proposal](../Mouse_Stimulus_Setup
 
 ## Verified findings register
 
-Parent research findings were received on 2026-10-02 UTC and checked against the local v1 PDF. [Paper notes](../Paper_Notes.md) identify the manuscript sections/pages supporting settings and results, distinguish main benchmarking from the Figure 5 sweep, and preserve unresolved method questions. Proposed Rice decisions remain separate.
+Parent research findings were received on 2026-10-02 UTC and checked against the local v1 PDF. [Paper notes](../docs/paper/Paper_Notes.md) identify the manuscript sections/pages supporting settings and results, distinguish main benchmarking from the Figure 5 sweep, and preserve unresolved method questions. Proposed Rice decisions remain separate.
 
 No public code, data or supplement was located by the parent researcher. No linked publication was returned by the bioRxiv API at retrieval. These are bounded review outcomes, not absolute absence claims.

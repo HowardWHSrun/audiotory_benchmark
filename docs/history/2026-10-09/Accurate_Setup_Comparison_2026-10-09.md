@@ -1,6 +1,6 @@
 # Auditory setup comparison: three specialized options
 
-The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now puts McGinley and SONIC on page 1, basic and compact on page 2. Each table now includes a short item description, verified against the [paper, slides and equipment documentation](sources/Item_Purpose_Audit_2026-10-10.md). At Howard's request, previously unpriced required TDT parts have author-set estimates included in the totals. [Editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Estimate basis](sources/Planning_Estimates_2026-10-10.json). [Observed seller-price record](sources/Accurate_Setup_Prices_2026-10-09.json).
+The [two-page parts list](../../../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now puts McGinley and SONIC on page 1, basic and compact on page 2. Each table now includes a short item description, verified against the [paper, slides and equipment documentation](../../../sources/Item_Purpose_Audit_2026-10-10.md). At Howard's request, previously unpriced required TDT parts have author-set estimates included in the totals. [Editable LaTeX](../../../output/pdf/Auditory_Hardware_Options_2026-10-09.tex). [Estimate basis](../../../sources/Planning_Estimates_2026-10-10.json). [Observed seller-price record](../../../sources/Accurate_Setup_Prices_2026-10-09.json).
 
 ## Current planning parts totals
 
@@ -52,7 +52,7 @@ TM2500C is backordered, and includes PSU, GPS patch antenna and two SMB–BNC ca
 
 ## 2. McGinley supplied-slide version
 
-Sources are the [system diagram](sources/hardware_slides_2026-10-09/01_system_diagram.png) and [part-links slide](sources/hardware_slides_2026-10-09/02_equipment_links.png). This is distinct from the separate BCM equipment email. Neuropixels is excluded because we reuse our own neural recorder. A compatible desktop and free PCIe slot are required; an arbitrary laptop or Mac cannot be assumed compatible.
+Sources are the [system diagram](../../../sources/hardware_slides_2026-10-09/01_system_diagram.png) and [part-links slide](../../../sources/hardware_slides_2026-10-09/02_equipment_links.png). This is distinct from the separate BCM equipment email. Neuropixels is excluded because we reuse our own neural recorder. A compatible desktop and free PCIe slot are required; an arbitrary laptop or Mac cannot be assumed compatible.
 
 | Part | Qty | Unit USD | Condition / source | Notes |
 |---|---:|---:|---|---|
@@ -109,6 +109,6 @@ The same JBL305P MkII is freshly listed [new at Sweetwater for $99](https://www.
 
 ## Decision for Dr. Luan and limits
 
-First confirm the required frequency band, our recorder timing inputs, the existing lab inventory and a spending limit for supplier quotes. Use the basic page-1 setup when selected tones below 20 kHz answer the question. The full-band recommendation reduces rack complexity and adds explicit acoustic measurement; it has not demonstrated better neural alignment. Arduino/FPGA can provide prebuffered samples and markers, but needs a suitable DAC/analog output, amplifier, speaker, microphone calibration and physical alignment. Earlier audible DIY budgets remain in the [historical research record](Auditory_Hardware_Options_2026-10-09.md) and [decision inputs](sources/Sound_Decision_Prices_2026-10-09.json); they are not verified lower-cost full-SONIC-band substitutes.
+First confirm the required frequency band, our recorder timing inputs, the existing lab inventory and a spending limit for supplier quotes. Use the basic page-1 setup when selected tones below 20 kHz answer the question. The full-band recommendation reduces rack complexity and adds explicit acoustic measurement; it has not demonstrated better neural alignment. Arduino/FPGA can provide prebuffered samples and markers, but needs a suitable DAC/analog output, amplifier, speaker, microphone calibration and physical alignment. Earlier audible DIY budgets remain in the [historical research record](Auditory_Hardware_Options_2026-10-09.md) and [decision inputs](../../../sources/Sound_Decision_Prices_2026-10-09.json); they are not verified lower-cost full-SONIC-band substitutes.
 
 SONIC used awake, alert sheep; Rice's sedated-sheep adaptation has unverified response windows and performance. No purchase, vendor contact, hardware connection, bench/animal experiment or executable animal protocol was performed.

@@ -2,20 +2,20 @@
 
 ## Current comparison
 
-The [two-page parts list](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now lists McGinley, SONIC, basic and compact, with explicit estimated prices for previously unquoted required parts. See the [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md) and [verified price inputs](sources/Accurate_Setup_Prices_2026-10-09.json). The [October 10 planning record](sources/Planning_Estimates_2026-10-10.json) separates author-set estimates from observed seller prices. Unresolved connections and delivery/tax/labor remain extra; no hard upper limit is established.
+The [two-page parts list](../../../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) now lists McGinley, SONIC, basic and compact, with explicit estimated prices for previously unquoted required parts. See the [current itemized comparison](Accurate_Setup_Comparison_2026-10-09.md) and [verified price inputs](../../../sources/Accurate_Setup_Prices_2026-10-09.json). The [October 10 planning record](../../../sources/Planning_Estimates_2026-10-10.json) separates author-set estimates from observed seller prices. Unresolved connections and delivery/tax/labor remain extra; no hard upper limit is established.
 
 ## Historical short decision guide (superseded)
 
 The sections below preserve earlier allowance-based planning and DIY work. Their earlier PDF page counts, $11,000–12,000 and $30,000 scenarios are not the current reading version or exact prices.
 
-The revised [two-page PDF](output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [editable LaTeX](output/pdf/Auditory_Hardware_Options_2026-10-09.tex) compare the basic and full-SONIC-range parts, cost, delay, trial variation and drift. The earlier DIY budgets remain in this research record and the price inputs. Howard selected all three precision measures and asked to compare economical setups with the full SONIC band, then added Arduino/FPGA possibilities. The lab provides its own neural recorder; its input details remain unknown.
+The revised [two-page PDF](../../../output/pdf/Auditory_Hardware_Options_2026-10-09.pdf) and [editable LaTeX](../../../output/pdf/Auditory_Hardware_Options_2026-10-09.tex) compare the basic and full-SONIC-range parts, cost, delay, trial variation and drift. The earlier DIY budgets remain in this research record and the price inputs. Howard selected all three precision measures and asked to compare economical setups with the full SONIC band, then added Arduino/FPGA possibilities. The lab provides its own neural recorder; its input details remain unknown.
 
 - **Selected audible tones:** $370.18 in listed parts with a borrowed reference, or $589.18 with a new REED R8090. Estimated shipping/tax reserves bring the working budgets to $450.18 and $689.18. The refreshed basket uses a Reverb open-box JBL and separately priced cables/stand. The recorder-specific timing interface is additional and unselected.
 - **Arduino:** $84.45 core parts for an uncalibrated bench demo; $104.45–124.45 with estimated wiring/power before shipping/tax. Keeping the better audible equipment and adding GIGA plus connection/reserve allowances gives $833.78. Its timed playback/markers need firmware, output conditioning and validation; the USB interface still powers and records the EMM-6.
 - **FPGA:** $134.38 Cmod A7/I2S2 boards only. A proposed audible assembly using the same speaker/mic/reference and a used MM-1 preamp is $950.58 hardware; connection/reserve allowances give $1,200.58. FPGA clock/I2S/buffering/markers and adapted cables remain engineering work, with no measured advantage claimed.
 - **Full SONIC-band candidate:** new USB-6361, M50, used MM-1 and R8090 are $4,873.42 in public prices. TDT MF2-M/SA1/ZB1PS are quote-only; the $4,250 allowance is not an observed vendor price. With $500 support and a 15% shipping/tax/uncertainty reserve, the provisional total is $11,066.93, or $11,779.93 using a new preamp. A $600 used USB-6211 could reduce the estimate to $8,271.95 only after checking its 32 kHz output settling/THD and shared input limits. These are not hard upper bounds.
 
-The [new price inputs](sources/Sound_Decision_Prices_2026-10-09.json) are the source for this simplified comparison. The earlier workbook and original rack/ES1 figures below are retained as a different architecture comparison; they do not contain the new DIY/M50 baskets.
+The [new price inputs](../../../sources/Sound_Decision_Prices_2026-10-09.json) are the source for this simplified comparison. The earlier workbook and original rack/ES1 figures below are retained as a different architecture comparison; they do not contain the new DIY/M50 baskets.
 
 Re-read SONIC v1 Methods 6.1–6.2 (p.11) and 6.6 (p.13): it names USB-6361/SA1/MF1, nominal 192 kSa/s, approximately 80 dB at the ear, PTP/10 MHz synchronization and recorded output/trial references. It does not identify a calibration mic or publish measured ±Hz, ±dB or acoustic-to-neural jitter. Our precision figures distinguish [NI's 50 ppm clock contribution](https://download.ni.com/support/manuals/374650c.pdf), [actual sample-rate readback](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P83OSAS&l=en-US), nominal sample spacing, and the [R8090's ±0.5 dB 1 kHz reference](https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf) from unmeasured whole-system accuracy. Lab alignment still requires compatible physical references and acoustic-onset/drift checks. No program, hardware connection or experiment was executed.
 
@@ -25,7 +25,7 @@ The basic interface-to-recorder drift is unknown; the available documents do not
 
 NI lists 50 ppm timing accuracy under its default typical-at-25°C conditions. At 50 ppm relative to ideal time, the clock error accumulates to 3 ms/minute or 180 ms/hour. If the recorder were another independent ±50 ppm clock at the opposite error, the illustrative mismatch would be 100 ppm, or 6 ms/minute and 360 ms/hour. Neither is a guaranteed bound or a prediction of our actual recorder; its clock specification is unknown. A shared compatible clock or repeated recorded references addresses accumulating mismatch. A start trigger alone does not. The proposed residual-alignment acceptance goal is ≤1 ms after correction, unachieved and unverified.
 
-The [timing derivations and sources](sources/Sound_Decision_Prices_2026-10-09.json) preserve the formula, examples and exclusions. SONIC's PTP/10 MHz arrangement is a paper reference, without a published acoustic-to-neural jitter or drift result. The expensive option buys full-band components and hardware timing; it does not automatically guarantee less relative drift. This revision adds no purchases, program implementation, hardware connections or measurements.
+The [timing derivations and sources](../../../sources/Sound_Decision_Prices_2026-10-09.json) preserve the formula, examples and exclusions. SONIC's PTP/10 MHz arrangement is a paper reference, without a published acoustic-to-neural jitter or drift result. The expensive option buys full-band components and hardware timing; it does not automatically guarantee less relative drift. This revision adds no purchases, program implementation, hardware connections or measurements.
 
 ## Detailed comparison of the supplied slides
 
@@ -46,7 +46,7 @@ All totals are USD for one sound stimulus channel. They exclude neural probes/he
 
 **For discussion: reserve about $1,500 for an audible first setup, or about $30,000 for the higher-cost slide architecture.** The latter is an upper planning scenario for the defined sound scope, not a hard maximum. ES1 availability, the compatible PXI-4461 version, calibration quotes, or missing recording equipment can change it. An all-new rack or specialist metrology chain can cost more.
 
-The [earlier editable rack/ES1 budget](outputs/01a11dcd-7193-7620-9381-3678488ff8ee/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and allowances for the four slide-comparison baskets below. Its [price inputs](sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add alternative baskets together. The current PDF at the top of this note uses the newer audible/DIY/full-SONIC comparison.
+The [earlier editable rack/ES1 budget](../../../output/spreadsheets/2026-10-09/Sound_Setup_Budget_2026-10-09.xlsx) contains formulas, quantities, listing links and allowances for the four slide-comparison baskets below. Its [price inputs](../../../sources/Sound_Hardware_Prices_2026-10-09.json) distinguish observed asking prices from estimates. Do not add alternative baskets together. The current PDF at the top of this note uses the newer audible/DIY/full-SONIC comparison.
 
 ## The minimum parts list
 
@@ -92,7 +92,7 @@ The EMM-6's individual frequency-response file does not, by itself, establish ab
 
 ## What the slides contain
 
-The supplied [system diagram](sources/hardware_slides_2026-10-09/01_system_diagram.png) and [equipment links](sources/hardware_slides_2026-10-09/02_equipment_links.png) show the following sound/control architecture. Their Neuropixels link describes a separate neural-acquisition system.
+The supplied [system diagram](../../../sources/hardware_slides_2026-10-09/01_system_diagram.png) and [equipment links](../../../sources/hardware_slides_2026-10-09/02_equipment_links.png) show the following sound/control architecture. Their Neuropixels link describes a separate neural-acquisition system.
 
 | Slide item | Role | Needed for the inexpensive audible path |
 |---|---|---|
@@ -143,8 +143,8 @@ The full-rack lower subtotal is $13,739.56, plus a 15% shipping/tax/uncertainty 
 
 ## Decision for our experiment
 
-Start by agreeing on the stimulus frequency range. **Selected audible tones can justify the inexpensive audio basket.** Full SONIC replication cannot: the paper's initial set spans approximately 1.4–32 kHz, and the refined set includes tones through 27 kHz. A 20 kHz chain excludes part of those alphabets; the ES1 also excludes their low-frequency end. SONIC used USB-6361, SA1 and MF1, not this slide's ES1 chain. For the full paper range, retain the [MF2/SA1 candidate](Mouse_Setup_Equipment_Plan.md) or another measured compatible speaker/measurement route, with a microphone suited below 2 kHz. See [paper methods notes](Paper_Notes.md).
+Start by agreeing on the stimulus frequency range. **Selected audible tones can justify the inexpensive audio basket.** Full SONIC replication cannot: the paper's initial set spans approximately 1.4–32 kHz, and the refined set includes tones through 27 kHz. A 20 kHz chain excludes part of those alphabets; the ES1 also excludes their low-frequency end. SONIC used USB-6361, SA1 and MF1, not this slide's ES1 chain. For the full paper range, retain the [MF2/SA1 candidate](../2026-10-08/Mouse_Setup_Equipment_Plan.md) or another measured compatible speaker/measurement route, with a microphone suited below 2 kHz. See [paper methods notes](../../paper/Paper_Notes.md).
 
 Identify the exact lab recorder and its auxiliary analog/digital inputs before choosing a timing adapter. Inventory borrowed speakers, microphones, level references, DAQs and TDT units before buying duplicates. Then verify selected-tone SPL/response, distortion, repeatable geometry, physical acoustic onset and clock alignment on the bench. Keep the software/waveforms and configuration with the captures.
 
-Rice's primary measurements remain in **sedated sheep**. Hardware feasibility does not establish response windows, decoding accuracy or ITR under sedation. A soundproof box and behavioral rig are not required by [team direction](sources/Team_Clarifications_2026-10-07.md); background sound, acoustic geometry and calibration still matter. This equipment comparison is a planning record, with no completed bench or animal validation.
+Rice's primary measurements remain in **sedated sheep**. Hardware feasibility does not establish response windows, decoding accuracy or ITR under sedation. A soundproof box and behavioral rig are not required by [team direction](../../../sources/Team_Clarifications_2026-10-07.md); background sound, acoustic geometry and calibration still matter. This equipment comparison is a planning record, with no completed bench or animal validation.

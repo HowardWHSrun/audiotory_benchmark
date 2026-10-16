@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "scope": "Selected equipment planning record, price arithmetic, sample arithmetic and repository checks",
+  "source_record": "sources/Final_Sound_Only_M50_Setup_2026-10-16.json",
+  "checks": {
+    "json_parse": "passed",
+    "parts_count": 7,
+    "main_three_parts_usd": 1718.98,
+    "listed_parts_total_usd": 2005.91,
+    "support_allowance_usd": 50.00,
+    "tax_shipping_reserve_usd": 200.00,
+    "working_budget_usd": 2255.91,
+    "exact_decimal_budget_reconciliation": "passed",
+    "sample_arithmetic": "passed: 96 kSa/s; 960 samples per 10 ms pip; 192 samples per 2 ms ramp; 576 samples between ramps; 100 pips/s",
+    "record_links_and_https_buy_links": "passed",
+    "existing_model_and_parts_tests": {"passed": 11, "failed": 0},
+    "repository_reference_validation": "passed; pinned SONIC v1 PDF unchanged",
+    "git_diff_check": "passed",
+    "independent_bom_review": "passed; no material correction, duplicate purchase or hidden essential omission found"
+  },
+  "compatibility_evidence": "Manufacturer specifications support M50/iD4 phantom power and load, Mac operation, 32 kHz microphone/ADC/DAC bands and balanced TRS speaker input. Included accessories and direct-monitor routing are documented in the source record.",
+  "unverified": [
+    "Delivered M50 serial calibration file and exact supplied accessories",
+    "Clip/stand thread fit and calibrator seal",
+    "Exact Mac/OS, USB power and native playback/capture settings",
+    "Working-gain response and complete-chain uncertainty",
+    "MR3 output level, distortion, ringing and actual 10 ms sequence at the reference geometry",
+    "Numerical acceptance tolerances and Rice stimulus protocol",
+    "Software implementation and future neural synchronization"
+  ],
+  "not_performed": ["Purchase", "Supplier outreach", "Software installation", "Hardware assembly", "Playback", "Acoustic measurement", "Animal experiment"],
+  "website": "Unchanged; no website deployment or browser-layout claim is made by this documentation change.",
+  "conclusion": "The planning list and calculations are consistent. Physical acoustic qualification is pending."
+}

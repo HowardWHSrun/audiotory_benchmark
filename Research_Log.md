@@ -1,5 +1,12 @@
 # Research log
 
+## 2026-10-16 America/Chicago - selected M50 sound-only planning list
+
+- Howard chose the M50 for now and requested a final list. Added the [selected seven-item plan](sources/Final_Sound_Only_M50_Setup_2026-10-16.json): M50, iD4 MKII, MR3 pair, REED R8090, Hosa XLR/TRS cables and a boom microphone stand. Fresh accessory prices remain $17.99, $14.95 and $34.99. Listed parts total $2,005.91 before tax/shipping. A $50 support allowance plus a $200 tax/shipping reserve gives $2,255.91, rounded to a $2,300 planning budget. This raises the earlier reserve by $50; it is not a delivered quotation or upper bound.
+- Documented the two signal paths, included M50 clip/ADP1 and iD4 USB cable, phantom-power/load compatibility, fixed-gain level calibration, speaker placement and microphone-monitor feedback settings. The MR3 official response illustration supports 32 kHz output as a candidate; usable level, distortion and 10 ms behavior remain bench questions. Software remains a proposed implementation, and the site is unchanged.
+- The timing plan uses a precomputed continuous 96 kSa/s sequence: 960 samples per 10 ms pip, with 192-sample ramps at each end inside that duration. The exact initial paper frequency array, ramp shape, Rice level convention and numerical bench tolerances remain explicit choices. Frequency calibration, the 1 kHz level reference, acoustic sequence checks and future neural alignment are distinct.
+- Verification: exact-decimal price/sample arithmetic, all 11 existing model/parts tests, repository reference validation and whitespace checks passed; the pinned SONIC PDF is unchanged. No purchase, supplier outreach, installation, playback or physical measurement occurred.
+
 ## 2026-10-16 America/Chicago - purchased calibrated microphone for Mac
 
 - Howard requested a budget Mac microphone with calibration through 32 kHz, available to buy rather than borrow, plus direct speaker/interface buying links. The [buying review](sources/Mac_Calibrated_32kHz_Purchase_2026-10-16.json) found no inexpensive USB candidate satisfying all requirements. It records the screened candidates and the difference between ultrasonic capture and supplied calibration.

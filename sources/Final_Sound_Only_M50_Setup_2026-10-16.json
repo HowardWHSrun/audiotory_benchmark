@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "status": "Selected planning list; not purchased, assembled or acoustically qualified",
+  "user_decision": "Howard selected the M50 for now and requested the final equipment list.",
+  "scope": "Sound playback and acoustic measurement on the existing Mac; neural hardware integration is deferred.",
+  "supersedes_for_current_selection": "sources/Mac_Calibrated_32kHz_Purchase_2026-10-16.json",
+  "target": {
+    "tone_band_khz": [1.4, 32.0],
+    "pip_duration_ms": 10,
+    "onset_spacing_ms": 10,
+    "ramp_each_end_ms": 2,
+    "sample_rate_hz": 96000,
+    "samples_per_pip": 960,
+    "samples_per_ramp": 192,
+    "samples_between_ramps": 576,
+    "pips_per_second": 100,
+    "paper_reference": "Paper_Notes.md; SONIC v1 Sections 6.1-6.2, page 11",
+    "adaptation": "96 kSa/s is this Mac interface plan; the paper used 192 kSa/s. Digital sample arithmetic does not verify acoustic fidelity.",
+    "open_protocol_choices": [
+      "The exact initial 37-frequency array is not supplied in the paper methods; do not reconstruct it as an exact published array.",
+      "Ramp shape is unspecified in the paper. Any chosen shape must be labeled a Rice choice.",
+      "Speaker distance, orientation, target level, level convention and numerical acceptance tolerances: TBD with Howard and the professor. The paper reports approximately 80 dB SPL at sheep-ear distance; this is a reference, not an approved Rice exposure setting."
+    ]
+  },
+  "parts": [
+    {
+      "id": "microphone",
+      "item": "Earthworks M50 measurement microphone",
+      "quantity": 1,
+      "unit_usd": 1299.00,
+      "role": "Measure sound across the target range using the microphone's individual frequency correction.",
+      "buy_url": "https://www.bhphotovideo.com/c/product/359562-REG/Earthworks_M50_M50_Measurment_Microphone.html",
+      "manufacturer_url": "https://earthworksaudio.com/measurement-microphones/m50/",
+      "manual_url": "https://earthworksaudio.com/wp-content/uploads/2022/05/Earthworks_Audio_M50_may2022.pdf",
+      "availability": "In stock on retrieved retailer page; unreserved.",
+      "included": ["Microphone clip", "ADP1 half-inch calibrator adapter", "Individual printed response chart; electronic calibration file available after registration"],
+      "specification": "3 Hz-50 kHz; analog XLR; 24-48 V phantom at 10 mA; minimum output load 600 ohms.",
+      "receipt_check": "Retain the serial-matched chart/file and inspect coverage through at least 32 kHz. No delivered unit's file has been inspected."
+    },
+    {
+      "id": "interface",
+      "item": "Audient iD4 MKII",
+      "quantity": 1,
+      "unit_usd": 269.99,
+      "role": "Mac playback, M50 phantom power, microphone gain and recording in one interface.",
+      "buy_url": "https://www.bhphotovideo.com/c/product/1641633-REG/audient_id4_mkii_1_channel_usb2_interface_and.html",
+      "manufacturer_url": "https://audient.com/products/audio-interfaces/id4/tech-specs/",
+      "setup_url": "https://support.audient.com/hc/en-us/articles/360055049691-iD4-MKII-Basic-Setup",
+      "manual_url": "https://d9w4fhj63j193.cloudfront.net/2021/iD4MKII/English/iD4%20MKII%20Manual%20V1.3.pdf",
+      "availability": "In stock on retrieved retailer page; unreserved.",
+      "included": ["USB-C to USB-C cable"],
+      "specification": "Maximum 24-bit/96 kSa/s; 48 V +/-4 V at 10 mA/channel; mic input impedance 2.8 kohms; mic input at minimum gain and ADC 10 Hz-40 kHz +/-0.5 dB; DAC 10 Hz-40 kHz +/-0.1 dB.",
+      "host_check": "Prefer a direct Mac USB-C connection supplying at least 0.9 A at 5 V. Exact Mac/OS and host settings still require verification.",
+      "routing_check": "Set Monitor Mix fully to DAW and disable software input monitoring so recorded microphone sound is not fed back to the speaker.",
+      "limits": "Only one microphone/line input; the other input is an instrument input with a 20 kHz specified band. This is not a completed neural-recorder synchronization design. Working-gain response remains to be measured."
+    },
+    {
+      "id": "speaker",
+      "item": "Edifier MR3 powered speaker pair",
+      "quantity": 1,
+      "unit_usd": 149.99,
+      "role": "Budget candidate for delivering the tones; start with one documented cabinet/channel for mono measurements.",
+      "buy_url": "https://us.edifier.com/products/mr3",
+      "manufacturer_url": "https://www.edifier.com/global/p/studio-monitors/mr3",
+      "manual_url": "https://new-edifier-us-oss.edifier.com/files/20240902/93517b14f597b1ec5b5814993aa9fca7.pdf",
+      "manufacturer_response_graph_url": "https://new-edifier-us-oss.edifier.com/files/20240904/9a364d5a62c02117cf79f7f52b4cc913.jpg",
+      "availability": "Official US store lists in stock; unreserved.",
+      "specification": "Nominal 52 Hz-40 kHz; built-in amplification; balanced quarter-inch TRS line input.",
+      "evidence_scope": "The official response illustration supports output near 32 kHz. Its geometry, drive level and uncertainty are unspecified, and it does not establish short-pip fidelity or the required SPL in our setup.",
+      "settings": "Use wired TRS, Monitor mode, documented EQ/room controls, fixed gains and recorded firmware/standby settings. Verify which input drives the selected cabinet.",
+      "limits": "Usable level, distortion, ringing and 10 ms sequence behavior at the reference position remain unmeasured. Upgrade only if the test identifies a limitation that another speaker addresses."
+    },
+    {
+      "id": "level_reference",
+      "item": "REED R8090 standard sound-level calibrator",
+      "quantity": 1,
+      "unit_usd": 219.00,
+      "role": "Establish/check the M50 plus interface level conversion at a fixed microphone gain.",
+      "buy_url": "https://www.globaltestsupply.com/product/reed-r8090-sound-level-calibrator",
+      "manufacturer_spec_url": "https://www.reedinstruments.com/pdfs/cache/www.reedinstruments.com/r8090/datasheet/r8090-datasheet.pdf",
+      "availability": "Retailer lists in stock; unreserved.",
+      "included": ["9 V battery"],
+      "specification": "94/114 dB at 1 kHz, +/-0.5 dB stated accuracy; half-inch microphone port.",
+      "fit_check": "M50 ADP1 and half-inch calibrator port nominally match; check insertion and seal on receipt.",
+      "limits": "Standard price excludes a separately priced traceable certificate. This 1 kHz level reference does not independently calibrate the 32 kHz frequency response or certify complete-chain uncertainty."
+    },
+    {
+      "id": "microphone_cable",
+      "item": "Hosa HMIC-010, 10 ft XLR female to XLR male",
+      "quantity": 1,
+      "unit_usd": 17.99,
+      "role": "M50 to the iD4 rear microphone input.",
+      "buy_url": "https://www.sweetwater.com/store/detail/HMIC010--hosa-hmic-010-pro-microphone-cable-rean-xlr3f-to-xlr3m-10-ft",
+      "availability": "In stock on retrieved retailer page; unreserved."
+    },
+    {
+      "id": "speaker_cable",
+      "item": "Hosa HSS-005, 5 ft balanced quarter-inch TRS male to TRS male",
+      "quantity": 1,
+      "unit_usd": 14.95,
+      "role": "One iD4 rear line output to the MR3 input for the selected mono cabinet/channel.",
+      "buy_url": "https://www.sweetwater.com/store/detail/HSS005--hosa-hss-005-pro-balanced-interconnect-rean-1-4-in-trs-to-same-5-foot",
+      "availability": "In stock on retrieved retailer page; unreserved."
+    },
+    {
+      "id": "microphone_stand",
+      "item": "Gator Frameworks Rok-It RI-MICTP-FBM boom microphone stand",
+      "quantity": 1,
+      "unit_usd": 34.99,
+      "role": "Hold the M50 at a repeatable reference position.",
+      "buy_url": "https://www.sweetwater.com/store/detail/RIMICTPFBM--rok-it-tripod-microphone-stand-with-fixed-boom",
+      "availability": "In stock on retrieved retailer page; unreserved.",
+      "fit_check": "Exact supplied clip/stand thread pairing is unverified; allow a small thread adapter if needed."
+    }
+  ],
+  "budget": {
+    "currency": "USD",
+    "price_date": "2026-10-16",
+    "main_three_parts_usd": 1718.98,
+    "all_seven_parts_usd": 2005.91,
+    "support_allowance_usd": 50.00,
+    "support_allowance_covers": "Small mounting/thread adapter, stable speaker placement, ruler/tape measure and USB adapter only if needed; reuse suitable existing supports.",
+    "tax_shipping_reserve_usd": 200.00,
+    "working_budget_usd": 2255.91,
+    "rounded_planning_budget_usd": 2300.00,
+    "basis": "Observed asking prices plus author-set allowances, not a delivered quotation or an upper bound. The prior approximately $2200 comparison used a $150 tax/shipping reserve; this final list increases that reserve to $200.",
+    "existing": ["Mac computer", "Suitable desk/bench and mains outlet"],
+    "exclusions": ["Computer purchase", "Traceable calibration certificate or laboratory recalibration", "Paid software/license", "Labor", "Neural equipment", "Animal/facility costs"]
+  },
+  "connections": [
+    "Mac USB-C -> iD4 via included USB cable",
+    "iD4 selected rear balanced line output -> HSS-005 -> matching MR3 TRS input",
+    "M50 -> HMIC-010 -> iD4 rear XLR microphone input, with 48 V phantom enabled",
+    "R8090 + included M50 ADP1 -> M50 for the 1 kHz level-reference check; remove the calibrator for free-field measurements"
+  ],
+  "software_plan": {
+    "status": "Proposed; not installed, implemented or hardware-tested by this change",
+    "license_budget_usd": 0,
+    "candidate": "Python with NumPy and python-sounddevice for waveform arrays and simultaneous playback/recording; analysis and serial calibration import to be implemented.",
+    "source_url": "https://python-sounddevice.readthedocs.io/en/latest/",
+    "requirements": [
+      "Select iD4 input/output explicitly and use native 96 kSa/s; document Mac Audio MIDI Setup and software settings.",
+      "Precompute one continuous sequence with 960 samples per 10 ms pip and ramps inside that duration. Do not schedule each pip with a 10 ms operating-system sleep.",
+      "Save the exact waveform, tone schedule, gain/geometry/settings and unprocessed microphone recording.",
+      "Apply the serial-specific frequency correction and fixed-gain level reference using a documented level convention.",
+      "Check stream status, clipping and missing samples/events; avoid Bluetooth and microphone-to-speaker monitoring feedback."
+    ]
+  },
+  "bench_acceptance_plan": [
+    "Check the serial calibration file, connections, Mac USB power, native sample rate, selected cabinet and microphone-monitor routing before playback.",
+    "Record a background segment and document microphone/speaker distance, height, orientation and room conditions.",
+    "Establish/check the fixed-gain recording level with the R8090, including before/after repeatability. Keep microphone frequency correction separate from this 1 kHz level check.",
+    "Measure the required frequencies at the reference position, including the 32 kHz endpoint, at the intended level. Record response, clipping, distortion within the measurement band and headroom; do not equalize by demanding unavailable speaker output.",
+    "Record repeated continuous 10 ms sequences and inspect duration, onset spacing, frequency transitions, level consistency, ringing into the following pip and missing events. A single detected tone or a long sweep is not this test.",
+    "Measure/document acoustic delay and variability with a suitable electrical/acoustic reference when that timing claim is required. A fixed delay longer than 10 ms does not itself prevent a continuous 100-pip/s sequence.",
+    "Have Howard and the professor set numerical pass tolerances before judging the test. Retain MR3 only if the measured sequence meets those criteria."
+  ],
+  "measurement_limits": [
+    "M50 and 96 kSa/s capture cannot quantify the 64 kHz second harmonic of a 32 kHz tone; do not claim complete ultrasonic THD coverage.",
+    "The iD4 plan does not establish TTL markers or alignment to a future neural recorder.",
+    "The sound-only plan does not qualify animal use. Rice sedation remains an adaptation from the paper's awake, alert sheep."
+  ],
+  "actions": "Research and planning only. No order, vendor contact, software installation, sound playback, bench measurement or animal experiment occurred."
+}

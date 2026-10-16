@@ -1,7 +1,7 @@
 {
   "date": "2026-10-16",
   "timezone": "America/Chicago",
-  "scope": "Two-page equipment guide with alternatives and choice rationale; document verification only",
+  "scope": "Editorial trim of the two-page equipment guide; document verification only",
   "outputs": {
     "docx": "output/documents/2026-10-16/M50_Sound_Setup_Guide.docx",
     "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf"
@@ -20,7 +20,7 @@
     "image_alt_descriptions": 1,
     "repeating_table_headers": 1,
     "title_and_paragraph_borders": "none",
-    "independent_technical_reviews": "passed; distinguished factory calibration, original MR4, price observations and certificate option",
+    "independent_technical_reviews": "passed; MR3 condition remains in table and setup checks after duplicated paragraph removal",
     "builder_AST_parse": "passed",
     "existing_model_and_parts_tests": {
       "passed": 11,
@@ -28,16 +28,20 @@
     },
     "repository_reference_validation": "passed; 454 references and pinned SONIC v1 PDF unchanged",
     "git_diff_check": "passed",
-    "pdf_word_count": 587,
+    "pdf_word_count": 463,
     "pdf_text_verification": "passed after normalizing PDF line-wrap whitespace",
     "unique_link_destinations": 17,
-    "comparison_evidence": "primary manufacturer manuals/specifications refreshed; MR3/MR5 and R8090/Extech displayed prices checked; no market-wide lowest-price claim",
-    "all_seven_choice_rationales": "passed exact source-manifest to DOCX cell comparison"
+    "comparison_evidence": "unchanged from the preceding verified October 16 revision; no new specification or price research",
+    "all_seven_choice_rationales": "passed exact source-manifest to DOCX cell comparison",
+    "removed_extra_paragraphs": "passed all four requested deletions",
+    "simplified_accessory_descriptions": "passed",
+    "core_four_comparisons": "unchanged from prior revision",
+    "page_two_text": "unchanged from prior revision"
   },
   "render_runtime": "Bundled Python and LibreOffice wrapper /Users/howardwang/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
   "sha256": {
-    "docx": "e2eb8a3d00dfb9f654eb5c7c22ff6571adca4b0be662c5cdab464c038961afe9",
-    "pdf": "7c6efdf2c2a848371395368f6374b37eb1f6e2919c4069d06680cef49a717c7c"
+    "docx": "67aa5ead66657af0e0372574ab38a26f59418d5e2ad6d5423af2a9c0d6752f5f",
+    "pdf": "2dfa44562bc2ea1aa7d9a852ec8abd8bd5713c3250bb8a9dded5fab41addb9ee"
   },
   "scientific_limits": [
     "MR3 actual acoustic output and 10 ms fidelity unmeasured",
@@ -46,7 +50,7 @@
     "Mouse distance level convention and tolerances remain lab decisions",
     "Neural synchronization and animal use not qualified"
   ],
-  "actions": "Document revision and source verification only; no purchase vendor outreach audio playback or animal experiment",
+  "actions": "Editorial document revision only; no purchase vendor outreach audio playback or animal experiment",
   "website": "Unchanged; no browser/deployment claim",
   "temporary_renders": "Outside repository; omitted from commits"
 }

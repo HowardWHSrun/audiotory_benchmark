@@ -74,19 +74,19 @@ COMPARISONS = [
     {
         "chosen": "Hosa HMIC-010",
         "alternatives": ["Equivalent XLR microphone cable"],
-        "reason": "Equivalent XLR mic cables work. This budget cable connects M50 to the interface; the brand is not essential.",
+        "reason": "Connects M50 to the interface.",
         "source_ids": [],
     },
     {
         "chosen": "Hosa HSS-005",
         "alternatives": ["Equivalent balanced quarter-inch TRS cables"],
-        "reason": "Equivalent balanced 1/4-inch TRS cables work. We need two: one for the speaker and one for the electrical reference.",
+        "reason": "One cable to the speaker; one for the electrical reference.",
         "source_ids": [],
     },
     {
         "chosen": "Gator RI-MICTP-FBM",
         "alternatives": ["Existing stable boom microphone stand"],
-        "reason": "An existing stable boom stand is fine. This inexpensive model holds the mic at the ear/reference position.",
+        "reason": "Holds the microphone at the ear position.",
         "source_ids": [],
     },
 ]
@@ -306,7 +306,7 @@ def build():
 
     # Page 1
     doc.add_paragraph("Our sound setup",style="Title")
-    doc.add_paragraph("Parts and budget  |  16 October 2026",style="Subtitle")
+    doc.add_paragraph("Parts and setup  |  16 October 2026",style="Subtitle")
     paragraph(doc,"Goal: play and measure approximately 1.4–32 kHz tones, changing every 10 ms. Check the sound setup on the mouse rig first, then recalibrate for sheep.",bold_lead="Goal:")
     heading(doc,"What to get",2)
     names=["Earthworks M50", "Audient iD14 MKII", "Edifier MR3 powered pair",
@@ -319,10 +319,6 @@ def build():
         rows.append([name,reason,item["quantity"],f"${cost:,.2f}"])
     table(doc,["Part and buying link","Other options and why this fits","Qty","Cost"],rows,
           [2.1,3.65,.4,1.05],links=[p["buy_url"] for p in parts])
-    paragraph(doc,"Parts total: $2,099.87. Plan for about $2,400 including estimated tax, shipping and small setup supplies.",bold_lead="Parts total:")
-    paragraph(doc,"Included: M50 clip and calibrator adapter, iD14 USB-C cable, and calibrator battery. Use the existing Mac and provide a stable speaker support.",bold_lead="Included:")
-    paragraph(doc,"The M50 is selected; iD14 is our recommended interface. MR3 still needs testing: its published range does not prove the required loudness or clean 10 ms changes at our chosen distance.",bold_lead="The M50 is selected;")
-    paragraph(doc,"Prices checked 16 October 2026. Costs above are line totals; the two TRS cables cost $14.95 each. Buying links are in the part names.",style="Caption")
 
     # Page 2
     page(doc,"Put it together")

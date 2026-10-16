@@ -75,7 +75,7 @@
       "alternatives": [
         "Equivalent XLR microphone cable"
       ],
-      "reason": "Equivalent XLR mic cables work. This budget cable connects M50 to the interface; the brand is not essential.",
+      "reason": "Connects M50 to the interface.",
       "source_ids": []
     },
     {
@@ -83,7 +83,7 @@
       "alternatives": [
         "Equivalent balanced quarter-inch TRS cables"
       ],
-      "reason": "Equivalent balanced 1/4-inch TRS cables work. We need two: one for the speaker and one for the electrical reference.",
+      "reason": "One cable to the speaker; one for the electrical reference.",
       "source_ids": []
     },
     {
@@ -91,7 +91,7 @@
       "alternatives": [
         "Existing stable boom microphone stand"
       ],
-      "reason": "An existing stable boom stand is fine. This inexpensive model holds the mic at the ear/reference position.",
+      "reason": "Holds the microphone at the ear position.",
       "source_ids": []
     }
   ],

@@ -1,5 +1,10 @@
 # Research log
 
+## 2026-10-16 America/Chicago - trim extra notes and cable descriptions
+
+- Howard requested removing the four paragraphs below the parts table and simplifying the wire explanations. Removed the budget/total paragraph, included-items paragraph, repeated selection/testing note and price/buying-link note. XLR, TRS and stand rows now state only their function.
+- Kept all four core device comparisons, selected models, quantities and line prices. MR3's acoustic-test condition remains in its table row and the complete setup/checks page is unchanged. Both final pages were rendered and inspected; deletions, concise rows, preserved comparisons, costs, links, source checksum and repository checks were verified.
+
 ## 2026-10-16 America/Chicago - add alternatives to the concise setup guide
 
 - Howard requested the main other options and why the selected devices make sense. Kept the guide to two pages and replaced generic role descriptions with short comparisons: M50 versus UMIK-2/M30 G2, iD14 versus iD4, MR3 versus original MR4/MR5, and R8090 versus Extech 407766 or the certificate option. Equivalent cables and an existing stable boom stand are acceptable substitutes.

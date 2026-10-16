@@ -297,5 +297,6 @@
   "latex_project": "output/pdf/2026-10-16/M50_Sound_Setup_Guide",
   "latex_main": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
   "active_pdf_source": "LaTeX",
-  "docx_status": "Preserved content snapshot from before the LaTeX conversion; future guide edits use main.tex"
+  "docx_status": "Preserved content snapshot from before the LaTeX conversion; future guide edits use main.tex",
+  "clarity_revision": "LaTeX diagram labels spell out XLR microphone cable and 48 V microphone power; setup step specifies input 1 on and input 2 off."
 }

@@ -66,13 +66,13 @@ Two awake, alert sheep heard tones while a 421-channel Connexus implant recorded
 \draw[flow] (interface.east) -- node[above,yshift=4pt] {TRS cable 1} (speaker.west);
 \draw[flow] (speaker.south) -- node[right,xshift=4pt] {Sound} (mic.north);
 \draw[flow] (mic.west) -- (11.8,1.25) -- (11.8,3.1) -- (8.4,3.1) -- (interface.south);
-\node[align=center] at (10.2,2.6) {XLR cable\\Phantom on};
-\node[align=center] at (4.7,1.2) {Second TRS cable\\Output 2 $\rightarrow$ rear line input 2\\Phantom off $\cdot$ duplicate reference};
+\node[align=center] at (9.2,2.6) {XLR microphone cable\\48 V microphone power on};
+\node[align=center] at (4.7,1.05) {Second TRS cable\\Output 2 $\rightarrow$ rear line input 2\\48 V microphone power off\\Duplicate audio reference};
 \end{tikzpicture}
 \end{center}
 {\fontsize{9}{11}\selectfont Connections for sound playback and recording\par}
 \begin{enumerate}[leftmargin=0.24in,labelsep=0.09in,itemsep=6pt,topsep=7pt]
-\item \textbf{Connect and position.} Connect as shown. Turn input monitoring off to prevent feedback; leave the front instrument input empty. Put the M50 tip at the ear/reference position and record distance and angle.
+\item \textbf{Connect and position.} Connect as shown. Turn on 48 V microphone power for input 1; keep it off for input 2. Turn input monitoring off to prevent feedback; leave the front instrument input empty. Put the M50 tip at the ear/reference position and record distance and angle.
 \item \textbf{Program the sequence.} Python builds one continuous waveform at 96 kHz: 960 samples per 10 ms pip, including a 2 ms ramp at each end. Send it to output 1 and a copy to output 2. Save the tone schedule and random seed.
 \item \textbf{Calibrate.} Use the calibration file for that M50, checking coverage through 32 kHz. Use the R8090 at 94 dB to set the recording scale, then keep mic gain fixed. Remove the calibrator and adjust each tone's level using recordings at the ear position.
 \item \textbf{Check the actual sound.} Record the microphone and electrical reference simultaneously during the actual 10 ms sequence. Check level at every frequency, short-tone transitions, ringing and stability through a full run. Check the reference channel's relative delay too. Repeat calibration when moving to sheep.

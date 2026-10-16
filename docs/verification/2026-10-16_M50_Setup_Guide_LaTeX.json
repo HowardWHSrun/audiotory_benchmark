@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "scope": "LaTeX conversion only; content and equipment choices preserved",
+  "scope": "Clarify microphone cable and 48 V input power labels in the LaTeX guide",
   "source": "output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex",
   "pdf": "output/documents/2026-10-16/M50_Sound_Setup_Guide.pdf",
   "checks": {
@@ -9,7 +9,7 @@
     "compiler_warnings": 0,
     "rendered_pages": 2,
     "both_final_pages_visually_reviewed": "passed",
-    "all_nonempty_content_paragraphs_and_table_cells": "matched against the prior DOCX snapshot after whitespace typography normalization",
+    "all_nonempty_content_paragraphs_and_table_cells": "matched prior DOCX content after typography normalization, with the explicitly added input-power sentence in step 1",
     "native_editable_diagram": "TikZ; no image dependencies",
     "unique_https_destinations": 18,
     "pdf_link_annotations": 19,
@@ -21,13 +21,16 @@
       "failed": 0
     },
     "repository_validation": "passed 454 references and unchanged pinned PDF",
-    "git_diff_check": "passed"
+    "git_diff_check": "passed",
+    "power_label_clarity": "XLR microphone cable; 48 V microphone power on at input 1 and off at input 2; no unexplained phantom label",
+    "page_one": "unchanged from prior compiled PDF",
+    "independent_review": "passed microphone/line input power wording check"
   },
   "compiler_source": "https://github.com/tectonic-typesetting/tectonic/releases/tag/tectonic%400.17.0",
   "compiler_archive_sha256": "a3f1cac7c5678f01661a92212f58480ae3b0634115d880dbc59e2953ded45667",
   "sha256": {
-    "tex": "40a68de10630092fe38c7d0123910020667f84063dea668125b2e337dde41d7f",
-    "pdf": "f847fac5bd710f97c1f053bcac8cae415f2f34663110bbc236171912884a761b"
+    "tex": "b98c4d1bf975d849914275ab6ea07d0b5c2e60ca8fd5233b5d98446ceac9b3e9",
+    "pdf": "3b60b3d5a030f4f3f55d9b8c88fad8eebd204faa234b45ab728351bbaca056e9"
   },
   "limits": "Format conversion and documentation verification only; no physical qualification playback purchase or vendor contact",
   "temporary_builds": "Outside repository"

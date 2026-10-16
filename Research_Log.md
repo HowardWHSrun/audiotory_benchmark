@@ -1,5 +1,10 @@
 # Research log
 
+## 2026-10-16 America/Chicago - clarify microphone power wording
+
+- Howard asked for clearer wording after the diagram's phantom-power label caused confusion. Replaced it with “XLR microphone cable” and “48 V microphone power on/off,” and stated that input 1 gets microphone power while input 2 stays off. Equipment choices and the rest of the guide are unchanged.
+- Both desktop and export compilation passed without warnings. Reviewed both final pages, confirmed page 1 and all preserved content/links are unchanged, and kept the guide at two pages. No hardware operation or purchasing occurred.
+
 ## 2026-10-16 America/Chicago - convert the setup guide to LaTeX
 
 - Howard requested LaTeX. Created a self-contained local project with main.tex, preserving the current two-page content, equipment comparison, short wire descriptions, separate SONIC reference and setup steps. The connection diagram is now editable TikZ. The existing PDF link now serves the LaTeX export; Word remains a preserved content snapshot.

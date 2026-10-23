@@ -1,9 +1,17 @@
 # Project tools
 
+For the local Audient / MK3 speaker player:
+
+```sh
+python3 scripts/start_sound_player.py --configure
+```
+
+Open <http://127.0.0.1:8765/>. `--configure` selects the connected Audient as macOS application playback output at 96 kHz; it does not change gain or microphone input and does not start sound. Omit it to preserve the current device settings. Read-only output check: `python3 scripts/sound_output.py`. See [playback instructions](../playback/README.md).
+
 Run from the project root:
 
 ```sh
-node --test tests/*.test.cjs
+node --test tests/*.test.cjs playback/waveform.test.mjs
 python3 scripts/validate_site.py
 python3 scripts/build_site.py
 python3 scripts/validate_site.py --root .work/site

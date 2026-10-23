@@ -2,6 +2,7 @@
 
 ## Current sound setup
 
+- [Audient / MK3 sound player](playback/README.md): run `python3 scripts/start_sound_player.py --configure`, then open <http://127.0.0.1:8765/>. Playback starts only when you click a button.
 - [Read Final Part List V1](output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf)
 - [Edit the LaTeX source](output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex)
 - [Review the sound-chain qualification audit](sources/Sound_Chain_Qualification_Audit_2026-10-16.json)

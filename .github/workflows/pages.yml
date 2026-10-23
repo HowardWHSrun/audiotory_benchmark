@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '24'
       - name: Check scientific model
-        run: node --test tests/*.test.cjs
+        run: node --test tests/*.test.cjs playback/waveform.test.mjs
       - name: Check browser code
         run: |
           node --check web/model.js

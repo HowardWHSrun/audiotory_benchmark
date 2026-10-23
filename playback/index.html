@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Audient speaker check</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #24382c; background: #f3f5f1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 32px 18px; } main { max-width: 730px; margin: auto; }
+    h1 { font-size: clamp(1.8rem,5vw,2.4rem); margin: 8px 0; } p { line-height: 1.55; } .eyebrow { font-size: .8rem; letter-spacing: .09em; text-transform: uppercase; }
+    section { background: white; border: 1px solid #d4ddd2; border-radius: 14px; padding: 22px; margin: 20px 0; }
+    .route { font-size: 1.15rem; font-weight: 650; } .muted, small { color: #536356; } .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    label { display: block; font-weight: 600; font-size: .92rem; } select, input { width: 100%; margin-top: 8px; } select { padding: 10px; background: #fff; border: 1px solid #9eaca0; border-radius: 7px; color: inherit; font-size: 1rem; }
+    .wide { grid-column: 1 / -1; } .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; } button { border: 1px solid #496d52; border-radius: 8px; background: #315b3d; color: white; padding: 12px 16px; font: 600 1rem system-ui; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: wait; } button.secondary { background: white; color: #315b3d; } #stop { background: #8f332c; border-color: #8f332c; } button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid #a36d2f; outline-offset: 3px; }
+    #status { min-height: 1.5em; font-weight: 600; } .fine { font-size: .88rem; } details { line-height: 1.5; } summary { cursor: pointer; font-weight: 600; }
+    @media(max-width: 480px) { body { padding: 20px 14px; } section { padding: 18px; } .controls { grid-template-columns: 1fr; } .actions button { flex: 1 1 130px; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Local sound player · connection check</div>
+  <h1>Audient → wired speakers</h1>
+  <p>Keep the Audient monitor knob low. Start with the short 1 kHz test, then adjust the hardware knob gradually to a comfortable level.</p>
+  <section aria-label="Output status">
+    <div class="route" id="output">Checking Mac output…</div>
+    <p class="muted" id="context">Browser audio: not initialized. No sound plays automatically.</p>
+    <button class="secondary" id="check" type="button">Check output (silent)</button>
+  </section>
+  <section aria-label="Playback controls">
+    <div class="controls">
+      <label>Output channels<select id="channel"><option value="both">Both · outputs 1 + 2</option><option value="left">Left · output 1</option><option value="right">Right · output 2</option></select></label>
+      <label>Sequence length<select id="duration"><option value="1">1 second</option><option value="2">2 seconds</option><option value="5">5 seconds</option></select></label>
+      <label class="wide">Sequence frequencies<select id="alphabet"><option value="audible">Audible subset · 2–10.5 kHz (6 tones)</option><option value="full">Published Sheep E list · 2–27 kHz (14 tones)</option></select></label>
+      <label class="wide">Digital peak: <output id="level-text" for="level">−36 dBFS</output><input id="level" type="range" min="-60" max="-18" step="1" value="-36"></label>
+    </div>
+    <p class="fine" id="frequencies">2, 4, 6, 8, 9, 10.5 kHz · ascending, repeating · 10 ms per pip</p>
+    <div class="actions"><button id="test" type="button">1 kHz test · 0.5 s</button><button id="sequence" type="button">Play sequence</button><button id="stop" type="button">Stop</button></div>
+    <p id="status" role="status" aria-live="polite">Ready for an output check.</p>
+    <p class="fine">High frequencies may be inaudible; speaker coverage is unverified. Do not increase the level to chase them. Digital dBFS does not measure acoustic dB SPL.</p>
+  </section>
+  <details><summary>Sound construction and limits</summary><p>These are synthetic sine waves for a human speaker check. The 14-frequency list comes from SONIC bioRxiv v1, Section 6.1; the six-frequency subset, ascending repeating order, 96 kHz playback, and raised-cosine ramp shape are local choices. Pips last 10 ms with 2 ms onset and offset ramps. This does not reproduce the original stimulus order.</p><p>Playback requires macOS to report Audient output at 96 kHz and the browser audio context to run at 96 kHz. The software cannot verify the physical mixer, speaker wiring, SPL, distortion, acoustic timing, or speaker bandwidth. This player is separate from the educational walkthrough and is not an animal-ready stimulus protocol.</p></details>
+</main>
+<script type="module" src="player.js"></script>
+</body>
+</html>

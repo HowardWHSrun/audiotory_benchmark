@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-23",
+  "purpose": "Configure a local human speaker-connection check after the user connected Audient and wired speakers.",
+  "detected_output": {"name": "Audient iD14", "transport": "USB", "output_channels": 6},
+  "configuration": {
+    "previous_default_playback": "Bose QC Ultra 2 HP at 44100 Hz",
+    "new_default_playback": "Audient iD14 at 96000 Hz",
+    "hardware_gain_changed": false,
+    "microphone_input_changed": false,
+    "system_alert_output_changed": false
+  },
+  "player": {
+    "path": "playback/index.html",
+    "default_peak_dbfs": -36,
+    "default_channels": "both, stereo channels 1 and 2",
+    "default_sequence_seconds": 1,
+    "default_frequencies_hz": [2000, 4000, 6000, 8000, 9000, 10500],
+    "pip_samples": 960,
+    "ramp_samples": 192,
+    "ramp_shape": "raised cosine, local choice",
+    "sequence_order": "ascending and repeating, local speaker-check choice",
+    "auto_play": false
+  },
+  "checks": {
+    "coreaudio_output_readback": "passed",
+    "system_profiler_output_readback": "passed",
+    "live_browser_silent_check": "passed: AudioContext 96000 Hz, running; no signal scheduled",
+    "desktop_layout": "passed",
+    "narrow_layout": "passed at 390 by 844 viewport",
+    "selectors": "full frequency list and left channel selected successfully, then reset to six-frequency subset and both channels",
+    "browser_console_errors": [],
+    "node_tests": "12 passed including waveform timing, ramp, level, frequency and channel checks",
+    "source_site_validation": "passed: 514 links, 67 evidence paths, unchanged SONIC v1 PDF",
+    "audio_played": false
+  },
+  "limits": "Software checks do not verify Audient physical mixer routing, speaker identity/cabling, acoustic SPL, response, distortion, acoustic timing, synchronization, or suitability for animal use. No acoustic or neural measurements were made."
+}

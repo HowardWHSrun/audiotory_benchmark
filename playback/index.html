@@ -35,9 +35,19 @@
       <label class="wide">Digital peak: <output id="level-text" for="level">−36 dBFS</output><input id="level" type="range" min="-60" max="-18" step="1" value="-36"></label>
     </div>
     <p class="fine" id="frequencies">2, 4, 6, 8, 9, 10.5 kHz · ascending, repeating · 10 ms per pip</p>
-    <div class="actions"><button id="test" type="button">1 kHz test · 0.5 s</button><button id="sequence" type="button">Play sequence</button><button id="stop" type="button">Stop</button></div>
+    <div class="actions"><button id="test" type="button">1 kHz test · 0.5 s</button><button id="sequence" type="button">Play sequence</button><button id="sweep" type="button">100 Hz–20 kHz sweep · 5 s</button><button id="stop" type="button">Stop all</button></div>
     <p id="status" role="status" aria-live="polite">Ready for an output check.</p>
     <p class="fine">High frequencies may be inaudible; speaker coverage is unverified. Do not increase the level to chase them. Digital dBFS does not measure acoustic dB SPL.</p>
+  </section>
+  <section aria-label="Microphone input check">
+    <h2>Audient microphone input</h2>
+    <p class="fine">Connect the Earthworks microphone to the interface input. This check requests microphone permission, then selects the Audient input by device name. Input is metered silently; it is never played through the speakers.</p>
+    <div class="actions"><button id="mic-start" class="secondary" type="button">Start microphone check</button><button id="mic-stop" class="secondary" type="button">Stop microphone</button></div>
+    <p id="mic-status" role="status" aria-live="polite">Microphone off.</p>
+    <p id="mic-settings" class="fine">No input selected.</p>
+    <pre id="mic-meter" aria-label="Live input levels" style="white-space:pre-wrap;overflow-wrap:anywhere">Input 1: —
+Input 2: —</pre>
+    <p id="mic-summary" class="fine">Start the microphone, then play the sweep to collect an input-level summary. Values are digital dBFS, not calibrated SPL or a frequency-response measurement.</p>
   </section>
   <details><summary>Sound construction and limits</summary><p>These are synthetic sine waves for a human speaker check. The 14-frequency list comes from SONIC bioRxiv v1, Section 6.1; the six-frequency subset, ascending repeating order, 96 kHz playback, and raised-cosine ramp shape are local choices. Pips last 10 ms with 2 ms onset and offset ramps. This does not reproduce the original stimulus order.</p><p>Playback requires macOS to report Audient output at 96 kHz and the browser audio context to run at 96 kHz. The software cannot verify the physical mixer, speaker wiring, SPL, distortion, acoustic timing, or speaker bandwidth. This player is separate from the educational walkthrough and is not an animal-ready stimulus protocol.</p></details>
 </main>

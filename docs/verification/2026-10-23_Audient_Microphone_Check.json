@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-23",
+  "scope": "User-authorized human sound playback and microphone connection check, 100 Hz to 20 kHz",
+  "user_reported_connection": "Earthworks microphone on Audient input 1; physical 48 V switch state was initially unknown",
+  "observed_configuration": {
+    "output": "Audient iD14 at 96000 Hz",
+    "browser_audio_context_hz": 96000,
+    "input": "Audient iD14 (2708:0008)",
+    "input_sample_rate_hz": 96000,
+    "input_channels": 2,
+    "echo_cancellation": false,
+    "noise_suppression": false,
+    "automatic_gain_control": false,
+    "digital_playback_peak_dbfs": -36,
+    "output_channels": "both",
+    "physical_gain_or_phantom_switch_changed_by_software": false
+  },
+  "observations": {
+    "test_tone": "A live input-1 FFT peak at approximately 996 Hz was displayed during the 0.5-second 1 kHz playback. The strongest frame in the held summary was at an ambient low frequency; no tone SNR is inferred.",
+    "sweep": "Five-second logarithmic 100 Hz to 20 kHz sweep completed. The latest held browser summary contained 91 observed analyser frames.",
+    "latest_sweep_input_1": {"observed_peak_dbfs": -34.0, "observed_rms_dbfs": -48.4, "maximum_frame_rms_dbfs": -42.1, "dominant_frequency_at_maximum_rms_hz": 445},
+    "latest_sweep_input_2": {"observed_peak_dbfs": -91.0, "observed_rms_dbfs": -100.1, "maximum_frame_rms_dbfs": -95.7, "dominant_frequency_at_maximum_rms_hz": null},
+    "capture_finished": "Microphone off; input tracks released. Playback status Finished."
+  },
+  "analysis_limits": "Time-domain and FFT statistics come from overlapping browser analyser windows and may include ambient sound, handling and harmonics. The reported maximum is not a calibrated response point. No raw room audio was saved. This is evidence of an input signal and 1 kHz test pickup, not verification of complete 100 Hz to 20 kHz speaker/microphone response, calibrated SPL, distortion, acoustic timing or animal suitability.",
+  "sources": ["https://earthworksaudio.com/measurement-microphones/m50/", "https://audient.github.io/audient-documentation-site/id14/front-panel/"]
+}

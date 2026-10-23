@@ -2,6 +2,24 @@ export const SAMPLE_RATE = 96000;
 export const E_FREQUENCIES = Object.freeze([2000, 4000, 6000, 8000, 9000, 10500, 17000, 18200, 19500, 20900, 22400, 24000, 25800, 27000]);
 export const AUDIBLE_FREQUENCIES = Object.freeze(E_FREQUENCIES.slice(0, 6));
 
+export function logarithmicSweep(dbfs, sampleRate = SAMPLE_RATE, seconds = 5, low = 100, high = 20000) {
+  if (!Number.isFinite(dbfs) || dbfs < -60 || dbfs > -18) throw new Error('Level must be between −60 and −18 dBFS.');
+  if (!(seconds > 0 && seconds <= 5 && low > 0 && high > low && high < sampleRate / 2)) throw new Error('Invalid sweep range or duration.');
+  const count = Math.round(seconds * sampleRate);
+  const ramp = Math.round(0.02 * sampleRate);
+  const result = new Float32Array(count);
+  const logRatio = Math.log(high / low);
+  const peak = 10 ** (dbfs / 20);
+  for (let i = 0; i < count; i++) {
+    const time = i / sampleRate;
+    const edge = Math.min(i, count - 1 - i);
+    const envelope = edge < ramp ? 0.5 * (1 - Math.cos(Math.PI * edge / (ramp - 1))) : 1;
+    const phase = 2 * Math.PI * low * seconds / logRatio * Math.expm1(time * logRatio / seconds);
+    result[i] = peak * envelope * Math.sin(phase);
+  }
+  return result;
+}
+
 export function sinePip(frequency, duration, dbfs, sampleRate = SAMPLE_RATE, rampSeconds = 0.002) {
   if (!Number.isFinite(frequency) || frequency <= 0 || frequency >= sampleRate / 2) throw new Error('Frequency must be below Nyquist.');
   if (!Number.isFinite(duration) || duration <= 0 || duration > 5) throw new Error('Duration must be between 0 and 5 seconds.');

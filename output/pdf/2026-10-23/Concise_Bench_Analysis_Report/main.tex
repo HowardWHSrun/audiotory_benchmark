@@ -26,23 +26,30 @@
 {\fontsize{20}{24}\selectfont\bfseries\color{navy}#2}&{\fontsize{20}{24}\selectfont\bfseries\color{navy}#4}&{\fontsize{20}{24}\selectfont\bfseries\color{navy}#6}
 \end{tabularx}
 \end{minipage}}\par\vspace{9pt}}
+\newcommand{\runmetrics}[4]{\noindent\colorbox{soft}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+{\small\color{muted}Run 1 median}&{\small\color{muted}Run 2 median}\\[5pt]
+{\fontsize{20}{24}\selectfont\bfseries\color{navy}#1\,ms}&{\fontsize{20}{24}\selectfont\bfseries\color{navy}#3\,ms}\\[7pt]
+{\small Sample SD ($n-1$): \textbf{#2\,ms}}&{\small Sample SD ($n-1$): \textbf{#4\,ms}}
+\end{tabularx}
+\end{minipage}}\par\vspace{9pt}}
 \begin{document}
 \raggedright
 \topline
 \pagetitle{Playback-to-microphone delay}{Audient iD14\enspace$\cdot$\enspace Edifier speaker\enspace$\cdot$\enspace Earthworks M50}
 
-\metrics{Run 1 median}{38.250 ms}{Run 2 median}{38.375 ms}{Between-run shift}{0.125 ms}
+\runmetrics{38.250}{0.00233}{38.375}{0.00321}
 
-Recorded at 96\,kHz, with approximately 10\,cm microphone separation (operator reported).
+Recorded at 96\,kHz, with approximately 10\,cm microphone separation.
 Each separately opened stream provided 20 accepted sweeps.
 
 \vspace{5pt}
 \includegraphics[width=\linewidth]{TimingSummary.pdf}
 \par\vspace{3pt}
-{\small\color{muted}Ranges: Run 1, 38.2396--38.2500\,ms; Run 2, 38.3646--38.3750\,ms. Each run's peak-to-peak spread was one sample (0.0104\,ms). The strength threshold was 0.35; probes were 100\,Hz--20\,kHz sweeps.}
+{\small\color{muted}Ranges: Run 1, 38.2396--38.2500\,ms; Run 2, 38.3646--38.3750\,ms. Each run's peak-to-peak spread was one sample (0.0104\,ms). Probes were 100\,Hz--20\,kHz sweeps.}
 
 \vspace{13pt}
-\textbf{Interpretation.} Each run was stable over its 20 recorded probes, but the baselines differed. The 0.125\,ms median shift is between-run variation; more stream starts are needed to characterize it. This application roundtrip includes buffering and the acoustic path. Within-run spread does not establish calibrated accuracy, isolated speaker delay or neural latency.
+\textbf{Description.} The run medians differed by 0.125\,ms. Sample SD describes variation within each run's 20 quantized waveform estimates. These application roundtrip measurements include buffering and the acoustic path; the SD values do not establish calibrated timing accuracy.
 
 \newpage
 \topline
@@ -58,7 +65,7 @@ Locally reconstructed Sheep E tones in two 84-second blocks.
 {\small\color{muted}Gaps mark unsupported sweep bands. Tone bars show medians; whiskers are 5th--95th percentiles of 600 pips per frequency per recording, not confidence intervals.}
 
 \vspace{10pt}
-\textbf{Finding.} All 14 components appear in both recordings at unequal levels. Relative to 2\,kHz, 17--19.5\,kHz was 15--22\,dB lower; 20.9--25.8\,kHz was 30--40\,dB lower. These uncorrected full-chain measurements leave SPL, speaker-only response and distortion unqualified.
+\textbf{Description.} All 14 components appear in both recordings at unequal levels. Relative to 2\,kHz, 17--19.5\,kHz was 15--22\,dB lower; 20.9--25.8\,kHz was 30--40\,dB lower. These uncorrected full-chain measurements leave SPL, speaker-only response and distortion unqualified.
 
 \textbf{Next.} Fix the geometry, calibrate microphone/SPL, test separated tones, and validate timing with an independent electrical reference.
 \end{document}

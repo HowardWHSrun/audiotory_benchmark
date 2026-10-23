@@ -38,8 +38,8 @@ def save(fig, output, name):
 
 
 def timing_figure(record, output):
-    fig, axes = plt.subplots(2, 2, figsize=(7.1, 4.2), sharex="col", sharey="row",
-                             gridspec_kw={"height_ratios": [1.6, 1]}, layout="constrained")
+    fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.2), sharex=True, sharey=True,
+                             layout="constrained")
     plotted = []
     if len(record["runs"]) != 2:
         raise ValueError("Expected two separately started timing runs")
@@ -49,26 +49,26 @@ def timing_figure(record, output):
             raise ValueError("Expected all twenty accepted timing probes per run")
         samples = np.array([trial["delay_samples"] for trial in trials], dtype=int)
         values = np.array([trial["delay_ms"] for trial in trials], dtype=float)
-        correlation = np.array([trial["peak_correlation_abs"] for trial in trials], dtype=float)
         np.testing.assert_allclose(values, samples * 1000 / run["sample_rate_hz"], rtol=0, atol=1e-12)
         positions = np.arange(1, 21)
-        median = float(np.median(values))
+        median = float(np.median(samples) * 1000 / run["sample_rate_hz"])
+        sample_std_samples = float(np.std(samples - samples[0], ddof=1))
+        sample_std_ms = sample_std_samples * 1000 / run["sample_rate_hz"]
         marker = ("o", "s")[index]
-        top, bottom = axes[:, index]
-        top.plot(positions, values, color=COLORS[index], marker=marker, ms=3.8, lw=1.1)
-        top.hlines(median, positions[0], positions[-1], color=COLORS[index], ls="--", lw=.8)
-        top.set_title(f"Run {index + 1}", loc="left", fontsize=10, weight="bold", pad=5)
-        top.text(.98, .94, f"Median {median:.3f} ms", transform=top.transAxes,
+        axis = axes[index]
+        axis.plot(positions, values, color=COLORS[index], marker=marker, ms=3.8, lw=1.1)
+        axis.hlines(median, positions[0], positions[-1], color=COLORS[index], ls="--", lw=.8)
+        axis.set_title(f"Run {index + 1}", loc="left", fontsize=10, weight="bold", pad=5)
+        axis.text(.98, .94, f"Median {median:.3f} ms", transform=axis.transAxes,
                  ha="right", va="top", color=COLORS[index], fontsize=9)
-        bottom.plot(positions, correlation, color=COLORS[index], marker=marker, ms=3.4, lw=1.0)
-        bottom.axhline(.35, color="0.35", ls="--", lw=.9, label="Threshold 0.35")
-        bottom.legend(loc="lower right", frameon=False, fontsize=8)
-        bottom.set_xlabel("Probe number")
-        bottom.set_xticks([1, 5, 10, 15, 20])
+        axis.set_xlabel("Probe number")
+        axis.set_xticks([1, 5, 10, 15, 20])
         plotted.append({"run_id": run["run_id"], "probe_numbers": (positions + 20 * index).tolist(),
                         "within_run_probe_numbers": positions.tolist(),
                         "delay_samples": samples.tolist(), "delay_ms": values.tolist(),
-                        "absolute_peak_correlation": correlation.tolist(), "median_delay_ms": median,
+                        "median_delay_ms": median, "n": len(samples), "sample_std_ddof": 1,
+                        "sample_std_delay_samples": sample_std_samples,
+                        "sample_std_delay_ms": sample_std_ms,
                         "min_delay_ms": float(samples.min() * 1000 / run["sample_rate_hz"]),
                         "max_delay_ms": float(samples.max() * 1000 / run["sample_rate_hz"]),
                         "peak_to_peak_delay_samples": int(np.ptp(samples)),
@@ -76,15 +76,12 @@ def timing_figure(record, output):
     for axis in axes.flat:
         axis.grid(axis="y", color="0.90", lw=.6)
         axis.set_xlim(.4, 20.6)
-    axes[0, 0].set_ylim(38.20, 38.425)
-    axes[0, 0].set_yticks([38.20, 38.25, 38.30, 38.35, 38.40])
-    axes[0, 0].set_ylabel("Delay (ms)")
-    axes[1, 0].set_ylim(.325, .465)
-    axes[1, 0].set_yticks([.35, .40, .45])
-    axes[1, 0].set_ylabel("Peak correlation")
+    axes[0].set_ylim(38.20, 38.425)
+    axes[0].set_yticks([38.20, 38.25, 38.30, 38.35, 38.40])
+    axes[0].set_ylabel("Delay (ms)")
     save(fig, output, "TimingSummary")
-    return {"figure": "TimingSummary", "size_inches": [7.1, 4.2], "runs": plotted,
-            "correlation_strength_threshold": .35,
+    return {"figure": "TimingSummary", "size_inches": [7.1, 3.2], "runs": plotted,
+            "sample_sd_definition": "Sample standard deviation (n-1 denominator), computed in sample units then converted to milliseconds.",
             "normalization": "Delay is the unmodified accepted sample-grid lag in milliseconds; no timing correction.",
             "precision_role": "Axis precision and one-sample repeatability do not establish timing accuracy."}
 

@@ -1,6 +1,6 @@
 {
   "date_local": "2026-10-23",
-  "scope": "Two-page graphical summary with separate medians and plots for each timing run; saved measurements are unchanged.",
+  "scope": "Two-page graphical summary with separate per-run medians and sample standard deviations, delay-only timing graphs and descriptive text; saved measurements unchanged.",
   "new_playback_performed": false,
   "new_acquisition_performed": false,
   "pages": 2,
@@ -33,32 +33,32 @@
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.pdf",
-      "sha256": "a37148fdb0c4ac5c1aa2b5db9116d253b140a433ef0251de791d1549bf39a014"
+      "sha256": "d70da1a8e75f45d3c3f868c8232c501208a67a633cce57faadaf77a55aeb6298"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.png",
-      "sha256": "80a6589237989809c1fc6cc6577d4afd15acef4d52dd740cc4442fd02ca67721"
+      "sha256": "eec06bfce45283809ff4242a0d46666ed4c62be140b93df62c8261ee3e6f9e0c"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/figures-manifest.json",
-      "sha256": "97ce58518bb0bb66de29dbee30a106e88a80efd67d0b5e3f517edaf812c853f3"
+      "sha256": "d6cf3418aa9f6c248e82e79cc2275ce563c55a3d6b6a12bf2a27c5952aea444e"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
-      "sha256": "5c85f27bef01226ac5178f9ee0e51128010c60ce72fdcfc624679d866782b5ed"
+      "sha256": "380ad088782918c04726650177066f4653f6a9cc8bace019fd8d89d2b251073d"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
-      "sha256": "31c667d919499130ecd7c673fa7c236516984731f49b320aa473fcda19e50aaa"
+      "sha256": "a9f4bdb15371f6e207c21a34922b07d5dc5b0a082972dfc8bb70de5917787eaa"
     },
     {
       "path": "scripts/create_concise_bench_report_figures.py",
-      "sha256": "e59a4e8eef4210ad3a9c9c29e56821a20e91fb7be8808675c78811e89d0a4f18"
+      "sha256": "11b9d54ed932068ddd40459ccb3684b7d2f88a248265c80c9fba1be060e7c927"
     }
   ],
   "review": {
     "independent_factual_review_passed": true,
-    "desktop_latex_compile": "success on final run-separated source and figures",
+    "desktop_latex_compile": "success on final source and delay-only figures",
     "export_compiler": "Tectonic 0.17.0",
     "page_visually_inspected": true,
     "layout_defects_found": false,
@@ -67,15 +67,15 @@
       2
     ],
     "render_dpi": 110,
-    "style": "Consistent sans-serif typography and separate run medians, with run-specific timing columns and shared y scales.",
+    "style": "Per-run median and sample-SD summary cards, two delay-only panels, and Description labels.",
     "latex_layout_warnings": false
   },
   "scientific_scope": "Application roundtrip repeatability, local SONIC reconstruction and relative whole-chain recorded levels. Calibrated timing accuracy, isolated speaker response, SPL and distortion remain unqualified.",
   "detailed_report_retained": true,
-  "extracted_text_word_count": 380,
+  "extracted_text_word_count": 362,
   "text_count_note": "Includes body text and both vector figures, including their axes and legends.",
   "graphs": {
-    "timing": "Two columns for Run 1 and Run 2, each with delay, correlation strength and local probes 1-20; shared y scales preserve the absolute offset.",
+    "timing": "Two separate delay-only panels for Run 1 and Run 2, local probes 1-20 and a shared absolute y scale. Peak-correlation panels and threshold removed.",
     "frequency": "Screened relative sweep response and 14 SONIC pip-component level groups.",
     "reused_existing_measured_figures_without_modification": false,
     "new_measurements_or_synthetic_results_added": false,
@@ -96,7 +96,10 @@
     "plotted_numeric_arrays_unchanged": true,
     "figure_source_and_output_hashes_match": true,
     "run_statistics_recomputed_from_20_accepted_probes_each": true,
-    "frequency_figures_byte_identical_to_prior_revision": true
+    "frequency_figures_byte_identical_to_prior_revision": true,
+    "sample_standard_deviations_independently_checked": true,
+    "requested_phrases_absent_from_pdf": true,
+    "original_population_sd_records_unchanged": true
   },
   "timing_summary": {
     "reporting_unit": "each separately opened stream",
@@ -109,7 +112,12 @@
         "min_ms": 38.239583333333336,
         "max_ms": 38.25,
         "peak_to_peak_samples": 1,
-        "peak_to_peak_ms": 0.010416666666666666
+        "peak_to_peak_ms": 0.010416666666666666,
+        "sample_sd_ms": 0.002329237476562281,
+        "sample_sd_ddof": 1,
+        "sample_sd_n": 20,
+        "reported_sample_sd_ms": "0.00233",
+        "historical_population_sd_ms_preserved_in_source": 0.002270259866426918
       },
       {
         "run": 2,
@@ -119,11 +127,17 @@
         "min_ms": 38.364583333333336,
         "max_ms": 38.375,
         "peak_to_peak_samples": 1,
-        "peak_to_peak_ms": 0.010416666666666666
+        "peak_to_peak_ms": 0.010416666666666666,
+        "sample_sd_ms": 0.0032061823502661066,
+        "sample_sd_ddof": 1,
+        "sample_sd_n": 20,
+        "reported_sample_sd_ms": "0.00321",
+        "historical_population_sd_ms_preserved_in_source": 0.00312499999999929
       }
     ],
     "between_run_median_difference_ms": 0.125,
     "pooled_median_used_as_headline": false,
-    "interpretation": "Both runs stable over their 20 recorded probes; distinct baselines show between-run variation. No causal attribution or calibrated accuracy claim."
+    "interpretation": "Run medians differ by 0.125 ms; sample SD describes within-run variability only. Sub-sample-valued descriptive SD does not establish calibrated sub-sample timing accuracy.",
+    "sd_definition": "Sample standard deviation of each run\u2019s 20 accepted sample-grid lag estimates, using n-1 (ddof=1), computed in samples before conversion to milliseconds."
   }
 }

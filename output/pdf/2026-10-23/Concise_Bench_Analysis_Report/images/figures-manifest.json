@@ -6,7 +6,7 @@
   "raw_recordings_read": false,
   "script": {
     "path": "scripts/create_concise_bench_report_figures.py",
-    "sha256": "e59a4e8eef4210ad3a9c9c29e56821a20e91fb7be8808675c78811e89d0a4f18"
+    "sha256": "11b9d54ed932068ddd40459ccb3684b7d2f88a248265c80c9fba1be060e7c927"
   },
   "sources": [
     {
@@ -34,7 +34,7 @@
       "figure": "TimingSummary",
       "size_inches": [
         7.1,
-        4.2
+        3.2
       ],
       "runs": [
         {
@@ -127,29 +127,11 @@
             38.25,
             38.25
           ],
-          "absolute_peak_correlation": [
-            0.43580811519917356,
-            0.4367741334441803,
-            0.43799213862565606,
-            0.43783886067844985,
-            0.4372385742959896,
-            0.4363775125919856,
-            0.43621345484453694,
-            0.43519086347246866,
-            0.4318620756987539,
-            0.43414844470505864,
-            0.434955555398896,
-            0.43547370367906374,
-            0.43489817397672054,
-            0.431010038892441,
-            0.43551677894800583,
-            0.4361703788167903,
-            0.4370125433267958,
-            0.4345414462696835,
-            0.4371731019319639,
-            0.43147910528558936
-          ],
           "median_delay_ms": 38.25,
+          "n": 20,
+          "sample_std_ddof": 1,
+          "sample_std_delay_samples": 0.22360679774997894,
+          "sample_std_delay_ms": 0.0023292374765622806,
           "min_delay_ms": 38.239583333333336,
           "max_delay_ms": 38.25,
           "peak_to_peak_delay_samples": 1,
@@ -245,36 +227,18 @@
             38.375,
             38.375
           ],
-          "absolute_peak_correlation": [
-            0.43318800307079974,
-            0.4349355443563476,
-            0.4355923966159141,
-            0.4363280260225298,
-            0.4366074998838066,
-            0.4334613552167859,
-            0.43672227799501384,
-            0.43390329274257383,
-            0.4365999734996087,
-            0.4346603740733395,
-            0.4363311193005405,
-            0.43803544716236736,
-            0.4364091381481124,
-            0.4366359045417007,
-            0.436628587128422,
-            0.43685910404817185,
-            0.4346211344022583,
-            0.43819277954405356,
-            0.4365932365763884,
-            0.436892871413195
-          ],
           "median_delay_ms": 38.375,
+          "n": 20,
+          "sample_std_ddof": 1,
+          "sample_std_delay_samples": 0.30779350562554625,
+          "sample_std_delay_ms": 0.0032061823502661066,
           "min_delay_ms": 38.364583333333336,
           "max_delay_ms": 38.375,
           "peak_to_peak_delay_samples": 1,
           "peak_to_peak_delay_ms": 0.010416666666666666
         }
       ],
-      "correlation_strength_threshold": 0.35,
+      "sample_sd_definition": "Sample standard deviation (n-1 denominator), computed in sample units then converted to milliseconds.",
       "normalization": "Delay is the unmodified accepted sample-grid lag in milliseconds; no timing correction.",
       "precision_role": "Axis precision and one-sample repeatability do not establish timing accuracy."
     },
@@ -1159,11 +1123,11 @@
   "outputs": [
     {
       "filename": "TimingSummary.pdf",
-      "sha256": "a37148fdb0c4ac5c1aa2b5db9116d253b140a433ef0251de791d1549bf39a014"
+      "sha256": "d70da1a8e75f45d3c3f868c8232c501208a67a633cce57faadaf77a55aeb6298"
     },
     {
       "filename": "TimingSummary.png",
-      "sha256": "80a6589237989809c1fc6cc6577d4afd15acef4d52dd740cc4442fd02ca67721"
+      "sha256": "eec06bfce45283809ff4242a0d46666ed4c62be140b93df62c8261ee3e6f9e0c"
     },
     {
       "filename": "FrequencyResponse.pdf",

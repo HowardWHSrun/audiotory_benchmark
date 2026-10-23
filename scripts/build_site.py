@@ -14,7 +14,7 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
     ignored = shutil.ignore_patterns(".DS_Store", "__pycache__", "*.pyc", "*.aux", "*.log", "*.out", "*.synctex.gz")
-    for directory in ("web", "sources", "docs", "output", "scripts", "tests", "playback"):
+    for directory in ("web", "sources", "docs", "output", "scripts", "tests", "playback", "latency"):
         shutil.copytree(ROOT / directory, OUT / directory, ignore=ignored)
     for path in ROOT.glob("*.md"):
         shutil.copy2(path, OUT / path.name)

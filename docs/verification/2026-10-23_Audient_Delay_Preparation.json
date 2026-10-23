@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "status": "software prepared; no accepted physical delay result",
+  "stimuli": [
+    {
+      "sample_rate_hz": 192000,
+      "frames": 16128000,
+      "channels": 1,
+      "pcm_bits": 24,
+      "file": "sonic_e14_reconstruction_192000Hz_600per-tone_seed20261023_m36dBFS.wav",
+      "sha256": "5b6b0d8d407f0aa62ca3b38279cb06a1582e9d1217debb1d71e06e3930a16278"
+    },
+    {
+      "sample_rate_hz": 96000,
+      "frames": 8064000,
+      "channels": 1,
+      "pcm_bits": 24,
+      "file": "sonic_e14_reconstruction_96000Hz_600per-tone_seed20261023_m36dBFS.wav",
+      "sha256": "b4606b40b9abd46a8ef9a533679a6b0dfdb895b6f88d99599e8d0135f29ec0b9"
+    },
+    {
+      "sample_rate_hz": 192000,
+      "frames": 2227200,
+      "channels": 1,
+      "pcm_bits": 24,
+      "file": "timing_probe_192000Hz_20trials_m36dBFS.wav",
+      "sha256": "210424b9e322abbab700bd2ffecb236e5880a3de1f40f4f161e38cb7e2aa80e1"
+    },
+    {
+      "sample_rate_hz": 96000,
+      "frames": 1113600,
+      "channels": 1,
+      "pcm_bits": 24,
+      "file": "timing_probe_96000Hz_20trials_m36dBFS.wav",
+      "sha256": "a7438870f4dbe90e93aac059907b937018d84bcb2255b9f16f560cc0742dfbc1"
+    }
+  ],
+  "offline_checks": {
+    "python_tests": 27,
+    "node_tests": 12,
+    "native_96k_duplex_format": "passed",
+    "original_SONIC_PDF": "unchanged per validator"
+  },
+  "geometry_user_report": {
+    "mic_distance_cm": 10
+  },
+  "acquisition_attempts": [
+    {
+      "local_run": "20261023-135603",
+      "stimulus": "three timing probes",
+      "peak_dbfs": -48,
+      "electrical_template_correlation_approx": 0.995,
+      "reference_array_offsets_samples": [
+        2833,
+        2833,
+        2833
+      ],
+      "accepted_mic_trials": 0,
+      "reason": "weak microphone correlation; original timestamp screen also flagged nominal-time deviations; later assessment identifies common host-clock mapping drift, not demonstrated sample loss"
+    },
+    {
+      "local_run": "20261023-150746",
+      "stimulus": "twenty timing probes",
+      "peak_dbfs": -36,
+      "accepted_mic_trials": 0,
+      "reason": "electrical reference not detected after USB reconnect; routing/mute/gain cause unconfirmed",
+      "native_transport_screen": "passed; not timestamp calibration"
+    }
+  ],
+  "reported_setup_delay_ms": null,
+  "raw_room_audio_published": false,
+  "limitations": "SONIC E14 is a declared reconstruction; missing original ramp shape/sequence/code prevent exact historical reproduction. Differential mic/reference waveform alignment excludes common host/DAC delay; sample interval is not calibrated accuracy."
+}

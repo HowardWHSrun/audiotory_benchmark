@@ -1,8 +1,8 @@
 # PDFs and editable files
 
-## One-page bench summary
+## Concise bench summary with graphs
 
-[Concise bench results, October 23, 2026](pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf) · [LaTeX source](pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex): timing, frequency findings, limits and next tests in 227 words. [Verification](../docs/verification/2026-10-23_Concise_Bench_Analysis_Report.json).
+[Concise bench results, October 23, 2026](pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf) · [LaTeX source](pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex): two pages with timing and frequency graphs, brief findings, limits and next tests. [Verification](../docs/verification/2026-10-23_Concise_Bench_Analysis_Report.json).
 
 ## Full saved-data analysis
 

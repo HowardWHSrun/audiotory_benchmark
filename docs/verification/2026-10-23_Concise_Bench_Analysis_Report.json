@@ -1,10 +1,9 @@
 {
   "date_local": "2026-10-23",
-  "scope": "One-page condensation of the previously verified full report; existing recordings only.",
+  "scope": "Two-page concise summary with existing measured timing and frequency graphs; saved recordings only.",
   "new_playback_performed": false,
   "new_acquisition_performed": false,
-  "pages": 1,
-  "extracted_word_count": 227,
+  "pages": 2,
   "source_evidence": [
     {
       "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex",
@@ -17,16 +16,32 @@
     {
       "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
       "sha256": "384059a3925dbceb676dcc17e5f2523189781bdf5ee52c12a5519b18bc86378f"
+    },
+    {
+      "path": "docs/verification/2026-10-23_Sweep_Relative_Response.json",
+      "sha256": "59522b9ea4733f3c724463ba6b788901ab4cd36e71fcb569f7ffd1eaf6dbc906"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/figures-manifest.json",
+      "sha256": "43f0ebffcfb4e669ebfb668d3c4e64a1180dcede13392533dfafc4add4d48540"
     }
   ],
   "artifacts": [
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
-      "sha256": "29a7bfa1bbefc513160f7f7c9b14c239eb3f3819f74932aca348eb0caa2d4d90"
+      "sha256": "1ab5eb1444842430db3cdf345acfa04862f50db445d50d76224e8036e59bf577"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
-      "sha256": "164cd586a469723d1490aac18f62c47fc7f9a24ca3cc2bcbb92bbf5883b70ea8"
+      "sha256": "1801d077871013d7d9c1815f538e547e349fc61873ad5159645c6cfe6168265d"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.pdf",
+      "sha256": "3c157fef44d1ed60cfa7ad5fd9e88d38bcf7572d42a321ccf7c734eedfad1d2b"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/FrequencyResponse.png",
+      "sha256": "1e9ac5cf99c12fb020490fc7d2a9e086938104cb35960c39046eae8eaa6be3c1"
     }
   ],
   "review": {
@@ -34,8 +49,21 @@
     "desktop_latex_compile": "success",
     "export_compiler": "Tectonic 0.17.0",
     "page_visually_inspected": true,
-    "layout_defects_found": false
+    "layout_defects_found": false,
+    "visually_inspected_pages": [
+      1,
+      2
+    ],
+    "render_dpi": 110
   },
   "scientific_scope": "Application roundtrip repeatability, local SONIC reconstruction and relative whole-chain recorded levels. Calibrated timing accuracy, isolated speaker response, SPL and distortion remain unqualified.",
-  "detailed_report_retained": true
+  "detailed_report_retained": true,
+  "extracted_text_word_count": 332,
+  "text_count_note": "Text extraction includes the vector timing graph but excludes text within the raster frequency graph.",
+  "graphs": {
+    "timing": "Forty accepted sweep estimates across two stream starts, plus correlation strength.",
+    "frequency": "Screened relative sweep response and 14 SONIC pip-component level groups.",
+    "reused_existing_measured_figures_without_modification": true,
+    "new_measurements_or_synthetic_results_added": false
+  }
 }

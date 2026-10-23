@@ -1,36 +1,46 @@
-\documentclass[12pt,letterpaper]{article}
-\usepackage[margin=0.85in]{geometry}
-\usepackage{booktabs,tabularx,xcolor}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.75in,headheight=15pt]{geometry}
+\usepackage{graphicx,xcolor,fancyhdr,caption}
 \usepackage[hidelinks]{hyperref}
 \definecolor{navy}{HTML}{17384D}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{10pt}
-\renewcommand{\arraystretch}{1.2}
-\pagestyle{empty}
+\setlength{\parskip}{7pt}
+\setlength{\emergencystretch}{2em}
+\graphicspath{{images/}}
+\captionsetup{font=small,labelfont=bf}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small SONIC bench summary}
+\fancyhead[R]{\small 23 October 2026}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
 \begin{document}
-{\LARGE\bfseries\color{navy} SONIC bench test: brief results}\par
-{\small 23 October 2026 \hfill Analysis of existing recordings}
+{\LARGE\bfseries\color{navy} SONIC bench test: brief results}\par\vspace{3pt}
 
-\textbf{Setup.} Computer $\to$ Audient iD14 $\to$ Edifier speaker $\to$ Earthworks M50 $\to$ Audient microphone input 1. Microphone separation was approximately 10\,cm (operator reported). Four saved 96\,kHz recordings were analyzed; no new test was performed.
+\textbf{Setup.} Computer $\to$ Audient iD14 $\to$ Edifier speaker $\to$ Earthworks M50 $\to$ microphone input 1. Four saved recordings at 96\,kHz; approximately 10\,cm separation (operator reported). This is an offline analysis.
 
-\textbf{Timing.} All 40 timing sweeps were accepted across two stream starts.
+\textbf{Timing.} All 40 sweeps were accepted. Pooled median application roundtrip: \textbf{38.307\,ms}; observed range: \textbf{38.240--38.375\,ms}. The two stream medians differed by 0.125\,ms.
+
 \begin{center}
-\begin{tabularx}{0.94\linewidth}{@{}Xr@{}}
-\toprule
-Pooled median application roundtrip & \textbf{38.307\,ms}\\
-Observed range & 38.240--38.375\,ms\\
-Individual run medians & 38.250 / 38.375\,ms\\
-\bottomrule
-\end{tabularx}
+\includegraphics[width=\linewidth]{TimingSummary.pdf}
+\captionof{figure}{Top: waveform delay estimates for two stream starts. Bottom: matching strength; every probe exceeded the 0.35 threshold. Timing probes were separate 100\,Hz--20\,kHz sweeps, not SONIC tones.}
 \end{center}
-This demonstrates short-run repeatability for the tested program and setup. The delay includes computer/interface buffering and the acoustic chain; it does not establish calibrated sub-millisecond accuracy or isolated speaker delay.
 
-\textbf{SONIC sounds.} Two 84-second blocks used a local reconstruction of the paper's 14 Sheep E frequencies, from 2 to 27\,kHz, with 10\,ms pips and 2\,ms ramps: 16,800 pips total. The original SONIC audio files were not used.
+\textbf{Meaning.} Delay was repeatable over these short runs. It includes computer/interface buffering and the acoustic chain. The observed spread does not establish calibrated sub-millisecond accuracy, isolated speaker delay or neural latency.
 
-\textbf{Frequency results.} Both microphone recordings contain all 14 commanded frequency components, but their levels are uneven. Relative to 2\,kHz, the 17--19.5\,kHz groups were approximately 15--22\,dB lower; 20.9--25.8\,kHz were 30--40\,dB lower. These are full-chain relative recordings. Calibrated SPL, speaker-only response and distortion remain unmeasured.
+\newpage
+{\LARGE\bfseries\color{navy} Frequency response}\par\vspace{3pt}
 
-\textbf{Next.} Fix and document the geometry, apply microphone/SPL calibration, test separated tones, and validate timing against an independent electrical reference.
+\textbf{SONIC sounds.} Two 84-second blocks used a local reconstruction of the paper's 14 Sheep E frequencies (2--27\,kHz): 10\,ms pips, 2\,ms ramps, 16,800 pips total. These are not the original SONIC audio files.
 
-\vfill
-{\footnotesize Source: \href{https://howardwhsrun.github.io/audiotory_benchmark/output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf}{full saved-data analysis report and measurement records}.}
+\begin{center}
+\includegraphics[width=\linewidth]{FrequencyResponse.png}
+\captionof{figure}{Top: screened sweep-response bands. Bottom: SONIC pip-component medians relative to 2\,kHz; whiskers show within-group 5th--95th percentiles, not confidence intervals.}
+\end{center}
+
+\textbf{Finding.} All 14 commanded components appear in both microphone recordings. Levels are uneven: 17--19.5\,kHz was about 15--22\,dB below 2\,kHz; 20.9--25.8\,kHz was 30--40\,dB below. These uncorrected full-chain recordings do not establish calibrated SPL, speaker-only response or distortion.
+
+\textbf{Next.} Fix the geometry, calibrate microphone/SPL, test separated tones, and validate timing with an independent electrical reference.
+
+{\footnotesize Methods and source records: \href{https://howardwhsrun.github.io/audiotory_benchmark/output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf}{full saved-data analysis report}.}
 \end{document}

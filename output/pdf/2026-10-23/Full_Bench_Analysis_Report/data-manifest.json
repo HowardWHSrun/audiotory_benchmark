@@ -1,0 +1,181 @@
+{
+  "date_local": "2026-10-23",
+  "timezone": "America/Chicago",
+  "generated_at_utc": "2026-10-23T23:04:48.315978+00:00",
+  "purpose": "Full analysis report from existing saved human-bench recordings only",
+  "new_playback_performed": false,
+  "new_acquisition_performed": false,
+  "raw_room_audio_published": false,
+  "analysis_repository_revision": "3c90303b48ca12f95be898b826fae48ac2cd2fad",
+  "input_records": [
+    {
+      "id": "delay",
+      "path": "docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json",
+      "sha256": "43c9b07c200e0579c0c8f163f1ec74e73d168c5d8e35aed2121263bf14166ecb"
+    },
+    {
+      "id": "sonic",
+      "path": "docs/verification/2026-10-23_SONIC_E14_Playback.json",
+      "sha256": "60bbfe957ec9a154ea730bc47a18acc1076bbab1180d9e3e76516e87b03ce6d8"
+    },
+    {
+      "id": "pip",
+      "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
+      "sha256": "384059a3925dbceb676dcc17e5f2523189781bdf5ee52c12a5519b18bc86378f"
+    },
+    {
+      "id": "sweep",
+      "path": "docs/verification/2026-10-23_Sweep_Relative_Response.json",
+      "sha256": "59522b9ea4733f3c724463ba6b788901ab4cd36e71fcb569f7ffd1eaf6dbc906"
+    },
+    {
+      "id": "basic",
+      "path": "docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json",
+      "sha256": "c3fd9154f730f450486e95fec3642a6d46c64bc8711ddbb8f36a094c2a4e28d4"
+    },
+    {
+      "id": "preparation",
+      "path": "docs/verification/2026-10-23_Audient_Delay_Preparation.json",
+      "sha256": "6fe3a09520576b61e3556c2698ad564edea49cf6d253bbb372ad022ac3023a3d"
+    }
+  ],
+  "additional_capture_quality_records": [
+    {
+      "id": "S1",
+      "path": ".work/latency/runs/20261023-155615-sonic-e14-full/pickup-check.json",
+      "sha256": "9a5abfc83d04fe827c96991be3aec186b59caf885a5ba9df3549e0d39a91f645",
+      "microphone_peak_dbfs": -27.64580022849964
+    },
+    {
+      "id": "S2",
+      "path": ".work/latency/runs/20261023-160447-sonic-e14-full/pickup-check.json",
+      "sha256": "499d5be05cf641007607a3014bab9a56e831de11140220d1da6e4cbb8ba3cb05",
+      "microphone_peak_dbfs": -30.41408195590741
+    }
+  ],
+  "paper": {
+    "path": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "sha256": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731",
+    "version": "bioRxiv v1, posted 2025-10-02; CC BY-NC-ND 4.0; unchanged"
+  },
+  "data_groups": [
+    {
+      "id": "D1",
+      "run_id": "20261023-155401",
+      "raw_hashes": {
+        "algorithm": "SHA-256",
+        "file_hashes": {
+          "output_float32.npy": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97",
+          "capture.npz": "0877fa65cfaa89c8dbfe11befefeccac7e0491d1efa1e275969d26fe6947f5cf",
+          "manifest.json": "cf5fb455b1bdbc64073d7d762c6d9340a87478deb4e2acbe3265675a0ed6c2bc",
+          "roundtrip-analysis.json": "86c2b140f8eafcb719f1aedff66290ec5911552513f77e4aa3199639e0201daf",
+          "analysis.json": "f92ce504cbbd82078b30ecace349bb5ae0a312a00fe4a5b5e78f66a375a844e4"
+        },
+        "source_float32_array_bytes_sha256": "e4f92e960ce3b05339870dbfad8ba8fe8a44042b108dbadb80d42341287a859c",
+        "source_array_hash_convention": "SHA-256 of the saved float32 array tobytes(), matching the acquisition manifest; distinct from the .npy file hash."
+      }
+    },
+    {
+      "id": "D2",
+      "run_id": "20261023-155500-roundtrip-repeat",
+      "raw_hashes": {
+        "algorithm": "SHA-256",
+        "file_hashes": {
+          "output_float32.npy": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97",
+          "capture.npz": "e14be5e94a9cab3b294c3df7e815807d8036c753fd0bb0a6e9556b6cc79f7f95",
+          "manifest.json": "cd96f5b403c214e9beb42f7948caf9ee89604e2850977c18288f29eb8f74fa49",
+          "roundtrip-analysis.json": "99653dbb1ab544966f1c673ec4d99dabde88305dc37ad2a80814e4fc80ebf5a5",
+          "manifest.as-acquired.json": "e555a7984af6cc2f40a1b96f298668e2a1acaa74d50a82d04398b7bffc401c65"
+        },
+        "source_float32_array_bytes_sha256": "e4f92e960ce3b05339870dbfad8ba8fe8a44042b108dbadb80d42341287a859c",
+        "source_array_hash_convention": "SHA-256 of the saved float32 array tobytes(), matching the acquisition manifest; distinct from the .npy file hash."
+      }
+    },
+    {
+      "id": "S1",
+      "run_id": "20261023-155615-sonic-e14-full",
+      "raw_hashes": {
+        "capture.npz": "a51581f5aa887ee7851f1a8955cf4b7b079d73db28d37b925e107a740ecc7bbf",
+        "output_float32.npy": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372",
+        "manifest.json": "828edbb030143140f058eae36396fcd1183e18174c3c7320130f06534632fab0",
+        "stimulus-plan.json": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383"
+      }
+    },
+    {
+      "id": "S2",
+      "run_id": "20261023-160447-sonic-e14-full",
+      "raw_hashes": {
+        "capture.npz": "0b54c13a0c7d13112461b32df8655ae8aedd6b317765fa555d6d2eff11f42507",
+        "output_float32.npy": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372",
+        "manifest.json": "74f19df14caee67047803340acef79d965776677e5fb61cd39c7b45cb9dd3857",
+        "stimulus-plan.json": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383"
+      }
+    }
+  ],
+  "source_code": [
+    {
+      "path": "latency/run.py",
+      "sha256": "e2bf7e5eab878b61afe4d6045f6458bec3e58c6bb343ffec77f69423fcf4c9ed"
+    },
+    {
+      "path": "latency/analysis.py",
+      "sha256": "31aadb1054dad1e2d8aa4a29c89d0ced01e8c66b044231e5c31fe6941c2bec4c"
+    },
+    {
+      "path": "latency/roundtrip.py",
+      "sha256": "578ead8f7f00c1c9c118919dfc0f8613cb78834d7943d274df8abf83ebea8e9d"
+    },
+    {
+      "path": "latency/transport.py",
+      "sha256": "52ee5caa8eab8b433818cd14f377c641d26ded5e458ab7bd2e6a711ad7a9a6d3"
+    },
+    {
+      "path": "latency/pip_response.py",
+      "sha256": "5212f0baf6dedc5014c7d81186323a01105ef688c84c34a328508e6b0f7f9d9c"
+    },
+    {
+      "path": "latency/sweep_response.py",
+      "sha256": "6e73d7cfbe9cf6dfd1bdbaca42762c023b895359a551fa36d75f038d2a4a337a"
+    },
+    {
+      "path": "latency/stimulus.py",
+      "sha256": "d3c71947618be6a4a1546d10fa56a75424ff2195575ae17cf2556f2df9e6ae75"
+    },
+    {
+      "path": "scripts/create_full_bench_report_data.py",
+      "sha256": "e67b8f5e05a9209f2ae4ef69650a3f628d552853c75c81fe7353d00852f88ba0"
+    }
+  ],
+  "generated_tables": [
+    {
+      "path": "tables/Dataset.tex",
+      "sha256": "f31b69ff624a5f833d6d10506f6a4743c7c371d5cb0d97e23f728cecd26c834d"
+    },
+    {
+      "path": "tables/DelayResults.tex",
+      "sha256": "bebc699da2085341774bd93277134805eb94f638790ce5d37b89ef95913659fc"
+    },
+    {
+      "path": "tables/PipLevels.tex",
+      "sha256": "abebb5b2c91f5945ce1e7d396b81ae42278aa1fcdd6600d6d41e96ad71d4f454"
+    },
+    {
+      "path": "tables/SweepAnchors.tex",
+      "sha256": "ca7c41a5a114b7d30f17d9cad9dc1918ab9180a2a109cd21258744b1147923ea"
+    }
+  ],
+  "metric_macros": {
+    "DelayMedian": "38.307",
+    "DelayMinimum": "38.240",
+    "DelayMaximum": "38.375",
+    "DelaySpan": "0.135",
+    "RunMedianShift": "0.125",
+    "AcceptedSweepBands": "84",
+    "TotalSweepBands": "101",
+    "SupportedLowHz": "158.74",
+    "SupportedHighHz": "13561.13"
+  },
+  "pip_data_source": "Two captures of the same PCG64 sequence; 600 pips/frequency/capture, not 1200 independent randomized sessions.",
+  "figure_source": "images/figures-manifest.json; FrequencyResponse.png copied from the previously verified relative-response figure.",
+  "figure_frequency_response_sha256": "1e9ac5cf99c12fb020490fc7d2a9e086938104cb35960c39046eae8eaa6be3c1"
+}

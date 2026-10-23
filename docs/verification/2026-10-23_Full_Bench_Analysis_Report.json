@@ -1,0 +1,296 @@
+{
+  "date_local": "2026-10-23",
+  "timezone": "America/Chicago",
+  "title": "Full saved-data bench analysis report",
+  "scope": "Offline consolidation and independent re-analysis of existing saved human-bench recordings. No new playback, acquisition or hardware operation.",
+  "new_playback_performed": false,
+  "new_acquisition_performed": false,
+  "hardware_reconnected": false,
+  "raw_room_audio_published": false,
+  "report": {
+    "pdf": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf",
+    "source": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex",
+    "pages": 10,
+    "format": "US Letter",
+    "language": "English",
+    "source_format": "LaTeX",
+    "editable_project": "output/pdf/2026-10-23/Full_Bench_Analysis_Report"
+  },
+  "dataset": {
+    "primary_captures": 4,
+    "total_capture_seconds": 195.2,
+    "timing_probes": 40,
+    "sonic_tone_pips": 16800,
+    "sample_rate_hz": 96000,
+    "source_sequences_repeated": true
+  },
+  "findings": {
+    "application_sample_grid_waveform_roundtrip_median_ms": 38.30729166666667,
+    "roundtrip_range_ms": [
+      38.239583333333336,
+      38.375
+    ],
+    "scope": "Two short native full-duplex stream starts, including buffering and the acoustic chain; repeatability does not establish calibrated absolute accuracy.",
+    "sonic_specific_delay_qualified": false,
+    "all_14_commanded_frequency_components_observed_in_recordings": true,
+    "high_frequency_levels": "Substantially weaker than the 2-kHz recorded component; whole-chain relative pickup only.",
+    "calibrated_spl_established": false,
+    "speaker_only_frequency_response_established": false,
+    "thd_established": false,
+    "acoustic_isolation_control_performed": false,
+    "submillisecond_accuracy_established": false,
+    "animal_or_neural_performance_established": false
+  },
+  "independent_raw_data_audit": {
+    "checked_hash_references": 34,
+    "all_checked_hashes_match": true,
+    "recomputed_metrics": [
+      {
+        "run_id": "20261023-155401",
+        "delay_recomputed_from_raw_matches_public": true,
+        "sweep_bands_recomputed_from_raw_match_public": true
+      },
+      {
+        "run_id": "20261023-155500-roundtrip-repeat",
+        "delay_recomputed_from_raw_matches_public": true,
+        "sweep_bands_recomputed_from_raw_match_public": true
+      },
+      {
+        "run_id": "20261023-155615-sonic-e14-full",
+        "pip_all_target_and_neighbour_excluded_medians_recomputed_from_raw_match_public": true
+      },
+      {
+        "run_id": "20261023-160447-sonic-e14-full",
+        "pip_all_target_and_neighbour_excluded_medians_recomputed_from_raw_match_public": true
+      }
+    ],
+    "private_audit_sha256": "7521cb13adf171e239649fe09e315c7d457215bf5fe09aafc1704027dcc846d8"
+  },
+  "provenance_manifest_checks": {
+    "passed": true,
+    "explicit_checked_records_and_tables": [
+      {
+        "path": "docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json",
+        "matches": true
+      },
+      {
+        "path": "docs/verification/2026-10-23_SONIC_E14_Playback.json",
+        "matches": true
+      },
+      {
+        "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
+        "matches": true
+      },
+      {
+        "path": "docs/verification/2026-10-23_Sweep_Relative_Response.json",
+        "matches": true
+      },
+      {
+        "path": "docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json",
+        "matches": true
+      },
+      {
+        "path": "docs/verification/2026-10-23_Audient_Delay_Preparation.json",
+        "matches": true
+      },
+      {
+        "path": ".work/latency/runs/20261023-155615-sonic-e14-full/pickup-check.json",
+        "matches": true
+      },
+      {
+        "path": ".work/latency/runs/20261023-160447-sonic-e14-full/pickup-check.json",
+        "matches": true
+      },
+      {
+        "path": "latency/run.py",
+        "matches": true
+      },
+      {
+        "path": "latency/analysis.py",
+        "matches": true
+      },
+      {
+        "path": "latency/roundtrip.py",
+        "matches": true
+      },
+      {
+        "path": "latency/transport.py",
+        "matches": true
+      },
+      {
+        "path": "latency/pip_response.py",
+        "matches": true
+      },
+      {
+        "path": "latency/sweep_response.py",
+        "matches": true
+      },
+      {
+        "path": "latency/stimulus.py",
+        "matches": true
+      },
+      {
+        "path": "scripts/create_full_bench_report_data.py",
+        "matches": true
+      },
+      {
+        "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/Dataset.tex",
+        "matches": true
+      },
+      {
+        "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/DelayResults.tex",
+        "matches": true
+      },
+      {
+        "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/PipLevels.tex",
+        "matches": true
+      },
+      {
+        "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/SweepAnchors.tex",
+        "matches": true
+      }
+    ],
+    "figure_script_hash_matches": true,
+    "frequency_figure_hash_matches": true,
+    "pinned_paper_hash_matches": true
+  },
+  "scientific_review": {
+    "reviewed_against_saved_results_and_pinned_paper": true,
+    "material_numeric_discrepancies_found": false,
+    "inverse_window_scale_distinguished_from_hann_main_lobe_width": true
+  },
+  "compilation": {
+    "desktop_compile_latex_document": "success on final source",
+    "export_compiler": "Tectonic 0.17.0",
+    "terminal_compile_exit_code": 0,
+    "overfull_underfull_or_latex_warnings": false
+  },
+  "visual_review": {
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "render_dpi": 95,
+    "all_pages_readable_without_clipped_or_overlapping_content": true
+  },
+  "tests": {
+    "python_acoustic_analysis": {
+      "status": "passed",
+      "tests": 42
+    },
+    "node_model_waveform_and_parts": {
+      "status": "passed",
+      "tests": 12
+    },
+    "new_python_scripts_syntax": "passed",
+    "source_and_built_site_validation": {
+      "status": "passed",
+      "source_links": 543,
+      "built_links": 557,
+      "evidence_paths": 101,
+      "pinned_paper_unchanged": true
+    },
+    "git_diff_whitespace": "passed"
+  },
+  "artifacts": [
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/data-manifest.json",
+      "bytes": 7603,
+      "sha256": "984ebb56afeeaffacd5c7953e709ee43ad3f9dc857a2ee9e1a47d0965c31aaa3"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/FrequencyResponse.png",
+      "bytes": 226495,
+      "sha256": "1e9ac5cf99c12fb020490fc7d2a9e086938104cb35960c39046eae8eaa6be3c1"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/ProbeWaveformCorrelation.pdf",
+      "bytes": 133602,
+      "sha256": "74a95610de54cc4ee59bc240b94076be5da282f599fa48defe5ec2832ffe9a43"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/ProbeWaveformCorrelation.png",
+      "bytes": 321460,
+      "sha256": "f4344e8d71a81be690b5cd68ed5efa4375e91981ed1ea9bdce0e39bdad51e5f0"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/SONICExample.pdf",
+      "bytes": 62252,
+      "sha256": "30bdc7a837b33883724fea979b51859ce411649be62b7600963af211ef39143c"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/SONICExample.png",
+      "bytes": 310236,
+      "sha256": "4e4da2f3ba5b85779606b2e8df880fe9d5bf5b2a8051a2b2b97644cc42b98a36"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/TimingSummary.pdf",
+      "bytes": 25064,
+      "sha256": "3c157fef44d1ed60cfa7ad5fd9e88d38bcf7572d42a321ccf7c734eedfad1d2b"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/TimingSummary.png",
+      "bytes": 158265,
+      "sha256": "a5b30c17fea5cc5742580ce00b9e99b34e0c4402980a8c8bfd4e7a06f65a6265"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/figures-manifest.json",
+      "bytes": 10952,
+      "sha256": "43f0ebffcfb4e669ebfb668d3c4e64a1180dcede13392533dfafc4add4d48540"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf",
+      "bytes": 550272,
+      "sha256": "a1925b3aecd5272f86a0694ea7763f55f5d90ee3d4da280347ab1a0fd6874330"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex",
+      "bytes": 25994,
+      "sha256": "d60081fb6c49406d22f52edd190b3426d40775f4b32382cc62cc584f53c06480"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/metrics.tex",
+      "bytes": 368,
+      "sha256": "39a74325501d59f179023475b4fafb69c1b73fa80b4fbc89889708e642db89c6"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/Dataset.tex",
+      "bytes": 356,
+      "sha256": "f31b69ff624a5f833d6d10506f6a4743c7c371d5cb0d97e23f728cecd26c834d"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/DelayResults.tex",
+      "bytes": 242,
+      "sha256": "bebc699da2085341774bd93277134805eb94f638790ce5d37b89ef95913659fc"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/PipLevels.tex",
+      "bytes": 906,
+      "sha256": "abebb5b2c91f5945ce1e7d396b81ae42278aa1fcdd6600d6d41e96ad71d4f454"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/tables/SweepAnchors.tex",
+      "bytes": 612,
+      "sha256": "ca7c41a5a114b7d30f17d9cad9dc1918ab9180a2a109cd21258744b1147923ea"
+    },
+    {
+      "path": "scripts/create_full_bench_report_data.py",
+      "bytes": 8501,
+      "sha256": "e67b8f5e05a9209f2ae4ef69650a3f628d552853c75c81fe7353d00852f88ba0"
+    },
+    {
+      "path": "scripts/create_full_bench_report_figures.py",
+      "bytes": 15770,
+      "sha256": "e627808153a3cc68d59a13a7decee66270bfd7d4431ecc2c0811e1d631958f7a"
+    }
+  ],
+  "raw_capture_policy": "Raw room audio remains under ignored .work/latency/runs; manifests retain hashes and sanitized aggregates only."
+}

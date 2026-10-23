@@ -1,5 +1,9 @@
 # PDFs and editable files
 
+## Full saved-data analysis
+
+[Full bench analysis report, October 23, 2026](pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf) · [Editable LaTeX](pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex): 10 pages covering the four saved captures, roundtrip timing, SONIC pip-frequency pickup, screened sweep response, controls, limitations and next tests. Tables, figure sources and provenance manifests are retained beside the source. [Verification record](../docs/verification/2026-10-23_Full_Bench_Analysis_Report.json).
+
 ## Saved frequency measurements
 
 [Frequency-response comparison, October 23, 2026](figures/2026-10-23/Saved_Frequency_Response.png): measured relative levels from two SONIC blocks and 40 saved sweeps. [Methods, source records and limits](../latency/README.md#frequency-review-from-existing-recordings).

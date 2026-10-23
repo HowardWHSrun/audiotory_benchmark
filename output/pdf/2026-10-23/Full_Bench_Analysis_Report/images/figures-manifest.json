@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-23T23:02:44.159109+00:00",
+  "purpose": "Scientific figures from saved bench data; no hardware access or audio acquisition",
+  "script": {
+    "path": "scripts/create_full_bench_report_figures.py",
+    "sha256": "e627808153a3cc68d59a13a7decee66270bfd7d4431ecc2c0811e1d631958f7a"
+  },
+  "verification_record": {
+    "path": "docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json",
+    "sha256": "43c9b07c200e0579c0c8f163f1ec74e73d168c5d8e35aed2121263bf14166ecb"
+  },
+  "software": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.11.2"
+  },
+  "figures": [
+    {
+      "name": "TimingSummary",
+      "runs": [
+        {
+          "run_id": "20261023-155401",
+          "analysis": {
+            "path": ".work/latency/runs/20261023-155401/roundtrip-analysis.json",
+            "sha256": "86c2b140f8eafcb719f1aedff66290ec5911552513f77e4aa3199639e0201daf"
+          },
+          "capture": {
+            "path": ".work/latency/runs/20261023-155401/capture.npz",
+            "sha256": "0877fa65cfaa89c8dbfe11befefeccac7e0491d1efa1e275969d26fe6947f5cf"
+          },
+          "source": {
+            "path": ".work/latency/runs/20261023-155401/output_float32.npy",
+            "sha256": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97"
+          },
+          "delay_samples": [
+            3672,
+            3671,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672,
+            3672
+          ],
+          "display_trial_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "run_id": "20261023-155500-roundtrip-repeat",
+          "analysis": {
+            "path": ".work/latency/runs/20261023-155500-roundtrip-repeat/roundtrip-analysis.json",
+            "sha256": "99653dbb1ab544966f1c673ec4d99dabde88305dc37ad2a80814e4fc80ebf5a5"
+          },
+          "capture": {
+            "path": ".work/latency/runs/20261023-155500-roundtrip-repeat/capture.npz",
+            "sha256": "e14be5e94a9cab3b294c3df7e815807d8036c753fd0bb0a6e9556b6cc79f7f95"
+          },
+          "source": {
+            "path": ".work/latency/runs/20261023-155500-roundtrip-repeat/output_float32.npy",
+            "sha256": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97"
+          },
+          "delay_samples": [
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3683,
+            3683,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684,
+            3684
+          ],
+          "display_trial_numbers": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ]
+        }
+      ],
+      "method": "Unmodified accepted integer-sample lags; milliseconds = samples / 96000 \u00d7 1000.",
+      "not_established": "Absolute accuracy, calibrated jitter, or a UI-click/physical-only delay.",
+      "outputs": [
+        {
+          "filename": "TimingSummary.png",
+          "sha256": "a5b30c17fea5cc5742580ce00b9e99b34e0c4402980a8c8bfd4e7a06f65a6265"
+        },
+        {
+          "filename": "TimingSummary.pdf",
+          "sha256": "3c157fef44d1ed60cfa7ad5fd9e88d38bcf7572d42a321ccf7c734eedfad1d2b"
+        }
+      ]
+    },
+    {
+      "name": "ProbeWaveformCorrelation",
+      "run_id": "20261023-155401",
+      "trial_index": 0,
+      "source": {
+        "path": ".work/latency/runs/20261023-155401/output_float32.npy",
+        "sha256": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97"
+      },
+      "capture": {
+        "path": ".work/latency/runs/20261023-155401/capture.npz",
+        "sha256": "0877fa65cfaa89c8dbfe11befefeccac7e0491d1efa1e275969d26fe6947f5cf"
+      },
+      "analysis": {
+        "path": ".work/latency/runs/20261023-155401/roundtrip-analysis.json",
+        "sha256": "86c2b140f8eafcb719f1aedff66290ec5911552513f77e4aa3199639e0201daf"
+      },
+      "display_window_samples_inclusive_exclusive": [
+        91200,
+        139200
+      ],
+      "source_reference_window_samples_inclusive_exclusive": [
+        96000,
+        105600
+      ],
+      "microphone_correlation_window_samples_inclusive_exclusive": [
+        96000,
+        115200
+      ],
+      "independent_display_peak_normalizers_fs": {
+        "source": 0.06309573352336884,
+        "microphone": 0.04920949786901474
+      },
+      "peak_lag_samples": 3672,
+      "peak_correlation_signed": -0.43580811519917356,
+      "primary_lobe_lag_samples_inclusive_exclusive": [
+        3609,
+        3751
+      ],
+      "primary_lobe_bounded": true,
+      "method": "Pearson normalized correlation; largest absolute peak. No driver latency or timestamp correction.",
+      "not_established": "Independent acoustic onset, amplitude calibration, or a lobe-width uncertainty interval.",
+      "outputs": [
+        {
+          "filename": "ProbeWaveformCorrelation.png",
+          "sha256": "f4344e8d71a81be690b5cd68ed5efa4375e91981ed1ea9bdce0e39bdad51e5f0"
+        },
+        {
+          "filename": "ProbeWaveformCorrelation.pdf",
+          "sha256": "74a95610de54cc4ee59bc240b94076be5da282f599fa48defe5ec2832ffe9a43"
+        }
+      ]
+    },
+    {
+      "name": "SONICExample",
+      "run_id": "20261023-155615-sonic-e14-full",
+      "source": {
+        "path": ".work/latency/runs/20261023-155615-sonic-e14-full/output_float32.npy",
+        "sha256": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372"
+      },
+      "capture": {
+        "path": ".work/latency/runs/20261023-155615-sonic-e14-full/capture.npz",
+        "sha256": "a51581f5aa887ee7851f1a8955cf4b7b079d73db28d37b925e107a740ecc7bbf"
+      },
+      "plan": {
+        "path": ".work/latency/runs/20261023-155615-sonic-e14-full/stimulus-plan.json",
+        "sha256": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383"
+      },
+      "manifest": {
+        "path": ".work/latency/runs/20261023-155615-sonic-e14-full/manifest.json",
+        "sha256": "828edbb030143140f058eae36396fcd1183e18174c3c7320130f06534632fab0"
+      },
+      "source_window_samples_inclusive_exclusive": [
+        192000,
+        211200
+      ],
+      "microphone_window_samples_inclusive_exclusive": [
+        195648,
+        214848
+      ],
+      "illustrative_microphone_display_shift_samples": 3648,
+      "alignment_is_qualified_sonic_delay": false,
+      "shown_command_events": [
+        {
+          "source_start_sample": 192000,
+          "source_stop_sample": 192960,
+          "frequency_hz": 9000
+        },
+        {
+          "source_start_sample": 192960,
+          "source_stop_sample": 193920,
+          "frequency_hz": 19500
+        },
+        {
+          "source_start_sample": 193920,
+          "source_stop_sample": 194880,
+          "frequency_hz": 10500
+        },
+        {
+          "source_start_sample": 194880,
+          "source_stop_sample": 195840,
+          "frequency_hz": 19500
+        },
+        {
+          "source_start_sample": 195840,
+          "source_stop_sample": 196800,
+          "frequency_hz": 6000
+        },
+        {
+          "source_start_sample": 196800,
+          "source_stop_sample": 197760,
+          "frequency_hz": 20900
+        },
+        {
+          "source_start_sample": 197760,
+          "source_stop_sample": 198720,
+          "frequency_hz": 18200
+        },
+        {
+          "source_start_sample": 198720,
+          "source_stop_sample": 199680,
+          "frequency_hz": 19500
+        },
+        {
+          "source_start_sample": 199680,
+          "source_stop_sample": 200640,
+          "frequency_hz": 17000
+        },
+        {
+          "source_start_sample": 200640,
+          "source_stop_sample": 201600,
+          "frequency_hz": 10500
+        },
+        {
+          "source_start_sample": 201600,
+          "source_stop_sample": 202560,
+          "frequency_hz": 22400
+        },
+        {
+          "source_start_sample": 202560,
+          "source_stop_sample": 203520,
+          "frequency_hz": 2000
+        },
+        {
+          "source_start_sample": 203520,
+          "source_stop_sample": 204480,
+          "frequency_hz": 19500
+        },
+        {
+          "source_start_sample": 204480,
+          "source_stop_sample": 205440,
+          "frequency_hz": 18200
+        },
+        {
+          "source_start_sample": 205440,
+          "source_stop_sample": 206400,
+          "frequency_hz": 18200
+        },
+        {
+          "source_start_sample": 206400,
+          "source_stop_sample": 207360,
+          "frequency_hz": 19500
+        },
+        {
+          "source_start_sample": 207360,
+          "source_stop_sample": 208320,
+          "frequency_hz": 2000
+        },
+        {
+          "source_start_sample": 208320,
+          "source_stop_sample": 209280,
+          "frequency_hz": 25800
+        },
+        {
+          "source_start_sample": 209280,
+          "source_stop_sample": 210240,
+          "frequency_hz": 10500
+        },
+        {
+          "source_start_sample": 210240,
+          "source_stop_sample": 211200,
+          "frequency_hz": 6000
+        }
+      ],
+      "stft": {
+        "window_samples": 384,
+        "hop_samples": 96,
+        "nfft": 2048,
+        "window": "Hann",
+        "window_time_ms": 4,
+        "window_frequency_scale_hz": 250,
+        "zero_padded_bin_spacing_hz": 46.875,
+        "display_db_range": [
+          -60,
+          0
+        ],
+        "independent_panel_power_normalizers": [
+          36.49871352925482,
+          3.870224544497173
+        ]
+      },
+      "not_established": "Cross-panel amplitude calibration, ultrasonic qualification, pip-envelope fidelity, or measured SONIC latency.",
+      "outputs": [
+        {
+          "filename": "SONICExample.png",
+          "sha256": "4e4da2f3ba5b85779606b2e8df880fe9d5bf5b2a8051a2b2b97644cc42b98a36"
+        },
+        {
+          "filename": "SONICExample.pdf",
+          "sha256": "30bdc7a837b33883724fea979b51859ce411649be62b7600963af211ef39143c"
+        }
+      ]
+    }
+  ],
+  "raw_audio_files_included": false,
+  "figure_waveforms_are_actual_measured_excerpts": true
+}

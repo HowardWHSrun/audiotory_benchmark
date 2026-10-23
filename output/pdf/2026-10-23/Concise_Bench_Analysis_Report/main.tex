@@ -31,18 +31,18 @@
 \topline
 \pagetitle{Playback-to-microphone delay}{Audient iD14\enspace$\cdot$\enspace Edifier speaker\enspace$\cdot$\enspace Earthworks M50}
 
-\metrics{Pooled median}{38.307 ms}{Observed spread}{0.135 ms}{Accepted sweeps}{40 / 40}
+\metrics{Run 1 median}{38.250 ms}{Run 2 median}{38.375 ms}{Between-run shift}{0.125 ms}
 
 Recorded at 96\,kHz, with approximately 10\,cm microphone separation (operator reported).
-The range was 38.240--38.375\,ms across two stream starts, with 20 sweeps each.
+Each separately opened stream provided 20 accepted sweeps.
 
 \vspace{5pt}
 \includegraphics[width=\linewidth]{TimingSummary.pdf}
 \par\vspace{3pt}
-{\small\color{muted}Delay estimates above; waveform matching strength below. The dashed strength threshold is 0.35. Probes were separate 100\,Hz--20\,kHz timing sweeps.}
+{\small\color{muted}Ranges: Run 1, 38.2396--38.2500\,ms; Run 2, 38.3646--38.3750\,ms. Each run's peak-to-peak spread was one sample (0.0104\,ms). The strength threshold was 0.35; probes were 100\,Hz--20\,kHz sweeps.}
 
 \vspace{13pt}
-\textbf{Interpretation.} Timing was repeatable over these short runs; stream medians differed by 0.125\,ms. This application roundtrip includes buffering and the acoustic path. The spread does not establish calibrated timing accuracy, isolated speaker delay or neural latency.
+\textbf{Interpretation.} Each run was stable over its 20 recorded probes, but the baselines differed. The 0.125\,ms median shift is between-run variation; more stream starts are needed to characterize it. This application roundtrip includes buffering and the acoustic path. Within-run spread does not establish calibrated accuracy, isolated speaker delay or neural latency.
 
 \newpage
 \topline

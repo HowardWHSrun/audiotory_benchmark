@@ -6,7 +6,7 @@
   "raw_recordings_read": false,
   "script": {
     "path": "scripts/create_concise_bench_report_figures.py",
-    "sha256": "b19a15a763bb8af6e308daecf40daa4bf2babf524830daeeec05592f53de0c4b"
+    "sha256": "e59a4e8eef4210ad3a9c9c29e56821a20e91fb7be8808675c78811e89d0a4f18"
   },
   "sources": [
     {
@@ -40,6 +40,28 @@
         {
           "run_id": "20261023-155401",
           "probe_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "within_run_probe_numbers": [
             1,
             2,
             3,
@@ -127,7 +149,11 @@
             0.4371731019319639,
             0.43147910528558936
           ],
-          "median_delay_ms": 38.25
+          "median_delay_ms": 38.25,
+          "min_delay_ms": 38.239583333333336,
+          "max_delay_ms": 38.25,
+          "peak_to_peak_delay_samples": 1,
+          "peak_to_peak_delay_ms": 0.010416666666666666
         },
         {
           "run_id": "20261023-155500-roundtrip-repeat",
@@ -152,6 +178,28 @@
             38,
             39,
             40
+          ],
+          "within_run_probe_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
           ],
           "delay_samples": [
             3684,
@@ -219,7 +267,11 @@
             0.4365932365763884,
             0.436892871413195
           ],
-          "median_delay_ms": 38.375
+          "median_delay_ms": 38.375,
+          "min_delay_ms": 38.364583333333336,
+          "max_delay_ms": 38.375,
+          "peak_to_peak_delay_samples": 1,
+          "peak_to_peak_delay_ms": 0.010416666666666666
         }
       ],
       "correlation_strength_threshold": 0.35,
@@ -1107,11 +1159,11 @@
   "outputs": [
     {
       "filename": "TimingSummary.pdf",
-      "sha256": "8f8c9e40b5d30553232ffafdefc67fd924ab08ef09fe97679a77d759e407cb63"
+      "sha256": "a37148fdb0c4ac5c1aa2b5db9116d253b140a433ef0251de791d1549bf39a014"
     },
     {
       "filename": "TimingSummary.png",
-      "sha256": "8994ba339809d415bbedf2ae5b2cc7309a79b0827867d010e61ebd33ba7e9724"
+      "sha256": "80a6589237989809c1fc6cc6577d4afd15acef4d52dd740cc4442fd02ca67721"
     },
     {
       "filename": "FrequencyResponse.pdf",

@@ -1,6 +1,6 @@
 {
   "date_local": "2026-10-23",
-  "scope": "Two-page graphical summary with cleaner typography and plots redrawn from unchanged saved numeric records; no new acquisition.",
+  "scope": "Two-page graphical summary with separate medians and plots for each timing run; saved measurements are unchanged.",
   "new_playback_performed": false,
   "new_acquisition_performed": false,
   "pages": 2,
@@ -33,32 +33,32 @@
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.pdf",
-      "sha256": "8f8c9e40b5d30553232ffafdefc67fd924ab08ef09fe97679a77d759e407cb63"
+      "sha256": "a37148fdb0c4ac5c1aa2b5db9116d253b140a433ef0251de791d1549bf39a014"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.png",
-      "sha256": "8994ba339809d415bbedf2ae5b2cc7309a79b0827867d010e61ebd33ba7e9724"
+      "sha256": "80a6589237989809c1fc6cc6577d4afd15acef4d52dd740cc4442fd02ca67721"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/figures-manifest.json",
-      "sha256": "aaadef55c557d77928cea44a41db1e79a9fbf41d6716a327e390f9ffae93d59c"
+      "sha256": "97ce58518bb0bb66de29dbee30a106e88a80efd67d0b5e3f517edaf812c853f3"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
-      "sha256": "94079b09138166a345d66d8070e62777e5ef0ae931a1cbcb0f1e4df0b4a4b56e"
+      "sha256": "5c85f27bef01226ac5178f9ee0e51128010c60ce72fdcfc624679d866782b5ed"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
-      "sha256": "547791695872cf7cf60819610cf3b74f7be6a2c879e436d1daacbf93dfd72e9a"
+      "sha256": "31c667d919499130ecd7c673fa7c236516984731f49b320aa473fcda19e50aaa"
     },
     {
       "path": "scripts/create_concise_bench_report_figures.py",
-      "sha256": "b19a15a763bb8af6e308daecf40daa4bf2babf524830daeeec05592f53de0c4b"
+      "sha256": "e59a4e8eef4210ad3a9c9c29e56821a20e91fb7be8808675c78811e89d0a4f18"
     }
   ],
   "review": {
     "independent_factual_review_passed": true,
-    "desktop_latex_compile": "success on final source and final figures",
+    "desktop_latex_compile": "success on final run-separated source and figures",
     "export_compiler": "Tectonic 0.17.0",
     "page_visually_inspected": true,
     "layout_defects_found": false,
@@ -67,15 +67,15 @@
       2
     ],
     "render_dpi": 110,
-    "style": "Consistent sans-serif typography, key-value strips, concise captions, vector charts and legends outside frequency plotting areas.",
+    "style": "Consistent sans-serif typography and separate run medians, with run-specific timing columns and shared y scales.",
     "latex_layout_warnings": false
   },
   "scientific_scope": "Application roundtrip repeatability, local SONIC reconstruction and relative whole-chain recorded levels. Calibrated timing accuracy, isolated speaker response, SPL and distortion remain unqualified.",
   "detailed_report_retained": true,
-  "extracted_text_word_count": 356,
+  "extracted_text_word_count": 380,
   "text_count_note": "Includes body text and both vector figures, including their axes and legends.",
   "graphs": {
-    "timing": "Forty accepted sweep estimates across two stream starts, plus correlation strength.",
+    "timing": "Two columns for Run 1 and Run 2, each with delay, correlation strength and local probes 1-20; shared y scales preserve the absolute offset.",
     "frequency": "Screened relative sweep response and 14 SONIC pip-component level groups.",
     "reused_existing_measured_figures_without_modification": false,
     "new_measurements_or_synthetic_results_added": false,
@@ -94,6 +94,36 @@
       "tests": 12
     },
     "plotted_numeric_arrays_unchanged": true,
-    "figure_source_and_output_hashes_match": true
+    "figure_source_and_output_hashes_match": true,
+    "run_statistics_recomputed_from_20_accepted_probes_each": true,
+    "frequency_figures_byte_identical_to_prior_revision": true
+  },
+  "timing_summary": {
+    "reporting_unit": "each separately opened stream",
+    "runs": [
+      {
+        "run": 1,
+        "run_id": "20261023-155401",
+        "accepted_sweeps": 20,
+        "median_ms": 38.25,
+        "min_ms": 38.239583333333336,
+        "max_ms": 38.25,
+        "peak_to_peak_samples": 1,
+        "peak_to_peak_ms": 0.010416666666666666
+      },
+      {
+        "run": 2,
+        "run_id": "20261023-155500-roundtrip-repeat",
+        "accepted_sweeps": 20,
+        "median_ms": 38.375,
+        "min_ms": 38.364583333333336,
+        "max_ms": 38.375,
+        "peak_to_peak_samples": 1,
+        "peak_to_peak_ms": 0.010416666666666666
+      }
+    ],
+    "between_run_median_difference_ms": 0.125,
+    "pooled_median_used_as_headline": false,
+    "interpretation": "Both runs stable over their 20 recorded probes; distinct baselines show between-run variation. No causal attribution or calibrated accuracy claim."
   }
 }

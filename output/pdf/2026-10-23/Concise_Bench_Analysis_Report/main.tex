@@ -1,46 +1,64 @@
 \documentclass[11pt,letterpaper]{article}
-\usepackage[margin=0.75in,headheight=15pt]{geometry}
-\usepackage{graphicx,xcolor,fancyhdr,caption}
+\usepackage[margin=0.75in,footskip=0.35in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet,graphicx,xcolor,tabularx,array,fancyhdr}
 \usepackage[hidelinks]{hyperref}
+\renewcommand{\familydefault}{\sfdefault}
 \definecolor{navy}{HTML}{17384D}
+\definecolor{muted}{HTML}{5B6B73}
+\definecolor{soft}{HTML}{F0F4F6}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{7pt}
 \setlength{\emergencystretch}{2em}
+\setlength{\fboxsep}{11pt}
 \graphicspath{{images/}}
-\captionsetup{font=small,labelfont=bf}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small SONIC bench summary}
-\fancyhead[R]{\small 23 October 2026}
-\fancyfoot[R]{\small\thepage}
-\renewcommand{\headrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize\color{muted}SONIC bench summary\quad|\quad\href{https://howardwhsrun.github.io/audiotory_benchmark/output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf}{Methods and source records}}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage\ / 2}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\topline}{\noindent{\small\color{muted}SAVED-DATA ANALYSIS\hfill23 OCTOBER 2026}\par\vspace{8pt}}
+\newcommand{\pagetitle}[2]{{\fontsize{24}{29}\selectfont\bfseries\color{navy}#1}\par\vspace{2pt}{\color{muted}#2}\par\vspace{10pt}}
+\newcommand{\metrics}[6]{\noindent\colorbox{soft}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+\begin{tabularx}{\linewidth}{@{}XXX@{}}
+{\small\color{muted}#1}&{\small\color{muted}#3}&{\small\color{muted}#5}\\[5pt]
+{\fontsize{20}{24}\selectfont\bfseries\color{navy}#2}&{\fontsize{20}{24}\selectfont\bfseries\color{navy}#4}&{\fontsize{20}{24}\selectfont\bfseries\color{navy}#6}
+\end{tabularx}
+\end{minipage}}\par\vspace{9pt}}
 \begin{document}
-{\LARGE\bfseries\color{navy} SONIC bench test: brief results}\par\vspace{3pt}
+\raggedright
+\topline
+\pagetitle{Playback-to-microphone delay}{Audient iD14\enspace$\cdot$\enspace Edifier speaker\enspace$\cdot$\enspace Earthworks M50}
 
-\textbf{Setup.} Computer $\to$ Audient iD14 $\to$ Edifier speaker $\to$ Earthworks M50 $\to$ microphone input 1. Four saved recordings at 96\,kHz; approximately 10\,cm separation (operator reported). This is an offline analysis.
+\metrics{Pooled median}{38.307 ms}{Observed spread}{0.135 ms}{Accepted sweeps}{40 / 40}
 
-\textbf{Timing.} All 40 sweeps were accepted. Pooled median application roundtrip: \textbf{38.307\,ms}; observed range: \textbf{38.240--38.375\,ms}. The two stream medians differed by 0.125\,ms.
+Recorded at 96\,kHz, with approximately 10\,cm microphone separation (operator reported).
+The range was 38.240--38.375\,ms across two stream starts, with 20 sweeps each.
 
-\begin{center}
+\vspace{5pt}
 \includegraphics[width=\linewidth]{TimingSummary.pdf}
-\captionof{figure}{Top: waveform delay estimates for two stream starts. Bottom: matching strength; every probe exceeded the 0.35 threshold. Timing probes were separate 100\,Hz--20\,kHz sweeps, not SONIC tones.}
-\end{center}
+\par\vspace{3pt}
+{\small\color{muted}Delay estimates above; waveform matching strength below. The dashed strength threshold is 0.35. Probes were separate 100\,Hz--20\,kHz timing sweeps.}
 
-\textbf{Meaning.} Delay was repeatable over these short runs. It includes computer/interface buffering and the acoustic chain. The observed spread does not establish calibrated sub-millisecond accuracy, isolated speaker delay or neural latency.
+\vspace{13pt}
+\textbf{Interpretation.} Timing was repeatable over these short runs; stream medians differed by 0.125\,ms. This application roundtrip includes buffering and the acoustic path. The spread does not establish calibrated timing accuracy, isolated speaker delay or neural latency.
 
 \newpage
-{\LARGE\bfseries\color{navy} Frequency response}\par\vspace{3pt}
+\topline
+\pagetitle{Recorded frequency levels}{SONIC tone reconstruction\enspace$\cdot$\enspace14 frequencies\enspace$\cdot$\enspace2--27\,kHz}
 
-\textbf{SONIC sounds.} Two 84-second blocks used a local reconstruction of the paper's 14 Sheep E frequencies (2--27\,kHz): 10\,ms pips, 2\,ms ramps, 16,800 pips total. These are not the original SONIC audio files.
+\metrics{Tone duration}{10 ms}{Ramp duration}{2 ms}{Recorded pips}{16,800}
 
-\begin{center}
-\includegraphics[width=\linewidth]{FrequencyResponse.png}
-\captionof{figure}{Top: screened sweep-response bands. Bottom: SONIC pip-component medians relative to 2\,kHz; whiskers show within-group 5th--95th percentiles, not confidence intervals.}
-\end{center}
+Locally reconstructed Sheep E tones in two 84-second blocks.
 
-\textbf{Finding.} All 14 commanded components appear in both microphone recordings. Levels are uneven: 17--19.5\,kHz was about 15--22\,dB below 2\,kHz; 20.9--25.8\,kHz was 30--40\,dB below. These uncorrected full-chain recordings do not establish calibrated SPL, speaker-only response or distortion.
+\vspace{3pt}
+\includegraphics[width=\linewidth]{FrequencyResponse.pdf}
+\par\vspace{2pt}
+{\small\color{muted}Gaps mark unsupported sweep bands. Tone bars show medians; whiskers are 5th--95th percentiles of 600 pips per frequency per recording, not confidence intervals.}
+
+\vspace{10pt}
+\textbf{Finding.} All 14 components appear in both recordings at unequal levels. Relative to 2\,kHz, 17--19.5\,kHz was 15--22\,dB lower; 20.9--25.8\,kHz was 30--40\,dB lower. These uncorrected full-chain measurements leave SPL, speaker-only response and distortion unqualified.
 
 \textbf{Next.} Fix the geometry, calibrate microphone/SPL, test separated tones, and validate timing with an independent electrical reference.
-
-{\footnotesize Methods and source records: \href{https://howardwhsrun.github.io/audiotory_benchmark/output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf}{full saved-data analysis report}.}
 \end{document}

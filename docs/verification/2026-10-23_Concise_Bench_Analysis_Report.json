@@ -1,6 +1,6 @@
 {
   "date_local": "2026-10-23",
-  "scope": "Two-page concise summary with existing measured timing and frequency graphs; saved recordings only.",
+  "scope": "Two-page graphical summary with cleaner typography and plots redrawn from unchanged saved numeric records; no new acquisition.",
   "new_playback_performed": false,
   "new_acquisition_performed": false,
   "pages": 2,
@@ -14,39 +14,51 @@
       "sha256": "43c9b07c200e0579c0c8f163f1ec74e73d168c5d8e35aed2121263bf14166ecb"
     },
     {
-      "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
-      "sha256": "384059a3925dbceb676dcc17e5f2523189781bdf5ee52c12a5519b18bc86378f"
-    },
-    {
       "path": "docs/verification/2026-10-23_Sweep_Relative_Response.json",
       "sha256": "59522b9ea4733f3c724463ba6b788901ab4cd36e71fcb569f7ffd1eaf6dbc906"
     },
     {
-      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/images/figures-manifest.json",
-      "sha256": "43f0ebffcfb4e669ebfb668d3c4e64a1180dcede13392533dfafc4add4d48540"
+      "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
+      "sha256": "384059a3925dbceb676dcc17e5f2523189781bdf5ee52c12a5519b18bc86378f"
     }
   ],
   "artifacts": [
     {
-      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
-      "sha256": "1ab5eb1444842430db3cdf345acfa04862f50db445d50d76224e8036e59bf577"
-    },
-    {
-      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
-      "sha256": "1801d077871013d7d9c1815f538e547e349fc61873ad5159645c6cfe6168265d"
-    },
-    {
-      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.pdf",
-      "sha256": "3c157fef44d1ed60cfa7ad5fd9e88d38bcf7572d42a321ccf7c734eedfad1d2b"
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/FrequencyResponse.pdf",
+      "sha256": "e9730013108677b332a8322628058e75c791f1557d74e3856f56034da054c794"
     },
     {
       "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/FrequencyResponse.png",
-      "sha256": "1e9ac5cf99c12fb020490fc7d2a9e086938104cb35960c39046eae8eaa6be3c1"
+      "sha256": "2d68d8c55a3718b8e78f37858cab5ca7ce4f038fe61814828425aab8226d36c6"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.pdf",
+      "sha256": "8f8c9e40b5d30553232ffafdefc67fd924ab08ef09fe97679a77d759e407cb63"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/TimingSummary.png",
+      "sha256": "8994ba339809d415bbedf2ae5b2cc7309a79b0827867d010e61ebd33ba7e9724"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/figures-manifest.json",
+      "sha256": "aaadef55c557d77928cea44a41db1e79a9fbf41d6716a327e390f9ffae93d59c"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
+      "sha256": "94079b09138166a345d66d8070e62777e5ef0ae931a1cbcb0f1e4df0b4a4b56e"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
+      "sha256": "547791695872cf7cf60819610cf3b74f7be6a2c879e436d1daacbf93dfd72e9a"
+    },
+    {
+      "path": "scripts/create_concise_bench_report_figures.py",
+      "sha256": "b19a15a763bb8af6e308daecf40daa4bf2babf524830daeeec05592f53de0c4b"
     }
   ],
   "review": {
     "independent_factual_review_passed": true,
-    "desktop_latex_compile": "success",
+    "desktop_latex_compile": "success on final source and final figures",
     "export_compiler": "Tectonic 0.17.0",
     "page_visually_inspected": true,
     "layout_defects_found": false,
@@ -54,16 +66,34 @@
       1,
       2
     ],
-    "render_dpi": 110
+    "render_dpi": 110,
+    "style": "Consistent sans-serif typography, key-value strips, concise captions, vector charts and legends outside frequency plotting areas.",
+    "latex_layout_warnings": false
   },
   "scientific_scope": "Application roundtrip repeatability, local SONIC reconstruction and relative whole-chain recorded levels. Calibrated timing accuracy, isolated speaker response, SPL and distortion remain unqualified.",
   "detailed_report_retained": true,
-  "extracted_text_word_count": 332,
-  "text_count_note": "Text extraction includes the vector timing graph but excludes text within the raster frequency graph.",
+  "extracted_text_word_count": 356,
+  "text_count_note": "Includes body text and both vector figures, including their axes and legends.",
   "graphs": {
     "timing": "Forty accepted sweep estimates across two stream starts, plus correlation strength.",
     "frequency": "Screened relative sweep response and 14 SONIC pip-component level groups.",
-    "reused_existing_measured_figures_without_modification": true,
-    "new_measurements_or_synthetic_results_added": false
+    "reused_existing_measured_figures_without_modification": false,
+    "new_measurements_or_synthetic_results_added": false,
+    "redrawn_from_unchanged_saved_numeric_records": true,
+    "all_plotted_arrays_rechecked_against_source_records": true,
+    "unsupported_sweep_bands_remain_masked": true,
+    "figure_manifest": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/images/figures-manifest.json"
+  },
+  "tests": {
+    "acoustic_analysis": {
+      "passed": true,
+      "tests": 42
+    },
+    "node_model_and_waveforms": {
+      "passed": true,
+      "tests": 12
+    },
+    "plotted_numeric_arrays_unchanged": true,
+    "figure_source_and_output_hashes_match": true
   }
 }

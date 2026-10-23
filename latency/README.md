@@ -16,6 +16,26 @@ The command plays twenty 100 ms sweeps at -24 dBFS peak and records the micropho
 
 `--generate-only` prepares probes without opening audio hardware. `--analyze-run .work/latency/runs/RUN_FOLDER` checks a saved source hash, native acquisition metadata, raw callback log, and signal quality without playing sound. Invalid transport suppresses accepted delay values. Source and microphone WAVs, raw capture, timestamps, manifest, and `roundtrip-analysis.json` stay in ignored `.work/`. The old electrical-reference analysis is a separate measurement and retains its own validity requirements below.
 
+## Frequency review from existing recordings
+
+An offline review on October 23 used both saved 84-second SONIC blocks (600 pips per frequency in each) and the two 20-sweep timing captures. No new sound was played or recorded. The [comparison plot](../output/figures/2026-10-23/Saved_Frequency_Response.png) shows the main finding: **recorded frequency levels are repeatable but uneven**.
+
+All 14 SONIC frequency groups had components above pre-block and other-tone controls in both microphone recordings. Removing nearby same-frequency or near-harmonic pips retained 159-454 events per group and changed median levels by at most 0.224 dB. Input 2 had much smaller matched-frequency values, but its different gain/wiring does not establish an acoustic-isolation control. Relative to 2 kHz, the 17-19.5 kHz groups were approximately 15-22 dB lower, the 20.9-25.8 kHz groups approximately 30-40 dB lower, and 27 kHz approximately 29 dB lower. See the [pip-frequency record](../docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json).
+
+The separate sweep analysis computes H1 response and coherence independently for each run, then compares magnitude summaries. Both runs passed local source-strength, coherence, and baseline screens at tested centers from approximately 159 Hz through 13.56 kHz. These are supported analysis centers, not hardware bandwidth cutoffs. The short chirp's ramps severely suppress its high-frequency tail; dividing by that weak source near 20 kHz would create misleading results. Unsupported bands remain null. See the [sweep-response record](../docs/verification/2026-10-23_Sweep_Relative_Response.json).
+
+These are whole-chain relative measurements at the saved position, including room, speaker and uncorrected microphone response. They do not establish calibrated SPL, isolated speaker response, harmonic distortion, equal-level SONIC delivery, or ultrasonic fidelity. The factory response claim does not replace the M50's serial-specific [electronic calibration file](https://earthworksaudio.com/measurement-microphones/m50/). A future bench check should use separated steady tones, a documented microphone position, and isolation controls before setting frequency-specific playback levels.
+
+The analysis commands below access saved files only and never import an audio backend:
+
+```sh
+.work/latency-venv/bin/python -m latency.pip_response
+.work/latency-venv/bin/python -m latency.sweep_response
+.work/latency-venv/bin/python scripts/create_frequency_response_figure.py
+```
+
+The figure script additionally requires Matplotlib. The pip command writes private per-run analysis beside the local captures; the public pip JSON retains sanitized aggregates, quality controls, raw-file hashes and source provenance. Raw room audio stays outside Git.
+
 ## Basic speaker playback and microphone recording
 
 Simultaneous playback through the Audient and Earthworks recording on input 1 were verified on October 23, 2026. Howard heard the locally synthesized melody, and three sections of the microphone recording matched it with 0.948–0.954 normalized waveform correlation after a 200–1600 Hz bandpass. The capture had no transport warnings or clipping. This verifies the basic sound path; it does not establish a delay, calibrated level, or full frequency response. See the [verification record](../docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json).

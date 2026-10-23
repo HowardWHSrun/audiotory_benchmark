@@ -1,0 +1,4069 @@
+{
+  "date_local": "2026-10-23",
+  "timezone": "America/Chicago",
+  "generated_at_utc": "2026-10-23T21:45:51.213400+00:00",
+  "purpose": "offline whole-chain relative response screen from two existing nonperiodic sweep captures",
+  "new_sound_played": false,
+  "new_audio_recorded": false,
+  "scope": "recorded Audient-to-speaker-to-Earthworks path at the saved position; not isolated speaker response",
+  "runs": [
+    {
+      "method": "per_run_H1_cross_spectral_relative_magnitude_screen",
+      "samplerate_hz": 96000.0,
+      "chirps_used": 20,
+      "window_samples": 48000,
+      "window_seconds": 0.5,
+      "window_relative_to_chirp_onset_seconds": [
+        -0.1,
+        0.4
+      ],
+      "window_shape": "rectangular; no full-window Hann or delay-dependent weighting",
+      "baseline_interval_seconds": [
+        0.1,
+        0.6
+      ],
+      "fft_bin_width_hz": 2.0,
+      "band_definition": "1/12-octave bands; source-power-weighted RMS H1 magnitude and coherence",
+      "source_strength_comparison": "mean source FFT-bin power in each band, avoiding bandwidth-dependent integrated-power bias",
+      "thresholds": {
+        "minimum_coherence": 0.9,
+        "minimum_source_band_power_relative_db": -30,
+        "minimum_coherent_response_above_baseline_db": 10,
+        "minimum_repeated_trials": 3,
+        "clipping_level_fs": 0.999
+      },
+      "threshold_role": "local analysis screening choices, not loudspeaker acceptance limits",
+      "transport_valid": true,
+      "source_clipped_samples": 0,
+      "microphone_clipped_samples": 0,
+      "bands": [
+        {
+          "frequency_hz": 100.0,
+          "band_edges_hz": [
+            97.15319411536058,
+            102.93022366434921
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 9.121899290173573,
+          "source_weighted_coherence": 0.4252667352630422,
+          "coherent_response_above_baseline_db": -6.028999011582888,
+          "h1_rms_magnitude_diagnostic": 0.34833881145968015,
+          "source_band_power_relative_db": -18.325968557239033,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 105.94630943592954,
+          "band_edges_hz": [
+            102.93022366434921,
+            109.05077326652578
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 12.917977597960963,
+          "source_weighted_coherence": 0.6843747594135257,
+          "coherent_response_above_baseline_db": 9.732681276975526,
+          "h1_rms_magnitude_diagnostic": 0.4748891532141825,
+          "source_band_power_relative_db": -16.814876017860218,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 112.2462048309373,
+          "band_edges_hz": [
+            109.05077326652577,
+            115.53526968722731
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 18.096605631120127,
+          "source_weighted_coherence": 0.7647538572631071,
+          "coherent_response_above_baseline_db": 4.808574159002589,
+          "h1_rms_magnitude_diagnostic": 0.6038910693765295,
+          "source_band_power_relative_db": -15.350850066844998,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 118.9207115002721,
+          "band_edges_hz": [
+            115.5352696872273,
+            122.40535433046553
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 26.542409827072074,
+          "source_weighted_coherence": 0.8098707184095558,
+          "coherent_response_above_baseline_db": 3.5794157219145095,
+          "h1_rms_magnitude_diagnostic": 0.5912989837513775,
+          "source_band_power_relative_db": -13.687417782544475,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 125.99210498948732,
+          "band_edges_hz": [
+            122.40535433046551,
+            129.68395546510098
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 38.13691567665822,
+          "source_weighted_coherence": 0.8844495544298029,
+          "coherent_response_above_baseline_db": 7.314262548299821,
+          "h1_rms_magnitude_diagnostic": 0.59453187001071,
+          "source_band_power_relative_db": -12.113365622902624,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 133.48398541700342,
+          "band_edges_hz": [
+            129.68395546510095,
+            137.3953647458089
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 54.20317979021875,
+          "source_weighted_coherence": 0.9348658198068192,
+          "coherent_response_above_baseline_db": 10.61459232323202,
+          "h1_rms_magnitude_diagnostic": 0.6231709474129677,
+          "source_band_power_relative_db": -10.586573639945623,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.956852622223698
+        },
+        {
+          "frequency_hz": 141.4213562373095,
+          "band_edges_hz": [
+            137.3953647458089,
+            145.56531828421873
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 78.94318671647991,
+          "source_weighted_coherence": 0.9027571084110199,
+          "coherent_response_above_baseline_db": 10.45617982331182,
+          "h1_rms_magnitude_diagnostic": 0.6489753261199666,
+          "source_band_power_relative_db": -8.95367475179533,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.309272367579201
+        },
+        {
+          "frequency_hz": 149.83070768766817,
+          "band_edges_hz": [
+            145.56531828421873,
+            154.2210825407941
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 116.73779898431792,
+          "source_weighted_coherence": 0.9809920421748141,
+          "coherent_response_above_baseline_db": 15.262603190841496,
+          "h1_rms_magnitude_diagnostic": 0.6695770599767019,
+          "source_band_power_relative_db": -7.254706281411742,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.58071998281129
+        },
+        {
+          "frequency_hz": 158.74010519681994,
+          "band_edges_hz": [
+            154.22108254079407,
+            163.39154532410998
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 165.21098832634243,
+          "source_weighted_coherence": 0.9912547556810485,
+          "coherent_response_above_baseline_db": 20.83430292220376,
+          "h1_rms_magnitude_diagnostic": 0.6998382499519007,
+          "source_band_power_relative_db": -5.746431996027602,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.964662167490006
+        },
+        {
+          "frequency_hz": 168.1792830507429,
+          "band_edges_hz": [
+            163.39154532410996,
+            173.1073122012286
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 224.26904847949942,
+          "source_weighted_coherence": 0.9942068097693547,
+          "coherent_response_above_baseline_db": 28.78120934926293,
+          "h1_rms_magnitude_diagnostic": 0.708977185030236,
+          "source_band_power_relative_db": -4.419127884026345,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.07735385585344
+        },
+        {
+          "frequency_hz": 178.17974362806785,
+          "band_edges_hz": [
+            173.10731220122858,
+            183.40080864093426
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 297.9875621836195,
+          "source_weighted_coherence": 0.9965919959122439,
+          "coherent_response_above_baseline_db": 23.158123677730554,
+          "h1_rms_magnitude_diagnostic": 0.6910212128843993,
+          "source_band_power_relative_db": -3.184839915792737,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.854536250602821
+        },
+        {
+          "frequency_hz": 188.77486253633867,
+          "band_edges_hz": [
+            183.4008086409342,
+            194.30638823072115
+          ],
+          "fft_bins": 6,
+          "source_mean_bin_power": 381.25200509662295,
+          "source_weighted_coherence": 0.9976385623150543,
+          "coherent_response_above_baseline_db": 31.01095210955546,
+          "h1_rms_magnitude_diagnostic": 0.6679253676776551,
+          "source_band_power_relative_db": -2.1146999243029407,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.559267424637651
+        },
+        {
+          "frequency_hz": 200.0,
+          "band_edges_hz": [
+            194.30638823072115,
+            205.86044732869843
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 457.1949889958972,
+          "source_weighted_coherence": 0.9980275383798037,
+          "coherent_response_above_baseline_db": 24.399588527490828,
+          "h1_rms_magnitude_diagnostic": 0.6337677050219263,
+          "source_band_power_relative_db": -1.3258066710884766,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.103310761078783
+        },
+        {
+          "frequency_hz": 211.89261887185907,
+          "band_edges_hz": [
+            205.86044732869843,
+            218.10154653305156
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 521.6642104147757,
+          "source_weighted_coherence": 0.997689953886942,
+          "coherent_response_above_baseline_db": 27.42916315804752,
+          "h1_rms_magnitude_diagnostic": 0.6192553535040604,
+          "source_band_power_relative_db": -0.7529108655557899,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.9021040562323694
+        },
+        {
+          "frequency_hz": 224.4924096618746,
+          "band_edges_hz": [
+            218.10154653305153,
+            231.07053937445463
+          ],
+          "fft_bins": 6,
+          "source_mean_bin_power": 569.2151870828637,
+          "source_weighted_coherence": 0.9974320568614797,
+          "coherent_response_above_baseline_db": 28.92507320401957,
+          "h1_rms_magnitude_diagnostic": 0.6035609086196513,
+          "source_band_power_relative_db": -0.37405649985667255,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.679130733996888
+        },
+        {
+          "frequency_hz": 237.8414230005442,
+          "band_edges_hz": [
+            231.0705393744546,
+            244.81070866093106
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 597.7944827617722,
+          "source_weighted_coherence": 0.9982116982493607,
+          "coherent_response_above_baseline_db": 24.31695479918416,
+          "h1_rms_magnitude_diagnostic": 0.6050571726858961,
+          "source_band_power_relative_db": -0.16130226373185957,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.700636934159534
+        },
+        {
+          "frequency_hz": 251.98420997897463,
+          "band_edges_hz": [
+            244.81070866093103,
+            259.36791093020196
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 615.5334859212622,
+          "source_weighted_coherence": 0.9981004744646254,
+          "coherent_response_above_baseline_db": 29.420774125422867,
+          "h1_rms_magnitude_diagnostic": 0.6094880111263817,
+          "source_band_power_relative_db": -0.034304446864313824,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.764012006487539
+        },
+        {
+          "frequency_hz": 266.96797083400685,
+          "band_edges_hz": [
+            259.3679109302019,
+            274.7907294916178
+          ],
+          "fft_bins": 8,
+          "source_mean_bin_power": 620.4147706967487,
+          "source_weighted_coherence": 0.9990791213537877,
+          "coherent_response_above_baseline_db": 30.226830030232094,
+          "h1_rms_magnitude_diagnostic": 0.6437419670701899,
+          "source_band_power_relative_db": 0.0,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.238945115497589
+        },
+        {
+          "frequency_hz": 282.842712474619,
+          "band_edges_hz": [
+            274.7907294916178,
+            291.13063656843747
+          ],
+          "fft_bins": 8,
+          "source_mean_bin_power": 609.5031819856644,
+          "source_weighted_coherence": 0.9988742638187409,
+          "coherent_response_above_baseline_db": 30.55172356052943,
+          "h1_rms_magnitude_diagnostic": 0.7023107956116144,
+          "source_band_power_relative_db": -0.07706151603390955,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.995295545666148
+        },
+        {
+          "frequency_hz": 299.66141537533633,
+          "band_edges_hz": [
+            291.13063656843747,
+            308.4421650815882
+          ],
+          "fft_bins": 9,
+          "source_mean_bin_power": 587.6035667481742,
+          "source_weighted_coherence": 0.9990811452515246,
+          "coherent_response_above_baseline_db": 33.389296146832905,
+          "h1_rms_magnitude_diagnostic": 0.6998440016314882,
+          "source_band_power_relative_db": -0.23597705561318835,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.964733552912054
+        },
+        {
+          "frequency_hz": 317.48021039363994,
+          "band_edges_hz": [
+            308.4421650815882,
+            326.78309064822
+          ],
+          "fft_bins": 9,
+          "source_mean_bin_power": 559.890138606466,
+          "source_weighted_coherence": 0.9992708157414517,
+          "coherent_response_above_baseline_db": 32.99130104253091,
+          "h1_rms_magnitude_diagnostic": 0.6882600788002361,
+          "source_band_power_relative_db": -0.4457931055499752,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.81976025804429
+        },
+        {
+          "frequency_hz": 336.3585661014858,
+          "band_edges_hz": [
+            326.7830906482199,
+            346.2146244024572
+          ],
+          "fft_bins": 10,
+          "source_mean_bin_power": 525.99384303004,
+          "source_weighted_coherence": 0.9992573276734534,
+          "coherent_response_above_baseline_db": 32.80177564630151,
+          "h1_rms_magnitude_diagnostic": 0.6870556844202782,
+          "source_band_power_relative_db": -0.7170146825947897,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.8045474034853815
+        },
+        {
+          "frequency_hz": 356.3594872561357,
+          "band_edges_hz": [
+            346.21462440245716,
+            366.8016172818685
+          ],
+          "fft_bins": 10,
+          "source_mean_bin_power": 491.7543770096695,
+          "source_weighted_coherence": 0.9985760548849013,
+          "coherent_response_above_baseline_db": 27.351036243351835,
+          "h1_rms_magnitude_diagnostic": 0.731627910156539,
+          "source_band_power_relative_db": -1.009338946720535,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.350513952556038
+        },
+        {
+          "frequency_hz": 377.5497250726774,
+          "band_edges_hz": [
+            366.80161728186846,
+            388.61277646144237
+          ],
+          "fft_bins": 11,
+          "source_mean_bin_power": 459.10416200645926,
+          "source_weighted_coherence": 0.9974278375454609,
+          "coherent_response_above_baseline_db": 27.95356110543793,
+          "h1_rms_magnitude_diagnostic": 0.7256450250251971,
+          "source_band_power_relative_db": -1.307708989726999,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.279193102920001
+        },
+        {
+          "frequency_hz": 400.0,
+          "band_edges_hz": [
+            388.6127764614423,
+            411.72089465739685
+          ],
+          "fft_bins": 11,
+          "source_mean_bin_power": 431.03399947568874,
+          "source_weighted_coherence": 0.9957255672765047,
+          "coherent_response_above_baseline_db": 29.628995898405552,
+          "h1_rms_magnitude_diagnostic": 0.6464360364557606,
+          "source_band_power_relative_db": -1.5817060068026554,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.2752198362067455
+        },
+        {
+          "frequency_hz": 423.78523774371814,
+          "band_edges_hz": [
+            411.72089465739685,
+            436.2030930661031
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 406.69729942376824,
+          "source_weighted_coherence": 0.9936817927381306,
+          "coherent_response_above_baseline_db": 26.299978565973024,
+          "h1_rms_magnitude_diagnostic": 0.5945606371272137,
+          "source_band_power_relative_db": -1.8341084026556154,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.548631727948848
+        },
+        {
+          "frequency_hz": 448.9848193237491,
+          "band_edges_hz": [
+            436.20309306610295,
+            462.14107874890914
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 384.98103898055655,
+          "source_weighted_coherence": 0.9976518498162177,
+          "coherent_response_above_baseline_db": 29.12659546083129,
+          "h1_rms_magnitude_diagnostic": 0.684505971478787,
+          "source_band_power_relative_db": -2.072427886123617,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.772253484163776
+        },
+        {
+          "frequency_hz": 475.6828460010884,
+          "band_edges_hz": [
+            462.1410787489092,
+            489.6214173218621
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 364.50189195232645,
+          "source_weighted_coherence": 0.9967860000977911,
+          "coherent_response_above_baseline_db": 29.061662968735504,
+          "h1_rms_magnitude_diagnostic": 0.7619460385211999,
+          "source_band_power_relative_db": -2.309823419793817,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.7031929692731405
+        },
+        {
+          "frequency_hz": 500,
+          "band_edges_hz": [
+            485.7659705768029,
+            514.651118321746
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 346.28816291291184,
+          "source_weighted_coherence": 0.9912341136894668,
+          "coherent_response_above_baseline_db": 19.914075006774084,
+          "h1_rms_magnitude_diagnostic": 0.6554680024426213,
+          "source_band_power_relative_db": -2.53244482434271,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.395738578068416
+        },
+        {
+          "frequency_hz": 503.96841995794927,
+          "band_edges_hz": [
+            489.62141732186205,
+            518.7358218604039
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 343.43158320895105,
+          "source_weighted_coherence": 0.9911332488461259,
+          "coherent_response_above_baseline_db": 20.07169976967393,
+          "h1_rms_magnitude_diagnostic": 0.6548246819006938,
+          "source_band_power_relative_db": -2.5684189690017134,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.387209473472407
+        },
+        {
+          "frequency_hz": 533.9359416680137,
+          "band_edges_hz": [
+            518.7358218604038,
+            549.5814589832356
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 324.11711536909746,
+          "source_weighted_coherence": 0.9937064293403912,
+          "coherent_response_above_baseline_db": 28.072926440789857,
+          "h1_rms_magnitude_diagnostic": 0.6001604561905639,
+          "source_band_power_relative_db": -2.8198016380430193,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.6300561990565265
+        },
+        {
+          "frequency_hz": 565.685424949238,
+          "band_edges_hz": [
+            549.5814589832356,
+            582.2612731368749
+          ],
+          "fft_bins": 17,
+          "source_mean_bin_power": 306.11293677293844,
+          "source_weighted_coherence": 0.9945433438224192,
+          "coherent_response_above_baseline_db": 27.139813855262158,
+          "h1_rms_magnitude_diagnostic": 0.530710421547139,
+          "source_band_power_relative_db": -3.0680044495644205,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 4.561860979509655
+        },
+        {
+          "frequency_hz": 599.3228307506727,
+          "band_edges_hz": [
+            582.2612731368749,
+            616.8843301631764
+          ],
+          "fft_bins": 17,
+          "source_mean_bin_power": 288.49682759902765,
+          "source_weighted_coherence": 0.9970828035616452,
+          "coherent_response_above_baseline_db": 26.231814235497755,
+          "h1_rms_magnitude_diagnostic": 0.49382098382893397,
+          "source_band_power_relative_db": -3.3254108697037883,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 3.936099468053764
+        },
+        {
+          "frequency_hz": 634.9604207872798,
+          "band_edges_hz": [
+            616.8843301631763,
+            653.5661812964399
+          ],
+          "fft_bins": 18,
+          "source_mean_bin_power": 272.76649872783133,
+          "source_weighted_coherence": 0.9963033936376119,
+          "coherent_response_above_baseline_db": 27.84972844489653,
+          "h1_rms_magnitude_diagnostic": 0.4388473385166539,
+          "source_band_power_relative_db": -3.568910997840227,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.9109780372322884
+        },
+        {
+          "frequency_hz": 672.7171322029716,
+          "band_edges_hz": [
+            653.5661812964398,
+            692.4292488049144
+          ],
+          "fft_bins": 20,
+          "source_mean_bin_power": 257.28344915634443,
+          "source_weighted_coherence": 0.9972289317556015,
+          "coherent_response_above_baseline_db": 26.339952217871772,
+          "h1_rms_magnitude_diagnostic": 0.42421450901669916,
+          "source_band_power_relative_db": -3.8227027956743873,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.61641902479702
+        },
+        {
+          "frequency_hz": 712.7189745122715,
+          "band_edges_hz": [
+            692.4292488049144,
+            733.6032345637371
+          ],
+          "fft_bins": 20,
+          "source_mean_bin_power": 242.86338852005466,
+          "source_weighted_coherence": 0.9922909903545049,
+          "coherent_response_above_baseline_db": 21.148600654351483,
+          "h1_rms_magnitude_diagnostic": 0.42312539405950383,
+          "source_band_power_relative_db": -4.073200786902604,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.5940904704670267
+        },
+        {
+          "frequency_hz": 755.0994501453547,
+          "band_edges_hz": [
+            733.6032345637368,
+            777.2255529228846
+          ],
+          "fft_bins": 22,
+          "source_mean_bin_power": 229.3727379409412,
+          "source_weighted_coherence": 0.9942982443383552,
+          "coherent_response_above_baseline_db": 24.641313469245997,
+          "h1_rms_magnitude_diagnostic": 0.38040075559795494,
+          "source_band_power_relative_db": -4.321403302177142,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 1.669536078940284
+        },
+        {
+          "frequency_hz": 800.0,
+          "band_edges_hz": [
+            777.2255529228846,
+            823.4417893147937
+          ],
+          "fft_bins": 23,
+          "source_mean_bin_power": 216.4595434551017,
+          "source_weighted_coherence": 0.9947208497253618,
+          "coherent_response_above_baseline_db": 25.294840266220437,
+          "h1_rms_magnitude_diagnostic": 0.37295968089629805,
+          "source_band_power_relative_db": -4.573053907299071,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 1.4979463525519021
+        },
+        {
+          "frequency_hz": 847.5704754874363,
+          "band_edges_hz": [
+            823.4417893147937,
+            872.4061861322062
+          ],
+          "fft_bins": 25,
+          "source_mean_bin_power": 204.2072704666398,
+          "source_weighted_coherence": 0.9960152376363589,
+          "coherent_response_above_baseline_db": 30.379000360588414,
+          "h1_rms_magnitude_diagnostic": 0.38548221886350564,
+          "source_band_power_relative_db": -4.826109284784956,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 1.7847956636411495
+        },
+        {
+          "frequency_hz": 897.9696386474982,
+          "band_edges_hz": [
+            872.4061861322059,
+            924.2821574978183
+          ],
+          "fft_bins": 26,
+          "source_mean_bin_power": 192.6199008018419,
+          "source_weighted_coherence": 0.9936234502435901,
+          "coherent_response_above_baseline_db": 27.687511871535833,
+          "h1_rms_magnitude_diagnostic": 0.3160402655263039,
+          "source_band_power_relative_db": -5.079809739859598,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 0.05955702073223586
+        },
+        {
+          "frequency_hz": 951.3656920021768,
+          "band_edges_hz": [
+            924.2821574978184,
+            979.2428346437242
+          ],
+          "fft_bins": 27,
+          "source_mean_bin_power": 181.89425895785487,
+          "source_weighted_coherence": 0.9894788856579481,
+          "coherent_response_above_baseline_db": 22.21341471640988,
+          "h1_rms_magnitude_diagnostic": 0.29981423410582403,
+          "source_band_power_relative_db": -5.328631370017573,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.3982463843886285
+        },
+        {
+          "frequency_hz": 1000,
+          "band_edges_hz": [
+            971.5319411536058,
+            1029.302236643492
+          ],
+          "fft_bins": 29,
+          "source_mean_bin_power": 173.16638675885977,
+          "source_weighted_coherence": 0.9753506767026803,
+          "coherent_response_above_baseline_db": 14.095856215524481,
+          "h1_rms_magnitude_diagnostic": 0.23443247897688038,
+          "source_band_power_relative_db": -5.542185336746574,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.5349357399281836
+        },
+        {
+          "frequency_hz": 1007.9368399158985,
+          "band_edges_hz": [
+            979.2428346437241,
+            1037.4716437208078
+          ],
+          "fft_bins": 29,
+          "source_mean_bin_power": 171.7940484380517,
+          "source_weighted_coherence": 0.9760182980878401,
+          "coherent_response_above_baseline_db": 13.890380417020648,
+          "h1_rms_magnitude_diagnostic": 0.22400018275242284,
+          "source_band_power_relative_db": -5.576740146135406,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.9303238862062635
+        },
+        {
+          "frequency_hz": 1067.8718833360274,
+          "band_edges_hz": [
+            1037.4716437208076,
+            1099.1629179664712
+          ],
+          "fft_bins": 31,
+          "source_mean_bin_power": 162.14110620624962,
+          "source_weighted_coherence": 0.9947818099378737,
+          "coherent_response_above_baseline_db": 26.330791201165855,
+          "h1_rms_magnitude_diagnostic": 0.2079592691052101,
+          "source_band_power_relative_db": -5.827889971894055,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.575725691539096
+        },
+        {
+          "frequency_hz": 1131.370849898476,
+          "band_edges_hz": [
+            1099.1629179664712,
+            1164.5225462737499
+          ],
+          "fft_bins": 33,
+          "source_mean_bin_power": 152.97592929245204,
+          "source_weighted_coherence": 0.9944502843635833,
+          "coherent_response_above_baseline_db": 23.844984752038762,
+          "h1_rms_magnitude_diagnostic": 0.1889533694580505,
+          "source_band_power_relative_db": -6.080590287384261,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.408198524211678
+        },
+        {
+          "frequency_hz": 1198.6456615013453,
+          "band_edges_hz": [
+            1164.5225462737499,
+            1233.7686603263528
+          ],
+          "fft_bins": 34,
+          "source_mean_bin_power": 144.4246343476425,
+          "source_weighted_coherence": 0.9965057046698299,
+          "coherent_response_above_baseline_db": 26.68533055908673,
+          "h1_rms_magnitude_diagnostic": 0.20564193461341812,
+          "source_band_power_relative_db": -6.330408521771146,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.67305772099771
+        },
+        {
+          "frequency_hz": 1269.9208415745595,
+          "band_edges_hz": [
+            1233.7686603263526,
+            1307.1323625928799
+          ],
+          "fft_bins": 37,
+          "source_mean_bin_power": 136.35257752461882,
+          "source_weighted_coherence": 0.9952277602596735,
+          "coherent_response_above_baseline_db": 25.184838300577237,
+          "h1_rms_magnitude_diagnostic": 0.21693805202101166,
+          "source_band_power_relative_db": -6.580187768620269,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.2085766168776946
+        },
+        {
+          "frequency_hz": 1345.4342644059432,
+          "band_edges_hz": [
+            1307.1323625928796,
+            1384.8584976098289
+          ],
+          "fft_bins": 39,
+          "source_mean_bin_power": 128.6531643508487,
+          "source_weighted_coherence": 0.9954463624900568,
+          "coherent_response_above_baseline_db": 27.051291385006966,
+          "h1_rms_magnitude_diagnostic": 0.18474076727955668,
+          "source_band_power_relative_db": -6.832616562742259,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.604036478631804
+        },
+        {
+          "frequency_hz": 1425.437949024543,
+          "band_edges_hz": [
+            1384.8584976098289,
+            1467.2064691274743
+          ],
+          "fft_bins": 41,
+          "source_mean_bin_power": 121.43515242020649,
+          "source_weighted_coherence": 0.9887525189086066,
+          "coherent_response_above_baseline_db": 23.918271770980965,
+          "h1_rms_magnitude_diagnostic": 0.1807340706109424,
+          "source_band_power_relative_db": -7.083377065905556,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.794490735992122
+        },
+        {
+          "frequency_hz": 1510.1989002907094,
+          "band_edges_hz": [
+            1467.2064691274736,
+            1554.4511058457692
+          ],
+          "fft_bins": 44,
+          "source_mean_bin_power": 114.60478056428438,
+          "source_weighted_coherence": 0.9952892577945628,
+          "coherent_response_above_baseline_db": 23.801542840515676,
+          "h1_rms_magnitude_diagnostic": 0.1651455129606286,
+          "source_band_power_relative_db": -7.334793949073539,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.577955773097028
+        },
+        {
+          "frequency_hz": 1600.0,
+          "band_edges_hz": [
+            1554.4511058457692,
+            1646.8835786295874
+          ],
+          "fft_bins": 46,
+          "source_mean_bin_power": 108.16149662203003,
+          "source_weighted_coherence": 0.9965954447811437,
+          "coherent_response_above_baseline_db": 26.109874319781717,
+          "h1_rms_magnitude_diagnostic": 0.18704869251072428,
+          "source_band_power_relative_db": -7.5860944091364,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.4961978036983705
+        },
+        {
+          "frequency_hz": 1695.140950974872,
+          "band_edges_hz": [
+            1646.883578629587,
+            1744.812372264412
+          ],
+          "fft_bins": 49,
+          "source_mean_bin_power": 102.10327642482703,
+          "source_weighted_coherence": 0.9973297227191225,
+          "coherent_response_above_baseline_db": 28.57891292743477,
+          "h1_rms_magnitude_diagnostic": 0.22055093401340556,
+          "source_band_power_relative_db": -7.836424503253788,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.0651133130188772
+        },
+        {
+          "frequency_hz": 1795.9392772949973,
+          "band_edges_hz": [
+            1744.8123722644127,
+            1848.5643149956375
+          ],
+          "fft_bins": 52,
+          "source_mean_bin_power": 96.36461619868133,
+          "source_weighted_coherence": 0.9976712826203782,
+          "coherent_response_above_baseline_db": 31.492437737669867,
+          "h1_rms_magnitude_diagnostic": 0.2631934414602281,
+          "source_band_power_relative_db": -8.087645328173876,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -1.5297900822362884
+        },
+        {
+          "frequency_hz": 1902.7313840043537,
+          "band_edges_hz": [
+            1848.5643149956368,
+            1958.4856692874484
+          ],
+          "fft_bins": 55,
+          "source_mean_bin_power": 90.94910179327584,
+          "source_weighted_coherence": 0.9974864898951338,
+          "coherent_response_above_baseline_db": 32.07106319761743,
+          "h1_rms_magnitude_diagnostic": 0.34024395408921504,
+          "source_band_power_relative_db": -8.338837144910777,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 0.7005169969972072
+        },
+        {
+          "frequency_hz": 2000,
+          "band_edges_hz": [
+            1943.0638823072115,
+            2058.604473286984
+          ],
+          "fft_bins": 58,
+          "source_mean_bin_power": 86.5404457213782,
+          "source_weighted_coherence": 0.9957587314740628,
+          "coherent_response_above_baseline_db": 29.050507656199276,
+          "h1_rms_magnitude_diagnostic": 0.3138806671073282,
+          "source_band_power_relative_db": -8.554630011748344,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 0.0
+        },
+        {
+          "frequency_hz": 2015.8736798317968,
+          "band_edges_hz": [
+            1958.485669287448,
+            2074.943287441615
+          ],
+          "fft_bins": 58,
+          "source_mean_bin_power": 85.85354785453079,
+          "source_weighted_coherence": 0.9951241605321907,
+          "coherent_response_above_baseline_db": 28.34593538086211,
+          "h1_rms_magnitude_diagnostic": 0.3061643709230095,
+          "source_band_power_relative_db": -8.589238819829696,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.21619835095645493
+        },
+        {
+          "frequency_hz": 2135.7437666720552,
+          "band_edges_hz": [
+            2074.9432874416157,
+            2198.325835932943
+          ],
+          "fft_bins": 62,
+          "source_mean_bin_power": 81.03300400819118,
+          "source_weighted_coherence": 0.9934138476403647,
+          "coherent_response_above_baseline_db": 24.42107559588091,
+          "h1_rms_magnitude_diagnostic": 0.300631093089086,
+          "source_band_power_relative_db": -8.840201897341016,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.37461342053916113
+        },
+        {
+          "frequency_hz": 2262.741699796952,
+          "band_edges_hz": [
+            2198.3258359329425,
+            2329.0450925474997
+          ],
+          "fft_bins": 65,
+          "source_mean_bin_power": 76.48696028096352,
+          "source_weighted_coherence": 0.9956150443638666,
+          "coherent_response_above_baseline_db": 29.647987223771615,
+          "h1_rms_magnitude_diagnostic": 0.30851227148601645,
+          "source_band_power_relative_db": -9.09094727170904,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.1498424722762073
+        },
+        {
+          "frequency_hz": 2397.29132300269,
+          "band_edges_hz": [
+            2329.0450925474993,
+            2467.537320652705
+          ],
+          "fft_bins": 69,
+          "source_mean_bin_power": 72.21296680957248,
+          "source_weighted_coherence": 0.9959822385285305,
+          "coherent_response_above_baseline_db": 28.397727660576344,
+          "h1_rms_magnitude_diagnostic": 0.2925830540647176,
+          "source_band_power_relative_db": -9.340669408628408,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.6103079616146218
+        },
+        {
+          "frequency_hz": 2539.8416831491195,
+          "band_edges_hz": [
+            2467.5373206527056,
+            2614.26472518576
+          ],
+          "fft_bins": 74,
+          "source_mean_bin_power": 68.14949774440295,
+          "source_weighted_coherence": 0.9949716690195022,
+          "coherent_response_above_baseline_db": 27.176574132100548,
+          "h1_rms_magnitude_diagnostic": 0.26908016776420174,
+          "source_band_power_relative_db": -9.592194693793223,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -1.3376575437140505
+        },
+        {
+          "frequency_hz": 2690.8685288118863,
+          "band_edges_hz": [
+            2614.2647251857593,
+            2769.7169952196577
+          ],
+          "fft_bins": 77,
+          "source_mean_bin_power": 64.32620109022389,
+          "source_weighted_coherence": 0.9852571632205152,
+          "coherent_response_above_baseline_db": 22.682725345849835,
+          "h1_rms_magnitude_diagnostic": 0.1706360025910292,
+          "source_band_power_relative_db": -9.84294224804421,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.293877968367918
+        },
+        {
+          "frequency_hz": 2850.875898049085,
+          "band_edges_hz": [
+            2769.716995219657,
+            2934.4129382549477
+          ],
+          "fft_bins": 83,
+          "source_mean_bin_power": 60.71802001491162,
+          "source_weighted_coherence": 0.9750406212355247,
+          "coherent_response_above_baseline_db": 18.724746163694142,
+          "h1_rms_magnitude_diagnostic": 0.1027476977640343,
+          "source_band_power_relative_db": -10.093645278644024,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -9.699849348255094
+        },
+        {
+          "frequency_hz": 3020.3978005814197,
+          "band_edges_hz": [
+            2934.412938254948,
+            3108.9022116915394
+          ],
+          "fft_bins": 87,
+          "source_mean_bin_power": 57.302034938655595,
+          "source_weighted_coherence": 0.9847761127861142,
+          "coherent_response_above_baseline_db": 21.659223089369636,
+          "h1_rms_magnitude_diagnostic": 0.11303204720575136,
+          "source_band_power_relative_db": -10.345120837258989,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.871259469431134
+        },
+        {
+          "frequency_hz": 3200.0,
+          "band_edges_hz": [
+            3108.9022116915385,
+            3293.767157259175
+          ],
+          "fft_bins": 92,
+          "source_mean_bin_power": 54.09765748582925,
+          "source_weighted_coherence": 0.9880652842192867,
+          "coherent_response_above_baseline_db": 23.109814997490652,
+          "h1_rms_magnitude_diagnostic": 0.1780533905899279,
+          "source_band_power_relative_db": -10.595036689755554,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.924286376112544
+        },
+        {
+          "frequency_hz": 3390.281901949744,
+          "band_edges_hz": [
+            3293.767157259174,
+            3489.624744528824
+          ],
+          "fft_bins": 98,
+          "source_mean_bin_power": 51.06668606879743,
+          "source_weighted_coherence": 0.9882834808983066,
+          "coherent_response_above_baseline_db": 24.38615244358494,
+          "h1_rms_magnitude_diagnostic": 0.19378487651260273,
+          "source_band_power_relative_db": -10.84544453269438,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.18889372854247
+        },
+        {
+          "frequency_hz": 3591.8785545899946,
+          "band_edges_hz": [
+            3489.6247445288254,
+            3697.128629991275
+          ],
+          "fft_bins": 104,
+          "source_mean_bin_power": 48.195729066056224,
+          "source_weighted_coherence": 0.9933136980051613,
+          "coherent_response_above_baseline_db": 27.83372447459325,
+          "h1_rms_magnitude_diagnostic": 0.21854762895775112,
+          "source_band_power_relative_db": -11.096735745380125,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.1443693562962283
+        },
+        {
+          "frequency_hz": 3805.4627680087074,
+          "band_edges_hz": [
+            3697.1286299912736,
+            3916.971338574897
+          ],
+          "fft_bins": 110,
+          "source_mean_bin_power": 45.48650812502894,
+          "source_weighted_coherence": 0.9939327533497408,
+          "coherent_response_above_baseline_db": 29.856798969511075,
+          "h1_rms_magnitude_diagnostic": 0.22953038248897506,
+          "source_band_power_relative_db": -11.34799530342404,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.718487731514328
+        },
+        {
+          "frequency_hz": 4000,
+          "band_edges_hz": [
+            3886.127764614423,
+            4117.208946573968
+          ],
+          "fft_bins": 115,
+          "source_mean_bin_power": 43.270019383788586,
+          "source_weighted_coherence": 0.9932769415806295,
+          "coherent_response_above_baseline_db": 30.85846679637246,
+          "h1_rms_magnitude_diagnostic": 0.2272390844329163,
+          "source_band_power_relative_db": -11.564950391001451,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.805630723418089
+        },
+        {
+          "frequency_hz": 4031.7473596635937,
+          "band_edges_hz": [
+            3916.971338574896,
+            4149.88657488323
+          ],
+          "fft_bins": 116,
+          "source_mean_bin_power": 42.93742752079738,
+          "source_weighted_coherence": 0.9931159805536307,
+          "coherent_response_above_baseline_db": 31.08126632380005,
+          "h1_rms_magnitude_diagnostic": 0.22334502359410846,
+          "source_band_power_relative_db": -11.598461075441817,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.955765733497284
+        },
+        {
+          "frequency_hz": 4271.4875333441105,
+          "band_edges_hz": [
+            4149.886574883231,
+            4396.651671865886
+          ],
+          "fft_bins": 124,
+          "source_mean_bin_power": 40.52597707121763,
+          "source_weighted_coherence": 0.9923354358801749,
+          "coherent_response_above_baseline_db": 29.825097588760272,
+          "h1_rms_magnitude_diagnostic": 0.19904258633534175,
+          "source_band_power_relative_db": -11.84948634472384,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.9563712149988213
+        },
+        {
+          "frequency_hz": 4525.483399593904,
+          "band_edges_hz": [
+            4396.651671865885,
+            4658.0901850949995
+          ],
+          "fft_bins": 131,
+          "source_mean_bin_power": 38.24364876248805,
+          "source_weighted_coherence": 0.991167432235657,
+          "coherent_response_above_baseline_db": 28.551704762325286,
+          "h1_rms_magnitude_diagnostic": 0.17292655393669742,
+          "source_band_power_relative_db": -12.10122807960895,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.1780575996403115
+        },
+        {
+          "frequency_hz": 4794.58264600538,
+          "band_edges_hz": [
+            4658.090185094999,
+            4935.07464130541
+          ],
+          "fft_bins": 138,
+          "source_mean_bin_power": 36.09894461094338,
+          "source_weighted_coherence": 0.9874101101179685,
+          "coherent_response_above_baseline_db": 27.667838150506668,
+          "h1_rms_magnitude_diagnostic": 0.13060150277420887,
+          "source_band_power_relative_db": -12.35187623796963,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.616327855269694
+        },
+        {
+          "frequency_hz": 5079.683366298239,
+          "band_edges_hz": [
+            4935.074641305411,
+            5228.52945037152
+          ],
+          "fft_bins": 147,
+          "source_mean_bin_power": 34.074614891665775,
+          "source_weighted_coherence": 0.9790227492148501,
+          "coherent_response_above_baseline_db": 23.404944542923026,
+          "h1_rms_magnitude_diagnostic": 0.08549348376940977,
+          "source_band_power_relative_db": -12.602511726750148,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.29663104965811
+        },
+        {
+          "frequency_hz": 5381.737057623773,
+          "band_edges_hz": [
+            5228.529450371519,
+            5539.4339904393155
+          ],
+          "fft_bins": 155,
+          "source_mean_bin_power": 32.163270385623335,
+          "source_weighted_coherence": 0.9782630225200936,
+          "coherent_response_above_baseline_db": 23.730745475540065,
+          "h1_rms_magnitude_diagnostic": 0.07407345286078791,
+          "source_band_power_relative_db": -12.853219271384402,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -12.542039552719311
+        },
+        {
+          "frequency_hz": 5701.75179609817,
+          "band_edges_hz": [
+            5539.433990439314,
+            5868.825876509895
+          ],
+          "fft_bins": 165,
+          "source_mean_bin_power": 30.359043028943663,
+          "source_weighted_coherence": 0.9840801073340649,
+          "coherent_response_above_baseline_db": 26.364819098467784,
+          "h1_rms_magnitude_diagnostic": 0.08838167779806494,
+          "source_band_power_relative_db": -13.103940511466375,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.008046504230865
+        },
+        {
+          "frequency_hz": 6040.795601162839,
+          "band_edges_hz": [
+            5868.825876509896,
+            6217.804423383079
+          ],
+          "fft_bins": 174,
+          "source_mean_bin_power": 28.65626454533857,
+          "source_weighted_coherence": 0.9856466603588545,
+          "coherent_response_above_baseline_db": 28.902014861182405,
+          "h1_rms_magnitude_diagnostic": 0.12094303215979775,
+          "source_band_power_relative_db": -13.354625510617563,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.283674287493426
+        },
+        {
+          "frequency_hz": 6400.0,
+          "band_edges_hz": [
+            6217.804423383077,
+            6587.53431451835
+          ],
+          "fft_bins": 185,
+          "source_mean_bin_power": 27.04779271412201,
+          "source_weighted_coherence": 0.9835008952538747,
+          "coherent_response_above_baseline_db": 30.205149936564375,
+          "h1_rms_magnitude_diagnostic": 0.1221646373531387,
+          "source_band_power_relative_db": -13.605502993784784,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.19638113692485
+        },
+        {
+          "frequency_hz": 6780.563803899488,
+          "band_edges_hz": [
+            6587.534314518348,
+            6979.249489057648
+          ],
+          "fft_bins": 196,
+          "source_mean_bin_power": 25.543835926164093,
+          "source_weighted_coherence": 0.9776187172528117,
+          "coherent_response_above_baseline_db": 26.614173485483313,
+          "h1_rms_magnitude_diagnostic": 0.08027123603697935,
+          "source_band_power_relative_db": -13.853960128823392,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.844092331237462
+        },
+        {
+          "frequency_hz": 7183.757109179989,
+          "band_edges_hz": [
+            6979.249489057651,
+            7394.25725998255
+          ],
+          "fft_bins": 208,
+          "source_mean_bin_power": 23.914139859070264,
+          "source_weighted_coherence": 0.9709573466749586,
+          "coherent_response_above_baseline_db": 23.694945934948155,
+          "h1_rms_magnitude_diagnostic": 0.06046873500066165,
+          "source_band_power_relative_db": -14.140273640142173,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -14.30467367319216
+        },
+        {
+          "frequency_hz": 7610.925536017415,
+          "band_edges_hz": [
+            7394.257259982547,
+            7833.942677149794
+          ],
+          "fft_bins": 219,
+          "source_mean_bin_power": 21.858741040276414,
+          "source_weighted_coherence": 0.9782329040890965,
+          "coherent_response_above_baseline_db": 29.627864887731267,
+          "h1_rms_magnitude_diagnostic": 0.09836878536008645,
+          "source_band_power_relative_db": -14.5305698381764,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -10.078145162694698
+        },
+        {
+          "frequency_hz": 8000,
+          "band_edges_hz": [
+            7772.255529228846,
+            8234.417893147936
+          ],
+          "fft_bins": 231,
+          "source_mean_bin_power": 19.727828378247555,
+          "source_weighted_coherence": 0.9795563730619831,
+          "coherent_response_above_baseline_db": 31.680227931428163,
+          "h1_rms_magnitude_diagnostic": 0.1285366607393172,
+          "source_band_power_relative_db": -14.976028477169528,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.75475107611408
+        },
+        {
+          "frequency_hz": 8063.494719327187,
+          "band_edges_hz": [
+            7833.942677149792,
+            8299.77314976646
+          ],
+          "fft_bins": 233,
+          "source_mean_bin_power": 19.378865303033542,
+          "source_weighted_coherence": 0.9786291520225024,
+          "coherent_response_above_baseline_db": 31.741829987856622,
+          "h1_rms_magnitude_diagnostic": 0.1308198069624235,
+          "source_band_power_relative_db": -15.053537847770242,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.6018212603098165
+        },
+        {
+          "frequency_hz": 8542.975066688221,
+          "band_edges_hz": [
+            8299.773149766463,
+            8793.303343731772
+          ],
+          "fft_bins": 247,
+          "source_mean_bin_power": 16.654288493515555,
+          "source_weighted_coherence": 0.9754316212642016,
+          "coherent_response_above_baseline_db": 31.003434167870424,
+          "h1_rms_magnitude_diagnostic": 0.12544564974367456,
+          "source_band_power_relative_db": -15.711560454077443,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.966179234000023
+        },
+        {
+          "frequency_hz": 9050.966799187809,
+          "band_edges_hz": [
+            8793.30334373177,
+            9316.180370189999
+          ],
+          "fft_bins": 262,
+          "source_mean_bin_power": 13.854395347214442,
+          "source_weighted_coherence": 0.9692028878249483,
+          "coherent_response_above_baseline_db": 27.98785527474311,
+          "h1_rms_magnitude_diagnostic": 0.08698496336049565,
+          "source_band_power_relative_db": -16.510945524027907,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.146407641909711
+        },
+        {
+          "frequency_hz": 9589.16529201076,
+          "band_edges_hz": [
+            9316.180370189997,
+            9870.14928261082
+          ],
+          "fft_bins": 277,
+          "source_mean_bin_power": 11.13517569864997,
+          "source_weighted_coherence": 0.9687241616615266,
+          "coherent_response_above_baseline_db": 29.21701249806779,
+          "h1_rms_magnitude_diagnostic": 0.11789886811859365,
+          "source_band_power_relative_db": -17.45985054822461,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.505098625437626
+        },
+        {
+          "frequency_hz": 10159.366732596478,
+          "band_edges_hz": [
+            9870.149282610822,
+            10457.05890074304
+          ],
+          "fft_bins": 293,
+          "source_mean_bin_power": 8.625435029574753,
+          "source_weighted_coherence": 0.9659784661130725,
+          "coherent_response_above_baseline_db": 29.02383259993239,
+          "h1_rms_magnitude_diagnostic": 0.12102156322911782,
+          "source_band_power_relative_db": -18.569011206211318,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.278036171519249
+        },
+        {
+          "frequency_hz": 10763.474115247545,
+          "band_edges_hz": [
+            10457.058900743037,
+            11078.867980878631
+          ],
+          "fft_bins": 311,
+          "source_mean_bin_power": 6.411732302224391,
+          "source_weighted_coherence": 0.959611226064268,
+          "coherent_response_above_baseline_db": 27.772661328166116,
+          "h1_rms_magnitude_diagnostic": 0.11412125772639807,
+          "source_band_power_relative_db": -19.85706747123618,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.787960352233323
+        },
+        {
+          "frequency_hz": 11403.50359219634,
+          "band_edges_hz": [
+            11078.867980878627,
+            11737.65175301979
+          ],
+          "fft_bins": 329,
+          "source_mean_bin_power": 4.549816357472994,
+          "source_weighted_coherence": 0.9520575352396295,
+          "coherent_response_above_baseline_db": 25.95463963540293,
+          "h1_rms_magnitude_diagnostic": 0.1017932362779703,
+          "source_band_power_relative_db": -21.346882611050177,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -9.780912900107952
+        },
+        {
+          "frequency_hz": 12000,
+          "band_edges_hz": [
+            11658.38329384327,
+            12351.626839721905
+          ],
+          "fft_bins": 346,
+          "source_mean_bin_power": 3.2148824248687164,
+          "source_weighted_coherence": 0.9499184226668644,
+          "coherent_response_above_baseline_db": 26.118291547965647,
+          "h1_rms_magnitude_diagnostic": 0.1324054946342814,
+          "source_band_power_relative_db": -22.855170343790732,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.4971711780850745
+        },
+        {
+          "frequency_hz": 12081.591202325679,
+          "band_edges_hz": [
+            11737.651753019793,
+            12435.608846766158
+          ],
+          "fft_bins": 349,
+          "source_mean_bin_power": 3.0605298887824417,
+          "source_weighted_coherence": 0.9491770289632574,
+          "coherent_response_above_baseline_db": 25.952163246214987,
+          "h1_rms_magnitude_diagnostic": 0.13499578751616517,
+          "source_band_power_relative_db": -23.068855037251836,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.328887004563266
+        },
+        {
+          "frequency_hz": 12800.0,
+          "band_edges_hz": [
+            12435.608846766154,
+            13175.0686290367
+          ],
+          "fft_bins": 370,
+          "source_mean_bin_power": 1.9314024803968188,
+          "source_weighted_coherence": 0.9401781079852148,
+          "coherent_response_above_baseline_db": 22.23897081685071,
+          "h1_rms_magnitude_diagnostic": 0.13147480801409708,
+          "source_band_power_relative_db": -25.06809344040225,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.558440433187059
+        },
+        {
+          "frequency_hz": 13561.127607798977,
+          "band_edges_hz": [
+            13175.068629036696,
+            13958.498978115296
+          ],
+          "fft_bins": 392,
+          "source_mean_bin_power": 1.127593708849006,
+          "source_weighted_coherence": 0.9245531997964769,
+          "coherent_response_above_baseline_db": 18.701827657992965,
+          "h1_rms_magnitude_diagnostic": 0.09655324212325168,
+          "source_band_power_relative_db": -27.40529484691325,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -10.239954112079188
+        },
+        {
+          "frequency_hz": 14367.514218359978,
+          "band_edges_hz": [
+            13958.498978115302,
+            14788.5145199651
+          ],
+          "fft_bins": 415,
+          "source_mean_bin_power": 0.5965602351538165,
+          "source_weighted_coherence": 0.9026459186834107,
+          "coherent_response_above_baseline_db": 16.010918433120473,
+          "h1_rms_magnitude_diagnostic": 0.0904752652832471,
+          "source_band_power_relative_db": -30.170278275769288,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 15221.85107203483,
+          "band_edges_hz": [
+            14788.514519965094,
+            15667.885354299588
+          ],
+          "fft_bins": 439,
+          "source_mean_bin_power": 0.27689962929404666,
+          "source_weighted_coherence": 0.7667125138812683,
+          "coherent_response_above_baseline_db": 9.946344839985992,
+          "h1_rms_magnitude_diagnostic": 0.0641905977211869,
+          "source_band_power_relative_db": -33.50359754527082,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 16000,
+          "band_edges_hz": [
+            15544.511058457692,
+            16468.835786295873
+          ],
+          "fft_bins": 462,
+          "source_mean_bin_power": 0.12302252493773325,
+          "source_weighted_coherence": 0.6705893126988038,
+          "coherent_response_above_baseline_db": 5.420253424398562,
+          "h1_rms_magnitude_diagnostic": 0.055132683105341675,
+          "source_band_power_relative_db": -37.026974925291306,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 16126.989438654375,
+          "band_edges_hz": [
+            15667.885354299584,
+            16599.54629953292
+          ],
+          "fft_bins": 466,
+          "source_mean_bin_power": 0.10655328356491041,
+          "source_weighted_coherence": 0.6358562420653614,
+          "coherent_response_above_baseline_db": 4.327511657233501,
+          "h1_rms_magnitude_diagnostic": 0.05355359625791342,
+          "source_band_power_relative_db": -37.651152912986745,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 17085.950133376442,
+          "band_edges_hz": [
+            16599.546299532925,
+            17586.606687463543
+          ],
+          "fft_bins": 494,
+          "source_mean_bin_power": 0.030531048421633653,
+          "source_weighted_coherence": 0.3874088928437499,
+          "coherent_response_above_baseline_db": -1.9552746062797677,
+          "h1_rms_magnitude_diagnostic": 0.05341589305672095,
+          "source_band_power_relative_db": -43.07940410831001,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 18000,
+          "band_edges_hz": [
+            17487.574940764905,
+            18527.440259582858
+          ],
+          "fft_bins": 520,
+          "source_mean_bin_power": 0.006367090594611397,
+          "source_weighted_coherence": 0.11533175527705751,
+          "coherent_response_above_baseline_db": -8.935080277093762,
+          "h1_rms_magnitude_diagnostic": 0.049259698840624824,
+          "source_band_power_relative_db": -49.88741099552584,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 18101.933598375617,
+          "band_edges_hz": [
+            17586.60668746354,
+            18632.360740379998
+          ],
+          "fft_bins": 523,
+          "source_mean_bin_power": 0.0051528729387178155,
+          "source_weighted_coherence": 0.1013757301385258,
+          "coherent_response_above_baseline_db": -9.49435093468972,
+          "h1_rms_magnitude_diagnostic": 0.0519919126258196,
+          "source_band_power_relative_db": -50.80632695237982,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 19178.33058402152,
+          "band_edges_hz": [
+            18632.360740379994,
+            19740.29856522164
+          ],
+          "fft_bins": 554,
+          "source_mean_bin_power": 0.0002666458111577992,
+          "source_weighted_coherence": 0.056516541878835945,
+          "coherent_response_above_baseline_db": -12.925469249472126,
+          "h1_rms_magnitude_diagnostic": 0.1751540546470754,
+          "source_band_power_relative_db": -63.66747363278538,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 20000,
+          "band_edges_hz": [
+            19430.638823072117,
+            20586.044732869843
+          ],
+          "fft_bins": 578,
+          "source_mean_bin_power": 6.468549166418629e-06,
+          "source_weighted_coherence": 0.046104016064479766,
+          "coherent_response_above_baseline_db": -14.079715038708207,
+          "h1_rms_magnitude_diagnostic": 1.0126216369578358,
+          "source_band_power_relative_db": -79.81875245349951,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        }
+      ],
+      "accepted_band_count": 87,
+      "reference_frequency_hz": 2000,
+      "acoustic_spl_calibrated": false,
+      "microphone_frequency_correction_applied": false,
+      "isolated_loudspeaker_response": false,
+      "thd_measured": false,
+      "measured_delay_ms": null,
+      "local_run": "20261023-155401",
+      "source_float32_array_bytes_sha256": "e4f92e960ce3b05339870dbfad8ba8fe8a44042b108dbadb80d42341287a859c",
+      "source_npy_file_sha256": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97",
+      "capture_npz_sha256": "0877fa65cfaa89c8dbfe11befefeccac7e0491d1efa1e275969d26fe6947f5cf",
+      "manifest_sha256": "cf5fb455b1bdbc64073d7d762c6d9340a87478deb4e2acbe3265675a0ed6c2bc",
+      "captured_frames": 1113600,
+      "native_acquisition_metadata_verified": true,
+      "raw_callback_timestamps_rechecked": true,
+      "transport_errors": []
+    },
+    {
+      "method": "per_run_H1_cross_spectral_relative_magnitude_screen",
+      "samplerate_hz": 96000.0,
+      "chirps_used": 20,
+      "window_samples": 48000,
+      "window_seconds": 0.5,
+      "window_relative_to_chirp_onset_seconds": [
+        -0.1,
+        0.4
+      ],
+      "window_shape": "rectangular; no full-window Hann or delay-dependent weighting",
+      "baseline_interval_seconds": [
+        0.1,
+        0.6
+      ],
+      "fft_bin_width_hz": 2.0,
+      "band_definition": "1/12-octave bands; source-power-weighted RMS H1 magnitude and coherence",
+      "source_strength_comparison": "mean source FFT-bin power in each band, avoiding bandwidth-dependent integrated-power bias",
+      "thresholds": {
+        "minimum_coherence": 0.9,
+        "minimum_source_band_power_relative_db": -30,
+        "minimum_coherent_response_above_baseline_db": 10,
+        "minimum_repeated_trials": 3,
+        "clipping_level_fs": 0.999
+      },
+      "threshold_role": "local analysis screening choices, not loudspeaker acceptance limits",
+      "transport_valid": true,
+      "source_clipped_samples": 0,
+      "microphone_clipped_samples": 0,
+      "bands": [
+        {
+          "frequency_hz": 100.0,
+          "band_edges_hz": [
+            97.15319411536058,
+            102.93022366434921
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 9.121899290173573,
+          "source_weighted_coherence": 0.32070226641894395,
+          "coherent_response_above_baseline_db": -5.345617577042661,
+          "h1_rms_magnitude_diagnostic": 0.37054621075479166,
+          "source_band_power_relative_db": -18.325968557239033,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 105.94630943592954,
+          "band_edges_hz": [
+            102.93022366434921,
+            109.05077326652578
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 12.917977597960963,
+          "source_weighted_coherence": 0.6739638295928959,
+          "coherent_response_above_baseline_db": 3.727609832023747,
+          "h1_rms_magnitude_diagnostic": 0.4828684133770147,
+          "source_band_power_relative_db": -16.814876017860218,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 112.2462048309373,
+          "band_edges_hz": [
+            109.05077326652577,
+            115.53526968722731
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 18.096605631120127,
+          "source_weighted_coherence": 0.8020281038695919,
+          "coherent_response_above_baseline_db": 9.030171347620453,
+          "h1_rms_magnitude_diagnostic": 0.6465550339089745,
+          "source_band_power_relative_db": -15.350850066844998,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 118.9207115002721,
+          "band_edges_hz": [
+            115.5352696872273,
+            122.40535433046553
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 26.542409827072074,
+          "source_weighted_coherence": 0.7949260625683362,
+          "coherent_response_above_baseline_db": 4.990121959958965,
+          "h1_rms_magnitude_diagnostic": 0.5398001457624738,
+          "source_band_power_relative_db": -13.687417782544475,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 125.99210498948732,
+          "band_edges_hz": [
+            122.40535433046551,
+            129.68395546510098
+          ],
+          "fft_bins": 3,
+          "source_mean_bin_power": 38.13691567665822,
+          "source_weighted_coherence": 0.8812076808405505,
+          "coherent_response_above_baseline_db": 10.835763068169648,
+          "h1_rms_magnitude_diagnostic": 0.5932180547897069,
+          "source_band_power_relative_db": -12.113365622902624,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 133.48398541700342,
+          "band_edges_hz": [
+            129.68395546510095,
+            137.3953647458089
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 54.20317979021875,
+          "source_weighted_coherence": 0.9314780003530378,
+          "coherent_response_above_baseline_db": 8.875530769758766,
+          "h1_rms_magnitude_diagnostic": 0.6095843189806688,
+          "source_band_power_relative_db": -10.586573639945623,
+          "accepted": false,
+          "rejection_reasons": [
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 141.4213562373095,
+          "band_edges_hz": [
+            137.3953647458089,
+            145.56531828421873
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 78.94318671647991,
+          "source_weighted_coherence": 0.897410989806533,
+          "coherent_response_above_baseline_db": 7.425868406861296,
+          "h1_rms_magnitude_diagnostic": 0.6646023831134821,
+          "source_band_power_relative_db": -8.95367475179533,
+          "accepted": false,
+          "rejection_reasons": [
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 149.83070768766817,
+          "band_edges_hz": [
+            145.56531828421873,
+            154.2210825407941
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 116.73779898431792,
+          "source_weighted_coherence": 0.9784899304797319,
+          "coherent_response_above_baseline_db": 9.739766768669082,
+          "h1_rms_magnitude_diagnostic": 0.6750623693328033,
+          "source_band_power_relative_db": -7.254706281411742,
+          "accepted": false,
+          "rejection_reasons": [
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 158.74010519681994,
+          "band_edges_hz": [
+            154.22108254079407,
+            163.39154532410998
+          ],
+          "fft_bins": 4,
+          "source_mean_bin_power": 165.21098832634243,
+          "source_weighted_coherence": 0.99025749961443,
+          "coherent_response_above_baseline_db": 11.003587699171106,
+          "h1_rms_magnitude_diagnostic": 0.7011985842238766,
+          "source_band_power_relative_db": -5.746431996027602,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.910577845874371
+        },
+        {
+          "frequency_hz": 168.1792830507429,
+          "band_edges_hz": [
+            163.39154532410996,
+            173.1073122012286
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 224.26904847949942,
+          "source_weighted_coherence": 0.9950016578382995,
+          "coherent_response_above_baseline_db": 21.19826232856154,
+          "h1_rms_magnitude_diagnostic": 0.7214256662723738,
+          "source_band_power_relative_db": -4.419127884026345,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.157589019310102
+        },
+        {
+          "frequency_hz": 178.17974362806785,
+          "band_edges_hz": [
+            173.10731220122858,
+            183.40080864093426
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 297.9875621836195,
+          "source_weighted_coherence": 0.9963479382795303,
+          "coherent_response_above_baseline_db": 18.283320505603918,
+          "h1_rms_magnitude_diagnostic": 0.7027196000677333,
+          "source_band_power_relative_db": -3.184839915792737,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.929398573569706
+        },
+        {
+          "frequency_hz": 188.77486253633867,
+          "band_edges_hz": [
+            183.4008086409342,
+            194.30638823072115
+          ],
+          "fft_bins": 6,
+          "source_mean_bin_power": 381.25200509662295,
+          "source_weighted_coherence": 0.9973046820572766,
+          "coherent_response_above_baseline_db": 20.691674437644224,
+          "h1_rms_magnitude_diagnostic": 0.6671103640864869,
+          "source_band_power_relative_db": -2.1146999243029407,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.477710991185436
+        },
+        {
+          "frequency_hz": 200.0,
+          "band_edges_hz": [
+            194.30638823072115,
+            205.86044732869843
+          ],
+          "fft_bins": 5,
+          "source_mean_bin_power": 457.1949889958972,
+          "source_weighted_coherence": 0.9977575591443395,
+          "coherent_response_above_baseline_db": 22.428349237183408,
+          "h1_rms_magnitude_diagnostic": 0.6348029315743866,
+          "source_band_power_relative_db": -1.3258066710884766,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.046535708860827
+        },
+        {
+          "frequency_hz": 211.89261887185907,
+          "band_edges_hz": [
+            205.86044732869843,
+            218.10154653305156
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 521.6642104147757,
+          "source_weighted_coherence": 0.9978126521498342,
+          "coherent_response_above_baseline_db": 23.944224130556805,
+          "h1_rms_magnitude_diagnostic": 0.6220771754908127,
+          "source_band_power_relative_db": -0.7529108655557899,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.870642575389492
+        },
+        {
+          "frequency_hz": 224.4924096618746,
+          "band_edges_hz": [
+            218.10154653305153,
+            231.07053937445463
+          ],
+          "fft_bins": 6,
+          "source_mean_bin_power": 569.2151870828637,
+          "source_weighted_coherence": 0.9976179799575325,
+          "coherent_response_above_baseline_db": 23.56683542002805,
+          "h1_rms_magnitude_diagnostic": 0.6034014637028077,
+          "source_band_power_relative_db": -0.37405649985667255,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.605884421554946
+        },
+        {
+          "frequency_hz": 237.8414230005442,
+          "band_edges_hz": [
+            231.0705393744546,
+            244.81070866093106
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 597.7944827617722,
+          "source_weighted_coherence": 0.9980315152099736,
+          "coherent_response_above_baseline_db": 24.650504612166664,
+          "h1_rms_magnitude_diagnostic": 0.6060565029437027,
+          "source_band_power_relative_db": -0.16130226373185957,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.64401954573747
+        },
+        {
+          "frequency_hz": 251.98420997897463,
+          "band_edges_hz": [
+            244.81070866093103,
+            259.36791093020196
+          ],
+          "fft_bins": 7,
+          "source_mean_bin_power": 615.5334859212622,
+          "source_weighted_coherence": 0.9980973757596252,
+          "coherent_response_above_baseline_db": 26.84398525752612,
+          "h1_rms_magnitude_diagnostic": 0.6077186154774823,
+          "source_band_power_relative_db": -0.034304446864313824,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.667808029846812
+        },
+        {
+          "frequency_hz": 266.96797083400685,
+          "band_edges_hz": [
+            259.3679109302019,
+            274.7907294916178
+          ],
+          "fft_bins": 8,
+          "source_mean_bin_power": 620.4147706967487,
+          "source_weighted_coherence": 0.9989265382681306,
+          "coherent_response_above_baseline_db": 30.23821662861225,
+          "h1_rms_magnitude_diagnostic": 0.6429596250310982,
+          "source_band_power_relative_db": 0.0,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.157431275785166
+        },
+        {
+          "frequency_hz": 282.842712474619,
+          "band_edges_hz": [
+            274.7907294916178,
+            291.13063656843747
+          ],
+          "fft_bins": 8,
+          "source_mean_bin_power": 609.5031819856644,
+          "source_weighted_coherence": 0.998905171308529,
+          "coherent_response_above_baseline_db": 29.532454605506636,
+          "h1_rms_magnitude_diagnostic": 0.6945382893805725,
+          "source_band_power_relative_db": -0.07706151603390955,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.827681096252185
+        },
+        {
+          "frequency_hz": 299.66141537533633,
+          "band_edges_hz": [
+            291.13063656843747,
+            308.4421650815882
+          ],
+          "fft_bins": 9,
+          "source_mean_bin_power": 587.6035667481742,
+          "source_weighted_coherence": 0.9989942430097055,
+          "coherent_response_above_baseline_db": 25.893923250739327,
+          "h1_rms_magnitude_diagnostic": 0.6956670736649345,
+          "source_band_power_relative_db": -0.23597705561318835,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.841786203503792
+        },
+        {
+          "frequency_hz": 317.48021039363994,
+          "band_edges_hz": [
+            308.4421650815882,
+            326.78309064822
+          ],
+          "fft_bins": 9,
+          "source_mean_bin_power": 559.890138606466,
+          "source_weighted_coherence": 0.9993068033699827,
+          "coherent_response_above_baseline_db": 29.175920959673153,
+          "h1_rms_magnitude_diagnostic": 0.6827178538801357,
+          "source_band_power_relative_db": -0.4457931055499752,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.678582441229404
+        },
+        {
+          "frequency_hz": 336.3585661014858,
+          "band_edges_hz": [
+            326.7830906482199,
+            346.2146244024572
+          ],
+          "fft_bins": 10,
+          "source_mean_bin_power": 525.99384303004,
+          "source_weighted_coherence": 0.9992785867172319,
+          "coherent_response_above_baseline_db": 24.903584447777103,
+          "h1_rms_magnitude_diagnostic": 0.6897109251718011,
+          "source_band_power_relative_db": -0.7170146825947897,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.76709934218747
+        },
+        {
+          "frequency_hz": 356.3594872561357,
+          "band_edges_hz": [
+            346.21462440245716,
+            366.8016172818685
+          ],
+          "fft_bins": 10,
+          "source_mean_bin_power": 491.7543770096695,
+          "source_weighted_coherence": 0.9988786252604235,
+          "coherent_response_above_baseline_db": 23.434389293355554,
+          "h1_rms_magnitude_diagnostic": 0.7337574779740362,
+          "source_band_power_relative_db": -1.009338946720535,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.304808041372501
+        },
+        {
+          "frequency_hz": 377.5497250726774,
+          "band_edges_hz": [
+            366.80161728186846,
+            388.61277646144237
+          ],
+          "fft_bins": 11,
+          "source_mean_bin_power": 459.10416200645926,
+          "source_weighted_coherence": 0.9984749954635491,
+          "coherent_response_above_baseline_db": 25.930844224734336,
+          "h1_rms_magnitude_diagnostic": 0.7363944152453993,
+          "source_band_power_relative_db": -1.307708989726999,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.33596695874626
+        },
+        {
+          "frequency_hz": 400.0,
+          "band_edges_hz": [
+            388.6127764614423,
+            411.72089465739685
+          ],
+          "fft_bins": 11,
+          "source_mean_bin_power": 431.03399947568874,
+          "source_weighted_coherence": 0.9987811947787602,
+          "coherent_response_above_baseline_db": 26.40271163294713,
+          "h1_rms_magnitude_diagnostic": 0.6465580211193088,
+          "source_band_power_relative_db": -1.5817060068026554,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.205907312568253
+        },
+        {
+          "frequency_hz": 423.78523774371814,
+          "band_edges_hz": [
+            411.72089465739685,
+            436.2030930661031
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 406.69729942376824,
+          "source_weighted_coherence": 0.9964380506250575,
+          "coherent_response_above_baseline_db": 24.658396591294768,
+          "h1_rms_magnitude_diagnostic": 0.5873461818892043,
+          "source_band_power_relative_db": -1.8341084026556154,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.371640233266452
+        },
+        {
+          "frequency_hz": 448.9848193237491,
+          "band_edges_hz": [
+            436.20309306610295,
+            462.14107874890914
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 384.98103898055655,
+          "source_weighted_coherence": 0.9986450852090489,
+          "coherent_response_above_baseline_db": 28.36253239131265,
+          "h1_rms_magnitude_diagnostic": 0.678676047483764,
+          "source_band_power_relative_db": -2.072427886123617,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.627007673032507
+        },
+        {
+          "frequency_hz": 475.6828460010884,
+          "band_edges_hz": [
+            462.1410787489092,
+            489.6214173218621
+          ],
+          "fft_bins": 13,
+          "source_mean_bin_power": 364.50189195232645,
+          "source_weighted_coherence": 0.9984634923352536,
+          "coherent_response_above_baseline_db": 27.784273805642506,
+          "h1_rms_magnitude_diagnostic": 0.7625608515155116,
+          "source_band_power_relative_db": -2.309823419793817,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 7.6392473473820175
+        },
+        {
+          "frequency_hz": 500,
+          "band_edges_hz": [
+            485.7659705768029,
+            514.651118321746
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 346.28816291291184,
+          "source_weighted_coherence": 0.9922281042764273,
+          "coherent_response_above_baseline_db": 20.05328090687248,
+          "h1_rms_magnitude_diagnostic": 0.642056497215302,
+          "source_band_power_relative_db": -2.53244482434271,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.145222137404947
+        },
+        {
+          "frequency_hz": 503.96841995794927,
+          "band_edges_hz": [
+            489.62141732186205,
+            518.7358218604039
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 343.43158320895105,
+          "source_weighted_coherence": 0.9923965846058158,
+          "coherent_response_above_baseline_db": 19.365322847537357,
+          "h1_rms_magnitude_diagnostic": 0.6413183024135689,
+          "source_band_power_relative_db": -2.5684189690017134,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 6.135229921119835
+        },
+        {
+          "frequency_hz": 533.9359416680137,
+          "band_edges_hz": [
+            518.7358218604038,
+            549.5814589832356
+          ],
+          "fft_bins": 15,
+          "source_mean_bin_power": 324.11711536909746,
+          "source_weighted_coherence": 0.9981762187337706,
+          "coherent_response_above_baseline_db": 23.83100989029936,
+          "h1_rms_magnitude_diagnostic": 0.6205993913279593,
+          "source_band_power_relative_db": -2.8198016380430193,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 5.849984140940939
+        },
+        {
+          "frequency_hz": 565.685424949238,
+          "band_edges_hz": [
+            549.5814589832356,
+            582.2612731368749
+          ],
+          "fft_bins": 17,
+          "source_mean_bin_power": 306.11293677293844,
+          "source_weighted_coherence": 0.998285459107347,
+          "coherent_response_above_baseline_db": 25.669302272052565,
+          "h1_rms_magnitude_diagnostic": 0.5203046799884931,
+          "source_band_power_relative_db": -3.0680044495644205,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 4.318911880238836
+        },
+        {
+          "frequency_hz": 599.3228307506727,
+          "band_edges_hz": [
+            582.2612731368749,
+            616.8843301631764
+          ],
+          "fft_bins": 17,
+          "source_mean_bin_power": 288.49682759902765,
+          "source_weighted_coherence": 0.9979247114479302,
+          "coherent_response_above_baseline_db": 26.37960801848311,
+          "h1_rms_magnitude_diagnostic": 0.49721386736688905,
+          "source_band_power_relative_db": -3.3254108697037883,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 3.924621888421067
+        },
+        {
+          "frequency_hz": 634.9604207872798,
+          "band_edges_hz": [
+            616.8843301631763,
+            653.5661812964399
+          ],
+          "fft_bins": 18,
+          "source_mean_bin_power": 272.76649872783133,
+          "source_weighted_coherence": 0.9976200885273644,
+          "coherent_response_above_baseline_db": 26.82559087542371,
+          "h1_rms_magnitude_diagnostic": 0.433834386155858,
+          "source_band_power_relative_db": -3.568910997840227,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.740236668247611
+        },
+        {
+          "frequency_hz": 672.7171322029716,
+          "band_edges_hz": [
+            653.5661812964398,
+            692.4292488049144
+          ],
+          "fft_bins": 20,
+          "source_mean_bin_power": 257.28344915634443,
+          "source_weighted_coherence": 0.9978537398292726,
+          "coherent_response_above_baseline_db": 25.83861088266726,
+          "h1_rms_magnitude_diagnostic": 0.4207276202645192,
+          "source_band_power_relative_db": -3.8227027956743873,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.4737777122412896
+        },
+        {
+          "frequency_hz": 712.7189745122715,
+          "band_edges_hz": [
+            692.4292488049144,
+            733.6032345637371
+          ],
+          "fft_bins": 20,
+          "source_mean_bin_power": 242.86338852005466,
+          "source_weighted_coherence": 0.9926551360496992,
+          "coherent_response_above_baseline_db": 21.12526551486799,
+          "h1_rms_magnitude_diagnostic": 0.40789040268947546,
+          "source_band_power_relative_db": -4.073200786902604,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.2046269721586396
+        },
+        {
+          "frequency_hz": 755.0994501453547,
+          "band_edges_hz": [
+            733.6032345637368,
+            777.2255529228846
+          ],
+          "fft_bins": 22,
+          "source_mean_bin_power": 229.3727379409412,
+          "source_weighted_coherence": 0.9952299264854306,
+          "coherent_response_above_baseline_db": 21.05887274651199,
+          "h1_rms_magnitude_diagnostic": 0.38318956792117526,
+          "source_band_power_relative_db": -4.321403302177142,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 1.6620307787613298
+        },
+        {
+          "frequency_hz": 800.0,
+          "band_edges_hz": [
+            777.2255529228846,
+            823.4417893147937
+          ],
+          "fft_bins": 23,
+          "source_mean_bin_power": 216.4595434551017,
+          "source_weighted_coherence": 0.995527468966276,
+          "coherent_response_above_baseline_db": 21.583574319474014,
+          "h1_rms_magnitude_diagnostic": 0.3856457077893064,
+          "source_band_power_relative_db": -4.573053907299071,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 1.7175272760721456
+        },
+        {
+          "frequency_hz": 847.5704754874363,
+          "band_edges_hz": [
+            823.4417893147937,
+            872.4061861322062
+          ],
+          "fft_bins": 25,
+          "source_mean_bin_power": 204.2072704666398,
+          "source_weighted_coherence": 0.9985851853163978,
+          "coherent_response_above_baseline_db": 27.12432522406736,
+          "h1_rms_magnitude_diagnostic": 0.4015124361356571,
+          "source_band_power_relative_db": -4.826109284784956,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 2.067737261416846
+        },
+        {
+          "frequency_hz": 897.9696386474982,
+          "band_edges_hz": [
+            872.4061861322059,
+            924.2821574978183
+          ],
+          "fft_bins": 26,
+          "source_mean_bin_power": 192.6199008018419,
+          "source_weighted_coherence": 0.9976614346044147,
+          "coherent_response_above_baseline_db": 23.80898672690774,
+          "h1_rms_magnitude_diagnostic": 0.29333848859163647,
+          "source_band_power_relative_db": -5.079809739859598,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.6588617655139661
+        },
+        {
+          "frequency_hz": 951.3656920021768,
+          "band_edges_hz": [
+            924.2821574978184,
+            979.2428346437242
+          ],
+          "fft_bins": 27,
+          "source_mean_bin_power": 181.89425895785487,
+          "source_weighted_coherence": 0.991025969044574,
+          "coherent_response_above_baseline_db": 20.02029117300209,
+          "h1_rms_magnitude_diagnostic": 0.2919754043781355,
+          "source_band_power_relative_db": -5.328631370017573,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.6993173931406725
+        },
+        {
+          "frequency_hz": 1000,
+          "band_edges_hz": [
+            971.5319411536058,
+            1029.302236643492
+          ],
+          "fft_bins": 29,
+          "source_mean_bin_power": 173.16638675885977,
+          "source_weighted_coherence": 0.967965455910603,
+          "coherent_response_above_baseline_db": 13.572597969500846,
+          "h1_rms_magnitude_diagnostic": 0.24408229844737167,
+          "source_band_power_relative_db": -5.542185336746574,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.2555170796679835
+        },
+        {
+          "frequency_hz": 1007.9368399158985,
+          "band_edges_hz": [
+            979.2428346437241,
+            1037.4716437208078
+          ],
+          "fft_bins": 29,
+          "source_mean_bin_power": 171.7940484380517,
+          "source_weighted_coherence": 0.969031683236018,
+          "coherent_response_above_baseline_db": 13.240215733769187,
+          "h1_rms_magnitude_diagnostic": 0.23266859983644292,
+          "source_band_power_relative_db": -5.576740146135406,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.6714872383929196
+        },
+        {
+          "frequency_hz": 1067.8718833360274,
+          "band_edges_hz": [
+            1037.4716437208076,
+            1099.1629179664712
+          ],
+          "fft_bins": 31,
+          "source_mean_bin_power": 162.14110620624962,
+          "source_weighted_coherence": 0.9968037571979327,
+          "coherent_response_above_baseline_db": 23.301509829379647,
+          "h1_rms_magnitude_diagnostic": 0.20944701176282987,
+          "source_band_power_relative_db": -5.827889971894055,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.5847593941794913
+        },
+        {
+          "frequency_hz": 1131.370849898476,
+          "band_edges_hz": [
+            1099.1629179664712,
+            1164.5225462737499
+          ],
+          "fft_bins": 33,
+          "source_mean_bin_power": 152.97592929245204,
+          "source_weighted_coherence": 0.9949858829511912,
+          "coherent_response_above_baseline_db": 18.21921835571162,
+          "h1_rms_magnitude_diagnostic": 0.1900684887630496,
+          "source_band_power_relative_db": -6.080590287384261,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.428040332095591
+        },
+        {
+          "frequency_hz": 1198.6456615013453,
+          "band_edges_hz": [
+            1164.5225462737499,
+            1233.7686603263528
+          ],
+          "fft_bins": 34,
+          "source_mean_bin_power": 144.4246343476425,
+          "source_weighted_coherence": 0.9969480089822237,
+          "coherent_response_above_baseline_db": 24.194267272915756,
+          "h1_rms_magnitude_diagnostic": 0.20104497981187744,
+          "source_band_power_relative_db": -6.330408521771146,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.940378104352486
+        },
+        {
+          "frequency_hz": 1269.9208415745595,
+          "band_edges_hz": [
+            1233.7686603263526,
+            1307.1323625928799
+          ],
+          "fft_bins": 37,
+          "source_mean_bin_power": 136.35257752461882,
+          "source_weighted_coherence": 0.9961129292725376,
+          "coherent_response_above_baseline_db": 22.16923534389007,
+          "h1_rms_magnitude_diagnostic": 0.21756431600971263,
+          "source_band_power_relative_db": -6.580187768620269,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.2544894510660507
+        },
+        {
+          "frequency_hz": 1345.4342644059432,
+          "band_edges_hz": [
+            1307.1323625928796,
+            1384.8584976098289
+          ],
+          "fft_bins": 39,
+          "source_mean_bin_power": 128.6531643508487,
+          "source_weighted_coherence": 0.9970054277863813,
+          "coherent_response_above_baseline_db": 20.390386646596287,
+          "h1_rms_magnitude_diagnostic": 0.18828431284302818,
+          "source_band_power_relative_db": -6.832616562742259,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.509960010995356
+        },
+        {
+          "frequency_hz": 1425.437949024543,
+          "band_edges_hz": [
+            1384.8584976098289,
+            1467.2064691274743
+          ],
+          "fft_bins": 41,
+          "source_mean_bin_power": 121.43515242020649,
+          "source_weighted_coherence": 0.9903889477603394,
+          "coherent_response_above_baseline_db": 19.16381325020506,
+          "h1_rms_magnitude_diagnostic": 0.1751669154317546,
+          "source_band_power_relative_db": -7.083377065905556,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.1372011168155565
+        },
+        {
+          "frequency_hz": 1510.1989002907094,
+          "band_edges_hz": [
+            1467.2064691274736,
+            1554.4511058457692
+          ],
+          "fft_bins": 44,
+          "source_mean_bin_power": 114.60478056428438,
+          "source_weighted_coherence": 0.9964569664598003,
+          "coherent_response_above_baseline_db": 21.88900783165974,
+          "h1_rms_magnitude_diagnostic": 0.16827787929092014,
+          "source_band_power_relative_db": -7.334793949073539,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.485702160741072
+        },
+        {
+          "frequency_hz": 1600.0,
+          "band_edges_hz": [
+            1554.4511058457692,
+            1646.8835786295874
+          ],
+          "fft_bins": 46,
+          "source_mean_bin_power": 108.16149662203003,
+          "source_weighted_coherence": 0.996684276119795,
+          "coherent_response_above_baseline_db": 23.07202630736718,
+          "h1_rms_magnitude_diagnostic": 0.1873807437748473,
+          "source_band_power_relative_db": -7.5860944091364,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.551743595617565
+        },
+        {
+          "frequency_hz": 1695.140950974872,
+          "band_edges_hz": [
+            1646.883578629587,
+            1744.812372264412
+          ],
+          "fft_bins": 49,
+          "source_mean_bin_power": 102.10327642482703,
+          "source_weighted_coherence": 0.9972670057611838,
+          "coherent_response_above_baseline_db": 25.086010690919487,
+          "h1_rms_magnitude_diagnostic": 0.21820321806148374,
+          "source_band_power_relative_db": -7.836424503253788,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.2290197395630376
+        },
+        {
+          "frequency_hz": 1795.9392772949973,
+          "band_edges_hz": [
+            1744.8123722644127,
+            1848.5643149956375
+          ],
+          "fft_bins": 52,
+          "source_mean_bin_power": 96.36461619868133,
+          "source_weighted_coherence": 0.9975659767566346,
+          "coherent_response_above_baseline_db": 26.55224785137235,
+          "h1_rms_magnitude_diagnostic": 0.2635044150652244,
+          "source_band_power_relative_db": -8.087645328173876,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -1.5904848391929907
+        },
+        {
+          "frequency_hz": 1902.7313840043537,
+          "band_edges_hz": [
+            1848.5643149956368,
+            1958.4856692874484
+          ],
+          "fft_bins": 55,
+          "source_mean_bin_power": 90.94910179327584,
+          "source_weighted_coherence": 0.9977796137184386,
+          "coherent_response_above_baseline_db": 23.208426962648417,
+          "h1_rms_magnitude_diagnostic": 0.3414979277767488,
+          "source_band_power_relative_db": -8.338837144910777,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 0.6615186891096059
+        },
+        {
+          "frequency_hz": 2000,
+          "band_edges_hz": [
+            1943.0638823072115,
+            2058.604473286984
+          ],
+          "fft_bins": 58,
+          "source_mean_bin_power": 86.5404457213782,
+          "source_weighted_coherence": 0.9972743654907615,
+          "coherent_response_above_baseline_db": 23.16367570913153,
+          "h1_rms_magnitude_diagnostic": 0.31645512847880586,
+          "source_band_power_relative_db": -8.554630011748344,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": 0.0
+        },
+        {
+          "frequency_hz": 2015.8736798317968,
+          "band_edges_hz": [
+            1958.485669287448,
+            2074.943287441615
+          ],
+          "fft_bins": 58,
+          "source_mean_bin_power": 85.85354785453079,
+          "source_weighted_coherence": 0.9969960626065831,
+          "coherent_response_above_baseline_db": 23.368085474219626,
+          "h1_rms_magnitude_diagnostic": 0.30686868852751253,
+          "source_band_power_relative_db": -8.589238819829696,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.2671912195341062
+        },
+        {
+          "frequency_hz": 2135.7437666720552,
+          "band_edges_hz": [
+            2074.9432874416157,
+            2198.325835932943
+          ],
+          "fft_bins": 62,
+          "source_mean_bin_power": 81.03300400819118,
+          "source_weighted_coherence": 0.9960336078594454,
+          "coherent_response_above_baseline_db": 21.335598837570984,
+          "h1_rms_magnitude_diagnostic": 0.30150463627689605,
+          "source_band_power_relative_db": -8.840201897341016,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.42036287044073517
+        },
+        {
+          "frequency_hz": 2262.741699796952,
+          "band_edges_hz": [
+            2198.3258359329425,
+            2329.0450925474997
+          ],
+          "fft_bins": 65,
+          "source_mean_bin_power": 76.48696028096352,
+          "source_weighted_coherence": 0.9971077122471873,
+          "coherent_response_above_baseline_db": 22.117529407029018,
+          "h1_rms_magnitude_diagnostic": 0.3115522631232261,
+          "source_band_power_relative_db": -9.09094727170904,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.1356245585127509
+        },
+        {
+          "frequency_hz": 2397.29132300269,
+          "band_edges_hz": [
+            2329.0450925474993,
+            2467.537320652705
+          ],
+          "fft_bins": 69,
+          "source_mean_bin_power": 72.21296680957248,
+          "source_weighted_coherence": 0.9964759679286372,
+          "coherent_response_above_baseline_db": 25.364229663813752,
+          "h1_rms_magnitude_diagnostic": 0.2893202793487525,
+          "source_band_power_relative_db": -9.340669408628408,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -0.7786652500383997
+        },
+        {
+          "frequency_hz": 2539.8416831491195,
+          "band_edges_hz": [
+            2467.5373206527056,
+            2614.26472518576
+          ],
+          "fft_bins": 74,
+          "source_mean_bin_power": 68.14949774440295,
+          "source_weighted_coherence": 0.995679127079209,
+          "coherent_response_above_baseline_db": 24.867760671649375,
+          "h1_rms_magnitude_diagnostic": 0.2714046073599651,
+          "source_band_power_relative_db": -9.592194693793223,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -1.3338984458317207
+        },
+        {
+          "frequency_hz": 2690.8685288118863,
+          "band_edges_hz": [
+            2614.2647251857593,
+            2769.7169952196577
+          ],
+          "fft_bins": 77,
+          "source_mean_bin_power": 64.32620109022389,
+          "source_weighted_coherence": 0.9884196759600665,
+          "coherent_response_above_baseline_db": 19.591416405887678,
+          "h1_rms_magnitude_diagnostic": 0.17144186728678248,
+          "source_band_power_relative_db": -9.84294224804421,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.323905000111103
+        },
+        {
+          "frequency_hz": 2850.875898049085,
+          "band_edges_hz": [
+            2769.716995219657,
+            2934.4129382549477
+          ],
+          "fft_bins": 83,
+          "source_mean_bin_power": 60.71802001491162,
+          "source_weighted_coherence": 0.9789722814538149,
+          "coherent_response_above_baseline_db": 16.276288904410144,
+          "h1_rms_magnitude_diagnostic": 0.10338693270894919,
+          "source_band_power_relative_db": -10.093645278644024,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -9.71692974833118
+        },
+        {
+          "frequency_hz": 3020.3978005814197,
+          "band_edges_hz": [
+            2934.412938254948,
+            3108.9022116915394
+          ],
+          "fft_bins": 87,
+          "source_mean_bin_power": 57.302034938655595,
+          "source_weighted_coherence": 0.9890966628766513,
+          "coherent_response_above_baseline_db": 17.83963689520905,
+          "h1_rms_magnitude_diagnostic": 0.11028666028800224,
+          "source_band_power_relative_db": -10.345120837258989,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -9.15578305365006
+        },
+        {
+          "frequency_hz": 3200.0,
+          "band_edges_hz": [
+            3108.9022116915385,
+            3293.767157259175
+          ],
+          "fft_bins": 92,
+          "source_mean_bin_power": 54.09765748582925,
+          "source_weighted_coherence": 0.9915509913131636,
+          "coherent_response_above_baseline_db": 21.017871071979922,
+          "h1_rms_magnitude_diagnostic": 0.1803709024076088,
+          "source_band_power_relative_db": -10.595036689755554,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.882913203287405
+        },
+        {
+          "frequency_hz": 3390.281901949744,
+          "band_edges_hz": [
+            3293.767157259174,
+            3489.624744528824
+          ],
+          "fft_bins": 98,
+          "source_mean_bin_power": 51.06668606879743,
+          "source_weighted_coherence": 0.9937881100146033,
+          "coherent_response_above_baseline_db": 22.67500397131206,
+          "h1_rms_magnitude_diagnostic": 0.19225699580702912,
+          "source_band_power_relative_db": -10.84544453269438,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.328599729530614
+        },
+        {
+          "frequency_hz": 3591.8785545899946,
+          "band_edges_hz": [
+            3489.6247445288254,
+            3697.128629991275
+          ],
+          "fft_bins": 104,
+          "source_mean_bin_power": 48.195729066056224,
+          "source_weighted_coherence": 0.9947464753931998,
+          "coherent_response_above_baseline_db": 23.8539308105584,
+          "h1_rms_magnitude_diagnostic": 0.21888698904296952,
+          "source_band_power_relative_db": -11.096735745380125,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.2018438201246804
+        },
+        {
+          "frequency_hz": 3805.4627680087074,
+          "band_edges_hz": [
+            3697.1286299912736,
+            3916.971338574897
+          ],
+          "fft_bins": 110,
+          "source_mean_bin_power": 45.48650812502894,
+          "source_weighted_coherence": 0.9944116483976988,
+          "coherent_response_above_baseline_db": 25.26834777167698,
+          "h1_rms_magnitude_diagnostic": 0.22984316575576805,
+          "source_band_power_relative_db": -11.34799530342404,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.77761086905586
+        },
+        {
+          "frequency_hz": 4000,
+          "band_edges_hz": [
+            3886.127764614423,
+            4117.208946573968
+          ],
+          "fft_bins": 115,
+          "source_mean_bin_power": 43.270019383788586,
+          "source_weighted_coherence": 0.9939166118655773,
+          "coherent_response_above_baseline_db": 23.772511160715844,
+          "h1_rms_magnitude_diagnostic": 0.22728873673147149,
+          "source_band_power_relative_db": -11.564950391001451,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -2.87468446821989
+        },
+        {
+          "frequency_hz": 4031.7473596635937,
+          "band_edges_hz": [
+            3916.971338574896,
+            4149.88657488323
+          ],
+          "fft_bins": 116,
+          "source_mean_bin_power": 42.93742752079738,
+          "source_weighted_coherence": 0.9937731583784194,
+          "coherent_response_above_baseline_db": 23.445632830345538,
+          "h1_rms_magnitude_diagnostic": 0.2220300893955979,
+          "source_band_power_relative_db": -11.598461075441817,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -3.0780060893044454
+        },
+        {
+          "frequency_hz": 4271.4875333441105,
+          "band_edges_hz": [
+            4149.886574883231,
+            4396.651671865886
+          ],
+          "fft_bins": 124,
+          "source_mean_bin_power": 40.52597707121763,
+          "source_weighted_coherence": 0.993015160403946,
+          "coherent_response_above_baseline_db": 22.490291133859586,
+          "h1_rms_magnitude_diagnostic": 0.1993638909950785,
+          "source_band_power_relative_db": -11.84948634472384,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -4.013312740891008
+        },
+        {
+          "frequency_hz": 4525.483399593904,
+          "band_edges_hz": [
+            4396.651671865885,
+            4658.0901850949995
+          ],
+          "fft_bins": 131,
+          "source_mean_bin_power": 38.24364876248805,
+          "source_weighted_coherence": 0.9918583331478598,
+          "coherent_response_above_baseline_db": 24.624963109866375,
+          "h1_rms_magnitude_diagnostic": 0.17447759935519558,
+          "source_band_power_relative_db": -12.10122807960895,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -5.171449222365965
+        },
+        {
+          "frequency_hz": 4794.58264600538,
+          "band_edges_hz": [
+            4658.090185094999,
+            4935.07464130541
+          ],
+          "fft_bins": 138,
+          "source_mean_bin_power": 36.09894461094338,
+          "source_weighted_coherence": 0.9897859073534313,
+          "coherent_response_above_baseline_db": 19.754257051268368,
+          "h1_rms_magnitude_diagnostic": 0.13024627615464687,
+          "source_band_power_relative_db": -12.35187623796963,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.710936458631642
+        },
+        {
+          "frequency_hz": 5079.683366298239,
+          "band_edges_hz": [
+            4935.074641305411,
+            5228.52945037152
+          ],
+          "fft_bins": 147,
+          "source_mean_bin_power": 34.074614891665775,
+          "source_weighted_coherence": 0.9852600935068317,
+          "coherent_response_above_baseline_db": 16.374540693979746,
+          "h1_rms_magnitude_diagnostic": 0.0843476921855422,
+          "source_band_power_relative_db": -12.602511726750148,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.484778675601227
+        },
+        {
+          "frequency_hz": 5381.737057623773,
+          "band_edges_hz": [
+            5228.529450371519,
+            5539.4339904393155
+          ],
+          "fft_bins": 155,
+          "source_mean_bin_power": 32.163270385623335,
+          "source_weighted_coherence": 0.981968648292884,
+          "coherent_response_above_baseline_db": 17.075110957643524,
+          "h1_rms_magnitude_diagnostic": 0.07577602858139428,
+          "source_band_power_relative_db": -12.853219271384402,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -12.415605961489142
+        },
+        {
+          "frequency_hz": 5701.75179609817,
+          "band_edges_hz": [
+            5539.433990439314,
+            5868.825876509895
+          ],
+          "fft_bins": 165,
+          "source_mean_bin_power": 30.359043028943663,
+          "source_weighted_coherence": 0.9846780512877664,
+          "coherent_response_above_baseline_db": 19.976049497875042,
+          "h1_rms_magnitude_diagnostic": 0.08756254691733704,
+          "source_band_power_relative_db": -13.103940511466375,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.159875058442077
+        },
+        {
+          "frequency_hz": 6040.795601162839,
+          "band_edges_hz": [
+            5868.825876509896,
+            6217.804423383079
+          ],
+          "fft_bins": 174,
+          "source_mean_bin_power": 28.65626454533857,
+          "source_weighted_coherence": 0.98563565567627,
+          "coherent_response_above_baseline_db": 22.098471185543175,
+          "h1_rms_magnitude_diagnostic": 0.12038376932542466,
+          "source_band_power_relative_db": -13.354625510617563,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.394884017925246
+        },
+        {
+          "frequency_hz": 6400.0,
+          "band_edges_hz": [
+            6217.804423383077,
+            6587.53431451835
+          ],
+          "fft_bins": 185,
+          "source_mean_bin_power": 27.04779271412201,
+          "source_weighted_coherence": 0.9844098811803985,
+          "coherent_response_above_baseline_db": 23.42796886075144,
+          "h1_rms_magnitude_diagnostic": 0.12236551672100603,
+          "source_band_power_relative_db": -13.605502993784784,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.253061795764864
+        },
+        {
+          "frequency_hz": 6780.563803899488,
+          "band_edges_hz": [
+            6587.534314518348,
+            6979.249489057648
+          ],
+          "fft_bins": 196,
+          "source_mean_bin_power": 25.543835926164093,
+          "source_weighted_coherence": 0.9786656577738491,
+          "coherent_response_above_baseline_db": 21.355717913676123,
+          "h1_rms_magnitude_diagnostic": 0.08008502833527112,
+          "source_band_power_relative_db": -13.853960128823392,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.935216093602408
+        },
+        {
+          "frequency_hz": 7183.757109179989,
+          "band_edges_hz": [
+            6979.249489057651,
+            7394.25725998255
+          ],
+          "fft_bins": 208,
+          "source_mean_bin_power": 23.914139859070264,
+          "source_weighted_coherence": 0.9723940101760977,
+          "coherent_response_above_baseline_db": 18.44708145356161,
+          "h1_rms_magnitude_diagnostic": 0.05996807472304699,
+          "source_band_power_relative_db": -14.140273640142173,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -14.447840644603518
+        },
+        {
+          "frequency_hz": 7610.925536017415,
+          "band_edges_hz": [
+            7394.257259982547,
+            7833.942677149794
+          ],
+          "fft_bins": 219,
+          "source_mean_bin_power": 21.858741040276414,
+          "source_weighted_coherence": 0.9754011243575312,
+          "coherent_response_above_baseline_db": 24.575682006509144,
+          "h1_rms_magnitude_diagnostic": 0.09861718825365053,
+          "source_band_power_relative_db": -14.5305698381764,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -10.127190447352747
+        },
+        {
+          "frequency_hz": 8000,
+          "band_edges_hz": [
+            7772.255529228846,
+            8234.417893147936
+          ],
+          "fft_bins": 231,
+          "source_mean_bin_power": 19.727828378247555,
+          "source_weighted_coherence": 0.9766961511688649,
+          "coherent_response_above_baseline_db": 26.940392977852056,
+          "h1_rms_magnitude_diagnostic": 0.12824758457898625,
+          "source_band_power_relative_db": -14.976028477169528,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.845258878305971
+        },
+        {
+          "frequency_hz": 8063.494719327187,
+          "band_edges_hz": [
+            7833.942677149792,
+            8299.77314976646
+          ],
+          "fft_bins": 233,
+          "source_mean_bin_power": 19.378865303033542,
+          "source_weighted_coherence": 0.976604500304747,
+          "coherent_response_above_baseline_db": 27.04818374237439,
+          "h1_rms_magnitude_diagnostic": 0.1303253667298268,
+          "source_band_power_relative_db": -15.053537847770242,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.705663651345969
+        },
+        {
+          "frequency_hz": 8542.975066688221,
+          "band_edges_hz": [
+            8299.773149766463,
+            8793.303343731772
+          ],
+          "fft_bins": 247,
+          "source_mean_bin_power": 16.654288493515555,
+          "source_weighted_coherence": 0.9735220285800403,
+          "coherent_response_above_baseline_db": 26.368664417285615,
+          "h1_rms_magnitude_diagnostic": 0.12514813534253497,
+          "source_band_power_relative_db": -15.711560454077443,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.057755101525013
+        },
+        {
+          "frequency_hz": 9050.966799187809,
+          "band_edges_hz": [
+            8793.30334373177,
+            9316.180370189999
+          ],
+          "fft_bins": 262,
+          "source_mean_bin_power": 13.854395347214442,
+          "source_weighted_coherence": 0.9671428726291219,
+          "coherent_response_above_baseline_db": 23.538730062529524,
+          "h1_rms_magnitude_diagnostic": 0.08690997980695335,
+          "source_band_power_relative_db": -16.510945524027907,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -11.224849784720416
+        },
+        {
+          "frequency_hz": 9589.16529201076,
+          "band_edges_hz": [
+            9316.180370189997,
+            9870.14928261082
+          ],
+          "fft_bins": 277,
+          "source_mean_bin_power": 11.13517569864997,
+          "source_weighted_coherence": 0.9663974786904875,
+          "coherent_response_above_baseline_db": 25.342974862531555,
+          "h1_rms_magnitude_diagnostic": 0.11739341326893617,
+          "source_band_power_relative_db": -17.45985054822461,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.613368162649383
+        },
+        {
+          "frequency_hz": 10159.366732596478,
+          "band_edges_hz": [
+            9870.149282610822,
+            10457.05890074304
+          ],
+          "fft_bins": 293,
+          "source_mean_bin_power": 8.625435029574753,
+          "source_weighted_coherence": 0.9625911519061904,
+          "coherent_response_above_baseline_db": 26.58580308631899,
+          "h1_rms_magnitude_diagnostic": 0.12036332724121253,
+          "source_band_power_relative_db": -18.569011206211318,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.396359073619768
+        },
+        {
+          "frequency_hz": 10763.474115247545,
+          "band_edges_hz": [
+            10457.058900743037,
+            11078.867980878631
+          ],
+          "fft_bins": 311,
+          "source_mean_bin_power": 6.411732302224391,
+          "source_weighted_coherence": 0.957672881921662,
+          "coherent_response_above_baseline_db": 23.773888258093955,
+          "h1_rms_magnitude_diagnostic": 0.11366322780328514,
+          "source_band_power_relative_db": -19.85706747123618,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -8.893843065887307
+        },
+        {
+          "frequency_hz": 11403.50359219634,
+          "band_edges_hz": [
+            11078.867980878627,
+            11737.65175301979
+          ],
+          "fft_bins": 329,
+          "source_mean_bin_power": 4.549816357472994,
+          "source_weighted_coherence": 0.9514705198466857,
+          "coherent_response_above_baseline_db": 22.646739634006266,
+          "h1_rms_magnitude_diagnostic": 0.10156783255079276,
+          "source_band_power_relative_db": -21.346882611050177,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -9.871119070225502
+        },
+        {
+          "frequency_hz": 12000,
+          "band_edges_hz": [
+            11658.38329384327,
+            12351.626839721905
+          ],
+          "fft_bins": 346,
+          "source_mean_bin_power": 3.2148824248687164,
+          "source_weighted_coherence": 0.9485943443225276,
+          "coherent_response_above_baseline_db": 22.929577284350685,
+          "h1_rms_magnitude_diagnostic": 0.13162035917770412,
+          "source_band_power_relative_db": -22.855170343790732,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.619781332907446
+        },
+        {
+          "frequency_hz": 12081.591202325679,
+          "band_edges_hz": [
+            11737.651753019793,
+            12435.608846766158
+          ],
+          "fft_bins": 349,
+          "source_mean_bin_power": 3.0605298887824417,
+          "source_weighted_coherence": 0.9475476669245505,
+          "coherent_response_above_baseline_db": 23.022795729027486,
+          "h1_rms_magnitude_diagnostic": 0.13435120402669493,
+          "source_band_power_relative_db": -23.068855037251836,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.441411508257535
+        },
+        {
+          "frequency_hz": 12800.0,
+          "band_edges_hz": [
+            12435.608846766154,
+            13175.0686290367
+          ],
+          "fft_bins": 370,
+          "source_mean_bin_power": 1.9314024803968188,
+          "source_weighted_coherence": 0.9351516234436784,
+          "coherent_response_above_baseline_db": 20.407824652198542,
+          "h1_rms_magnitude_diagnostic": 0.13106564832284306,
+          "source_band_power_relative_db": -25.06809344040225,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -7.656465162959711
+        },
+        {
+          "frequency_hz": 13561.127607798977,
+          "band_edges_hz": [
+            13175.068629036696,
+            13958.498978115296
+          ],
+          "fft_bins": 392,
+          "source_mean_bin_power": 1.127593708849006,
+          "source_weighted_coherence": 0.9153034183120796,
+          "coherent_response_above_baseline_db": 17.515977605745604,
+          "h1_rms_magnitude_diagnostic": 0.09604962441161705,
+          "source_band_power_relative_db": -27.40529484691325,
+          "accepted": true,
+          "rejection_reasons": [],
+          "relative_to_2khz_db": -10.356329345985644
+        },
+        {
+          "frequency_hz": 14367.514218359978,
+          "band_edges_hz": [
+            13958.498978115302,
+            14788.5145199651
+          ],
+          "fft_bins": 415,
+          "source_mean_bin_power": 0.5965602351538165,
+          "source_weighted_coherence": 0.8882346001574695,
+          "coherent_response_above_baseline_db": 14.718301529907201,
+          "h1_rms_magnitude_diagnostic": 0.09008263295042125,
+          "source_band_power_relative_db": -30.170278275769288,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 15221.85107203483,
+          "band_edges_hz": [
+            14788.514519965094,
+            15667.885354299588
+          ],
+          "fft_bins": 439,
+          "source_mean_bin_power": 0.27689962929404666,
+          "source_weighted_coherence": 0.7646941817461745,
+          "coherent_response_above_baseline_db": 8.662059516612967,
+          "h1_rms_magnitude_diagnostic": 0.06316197704634324,
+          "source_band_power_relative_db": -33.50359754527082,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 16000,
+          "band_edges_hz": [
+            15544.511058457692,
+            16468.835786295873
+          ],
+          "fft_bins": 462,
+          "source_mean_bin_power": 0.12302252493773325,
+          "source_weighted_coherence": 0.62082282073588,
+          "coherent_response_above_baseline_db": 4.123938123902866,
+          "h1_rms_magnitude_diagnostic": 0.055046749553781096,
+          "source_band_power_relative_db": -37.026974925291306,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 16126.989438654375,
+          "band_edges_hz": [
+            15667.885354299584,
+            16599.54629953292
+          ],
+          "fft_bins": 466,
+          "source_mean_bin_power": 0.10655328356491041,
+          "source_weighted_coherence": 0.5891843956950467,
+          "coherent_response_above_baseline_db": 2.8753524143570175,
+          "h1_rms_magnitude_diagnostic": 0.05311173905189601,
+          "source_band_power_relative_db": -37.651152912986745,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 17085.950133376442,
+          "band_edges_hz": [
+            16599.546299532925,
+            17586.606687463543
+          ],
+          "fft_bins": 494,
+          "source_mean_bin_power": 0.030531048421633653,
+          "source_weighted_coherence": 0.35258418415063697,
+          "coherent_response_above_baseline_db": -1.8963149392148515,
+          "h1_rms_magnitude_diagnostic": 0.054858323744570316,
+          "source_band_power_relative_db": -43.07940410831001,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 18000,
+          "band_edges_hz": [
+            17487.574940764905,
+            18527.440259582858
+          ],
+          "fft_bins": 520,
+          "source_mean_bin_power": 0.006367090594611397,
+          "source_weighted_coherence": 0.11351585361114168,
+          "coherent_response_above_baseline_db": -8.804153331648836,
+          "h1_rms_magnitude_diagnostic": 0.047756483585573745,
+          "source_band_power_relative_db": -49.88741099552584,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 18101.933598375617,
+          "band_edges_hz": [
+            17586.60668746354,
+            18632.360740379998
+          ],
+          "fft_bins": 523,
+          "source_mean_bin_power": 0.0051528729387178155,
+          "source_weighted_coherence": 0.0964427097006969,
+          "coherent_response_above_baseline_db": -9.43526728072366,
+          "h1_rms_magnitude_diagnostic": 0.049641406475768805,
+          "source_band_power_relative_db": -50.80632695237982,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 19178.33058402152,
+          "band_edges_hz": [
+            18632.360740379994,
+            19740.29856522164
+          ],
+          "fft_bins": 554,
+          "source_mean_bin_power": 0.0002666458111577992,
+          "source_weighted_coherence": 0.05999033323947244,
+          "coherent_response_above_baseline_db": -12.42702704390531,
+          "h1_rms_magnitude_diagnostic": 0.19241020324613678,
+          "source_band_power_relative_db": -63.66747363278538,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        },
+        {
+          "frequency_hz": 20000,
+          "band_edges_hz": [
+            19430.638823072117,
+            20586.044732869843
+          ],
+          "fft_bins": 578,
+          "source_mean_bin_power": 6.468549166418629e-06,
+          "source_weighted_coherence": 0.051774771901467835,
+          "coherent_response_above_baseline_db": -12.253356915588098,
+          "h1_rms_magnitude_diagnostic": 1.2137600384558243,
+          "source_band_power_relative_db": -79.81875245349951,
+          "accepted": false,
+          "rejection_reasons": [
+            "weak_source_excitation",
+            "low_repeat_coherence",
+            "response_not_above_baseline"
+          ],
+          "relative_to_2khz_db": null
+        }
+      ],
+      "accepted_band_count": 84,
+      "reference_frequency_hz": 2000,
+      "acoustic_spl_calibrated": false,
+      "microphone_frequency_correction_applied": false,
+      "isolated_loudspeaker_response": false,
+      "thd_measured": false,
+      "measured_delay_ms": null,
+      "local_run": "20261023-155500-roundtrip-repeat",
+      "source_float32_array_bytes_sha256": "e4f92e960ce3b05339870dbfad8ba8fe8a44042b108dbadb80d42341287a859c",
+      "source_npy_file_sha256": "4931a9848284a3b17e11ad7edb00ca00bb2fdb221b2379113555d83f93c16e97",
+      "capture_npz_sha256": "e14be5e94a9cab3b294c3df7e815807d8036c753fd0bb0a6e9556b6cc79f7f95",
+      "manifest_sha256": "cd96f5b403c214e9beb42f7948caf9ee89604e2850977c18288f29eb8f74fa49",
+      "captured_frames": 1113600,
+      "native_acquisition_metadata_verified": true,
+      "raw_callback_timestamps_rechecked": true,
+      "transport_errors": []
+    }
+  ],
+  "combined_magnitude_bands": [
+    {
+      "frequency_hz": 100.0,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 105.94630943592954,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 112.2462048309373,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 118.9207115002721,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 125.99210498948732,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 133.48398541700342,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 141.4213562373095,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 149.83070768766817,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 158.74010519681994,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.937620006682189,
+      "run_to_run_range_db": 0.054084321615635034
+    },
+    {
+      "frequency_hz": 168.1792830507429,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 7.117471437581771,
+      "run_to_run_range_db": 0.0802351634566616
+    },
+    {
+      "frequency_hz": 178.17974362806785,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.891967412086263,
+      "run_to_run_range_db": 0.07486232296688566
+    },
+    {
+      "frequency_hz": 188.77486253633867,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.518489207911543,
+      "run_to_run_range_db": 0.08155643345221453
+    },
+    {
+      "frequency_hz": 200.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.0749232349698055,
+      "run_to_run_range_db": 0.05677505221795531
+    },
+    {
+      "frequency_hz": 211.89261887185907,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.88637331581093,
+      "run_to_run_range_db": 0.0314614808428777
+    },
+    {
+      "frequency_hz": 224.4924096618746,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.642507577775917,
+      "run_to_run_range_db": 0.0732463124419418
+    },
+    {
+      "frequency_hz": 237.8414230005442,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.672328239948502,
+      "run_to_run_range_db": 0.05661738842206443
+    },
+    {
+      "frequency_hz": 251.98420997897463,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.715910018167175,
+      "run_to_run_range_db": 0.09620397664072655
+    },
+    {
+      "frequency_hz": 266.96797083400685,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.198188195641377,
+      "run_to_run_range_db": 0.08151383971242243
+    },
+    {
+      "frequency_hz": 282.842712474619,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.911488320959167,
+      "run_to_run_range_db": 0.1676144494139633
+    },
+    {
+      "frequency_hz": 299.66141537533633,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.903259878207923,
+      "run_to_run_range_db": 0.12294734940826135
+    },
+    {
+      "frequency_hz": 317.48021039363994,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.749171349636847,
+      "run_to_run_range_db": 0.14117781681488673
+    },
+    {
+      "frequency_hz": 336.3585661014858,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.7858233728364254,
+      "run_to_run_range_db": 0.03744806129791112
+    },
+    {
+      "frequency_hz": 356.3594872561357,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 7.327660996964269,
+      "run_to_run_range_db": 0.04570591118353651
+    },
+    {
+      "frequency_hz": 377.5497250726774,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 7.3075800308331305,
+      "run_to_run_range_db": 0.05677385582625938
+    },
+    {
+      "frequency_hz": 400.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.240563574387499,
+      "run_to_run_range_db": 0.0693125236384926
+    },
+    {
+      "frequency_hz": 423.78523774371814,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.4601359806076495,
+      "run_to_run_range_db": 0.1769914946823965
+    },
+    {
+      "frequency_hz": 448.9848193237491,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.699630578598141,
+      "run_to_run_range_db": 0.1452458111312689
+    },
+    {
+      "frequency_hz": 475.6828460010884,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 7.6712201583275785,
+      "run_to_run_range_db": 0.06394562189112296
+    },
+    {
+      "frequency_hz": 500,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.270480357736682,
+      "run_to_run_range_db": 0.25051644066346856
+    },
+    {
+      "frequency_hz": 503.96841995794927,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 6.261219697296122,
+      "run_to_run_range_db": 0.2519795523525721
+    },
+    {
+      "frequency_hz": 533.9359416680137,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 5.740020169998733,
+      "run_to_run_range_db": 0.21992794188441245
+    },
+    {
+      "frequency_hz": 565.685424949238,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 4.440386429874246,
+      "run_to_run_range_db": 0.24294909927081854
+    },
+    {
+      "frequency_hz": 599.3228307506727,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 3.930360678237416,
+      "run_to_run_range_db": 0.011477579632697132
+    },
+    {
+      "frequency_hz": 634.9604207872798,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 2.82560735273995,
+      "run_to_run_range_db": 0.1707413689846775
+    },
+    {
+      "frequency_hz": 672.7171322029716,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 2.545098368519155,
+      "run_to_run_range_db": 0.14264131255573043
+    },
+    {
+      "frequency_hz": 712.7189745122715,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 2.399358721312833,
+      "run_to_run_range_db": 0.3894634983083871
+    },
+    {
+      "frequency_hz": 755.0994501453547,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 1.6657834288508069,
+      "run_to_run_range_db": 0.007505300178954233
+    },
+    {
+      "frequency_hz": 800.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 1.6077368143120239,
+      "run_to_run_range_db": 0.2195809235202435
+    },
+    {
+      "frequency_hz": 847.5704754874363,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 1.9262664625289978,
+      "run_to_run_range_db": 0.2829415977756966
+    },
+    {
+      "frequency_hz": 897.9696386474982,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.2996523723908651,
+      "run_to_run_range_db": 0.718418786246202
+    },
+    {
+      "frequency_hz": 951.3656920021768,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.5487818887646505,
+      "run_to_run_range_db": 0.301071008752044
+    },
+    {
+      "frequency_hz": 1000,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -2.3952264097980835,
+      "run_to_run_range_db": 0.2794186602602
+    },
+    {
+      "frequency_hz": 1007.9368399158985,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -2.8009055622995915,
+      "run_to_run_range_db": 0.2588366478133439
+    },
+    {
+      "frequency_hz": 1067.8718833360274,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.5802425428592937,
+      "run_to_run_range_db": 0.00903370264039527
+    },
+    {
+      "frequency_hz": 1131.370849898476,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.418119428153634,
+      "run_to_run_range_db": 0.0198418078839131
+    },
+    {
+      "frequency_hz": 1198.6456615013453,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.806717912675098,
+      "run_to_run_range_db": 0.26732038335477615
+    },
+    {
+      "frequency_hz": 1269.9208415745595,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.2315330339718726,
+      "run_to_run_range_db": 0.04591283418835612
+    },
+    {
+      "frequency_hz": 1345.4342644059432,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.55699824481358,
+      "run_to_run_range_db": 0.09407646763644806
+    },
+    {
+      "frequency_hz": 1425.437949024543,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.965845926403839,
+      "run_to_run_range_db": 0.3427103808234344
+    },
+    {
+      "frequency_hz": 1510.1989002907094,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -5.531828966919051,
+      "run_to_run_range_db": 0.09225361235595653
+    },
+    {
+      "frequency_hz": 1600.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.523970699657967,
+      "run_to_run_range_db": 0.05554579191919462
+    },
+    {
+      "frequency_hz": 1695.140950974872,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.147066526290957,
+      "run_to_run_range_db": 0.16390642654416032
+    },
+    {
+      "frequency_hz": 1795.9392772949973,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -1.5601374607146394,
+      "run_to_run_range_db": 0.060694756956702234
+    },
+    {
+      "frequency_hz": 1902.7313840043537,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 0.6810178430534065,
+      "run_to_run_range_db": 0.03899830788760128
+    },
+    {
+      "frequency_hz": 2000,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": 0.0,
+      "run_to_run_range_db": 0.0
+    },
+    {
+      "frequency_hz": 2015.8736798317968,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.24169478524528054,
+      "run_to_run_range_db": 0.05099286857765126
+    },
+    {
+      "frequency_hz": 2135.7437666720552,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.39748814548994815,
+      "run_to_run_range_db": 0.045749449901574035
+    },
+    {
+      "frequency_hz": 2262.741699796952,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.1427335153944791,
+      "run_to_run_range_db": 0.014217913763456408
+    },
+    {
+      "frequency_hz": 2397.29132300269,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -0.6944866058265107,
+      "run_to_run_range_db": 0.16835728842377795
+    },
+    {
+      "frequency_hz": 2539.8416831491195,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -1.3357779947728856,
+      "run_to_run_range_db": 0.003759097882329865
+    },
+    {
+      "frequency_hz": 2690.8685288118863,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -5.30889148423951,
+      "run_to_run_range_db": 0.03002703174318544
+    },
+    {
+      "frequency_hz": 2850.875898049085,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -9.708389548293137,
+      "run_to_run_range_db": 0.017080400076086022
+    },
+    {
+      "frequency_hz": 3020.3978005814197,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -9.013521261540596,
+      "run_to_run_range_db": 0.28452358421892576
+    },
+    {
+      "frequency_hz": 3200.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.903599789699975,
+      "run_to_run_range_db": 0.04137317282513919
+    },
+    {
+      "frequency_hz": 3390.281901949744,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -4.258746729036542,
+      "run_to_run_range_db": 0.13970600098814412
+    },
+    {
+      "frequency_hz": 3591.8785545899946,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.1731065882104543,
+      "run_to_run_range_db": 0.057474463828452116
+    },
+    {
+      "frequency_hz": 3805.4627680087074,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -2.7480493002850936,
+      "run_to_run_range_db": 0.05912313754153198
+    },
+    {
+      "frequency_hz": 4000,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -2.8401575958189893,
+      "run_to_run_range_db": 0.06905374480180138
+    },
+    {
+      "frequency_hz": 4031.7473596635937,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.016885911400865,
+      "run_to_run_range_db": 0.1222403558071612
+    },
+    {
+      "frequency_hz": 4271.4875333441105,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -3.9848419779449147,
+      "run_to_run_range_db": 0.05694152589218682
+    },
+    {
+      "frequency_hz": 4525.483399593904,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -5.174753411003138,
+      "run_to_run_range_db": 0.006608377274346822
+    },
+    {
+      "frequency_hz": 4794.58264600538,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.663632156950668,
+      "run_to_run_range_db": 0.09460860336194798
+    },
+    {
+      "frequency_hz": 5079.683366298239,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -11.390704862629669,
+      "run_to_run_range_db": 0.18814762594311674
+    },
+    {
+      "frequency_hz": 5381.737057623773,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -12.478822757104226,
+      "run_to_run_range_db": 0.12643359123016928
+    },
+    {
+      "frequency_hz": 5701.75179609817,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -11.083960781336472,
+      "run_to_run_range_db": 0.1518285542112121
+    },
+    {
+      "frequency_hz": 6040.795601162839,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.339279152709336,
+      "run_to_run_range_db": 0.11120973043182047
+    },
+    {
+      "frequency_hz": 6400.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.224721466344857,
+      "run_to_run_range_db": 0.05668065884001372
+    },
+    {
+      "frequency_hz": 6780.563803899488,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -11.889654212419934,
+      "run_to_run_range_db": 0.0911237623649459
+    },
+    {
+      "frequency_hz": 7183.757109179989,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -14.37625715889784,
+      "run_to_run_range_db": 0.14316697141135748
+    },
+    {
+      "frequency_hz": 7610.925536017415,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -10.102667805023723,
+      "run_to_run_range_db": 0.04904528465804958
+    },
+    {
+      "frequency_hz": 8000,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.800004977210026,
+      "run_to_run_range_db": 0.09050780219189125
+    },
+    {
+      "frequency_hz": 8063.494719327187,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.653742455827892,
+      "run_to_run_range_db": 0.10384239103615212
+    },
+    {
+      "frequency_hz": 8542.975066688221,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.011967167762517,
+      "run_to_run_range_db": 0.09157586752498936
+    },
+    {
+      "frequency_hz": 9050.966799187809,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -11.185628713315063,
+      "run_to_run_range_db": 0.0784421428107045
+    },
+    {
+      "frequency_hz": 9589.16529201076,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.559233394043504,
+      "run_to_run_range_db": 0.1082695372117577
+    },
+    {
+      "frequency_hz": 10159.366732596478,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.337197622569509,
+      "run_to_run_range_db": 0.11832290210051966
+    },
+    {
+      "frequency_hz": 10763.474115247545,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -8.840901709060315,
+      "run_to_run_range_db": 0.10588271365398327
+    },
+    {
+      "frequency_hz": 11403.50359219634,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -9.826015985166727,
+      "run_to_run_range_db": 0.0902061701175505
+    },
+    {
+      "frequency_hz": 12000,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.55847625549626,
+      "run_to_run_range_db": 0.1226101548223717
+    },
+    {
+      "frequency_hz": 12081.591202325679,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.385149256410401,
+      "run_to_run_range_db": 0.11252450369426903
+    },
+    {
+      "frequency_hz": 12800.0,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -7.6074527980733855,
+      "run_to_run_range_db": 0.09802472977265264
+    },
+    {
+      "frequency_hz": 13561.127607798977,
+      "accepted_in_all_runs": true,
+      "median_relative_to_2khz_db": -10.298141729032416,
+      "run_to_run_range_db": 0.11637523390645654
+    },
+    {
+      "frequency_hz": 14367.514218359978,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 15221.85107203483,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 16000,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 16126.989438654375,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 17085.950133376442,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 18000,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 18101.933598375617,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 19178.33058402152,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    },
+    {
+      "frequency_hz": 20000,
+      "accepted_in_all_runs": false,
+      "median_relative_to_2khz_db": null,
+      "run_to_run_range_db": null
+    }
+  ],
+  "combination_rule": "Each run has its own complex H1. Combine qualified relative magnitude levels only; never average complex spectra across streams with different delays.",
+  "acoustic_spl_calibrated": false,
+  "microphone_frequency_correction_applied": false,
+  "thd_measured": false,
+  "raw_room_audio_published": false,
+  "limitations": [
+    "Short log-chirp end ramps severely weaken excitation near 20 kHz. Unsupported endpoint bands remain null; no complete 100 Hz-20 kHz response is claimed.",
+    "No source excitation above 20 kHz is used; these sweeps cannot qualify the high SONIC frequencies.",
+    "Relative magnitudes include interface, speaker, room reflections and uncorrected microphone response at this geometry.",
+    "Coherence and baseline masks are local screening rules. Synchronous room noise, time-varying noise or response outside the window can still bias an estimate.",
+    "The finite window assumes useful response energy decays by 0.4 seconds after onset; long reverberation can be truncated.",
+    "This is a linear-response screen at one digital peak. It does not measure THD, compression, calibrated SPL, acoustic onset or 10 ms pip fidelity."
+  ],
+  "primary_references": [
+    "https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/analog-fundamentals/understanding-ffts-and-windowing.html",
+    "https://earthworksaudio.com/measurement-microphones/m50/"
+  ]
+}

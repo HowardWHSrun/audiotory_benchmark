@@ -1,5 +1,9 @@
 # PDFs and editable files
 
+## Saved frequency measurements
+
+[Frequency-response comparison, October 23, 2026](figures/2026-10-23/Saved_Frequency_Response.png): measured relative levels from two SONIC blocks and 40 saved sweeps. [Methods, source records and limits](../latency/README.md#frequency-review-from-existing-recordings).
+
 ## Measured bench delay
 
 [Concise delay report, October 23, 2026](pdf/2026-10-23/Audient_Delay_Report/main.pdf) · [LaTeX source](pdf/2026-10-23/Audient_Delay_Report/main.tex): approximately 38.3 ms with timing sweeps in the tested native application and wired setup; includes the reconstructed SONIC frequency list. [Measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).

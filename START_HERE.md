@@ -2,6 +2,7 @@
 
 ## Current sound setup
 
+- [Saved frequency-response comparison](output/figures/2026-10-23/Saved_Frequency_Response.png): both SONIC recordings contain all 14 commanded frequency components, with much weaker recorded levels at high frequencies. [Methods and limits](latency/README.md#frequency-review-from-existing-recordings); no new playback or calibrated speaker-bandwidth claim.
 - [Basic speaker playback and microphone recording](latency/README.md#basic-speaker-playback-and-microphone-recording): verified together on October 23; repeat with `.work/latency-venv/bin/python -m latency.music_check`.
 - [Concise playback-to-microphone delay report](output/pdf/2026-10-23/Audient_Delay_Report/main.pdf) · [LaTeX source](output/pdf/2026-10-23/Audient_Delay_Report/main.tex): approximately **38.3 ms** in two native 96 kHz runs (40 sweeps); includes playback/recording buffering and the acoustic chain. Repeat with [Measure Sound Delay.command](Measure%20Sound%20Delay.command).
 - [SONIC tone reconstruction and timing methods](latency/README.md): play the 84-second reconstructed E14 block with [Play SONIC Tones.command](Play%20SONIC%20Tones.command), or review the separate electrical-reference method.

@@ -1,0 +1,2192 @@
+{
+  "schema_version": 1,
+  "record_type": "sanitized_preliminary_sonic_e14_pip_frequency_pickup",
+  "date": "2026-10-23",
+  "generated_utc": "2026-10-23T21:47:02.583126+00:00",
+  "status": "descriptive_frequency_specific_recorded_components; acoustic_origin_and_frequency_response_unqualified",
+  "summary": {
+    "recorded_components_observed_at_all_14_commanded_frequencies": true,
+    "speaker_acoustic_origin_confirmed_by_isolation_control": false,
+    "calibrated_frequency_response": false,
+    "acoustic_spl_calibrated": false,
+    "total_native_captures": 2,
+    "pips_per_frequency_per_capture": 600,
+    "pips_per_capture": 8400,
+    "capture_duration_seconds": 86,
+    "stimulus_block_duration_seconds": 84,
+    "same_pseudorandom_source_sequence_repeated": true,
+    "interpretation": "Both saved microphone captures contain reproducible frequency-specific components during all 14 commanded tone groups, including 17--27 kHz. They fall substantially below the 2-kHz response. This establishes recorded pickup under the stated analysis, not isolated acoustic output, flat frequency response, calibrated SPL, high-frequency fidelity or ultrasonic qualification.",
+    "weakest_frequency_contrast_hz": 24000,
+    "weakest_median_above_preblock_db": 10.512359800603821,
+    "weakest_median_over_inblock_control_db": 11.718540001540728,
+    "largest_alignment_sensitivity_span_db": 5.899985881974686,
+    "alignment_sensitive_frequency_hz": 20900,
+    "most_important_next_evidence": "Steady separated tones and a speaker-disconnected/microphone-blocked control, with fixed geometry and serial-specific microphone correction, would distinguish acoustic fundamentals from feedthrough and qualify levels. No new playback or hardware operation was performed for this analysis.",
+    "neighbour_excluded_retained_pip_count_range": [
+      159,
+      454
+    ],
+    "maximum_neighbour_exclusion_change_in_median_db": 0.22391061196343287,
+    "minimum_neighbour_excluded_inblock_contrast_db": 11.94245061350415,
+    "input1_over_same_window_input2_median_db_range": [
+      57.060929058484504,
+      97.31959846090012
+    ],
+    "input2_comparison_is_acoustic_isolation_proof": false,
+    "largest_neighbour_excluded_alignment_sensitivity_span_db": 6.012573334077331
+  },
+  "setup": {
+    "interface": "Audient iD14 MKII (CoreAudio name: Audient iD14)",
+    "speaker": "Edifier wired powered speaker pair; exact model not reverified in this offline review",
+    "microphone": "Earthworks M50 on Audient input 1",
+    "sample_rate_hz": 96000,
+    "user_reported_speaker_to_microphone_distance_m": 0.1,
+    "distance_remeasured_for_these_captures": false,
+    "input2_used_for_this_analysis": true,
+    "microphone_gain_and_monitor_attenuation_calibrated": false,
+    "input2_role": "Simultaneous frequency-component comparator only; never an electrical timing reference or input-1 correction."
+  },
+  "stimulus": {
+    "kind": "Locally reconstructed SONIC Sheep E14 block; exact original waveform/order unavailable",
+    "frequency_list_hz": [
+      2000,
+      4000,
+      6000,
+      8000,
+      9000,
+      10500,
+      17000,
+      18200,
+      19500,
+      20900,
+      22400,
+      24000,
+      25800,
+      27000
+    ],
+    "tone_duration_ms": 10,
+    "ramps_ms_each_end": 2,
+    "ramp_shape": "Raised cosine, a declared local choice",
+    "inter_tone_silence_ms": 0,
+    "nominal_digital_peak_dbfs": -24,
+    "digital_amplitude_is_acoustic_spl": false,
+    "frequency_count_per_block": 14,
+    "tones_per_frequency": 600,
+    "random_generator": "NumPy PCG64 seeded shuffle, seed 20261023; same balanced sequence in both captures",
+    "raw_source_sample_bytes_sha256": "2463d71aec06b8b6d624966545ded79db2f3f8c8647553b61ab25db5265e1932"
+  },
+  "method": {
+    "central_window_seconds": [
+      0.002,
+      0.008
+    ],
+    "window_samples": 576,
+    "weighting": "Hann; complex single-frequency projection. RMS = abs(2*sum(mic*w*exp(-j*2*pi*f*t))/sum(w))/sqrt(2).",
+    "fixed_alignment_ms": 38,
+    "sensitivity_alignments_ms": [
+      37,
+      38,
+      39
+    ],
+    "preblock_baseline": "Nonoverlapping 6-ms windows from 0.125 to approximately 0.875 s before the first source pip. Matched-frequency RMS = sqrt(mean(abs(complex_peak)^2)/2).",
+    "inblock_control": "Other-pip windows excluding current and +/-2 neighbouring target-frequency events or first-through-sixth harmonic relationships within 334 Hz. This reduces, but does not remove, leakage/distortion contamination.",
+    "neighbour_excluded_target_group": "A second target estimate removes target events having +/-1 or +/-2 neighbours at the same frequency or with first-through-sixth harmonic relationships within 334 Hz. This includes excluding 10.5-kHz neighbours for the 20.9-kHz estimate because their second harmonic is 21 kHz. The primary all-target estimate still contains all 600 pips.",
+    "input2_comparator": "Same-frequency, same-event-window projection of simultaneously recorded input 2. Its wiring/gain are not independently qualified. This is a feedthrough comparator, not an acoustic-isolation control, electrical timing reference or noise correction for input 1.",
+    "statistic_note": "Contrasts above baseline/control are amplitude ratios in dB, not noise-subtracted calibrated SNR. All source frequencies have 600 pips with the same -24-dBFS peak."
+  },
+  "frequency_results": [
+    {
+      "frequency_hz": 2000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -37.187127668106235,
+          "p05_fundamental_rms_dbfs": -37.29042306956157,
+          "p95_fundamental_rms_dbfs": -36.25268889729134,
+          "p95_minus_p05_level_spread_db": 1.037734172270227,
+          "relative_to_same_run_2khz_db": 0.0,
+          "preblock_matched_frequency_rms_dbfs": -86.75078453081395,
+          "median_above_preblock_db": 49.56365686270772,
+          "inblock_control_count": 5787,
+          "inblock_control_median_rms_dbfs": -86.59062427367479,
+          "median_over_inblock_control_db": 49.403496605568556,
+          "complex_phase_coherence": 0.998816523602117,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -37.60285702147491,
+            -37.1403059109481
+          ],
+          "alignment_sensitivity_span_db": 0.4625511105268103,
+          "neighbour_excluded": {
+            "pip_count": 454,
+            "median_fundamental_rms_dbfs": -37.19416256392128,
+            "p05_fundamental_rms_dbfs": -37.303985283145764,
+            "p95_fundamental_rms_dbfs": -37.042438660177844,
+            "complex_phase_coherence": 0.9994052472438655,
+            "median_above_preblock_db": 49.55662196689266,
+            "median_over_inblock_control_db": 49.39646170975351,
+            "relative_to_same_run_neighbour_excluded_2khz_db": 0.0,
+            "relative_p05_db": -0.10982271922448206,
+            "relative_p95_db": 0.15172390374343792,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -37.61105007025221,
+              -37.146495067535305
+            ],
+            "alignment_sensitivity_span_db": 0.46455500271690653
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.50672612900635,
+            "p05_fundamental_rms_dbfs": -145.433702873243,
+            "p95_fundamental_rms_dbfs": -128.5626173106061,
+            "complex_phase_coherence": 0.22137619307650114,
+            "preblock_matched_frequency_rms_dbfs": -132.6435993472328,
+            "median_above_preblock_db": -1.863126781773559,
+            "input1_over_input2_median_db": 97.31959846090012,
+            "neighbour_excluded": {
+              "pip_count": 454,
+              "median_fundamental_rms_dbfs": -134.2592171209056,
+              "p05_fundamental_rms_dbfs": -145.38022926804211,
+              "p95_fundamental_rms_dbfs": -128.72481304137384,
+              "complex_phase_coherence": 0.22479869575100492
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -37.17363112817975,
+          "p05_fundamental_rms_dbfs": -37.27711862016641,
+          "p95_fundamental_rms_dbfs": -36.260918340975856,
+          "p95_minus_p05_level_spread_db": 1.0162002791905564,
+          "relative_to_same_run_2khz_db": 0.0,
+          "preblock_matched_frequency_rms_dbfs": -89.73157047722134,
+          "median_above_preblock_db": 52.55793934904158,
+          "inblock_control_count": 5787,
+          "inblock_control_median_rms_dbfs": -87.31191289552258,
+          "median_over_inblock_control_db": 50.13828176734283,
+          "complex_phase_coherence": 0.9987712411509664,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -37.497295488040365,
+            -37.14371707942162
+          ],
+          "alignment_sensitivity_span_db": 0.3535784086187448,
+          "neighbour_excluded": {
+            "pip_count": 454,
+            "median_fundamental_rms_dbfs": -37.18295560627462,
+            "p05_fundamental_rms_dbfs": -37.2824984514172,
+            "p95_fundamental_rms_dbfs": -37.03973465757664,
+            "complex_phase_coherence": 0.999333385029786,
+            "median_above_preblock_db": 52.54861487094672,
+            "median_over_inblock_control_db": 50.128957289247964,
+            "relative_to_same_run_neighbour_excluded_2khz_db": 0.0,
+            "relative_p05_db": -0.0995428451425795,
+            "relative_p95_db": 0.14322094869798008,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -37.50750527411157,
+              -37.150853393239316
+            ],
+            "alignment_sensitivity_span_db": 0.3566518808722563
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.3628868580968,
+            "p05_fundamental_rms_dbfs": -146.04618973114594,
+            "p95_fundamental_rms_dbfs": -127.91821106452973,
+            "complex_phase_coherence": 0.22797692307428205,
+            "preblock_matched_frequency_rms_dbfs": -133.71873355884594,
+            "median_above_preblock_db": -0.6441532992508598,
+            "input1_over_input2_median_db": 97.18925572991705,
+            "neighbour_excluded": {
+              "pip_count": 454,
+              "median_fundamental_rms_dbfs": -134.1293699661716,
+              "p05_fundamental_rms_dbfs": -146.55291877506644,
+              "p95_fundamental_rms_dbfs": -127.63545480769787,
+              "complex_phase_coherence": 0.21987234409457676
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 0.013496539926485696,
+      "repeat_minus_first_relative_level_db": 0.0
+    },
+    {
+      "frequency_hz": 4000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -39.88672098776221,
+          "p05_fundamental_rms_dbfs": -39.942750181660344,
+          "p95_fundamental_rms_dbfs": -39.26204989851044,
+          "p95_minus_p05_level_spread_db": 0.6807002831499034,
+          "relative_to_same_run_2khz_db": -2.6995933196559747,
+          "preblock_matched_frequency_rms_dbfs": -92.033015701533,
+          "median_above_preblock_db": 52.1462947137708,
+          "inblock_control_count": 3859,
+          "inblock_control_median_rms_dbfs": -94.72802534976506,
+          "median_over_inblock_control_db": 54.841304362002845,
+          "complex_phase_coherence": 0.9976158560554985,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -40.41862179110048,
+            -39.85524643651256
+          ],
+          "alignment_sensitivity_span_db": 0.5633753545879188,
+          "neighbour_excluded": {
+            "pip_count": 335,
+            "median_fundamental_rms_dbfs": -39.889264618441025,
+            "p05_fundamental_rms_dbfs": -39.94778624931189,
+            "p95_fundamental_rms_dbfs": -39.81087354473266,
+            "complex_phase_coherence": 0.9976520843110988,
+            "median_above_preblock_db": 52.14375108309198,
+            "median_over_inblock_control_db": 54.83876073132404,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -2.6951020545197437,
+            "relative_p05_db": -2.7536236853906075,
+            "relative_p95_db": -2.6167109808113764,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -40.422259938920966,
+              -39.857849151311484
+            ],
+            "alignment_sensitivity_span_db": 0.5644107876094822
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.33336368878517,
+            "p05_fundamental_rms_dbfs": -145.04202599452032,
+            "p95_fundamental_rms_dbfs": -127.97279034142719,
+            "complex_phase_coherence": 0.2791146518184491,
+            "preblock_matched_frequency_rms_dbfs": -133.1213224869732,
+            "median_above_preblock_db": -1.2120412018119566,
+            "input1_over_input2_median_db": 94.44664270102297,
+            "neighbour_excluded": {
+              "pip_count": 335,
+              "median_fundamental_rms_dbfs": -134.35341730588306,
+              "p05_fundamental_rms_dbfs": -146.1959035494276,
+              "p95_fundamental_rms_dbfs": -127.98710762792403,
+              "complex_phase_coherence": 0.27001929349755305
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -39.858539604161194,
+          "p05_fundamental_rms_dbfs": -39.92835061216618,
+          "p95_fundamental_rms_dbfs": -39.21269332684127,
+          "p95_minus_p05_level_spread_db": 0.7156572853249088,
+          "relative_to_same_run_2khz_db": -2.6849084759814446,
+          "preblock_matched_frequency_rms_dbfs": -96.40894404117509,
+          "median_above_preblock_db": 56.550404437013896,
+          "inblock_control_count": 3859,
+          "inblock_control_median_rms_dbfs": -95.38211906221021,
+          "median_over_inblock_control_db": 55.52357945804901,
+          "complex_phase_coherence": 0.9973626137647773,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -40.283667858148426,
+            -39.84578836417111
+          ],
+          "alignment_sensitivity_span_db": 0.43787949397731296,
+          "neighbour_excluded": {
+            "pip_count": 335,
+            "median_fundamental_rms_dbfs": -39.86226956074755,
+            "p05_fundamental_rms_dbfs": -39.938925202958714,
+            "p95_fundamental_rms_dbfs": -39.706414522046785,
+            "complex_phase_coherence": 0.9975157505855498,
+            "median_above_preblock_db": 56.54667448042754,
+            "median_over_inblock_control_db": 55.51984950146266,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -2.6793139544729314,
+            "relative_p05_db": -2.7559695966840962,
+            "relative_p95_db": -2.523458915772167,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -40.28691482842308,
+              -39.84766574908867
+            ],
+            "alignment_sensitivity_span_db": 0.4392490793344095
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.3188263332373,
+            "p05_fundamental_rms_dbfs": -145.56842395191728,
+            "p95_fundamental_rms_dbfs": -127.7336718996772,
+            "complex_phase_coherence": 0.3217383265353639,
+            "preblock_matched_frequency_rms_dbfs": -132.3263149987852,
+            "median_above_preblock_db": -1.9925113344521037,
+            "input1_over_input2_median_db": 94.4602867290761,
+            "neighbour_excluded": {
+              "pip_count": 335,
+              "median_fundamental_rms_dbfs": -134.44962148643376,
+              "p05_fundamental_rms_dbfs": -145.49767212974325,
+              "p95_fundamental_rms_dbfs": -127.72336137984385,
+              "complex_phase_coherence": 0.34036664369137437
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 0.028181383601015852,
+      "repeat_minus_first_relative_level_db": 0.014684843674530157
+    },
+    {
+      "frequency_hz": 6000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -45.684629941002946,
+          "p05_fundamental_rms_dbfs": -45.90080361325731,
+          "p95_fundamental_rms_dbfs": -45.602177498311704,
+          "p95_minus_p05_level_spread_db": 0.29862611494560554,
+          "relative_to_same_run_2khz_db": -8.49750227289671,
+          "preblock_matched_frequency_rms_dbfs": -100.21702803579683,
+          "median_above_preblock_db": 54.53239809479388,
+          "inblock_control_count": 3881,
+          "inblock_control_median_rms_dbfs": -98.51905333518842,
+          "median_over_inblock_control_db": 52.834423394185464,
+          "complex_phase_coherence": 0.9947850775378757,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -46.37898342455288,
+            -45.60320373202221
+          ],
+          "alignment_sensitivity_span_db": 0.7757796925306693,
+          "neighbour_excluded": {
+            "pip_count": 326,
+            "median_fundamental_rms_dbfs": -45.68090834662549,
+            "p05_fundamental_rms_dbfs": -45.87020282723647,
+            "p95_fundamental_rms_dbfs": -45.60369870434507,
+            "complex_phase_coherence": 0.9945644225982497,
+            "median_above_preblock_db": 54.536119689171336,
+            "median_over_inblock_control_db": 52.838144988562924,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -8.486745782704212,
+            "relative_p05_db": -8.676040263315187,
+            "relative_p95_db": -8.40953614042379,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -46.37266359074148,
+              -45.60065387915961
+            ],
+            "alignment_sensitivity_span_db": 0.7720097115818731
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.1870317359904,
+            "p05_fundamental_rms_dbfs": -145.03286424909152,
+            "p95_fundamental_rms_dbfs": -128.30448118360798,
+            "complex_phase_coherence": 0.22343173504749533,
+            "preblock_matched_frequency_rms_dbfs": -133.19548423735037,
+            "median_above_preblock_db": -0.991547498640017,
+            "input1_over_input2_median_db": 88.50240179498743,
+            "neighbour_excluded": {
+              "pip_count": 326,
+              "median_fundamental_rms_dbfs": -134.1107852399457,
+              "p05_fundamental_rms_dbfs": -144.54821839421476,
+              "p95_fundamental_rms_dbfs": -128.23734954550372,
+              "complex_phase_coherence": 0.2012519178217554
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -45.693268087241215,
+          "p05_fundamental_rms_dbfs": -45.94711202664069,
+          "p95_fundamental_rms_dbfs": -45.51814321427045,
+          "p95_minus_p05_level_spread_db": 0.4289688123702362,
+          "relative_to_same_run_2khz_db": -8.519636959061465,
+          "preblock_matched_frequency_rms_dbfs": -102.13461904062325,
+          "median_above_preblock_db": 56.44135095338203,
+          "inblock_control_count": 3881,
+          "inblock_control_median_rms_dbfs": -98.82920952844353,
+          "median_over_inblock_control_db": 53.13594144120231,
+          "complex_phase_coherence": 0.9943050780459524,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -46.27708717359934,
+            -45.62771448089555
+          ],
+          "alignment_sensitivity_span_db": 0.6493726927037926,
+          "neighbour_excluded": {
+            "pip_count": 326,
+            "median_fundamental_rms_dbfs": -45.67876283507516,
+            "p05_fundamental_rms_dbfs": -45.90407549616168,
+            "p95_fundamental_rms_dbfs": -45.523244109627555,
+            "complex_phase_coherence": 0.9937193428827329,
+            "median_above_preblock_db": 56.45585620554809,
+            "median_over_inblock_control_db": 53.150446693368366,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -8.495807228800544,
+            "relative_p05_db": -8.721119889887063,
+            "relative_p95_db": -8.340288503352937,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -46.26217147948962,
+              -45.61371007600591
+            ],
+            "alignment_sensitivity_span_db": 0.6484614034837151
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.78051494843004,
+            "p05_fundamental_rms_dbfs": -145.35006311211413,
+            "p95_fundamental_rms_dbfs": -128.06781849975224,
+            "complex_phase_coherence": 0.2991728022588425,
+            "preblock_matched_frequency_rms_dbfs": -133.0540081705007,
+            "median_above_preblock_db": -1.7265067779293304,
+            "input1_over_input2_median_db": 89.08724686118882,
+            "neighbour_excluded": {
+              "pip_count": 326,
+              "median_fundamental_rms_dbfs": -135.02129125471674,
+              "p05_fundamental_rms_dbfs": -146.45879026868417,
+              "p95_fundamental_rms_dbfs": -127.80383978790789,
+              "complex_phase_coherence": 0.2795889745987032
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.008638146238268973,
+      "repeat_minus_first_relative_level_db": -0.02213468616475467
+    },
+    {
+      "frequency_hz": 8000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -44.5517173238168,
+          "p05_fundamental_rms_dbfs": -44.6143706654624,
+          "p95_fundamental_rms_dbfs": -44.16321934145124,
+          "p95_minus_p05_level_spread_db": 0.451151324011164,
+          "relative_to_same_run_2khz_db": -7.364589655710567,
+          "preblock_matched_frequency_rms_dbfs": -103.34124992971357,
+          "median_above_preblock_db": 58.78953260589678,
+          "inblock_control_count": 2509,
+          "inblock_control_median_rms_dbfs": -100.49024482098126,
+          "median_over_inblock_control_db": 55.93852749716446,
+          "complex_phase_coherence": 0.9918544556252727,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -45.151553522530314,
+            -44.542582603315026
+          ],
+          "alignment_sensitivity_span_db": 0.6089709192152881,
+          "neighbour_excluded": {
+            "pip_count": 222,
+            "median_fundamental_rms_dbfs": -44.558495726608484,
+            "p05_fundamental_rms_dbfs": -44.63850824934468,
+            "p95_fundamental_rms_dbfs": -44.46692370113218,
+            "complex_phase_coherence": 0.9926503189685278,
+            "median_above_preblock_db": 58.782754203105085,
+            "median_over_inblock_control_db": 55.931749094372776,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -7.364333162687203,
+            "relative_p05_db": -7.4443456854234,
+            "relative_p95_db": -7.2727611372109,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -45.160799506975955,
+              -44.547906242686835
+            ],
+            "alignment_sensitivity_span_db": 0.61289326428912
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -133.97389595563268,
+            "p05_fundamental_rms_dbfs": -145.3478973363827,
+            "p95_fundamental_rms_dbfs": -128.1733595204287,
+            "complex_phase_coherence": 0.3777479875905301,
+            "preblock_matched_frequency_rms_dbfs": -133.07615388466849,
+            "median_above_preblock_db": -0.897742070964199,
+            "input1_over_input2_median_db": 89.42217863181588,
+            "neighbour_excluded": {
+              "pip_count": 222,
+              "median_fundamental_rms_dbfs": -134.09635584825952,
+              "p05_fundamental_rms_dbfs": -146.42694627354228,
+              "p95_fundamental_rms_dbfs": -127.58692474123649,
+              "complex_phase_coherence": 0.41821760991138146
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -44.416962167066735,
+          "p05_fundamental_rms_dbfs": -44.564153451929286,
+          "p95_fundamental_rms_dbfs": -44.12042099464494,
+          "p95_minus_p05_level_spread_db": 0.44373245728434796,
+          "relative_to_same_run_2khz_db": -7.243331038886986,
+          "preblock_matched_frequency_rms_dbfs": -107.26804025622364,
+          "median_above_preblock_db": 62.851078089156914,
+          "inblock_control_count": 2509,
+          "inblock_control_median_rms_dbfs": -101.89842972453403,
+          "median_over_inblock_control_db": 57.481467557467276,
+          "complex_phase_coherence": 0.9905962827061884,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -44.89434706639219,
+            -44.416962167066735
+          ],
+          "alignment_sensitivity_span_db": 0.47738489932545747,
+          "neighbour_excluded": {
+            "pip_count": 222,
+            "median_fundamental_rms_dbfs": -44.42292590423683,
+            "p05_fundamental_rms_dbfs": -44.57299580712444,
+            "p95_fundamental_rms_dbfs": -44.30134234578166,
+            "complex_phase_coherence": 0.9907783001717501,
+            "median_above_preblock_db": 62.845114351986815,
+            "median_over_inblock_control_db": 57.4755038202972,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -7.239970297962209,
+            "relative_p05_db": -7.390040200849825,
+            "relative_p95_db": -7.118386739507045,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -44.89836094458984,
+              -44.42292590423683
+            ],
+            "alignment_sensitivity_span_db": 0.47543504035301254
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -133.6769501837965,
+            "p05_fundamental_rms_dbfs": -146.05350371682349,
+            "p95_fundamental_rms_dbfs": -127.47321317573913,
+            "complex_phase_coherence": 0.3876100199732707,
+            "preblock_matched_frequency_rms_dbfs": -133.7480708526303,
+            "median_above_preblock_db": 0.07112066883379953,
+            "input1_over_input2_median_db": 89.25998801672975,
+            "neighbour_excluded": {
+              "pip_count": 222,
+              "median_fundamental_rms_dbfs": -133.19449843544524,
+              "p05_fundamental_rms_dbfs": -144.49569317458517,
+              "p95_fundamental_rms_dbfs": -127.49478653613073,
+              "complex_phase_coherence": 0.3667997825432738
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 0.13475515675006733,
+      "repeat_minus_first_relative_level_db": 0.12125861682358163
+    },
+    {
+      "frequency_hz": 9000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -48.54674569412157,
+          "p05_fundamental_rms_dbfs": -48.80020914979738,
+          "p95_fundamental_rms_dbfs": -48.18150229778684,
+          "p95_minus_p05_level_spread_db": 0.6187068520105399,
+          "relative_to_same_run_2khz_db": -11.359618026015333,
+          "preblock_matched_frequency_rms_dbfs": -105.2274382673298,
+          "median_above_preblock_db": 56.68069257320824,
+          "inblock_control_count": 5801,
+          "inblock_control_median_rms_dbfs": -101.24121129435211,
+          "median_over_inblock_control_db": 52.69446560023055,
+          "complex_phase_coherence": 0.9882808396558909,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -49.38518704930268,
+            -48.49564460382015
+          ],
+          "alignment_sensitivity_span_db": 0.889542445482526,
+          "neighbour_excluded": {
+            "pip_count": 445,
+            "median_fundamental_rms_dbfs": -48.54373524286697,
+            "p05_fundamental_rms_dbfs": -48.760542607681536,
+            "p95_fundamental_rms_dbfs": -48.31656988681863,
+            "complex_phase_coherence": 0.9885169343566474,
+            "median_above_preblock_db": 56.68370302446283,
+            "median_over_inblock_control_db": 52.69747605148514,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -11.349572678945691,
+            "relative_p05_db": -11.566380043760255,
+            "relative_p95_db": -11.122407322897345,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -49.38013773366731,
+              -48.49471299387267
+            ],
+            "alignment_sensitivity_span_db": 0.8854247397946438
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.51673403470724,
+            "p05_fundamental_rms_dbfs": -145.2310852767887,
+            "p95_fundamental_rms_dbfs": -127.88198407800023,
+            "complex_phase_coherence": 0.23121458812727932,
+            "preblock_matched_frequency_rms_dbfs": -132.5011483742421,
+            "median_above_preblock_db": -2.015585660465149,
+            "input1_over_input2_median_db": 85.96998834058567,
+            "neighbour_excluded": {
+              "pip_count": 445,
+              "median_fundamental_rms_dbfs": -134.42117583086463,
+              "p05_fundamental_rms_dbfs": -144.60786924595476,
+              "p95_fundamental_rms_dbfs": -127.78049196126065,
+              "complex_phase_coherence": 0.2414356937578946
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -48.959760021839784,
+          "p05_fundamental_rms_dbfs": -49.24647250264044,
+          "p95_fundamental_rms_dbfs": -48.565773347419935,
+          "p95_minus_p05_level_spread_db": 0.680699155220502,
+          "relative_to_same_run_2khz_db": -11.786128893660035,
+          "preblock_matched_frequency_rms_dbfs": -107.93620255671237,
+          "median_above_preblock_db": 58.97644253487259,
+          "inblock_control_count": 5801,
+          "inblock_control_median_rms_dbfs": -102.53902593306549,
+          "median_over_inblock_control_db": 53.579265911225704,
+          "complex_phase_coherence": 0.9875489377013672,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -49.69680837273084,
+            -48.92175116730635
+          ],
+          "alignment_sensitivity_span_db": 0.7750572054244955,
+          "neighbour_excluded": {
+            "pip_count": 445,
+            "median_fundamental_rms_dbfs": -48.97184251740866,
+            "p05_fundamental_rms_dbfs": -49.26434385341282,
+            "p95_fundamental_rms_dbfs": -48.66453481907718,
+            "complex_phase_coherence": 0.9876942809019038,
+            "median_above_preblock_db": 58.96436003930371,
+            "median_over_inblock_control_db": 53.56718341565683,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -11.788886911134043,
+            "relative_p05_db": -12.0813882471382,
+            "relative_p95_db": -11.481579212802565,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -49.711574210070886,
+              -48.9331384580024
+            ],
+            "alignment_sensitivity_span_db": 0.7784357520684893
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.58200244997644,
+            "p05_fundamental_rms_dbfs": -147.09829945834565,
+            "p95_fundamental_rms_dbfs": -128.04758541011444,
+            "complex_phase_coherence": 0.24136075151073022,
+            "preblock_matched_frequency_rms_dbfs": -132.99995412409237,
+            "median_above_preblock_db": -1.5820483258840738,
+            "input1_over_input2_median_db": 85.62224242813666,
+            "neighbour_excluded": {
+              "pip_count": 445,
+              "median_fundamental_rms_dbfs": -134.78210273394814,
+              "p05_fundamental_rms_dbfs": -147.24463003659048,
+              "p95_fundamental_rms_dbfs": -128.11732129517912,
+              "complex_phase_coherence": 0.2543440886774286
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.41301432771821567,
+      "repeat_minus_first_relative_level_db": -0.42651086764470136
+    },
+    {
+      "frequency_hz": 10500,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -45.8422350578786,
+          "p05_fundamental_rms_dbfs": -45.945460343655206,
+          "p95_fundamental_rms_dbfs": -45.367364218835135,
+          "p95_minus_p05_level_spread_db": 0.5780961248200711,
+          "relative_to_same_run_2khz_db": -8.655107389772361,
+          "preblock_matched_frequency_rms_dbfs": -107.21503761544362,
+          "median_above_preblock_db": 61.37280255756502,
+          "inblock_control_count": 5790,
+          "inblock_control_median_rms_dbfs": -103.92766670498278,
+          "median_over_inblock_control_db": 58.08543164710421,
+          "complex_phase_coherence": 0.9847267286350454,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -46.58579745054449,
+            -45.7406176944589
+          ],
+          "alignment_sensitivity_span_db": 0.8451797560855923,
+          "neighbour_excluded": {
+            "pip_count": 453,
+            "median_fundamental_rms_dbfs": -45.84394065277706,
+            "p05_fundamental_rms_dbfs": -45.92146458899411,
+            "p95_fundamental_rms_dbfs": -45.67758198553031,
+            "complex_phase_coherence": 0.984928355424019,
+            "median_above_preblock_db": 61.37109696266656,
+            "median_over_inblock_control_db": 58.083726052205726,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -8.649778088855776,
+            "relative_p05_db": -8.72730202507283,
+            "relative_p95_db": -8.483419421609028,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -46.5872603844513,
+              -45.74233492573108
+            ],
+            "alignment_sensitivity_span_db": 0.8449254587202191
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -133.73008720092957,
+            "p05_fundamental_rms_dbfs": -144.81742959091181,
+            "p95_fundamental_rms_dbfs": -127.33993785288612,
+            "complex_phase_coherence": 0.413135025001289,
+            "preblock_matched_frequency_rms_dbfs": -133.2680167943755,
+            "median_above_preblock_db": -0.4620704065540622,
+            "input1_over_input2_median_db": 87.88785214305098,
+            "neighbour_excluded": {
+              "pip_count": 453,
+              "median_fundamental_rms_dbfs": -133.78311773278864,
+              "p05_fundamental_rms_dbfs": -144.74919414246514,
+              "p95_fundamental_rms_dbfs": -127.57224768550388,
+              "complex_phase_coherence": 0.4089682218506507
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -45.76231001058033,
+          "p05_fundamental_rms_dbfs": -45.94226163422603,
+          "p95_fundamental_rms_dbfs": -45.47709554429944,
+          "p95_minus_p05_level_spread_db": 0.4651660899265906,
+          "relative_to_same_run_2khz_db": -8.588678882400579,
+          "preblock_matched_frequency_rms_dbfs": -110.43124490370508,
+          "median_above_preblock_db": 64.66893489312476,
+          "inblock_control_count": 5790,
+          "inblock_control_median_rms_dbfs": -105.10331258794922,
+          "median_over_inblock_control_db": 59.34100257736888,
+          "complex_phase_coherence": 0.9824687395725958,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -46.38528968821717,
+            -45.67899410696558
+          ],
+          "alignment_sensitivity_span_db": 0.7062955812515881,
+          "neighbour_excluded": {
+            "pip_count": 453,
+            "median_fundamental_rms_dbfs": -45.76837464772189,
+            "p05_fundamental_rms_dbfs": -45.94560861913222,
+            "p95_fundamental_rms_dbfs": -45.5935827272809,
+            "complex_phase_coherence": 0.9827061431516315,
+            "median_above_preblock_db": 64.6628702559832,
+            "median_over_inblock_control_db": 59.33493794022733,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -8.585419041447274,
+            "relative_p05_db": -8.762653012857605,
+            "relative_p95_db": -8.410627121006279,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -46.39117459739982,
+              -45.682386006385165
+            ],
+            "alignment_sensitivity_span_db": 0.7087885910146525
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -133.66270257446064,
+            "p05_fundamental_rms_dbfs": -144.90047327831346,
+            "p95_fundamental_rms_dbfs": -127.77570502524432,
+            "complex_phase_coherence": 0.3959722574244218,
+            "preblock_matched_frequency_rms_dbfs": -133.08877162972254,
+            "median_above_preblock_db": -0.5739309447380947,
+            "input1_over_input2_median_db": 87.9003925638803,
+            "neighbour_excluded": {
+              "pip_count": 453,
+              "median_fundamental_rms_dbfs": -133.70944901170367,
+              "p05_fundamental_rms_dbfs": -145.86577484384654,
+              "p95_fundamental_rms_dbfs": -127.76549638292335,
+              "complex_phase_coherence": 0.40436436006130033
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 0.07992504729826777,
+      "repeat_minus_first_relative_level_db": 0.06642850737178208
+    },
+    {
+      "frequency_hz": 17000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -52.05493040682513,
+          "p05_fundamental_rms_dbfs": -53.244291306580834,
+          "p95_fundamental_rms_dbfs": -51.89232880481936,
+          "p95_minus_p05_level_spread_db": 1.3519625017614771,
+          "relative_to_same_run_2khz_db": -14.867802738718893,
+          "preblock_matched_frequency_rms_dbfs": -108.5341410621789,
+          "median_above_preblock_db": 56.479210655353775,
+          "inblock_control_count": 5769,
+          "inblock_control_median_rms_dbfs": -107.4332281029743,
+          "median_over_inblock_control_db": 55.37829769614917,
+          "complex_phase_coherence": 0.9630137757290929,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -52.76587154350644,
+            -52.00911548235538
+          ],
+          "alignment_sensitivity_span_db": 0.7567560611510658,
+          "neighbour_excluded": {
+            "pip_count": 453,
+            "median_fundamental_rms_dbfs": -52.049535184348095,
+            "p05_fundamental_rms_dbfs": -52.20145345470303,
+            "p95_fundamental_rms_dbfs": -51.893547025502414,
+            "complex_phase_coherence": 0.9619806282550557,
+            "median_above_preblock_db": 56.48460587783081,
+            "median_over_inblock_control_db": 55.3836929186262,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -14.855372620426813,
+            "relative_p05_db": -15.007290890781746,
+            "relative_p95_db": -14.699384461581133,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -52.75714979888568,
+              -52.001753359936636
+            ],
+            "alignment_sensitivity_span_db": 0.7553964389490417
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.54506813693854,
+            "p05_fundamental_rms_dbfs": -145.89621770382809,
+            "p95_fundamental_rms_dbfs": -128.28733372133078,
+            "complex_phase_coherence": 0.23125753955440992,
+            "preblock_matched_frequency_rms_dbfs": -132.82259703255124,
+            "median_above_preblock_db": -1.7224711043872958,
+            "input1_over_input2_median_db": 82.49013773011342,
+            "neighbour_excluded": {
+              "pip_count": 453,
+              "median_fundamental_rms_dbfs": -133.97722816734677,
+              "p05_fundamental_rms_dbfs": -145.94575567537998,
+              "p95_fundamental_rms_dbfs": -128.16752156794902,
+              "complex_phase_coherence": 0.25897213064766744
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -51.91934724992563,
+          "p05_fundamental_rms_dbfs": -52.74105024691288,
+          "p95_fundamental_rms_dbfs": -51.675278879086754,
+          "p95_minus_p05_level_spread_db": 1.0657713678261231,
+          "relative_to_same_run_2khz_db": -14.745716121745879,
+          "preblock_matched_frequency_rms_dbfs": -111.61214137702035,
+          "median_above_preblock_db": 59.69279412709472,
+          "inblock_control_count": 5769,
+          "inblock_control_median_rms_dbfs": -107.71707336600853,
+          "median_over_inblock_control_db": 55.797726116082906,
+          "complex_phase_coherence": 0.960712621579799,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -52.47247669478209,
+            -51.91005934646161
+          ],
+          "alignment_sensitivity_span_db": 0.56241734832048,
+          "neighbour_excluded": {
+            "pip_count": 453,
+            "median_fundamental_rms_dbfs": -51.90657366103076,
+            "p05_fundamental_rms_dbfs": -52.10430817984522,
+            "p95_fundamental_rms_dbfs": -51.678072459860886,
+            "complex_phase_coherence": 0.9592157928830348,
+            "median_above_preblock_db": 59.70556771598959,
+            "median_over_inblock_control_db": 55.81049970497777,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -14.723618054756145,
+            "relative_p05_db": -14.921352573570601,
+            "relative_p95_db": -14.495116853586268,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -52.46163564749207,
+              -51.90381736030466
+            ],
+            "alignment_sensitivity_span_db": 0.5578182871874162
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.2642948469733,
+            "p05_fundamental_rms_dbfs": -145.22018888621196,
+            "p95_fundamental_rms_dbfs": -128.40996362018598,
+            "complex_phase_coherence": 0.27341309309845424,
+            "preblock_matched_frequency_rms_dbfs": -133.0429887096856,
+            "median_above_preblock_db": -1.221306137287712,
+            "input1_over_input2_median_db": 82.34494759704768,
+            "neighbour_excluded": {
+              "pip_count": 453,
+              "median_fundamental_rms_dbfs": -134.24192856169404,
+              "p05_fundamental_rms_dbfs": -144.0151056025736,
+              "p95_fundamental_rms_dbfs": -128.3208805286427,
+              "complex_phase_coherence": 0.2607895980059506
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 0.13558315689950007,
+      "repeat_minus_first_relative_level_db": 0.12208661697301437
+    },
+    {
+      "frequency_hz": 18200,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -55.80503360487991,
+          "p05_fundamental_rms_dbfs": -56.19582321361421,
+          "p95_fundamental_rms_dbfs": -55.479771563295195,
+          "p95_minus_p05_level_spread_db": 0.7160516503190166,
+          "relative_to_same_run_2khz_db": -18.617905936773674,
+          "preblock_matched_frequency_rms_dbfs": -109.99220749967353,
+          "median_above_preblock_db": 54.187173894793624,
+          "inblock_control_count": 2505,
+          "inblock_control_median_rms_dbfs": -107.97619304103294,
+          "median_over_inblock_control_db": 52.17115943615303,
+          "complex_phase_coherence": 0.9613621287377433,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -56.58188829882405,
+            -55.76069579680421
+          ],
+          "alignment_sensitivity_span_db": 0.8211925020198407,
+          "neighbour_excluded": {
+            "pip_count": 238,
+            "median_fundamental_rms_dbfs": -55.81162116159742,
+            "p05_fundamental_rms_dbfs": -56.00704287778264,
+            "p95_fundamental_rms_dbfs": -55.51892754043722,
+            "complex_phase_coherence": 0.9626091895436687,
+            "median_above_preblock_db": 54.180586338076104,
+            "median_over_inblock_control_db": 52.16457187943552,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -18.61745859767614,
+            "relative_p05_db": -18.812880313861356,
+            "relative_p95_db": -18.324764976515937,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -56.59090707069501,
+              -55.76454087670843
+            ],
+            "alignment_sensitivity_span_db": 0.8263661939865798
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.71695817609617,
+            "p05_fundamental_rms_dbfs": -146.06104050447885,
+            "p95_fundamental_rms_dbfs": -127.9868512930116,
+            "complex_phase_coherence": 0.24094287031835498,
+            "preblock_matched_frequency_rms_dbfs": -133.2063847932252,
+            "median_above_preblock_db": -1.510573382870973,
+            "input1_over_input2_median_db": 78.91192457121626,
+            "neighbour_excluded": {
+              "pip_count": 238,
+              "median_fundamental_rms_dbfs": -135.32183137123312,
+              "p05_fundamental_rms_dbfs": -145.0407404651706,
+              "p95_fundamental_rms_dbfs": -128.11801147239584,
+              "complex_phase_coherence": 0.2776699268832875
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -55.90765245512518,
+          "p05_fundamental_rms_dbfs": -56.45316598842953,
+          "p95_fundamental_rms_dbfs": -55.60351444894175,
+          "p95_minus_p05_level_spread_db": 0.8496515394877804,
+          "relative_to_same_run_2khz_db": -18.73402132694543,
+          "preblock_matched_frequency_rms_dbfs": -109.53225174910307,
+          "median_above_preblock_db": 53.624599293977894,
+          "inblock_control_count": 2505,
+          "inblock_control_median_rms_dbfs": -108.26485117808781,
+          "median_over_inblock_control_db": 52.357198722962636,
+          "complex_phase_coherence": 0.9556989711778537,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -56.51513976566322,
+            -55.88120766323969
+          ],
+          "alignment_sensitivity_span_db": 0.6339321024235289,
+          "neighbour_excluded": {
+            "pip_count": 238,
+            "median_fundamental_rms_dbfs": -55.90458607129093,
+            "p05_fundamental_rms_dbfs": -56.2722094036358,
+            "p95_fundamental_rms_dbfs": -55.58879350341827,
+            "complex_phase_coherence": 0.963490047231508,
+            "median_above_preblock_db": 53.62766567781214,
+            "median_over_inblock_control_db": 52.36026510679688,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -18.72163046501631,
+            "relative_p05_db": -19.08925379736118,
+            "relative_p95_db": -18.405837897143655,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -56.50736117105171,
+              -55.88760273059678
+            ],
+            "alignment_sensitivity_span_db": 0.6197584404549303
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.73999681221937,
+            "p05_fundamental_rms_dbfs": -146.06405695654365,
+            "p95_fundamental_rms_dbfs": -128.1501845648057,
+            "complex_phase_coherence": 0.1397959510132755,
+            "preblock_matched_frequency_rms_dbfs": -133.10308999409685,
+            "median_above_preblock_db": -1.636906818122526,
+            "input1_over_input2_median_db": 78.8323443570942,
+            "neighbour_excluded": {
+              "pip_count": 238,
+              "median_fundamental_rms_dbfs": -134.4813755156734,
+              "p05_fundamental_rms_dbfs": -146.43118558986566,
+              "p95_fundamental_rms_dbfs": -127.94593047372581,
+              "complex_phase_coherence": 0.15818719823201058
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.10261885024527118,
+      "repeat_minus_first_relative_level_db": -0.11611539017175687
+    },
+    {
+      "frequency_hz": 19500,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -59.0212927991169,
+          "p05_fundamental_rms_dbfs": -59.37220468747082,
+          "p95_fundamental_rms_dbfs": -58.015280494493894,
+          "p95_minus_p05_level_spread_db": 1.3569241929769262,
+          "relative_to_same_run_2khz_db": -21.834165131010664,
+          "preblock_matched_frequency_rms_dbfs": -107.90535507142137,
+          "median_above_preblock_db": 48.88406227230447,
+          "inblock_control_count": 5816,
+          "inblock_control_median_rms_dbfs": -107.28978013355045,
+          "median_over_inblock_control_db": 48.26848733443355,
+          "complex_phase_coherence": 0.946536410179854,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -59.637119233173514,
+            -59.011138517434915
+          ],
+          "alignment_sensitivity_span_db": 0.6259807157385993,
+          "neighbour_excluded": {
+            "pip_count": 431,
+            "median_fundamental_rms_dbfs": -59.05862868634806,
+            "p05_fundamental_rms_dbfs": -59.376243611771635,
+            "p95_fundamental_rms_dbfs": -58.77021967696821,
+            "complex_phase_coherence": 0.9510466033358695,
+            "median_above_preblock_db": 48.84672638507331,
+            "median_over_inblock_control_db": 48.23115144720239,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -21.864466122426776,
+            "relative_p05_db": -22.182081047850353,
+            "relative_p95_db": -21.57605711304693,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -59.68020456942039,
+              -59.04720686126267
+            ],
+            "alignment_sensitivity_span_db": 0.6329977081577169
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.48259404604661,
+            "p05_fundamental_rms_dbfs": -145.78196148057,
+            "p95_fundamental_rms_dbfs": -128.25479622228247,
+            "complex_phase_coherence": 0.17640304771613494,
+            "preblock_matched_frequency_rms_dbfs": -132.98092003155563,
+            "median_above_preblock_db": -1.5016740144909875,
+            "input1_over_input2_median_db": 75.46130124692971,
+            "neighbour_excluded": {
+              "pip_count": 431,
+              "median_fundamental_rms_dbfs": -134.4909158040694,
+              "p05_fundamental_rms_dbfs": -146.2524146225024,
+              "p95_fundamental_rms_dbfs": -128.65975856674996,
+              "complex_phase_coherence": 0.1348248004230013
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -59.316512136231964,
+          "p05_fundamental_rms_dbfs": -59.80591014979123,
+          "p95_fundamental_rms_dbfs": -58.884104466210616,
+          "p95_minus_p05_level_spread_db": 0.9218056835806152,
+          "relative_to_same_run_2khz_db": -22.142881008052214,
+          "preblock_matched_frequency_rms_dbfs": -109.33840199541308,
+          "median_above_preblock_db": 50.021889859181115,
+          "inblock_control_count": 5816,
+          "inblock_control_median_rms_dbfs": -107.89383218658625,
+          "median_over_inblock_control_db": 48.57732005035429,
+          "complex_phase_coherence": 0.9379478528977783,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -59.88657138515977,
+            -59.3107334247002
+          ],
+          "alignment_sensitivity_span_db": 0.575837960459566,
+          "neighbour_excluded": {
+            "pip_count": 431,
+            "median_fundamental_rms_dbfs": -59.31441372683721,
+            "p05_fundamental_rms_dbfs": -59.7807912304615,
+            "p95_fundamental_rms_dbfs": -58.97407888157166,
+            "complex_phase_coherence": 0.9389378536876394,
+            "median_above_preblock_db": 50.02398826857587,
+            "median_over_inblock_control_db": 48.57941845974904,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -22.13145812056259,
+            "relative_p05_db": -22.597835624186885,
+            "relative_p95_db": -21.79112327529704,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -59.884870018333544,
+              -59.309994110912214
+            ],
+            "alignment_sensitivity_span_db": 0.5748759074213297
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.62404484225627,
+            "p05_fundamental_rms_dbfs": -146.1792180459288,
+            "p95_fundamental_rms_dbfs": -128.5838399892761,
+            "complex_phase_coherence": 0.12073776429626523,
+            "preblock_matched_frequency_rms_dbfs": -133.27418509562497,
+            "median_above_preblock_db": -1.3498597466312958,
+            "input1_over_input2_median_db": 75.3075327060243,
+            "neighbour_excluded": {
+              "pip_count": 431,
+              "median_fundamental_rms_dbfs": -134.72644764980686,
+              "p05_fundamental_rms_dbfs": -145.94057313214324,
+              "p95_fundamental_rms_dbfs": -128.61089125099542,
+              "complex_phase_coherence": 0.11804971547989018
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.2952193371150642,
+      "repeat_minus_first_relative_level_db": -0.3087158770415499
+    },
+    {
+      "frequency_hz": 20900,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -77.55067857510736,
+          "p05_fundamental_rms_dbfs": -81.95972962145161,
+          "p95_fundamental_rms_dbfs": -75.84693847731428,
+          "p95_minus_p05_level_spread_db": 6.112791144137333,
+          "relative_to_same_run_2khz_db": -40.36355090700112,
+          "preblock_matched_frequency_rms_dbfs": -111.40933452355083,
+          "median_above_preblock_db": 33.85865594844346,
+          "inblock_control_count": 3902,
+          "inblock_control_median_rms_dbfs": -109.48319904424443,
+          "median_over_inblock_control_db": 31.932520469137078,
+          "complex_phase_coherence": 0.8595842122011066,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -82.21439999417463,
+            -76.31441411219994
+          ],
+          "alignment_sensitivity_span_db": 5.899985881974686,
+          "neighbour_excluded": {
+            "pip_count": 324,
+            "median_fundamental_rms_dbfs": -77.58898593482034,
+            "p05_fundamental_rms_dbfs": -78.81506135716569,
+            "p95_fundamental_rms_dbfs": -76.35287206862564,
+            "complex_phase_coherence": 0.898857995619603,
+            "median_above_preblock_db": 33.82034858873048,
+            "median_over_inblock_control_db": 31.894213109424086,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -40.39482337089906,
+            "relative_p05_db": -41.62089879324441,
+            "relative_p95_db": -39.15870950470436,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -82.34228819266518,
+              -76.32971485858785
+            ],
+            "alignment_sensitivity_span_db": 6.012573334077331
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.61160763359186,
+            "p05_fundamental_rms_dbfs": -145.3570869002408,
+            "p95_fundamental_rms_dbfs": -128.01412360095503,
+            "complex_phase_coherence": 0.07041117862768723,
+            "preblock_matched_frequency_rms_dbfs": -133.91402543616078,
+            "median_above_preblock_db": -0.6975821974310747,
+            "input1_over_input2_median_db": 57.060929058484504,
+            "neighbour_excluded": {
+              "pip_count": 324,
+              "median_fundamental_rms_dbfs": -134.8728820116959,
+              "p05_fundamental_rms_dbfs": -145.1531614320559,
+              "p95_fundamental_rms_dbfs": -128.45722583200603,
+              "complex_phase_coherence": 0.07886021238491567
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -74.87662020564035,
+          "p05_fundamental_rms_dbfs": -79.75360092263293,
+          "p95_fundamental_rms_dbfs": -72.29915311149946,
+          "p95_minus_p05_level_spread_db": 7.454447811133463,
+          "relative_to_same_run_2khz_db": -37.7029890774606,
+          "preblock_matched_frequency_rms_dbfs": -109.79968799062569,
+          "median_above_preblock_db": 34.92306778498533,
+          "inblock_control_count": 3902,
+          "inblock_control_median_rms_dbfs": -109.89624669207112,
+          "median_over_inblock_control_db": 35.01962648643077,
+          "complex_phase_coherence": 0.8933553342138567,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -77.4691990585802,
+            -73.95622254418674
+          ],
+          "alignment_sensitivity_span_db": 3.5129765143934577,
+          "neighbour_excluded": {
+            "pip_count": 324,
+            "median_fundamental_rms_dbfs": -74.87745488704758,
+            "p05_fundamental_rms_dbfs": -76.75492452821744,
+            "p95_fundamental_rms_dbfs": -72.3768278813837,
+            "complex_phase_coherence": 0.9134705880104539,
+            "median_above_preblock_db": 34.92223310357811,
+            "median_over_inblock_control_db": 35.01879180502354,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -37.69449928077296,
+            "relative_p05_db": -39.571968921942826,
+            "relative_p95_db": -35.193872275109086,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -77.47888489878781,
+              -73.98373409520389
+            ],
+            "alignment_sensitivity_span_db": 3.4951508035839254
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.48661255397215,
+            "p05_fundamental_rms_dbfs": -145.97964734764565,
+            "p95_fundamental_rms_dbfs": -128.4370477369569,
+            "complex_phase_coherence": 0.07425050359317924,
+            "preblock_matched_frequency_rms_dbfs": -133.91778121162974,
+            "median_above_preblock_db": -0.5688313423424063,
+            "input1_over_input2_median_db": 59.6099923483318,
+            "neighbour_excluded": {
+              "pip_count": 324,
+              "median_fundamental_rms_dbfs": -134.68293635619466,
+              "p05_fundamental_rms_dbfs": -146.38775172298287,
+              "p95_fundamental_rms_dbfs": -128.74838521414657,
+              "complex_phase_coherence": 0.07820390863983998
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 2.674058369467005,
+      "repeat_minus_first_relative_level_db": 2.6605618295405193
+    },
+    {
+      "frequency_hz": 22400,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -66.93069044765048,
+          "p05_fundamental_rms_dbfs": -67.95653797771017,
+          "p95_fundamental_rms_dbfs": -66.48600679349484,
+          "p95_minus_p05_level_spread_db": 1.4705311842153321,
+          "relative_to_same_run_2khz_db": -29.74356277954424,
+          "preblock_matched_frequency_rms_dbfs": -109.70762577745239,
+          "median_above_preblock_db": 42.77693532980193,
+          "inblock_control_count": 5842,
+          "inblock_control_median_rms_dbfs": -110.38168772185364,
+          "median_over_inblock_control_db": 43.45099727420316,
+          "complex_phase_coherence": 0.9278466527971402,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -67.35926258164004,
+            -66.93069044765048
+          ],
+          "alignment_sensitivity_span_db": 0.4285721339895616,
+          "neighbour_excluded": {
+            "pip_count": 417,
+            "median_fundamental_rms_dbfs": -66.88717216387775,
+            "p05_fundamental_rms_dbfs": -67.27801220968887,
+            "p95_fundamental_rms_dbfs": -66.4598729629898,
+            "complex_phase_coherence": 0.9303181323531224,
+            "median_above_preblock_db": 42.82045361357464,
+            "median_over_inblock_control_db": 43.49451555797589,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -29.69300959995647,
+            "relative_p05_db": -30.083849645767586,
+            "relative_p95_db": -29.265710399068524,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -67.32504754941813,
+              -66.88717216387775
+            ],
+            "alignment_sensitivity_span_db": 0.4378753855403801
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.66215484650294,
+            "p05_fundamental_rms_dbfs": -146.93434476387793,
+            "p95_fundamental_rms_dbfs": -128.02567513398986,
+            "complex_phase_coherence": 0.010801607261040966,
+            "preblock_matched_frequency_rms_dbfs": -133.18021643142708,
+            "median_above_preblock_db": -1.4819384150758594,
+            "input1_over_input2_median_db": 67.73146439885247,
+            "neighbour_excluded": {
+              "pip_count": 417,
+              "median_fundamental_rms_dbfs": -134.73695765830723,
+              "p05_fundamental_rms_dbfs": -146.28912443027548,
+              "p95_fundamental_rms_dbfs": -128.0377343020251,
+              "complex_phase_coherence": 0.027971621543984408
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -67.38863173969295,
+          "p05_fundamental_rms_dbfs": -68.13621763550617,
+          "p95_fundamental_rms_dbfs": -66.90804210386212,
+          "p95_minus_p05_level_spread_db": 1.2281755316440552,
+          "relative_to_same_run_2khz_db": -30.215000611513204,
+          "preblock_matched_frequency_rms_dbfs": -108.35964949637423,
+          "median_above_preblock_db": 40.97101775668126,
+          "inblock_control_count": 5842,
+          "inblock_control_median_rms_dbfs": -110.60291344558458,
+          "median_over_inblock_control_db": 43.21428170589161,
+          "complex_phase_coherence": 0.9251793165070734,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -67.70079906953121,
+            -67.38863173969295
+          ],
+          "alignment_sensitivity_span_db": 0.31216732983826034,
+          "neighbour_excluded": {
+            "pip_count": 417,
+            "median_fundamental_rms_dbfs": -67.34622939277797,
+            "p05_fundamental_rms_dbfs": -67.93731252561909,
+            "p95_fundamental_rms_dbfs": -66.89196867260263,
+            "complex_phase_coherence": 0.92082760044696,
+            "median_above_preblock_db": 41.01342010359626,
+            "median_over_inblock_control_db": 43.256684052806605,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -30.163273786503353,
+            "relative_p05_db": -30.754356919344474,
+            "relative_p95_db": -29.709013066328012,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -67.64741221073606,
+              -67.34622939277797
+            ],
+            "alignment_sensitivity_span_db": 0.3011828179580931
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -135.05270371696363,
+            "p05_fundamental_rms_dbfs": -146.00564534650843,
+            "p95_fundamental_rms_dbfs": -128.8213476293417,
+            "complex_phase_coherence": 0.06919875737571343,
+            "preblock_matched_frequency_rms_dbfs": -133.37371240799018,
+            "median_above_preblock_db": -1.6789913089734512,
+            "input1_over_input2_median_db": 67.66407197727068,
+            "neighbour_excluded": {
+              "pip_count": 417,
+              "median_fundamental_rms_dbfs": -134.7271248020412,
+              "p05_fundamental_rms_dbfs": -145.46286695772457,
+              "p95_fundamental_rms_dbfs": -128.69656764511706,
+              "complex_phase_coherence": 0.07450683537738155
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.45794129204247724,
+      "repeat_minus_first_relative_level_db": -0.47143783196896294
+    },
+    {
+      "frequency_hz": 24000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -73.98804280861016,
+          "p05_fundamental_rms_dbfs": -77.28604615634974,
+          "p95_fundamental_rms_dbfs": -72.36881740562251,
+          "p95_minus_p05_level_spread_db": 4.917228750727233,
+          "relative_to_same_run_2khz_db": -36.800915140503925,
+          "preblock_matched_frequency_rms_dbfs": -94.4781175872029,
+          "median_above_preblock_db": 20.49007477859274,
+          "inblock_control_count": 1568,
+          "inblock_control_median_rms_dbfs": -91.0232460216831,
+          "median_over_inblock_control_db": 17.03520321307294,
+          "complex_phase_coherence": 0.9047288250652697,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -74.25786714292215,
+            -73.8319480850643
+          ],
+          "alignment_sensitivity_span_db": 0.425919057857854,
+          "neighbour_excluded": {
+            "pip_count": 159,
+            "median_fundamental_rms_dbfs": -73.826047861436,
+            "p05_fundamental_rms_dbfs": -75.6323575007178,
+            "p95_fundamental_rms_dbfs": -72.46742851312021,
+            "complex_phase_coherence": 0.9119522751764736,
+            "median_above_preblock_db": 20.652069725766907,
+            "median_over_inblock_control_db": 17.197198160247098,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -36.631885297514714,
+            "relative_p05_db": -38.43819493679652,
+            "relative_p95_db": -35.27326594919893,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -74.01344158294418,
+              -73.826047861436
+            ],
+            "alignment_sensitivity_span_db": 0.18739372150818667
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.56993009408237,
+            "p05_fundamental_rms_dbfs": -146.23373912992344,
+            "p95_fundamental_rms_dbfs": -127.96229709305516,
+            "complex_phase_coherence": 0.04281752270476769,
+            "preblock_matched_frequency_rms_dbfs": -133.3032032065858,
+            "median_above_preblock_db": -1.26672688749656,
+            "input1_over_input2_median_db": 60.581887285472206,
+            "neighbour_excluded": {
+              "pip_count": 159,
+              "median_fundamental_rms_dbfs": -134.40518644126618,
+              "p05_fundamental_rms_dbfs": -145.72739976215598,
+              "p95_fundamental_rms_dbfs": -127.89082236857944,
+              "complex_phase_coherence": 0.11178882773149197
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -75.51566357592527,
+          "p05_fundamental_rms_dbfs": -79.34609578915047,
+          "p95_fundamental_rms_dbfs": -73.08243624233897,
+          "p95_minus_p05_level_spread_db": 6.263659546811496,
+          "relative_to_same_run_2khz_db": -38.342032447745524,
+          "preblock_matched_frequency_rms_dbfs": -86.02802337652909,
+          "median_above_preblock_db": 10.512359800603821,
+          "inblock_control_count": 1568,
+          "inblock_control_median_rms_dbfs": -87.23420357746599,
+          "median_over_inblock_control_db": 11.718540001540728,
+          "complex_phase_coherence": 0.870301678192565,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -75.99855642009834,
+            -75.37667732839955
+          ],
+          "alignment_sensitivity_span_db": 0.6218790916987871,
+          "neighbour_excluded": {
+            "pip_count": 159,
+            "median_fundamental_rms_dbfs": -75.29175296396184,
+            "p05_fundamental_rms_dbfs": -78.58089073196383,
+            "p95_fundamental_rms_dbfs": -73.09893942063799,
+            "complex_phase_coherence": 0.8792303703104252,
+            "median_above_preblock_db": 10.73627041256725,
+            "median_over_inblock_control_db": 11.94245061350415,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -38.10879735768722,
+            "relative_p05_db": -41.397935125689216,
+            "relative_p95_db": -35.91598381436337,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -75.60867108453746,
+              -75.29175296396184
+            ],
+            "alignment_sensitivity_span_db": 0.31691812057562174
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.01197006822008,
+            "p05_fundamental_rms_dbfs": -143.67197393620526,
+            "p95_fundamental_rms_dbfs": -127.85746699642367,
+            "complex_phase_coherence": 0.03742289578265792,
+            "preblock_matched_frequency_rms_dbfs": -133.335476369668,
+            "median_above_preblock_db": -0.6764936985520933,
+            "input1_over_input2_median_db": 58.496306492294806,
+            "neighbour_excluded": {
+              "pip_count": 159,
+              "median_fundamental_rms_dbfs": -134.61329310051363,
+              "p05_fundamental_rms_dbfs": -145.04393737029937,
+              "p95_fundamental_rms_dbfs": -128.26486738627847,
+              "complex_phase_coherence": 0.05242819430107619
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -1.5276207673151134,
+      "repeat_minus_first_relative_level_db": -1.5411173072415991
+    },
+    {
+      "frequency_hz": 25800,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -74.3160110092079,
+          "p05_fundamental_rms_dbfs": -75.02463835270208,
+          "p95_fundamental_rms_dbfs": -73.08902186257208,
+          "p95_minus_p05_level_spread_db": 1.935616490130002,
+          "relative_to_same_run_2khz_db": -37.12888334110166,
+          "preblock_matched_frequency_rms_dbfs": -107.1681845009318,
+          "median_above_preblock_db": 32.8521734917239,
+          "inblock_control_count": 5837,
+          "inblock_control_median_rms_dbfs": -107.97760093975543,
+          "median_over_inblock_control_db": 33.66158993054755,
+          "complex_phase_coherence": 0.9108194274974318,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -75.49567974932582,
+            -74.0392446701335
+          ],
+          "alignment_sensitivity_span_db": 1.4564350791923175,
+          "neighbour_excluded": {
+            "pip_count": 429,
+            "median_fundamental_rms_dbfs": -74.36609440176287,
+            "p05_fundamental_rms_dbfs": -75.0706367594711,
+            "p95_fundamental_rms_dbfs": -73.57825179436958,
+            "complex_phase_coherence": 0.9137955812070752,
+            "median_above_preblock_db": 32.802090099168936,
+            "median_over_inblock_control_db": 33.61150653799257,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -37.17193183784158,
+            "relative_p05_db": -37.87647419554982,
+            "relative_p95_db": -36.384089230448296,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -75.58395763822273,
+              -74.08671211158385
+            ],
+            "alignment_sensitivity_span_db": 1.4972455266388778
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.3470706020179,
+            "p05_fundamental_rms_dbfs": -146.0982426447603,
+            "p95_fundamental_rms_dbfs": -128.19530323857092,
+            "complex_phase_coherence": 0.05326488442059013,
+            "preblock_matched_frequency_rms_dbfs": -133.68193933916098,
+            "median_above_preblock_db": -0.6651312628569315,
+            "input1_over_input2_median_db": 60.03105959281001,
+            "neighbour_excluded": {
+              "pip_count": 429,
+              "median_fundamental_rms_dbfs": -134.2662927204695,
+              "p05_fundamental_rms_dbfs": -145.06133173870202,
+              "p95_fundamental_rms_dbfs": -128.20965849012362,
+              "complex_phase_coherence": 0.05278282102776798
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -72.6094175087971,
+          "p05_fundamental_rms_dbfs": -73.56210483465263,
+          "p95_fundamental_rms_dbfs": -70.9763278037003,
+          "p95_minus_p05_level_spread_db": 2.585777030952329,
+          "relative_to_same_run_2khz_db": -35.435786380617344,
+          "preblock_matched_frequency_rms_dbfs": -106.78916294116348,
+          "median_above_preblock_db": 34.17974543236638,
+          "inblock_control_count": 5837,
+          "inblock_control_median_rms_dbfs": -108.23532170372164,
+          "median_over_inblock_control_db": 35.62590419492455,
+          "complex_phase_coherence": 0.9047902077591665,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -73.46073367179818,
+            -72.41212727192263
+          ],
+          "alignment_sensitivity_span_db": 1.0486063998755526,
+          "neighbour_excluded": {
+            "pip_count": 429,
+            "median_fundamental_rms_dbfs": -72.69138609760834,
+            "p05_fundamental_rms_dbfs": -73.59444255023197,
+            "p95_fundamental_rms_dbfs": -71.94977195358214,
+            "complex_phase_coherence": 0.9047908561448836,
+            "median_above_preblock_db": 34.09777684355514,
+            "median_over_inblock_control_db": 35.543935606113294,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -35.508430491333726,
+            "relative_p05_db": -36.41148694395736,
+            "relative_p95_db": -34.766816347307525,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -73.53840816921887,
+              -72.48417114009672
+            ],
+            "alignment_sensitivity_span_db": 1.0542370291221488
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.51049272144,
+            "p05_fundamental_rms_dbfs": -146.54405045817066,
+            "p95_fundamental_rms_dbfs": -128.07231534936815,
+            "complex_phase_coherence": 0.048346204227810496,
+            "preblock_matched_frequency_rms_dbfs": -132.92366625431362,
+            "median_above_preblock_db": -1.5868264671263717,
+            "input1_over_input2_median_db": 61.901075212642894,
+            "neighbour_excluded": {
+              "pip_count": 429,
+              "median_fundamental_rms_dbfs": -134.642165742472,
+              "p05_fundamental_rms_dbfs": -146.67360908910217,
+              "p95_fundamental_rms_dbfs": -128.00537373726658,
+              "complex_phase_coherence": 0.09401172106968676
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": 1.7065935004108042,
+      "repeat_minus_first_relative_level_db": 1.6930969604843185
+    },
+    {
+      "frequency_hz": 27000,
+      "captures": [
+        {
+          "run_id": "20261023-155615-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -65.78056149780349,
+          "p05_fundamental_rms_dbfs": -66.23601085265295,
+          "p95_fundamental_rms_dbfs": -65.3996854730156,
+          "p95_minus_p05_level_spread_db": 0.8363253796373584,
+          "relative_to_same_run_2khz_db": -28.593433829697254,
+          "preblock_matched_frequency_rms_dbfs": -104.83179261982434,
+          "median_above_preblock_db": 39.051231122020845,
+          "inblock_control_count": 3894,
+          "inblock_control_median_rms_dbfs": -105.89881977078849,
+          "median_over_inblock_control_db": 40.118258272985,
+          "complex_phase_coherence": 0.9050928202932914,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -66.28650834979561,
+            -65.74579831080025
+          ],
+          "alignment_sensitivity_span_db": 0.540710038995357,
+          "neighbour_excluded": {
+            "pip_count": 317,
+            "median_fundamental_rms_dbfs": -65.76484864712509,
+            "p05_fundamental_rms_dbfs": -66.12262278990043,
+            "p95_fundamental_rms_dbfs": -65.39583917612619,
+            "complex_phase_coherence": 0.9110810993873054,
+            "median_above_preblock_db": 39.06694397269925,
+            "median_over_inblock_control_db": 40.1339711236634,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -28.57068608320381,
+            "relative_p05_db": -28.92846022597915,
+            "relative_p95_db": -28.201676612204906,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -66.27706363105256,
+              -65.71948972088562
+            ],
+            "alignment_sensitivity_span_db": 0.557573910166937
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.965281444636,
+            "p05_fundamental_rms_dbfs": -146.30960982390164,
+            "p95_fundamental_rms_dbfs": -128.5350769362751,
+            "complex_phase_coherence": 0.11725761565094461,
+            "preblock_matched_frequency_rms_dbfs": -133.03926259069425,
+            "median_above_preblock_db": -1.9260188539417413,
+            "input1_over_input2_median_db": 69.1847199468325,
+            "neighbour_excluded": {
+              "pip_count": 317,
+              "median_fundamental_rms_dbfs": -135.3331593803122,
+              "p05_fundamental_rms_dbfs": -146.12013459141843,
+              "p95_fundamental_rms_dbfs": -128.3726451307932,
+              "complex_phase_coherence": 0.15105076316362762
+            }
+          }
+        },
+        {
+          "run_id": "20261023-160447-sonic-e14-full",
+          "pip_count": 600,
+          "median_fundamental_rms_dbfs": -65.86117882452083,
+          "p05_fundamental_rms_dbfs": -66.30385353881904,
+          "p95_fundamental_rms_dbfs": -65.4091734436892,
+          "p95_minus_p05_level_spread_db": 0.8946800951298428,
+          "relative_to_same_run_2khz_db": -28.687547696341085,
+          "preblock_matched_frequency_rms_dbfs": -105.1875346325323,
+          "median_above_preblock_db": 39.32635580801148,
+          "inblock_control_count": 3894,
+          "inblock_control_median_rms_dbfs": -106.40048304585066,
+          "median_over_inblock_control_db": 40.53930422132983,
+          "complex_phase_coherence": 0.8950039824046494,
+          "alignment_sensitivity_median_level_range_dbfs": [
+            -66.31424881673601,
+            -65.81389105200986
+          ],
+          "alignment_sensitivity_span_db": 0.5003577647261466,
+          "neighbour_excluded": {
+            "pip_count": 317,
+            "median_fundamental_rms_dbfs": -65.86325507589072,
+            "p05_fundamental_rms_dbfs": -66.32976104126635,
+            "p95_fundamental_rms_dbfs": -65.47587696702193,
+            "complex_phase_coherence": 0.897127607572944,
+            "median_above_preblock_db": 39.324279556641585,
+            "median_over_inblock_control_db": 40.53722796995994,
+            "relative_to_same_run_neighbour_excluded_2khz_db": -28.680299469616102,
+            "relative_p05_db": -29.146805434991734,
+            "relative_p95_db": -28.292921360747314,
+            "alignment_sensitivity_median_level_range_dbfs": [
+              -66.31488319478697,
+              -65.81419884596393
+            ],
+            "alignment_sensitivity_span_db": 0.500684348823043
+          },
+          "simultaneous_input2_comparator": {
+            "pip_count": 600,
+            "median_fundamental_rms_dbfs": -134.47772575125384,
+            "p05_fundamental_rms_dbfs": -144.85911290184694,
+            "p95_fundamental_rms_dbfs": -128.18172795483895,
+            "complex_phase_coherence": 0.11165414897722489,
+            "preblock_matched_frequency_rms_dbfs": -133.04227902803996,
+            "median_above_preblock_db": -1.435446723213886,
+            "input1_over_input2_median_db": 68.61654692673301,
+            "neighbour_excluded": {
+              "pip_count": 317,
+              "median_fundamental_rms_dbfs": -134.56997067735531,
+              "p05_fundamental_rms_dbfs": -144.92803503266532,
+              "p95_fundamental_rms_dbfs": -128.2865459951001,
+              "complex_phase_coherence": 0.10900545906688842
+            }
+          }
+        }
+      ],
+      "repeat_minus_first_median_level_db": -0.0806173267173449,
+      "repeat_minus_first_relative_level_db": -0.09411386664383059
+    }
+  ],
+  "capture_quality": [
+    {
+      "run_id": "20261023-155615-sonic-e14-full",
+      "transport_valid": true,
+      "callback_status_bits_observed": [
+        0
+      ],
+      "microphone_clipped_samples_at_0_999_fs": 0,
+      "private_result_file": ".work/latency/runs/20261023-155615-sonic-e14-full/pip-frequency-preliminary.json",
+      "private_result_sha256": "d2ea5fb48d5152a023090a747095e86da1aa9fcc64df1c738a1e7c26e3cd6596",
+      "raw_and_manifest_sha256": {
+        "capture.npz": "a51581f5aa887ee7851f1a8955cf4b7b079d73db28d37b925e107a740ecc7bbf",
+        "output_float32.npy": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372",
+        "manifest.json": "828edbb030143140f058eae36396fcd1183e18174c3c7320130f06534632fab0",
+        "stimulus-plan.json": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383"
+      }
+    },
+    {
+      "run_id": "20261023-160447-sonic-e14-full",
+      "transport_valid": true,
+      "callback_status_bits_observed": [
+        0
+      ],
+      "microphone_clipped_samples_at_0_999_fs": 0,
+      "private_result_file": ".work/latency/runs/20261023-160447-sonic-e14-full/pip-frequency-preliminary.json",
+      "private_result_sha256": "9fae30e3765e9b4a905e61c77b8a4904fa43be39c495ab7611a27696af0ff994",
+      "raw_and_manifest_sha256": {
+        "capture.npz": "0b54c13a0c7d13112461b32df8655ae8aedd6b317765fa555d6d2eff11f42507",
+        "output_float32.npy": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372",
+        "manifest.json": "74f19df14caee67047803340acef79d965776677e5fb61cd39c7b45cb9dd3857",
+        "stimulus-plan.json": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383"
+      }
+    }
+  ],
+  "calibration_search": {
+    "scope": [
+      "sources/",
+      "latency/",
+      "docs/",
+      ".work/latency/"
+    ],
+    "serial_specific_microphone_correction_file_found": false,
+    "what_was_found": "Planning/source/verification JSON records describe the M50 chart and electronic calibration file but state that the delivered serial-specific file had not been inspected. No actual response-correction dataset was found by the targeted project search.",
+    "absolute_spl_gain_calibration_found": false,
+    "corrections_applied": false
+  },
+  "provenance": {
+    "analysis_script_sha256": "5212f0baf6dedc5014c7d81186323a01105ef688c84c34a328508e6b0f7f9d9c",
+    "reproduce_offline_command": "python -m latency.pip_response",
+    "no_audio_device_access_in_analysis_script": true,
+    "source_capture_paths_are_ignored_by_git": true,
+    "paper_reference_url": "https://www.biorxiv.org/content/10.1101/2025.09.30.679683v1",
+    "paper_reference_scope": "Frequency-list and pip-duration provenance only; this local pickup check is not a published paper result.",
+    "analysis_script_path": "latency/pip_response.py",
+    "analysis_script_url": "https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/latency/pip_response.py",
+    "tests": {
+      "path": "latency/test_pip_response.py",
+      "sha256": "53d674a8c442100701d399be3ced9646f0512e1f3369dc4c62ef3cb8c93c2946",
+      "command": "python -m unittest discover -s latency -p test_pip_response.py",
+      "passed": 3,
+      "scope": "Synthetic sine RMS normalization across frequency/phase; suppression of a missing distant fundamental and silent-group finite output; rejection of same-frequency and 10.5-to-21-kHz harmonic neighbours for 20.9-kHz target/control groups."
+    },
+    "aggregate_convention": "frequency_results captures copy the per-run fixed-38-ms estimates. Relative levels subtract the corresponding same-run 2-kHz median; compact table minimum contrasts take the minimum of preblock/inblock ratios across both captures and all-target/neighbour-excluded estimates."
+  },
+  "limitations": [
+    "Continuous 10-ms pips do not isolate steady tones. Window leakage, transducer filtering/ringing, adjacent pips and harmonics can contribute.",
+    "Fixed approximate 37--39-ms alignment is for level sensitivity checks. Periodic-carrier ambiguity prevents using it as a delay measurement.",
+    "No serial-specific microphone calibration or SPL/gain calibration was applied. Detection does not establish flatness, fidelity or acoustic high-frequency qualification.",
+    "No speaker-disconnected or microphone-blocked isolation control was recorded. Electrical feedthrough was not excluded.",
+    "The Hann-weighted 6-ms projection has a finite frequency response (first null approximately +/-333 Hz). Components from transients and nearby energy are not perfectly isolated.",
+    "The 37--39-ms offset range was chosen from nearby nonperiodic-probe timing observations; it does not independently measure the periodic SONIC carriers delay.",
+    "Two captures of the same fixed sequence demonstrate short-run repeatability only. Geometry, gain, hardware route and acoustic environment were not independently recalibrated.",
+    "dBFS values describe recorded digital fundamental estimates. Relative-to-2-kHz levels are uncorrected full-chain comparisons and must not be presented as speaker-only sensitivity or SPL.",
+    "The 24-kHz component has the smallest recorded contrast above the local floor/control. The 20.9-kHz component is substantially sensitive to alignment window, consistent with a transient/notch-sensitive estimate.",
+    "No animal readiness, auditory response, neural timing or behavioral performance is established.",
+    "Off-frequency controls and target-event robustness subsets exclude +/-2 same-frequency/near-harmonic neighbours (within334Hz through sixth harmonic). This specifically removes10.5-kHz neighbours when assessing20.9kHz. Retained subsets have159--454pips; the primary all-target summaries retain600. Longer ringing, higher-order distortion, microphone/electrical coupling and unobserved paths remain unresolved.",
+    "Input2 is a simultaneous channel comparator with unmatched/undocumented gain and wiring. Its lower level does not prove acoustic causality or establish a rejection ratio for input1 feedthrough."
+  ],
+  "publication": {
+    "raw_audio_publication_authorized": false,
+    "raw_audio_included": false,
+    "included_material": "Sanitized aggregate frequency-level statistics, quality checks and provenance hashes only."
+  },
+  "compact_table_14": [
+    {
+      "frequency_hz": 2000,
+      "relative_to_2khz_db_first": 0.0,
+      "relative_to_2khz_db_repeat": 0.0,
+      "minimum_condition_contrast_db": 49.39646170975351,
+      "neighbour_excluded_relative_db_first": 0.0,
+      "neighbour_excluded_relative_db_repeat": 0.0,
+      "retained_pips_after_neighbour_exclusion": 454
+    },
+    {
+      "frequency_hz": 4000,
+      "relative_to_2khz_db_first": -2.6995933196559747,
+      "relative_to_2khz_db_repeat": -2.6849084759814446,
+      "minimum_condition_contrast_db": 52.14375108309198,
+      "neighbour_excluded_relative_db_first": -2.6951020545197437,
+      "neighbour_excluded_relative_db_repeat": -2.6793139544729314,
+      "retained_pips_after_neighbour_exclusion": 335
+    },
+    {
+      "frequency_hz": 6000,
+      "relative_to_2khz_db_first": -8.49750227289671,
+      "relative_to_2khz_db_repeat": -8.519636959061465,
+      "minimum_condition_contrast_db": 52.834423394185464,
+      "neighbour_excluded_relative_db_first": -8.486745782704212,
+      "neighbour_excluded_relative_db_repeat": -8.495807228800544,
+      "retained_pips_after_neighbour_exclusion": 326
+    },
+    {
+      "frequency_hz": 8000,
+      "relative_to_2khz_db_first": -7.364589655710567,
+      "relative_to_2khz_db_repeat": -7.243331038886986,
+      "minimum_condition_contrast_db": 55.931749094372776,
+      "neighbour_excluded_relative_db_first": -7.364333162687203,
+      "neighbour_excluded_relative_db_repeat": -7.239970297962209,
+      "retained_pips_after_neighbour_exclusion": 222
+    },
+    {
+      "frequency_hz": 9000,
+      "relative_to_2khz_db_first": -11.359618026015333,
+      "relative_to_2khz_db_repeat": -11.786128893660035,
+      "minimum_condition_contrast_db": 52.69446560023055,
+      "neighbour_excluded_relative_db_first": -11.349572678945691,
+      "neighbour_excluded_relative_db_repeat": -11.788886911134043,
+      "retained_pips_after_neighbour_exclusion": 445
+    },
+    {
+      "frequency_hz": 10500,
+      "relative_to_2khz_db_first": -8.655107389772361,
+      "relative_to_2khz_db_repeat": -8.588678882400579,
+      "minimum_condition_contrast_db": 58.083726052205726,
+      "neighbour_excluded_relative_db_first": -8.649778088855776,
+      "neighbour_excluded_relative_db_repeat": -8.585419041447274,
+      "retained_pips_after_neighbour_exclusion": 453
+    },
+    {
+      "frequency_hz": 17000,
+      "relative_to_2khz_db_first": -14.867802738718893,
+      "relative_to_2khz_db_repeat": -14.745716121745879,
+      "minimum_condition_contrast_db": 55.37829769614917,
+      "neighbour_excluded_relative_db_first": -14.855372620426813,
+      "neighbour_excluded_relative_db_repeat": -14.723618054756145,
+      "retained_pips_after_neighbour_exclusion": 453
+    },
+    {
+      "frequency_hz": 18200,
+      "relative_to_2khz_db_first": -18.617905936773674,
+      "relative_to_2khz_db_repeat": -18.73402132694543,
+      "minimum_condition_contrast_db": 52.16457187943552,
+      "neighbour_excluded_relative_db_first": -18.61745859767614,
+      "neighbour_excluded_relative_db_repeat": -18.72163046501631,
+      "retained_pips_after_neighbour_exclusion": 238
+    },
+    {
+      "frequency_hz": 19500,
+      "relative_to_2khz_db_first": -21.834165131010664,
+      "relative_to_2khz_db_repeat": -22.142881008052214,
+      "minimum_condition_contrast_db": 48.23115144720239,
+      "neighbour_excluded_relative_db_first": -21.864466122426776,
+      "neighbour_excluded_relative_db_repeat": -22.13145812056259,
+      "retained_pips_after_neighbour_exclusion": 431
+    },
+    {
+      "frequency_hz": 20900,
+      "relative_to_2khz_db_first": -40.36355090700112,
+      "relative_to_2khz_db_repeat": -37.7029890774606,
+      "minimum_condition_contrast_db": 31.894213109424086,
+      "neighbour_excluded_relative_db_first": -40.39482337089906,
+      "neighbour_excluded_relative_db_repeat": -37.69449928077296,
+      "retained_pips_after_neighbour_exclusion": 324
+    },
+    {
+      "frequency_hz": 22400,
+      "relative_to_2khz_db_first": -29.74356277954424,
+      "relative_to_2khz_db_repeat": -30.215000611513204,
+      "minimum_condition_contrast_db": 40.97101775668126,
+      "neighbour_excluded_relative_db_first": -29.69300959995647,
+      "neighbour_excluded_relative_db_repeat": -30.163273786503353,
+      "retained_pips_after_neighbour_exclusion": 417
+    },
+    {
+      "frequency_hz": 24000,
+      "relative_to_2khz_db_first": -36.800915140503925,
+      "relative_to_2khz_db_repeat": -38.342032447745524,
+      "minimum_condition_contrast_db": 10.512359800603821,
+      "neighbour_excluded_relative_db_first": -36.631885297514714,
+      "neighbour_excluded_relative_db_repeat": -38.10879735768722,
+      "retained_pips_after_neighbour_exclusion": 159
+    },
+    {
+      "frequency_hz": 25800,
+      "relative_to_2khz_db_first": -37.12888334110166,
+      "relative_to_2khz_db_repeat": -35.435786380617344,
+      "minimum_condition_contrast_db": 32.802090099168936,
+      "neighbour_excluded_relative_db_first": -37.17193183784158,
+      "neighbour_excluded_relative_db_repeat": -35.508430491333726,
+      "retained_pips_after_neighbour_exclusion": 429
+    },
+    {
+      "frequency_hz": 27000,
+      "relative_to_2khz_db_first": -28.593433829697254,
+      "relative_to_2khz_db_repeat": -28.687547696341085,
+      "minimum_condition_contrast_db": 39.051231122020845,
+      "neighbour_excluded_relative_db_first": -28.57068608320381,
+      "neighbour_excluded_relative_db_repeat": -28.680299469616102,
+      "retained_pips_after_neighbour_exclusion": 317
+    }
+  ],
+  "plot_data": {
+    "frequency_hz": [
+      2000,
+      4000,
+      6000,
+      8000,
+      9000,
+      10500,
+      17000,
+      18200,
+      19500,
+      20900,
+      22400,
+      24000,
+      25800,
+      27000
+    ],
+    "series": [
+      {
+        "run_id": "20261023-155615-sonic-e14-full",
+        "all_600_pips": {
+          "relative_median_db": [
+            0.0,
+            -2.6995933196559747,
+            -8.49750227289671,
+            -7.364589655710567,
+            -11.359618026015333,
+            -8.655107389772361,
+            -14.867802738718893,
+            -18.617905936773674,
+            -21.834165131010664,
+            -40.36355090700112,
+            -29.74356277954424,
+            -36.800915140503925,
+            -37.12888334110166,
+            -28.593433829697254
+          ],
+          "relative_p05_db": [
+            -0.103295401455334,
+            -2.7556225135541084,
+            -8.713675945151074,
+            -7.427242997356167,
+            -11.613081481691147,
+            -8.75833267554897,
+            -16.0571636384746,
+            -19.008695545507976,
+            -22.185077019364584,
+            -44.77260195334538,
+            -30.769410309603934,
+            -40.098918488243505,
+            -37.83751068459585,
+            -29.048883184546717
+          ],
+          "relative_p95_db": [
+            0.9344387708148929,
+            -2.074922230404205,
+            -8.415049830205469,
+            -6.976091673345003,
+            -10.994374629680607,
+            -8.1802365507289,
+            -14.705201136713121,
+            -18.29264389518896,
+            -20.828152826387658,
+            -38.65981080920805,
+            -29.298879125388602,
+            -35.18168973751627,
+            -35.90189419446585,
+            -28.21255780490936
+          ]
+        },
+        "neighbour_excluded": {
+          "relative_median_db": [
+            0.0,
+            -2.6951020545197437,
+            -8.486745782704212,
+            -7.364333162687203,
+            -11.349572678945691,
+            -8.649778088855776,
+            -14.855372620426813,
+            -18.61745859767614,
+            -21.864466122426776,
+            -40.39482337089906,
+            -29.69300959995647,
+            -36.631885297514714,
+            -37.17193183784158,
+            -28.57068608320381
+          ],
+          "relative_p05_db": [
+            -0.10982271922448206,
+            -2.7536236853906075,
+            -8.676040263315187,
+            -7.4443456854234,
+            -11.566380043760255,
+            -8.72730202507283,
+            -15.007290890781746,
+            -18.812880313861356,
+            -22.182081047850353,
+            -41.62089879324441,
+            -30.083849645767586,
+            -38.43819493679652,
+            -37.87647419554982,
+            -28.92846022597915
+          ],
+          "relative_p95_db": [
+            0.15172390374343792,
+            -2.6167109808113764,
+            -8.40953614042379,
+            -7.2727611372109,
+            -11.122407322897345,
+            -8.483419421609028,
+            -14.699384461581133,
+            -18.324764976515937,
+            -21.57605711304693,
+            -39.15870950470436,
+            -29.265710399068524,
+            -35.27326594919893,
+            -36.384089230448296,
+            -28.201676612204906
+          ],
+          "retained_pip_counts": [
+            454,
+            335,
+            326,
+            222,
+            445,
+            453,
+            453,
+            238,
+            431,
+            324,
+            417,
+            159,
+            429,
+            317
+          ]
+        }
+      },
+      {
+        "run_id": "20261023-160447-sonic-e14-full",
+        "all_600_pips": {
+          "relative_median_db": [
+            0.0,
+            -2.6849084759814446,
+            -8.519636959061465,
+            -7.243331038886986,
+            -11.786128893660035,
+            -8.588678882400579,
+            -14.745716121745879,
+            -18.73402132694543,
+            -22.142881008052214,
+            -37.7029890774606,
+            -30.215000611513204,
+            -38.342032447745524,
+            -35.435786380617344,
+            -28.687547696341085
+          ],
+          "relative_p05_db": [
+            -0.1034874919866624,
+            -2.7547194839864275,
+            -8.773480898460939,
+            -7.390522323749536,
+            -12.072841374460687,
+            -8.768630506046279,
+            -15.567419118733127,
+            -19.279534860249782,
+            -22.63227902161148,
+            -42.57996979445318,
+            -30.96258650732642,
+            -42.17246466097072,
+            -36.38847370647288,
+            -29.13022241063929
+          ],
+          "relative_p95_db": [
+            0.912712787203894,
+            -2.0390621986615187,
+            -8.344512086090702,
+            -6.946789866465188,
+            -11.392142219240185,
+            -8.303464416119688,
+            -14.501647750907004,
+            -18.429883320762002,
+            -21.710473338030866,
+            -35.125521983319715,
+            -29.734410975682366,
+            -35.90880511415922,
+            -33.80269667552055,
+            -28.23554231550945
+          ]
+        },
+        "neighbour_excluded": {
+          "relative_median_db": [
+            0.0,
+            -2.6793139544729314,
+            -8.495807228800544,
+            -7.239970297962209,
+            -11.788886911134043,
+            -8.585419041447274,
+            -14.723618054756145,
+            -18.72163046501631,
+            -22.13145812056259,
+            -37.69449928077296,
+            -30.163273786503353,
+            -38.10879735768722,
+            -35.508430491333726,
+            -28.680299469616102
+          ],
+          "relative_p05_db": [
+            -0.0995428451425795,
+            -2.7559695966840962,
+            -8.721119889887063,
+            -7.390040200849825,
+            -12.0813882471382,
+            -8.762653012857605,
+            -14.921352573570601,
+            -19.08925379736118,
+            -22.597835624186885,
+            -39.571968921942826,
+            -30.754356919344474,
+            -41.397935125689216,
+            -36.41148694395736,
+            -29.146805434991734
+          ],
+          "relative_p95_db": [
+            0.14322094869798008,
+            -2.523458915772167,
+            -8.340288503352937,
+            -7.118386739507045,
+            -11.481579212802565,
+            -8.410627121006279,
+            -14.495116853586268,
+            -18.405837897143655,
+            -21.79112327529704,
+            -35.193872275109086,
+            -29.709013066328012,
+            -35.91598381436337,
+            -34.766816347307525,
+            -28.292921360747314
+          ],
+          "retained_pip_counts": [
+            454,
+            335,
+            326,
+            222,
+            445,
+            453,
+            453,
+            238,
+            431,
+            324,
+            417,
+            159,
+            429,
+            317
+          ]
+        }
+      }
+    ],
+    "percentile_interpretation": "5th/95th percentiles of within-frequency pip projection amplitudes, normalized by the same-run 2-kHz group median. These are descriptive scatter bars, not confidence intervals or calibrated uncertainty. The 2-kHz normalization uncertainty is not propagated.",
+    "recommended_label": "Relative recorded fundamental estimate (dB versus 2 kHz); uncorrected microphone/interface/speaker chain"
+  },
+  "simultaneous_input2_comparator": {
+    "role": "Same-frequency estimate from the simultaneously recorded second input, in exactly the same event windows. It was not used for timing or subtracted from microphone input 1.",
+    "observed_input2_median_fundamental_rms_dbfs_range": [
+      -135.05270371696363,
+      -133.66270257446064
+    ],
+    "input2_median_above_preblock_db_range": [
+      -2.015585660465149,
+      0.07112066883379953
+    ],
+    "interpretation": "Input 2 shows no substantial target-event excess over its own matched-frequency baseline. Input 1 exceeds this comparator strongly. Input gains, impedance and input-2 wiring are not independently qualified, so these cross-input ratios neither calibrate electrical leakage rejection nor prove the input-1 signal was acoustic."
+  }
+}

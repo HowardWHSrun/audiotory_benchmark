@@ -2,6 +2,18 @@
 
 This package prepares SONIC-derived sounds and records a microphone together with an electrical timing reference. No setup delay has been measured yet. The browser player is a connection check; its button timestamps are not used for delay estimates.
 
+## Basic speaker playback and microphone recording
+
+Simultaneous playback through the Audient and Earthworks recording on input 1 were verified on October 23, 2026. Howard heard the locally synthesized melody, and three sections of the microphone recording matched it with 0.948–0.954 normalized waveform correlation after a 200–1600 Hz bandpass. The capture had no transport warnings or clipping. This verifies the basic sound path; it does not establish a delay, calibrated level, or full frequency response. See the [verification record](../docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json).
+
+To repeat the basic check, pause other computer audio and keep the working speaker volume, microphone gain, and phantom-power switches unchanged. Inputs 1/2 must remain excluded from speaker monitoring to prevent feedback. This check requires the microphone on input 1 and a speaker on output 1; it does not require an electrical-return cable. Double-click [Play and Record Music.command](../Play%20and%20Record%20Music.command), or run:
+
+```sh
+.work/latency-venv/bin/python -m latency.music_check
+```
+
+The command plays a new synthesized recording of the public-domain *Twinkle, Twinkle, Little Star* melody at -24 dBFS peak through outputs 1/2 while recording inputs 1/2. The melody lasts 19.2 seconds, with two seconds of silence before it and one after it. It saves the source waveform, microphone WAV, raw capture, and metadata locally under ignored `.work/latency/runs/`. `--generate-only` prepares the source without opening audio hardware. This is a basic connection check, separate from the SONIC reconstruction and timing probe.
+
 ## Wiring
 
 Turn speaker volume down while changing cables. Disable input monitoring in the Audient iD Mixer so inputs 1/2 do not feed the monitor outputs. Keep gain low initially.

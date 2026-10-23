@@ -1,0 +1,83 @@
+{
+  "date_local": "2026-10-23",
+  "timezone": "America/Chicago",
+  "status": "basic simultaneous speaker playback and microphone recording verified; setup delay remains unmeasured",
+  "hardware": {
+    "audio_interface": "Audient iD14 MKII",
+    "speaker_pair": "Edifier powered speaker pair; exact model was not re-read during this connection check",
+    "microphone": "Earthworks M50 on Audient input 1",
+    "sample_rate_hz": 96000
+  },
+  "working_controls": {
+    "phantom_switch_configuration": "left unchanged from the user photo supplied immediately before the successful voice and melody checks",
+    "phantom_voltage_electrically_read": false,
+    "firmware_updated": false,
+    "microphone_input_monitoring": "kept attenuated in iD Mixer; direct microphone-to-speaker monitoring is unnecessary for recording",
+    "final_hardware_gain_and_output_attenuation_not_numerically_read_back": true
+  },
+  "voice_check": {
+    "local_run": "20261023-154158-microphone-voice-check",
+    "user_confirmed_speaking_near_microphone": true,
+    "input1_peak_dbfs": -28.669098720469357,
+    "clipped_samples": 0,
+    "interpretation": "prompted broadband voice response established input 1 acoustic pickup in the photographed switch configuration",
+    "peak_half_second_200_8000_hz_rms_increase_over_capture_median_db": 24.1056646090719
+  },
+  "melody_check": {
+    "local_run": "20261023-154445-known-melody",
+    "source": "new locally synthesized recording of public-domain Twinkle, Twinkle, Little Star melody; separate from SONIC stimuli",
+    "source_peak_dbfs": -24,
+    "music_duration_seconds": 19.2,
+    "capture_duration_seconds": 22.2,
+    "captured_frames": 2131200,
+    "captured_input_channels": [
+      1,
+      2
+    ],
+    "output_channels": [
+      1,
+      2
+    ],
+    "user_confirmed_melody_audible": true,
+    "transport_valid": true,
+    "transport_errors": [],
+    "input1_peak_dbfs": -23.034844365743176,
+    "input1_clipped_samples": 0,
+    "pickup_band_hz": [
+      200,
+      1600
+    ],
+    "input1_band_baseline_rms_dbfs": -70.34015691564655,
+    "input1_band_music_rms_dbfs": -31.45056986358869,
+    "band_increase_db": 38.889587052057855,
+    "matched_4second_window_correlations": [
+      0.9483970937498251,
+      0.9544462837542264,
+      0.9523181648176792
+    ],
+    "waveform_correlation_is_delay_measurement": false,
+    "source_float32_file_sha256": "54aa8964919d39722000503a8937e5d72b6bee98f8bad1d470ac17da8ffed4ac",
+    "microphone_pcm24_wav_sha256": "36d9b1b73a65f8d00cc67a53ebfdb5b81f84fefec045791b5637f514070bcae7",
+    "capture_npz_sha256": "44b57088fb2d0326307a050c99801e86df485bd325c5f2d681770bfbc802b672"
+  },
+  "reported_setup_delay_ms": null,
+  "limitations": [
+    "No reliable electrical return is present on input 2 in this run.",
+    "The correlation checks establish recorded melody pickup; timing offsets were not qualified or reported.",
+    "Speaker-to-microphone geometry was not remeasured for this basic connection check.",
+    "Phantom voltage, SPL, microphone calibration and 100 Hz\u201320 kHz/full SONIC acoustic coverage remain unqualified."
+  ],
+  "raw_room_audio_published": false,
+  "sources": {
+    "Earthworks_M50": "https://earthworksaudio.com/measurement-microphones/m50/",
+    "Audient_hardware": "https://audient.github.io/audient-documentation-site/id14/front-panel/"
+  },
+  "offline_checks": {
+    "python_tests_passed": 27,
+    "node_tests_passed": 12,
+    "source_links_checked": 516,
+    "stimulus_matches_successful_capture_source_sample_for_sample": true,
+    "pcm24_stimulus_matches_successful_capture_source_byte_for_byte": true,
+    "repeat_command": "python -m latency.music_check"
+  }
+}

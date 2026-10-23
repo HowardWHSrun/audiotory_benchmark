@@ -16,8 +16,9 @@ def build():
     ignored = shutil.ignore_patterns(".DS_Store", "__pycache__", "*.pyc", "*.aux", "*.log", "*.out", "*.synctex.gz")
     for directory in ("web", "sources", "docs", "output", "scripts", "tests", "playback", "latency"):
         shutil.copytree(ROOT / directory, OUT / directory, ignore=ignored)
-    for path in ROOT.glob("*.md"):
-        shutil.copy2(path, OUT / path.name)
+    for pattern in ("*.md", "*.command"):
+        for path in ROOT.glob(pattern):
+            shutil.copy2(path, OUT / path.name)
     # Keep old published document URLs working without cluttering the workspace.
     manifest = json.loads((ROOT / "docs/organization/2026-10-16_path_moves.json").read_text())
     aliases = 0

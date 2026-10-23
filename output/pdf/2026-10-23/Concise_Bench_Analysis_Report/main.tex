@@ -1,0 +1,36 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs,tabularx,xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{17384D}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.2}
+\pagestyle{empty}
+\begin{document}
+{\LARGE\bfseries\color{navy} SONIC bench test: brief results}\par
+{\small 23 October 2026 \hfill Analysis of existing recordings}
+
+\textbf{Setup.} Computer $\to$ Audient iD14 $\to$ Edifier speaker $\to$ Earthworks M50 $\to$ Audient microphone input 1. Microphone separation was approximately 10\,cm (operator reported). Four saved 96\,kHz recordings were analyzed; no new test was performed.
+
+\textbf{Timing.} All 40 timing sweeps were accepted across two stream starts.
+\begin{center}
+\begin{tabularx}{0.94\linewidth}{@{}Xr@{}}
+\toprule
+Pooled median application roundtrip & \textbf{38.307\,ms}\\
+Observed range & 38.240--38.375\,ms\\
+Individual run medians & 38.250 / 38.375\,ms\\
+\bottomrule
+\end{tabularx}
+\end{center}
+This demonstrates short-run repeatability for the tested program and setup. The delay includes computer/interface buffering and the acoustic chain; it does not establish calibrated sub-millisecond accuracy or isolated speaker delay.
+
+\textbf{SONIC sounds.} Two 84-second blocks used a local reconstruction of the paper's 14 Sheep E frequencies, from 2 to 27\,kHz, with 10\,ms pips and 2\,ms ramps: 16,800 pips total. The original SONIC audio files were not used.
+
+\textbf{Frequency results.} Both microphone recordings contain all 14 commanded frequency components, but their levels are uneven. Relative to 2\,kHz, the 17--19.5\,kHz groups were approximately 15--22\,dB lower; 20.9--25.8\,kHz were 30--40\,dB lower. These are full-chain relative recordings. Calibrated SPL, speaker-only response and distortion remain unmeasured.
+
+\textbf{Next.} Fix and document the geometry, apply microphone/SPL calibration, test separated tones, and validate timing against an independent electrical reference.
+
+\vfill
+{\footnotesize Source: \href{https://howardwhsrun.github.io/audiotory_benchmark/output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf}{full saved-data analysis report and measurement records}.}
+\end{document}

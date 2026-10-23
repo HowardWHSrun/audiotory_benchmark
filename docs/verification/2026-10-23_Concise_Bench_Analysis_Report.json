@@ -1,0 +1,41 @@
+{
+  "date_local": "2026-10-23",
+  "scope": "One-page condensation of the previously verified full report; existing recordings only.",
+  "new_playback_performed": false,
+  "new_acquisition_performed": false,
+  "pages": 1,
+  "extracted_word_count": 227,
+  "source_evidence": [
+    {
+      "path": "output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex",
+      "sha256": "d60081fb6c49406d22f52edd190b3426d40775f4b32382cc62cc584f53c06480"
+    },
+    {
+      "path": "docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json",
+      "sha256": "43c9b07c200e0579c0c8f163f1ec74e73d168c5d8e35aed2121263bf14166ecb"
+    },
+    {
+      "path": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
+      "sha256": "384059a3925dbceb676dcc17e5f2523189781bdf5ee52c12a5519b18bc86378f"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex",
+      "sha256": "29a7bfa1bbefc513160f7f7c9b14c239eb3f3819f74932aca348eb0caa2d4d90"
+    },
+    {
+      "path": "output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf",
+      "sha256": "164cd586a469723d1490aac18f62c47fc7f9a24ca3cc2bcbb92bbf5883b70ea8"
+    }
+  ],
+  "review": {
+    "independent_factual_review_passed": true,
+    "desktop_latex_compile": "success",
+    "export_compiler": "Tectonic 0.17.0",
+    "page_visually_inspected": true,
+    "layout_defects_found": false
+  },
+  "scientific_scope": "Application roundtrip repeatability, local SONIC reconstruction and relative whole-chain recorded levels. Calibrated timing accuracy, isolated speaker response, SPL and distortion remain unqualified.",
+  "detailed_report_retained": true
+}

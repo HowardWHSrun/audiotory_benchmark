@@ -2,6 +2,8 @@
 
 This package prepares SONIC-derived sounds and measures native playback-to-microphone waveform delay. On October 23, 2026, two native full-duplex runs established approximately **38.3 ms** of application roundtrip delay for the working wired setup at 96 kHz. The browser player's button timestamps are not used for this measurement.
 
+For the key findings only, read the [one-page bench summary](../output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf) ([LaTeX source](../output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex)).
+
 The [full saved-data analysis report](../output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf) ([editable LaTeX](../output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex)) consolidates all four primary captures, measured timing and frequency results, controls, limitations and proposed next tests. It was prepared offline without new playback or acquisition. [Report verification](../docs/verification/2026-10-23_Full_Bench_Analysis_Report.json) records the source, artifact and analysis checks. `scripts/create_full_bench_report_data.py` rebuilds the numerical tables and provenance from saved records; `scripts/create_full_bench_report_figures.py` additionally reads the private saved arrays to rebuild the report figures. Neither command accesses audio hardware.
 
 ## Measured playback-to-microphone roundtrip

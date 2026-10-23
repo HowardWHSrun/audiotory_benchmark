@@ -2,6 +2,7 @@
 
 ## Current sound setup
 
+- [One-page bench summary](output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.pdf) · [LaTeX source](output/pdf/2026-10-23/Concise_Bench_Analysis_Report/main.tex): key timing and frequency results, limits and next tests.
 - [Full saved-data bench analysis, October 23](output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.pdf) · [Editable LaTeX](output/pdf/2026-10-23/Full_Bench_Analysis_Report/main.tex): 10-page report covering the four captures, timing, all 14 SONIC frequencies, sweep response, controls, limitations and next tests. [Verification record](docs/verification/2026-10-23_Full_Bench_Analysis_Report.json).
 - [Saved frequency-response comparison](output/figures/2026-10-23/Saved_Frequency_Response.png): both SONIC recordings contain all 14 commanded frequency components, with much weaker recorded levels at high frequencies. [Methods and limits](latency/README.md#frequency-review-from-existing-recordings); no new playback or calibrated speaker-bandwidth claim.
 - [Basic speaker playback and microphone recording](latency/README.md#basic-speaker-playback-and-microphone-recording): verified together on October 23; repeat with `.work/latency-venv/bin/python -m latency.music_check`.

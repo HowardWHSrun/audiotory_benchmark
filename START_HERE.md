@@ -3,7 +3,8 @@
 ## Current sound setup
 
 - [Basic speaker playback and microphone recording](latency/README.md#basic-speaker-playback-and-microphone-recording): verified together on October 23; repeat with `.work/latency-venv/bin/python -m latency.music_check`.
-- [Sound-delivery delay measurement](latency/README.md): native simultaneous microphone/electrical-reference capture, documented SONIC E14 reconstruction, and a separate timing probe. A reliable bench delay result remains pending.
+- [Playback-to-microphone delay report](output/pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf): approximately **38.3 ms** in two native 96 kHz runs (40 sweeps); includes playback/recording buffering and the acoustic chain. Repeat with [Measure Sound Delay.command](Measure%20Sound%20Delay.command).
+- [SONIC tone reconstruction and timing methods](latency/README.md): play the 84-second reconstructed E14 block with [Play SONIC Tones.command](Play%20SONIC%20Tones.command), or review the separate electrical-reference method.
 - [Audient / MK3 sound player](playback/README.md): run `python3 scripts/start_sound_player.py --configure`, then open <http://127.0.0.1:8765/>. Playback starts only when you click a button.
 - [Read Final Part List V1](output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf)
 - [Edit the LaTeX source](output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex)

@@ -1,6 +1,20 @@
 # Audient sound-delivery delay check
 
-This package prepares SONIC-derived sounds and records a microphone together with an electrical timing reference. No setup delay has been measured yet. The browser player is a connection check; its button timestamps are not used for delay estimates.
+This package prepares SONIC-derived sounds and measures native playback-to-microphone waveform delay. On October 23, 2026, two native full-duplex runs established approximately **38.3 ms** of application roundtrip delay for the working wired setup at 96 kHz. The browser player's button timestamps are not used for this measurement.
+
+## Measured playback-to-microphone roundtrip
+
+Forty nonperiodic sweeps were detected across two separately opened streams, with no rejected trials, clipping, or transport warnings. Run medians were 38.250 and 38.375 ms; all detected delays were between 38.240 and 38.375 ms. This establishes short-run repeatability for this program and configuration. The observed spread is not a calibrated accuracy bound. See the [one-page bench report](../output/pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf) and [measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+
+To repeat without changing the working cables or controls, pause other audio and double-click [Measure Sound Delay.command](../Measure%20Sound%20Delay.command), or run:
+
+```sh
+.work/latency-venv/bin/python -m latency.roundtrip
+```
+
+The command plays twenty 100 ms sweeps at -24 dBFS peak and records the microphone on input 1 in one Audient full-duplex stream. The exact generated output array is compared with the microphone input array; input 2 is not used as a reference. The result includes application/device playback and recording buffers, conversion, loudspeaker, air travel, and microphone path. It does not establish UI-click latency, isolated speaker delay, exact acoustic onset, another application's latency, or SONIC's neural/intrinsic delay. The operator previously reported 10 cm geometry; it was not remeasured for these runs or subtracted from the result.
+
+`--generate-only` prepares probes without opening audio hardware. `--analyze-run .work/latency/runs/RUN_FOLDER` checks a saved source hash, native acquisition metadata, raw callback log, and signal quality without playing sound. Invalid transport suppresses accepted delay values. Source and microphone WAVs, raw capture, timestamps, manifest, and `roundtrip-analysis.json` stay in ignored `.work/`. The old electrical-reference analysis is a separate measurement and retains its own validity requirements below.
 
 ## Basic speaker playback and microphone recording
 
@@ -14,7 +28,9 @@ To repeat the basic check, pause other computer audio and keep the working speak
 
 The command plays a new synthesized recording of the public-domain *Twinkle, Twinkle, Little Star* melody at -24 dBFS peak through outputs 1/2 while recording inputs 1/2. The melody lasts 19.2 seconds, with two seconds of silence before it and one after it. It saves the source waveform, microphone WAV, raw capture, and metadata locally under ignored `.work/latency/runs/`. `--generate-only` prepares the source without opening audio hardware. This is a basic connection check, separate from the SONIC reconstruction and timing probe.
 
-## Wiring
+## Optional electrical timing reference
+
+The application roundtrip measurement above needs only the working speaker and microphone connections. The wiring below is for measuring the microphone **relative to an electrical return**, which cancels shared playback buffering. A reliable electrical reference was not present in the successful roundtrip runs.
 
 Turn speaker volume down while changing cables. Disable input monitoring in the Audient iD Mixer so inputs 1/2 do not feed the monitor outputs. Keep gain low initially.
 
@@ -33,9 +49,19 @@ The [pinned SONIC v1 manuscript](../sources/SONIC_2025_bioRxiv_v1.pdf), sections
 
 Original stimulus files/code were not located in a focused DOI/title and official Paradromics repository search on October 23, 2026. The exact C37 list, ramp shape, seed/order, balancing algorithm, digital amplitude convention and detailed calibration/geometry remain unresolved. Our E14 files are a declared reconstruction: raised-cosine ramps, PCG64 seed 20261023, and a shuffled block containing 600 of each tone (8,400 pips, 84 seconds). The Audient version uses 96 kHz; a 192 kHz archive is also generated, but the Audient is not asked to play that rate. Full E14 includes frequencies above the speakers' verified operating range; generated samples do not establish acoustic coverage.
 
-The separate timing probe is a local calibration signal: twenty 100 ms logarithmic sweeps from 100 Hz to 20 kHz, 20 ms end ramps, 500 ms onset spacing, and 1 second padding before and after (11.6 seconds total). It is not a published SONIC stimulus. A nonperiodic probe avoids the cycle ambiguity of a single pure tone. Default digital peak is -36 dBFS; this is not calibrated SPL.
+The separate timing probe is a local calibration signal: twenty 100 ms logarithmic sweeps from 100 Hz to 20 kHz, 20 ms end ramps, 500 ms onset spacing, and 1 second padding before and after (11.6 seconds total). It is not a published SONIC stimulus. A nonperiodic probe avoids the cycle ambiguity of a single pure tone. The legacy electrical-reference command defaults to -36 dBFS; `roundtrip` and `sonic_check` default to the working -24 dBFS peak. Neither digital level establishes calibrated SPL.
 
-## Run
+To play the reconstructed E14 sounds through the working route while recording the microphone, double-click [Play SONIC Tones.command](../Play%20SONIC%20Tones.command), or run:
+
+```sh
+.work/latency-venv/bin/python -m latency.sonic_check
+```
+
+This plays one 84-second reconstructed block at -24 dBFS peak, with one second of capture silence at either end. `--preview` selects a 7-second, 700-pip preview; `--generate-only` saves files without accessing audio hardware. The padded source WAV, unpadded stimulus plan, microphone WAV, and transport metadata stay local. No delay is inferred from the repeated pure tones. The original sound order is unavailable, acoustic SPL is uncalibrated, and playback does not establish the speaker's high-frequency response.
+
+One full block was played and recorded on October 23 without clipping or callback warnings. Sequence matching and spectral checks substantiated microphone pickup of the 2-10.5 kHz tones; higher-frequency acoustic coverage remains unqualified. See the [SONIC playback verification record](../docs/verification/2026-10-23_SONIC_E14_Playback.json).
+
+## Run the separate electrical-reference method
 
 The isolated environment is prepared locally at `.work/latency-venv/`. To recreate it using a Python installation with venv support:
 
@@ -57,7 +83,7 @@ Once the return cable, monitoring and gains are configured, run the timing probe
 
 For the declared E14 reconstruction, use `--stimulus sonic-e` instead. It plays one 84-second balanced block with 1-second capture padding on either side; this is not the paper's full session. Both commands deliberately open the audio device and capture room sound. Use Ctrl+C to abort. Local run folders contain `capture.npz`, `output_float32.npy`, `manifest.json` and `analysis.json`. Raw room recordings stay under ignored `.work/` and are not published.
 
-## Meaning of the result
+## Meaning of the electrical-reference result
 
 One full-duplex Core Audio stream binds the named Audient at 96 kHz. Its first two input channels are recorded together: input 1 microphone, input 2 electrical return. Actual reference windows are found in the captured electrical channel; output/input array positions in a callback are not assumed simultaneous. Per-buffer ADC/DAC timestamps and PortAudio status flags are saved.
 
@@ -71,4 +97,6 @@ The program reports candidate delays, median, 5th/95th percentiles, jitter range
 .work/latency-venv/bin/python -m unittest discover -s latency -p 'test_*.py'
 ```
 
-Offline tests recover imposed delays in synthetic signals and reject missing channels, clipping, pure-tone ambiguity, competing echoes and boundary peaks. These are algorithm checks, not measured bench results. A native Audient format check passed on October 23, 2026. A three-probe wiring check at -48 dBFS detected the electrical return with approximately 0.995 template correlation and identical reference alignment offsets across the three probes; all microphone estimates were rejected for weak correlation. After USB disconnect/reconnect, a 20-probe run at -36 dBFS and user-reported 10 cm geometry had no detectable reference; it also produced no valid delay. The routing/mute/gain cause remains unconfirmed. Raw recordings remain local. See the [preparation and check record](../docs/verification/2026-10-23_Audient_Delay_Preparation.json).
+Offline tests recover imposed delays in synthetic signals and reject missing channels, clipping, pure-tone ambiguity, competing echoes, boundary peaks, source-hash mismatches, and invalid transport. These are algorithm checks, separate from the measured two-run result above.
+
+Earlier electrical-reference checks did not establish a delay. A three-probe check at -48 dBFS detected the electrical return with approximately 0.995 correlation, but all microphone estimates were rejected. After USB reconnect, a 20-probe run at -36 dBFS had no detectable reference. These failed checks remain recorded in the [preparation record](../docs/verification/2026-10-23_Audient_Delay_Preparation.json). Later speaker/microphone pickup and application roundtrip were verified separately; a reliable electrical return remains pending. Raw recordings remain local.

@@ -1,0 +1,98 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json)
+>> /Border [ 0 0 0 ] /Rect [ 87.2858 132.36 185.7268 142.2 ] /Subtype /Link /Type /Annot
+>>
+endobj
+5 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/latency/roundtrip.py)
+>> /Border [ 0 0 0 ] /Rect [ 192.418 132.36 262.6018 142.2 ] /Subtype /Link /Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/PortAudio/portaudio/blob/master/qa/loopback/src/paqa.c)
+>> /Border [ 0 0 0 ] /Rect [ 269.293 132.36 392.8096 142.2 ] /Subtype /Link /Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R ] /Contents 11 0 R /MediaBox [ 0 0 612 792 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+>>
+endobj
+9 0 obj
+<<
+/Author (SONIC Auditory Benchmarking) /CreationDate (D:20261023155950-05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261023155950-05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Playback-to-microphone delay | Bench verification | 2026-10-23) /Trapped /False
+>>
+endobj
+10 0 obj
+<<
+/Count 1 /Kids [ 7 0 R ] /Type /Pages
+>>
+endobj
+11 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2600
+>>
+stream
+Gatm<>BAQ-&q9SYfLN=o0tcdLcX]LbS]3gLS_@g?S`pMM64sogA,su648n^4>OWiY[?]gCN[M(8K"tji].=YXO.X5dT5KKl/a11>J:`ju.gf`=VSucN>b&4^;]_NUj*&q1_B9`BaGZpE1^hE`KA"nLP$[_f6+_:[;&IYh97qFdQs.[lQEj%?PR/l(Dn;mTQA)0B/66LkCLL4G:g)iiG^(b-Q/U'*GI7-1MsoD6]#BkQlm56Um;P&Ndodd/N$cpd#K59H`U$Oe9mK0OC9L3!^rIMOh-=;md/;K;Y80(+J'b7>l\d^jk-tB$])E$+\rZL<jmCUaX,Hf5lK0";@73$jMjme7[hS\tp`RR`n8fR^39E1BNK.YX2L9l8,@9rX->G3nO24&TO.4chhAW)C',UNB>WaQ+qJg&hd8m*TX>XW5.?bT5(">4"]'ZD(KF_B/7mSuJp.76%:M_,`bXE!qK6^J]o!@$W.oG&7l:&';-hiU4s&.6jj:sr3]c;m/b#R.<XZFO\Q>*<S<NKm^mcCIu>LI(gA6,brA>E"e/X\=pg^0"X%)u#36,Z('Fd[9O>1)pFVST+6@[SaQOkC6t(d;U0hLOr^dSB<M9dRbKW@8S,iQ1L#BX^jLFOMjr[[UR%58lS56$%3:apt\<h-^3jnWpK,7[JaimfgNe$#khD%30mh'lJ"ANC=C,oid8*$1*&XCld_(:9dT,-Y6k&-T+9<b*66H#fddf]98,SKPn"l<jLY=Ff$j1[1lj*Fg:]]_c&uqr(36(Ds#BCISATLRY47ahsno$)*\:::Lf8Z^ekA*8QpQB"e%=1El8=%]g-a&O(g`M-;KR:aMlW>2*%$]:K(ETn5%@=P'B4aS]heJqO"Mme&+b]T74+';Vr^?=qkatr'CLW';kgrRoO@lBB=>X0J2q]"n_3X;tMm98!s(ljF;9)UU^BJLq`B,Qid:1hXK3Cqe9Dr\"Cc?2+^Q_HSfr:2"CS*-&1U/q"NakRnP!!!9>u,`(>L:#nT_<5Fm'+m2RTq<X29iEk6>UIY@1"PF'>MA,ck_M0t<o`:`-nB`Mf>ne6D1r6-*p/k_Lb\hH?F.mgpo*>Rnun4,P4k5a3JnM@JI'fhO"851Cf5JQfGlaM"%2jC;l9"L>IJad!ems2:mY\6#X.*<bT(o4^B.UGebX'D):<%uX$hOtn*f$GA0$OAkdPT"ZDd-(u#C+7u]b3UA<'N!o66Jr8qZVWIk92ju\Q&r$\ZBk2h*%Y6-]i.rD,<+(iF)tE\`_Zcp&[ngsi(i";EZ2QTG#N!#2hi<l-eudWHM"rpj.b=0aG'nk)LnTA&uD!X\aGF7V>JJrT)'&7J(^:@,q?"cC1g^'8LXT<^n]b;p'5LPfF*8F4Ka%Cc,nI*n[LN2YAL*3h"R6#P/C7f:++h$@K.9+kc2r";-!dCT3IX+@0sPnI.PrM4:U76TRn_(6hgK&?R)K\Sp"^J+TpZR&DkC48AG:8a&lme`g"/_I0W6C("7p/FmO[3$RY'C0!=.DY.$^#Q(hQ'`[j?4e<6et>@e]CkR)D=#\sn@G)">LRP"T$%m#?grB9utRj+Bi&p@U4B%Z.XV;74Q!JGn=3`N-=?K<RT=W!7"8o:iIWH6hJ^.G_Sc<f)QZ'q4)T'r&ge+"i*2j:Zf^mWKqTHGH!`I<.c[p=cEGB$)gk]jehjjp!G=lsF?KLs4Fs.>[nDbr75@Nt]Pm:<C>:Ao*s"ofHN%QK[3WG]=B5O+EoFXBi?r46Y1]AI2EZAZJPQjRH/"H\3nmTsYBN=@<il`?rLYj!h<>%$)WXBhqH&0)gl&pE<_PpP%49==i'Nfd&V[rD\)[ku>TZIdNN\-H^$?5JU.Q?CuX)[u&MmJ.2FX>r[5EQG8pQ&Y::AI6?*%o&7hbH,;*FEW;u^PnL5icP39'uOId;Do;c?n\H_08f\$8AV8@jn.lh#`NQe/5:>,e^funBBp/];I6/lW`:M9eB!@(fq,YX@_nNoAg't9%6tSOcDGe8PNU`[`(_Zi?rD(VbH@BkA.ZL@Y(am?*q3W.(6C.4%P1^6\Wu')Ubbc,Y02I\FSGe%d-2sG.mMR3C;t)/Tei-fk8XR*.$^YYATK"J,hC.G!3LdR_-u)gd1HOX>B:X/CH\:KAeu/e^9.#',k98rIOg@PR*oC!hj`hI"&GU`8*^5*<2ZnC>[aKm?`8;!j%;m^jf34ie>Jp1l9mI>Y/9P`<^W/STV-I7+7q/W!+7O=Bs.5?a,CHF5a&SW>#;Ee0SZpEkDI%8Ogodu>!O\21B#kX!<2!'&96q]8>2!d?u9e,?413c.X&!YQ8=rkJh8,$PU_s\h!%8,@@.4!lYlEcJ@Z<d6KNU*Kn.[A*JjS"TV_DK%I4`jEc'HaAg*5qqV'=GQhN8m,8t!.e9Wq)"#hg*QX\4:\eR2B?$rXQFn@b`4!r,l;II(2ei#T5c`1C7l?s$L-^HfMh&m1H(d/oNr=3/S?!l*1#8)';?Mf`(oA?t&i:7pe:o(C6r<JbNCb&-%pD-KJ;u4+sFuUWs1\p8)H`2DB/,%l.cnBI=Z:lRQCKu==H\'hW:!8Go<0hZG,M6'8"[.mlpJ!p[fQQ-iL^2D%l>[U(m(Xa0fU`~>endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000596 00000 n 
+0000000824 00000 n 
+0000001043 00000 n 
+0000001268 00000 n 
+0000001337 00000 n 
+0000001680 00000 n 
+0000001740 00000 n 
+trailer
+<<
+/ID 
+[<5696578044b108194889a07df3e06f79><5696578044b108194889a07df3e06f79>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 9 0 R
+/Root 8 0 R
+/Size 12
+>>
+startxref
+4432
+%%EOF

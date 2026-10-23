@@ -1,0 +1,235 @@
+{
+  "date_local": "2026-10-23",
+  "timezone": "America/Chicago",
+  "reviewed_at_utc": "2026-10-23T21:00:00.848639+00:00",
+  "status": "one full reconstructed SONIC Sheep E block played through Audient while microphone input 1 was recorded; basic low-frequency sequence pickup verified",
+  "local_run": "20261023-155615-sonic-e14-full",
+  "hardware": {
+    "audio_interface": "Audient iD14 MKII",
+    "microphone": "Earthworks M50 on input 1",
+    "speaker": "connected Edifier powered speaker pair; exact model not independently re-read in this run"
+  },
+  "paper_source": {
+    "local_pdf": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "pdf_sha256": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731",
+    "methods_locator": "printed page 11, sections 6.1-6.2",
+    "url": "https://www.biorxiv.org/content/10.1101/2025.09.30.679683v1"
+  },
+  "stimulus": {
+    "kind": "SONIC Sheep E E14 reconstruction",
+    "exact_original_waveform": false,
+    "sample_rate_hz": 96000,
+    "paper_dac_sample_rate_hz": 192000,
+    "published_frequency_list_hz": [
+      2000,
+      4000,
+      6000,
+      8000,
+      9000,
+      10500,
+      17000,
+      18200,
+      19500,
+      20900,
+      22400,
+      24000,
+      25800,
+      27000
+    ],
+    "tone_count": 8400,
+    "tones_per_frequency": 600,
+    "tone_duration_ms": 10,
+    "tone_duration_samples": 960,
+    "ramp_each_end_ms": 2,
+    "ramp_each_end_samples": 192,
+    "ramp_shape": "raised cosine; local choice, original shape unspecified",
+    "phase": "zero starting sine phase for each pip",
+    "inter_tone_silence_samples": 0,
+    "block_duration_seconds": 84,
+    "capture_duration_seconds": 86,
+    "leading_silence_seconds": 1,
+    "trailing_silence_seconds": 1,
+    "digital_peak_limit_dbfs": -24,
+    "random_generator": "NumPy PCG64",
+    "seed": 20261023,
+    "sequence_rule": "repeat each frequency equally, then numpy Generator(PCG64(seed)).shuffle once",
+    "full_paper_session_reproduced": false,
+    "scope": "one block; original paper sessions had at least 12 blocks separated by 1 second"
+  },
+  "transport": {
+    "valid_transport": true,
+    "transport_errors": [],
+    "captured_frames": 8256000,
+    "captured_input_channels": [
+      1,
+      2
+    ],
+    "output_channels": [
+      1,
+      2
+    ],
+    "callback_count": 9093,
+    "callbacks_with_nonzero_status_flags": 0,
+    "clock_mapping_independently_calibrated": false,
+    "reported_host_buffer_latencies_are_not_measured_delay": true
+  },
+  "inputs": [
+    {
+      "input": 1,
+      "peak_fs": 0.04146770387887955,
+      "peak_dbfs": -27.64580022849964,
+      "rms_dbfs": -45.784938214893245,
+      "clipping_threshold_fs": 0.999,
+      "samples_at_or_above_clipping_threshold": 0,
+      "clipped": false
+    },
+    {
+      "input": 2,
+      "peak_fs": 4.056096076965332e-05,
+      "peak_dbfs": -87.83783532792391,
+      "rms_dbfs": -106.93994762490675,
+      "clipping_threshold_fs": 0.999,
+      "samples_at_or_above_clipping_threshold": 0,
+      "clipped": false
+    }
+  ],
+  "pickup_review": {
+    "scope": "basic microphone pickup of the commanded low-tone sequence; not a complete acoustic qualification",
+    "analysis_band_hz": [
+      1500,
+      11000
+    ],
+    "filter_method": "offline zero-phase FFT band selection, applied separately to each analysis window",
+    "input1_prepad_baseline_interval_seconds": [
+      0.1,
+      0.8
+    ],
+    "input1_prepad_baseline_rms_dbfs": -75.480224609375,
+    "input1_active_interval_seconds": [
+      2,
+      84
+    ],
+    "input1_active_band_rms_dbfs": -46.562286376953125,
+    "increase_over_prepad_db": 28.917938232421875,
+    "input1_postpad_interval_seconds": [
+      85.1,
+      85.8
+    ],
+    "input1_postpad_band_rms_dbfs": -80.24468231201172,
+    "sequence_window_matches": [
+      {
+        "source_start_seconds_including_padding": 2,
+        "window_duration_seconds": 4,
+        "normalized_waveform_correlation_abs": 0.5286178454827125,
+        "wrong_time_control_start_seconds": 12.0,
+        "wrong_time_control_max_correlation_abs": 0.08462175397399932
+      },
+      {
+        "source_start_seconds_including_padding": 20,
+        "window_duration_seconds": 4,
+        "normalized_waveform_correlation_abs": 0.5924114429600107,
+        "wrong_time_control_start_seconds": 30.0,
+        "wrong_time_control_max_correlation_abs": 0.07883160736834471
+      },
+      {
+        "source_start_seconds_including_padding": 40,
+        "window_duration_seconds": 4,
+        "normalized_waveform_correlation_abs": 0.5763087311564571,
+        "wrong_time_control_start_seconds": 50.0,
+        "wrong_time_control_max_correlation_abs": 0.0836638134814574
+      },
+      {
+        "source_start_seconds_including_padding": 60,
+        "window_duration_seconds": 4,
+        "normalized_waveform_correlation_abs": 0.5384031515190256,
+        "wrong_time_control_start_seconds": 70.0,
+        "wrong_time_control_max_correlation_abs": 0.09673882264884673
+      },
+      {
+        "source_start_seconds_including_padding": 78,
+        "window_duration_seconds": 4,
+        "normalized_waveform_correlation_abs": 0.5870358535622618,
+        "wrong_time_control_start_seconds": 68.0,
+        "wrong_time_control_max_correlation_abs": 0.0758023483257289
+      }
+    ],
+    "alignment_method": "median maximizing source-to-microphone array correlation in five 4-second windows, searched within +/-200 ms; used solely to locate sequence content for pickup checks",
+    "alignment_is_qualified_delay": false,
+    "low_tone_spectral_checks": [
+      {
+        "commanded_frequency_hz": 2000,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 1992.1875
+      },
+      {
+        "commanded_frequency_hz": 4000,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 4007.8125
+      },
+      {
+        "commanded_frequency_hz": 6000,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 6000.0
+      },
+      {
+        "commanded_frequency_hz": 8000,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 7992.1875
+      },
+      {
+        "commanded_frequency_hz": 9000,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 9000.0
+      },
+      {
+        "commanded_frequency_hz": 10500,
+        "pips_checked": 600,
+        "pips_with_peak_within_300_hz": 600,
+        "median_peak_frequency_hz": 10500.0
+      }
+    ],
+    "spectral_check_method": "For each commanded low tone, inspect the central 6 ms of its sequence-aligned input-1 segment using a Hann window and a 4096-point zero-padded FFT. Find the dominant peak only within 1.5-11 kHz and check whether it falls within 300 Hz of the command.",
+    "spectral_checks_are_level_timing_or_response_qualification": false,
+    "basic_low_tone_sequence_pickup_verified": true
+  },
+  "hashes_sha256": {
+    "output_float32_npy_file": "2a8b22dc26c1e46bc88a5fde287ae32210ee7dfd2b1941f8862534621813a372",
+    "output_float32_raw_sample_bytes": "2463d71aec06b8b6d624966545ded79db2f3f8c8647553b61ab25db5265e1932",
+    "source_pcm24_wav": "93a34290572af996bceecfbc64987e20c7d32142fc5d8bc828063b90afaba768",
+    "original_reconstruction_plan_json": "e906a4fc6b6209e892c45009698cb45ee2b00e02a46b2501274930ff7ee35383",
+    "capture_npz": "a51581f5aa887ee7851f1a8955cf4b7b079d73db28d37b925e107a740ecc7bbf",
+    "microphone_input1_pcm24_wav": "d82cfa4204fdd6bafbdfd3733964c2b5cb05e36d07de62d00aac2ed48e26c292"
+  },
+  "preview_excerpt": {
+    "kind": "exact first-seven-second excerpt of the completed full-block playback source; not a separately shuffled preview",
+    "source_file": "output_float32.npy",
+    "source_start_sample_inclusive": 96000,
+    "source_stop_sample_exclusive": 768000,
+    "sample_rate_hz": 96000,
+    "duration_seconds": 7,
+    "tone_count": 700,
+    "frequency_counts_are_not_forced_equal_in_excerpt": true,
+    "digital_peak_limit_dbfs": -24,
+    "includes_microphone_audio": false,
+    "wav_file": "sonic-e14-first-7s-excerpt.wav",
+    "wav_sha256": "9fb24688d7b3c4b4fe356fa6b62d8f933f19b05ecc6080d5eef66364d9011dc5",
+    "exact_source_excerpt": true
+  },
+  "measured_delay_from_sonic_pips_ms": null,
+  "acoustic_spl_calibrated": false,
+  "full_E14_acoustic_bandwidth_qualified": false,
+  "phantom_voltage_electrically_verified": false,
+  "raw_room_audio_published": false,
+  "limitations": [
+    "No independently qualified delay is inferred from this repeated pure-tone sequence; use a suitable nonperiodic timing reference for timing claims.",
+    "The high-frequency E14 tones from 17 to 27 kHz were not qualified by this limited low-tone pickup review.",
+    "Frequency-peak matches do not establish pip envelope fidelity, settling, transition ringing, calibrated level, distortion, temporal accuracy or neural responses.",
+    "Original waveform files, random order, seed, exact ramp shape and digital amplitude were unavailable; this is a declared reconstruction.",
+    "Audient and speaker settings and physical microphone geometry were not numerically re-read during this run."
+  ]
+}

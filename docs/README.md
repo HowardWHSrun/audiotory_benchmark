@@ -11,6 +11,11 @@ Use the [current setup guide](../output/pdf/2026-10-16/M50_Sound_Setup_Guide/Fin
 
 These working records include earlier planning context; they do not establish completed hardware tests or animal readiness.
 
+## Measured bench checks
+
+- [Playback-to-microphone delay report, October 23, 2026](../output/pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf): approximately 38.3 ms in two native 96 kHz streams, with 40 accepted sweeps. [Sanitized measurement record](verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+- [Basic speaker and microphone check](verification/2026-10-23_Audient_Basic_Playback_Recording.json).
+
 ## Paper and history
 
 - [SONIC paper notes](paper/Paper_Notes.md)

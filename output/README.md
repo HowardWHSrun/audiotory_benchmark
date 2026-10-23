@@ -1,5 +1,9 @@
 # PDFs and editable files
 
+## Measured bench delay
+
+[Playback-to-microphone delay report, October 23, 2026](pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf): approximately 38.3 ms in the tested native application and wired setup. [Measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+
 ## Current guide
 
 [Final Part List V1 PDF](pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf) · [LaTeX source](pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex)

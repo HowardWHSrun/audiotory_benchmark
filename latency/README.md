@@ -4,7 +4,7 @@ This package prepares SONIC-derived sounds and measures native playback-to-micro
 
 ## Measured playback-to-microphone roundtrip
 
-Forty nonperiodic sweeps were detected across two separately opened streams, with no rejected trials, clipping, or transport warnings. Run medians were 38.250 and 38.375 ms; all detected delays were between 38.240 and 38.375 ms. This establishes short-run repeatability for this program and configuration. The observed spread is not a calibrated accuracy bound. See the [one-page bench report](../output/pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf) and [measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+Forty nonperiodic sweeps were detected across two separately opened streams, with no rejected trials, clipping, or transport warnings. Run medians were 38.250 and 38.375 ms; all detected delays were between 38.240 and 38.375 ms. This establishes short-run repeatability for this program and configuration. The observed spread is not a calibrated accuracy bound. See the [concise one-page report](../output/pdf/2026-10-23/Audient_Delay_Report/main.pdf), [LaTeX source](../output/pdf/2026-10-23/Audient_Delay_Report/main.tex), and [measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
 
 To repeat without changing the working cables or controls, pause other audio and double-click [Measure Sound Delay.command](../Measure%20Sound%20Delay.command), or run:
 
@@ -59,7 +59,7 @@ To play the reconstructed E14 sounds through the working route while recording t
 
 This plays one 84-second reconstructed block at -24 dBFS peak, with one second of capture silence at either end. `--preview` selects a 7-second, 700-pip preview; `--generate-only` saves files without accessing audio hardware. The padded source WAV, unpadded stimulus plan, microphone WAV, and transport metadata stay local. No delay is inferred from the repeated pure tones. The original sound order is unavailable, acoustic SPL is uncalibrated, and playback does not establish the speaker's high-frequency response.
 
-One full block was played and recorded on October 23 without clipping or callback warnings. Sequence matching and spectral checks substantiated microphone pickup of the 2-10.5 kHz tones; higher-frequency acoustic coverage remains unqualified. See the [SONIC playback verification record](../docs/verification/2026-10-23_SONIC_E14_Playback.json).
+One full block was played and recorded on October 23 without clipping or callback warnings. Sequence matching and spectral checks substantiated microphone pickup of the 2-10.5 kHz tones; higher-frequency acoustic coverage remains unqualified. A separate direct delay check of five four-second SONIC sequence windows accepted only one; four had ambiguous carrier-correlation peaks. No SONIC-specific delay is qualified: approximately 38.3 ms is the separate sweep result. See the [SONIC playback verification record](../docs/verification/2026-10-23_SONIC_E14_Playback.json).
 
 ## Run the separate electrical-reference method
 

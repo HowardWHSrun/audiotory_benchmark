@@ -1,0 +1,58 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,booktabs}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{empty}
+\begin{document}
+{\Large\bfseries Speaker--microphone bench verification}\\[-1pt]
+{\small SONIC Auditory Benchmarking \hfill 23 October 2026}
+
+\textbf{Established.} Simultaneous speaker playback and microphone recording work.
+Two timing runs established an approximately \textbf{38.3\,ms application roundtrip}
+in the tested program and wired configuration.
+
+\textbf{Setup.} Computer/Core Audio at 96\,kHz $\to$ Audient iD14 $\to$
+Edifier speaker $\to$ Earthworks M50 $\to$ Audient input 1 $\to$ program.
+The operator reported 10\,cm speaker--microphone separation; it was not remeasured.
+
+\textbf{SONIC sounds.} We played and recorded one reconstructed Sheep E block using
+the paper's exact 14-frequency alphabet (kHz):
+\[
+\{2,\ 4,\ 6,\ 8,\ 9,\ 10.5,\ 17,\ 18.2,\ 19.5,\ 20.9,\ 22.4,\ 24,\ 25.8,\ 27\}.
+\]
+The block contains 8,400 consecutive 10\,ms zero-phase sine pips, with 2\,ms
+ramps at each end. The original tone order and ramp shape were unavailable:
+our seeded order and raised-cosine ramps are declared reconstruction choices.
+Output was 96\,kHz; the paper used 192\,kHz.
+
+\textbf{Timing result.} Forty nonperiodic 100\,Hz--20\,kHz sweeps were matched
+from the exact output array to microphone input 1, across two separately started
+full-duplex streams.
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Run & Accepted & Median (ms) & Observed range (ms)\\
+\midrule
+1 & 20/20 & 38.250 & 38.240--38.250\\
+2 & 20/20 & 38.375 & 38.365--38.375\\
+\bottomrule
+\end{tabular}
+\end{center}
+All probes passed signal and transport checks; there was no clipping or callback
+warning. Run medians differed by 0.125\,ms.
+Direct delay estimates from the SONIC sequence remained cycle-ambiguous;
+\textbf{38.3\,ms is the separate sweep-based result}.
+
+\textbf{Scope.} This establishes short-run repeatability, including playback/recording
+buffers, conversion and the acoustic chain. It does not establish absolute accuracy,
+isolated speaker delay, calibrated SPL, ultrasonic coverage, or another program's latency.
+
+{\footnotesize
+Records:
+\href{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json}{timing measurements},
+\href{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/docs/verification/2026-10-23_SONIC_E14_Playback.json}{SONIC playback}.
+Source: \href{https://www.biorxiv.org/content/10.1101/2025.09.30.679683v1}{SONIC v1}, Methods 6.1--6.2.
+}
+\end{document}

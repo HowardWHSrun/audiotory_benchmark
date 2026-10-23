@@ -231,5 +231,106 @@
     "Frequency-peak matches do not establish pip envelope fidelity, settling, transition ringing, calibrated level, distortion, temporal accuracy or neural responses.",
     "Original waveform files, random order, seed, exact ramp shape and digital amplitude were unavailable; this is a declared reconstruction.",
     "Audient and speaker settings and physical microphone geometry were not numerically re-read during this run."
-  ]
+  ],
+  "direct_sonic_sequence_delay_check": {
+    "status": "not_qualified_due_to_ambiguous_carrier_correlation_peaks",
+    "qualified_delay_ms": null,
+    "source_windows_seconds_including_padding": [
+      [
+        2,
+        6
+      ],
+      [
+        20,
+        24
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        60,
+        64
+      ],
+      [
+        78,
+        82
+      ]
+    ],
+    "transport_rechecked_valid": true,
+    "source_hash_verified": true,
+    "source_float32_array_bytes_sha256": "2463d71aec06b8b6d624966545ded79db2f3f8c8647553b61ab25db5265e1932",
+    "window_duration_seconds": 4,
+    "tested_windows": 5,
+    "accepted_windows": 1,
+    "rejected_windows": 4,
+    "minimum_accepted_windows_for_existing_screening_flag": 3,
+    "thresholds": {
+      "min_rms_fs": 1e-06,
+      "min_peak_correlation": 0.35,
+      "ambiguity_ratio": 0.95,
+      "peak_guard_samples": 3,
+      "ambiguity_exclusion": "primary_same_sign_lobe_between_zero_crossings_with_minimum_sample_guard",
+      "clipping_level_fs": 0.999
+    },
+    "per_window_quality": [
+      {
+        "source_start_seconds": 2.0,
+        "accepted": false,
+        "rejection_reasons": [
+          "ambiguous_peak_use_nonperiodic_probe"
+        ],
+        "peak_correlation_abs": 0.36617394692786975,
+        "secondary_peak_ratio": 0.9843401291076822
+      },
+      {
+        "source_start_seconds": 20.0,
+        "accepted": false,
+        "rejection_reasons": [
+          "ambiguous_peak_use_nonperiodic_probe"
+        ],
+        "peak_correlation_abs": 0.38202634372653876,
+        "secondary_peak_ratio": 0.9676353124842482
+      },
+      {
+        "source_start_seconds": 40.0,
+        "accepted": false,
+        "rejection_reasons": [
+          "ambiguous_peak_use_nonperiodic_probe"
+        ],
+        "peak_correlation_abs": 0.37101660016485283,
+        "secondary_peak_ratio": 0.9718569529718751
+      },
+      {
+        "source_start_seconds": 60.0,
+        "accepted": false,
+        "rejection_reasons": [
+          "ambiguous_peak_use_nonperiodic_probe"
+        ],
+        "peak_correlation_abs": 0.3730051792505177,
+        "secondary_peak_ratio": 0.9765226708390857
+      },
+      {
+        "source_start_seconds": 78.0,
+        "accepted": true,
+        "rejection_reasons": [],
+        "peak_correlation_abs": 0.37695880603100435,
+        "secondary_peak_ratio": 0.9298874327754646
+      }
+    ],
+    "filtered_diagnostic_also_qualified": false,
+    "interpretation": "Long randomized SONIC sequences retained competing carrier-correlation peaks; no SONIC-specific delay result is reported. Approximately38.3ms is the separate nonperiodic-sweep application roundtrip, not a delay measured from these tones.",
+    "private_diagnostic_sha256": "777925e2e75e958d08af1982bd358f2d6a387a25f6088719f9b5c074bdb18994"
+  },
+  "current_report": {
+    "latex_source": "output/pdf/2026-10-23/Audient_Delay_Report/main.tex",
+    "pdf": "output/pdf/2026-10-23/Audient_Delay_Report/main.pdf",
+    "pages": 1,
+    "word_count_extracted": 264,
+    "built_in_latex_compilation": "success",
+    "terminal_compiler": "Tectonic 0.17.0",
+    "visual_qa": "one page inspected; no overlap, clipping, or missing glyphs",
+    "source_sha256": "61d2e72b8163946fd0e2d47323eab50593b74d60ea8953e3950cf2ac8a93093a",
+    "pdf_sha256": "90ef3dfba9d99140542154d9452c4bd9161990f7d18e3c99b85ab77d52786cde"
+  }
 }

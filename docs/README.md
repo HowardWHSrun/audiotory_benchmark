@@ -13,7 +13,7 @@ These working records include earlier planning context; they do not establish co
 
 ## Measured bench checks
 
-- [Playback-to-microphone delay report, October 23, 2026](../output/pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf): approximately 38.3 ms in two native 96 kHz streams, with 40 accepted sweeps. [Sanitized measurement record](verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+- [Concise delay report, October 23, 2026](../output/pdf/2026-10-23/Audient_Delay_Report/main.pdf) · [LaTeX source](../output/pdf/2026-10-23/Audient_Delay_Report/main.tex): approximately 38.3 ms in two native 96 kHz streams, with 40 accepted sweeps. [Sanitized measurement record](verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
 - [Basic speaker and microphone check](verification/2026-10-23_Audient_Basic_Playback_Recording.json).
 
 ## Paper and history

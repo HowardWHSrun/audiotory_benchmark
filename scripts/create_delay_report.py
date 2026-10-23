@@ -1,4 +1,7 @@
-"""Render the dated, measured bench record as a concise one-page PDF.
+"""Reproduce the initial PDF; the current requested report is authored in LaTeX.
+
+Current source: output/pdf/2026-10-23/Audient_Delay_Report/main.tex.
+This historical generator preserves the first report's provenance.
 
 Requires reportlab. Reads sanitized verification JSON, never raw room audio.
 """

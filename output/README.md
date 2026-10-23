@@ -2,7 +2,7 @@
 
 ## Measured bench delay
 
-[Playback-to-microphone delay report, October 23, 2026](pdf/2026-10-23/Audient_Playback_Microphone_Delay_Report.pdf): approximately 38.3 ms in the tested native application and wired setup. [Measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
+[Concise delay report, October 23, 2026](pdf/2026-10-23/Audient_Delay_Report/main.pdf) · [LaTeX source](pdf/2026-10-23/Audient_Delay_Report/main.tex): approximately 38.3 ms with timing sweeps in the tested native application and wired setup; includes the reconstructed SONIC frequency list. [Measurement record](../docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json).
 
 ## Current guide
 

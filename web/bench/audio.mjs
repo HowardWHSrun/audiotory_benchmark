@@ -296,7 +296,7 @@ export class BrowserBench {
         await ctx.setSinkId(outputDeviceId);
       }
       if (epoch !== this._epoch) throw aborted();
-      await ctx.audioWorklet.addModule(new URL('./processor.js', import.meta.url));
+      await ctx.audioWorklet.addModule(new URL('./processor.js?v=20261024-browser3', import.meta.url));
       if (epoch !== this._epoch) throw aborted();
       const track = stream.getAudioTracks()[0];
       if (!track) throw new Error('No microphone track was opened.');

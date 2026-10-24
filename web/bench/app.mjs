@@ -1,4 +1,4 @@
-import { BrowserBench } from './audio.mjs';
+import { BrowserBench } from './audio.mjs?v=20261024-browser3';
 
 const $ = (id) => document.getElementById(id);
 const inputs = { inputDevice: $('inputDevice'), outputDevice: $('outputDevice'), sampleRate: $('sampleRate'), inputChannel: $('inputChannel'), outputChannel: $('outputChannel'), referenceChannel: $('referenceChannel'), referenceOutputChannel: $('referenceOutputChannel'), peakDbfs: $('peakDbfs'), repetitions: $('repetitions'), seed: $('seed'), distanceM: $('distanceM') };

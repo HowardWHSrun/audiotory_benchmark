@@ -42,9 +42,10 @@ const server = http.createServer((req, res) => {
     if (req.url.includes('?')) fixtureMode = new URL(req.url, 'http://localhost').searchParams.get('value') || 'pass';
     return res.end(fixtureMode);
   }
-  if (req.url === '/audio.mjs') { res.setHeader('Content-Type','text/javascript'); return res.end(fixture); }
+  const pathname = req.url?.split(/[?#]/,1)[0];
+  if (pathname === '/audio.mjs') { res.setHeader('Content-Type','text/javascript'); return res.end(fixture); }
   const names = {'/':'index.html','/index.html':'index.html','/app.mjs':'app.mjs','/styles.css':'styles.css'};
-  const name = names[req.url?.split('#')[0]];
+  const name = names[pathname];
   if (!name) { res.writeHead(404); return res.end('Not a fixture resource'); }
   res.setHeader('Content-Type',name.endsWith('.html')?'text/html':name.endsWith('.css')?'text/css':'text/javascript');
   res.end(fs.readFileSync(path.join(root,name)));

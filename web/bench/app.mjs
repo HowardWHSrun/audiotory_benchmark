@@ -24,8 +24,15 @@ function selectedMethod() { return document.querySelector('input[name="reference
 function selectedCount() { return Number(document.querySelector('input[name="sequenceLength"]:checked').value); }
 function actualRate() { return Number(state.connection?.sampleRate || state.connection?.contextRate || 0); }
 function hasUsableCalibration() { return state.calibration?.usable_measurement === true && Number.isFinite(state.calibration?.summary?.median_delay_ms); }
-function inputLabel() { return state.devices.find((item) => item.kind === 'audioinput' && item.deviceId === inputs.inputDevice.value)?.label || 'System default input'; }
-function outputLabel() { return outputSelection ? state.devices.find((item) => item.kind === 'audiooutput' && item.deviceId === inputs.outputDevice.value)?.label || 'System default output' : 'System default output'; }
+function inputLabel() {
+  const id = inputs.inputDevice.value || state.connection?.inputDeviceId;
+  return state.devices.find((item) => item.kind === 'audioinput' && item.deviceId === id)?.label
+    || state.devices.find((item) => item.kind === 'audioinput' && item.deviceId === 'default')?.label || 'System default input';
+}
+function outputLabel() {
+  const id = outputSelection && inputs.outputDevice.value ? inputs.outputDevice.value : 'default';
+  return state.devices.find((item) => item.kind === 'audiooutput' && item.deviceId === id)?.label || 'System default output';
+}
 function number(value, min, max, name, integer = false) {
   if (typeof value === 'string' && value.trim() === '') throw new Error(`${name} is required.`);
   const parsed = Number(value);

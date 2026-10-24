@@ -3,7 +3,7 @@
   "date_local": "2026-10-24",
   "timezone": "America/Chicago",
   "change": "No-install browser SONIC Bench on the existing GitHub Pages site",
-  "status": "software_verified_deployment_pending_hardware_unverified",
+  "status": "software_verified_hosted_hardware_unverified",
   "web_url": "https://howardwhsrun.github.io/audiotory_benchmark/web/bench/",
   "sound_played_for_this_change": false,
   "microphone_recorded_for_this_change": false,
@@ -68,10 +68,14 @@
     {
       "check": "static_source_validation",
       "result": "576links and120evidence paths validated; pinned PDF unchanged; JavaScript syntax and git diff --check passed"
+    },
+    {
+      "check": "production_HTTPS_assets",
+      "result": "index.html,styles.css,app.mjs,audio.mjs,processor.js all returnHTTP200 with correct HTML/CSS/JavaScript MIME types",
+      "web_url": "https://howardwhsrun.github.io/audiotory_benchmark/web/bench/"
     }
   ],
   "checks_pending": [
-    "Production GitHub Pages deployment and live asset checks",
     "Actual Mac/Windows/browser/interface combinations and physical channel isolation",
     "Authorized physical delay repeatability and independent reference validation"
   ],
@@ -162,7 +166,14 @@
     }
   ],
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "url": "https://howardwhsrun.github.io/audiotory_benchmark/web/bench/",
+    "source_commit": "022d40c71bc7d37afd93d2289777e507e5db615f",
+    "workflow_url": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40112479344",
+    "jobs": {
+      "check-and-build": "success",
+      "deploy": "success"
+    }
   },
   "hardware_measurements": {
     "status": "not_performed_for_this_change",

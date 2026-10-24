@@ -11,7 +11,7 @@ Open <http://127.0.0.1:8765/>. `--configure` selects the connected Audient as ma
 Run from the project root:
 
 ```sh
-node --test tests/*.test.cjs playback/waveform.test.mjs
+node --test tests/*.test.cjs tests/*.test.mjs playback/waveform.test.mjs
 python3 scripts/validate_site.py
 python3 scripts/build_site.py
 python3 scripts/validate_site.py --root .work/site

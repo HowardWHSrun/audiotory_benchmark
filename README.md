@@ -2,7 +2,7 @@
 
 Start with [START_HERE.md](START_HERE.md).
 
-**SONIC Bench app:** use the Mac or Windows launcher in this folder to choose your audio interface, measure sound-delivery delay, and send the documented E14 stimulus reconstruction. [Setup and measurement guide](https://github.com/HowardWHSrun/audiotory_benchmark/tree/main/bench_app).
+**SONIC Bench on the web:** [open the browser app](https://howardwhsrun.github.io/audiotory_benchmark/web/bench/) to play the E14 reconstruction and screen speaker/microphone delay. No installation or account; microphone permission is needed for timing. [Browser guide and limits](docs/experiment/Browser_Bench.md). The [native app](https://github.com/HowardWHSrun/audiotory_benchmark/tree/main/bench_app) remains available for native audio checks.
 
 **Current guide:** [Final Part List V1 PDF](output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf) · [editable LaTeX](output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex)
 

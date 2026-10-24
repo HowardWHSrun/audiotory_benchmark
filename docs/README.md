@@ -8,6 +8,7 @@ Use the [current setup guide](../output/pdf/2026-10-16/M50_Sound_Setup_Guide/Fin
 - [Sound and timing requirements](experiment/Auditory_Setup_Requirements.md)
 - [Bench validation checklist](experiment/Bench_Validation_Plan.md)
 - [Equipment and software inventory](experiment/Equipment_Software_Inventory.md)
+- [Browser sound bench: operation and timing limits](experiment/Browser_Bench.md)
 
 These working records include earlier planning context; they do not establish completed hardware tests or animal readiness.
 

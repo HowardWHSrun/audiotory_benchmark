@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "timezone": "America/Chicago",
+  "change": "No-install browser SONIC Bench on the existing GitHub Pages site",
+  "status": "software_verified_deployment_pending_hardware_unverified",
+  "web_url": "https://howardwhsrun.github.io/audiotory_benchmark/web/bench/",
+  "sound_played_for_this_change": false,
+  "microphone_recorded_for_this_change": false,
+  "synthetic_data_is_experimental_data": false,
+  "checks_performed": [
+    {
+      "check": "browser_api_primary_source_review",
+      "result": "Reviewed official MDN/Mozilla compatibility data, Chrome documentation and W3C specifications; this is an API feasibility review, not hardware verification",
+      "review_date_local": "2026-10-24"
+    },
+    {
+      "check": "scientific_scope_and_stimulus_provenance",
+      "result": "Reviewed AGENTS.md, latency/stimulus.py and bench_app/README.md for published E14 specification, unavailable original-waveform details, disclosed local choices and distinct native/browser timing estimands"
+    },
+    {
+      "check": "pinned_paper_sha256",
+      "command": "shasum -a 256 sources/SONIC_2025_bioRxiv_v1.pdf",
+      "result": "Matches repository pinned checksum: 3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731"
+    },
+    {
+      "check": "browser_DSP_and_lifecycle",
+      "result": "19 offline tests passed using synthetic arrays, mock browser audio classes and worklet VM; no hardware",
+      "coverage": [
+        "E14 exact graph samples, pips, ramps, balance and reproducibility",
+        "FFT correlations checked against direct Pearson calculation",
+        "polarity, silence, clipping, weak/noisy/ambiguous and boundary rejection",
+        "source-versus-recorded-electrical estimands",
+        "processing/channel/transport validity gates",
+        "600 ms repeated-probe wrap rejected by first-probe anchor",
+        "stalled worklet watchdog, late permission cancellation and prompt zero-output Stop",
+        "known playback frame gaps and incomplete ends cannot claim completed stimulus"
+      ]
+    },
+    {
+      "check": "existing_project_models",
+      "result": "12 existing Node model, parts and waveform tests passed;31 total Node tests including browser engine"
+    },
+    {
+      "check": "existing_python_workflows",
+      "result": "42 latency tests and20 native app tests passed; no physical audio"
+    },
+    {
+      "check": "mock_browser_UI",
+      "result": "Passed in in-app browser using local fixture module; no physical audio or microphone permission requested",
+      "coverage": [
+        "no automatic run on load; Connect collapses setup",
+        "selected mock device/channel/level options reach engine API",
+        "busy controls and prominent Stop; Escape cancels timing",
+        "successful screening shown only with usable flag and finite median",
+        "method change clears prior result",
+        "unknown processing shows readable rejection and no normal delay number",
+        "48 kHz graph disables E14 playback while timing remains available",
+        "full-block selection reports8400pips84active seconds86total",
+        "source/result download controls present",
+        "connected summary and advanced controls fit320px after overflow correction"
+      ]
+    },
+    {
+      "check": "responsive_layout",
+      "result": "No horizontal overflow in Play and Delay views at320,375,768,1440px; desktop and320px screenshots inspected; temporary viewport reset"
+    },
+    {
+      "check": "static_source_validation",
+      "result": "576links and120evidence paths validated; pinned PDF unchanged; JavaScript syntax and git diff --check passed"
+    }
+  ],
+  "checks_pending": [
+    "Production GitHub Pages deployment and live asset checks",
+    "Actual Mac/Windows/browser/interface combinations and physical channel isolation",
+    "Authorized physical delay repeatability and independent reference validation"
+  ],
+  "evidence_review": {
+    "pinned_paper": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "pinned_paper_sha256_expected": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731",
+    "pinned_paper_modified": false,
+    "native_stimulus_reference": "latency/stimulus.py",
+    "native_guide_reference": "bench_app/README.md",
+    "guide": "docs/experiment/Browser_Bench.md"
+  },
+  "browser_api_findings": {
+    "audio_worklet": "Available in current desktop Chrome/Edge/Firefox/Safari; HTTPS secure context required. This is API availability, not tested app or hardware compatibility.",
+    "output_selection": "AudioContext.setSinkId supported by Chrome 110+ / Chromium Edge; MDN compatibility data currently lists no Firefox or Safari implementation. Use feature detection and otherwise the system output.",
+    "sample_rates": "Request 96000 Hz context and record actual context.sampleRate plus input track getSettings. Mic constraints may be ignored when unsupported; Web Audio can resample. A 96000 Hz context does not prove hardware rate or 27 kHz acoustic response.",
+    "full_e14_gate": "Require context sampleRate >= 96000 Hz; ordinary 44100/48000 Hz cannot represent the documented 27000 Hz tone.",
+    "processing_screen": "Require actual track getSettings echoCancellation, noiseSuppression and autoGainControl all false for processing-screen pass. Missing settings produce diagnostic status. This does not verify every hidden audio transformation.",
+    "stereo": "A channelCount request is insufficient: inspect actual settings and observed input channels. Separate hardware paths and channel mapping require physical checks.",
+    "timestamps": "baseLatency/outputLatency/getOutputTimestamp are browser rendering diagnostics and do not establish acoustic onset, neural-clock alignment or physical timing accuracy.",
+    "capture_security": "getUserMedia requires user permission and a secure context, such as production HTTPS or trustworthy localhost. No automatic microphone start on page load."
+  },
+  "timing_estimands": {
+    "source_to_microphone": "Generated output and captured input are compared on a common AudioWorklet process-frame grid. Includes browser buffering/resampling and full converter/speaker/air/mic path; excludes a measurement of Play-button latency.",
+    "electrical_reference": "Mic-minus-simultaneous-electrical-return comparison reduces shared output buffering. Browser channel mixing/resampling, input/output channel skew and physical routes remain unqualified.",
+    "integrity": "Frame/chunk continuity and channel counts screen observable browser-level failures only. They do not certify absent hardware xruns, clock drift, hidden processing or measurement accuracy."
+  },
+  "scientific_boundaries": [
+    "E14 is a reconstruction of the documented specification, not an original SONIC waveform file.",
+    "Browser seeded shuffle, equal-count balancing, ramps and digital level are declared local choices; browser and native shuffle orders may differ.",
+    "Delay checking does not calibrate absolute SPL, microphone sensitivity, frequency response, distortion or exposure.",
+    "Published paper sheep were awake/alert; planned Rice sedation remains an unverified adaptation.",
+    "Paper intrinsic 56/11 ms delays exclude physiology and computation; 11 ms is a narrower one-session window sweep.",
+    "No animal protocol, neural acquisition control, trigger synchronization or validated neural-clock correction is supplied.",
+    "No historical native-app delay estimate is reused as a browser hardware result."
+  ],
+  "primary_sources": [
+    {
+      "title": "Chrome: Change the destination output device in Web Audio",
+      "url": "https://developer.chrome.com/blog/audiocontext-setsinkid/"
+    },
+    {
+      "title": "MDN: AudioContext.setSinkId",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/setSinkId"
+    },
+    {
+      "title": "Mozilla browser-compat-data: AudioContext",
+      "url": "https://github.com/mdn/browser-compat-data/blob/main/api/AudioContext.json"
+    },
+    {
+      "title": "MDN: AudioWorklet",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet"
+    },
+    {
+      "title": "Mozilla browser-compat-data: AudioWorklet",
+      "url": "https://github.com/mdn/browser-compat-data/blob/main/api/AudioWorklet.json"
+    },
+    {
+      "title": "MDN: AudioContext constructor",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext"
+    },
+    {
+      "title": "MDN: MediaTrackConstraints.sampleRate",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/sampleRate"
+    },
+    {
+      "title": "MDN: MediaTrackConstraints.channelCount",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/channelCount"
+    },
+    {
+      "title": "MDN: MediaStreamTrack.getSettings",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings"
+    },
+    {
+      "title": "MDN: AudioContext.getOutputTimestamp",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/getOutputTimestamp"
+    },
+    {
+      "title": "MDN: MediaDevices.getUserMedia",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"
+    },
+    {
+      "title": "W3C Web Audio API 1.1 Working Draft",
+      "url": "https://www.w3.org/TR/webaudio/"
+    },
+    {
+      "title": "W3C Media Capture and Streams Candidate Recommendation Draft",
+      "url": "https://www.w3.org/TR/mediacapture-streams/"
+    }
+  ],
+  "deployment": {
+    "status": "pending"
+  },
+  "hardware_measurements": {
+    "status": "not_performed_for_this_change",
+    "browser_accuracy_qualified": false
+  },
+  "software_tests_total": 93
+}

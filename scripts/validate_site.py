@@ -48,13 +48,15 @@ def validate(root=ROOT):
         errors.append("Pinned SONIC v1 PDF is missing or its bytes changed.")
     required = ["web/index.html", "web/styles.css", "web/app.js", "web/model.js",
                 "web/parts.css", "web/parts.js", "web/parts-data.js", "web/assets/parts/sources.json",
-                "web/compare.js", "web/compare.css"]
+                "web/compare.js", "web/compare.css", "web/bench/index.html",
+                "web/bench/styles.css", "web/bench/app.mjs", "web/bench/audio.mjs",
+                "web/bench/processor.js"]
     for name in required:
         if not (root / name).is_file():
             errors.append(f"Missing application file: {name}")
 
     refs = []
-    for path in (root / "web").glob("*.html"):
+    for path in (root / "web").rglob("*.html"):
         parser = Links()
         parser.feed(path.read_text(encoding="utf-8"))
         refs.extend((path, ref) for ref in parser.refs)

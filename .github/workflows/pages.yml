@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '24'
       - name: Check scientific model
-        run: node --test tests/*.test.cjs playback/waveform.test.mjs
+        run: node --test tests/*.test.cjs tests/*.test.mjs playback/waveform.test.mjs
       - name: Check offline acoustic timing analysis
         run: |
           python3 -m pip install 'numpy>=1.24,<3'
@@ -39,6 +39,9 @@ jobs:
           node --check web/compare.js
           node --check bench_app/ui/app.js
           node --check bench_app/test_ui.cjs
+          node --check web/bench/app.mjs
+          node --check web/bench/audio.mjs
+          node --check web/bench/processor.js
       - name: Validate source and links
         run: python3 scripts/validate_site.py
       - name: Build static walkthrough

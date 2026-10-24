@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "timezone": "America/Chicago",
+  "change": "Minimal monochrome interface for the browser SONIC Bench",
+  "status": "software_verified_hardware_unverified",
+  "sound_played_for_this_change": false,
+  "microphone_recorded_for_this_change": false,
+  "synthetic_data_is_experimental_data": false,
+  "checks_performed": [
+    {
+      "check": "node_software_checks",
+      "result": "31 Node checks passed; offline software verification, not hardware measurement"
+    },
+    {
+      "check": "static_source_validation",
+      "result": "576 links and 120 evidence paths validated; pinned PDF unchanged"
+    },
+    {
+      "check": "mock_browser_UI",
+      "result": "Passed in the in-app browser using mock audio; no physical playback or microphone capture",
+      "coverage": [
+        "Connect collapses the Audio panel",
+        "initial delay result is hidden",
+        "accepted result becomes visible",
+        "changing the timing method clears the previous result",
+        "unknown microphone processing produces rejection with no accepted numeric delay",
+        "Stop cancels a mock full-block run, releases the simulated connection and leaves no completed result",
+        "advanced audio settings fit at 320 px without horizontal overflow"
+      ]
+    },
+    {
+      "check": "narrow_layout",
+      "result": "At 320 px, delay settings, rejected-result and playback views have no horizontal overflow"
+    },
+    {
+      "check": "desktop_visual_review",
+      "result": "Initial desktop screenshot inspected"
+    }
+  ],
+  "hardware_measurements": {
+    "status": "not_performed_for_this_change",
+    "physical_playback_performed": false,
+    "physical_microphone_capture_performed": false,
+    "browser_accuracy_qualified": false
+  },
+  "checks_pending": [
+    "Authorized physical playback, channel mapping and microphone timing verification"
+  ],
+  "publication": {
+    "url": "https://howardwhsrun.github.io/audiotory_benchmark/web/bench/",
+    "verification": "Required GitHub Pages check-and-build and deploy jobs run on this commit; check Actions for publication outcome."
+  }
+}

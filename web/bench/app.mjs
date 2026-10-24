@@ -1,4 +1,4 @@
-import { BrowserBench } from './audio.mjs?v=20261024-browser3';
+import { BrowserBench } from './audio.mjs?v=20261024-mono1';
 
 const $ = (id) => document.getElementById(id);
 const inputs = { inputDevice: $('inputDevice'), outputDevice: $('outputDevice'), sampleRate: $('sampleRate'), inputChannel: $('inputChannel'), outputChannel: $('outputChannel'), referenceChannel: $('referenceChannel'), referenceOutputChannel: $('referenceOutputChannel'), peakDbfs: $('peakDbfs'), repetitions: $('repetitions'), seed: $('seed'), distanceM: $('distanceM') };
@@ -23,7 +23,6 @@ function notice(message = '', error = false) {
 function selectedMethod() { return document.querySelector('input[name="referenceMode"]:checked').value; }
 function selectedCount() { return Number(document.querySelector('input[name="sequenceLength"]:checked').value); }
 function actualRate() { return Number(state.connection?.sampleRate || state.connection?.contextRate || 0); }
-function hasUsableCalibration() { return state.calibration?.usable_measurement === true && Number.isFinite(state.calibration?.summary?.median_delay_ms); }
 function inputLabel() {
   const id = inputs.inputDevice.value || state.connection?.inputDeviceId;
   return state.devices.find((item) => item.kind === 'audioinput' && item.deviceId === id)?.label
@@ -50,7 +49,7 @@ function updateControls() {
   const level = `${Number.isFinite(peak) ? String(peak).replace('-', '−') : '−36'} dBFS digital peak`;
   $('connectionState').classList.toggle('connected', state.connected && !running);
   $('connectionState').classList.toggle('busy', state.busy);
-  $('connectionLabel').textContent = state.phase === 'connecting' ? 'Connecting audio…' : running ? 'Audio run in progress' : state.connected ? 'Audio connected' : 'Audio disconnected';
+  $('connectionLabel').textContent = state.phase === 'connecting' ? 'Connecting audio…' : running ? 'Audio run in progress' : state.connected ? 'Connected' : 'Disconnected';
   $('connectAudio').hidden = state.connected || state.phase === 'connecting';
   $('cancelConnect').hidden = state.phase !== 'connecting';
   $('disconnectAudio').hidden = !state.connected;
@@ -65,16 +64,10 @@ function updateControls() {
   $('stimulusLevel').textContent = level;
   $('delayLevel').textContent = level;
   $('playLabel').textContent = selectedCount() === 50 ? 'Play quick check' : 'Play full block';
-  $('stimulusActionHint').textContent = !state.connected ? 'Connect audio to enable playback.' : !supportsRecipe ? 'A 96 or 192 kHz browser rate is required.' : 'Includes 1 second of silence at each end.';
-  $('delayActionHint').textContent = !state.connected ? 'Connect audio to enable the timing check.' : 'Plays chirps while recording the mic.';
+  $('stimulusActionHint').textContent = !state.connected ? 'Connect audio first.' : !supportsRecipe ? 'A 96 or 192 kHz browser rate is required.' : 'Includes 1 second of silence at each end.';
+  $('delayActionHint').textContent = !state.connected ? 'Connect audio first.' : 'Plays chirps while recording the mic.';
   $('formatNotice').hidden = !state.connected || supportsRecipe;
   $('formatNotice').textContent = state.connected && !supportsRecipe ? `This browser opened at ${(actualRate() / 1000).toLocaleString()} kHz. The complete E14 recipe reaches 27 kHz and requires a 96 or 192 kHz browser processing rate here. Set the interface to 96 kHz, reconnect, or use a browser and interface that accept that rate. The recipe has not been truncated.` : '';
-  $('stepConnect').classList.toggle('current', !state.connected);
-  $('stepConnect').classList.toggle('complete', state.connected);
-  $('stepMeasure').classList.toggle('current', state.connected && (!state.calibration || state.tab === 'delay'));
-  $('stepMeasure').classList.toggle('complete', hasUsableCalibration());
-  $('stepPlay').classList.toggle('current', state.connected && state.tab === 'stimulus' && Boolean(state.calibration));
-  $('timingReminder').textContent = hasUsableCalibration() ? 'Timing screening recorded for this setup.' : state.calibration ? 'Timing needs review for this setup.' : 'Timing not checked for this setup.';
   $('runDock').hidden = !running;
   document.body.classList.toggle('running', running);
 }
@@ -88,15 +81,15 @@ function onEngineStatus(status) {
   state.busy = ['connecting', 'playing', 'calibrating', 'analyzing'].includes(state.phase);
   state.connection = status.connection || null;
   $('permissionNote').textContent = state.connected
-    ? 'Microphone access is open. Only a delay run retains input; Disconnect releases the microphone.'
+    ? 'Mic connected. Delay runs save input in this tab; Disconnect releases the mic.'
     : state.phase === 'connecting'
       ? 'Waiting for microphone access. You can cancel this connection.'
-      : 'Connect opens the microphone silently. Only a delay run saves input; sound starts with Play or Measure delay.';
+      : 'Connect opens the mic. Sound starts only with Play or Measure delay.';
   const connection = state.connection;
   $('rateBadge').hidden = !state.connected;
   $('rateBadge').textContent = connection ? `${(actualRate() / 1000).toLocaleString()} kHz browser` : '';
-  $('connectionTitle').textContent = state.connected ? 'Your audio is connected' : 'Connect your audio';
-  $('connectionSubtitle').textContent = state.connected ? `${inputLabel()} · ${outputLabel()}` : 'Use one wired interface for the speaker and microphone.';
+  $('connectionTitle').textContent = 'Audio';
+  $('connectionSubtitle').textContent = state.connected ? `${inputLabel()} · ${outputLabel()}` : 'Choose your input and output.';
   const diagnostics = [];
   if (connection) {
     diagnostics.push(`Browser processing graph: ${actualRate()} Hz. Requested: ${connection.requestedSampleRate || inputs.sampleRate.value} Hz.`);
@@ -117,7 +110,7 @@ function onEngineStatus(status) {
   $('progressTrack').setAttribute('aria-valuenow', String(Math.round(progress)));
   if (wasConnected && !state.connected && state.calibration) {
     state.calibration = null;
-    emptyCalibration('Audio disconnected. Reconnect and run a new timing check.');
+    clearCalibrationView();
   }
   if (state.phase === 'error' && status.message) notice(status.message, true);
   updateControls();
@@ -151,14 +144,10 @@ async function refreshDevices() {
   } catch (error) { notice(error.message || 'This browser could not list audio devices.', true); }
 }
 
-function emptyCalibration(message = 'Your real result will appear here after a run.') {
+function clearCalibrationView() {
   const result = $('delayResult');
-  result.className = 'result-card empty-measurement';
-  result.replaceChildren(make('span', 'empty-result-icon', '∿'));
-  result.firstChild.setAttribute('aria-hidden', 'true');
-  const copy = make('div');
-  copy.append(make('strong', '', 'No measurement yet'), make('p', '', message));
-  result.append(copy);
+  result.replaceChildren();
+  result.hidden = true;
 }
 
 async function invalidateConnection() {
@@ -166,7 +155,7 @@ async function invalidateConnection() {
   state.calibration = null;
   state.playback = null;
   $('playbackResult').hidden = true;
-  emptyCalibration('Audio settings changed. Run a new timing check.');
+  clearCalibrationView();
   await engine.disconnect();
   $('connectionPanel').open = true;
   notice('Audio settings changed. Connect again before your next run.');
@@ -216,6 +205,7 @@ function exportActions(result, kind, captureBlob, sourceBlob) {
 function describeResult(result, container, title, badgeText) {
   container.replaceChildren();
   container.className = 'result-card';
+  container.hidden = false;
   const heading = make('div', 'result-heading');
   const copy = make('div');
   copy.append(make('h3', '', title));
@@ -296,7 +286,7 @@ async function run(kind) {
       if (reference && (inputs.inputChannel.value === inputs.referenceChannel.value || inputs.outputChannel.value === inputs.referenceOutputChannel.value)) throw new Error('The electrical reference needs a different input and output channel from the microphone and speaker. Change the advanced audio settings, then reconnect.');
       const distance = inputs.distanceM.value.trim() === '' ? null : number(inputs.distanceM.value, 0, 100, 'Speaker–mic distance');
       state.calibration = null;
-      emptyCalibration('Recording and checking the real signal…');
+      clearCalibrationView();
       result = await engine.calibrate({ repetitions, peakDbfs, reference });
       if (generation !== state.generation) return;
       result = { ...result, user_geometry: { speaker_microphone_distance_m: distance, distance_subtracted: false } };
@@ -313,14 +303,14 @@ async function run(kind) {
   } catch (error) {
     if (generation !== state.generation || error.name === 'AbortError') return;
     notice(error.message || 'The audio run could not finish. Review your audio connection and try again.', true);
-    if (kind === 'delay') emptyCalibration('The run did not produce a usable measurement.');
+    if (kind === 'delay') clearCalibrationView();
   } finally { updateControls(); }
 }
 
 async function stopAudio(message = 'Audio stopped. Microphone and output released. Connect again when ready.') {
   state.generation += 1;
   try { await engine.stop(); } finally {
-    if (state.lastAction === 'delay' && !state.calibration) emptyCalibration('The timing run was stopped. No measurement was saved.');
+    if (state.lastAction === 'delay' && !state.calibration) clearCalibrationView();
     $('connectionPanel').open = true;
     notice(message);
     updateControls();
@@ -335,7 +325,7 @@ $('connectAudio').addEventListener('click', async () => {
     if (state.connected) {
       await refreshDevices();
       $('connectionPanel').open = false;
-      $('permissionNote').textContent = 'Microphone access is open. Only a delay run retains input; Disconnect releases the microphone.';
+      $('permissionNote').textContent = 'Mic connected. Delay runs save input in this tab; Disconnect releases the mic.';
       if (currentStatus.warnings?.length) notice('Audio connected. Review the browser checks in Advanced audio settings before relying on timing.');
     }
   } catch (error) { if (error.name !== 'AbortError') notice(error.message || 'Audio connection failed. Check microphone permission and the selected device.', true); }
@@ -354,9 +344,9 @@ for (const field of document.querySelectorAll('[data-connection]')) field.addEve
   if (field === inputs.referenceOutputChannel && inputs.outputChannel.value === inputs.referenceOutputChannel.value) inputs.outputChannel.value = inputs.referenceOutputChannel.value === '1' ? '2' : '1';
   invalidateConnection();
 });
-inputs.peakDbfs.addEventListener('change', () => { state.calibration = null; emptyCalibration('Digital level changed. Run a new timing check.'); updateControls(); });
+inputs.peakDbfs.addEventListener('change', () => { state.calibration = null; clearCalibrationView(); updateControls(); });
 for (const field of document.querySelectorAll('input[name="sequenceLength"]')) field.addEventListener('change', updateControls);
-for (const field of document.querySelectorAll('input[name="referenceMode"]')) field.addEventListener('change', () => { state.calibration = null; emptyCalibration('Timing method changed. Run a new timing check.'); updateMethod(); updateControls(); });
+for (const field of document.querySelectorAll('input[name="referenceMode"]')) field.addEventListener('change', () => { state.calibration = null; clearCalibrationView(); updateMethod(); updateControls(); });
 for (const button of document.querySelectorAll('[data-tab]')) button.addEventListener('click', () => setTab(button.dataset.tab));
 document.querySelector('.brand').addEventListener('click', (event) => { event.preventDefault(); setTab('stimulus'); });
 for (const [id, next] of [['tabStimulus', 'delay'], ['tabDelay', 'stimulus']]) $(id).addEventListener('keydown', (event) => { if (['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); setTab(next); $(next === 'delay' ? 'tabDelay' : 'tabStimulus').focus(); } });

@@ -2,7 +2,9 @@
 
 [Open SONIC Bench](https://howardwhsrun.github.io/audiotory_benchmark/web/bench/) on a Mac or Windows computer. There is no app to install and no local server to start. Use a current desktop Chrome or Edge browser for the most complete output-device controls; the page checks the browser's actual capabilities. A hardware interface may still need its manufacturer's existing driver.
 
-The three steps are **Connect audio → Measure delay → Play stimulus**. Nothing plays on page load. Microphone access starts only after an explicit action and browser permission. Use **Stop** or **Escape** to stop a run. Hiding the page also stops audio and releases the devices; reconnect before the next run. Changing the interface, sample rate or physical setup requires another delay check.
+The interface is black and white. In the **Audio** panel, choose the microphone and speaker, then select **Connect audio**. The panel collapses after connection. Use the **Play stimulus** and **Measure delay** tabs to choose a task. Playback offers **Quick check** (9 seconds total) and **Full block** (86 seconds total). The timing reference is inside **Timing settings & details**; advanced controls and stimulus provenance stay collapsed until needed. Results appear only after a run produces an outcome.
+
+Nothing plays on page load. Microphone access starts only after an explicit action and browser permission. Use **Stop** or **Escape** to stop a run. Hiding the page also stops audio and releases the devices; reconnect before the next run. Changing the interface, sample rate or physical setup requires another delay check.
 
 ## Connect
 

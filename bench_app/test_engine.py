@@ -270,8 +270,10 @@ class EngineTests(unittest.TestCase):
         self.assertFalse(manifest["raw_audio_publication_authorized"])
         self.assertTrue(manifest["native_audio_started"])
         self.assertTrue((folder / "microphone.wav").exists())
-        self.assertEqual(folder.stat().st_mode & 0o777, 0o700)
-        self.assertEqual((folder / "capture_float32.npy").stat().st_mode & 0o777, 0o600)
+        # Windows uses inherited ACLs; st_mode cannot verify a POSIX mode there.
+        if os.name == "posix":
+            self.assertEqual(folder.stat().st_mode & 0o777, 0o700)
+            self.assertEqual((folder / "capture_float32.npy").stat().st_mode & 0o777, 0o600)
 
     def test_synthetic_electrical_reference_at_both_sample_rates(self):
         for rate in (96000, 192000):

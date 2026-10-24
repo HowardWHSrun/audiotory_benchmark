@@ -37,4 +37,5 @@ jobs:
         with:
           name: SONIC-Bench-${{ runner.os }}-${{ runner.arch }}
           path: .work/SONIC-Bench-*.zip
+          include-hidden-files: true
           if-no-files-found: error

@@ -12,6 +12,7 @@ import hashlib
 import importlib
 import json
 import math
+import os
 from pathlib import Path
 import platform
 import threading
@@ -96,6 +97,11 @@ class AudioEngine:
     def _audio(self):
         if self._backend is None:
             try:
+                # ASIO exposes a manufacturer's interface as one duplex device
+                # on Windows. This selects the bundled ASIO-capable PortAudio
+                # library for this process; it changes no system settings.
+                if platform.system() == "Windows":
+                    os.environ.setdefault("SD_ENABLE_ASIO", "1")
                 self._backend = importlib.import_module("sounddevice")
             except (ImportError, OSError) as error:
                 raise RuntimeError("Native audio is unavailable. Install the app's audio dependencies and restart. "

@@ -157,8 +157,7 @@ def smoke_test():
     assert len(source_provenance()) == 4
     # Explicitly import the native dependency so a frozen build cannot pass
     # while omitting the lazy sounddevice import or its PortAudio library.
-    import sounddevice
-    assert hasattr(sounddevice, "Stream")
+    assert hasattr(AudioEngine(data_root())._audio(), "Stream")
     print("SONIC Bench offline smoke test passed; no audio opened.")
 
 

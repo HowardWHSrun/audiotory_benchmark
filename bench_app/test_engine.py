@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import os
 from pathlib import Path
 import tempfile
 import threading
@@ -164,6 +165,17 @@ class FakeStream:
 
 
 class EngineTests(unittest.TestCase):
+    def test_windows_enables_asio_before_lazy_import(self):
+        backend = FakeBackend()
+        with patch.dict(os.environ, {}, clear=True), \
+                patch("bench_app.engine.platform.system", return_value="Windows"), \
+                patch("bench_app.engine.importlib.import_module", return_value=backend) as load:
+            engine = AudioEngine(backend=None)
+            self.assertIs(engine._audio(), backend)
+            load.assert_called_once_with("sounddevice")
+            self.assertEqual(os.environ["SD_ENABLE_ASIO"], "1")
+            self.assertEqual(backend.opened, [])
+
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
         self.backend = FakeBackend()

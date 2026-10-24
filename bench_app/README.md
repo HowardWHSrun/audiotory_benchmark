@@ -11,6 +11,8 @@ Keep the complete repository folder together. Install Python **3.10 or newer** w
 
 The launcher reuses the project's prepared audio environment when available; otherwise it creates an isolated environment under ignored `.work/bench_app/venv` and installs the dependencies. An initial installation needs internet access. It opens the local control panel. Keep the launcher's terminal open while using the app; Ctrl+C stops its server. The browser connects to the computer's loopback address; this is not a hosted website or remote equipment service.
 
+Use **Stop** (or Escape) to cancel a run, and **Quit app** to stop audio and close the local server. Closing a browser tab stops an active run after the 12-second heartbeat timeout; it does not quit the server. Completed runs offer a JSON download and a local folder path containing manifests, source WAVs and calibration recordings.
+
 Manual launch from the repository root, using an environment with `latency/requirements.txt` installed:
 
 ```sh
@@ -61,6 +63,8 @@ Select the reconstructed **Sheep E 14-frequency** block. The generator reuses [`
 
 The explicit stimulus action opens the output device and plays sound; it does not simultaneously record the microphone. The calibration action performs playback and capture together. For generation without hardware, the existing `python -m latency.stimulus sonic-e` command writes the reconstructed plan and WAV without playing sound. Digital dBFS is an output-array peak convention, not dB SPL. The original waveform files, random order/seed, exact balancing algorithm, ramp shape and digital amplitude convention remain unavailable. This app reproduces the documented E14 timing/frequency specification with disclosed local choices; it cannot promise the identical original SONIC waveform or acoustic field.
 
+Each action opens a new stream. Output-only stimulus playback may have different buffering from duplex calibration, so the roundtrip estimate is not a validated correction for SONIC playback timestamps. The app logs the delay; it does not automatically shift stimuli or neural data.
+
 The paper used precomputed 192 kHz NI USB-6361 output, TDT SA1/MF1 hardware and approximately 80 dB SPL at the sheep's ears. Its sessions had at least 12 blocks of 8,000–15,000 tones separated by one second. One reconstructed block is not that full session or a reproduction of those hardware, level, calibration or synchronization conditions. The Sheep C 37-frequency stimulus is not reconstructed here.
 
 ## Saved results and scientific limits
@@ -72,3 +76,7 @@ The existing command-line workflow measured approximately **38.3 ms** of source-
 Delay checking does not calibrate microphone sensitivity, absolute SPL, frequency response, distortion, speaker bandwidth or exposure. Frequency-specific acoustic delivery remains unqualified; a 27 kHz digital tone does not establish a 27 kHz acoustic stimulus at the subject. The M50's serial-specific calibration, documented geometry, level calibration and independent acoustic controls remain separate work.
 
 This is a bench tool and planning aid. It does not control neural acquisition, provide trial TTL/PTP synchronization or establish neural-clock alignment. SONIC's reported 56/11 ms intrinsic delays are separate quantities and exclude auditory physiology and computation; the 11 ms finding is from a narrower one-session window sweep. Rice's planned sedated-sheep measurements are an adaptation of the paper's awake/alert-sheep work; their responses, windows and achieved ITR are unverified. App verification uses offline/synthetic checks unless a record explicitly identifies an authorized real capture.
+
+## Developer checks
+
+Run `python -m unittest discover -s bench_app -p 'test_*.py'` and `python -m bench_app --smoke-test` for offline checks. Optional browser checks use `node bench_app/test_ui.cjs` with Playwright and Chromium installed; `PLAYWRIGHT_MODULE_PATH` and `PLAYWRIGHT_BROWSER_EXECUTABLE` can select existing installations. The browser suite uses a mock API, opens no audio hardware, and saves ignored screenshots under `.work/bench_app/`.

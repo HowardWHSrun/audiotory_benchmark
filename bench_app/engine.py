@@ -58,7 +58,7 @@ def _hash_file(path):
 
 def source_provenance():
     """Hash required bundled source files; safe for offline packaging checks."""
-    return {str(path.relative_to(ROOT)): _hash_file(path) for path in (
+    return {path.relative_to(ROOT).as_posix(): _hash_file(path) for path in (
         Path(__file__).resolve(), ROOT / "latency/stimulus.py", ROOT / "latency/analysis.py",
         ROOT / "latency/transport.py")}
 

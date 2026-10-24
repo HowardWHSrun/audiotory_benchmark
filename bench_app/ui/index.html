@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>SONIC Sound Bench</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#setup" aria-label="SONIC Sound Bench home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>SONIC<span class="brand-sub">SOUND BENCH</span></span></a>
+      <div class="sidebar-label">YOUR WORKFLOW</div>
+      <nav class="workflow" aria-label="Workflow">
+        <button class="nav-item selected" data-panel="setup" aria-current="step"><span class="step-number">1</span><span>Connect &amp; set up<small>Interface, speaker &amp; mic</small></span></button>
+        <button class="nav-item" data-panel="delay"><span class="step-number">2</span><span>Measure delay<small>Check acoustic timing</small></span></button>
+        <button class="nav-item" data-panel="stimulus"><span class="step-number">3</span><span>Play SONIC<small>Reproduce the tone recipe</small></span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="local-dot" aria-hidden="true"></span><strong>Runs on this computer</strong><p>Audio and run records stay local.<br>No account or upload.</p><span class="version-label">BENCH TOOL · v1</span></div>
+    </aside>
+
+    <main>
+      <header class="topbar"><span class="workspace-label">AUDITORY BENCHMARKING</span><div class="topbar-actions"><span class="connection-pill" id="connectionState"><span class="connection-dot"></span><span id="connectionText">Connecting…</span></span><button class="text-button quit-button" id="quitApp" type="button">Quit app</button></div></header>
+      <div class="workspace">
+        <div id="globalError" class="notice error" role="alert" hidden></div>
+        <div id="appClosed" class="notice success" role="status" hidden>App closed. You can close this tab. Open the launcher again to start a new session.</div>
+
+        <section class="panel" id="panel-setup" aria-labelledby="setupTitle">
+          <div class="page-heading"><div><div class="eyebrow">STEP 01 / SETUP</div><h1 id="setupTitle">Good timing starts here.</h1><p>Connect your speaker and microphone, then choose their channels.</p></div><span class="outline-badge">Mac + Windows</span></div>
+          <article class="card route-card">
+            <div class="card-heading"><h2>Your signal path</h2><span class="small-muted">One audio interface · one shared clock</span></div>
+            <div class="signal-path" aria-label="Computer sends audio to interface, speaker, then microphone and back to the same interface">
+              <div class="path-node"><span class="path-icon" aria-hidden="true">⌘</span><strong>This computer</strong><small>Local playback &amp; recording</small></div><span class="path-arrow" aria-hidden="true">→</span>
+              <div class="path-node"><span class="path-icon" aria-hidden="true">≋</span><strong>Audio interface</strong><small id="diagramOutput">Speaker output 1</small></div><span class="path-arrow" aria-hidden="true">→</span>
+              <div class="path-node"><span class="path-icon" aria-hidden="true">◖</span><strong>Speaker → air → mic</strong><small id="diagramInput">Microphone input 1</small></div>
+            </div>
+            <p class="route-caption">The microphone returns to the same interface. Keep software input monitoring off to prevent feedback.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-heading"><h2>Audio routing</h2><button class="text-button" id="refreshDevices" type="button">↻ Refresh devices</button></div>
+            <div class="form-grid">
+              <label class="field span-two">Audio interface<select id="device" data-route><option value="">Looking for audio devices…</option></select><span class="field-help" id="deviceHelp">Choose an interface with both microphone inputs and speaker outputs.</span></label>
+              <label class="field">Sample rate<select id="sampleRate" data-route><option value="96000">96 kHz · working Audient setting</option><option value="192000">192 kHz · paper recipe rate</option></select></label>
+              <label class="field">Speaker output<select id="outputChannel" data-route><option value="1">Output 1</option></select></label>
+              <label class="field">Microphone input<select id="inputChannel" data-route><option value="1">Input 1</option></select></label>
+              <label class="field">Digital peak level<div class="input-unit"><input id="peakDbfs" type="number" min="-60" max="-18" step="1" value="-36" data-route><span>dBFS</span></div><span class="field-help">Start low. Set the physical speaker gain separately.</span></label>
+            </div>
+            <div class="inline-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Digital level is not sound pressure level.</strong> This app measures timing. Calibrate acoustic SPL separately at the listening position.</p></div>
+          </article>
+
+          <details class="card compact-details"><summary>Before the first run</summary><div class="details-body"><ul class="plain-list"><li>Connect the microphone to the selected input and the speaker to the selected output.</li><li>Use one interface for input and output. Grant microphone access to the local launcher if your operating system asks.</li><li>Use phantom power only if your microphone requires it. Keep input monitoring off.</li><li>Set gain so the microphone signal is audible above background without clipping. Avoid changing gains or geometry between timing and stimulus runs.</li><li>A 27 kHz digital tone does not establish that the speaker or microphone reproduces 27 kHz. Check the acoustic hardware response separately.</li></ul></div></details>
+          <div class="page-footer"><p>Nothing plays until you start a run.</p><button class="button primary" data-go="delay" type="button">Continue to delay <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section class="panel" id="panel-delay" aria-labelledby="delayTitle" hidden>
+          <div class="page-heading"><div><div class="eyebrow">STEP 02 / TIMING</div><h1 id="delayTitle">Measure the sound’s arrival.</h1><p>Play a short chirp and measure when it reaches the microphone.</p></div><span class="outline-badge">100 ms chirp</span></div>
+          <div class="route-summary"><span class="status-dot" aria-hidden="true"></span><span class="route-summary-text">Choose your interface in setup</span><button class="text-button" data-go="setup" type="button">Edit setup</button></div>
+          <div class="two-column">
+            <article class="card">
+              <div class="card-heading"><h2>Choose a timing method</h2></div>
+              <fieldset class="method-group"><legend class="sr-only">Timing method</legend>
+                <label class="method-option selected"><input type="radio" name="referenceMode" value="source" checked data-route><span><strong>Simple · speaker + microphone</strong><small>No return cable required</small></span><span class="recommended">START HERE</span></label>
+                <label class="method-option"><input type="radio" name="referenceMode" value="electrical" data-route><span><strong>Electrical reference</strong><small>Add a line output → line input cable</small></span></label>
+              </fieldset>
+              <p class="method-description" id="methodDescription">Measures playback-to-microphone round-trip delay. Includes computer and interface buffering, the speaker, microphone, and sound travel.</p>
+              <div id="referenceRouting" hidden><div class="form-grid reference-grid"><label class="field">Reference output<select id="referenceOutputChannel" data-route><option value="2">Output 2</option></select></label><label class="field">Reference line input<select id="referenceChannel" data-route><option value="2">Input 2</option></select></label></div><p class="wiring-note" id="referenceWiring">Connect output 2 to input 2 with a balanced TRS cable. Keep phantom power off on the reference input and input monitoring off.</p></div>
+              <div class="form-grid calibration-fields"><label class="field">Repeats<input id="repetitions" type="number" value="10" min="3" max="40" step="1" data-route></label><label class="field">Speaker–mic distance <span class="optional">optional</span><div class="input-unit"><input id="distanceM" type="number" min="0" max="100" step="0.01" placeholder="e.g. 0.50" data-route><span>m</span></div><span class="field-help">Logged only; travel time is not subtracted.</span></label></div>
+              <div class="action-row"><span class="action-note">100 Hz–20 kHz chirps<br>Uses the level chosen in setup</span><button class="button primary" id="startCalibration" type="button" data-start>Measure delay <span aria-hidden="true">→</span></button></div>
+            </article>
+            <article class="card result-card" aria-labelledby="delayResultTitle"><div class="card-heading"><h2 id="delayResultTitle">Your measurement</h2><span class="result-tag" id="delayResultTag">NOT MEASURED</span></div><div id="delayEmpty" class="empty-result"><span class="empty-ring" aria-hidden="true">∿</span><h3>Ready when you are.</h3><p>A real measurement appears here after a run. No example values are shown.</p></div><div id="delayResult" hidden></div></article>
+          </div>
+          <details class="card compact-details"><summary>What this measurement means</summary><div class="details-body"><p>The simple method compares the generated chirp with the recorded microphone signal. It includes audio I/O latency and is useful for checking the whole playback–recording path.</p><p>The electrical method compares the microphone with a copy of the output recorded on another input of the same interface. It removes shared playback timing from that comparison. Speaker and microphone response, acoustic travel, and differences between the two analog paths remain.</p><p>The chirp is a timing probe, separate from the SONIC stimulus. A rejected run does not produce a calibrated delay. This tool does not measure neural latency or validate an animal stimulus protocol.</p></div></details>
+          <div class="page-footer"><p>Keep the same routing and geometry for your stimulus run.</p><button class="button secondary" data-go="stimulus" type="button">Continue to SONIC <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section class="panel" id="panel-stimulus" aria-labelledby="stimulusTitle" hidden>
+          <div class="page-heading"><div><div class="eyebrow">STEP 03 / STIMULUS</div><h1 id="stimulusTitle">The SONIC tone sequence.</h1><p>A reproducible reconstruction of the published E14 stimulus recipe.</p></div><span class="outline-badge">14 frequencies</span></div>
+          <div class="route-summary"><span class="status-dot" aria-hidden="true"></span><span class="route-summary-text">Choose your interface in setup</span><button class="text-button" data-go="setup" type="button">Edit setup</button></div>
+          <article class="card stimulus-card">
+            <div class="card-heading"><h2>Continuous, randomized tone pips</h2><span class="result-tag">RECONSTRUCTION</span></div>
+            <div class="stimulus-facts"><div><strong>10<span> ms</span></strong><small>Each tone pip</small></div><div><strong>2<span> ms</span></strong><small>Onset &amp; offset ramps</small></div><div><strong id="durationDisplay">84<span> s</span></strong><small>Sequence duration</small></div><div><strong id="toneCountDisplay">8,400</strong><small>Total tone pips</small></div></div>
+            <div class="frequency-label">FREQUENCIES <span>kHz</span></div><div class="frequency-list" aria-label="Frequencies in kilohertz"><span>2</span><span>4</span><span>6</span><span>8</span><span>9</span><span>10.5</span><span>17</span><span>18.2</span><span>19.5</span><span>20.9</span><span>22.4</span><span>24</span><span>25.8</span><span>27</span></div>
+            <div class="form-grid stimulus-fields"><label class="field">Pips per frequency<input id="tonesPerFrequency" type="number" min="1" max="600" step="1" value="600" data-route><span class="field-help">600 gives an 84-second local sequence.</span></label><label class="field">Randomization seed<input id="seed" type="number" min="0" max="4294967295" step="1" value="20261023" data-route><span class="field-help">Same seed and settings reproduce the order.</span></label></div>
+            <div class="inline-note"><span class="note-mark" aria-hidden="true">i</span><p id="stimulusAdaptation">96 kHz is an interface adaptation; the paper used 192 kHz. Original tone order, exact ramp shape, and acoustic level were not available.</p></div>
+            <div class="action-row"><span class="action-note">Plays on the speaker output<br>Saves the generated waveform and settings</span><button class="button primary" id="startStimulus" type="button" data-start>Play SONIC sequence <span aria-hidden="true">▶</span></button></div>
+          </article>
+          <article id="stimulusResult" class="card saved-result" hidden></article>
+          <details class="card compact-details"><summary>Source, adaptations &amp; limits</summary><div class="details-body"><p><strong>Source:</strong> SONIC bioRxiv v1, experiment E14. The recipe uses 14 frequencies, 10 ms tone pips, and 2 ms onset/offset ramps in a continuous randomized sequence. Published blocks contained 8,000–15,000 pips.</p><p><strong>This implementation:</strong> balanced seeded randomization and raised-cosine ramps. The default of 600 pips per frequency gives a local 8,400-pip, 84-second sequence; it is not a published per-frequency count. The original order, ramp function, and calibrated acoustic level are unavailable, so these waveforms should not be described as the original SONIC audio.</p><p>The published experiment used awake, alert sheep. The planned Rice study uses sedated sheep; timing windows and performance under sedation remain unverified. This app is a bench stimulus and timing tool, not an animal-ready protocol or a claim of reproduced neural results.</p></div></details>
+          <div class="page-footer"><p>Run settings and the generated waveform are saved together locally.</p><button class="text-button" data-go="delay" type="button">← Back to timing</button></div>
+        </section>
+
+        <section id="runRecord" class="run-record" aria-label="Last saved run" hidden><span class="record-icon" aria-hidden="true">↳</span><div><strong>Saved on this computer</strong><code id="runPath"></code></div><div class="record-actions"><button class="text-button" id="downloadResult" type="button">Result JSON ↓</button><button class="text-button" id="copyRunPath" type="button">Copy path</button></div></section>
+      </div>
+    </main>
+  </div>
+  <div class="run-dock" id="runDock" role="status" aria-live="polite" hidden><div class="run-dock-inner"><div class="running-indicator" aria-hidden="true"></div><div class="run-dock-copy"><strong id="runTitle">Run in progress</strong><span id="runMessage">Preparing audio…</span><div class="progress-track"><div id="runProgress"></div></div></div><span class="progress-percent" id="runPercent">0%</span><button class="button stop" id="stopRun" type="button">■ Stop</button></div></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

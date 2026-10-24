@@ -2,6 +2,8 @@
 
 Start with [START_HERE.md](START_HERE.md).
 
+**SONIC Bench app:** double-click [Launch SONIC Bench.command](Launch%20SONIC%20Bench.command) on Mac or [Launch SONIC Bench.cmd](Launch%20SONIC%20Bench.cmd) on Windows. Choose your audio interface, measure sound-delivery delay, and send the documented E14 stimulus reconstruction. [Setup and measurement guide](bench_app/README.md).
+
 **Current guide:** [Final Part List V1 PDF](output/pdf/2026-10-16/M50_Sound_Setup_Guide/Final%20Part%20List%20V1.pdf) · [editable LaTeX](output/pdf/2026-10-16/M50_Sound_Setup_Guide/main.tex)
 
 This is a planning workspace for Rice's auditory sound setup. Equipment choices and acoustic checks are described in the guide; physical qualification remains pending.

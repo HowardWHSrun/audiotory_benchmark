@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "timezone": "America/Chicago",
+  "change": "Local SONIC Bench control panel with native Python audio playback/capture and Mac/Windows launch helpers",
+  "status": "offline_verified_hardware_unverified",
+  "sound_played_for_this_change": false,
+  "microphone_recorded_for_this_change": false,
+  "synthetic_data_is_experimental_data": false,
+  "checks_performed": [
+    {
+      "check": "native_engine_and_local_server",
+      "command": "python -m unittest discover -s bench_app -p test_*.py",
+      "result": "19 passed; fake backend only, no audio devices opened",
+      "coverage": [
+        "96/192 kHz synthetic reference delay",
+        "roundtrip correlation",
+        "channel routing and PCM24 headers",
+        "clipping, nonfinite, weak/ambiguous and broken transport rejection",
+        "cancellation and stop lifecycle",
+        "Host/Origin/token restrictions and path allowlist",
+        "heartbeat stops abandoned active runs"
+      ]
+    },
+    {
+      "check": "existing_latency_suite",
+      "result": "42 passed; offline"
+    },
+    {
+      "check": "existing_model_parts_waveform",
+      "result": "12 passed"
+    },
+    {
+      "check": "source_and_pinned_paper",
+      "result": "553 links and 118 evidence paths validated; pinned PDF unchanged"
+    },
+    {
+      "check": "syntax_and_whitespace",
+      "result": "Python modules/spec compile, launch zsh syntax, JS syntax, git diff --check passed"
+    },
+    {
+      "check": "packaged_offline_smoke_source",
+      "command": "python -m bench_app --smoke-test",
+      "result": "passed; generator, UI assets, source hashes, native module import; no audio stream opened"
+    },
+    {
+      "check": "interface_interactions_mock_api",
+      "result": "passed in Chrome with synthetic backend; no hardware or experimental data",
+      "coverage": [
+        "no auto-start, token/config submission, busy controls, Stop/Escape, electrical routing, result validity and stale reset, stimulus result, JSON download, Quit",
+        "no horizontal overflow at 320,375,768,1024,1440 pixels in all three panels"
+      ]
+    },
+    {
+      "check": "actual_local_app_desktop",
+      "result": "Setup and Delay panels inspected in in-app browser; absent duplex device handled with disabled playback; engine remained idle"
+    },
+    {
+      "check": "local_standalone_mac_arm64",
+      "result": "PyInstaller build and bundled --smoke-test passed; four source hashes, UI assets, generator and sounddevice import verified without audio"
+    }
+  ],
+  "evidence_review": {
+    "pinned_paper": "sources/SONIC_2025_bioRxiv_v1.pdf",
+    "pinned_paper_sha256": "3c8de5dc6bad53a043f7b6181603cf5af223979c92cfc5eb486f1fa7842a0731",
+    "paper_methods_read": "Printed page 11, sections 6.1-6.2; local PDF read without modification",
+    "stimulus_implementation_read": "latency/stimulus.py",
+    "historical_roundtrip_evidence": "docs/verification/2026-10-23_Audient_Playback_Microphone_Delay.json",
+    "historical_roundtrip_summary": "Two 96 kHz macOS CoreAudio/Audient streams, 40/40 accepted sweeps, median across trials 38.30729166666667 ms; this is prior command-line evidence, not app hardware verification",
+    "historical_stimulus_evidence": "docs/verification/2026-10-23_SONIC_E14_Playback.json",
+    "historical_frequency_evidence": "docs/verification/2026-10-23_SONIC_E14_Pip_Frequency_Pickup.json",
+    "external_primary_sources_read": [
+      "https://python-sounddevice.readthedocs.io/en/0.5.6/installation.html",
+      "https://python-sounddevice.readthedocs.io/en/0.5.6/api/platform-specific-settings.html",
+      "https://docs.python.org/3/using/mac.html",
+      "https://docs.python.org/3/using/windows.html"
+    ]
+  },
+  "scope_limits": [
+    "No new hardware playback or capture was authorized or performed during implementation verification.",
+    "Windows launcher, Windows drivers and Windows audio capture require verification on Windows hardware.",
+    "The published E14 frequency/timing specification is reconstructed; original waveform/order/ramp/digital amplitude are unavailable.",
+    "Generated 96/192 kHz samples do not establish exact hardware rate, acoustic level, frequency response or ultrasonic fidelity.",
+    "Source-to-microphone roundtrip and microphone-minus-electrical-reference delay are distinct estimands.",
+    "The application does not establish Play-button latency, isolated transducer delay, neural-clock alignment or SONIC intrinsic delay.",
+    "No new SPL, sensitivity, frequency-response, animal protocol or achieved-ITR qualification is implied.",
+    "Standalone builds remain unsigned; packaged Windows/macOS offline smoke checks do not establish audio-driver or microphone hardware behavior."
+  ],
+  "private_run_location": {
+    "source": ".work/bench_app/runs/",
+    "standalone": "~/SONIC Bench/runs/"
+  },
+  "raw_audio_committed": false,
+  "saved_paper_modified": false,
+  "public_walkthrough_modified": false,
+  "packaging": {
+    "local_mac": ".work/bench_app/dist/SONIC Bench.app",
+    "windows_and_mac_ci": "pending manual workflow build"
+  }
+}

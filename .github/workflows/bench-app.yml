@@ -1,0 +1,39 @@
+name: Build SONIC Bench apps
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r latency/requirements.txt pyinstaller==6.16.0
+      - run: python -m unittest discover -s bench_app -p "test_*.py"
+      - run: python -m bench_app --smoke-test
+      - run: python -m PyInstaller bench_app/SONIC_Bench.spec --noconfirm --distpath .work/dist --workpath .work/build
+      - name: Test packaged Mac app without audio
+        if: runner.os == 'macOS'
+        run: '".work/dist/SONIC Bench.app/Contents/MacOS/SONIC Bench" --smoke-test'
+      - name: Test packaged Windows app without audio
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $process = Start-Process '.work/dist/SONIC Bench/SONIC Bench.exe' -ArgumentList '--smoke-test' -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Packaged smoke test failed: $($process.ExitCode)" }
+      - name: Archive Mac app preserving executable permissions
+        if: runner.os == 'macOS'
+        run: ditto -c -k --sequesterRsrc --keepParent '.work/dist/SONIC Bench.app' .work/SONIC-Bench-macOS.zip
+      - name: Archive Windows app
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path '.work/dist/SONIC Bench' -DestinationPath .work/SONIC-Bench-Windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SONIC-Bench-${{ runner.os }}-${{ runner.arch }}
+          path: .work/SONIC-Bench-*.zip
+          if-no-files-found: error

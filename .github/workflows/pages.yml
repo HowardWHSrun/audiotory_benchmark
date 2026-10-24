@@ -29,6 +29,7 @@ jobs:
         run: |
           python3 -m pip install 'numpy>=1.24,<3'
           python3 -m unittest discover -s latency -p 'test_*.py'
+          python3 -m unittest discover -s bench_app -p 'test_*.py'
       - name: Check browser code
         run: |
           node --check web/model.js
@@ -36,6 +37,8 @@ jobs:
           node --check web/parts-data.js
           node --check web/parts.js
           node --check web/compare.js
+          node --check bench_app/ui/app.js
+          node --check bench_app/test_ui.cjs
       - name: Validate source and links
         run: python3 scripts/validate_site.py
       - name: Build static walkthrough

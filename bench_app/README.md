@@ -4,6 +4,10 @@ A local Mac/Windows control panel for preparing and playing the published SONIC 
 
 ## Start the app
 
+Standalone downloads are available from the [verified Mac/Windows build](https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554). Unzip the download, then open **SONIC Bench.app** on an Apple Silicon Mac or **SONIC Bench.exe** inside its folder on Windows x64. These bundles include Python. The locally built Mac app is also placed in the project root; build output stays outside Git.
+
+For the source launchers below:
+
 Keep the complete repository folder together. Install Python **3.10 or newer** with `venv` and `pip` if Python is not already available ([macOS instructions](https://docs.python.org/3/using/mac.html), [Windows instructions](https://docs.python.org/3/using/windows.html)).
 
 - **Mac:** double-click [`Launch SONIC Bench.command`](../Launch%20SONIC%20Bench.command).

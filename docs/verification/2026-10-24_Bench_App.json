@@ -11,7 +11,7 @@
     {
       "check": "native_engine_and_local_server",
       "command": "python -m unittest discover -s bench_app -p test_*.py",
-      "result": "19 passed; fake backend only, no audio devices opened",
+      "result": "20 passed locally; fake backend only, no audio devices opened",
       "coverage": [
         "96/192 kHz synthetic reference delay",
         "roundtrip correlation",
@@ -19,7 +19,8 @@
         "clipping, nonfinite, weak/ambiguous and broken transport rejection",
         "cancellation and stop lifecycle",
         "Host/Origin/token restrictions and path allowlist",
-        "heartbeat stops abandoned active runs"
+        "heartbeat stops abandoned active runs",
+        "Windows ASIO capability enabled before lazy native import; no system setting change"
       ]
     },
     {
@@ -58,6 +59,23 @@
     {
       "check": "local_standalone_mac_arm64",
       "result": "PyInstaller build and bundled --smoke-test passed; four source hashes, UI assets, generator and sounddevice import verified without audio"
+    },
+    {
+      "check": "standalone_actual_server_ui",
+      "result": "Final local Mac bundle served Setup/Delay/SONIC UI on loopback; seed verified20261023; absent duplex device disables starts; actual Quit app closed source server; no audio started"
+    },
+    {
+      "check": "published_bundle",
+      "result": "GitHub Pages check/build/deploy succeeded on implementation commit267029b after guide links made portable",
+      "url": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110805443"
+    },
+    {
+      "check": "Windows_and_macOS_CI",
+      "result": "20 offline tests passed on each OS; both standalone binaries passed packaged smoke; no audio devices opened"
+    },
+    {
+      "check": "actual_quit_and_idle",
+      "result": "Actual local Quit stopped server, packaged server reopened and remained idle during all UI review"
     }
   ],
   "evidence_review": {
@@ -78,7 +96,7 @@
   },
   "scope_limits": [
     "No new hardware playback or capture was authorized or performed during implementation verification.",
-    "Windows launcher, Windows drivers and Windows audio capture require verification on Windows hardware.",
+    "Windows device-driver and audio capture behavior require verification on Windows hardware; offline CI tests are separate.",
     "The published E14 frequency/timing specification is reconstructed; original waveform/order/ramp/digital amplitude are unavailable.",
     "Generated 96/192 kHz samples do not establish exact hardware rate, acoustic level, frequency response or ultrasonic fidelity.",
     "Source-to-microphone roundtrip and microphone-minus-electrical-reference delay are distinct estimands.",
@@ -94,7 +112,32 @@
   "saved_paper_modified": false,
   "public_walkthrough_modified": false,
   "packaging": {
-    "local_mac": ".work/bench_app/dist/SONIC Bench.app",
-    "windows_and_mac_ci": "pending manual workflow build"
-  }
+    "local_mac": "SONIC Bench.app (ignored build output)",
+    "windows_and_mac_ci": {
+      "url": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554",
+      "source_commit": "6aae5f08e251d18998c036696ae5aeed39a05d5b",
+      "status": "success",
+      "jobs": {
+        "macos_latest": "20 tests, source smoke, native app build and packaged smoke passed",
+        "windows_latest": "20 tests, source smoke, native exe build and packaged smoke passed"
+      },
+      "artifacts": {
+        "macOS_ARM64": {
+          "id": 12566711156,
+          "url": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554/artifacts/12566711156"
+        },
+        "Windows_X64": {
+          "id": 12566686136,
+          "url": "https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554/artifacts/12566686136"
+        }
+      }
+    },
+    "downloaded_windows_zip": {
+      "private_local_path": ".work/bench_app/downloads/SONIC-Bench-Windows.zip",
+      "sha256": "a059accab7ea19ed1569a499c3d578d34848111655e103ca999ea8bdbef6777f",
+      "zip_crc_check": "passed",
+      "exe_and_asio_library_present": true
+    }
+  },
+  "software_verification_summary": "74 local offline model/native tests plus mock-browser interactions; 20 native offline tests and packaged launch checks passed independently on Windows and macOS CI"
 }

@@ -10,3 +10,4 @@ __pycache__/
 *.key
 *.pem
 .work/
+/SONIC Bench.app/

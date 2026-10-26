@@ -113,7 +113,7 @@ try {
   cable('M50 XLR',green,[P.mic1,[-2.6,.7,2.2],[-1.7,.25,3.2],[-1.6,.65,4.3]],'sound');
   // Proposed analogue route is deliberately marked in orange; adapters are schematic.
   cable('Proposed microphone cable',orange,[P.out3,[-4.4,.65,1.8],[-3.5,.22,2.65],[-2.1,.2,2.5],[-1.3,.4,1.9],P.ain],'analog');
-  box(.52,.13,.13,charcoal,-3.5,.27,2.65);box(.4,.13,.13,silver,-2.7,.27,2.6);label('Adapter · proposed',-3.1,.88,2.6,1.55);
+  box(.52,.13,.13,charcoal,-3.5,.27,2.65);box(.4,.13,.13,silver,-2.7,.27,2.6);label('TRS → RCA → SMA · proposed',-3.1,.88,2.6,2.2);
   cable('ECU to MCU',blue,[P.ecuRear,[1.9,.55,-1.8],[3.1,.4,-2.25],[4.8,.4,-1.9],[5.6,.6,-.3],P.ecuPort],'control');
   cable('Headstage cable',blue,[P.headPort,[6.3,.6,1.9],[7.5,.35,1],[7.4,.35,-1.6],[7,.45,-2.6]],'control');
   cable('Probe to headstage',blue,[[7.32,.48,-3],[7.9,.65,-3.6],[8.2,.75,-4.0]],'control',.028);
@@ -122,9 +122,9 @@ try {
   const views={
     all:{target:[0,.5,.25],camera:[0,10,17], detail:'Whole setup: audio, neural and proposed microphone connections. The audio and Trodes computers can be the same machine. Rotate to see the ECU rear port.'},
     sound:{target:[-4.7,.7,2.0],camera:[-4.7,7,13],detail:'Sound: computer → iD14 USB; 1L/2R → speakers; M50 XLR → MIC 1. Confirm your actual speaker cabling.'},
-    analog:{target:[-2.4,.55,1.0],camera:[-2.4,5.7,10.0],detail:'Proposed mic feed: iD14 output 3L → adapter assembly → ECU front Ain1. Set Cue A first; verify pinout and levels.'},
+    analog:{target:[-2.4,.55,1.0],camera:[-2.4,5.7,10.0],detail:'Proposed mic feed: iD14 output 3L → TRS-to-RCA breakout → RCA-to-SMA cable → ECU front Ain1. Route mic 1 to Cue A left; verify pinout and levels.'},
     control:{target:[2.7,.6,0],camera:[3.2,7,-10],detail:'ECU rear MCU socket → MCU rear ECU socket. Rotate to see the MCU rear ports; the adjacent socket is for the headstage / HCU.'},
-    adapter:{target:[-3,.3,2.45],camera:[-3,3.6,6.9],detail:'Proposed adapter: Hosa tip branch → Pomona TS-to-BNC → BNC-to-SMA. See Adapter close-up below for connector details.'}
+    adapter:{target:[-3,.3,2.45],camera:[-3,3.6,6.9],detail:'Proposed two-piece connection: J&D TRS-to-RCA breakout → RCA-male-to-SMA-male cable. See the 2D Adapter close-up above for connector details and Amazon links.'}
   };
   let selectedView = 'all';
   function select(view) {

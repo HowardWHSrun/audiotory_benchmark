@@ -7,15 +7,14 @@
   const M = '<a href="https://audient.github.io/audient-documentation-site/id14/system-panel-routing/" target="_blank" rel="noopener noreferrer">Audient mixer routing</a>';
   const S = '<a href="https://spikegadgets.com/wp-content/uploads/2020/02/Control-units-manual.pdf" target="_blank" rel="noopener noreferrer">SpikeGadgets control units</a>';
   const E = '<a href="https://spikegadgets.com/downloads/ECUManual.pdf" target="_blank" rel="noopener noreferrer">ECU manual</a>';
-  const H = '<a href="https://hosatech.com/products/analog-audio/stereo-breakouts/hosa-breakouts/ypp-117/" target="_blank" rel="noopener noreferrer">Hosa YPP-117</a>';
-  const P = '<a href="https://www.pomonaelectronics.com/products/adapters/coaxial/bnc-f-14-in-phone-plug" target="_blank" rel="noopener noreferrer">Pomona 1297</a>';
-  const B = '<a href="https://www.datapro.net/products/sma-to-bnc-antenna-cable.html" target="_blank" rel="noopener noreferrer">BNC-to-SMA cable example</a>';
+  const J = '<a href="https://www.amazon.com/dp/B07G4TPG3L" target="_blank" rel="noopener noreferrer">J&amp;D TRS-to-RCA breakout on Amazon</a>';
+  const R = '<a href="https://www.amazon.com/dp/B0CM6QPRGL" target="_blank" rel="noopener noreferrer">RCA-male-to-SMA-male cable on Amazon</a>';
   const data={
     overview:['01 / THE COMPLETE PATH','The whole setup','Play a stimulus, record the microphone on the ECU, and acquire neural data on the MCU.',`${A}; ${S}; ${E}. Port drawings represent manufacturer layouts; cable and headstage details remain to be confirmed on your units.`],
     sound:['02 / SOUND CHAIN','Sound & microphone','The computer plays through the iD14 and speakers. The M50 listens and enters Mic/Line 1 over XLR.',`${A}; ${M}. Enable 48 V for microphone input 1. Speaker port placement is not independently verified.`],
-    analog:['03 / PROPOSED MICROPHONE FEED','iD14 to ECU','Route microphone input 1 to Cue A left and output 3L, then carry that analog signal to ECU Ain1.',`${A}; ${M}; ${E}. The dashed adapter path is proposed and has not been connected or tested.`],
+    analog:['03 / PROPOSED MICROPHONE FEED','iD14 to ECU','Route mic input 1 into Cue A, pan left, and assign Cue A to outputs 3/4. The proposed cable carries output 3L through the TRS-to-RCA breakout and RCA-to-SMA cable to ECU Ain1.',`${J}; ${R}; ${M}; ${E}. Proposed and untested. Confirm SMA polarity, ECU pinout, impedance, grounding and levels before ordering or connecting.`],
     control:['04 / RECORDING CONNECTION','ECU to MCU','The ECU and neural headstage use two different sockets on the MCU.',`${S}; ${E}. The headstage may require an HCU or active commutator before the MCU; confirm the exact model.`],
-    adapter:['05 / CONNECTOR DETAIL','Proposed adapter','Hosa: ¼-inch TRS male → two ¼-inch TS female sockets. Connect only the left / tip socket to the Pomona ¼-inch TS male → BNC female adapter, then use a BNC male → SMA male cable to ECU Ain1. Leave the right / ring socket open.',`${H}; ${P}; ${B}; ${E}. Verify ECU center/shell, impedance, continuity and levels with the manufacturer before use.`]
+    adapter:['05 / CONNECTOR DETAIL','Proposed two-piece cable','Plug the J&D ¼-inch TRS male into iD14 output 3L. Plug the RCA male end of the RCA-to-SMA cable into the breakout socket connected to the TRS tip; leave the other socket open. Connect the SMA male end to ECU Ain1.',`${J}; ${R}; ${E}. This replaces the earlier BNC assembly and is untested. Before ordering, confirm standard SMA male (center pin) with the seller and ECU pinout, input impedance, grounding and safe levels with SpikeGadgets. Check cable continuity before connecting.`]
   };
   const ELEM=(name,attrs={},parent=svg)=>{const n=document.createElementNS(NS,name);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,String(v)));parent.appendChild(n);return n;};
   const text=(x,y,content,cls='small',anchor='middle')=>{const n=ELEM('text',{x,y,'text-anchor':anchor,class:cls});n.textContent=content;return n;};
@@ -68,10 +67,8 @@
       ELEM('rect',{x:cx+4,y:cy-5,width:16,height:10,rx:3,class:'plug-metal'});
       [cx+9,cx+14].forEach(x=>ELEM('line',{x1:x,y1:cy-5,x2:x,y2:cy+5,class:'plug-ring'}));
     } else if(index===2){
-      ELEM('path',{d:`M ${cx-23} ${cy} H ${cx-7} M ${cx-7} ${cy} L ${cx+5} ${cy-10} M ${cx-7} ${cy} L ${cx+5} ${cy+10}`,class:'branch'});
-      ELEM('rect',{x:cx+3,y:cy-15,width:18,height:10,rx:3,class:'plug-body'});
-      ELEM('rect',{x:cx+3,y:cy+5,width:18,height:10,rx:3,class:'plug-red'});
-      ELEM('circle',{cx:cx+17,cy:cy-10,r:2,class:'pin'});ELEM('circle',{cx:cx+17,cy:cy+10,r:2,class:'pin'});
+      ELEM('path',{d:`M ${cx-23} ${cy} H ${cx+7} M ${cx-8} ${cy} L ${cx+7} ${cy+14}`,class:'branch'});
+      [cy,cy+14].forEach(y=>{ELEM('circle',{cx:cx+13,cy:y,r:6,class:'socket-rim'});ELEM('circle',{cx:cx+13,cy:y,r:3,class:'socket'});});
     } else if(index===3){
       ELEM('rect',{x:cx-21,y:cy-7,width:24,height:14,rx:2,class:'plug-metal'});ELEM('rect',{x:cx+2,y:cy-10,width:19,height:20,rx:3,class:'plug-body'});
       ELEM('line',{x1:cx-13,y1:cy-7,x2:cx-13,y2:cy+7,class:'plug-ring'});
@@ -111,19 +108,19 @@
       name(x,25,'iD14 MkII','REAR PANEL');const a=panel(x,49,pw,'id14',['3L']);
       name(x,249,'SpikeGadgets ECU','FRONT PANEL');const e=panel(x,273,pw,'ecuFront',['AIN1']);
       line(`${out(a['3L'],-12)} V 145 H 26 V 230 H ${e.AIN1.x} V ${e.AIN1.cy-6}`,true);
-      text(w/2+10,170,'¼-INCH TRS → BREAKOUT → TS / BNC','cable-label');text(w/2+10,190,'BNC MALE → SMA MALE','cable-label');text(w/2+10,213,'PROPOSED · NOT YET TESTED','note');
+      text(w/2+10,170,'¼-INCH TRS → RCA BREAKOUT','cable-label');text(w/2+10,190,'RCA MALE → SMA MALE','cable-label');text(w/2+10,213,'PROPOSED · NOT YET TESTED','note');
     } else if(view==='control'){
       name(x,25,'SpikeGadgets ECU','REAR PANEL');const e=panel(x,49,pw,'ecuRear',['MCU']);
       name(x,249,'SpikeGadgets MCU','REAR PANEL');const m=panel(x,273,pw,'mcu',['ECU','HEADSTAGE']);
       line(`${out(e.MCU,-12)} V 171 H ${m.ECU.x} V ${m.ECU.cy-8}`);text(w*.43,199,'ECU–MCU HDMI CABLE','cable-label');
       text(w/2,382,'HEADSTAGE INPUT IS THE ADJACENT SOCKET','note');
     } else {
-      const names=['iD14 3L','HOSA','TIP / LEFT','POMONA','BNC / SMA','ECU AIN1'];const subtitles=['¼ TRS','YPP-117','RING OPEN','1297','COAX','SMA'];const count=narrow?3:6;
+      const names=['iD14 3L','J&D','TIP / LEFT','RCA → SMA','ECU AIN1'];const subtitles=['¼ SOCKET','¼ TRS PLUG','OTHER OPEN','MALE → MALE','SMA SOCKET'];const count=narrow?3:5;
       names.forEach((s,i)=>{const row=Math.floor(i/count),col=i%count,bw=(w-40)/count,cx=20+bw*(col+.5),y=20+row*110;
-        connector(cx,y+17,i);text(cx,y+53,s,'node-label');text(cx,y+72,subtitles[i],'node-sub');
-        if(col<count-1&&i<5)line(`M ${cx+25} ${y+17} H ${cx+bw-25}`,true);
+        connector(cx,y+17,[0,1,2,4,5][i]);text(cx,y+53,s,'node-label');text(cx,y+72,narrow&&i===3?'MALE ENDS':narrow&&i===4?'SMA IN':subtitles[i],'node-sub');
+        if(col<count-1&&i<names.length-1)line(`M ${cx+25} ${y+17} H ${cx+bw-25}`,true);
       });
-      if(narrow)line(`M ${w-25} 37 V 100 H 25 V 147`,true);
+      if(narrow){const bw=(w-40)/count, first=20+bw*.5, last=20+bw*2.5;line(`M ${last+19} 37 H ${w-10} V 105 H 10 V 147 H ${first-22}`,true);}
       text(w/2,narrow?266:195,'PROPOSED ASSEMBLY · VERIFY BEFORE CONNECTING','note');
     }
   }

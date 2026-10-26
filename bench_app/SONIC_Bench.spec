@@ -7,7 +7,8 @@ root = Path(SPECPATH).parent
 a = Analysis([str(root / 'bench_app/desktop.py')], pathex=[str(root)],
     binaries=collect_dynamic_libs('_sounddevice_data'),
     datas=[(str(root / 'bench_app/ui'), 'bench_app/ui')]
-        + [(str(root / 'bench_app/engine.py'), 'bench_app')]
+        + [(str(root / 'bench_app' / name), 'bench_app')
+           for name in ('engine.py', 'live.py', 'live_delay.py')]
         + [(str(root / 'latency' / name), 'latency')
            for name in ('stimulus.py', 'analysis.py', 'transport.py')]
         + collect_data_files('_sounddevice_data'),

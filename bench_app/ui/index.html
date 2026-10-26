@@ -11,10 +11,11 @@
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <a class="brand" href="#setup" aria-label="SONIC Sound Bench home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>SONIC<span class="brand-sub">SOUND BENCH</span></span></a>
+      <a class="brand" href="#live" aria-label="SONIC Sound Bench home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>SONIC<span class="brand-sub">SOUND BENCH</span></span></a>
       <div class="sidebar-label">YOUR WORKFLOW</div>
       <nav class="workflow" aria-label="Workflow">
-        <button class="nav-item selected" data-panel="setup" aria-current="step"><span class="step-number">1</span><span>Connect &amp; set up<small>Interface, speaker &amp; mic</small></span></button>
+        <button class="nav-item selected" data-panel="live" aria-current="step"><span class="step-number" aria-hidden="true">∿</span><span>Live sound<small>Watch playback &amp; microphone</small></span></button>
+        <button class="nav-item" data-panel="setup"><span class="step-number">1</span><span>Connect &amp; set up<small>Interface, speaker &amp; mic</small></span></button>
         <button class="nav-item" data-panel="delay"><span class="step-number">2</span><span>Measure delay<small>Check acoustic timing</small></span></button>
         <button class="nav-item" data-panel="stimulus"><span class="step-number">3</span><span>Play SONIC<small>Reproduce the tone recipe</small></span></button>
       </nav>
@@ -27,7 +28,47 @@
         <div id="globalError" class="notice error" role="alert" hidden></div>
         <div id="appClosed" class="notice success" role="status" hidden>App closed. You can close this tab. Open the launcher again to start a new session.</div>
 
-        <section class="panel" id="panel-setup" aria-labelledby="setupTitle">
+        <section class="panel" id="panel-live" aria-labelledby="liveTitle">
+          <h1 id="liveTitle" class="sr-only">Live sound</h1>
+          <div class="route-summary live-route"><span class="status-dot" aria-hidden="true"></span><span class="route-summary-text">Choose your interface in setup</span><button class="text-button" data-go="setup" type="button">Settings</button></div>
+          <div class="live-toolbar"><div class="live-buttons"><button class="button primary" id="startMonitor" type="button" data-start>Start mic</button><button class="button secondary" id="playLiveProbe" type="button" disabled>Play chirps</button><button class="button secondary sonic-loop-button" id="toggleLiveSonic" type="button" aria-pressed="false" title="Continuous SONIC reconstruction: 10 ms tone pips" disabled>SONIC loop</button><button class="button secondary live-stop" id="stopLive" type="button" disabled>■ Stop</button><button class="button secondary live-settings-button" id="liveSettingsButton" data-go="setup" type="button" aria-label="Audio settings" title="Audio settings">⚙</button></div><span class="live-state" id="liveState">NOT STARTED</span><span id="liveProbeSettings" class="live-settings">Nothing starts automatically</span></div>
+          <div class="live-delay-summary" title="Playback-to-microphone waveform match includes audio input/output buffering and conversion. It is not isolated speaker delay or neural alignment."><span id="liveDelaySummaryLabel">Playback → mic</span><strong id="liveDelayNow">—</strong><span id="liveDelayNowStatus">Waiting for sound</span></div>
+          <div id="liveNotice" class="notice live-notice" role="status" hidden></div>
+          <div class="live-frequency-grid">
+            <article class="card live-chart-card">
+              <div class="card-heading"><h2>Microphone spectrogram</h2><span class="trace-tag" id="spectrogramTraceState">WAITING</span></div>
+              <div class="spectrogram-wrap"><canvas id="microphoneSpectrogram" role="img" aria-label="Scrolling microphone spectrogram, recent time horizontally and frequency vertically"></canvas><span class="trace-empty" id="spectrogramEmpty">Start mic</span></div>
+              <div class="chart-axis"><span id="spectrogramHistory">20 s</span><span class="spectrogram-legend"><i></i>−100 → −20 dBFS</span></div>
+            </article>
+            <article class="card live-chart-card">
+              <div class="card-heading"><h2>Frequency · dBFS</h2><span class="trace-tag" id="spectrumTraceState">WAITING</span></div>
+              <div class="spectrum-wrap"><canvas id="microphoneSpectrum" role="img" aria-label="Microphone frequency spectrum, logarithmic frequency and digital decibel amplitude"></canvas><span class="trace-empty" id="spectrumEmpty">Start mic</span></div>
+              <div class="spectrum-axis"><span>20 Hz</span><span>100</span><span>1k</span><span>10k</span><span>40 kHz</span></div>
+            </article>
+          </div>
+          <article class="card live-delay-card">
+            <div class="card-heading"><h2 id="liveDelayTitle">Playback → mic · ms</h2><div class="live-delay-value"><strong id="liveDelayValue">—</strong><span id="liveDelayCount"></span></div></div>
+            <div class="delay-wrap"><canvas id="liveDelayPlot" role="img" aria-label="Detected playback-to-microphone delay for timing chirps or continuous sound windows"></canvas><span class="trace-empty" id="liveDelayEmpty">Play chirps</span></div>
+            <div class="chart-axis"><span>Sound match</span><span id="liveDelayStatus">No delay measured</span></div>
+          </article>
+          <details class="live-waveform-details"><summary>Waveforms</summary>
+          <div class="live-waveforms">
+            <article class="card live-trace-card">
+              <div class="card-heading"><h2>Outgoing digital waveform</h2><span class="trace-tag" id="outputTraceState">WAITING</span></div>
+              <div class="trace-wrap"><canvas id="outputWaveform" class="waveform-canvas" role="img" aria-label="Outgoing digital waveform over the latest 500 milliseconds"></canvas><span class="trace-empty" id="outputEmpty">No outgoing signal</span></div>
+              <div class="trace-readings"><span id="outputScale">500 ms</span><span>RMS <strong id="outputRms">—</strong></span><span>Peak <strong id="outputPeak">—</strong></span></div><div class="level-track" role="meter" aria-label="Outgoing signal RMS level" aria-valuemin="-120" aria-valuemax="0"><span id="outputMeter"></span></div>
+            </article>
+            <article class="card live-trace-card">
+              <div class="card-heading"><h2>Microphone input</h2><span class="trace-tag" id="micTraceState">WAITING</span></div>
+              <div class="trace-wrap"><canvas id="microphoneWaveform" class="waveform-canvas" role="img" aria-label="Microphone waveform over the latest 500 milliseconds"></canvas><span class="trace-empty" id="microphoneEmpty">Start mic</span></div>
+              <div class="trace-readings"><span id="microphoneScale">500 ms</span><span>RMS <strong id="microphoneRms">—</strong></span><span>Peak <strong id="microphonePeak">—</strong></span></div><div class="level-track" role="meter" aria-label="Microphone RMS level" aria-valuemin="-120" aria-valuemax="0"><span id="microphoneMeter"></span></div>
+            </article>
+          </div>
+          </details>
+          <details class="card compact-details live-details"><summary>Timing &amp; display notes</summary><div class="details-body"><p>Playback → mic includes audio I/O buffering, converters, speaker, air and microphone. It is not isolated speaker delay or neural alignment. Electrical-reference mode, when available, compares the microphone with a simultaneous line return. Rejected matches have no delay value. The SONIC loop repeats the reconstructed 10 ms tone sequence. Its delay points compare amplitude envelopes in multiple frequency bands, with a 0.333 ms search step at 96 kHz. That step is not calibrated accuracy or a unique acoustic onset.</p><p>These are real input samples and the outgoing digital signal. Waveforms use separate amplitude scales. The spectrogram uses recent microphone windows; gaps and stale data are labelled. Digital levels are not SPL. Keep microphone monitoring out of the speaker mix to prevent feedback.</p><p id="liveCaptureInfo">Live monitoring does not save room audio.</p></div></details>
+        </section>
+
+        <section class="panel" id="panel-setup" aria-labelledby="setupTitle" hidden>
           <div class="page-heading"><div><div class="eyebrow">STEP 01 / SETUP</div><h1 id="setupTitle">Good timing starts here.</h1><p>Connect your speaker and microphone, then choose their channels.</p></div><span class="outline-badge">Mac + Windows</span></div>
           <article class="card route-card">
             <div class="card-heading"><h2>Your signal path</h2><span class="small-muted">One audio interface · one shared clock</span></div>

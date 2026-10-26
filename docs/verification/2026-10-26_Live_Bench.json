@@ -1,0 +1,462 @@
+{
+  "date": "2026-10-26",
+  "timezone": "America/Chicago",
+  "scope": "Native local SONIC Bench live plots, rolling waveform delay and continuous E14 reconstruction",
+  "changes": [
+    "Header-free chart-first live view with spectrogram, spectrum and delay plot",
+    "Manual silent microphone monitor with bounded in-memory buffers and no room-audio files",
+    "Explicit continuous 14-second E14 loop: 10 ms pips, 2 ms ramps, 100 pips per frequency",
+    "Authenticated loop/probe/stop controls; native abort and close remain on monitor worker",
+    "Rolling 500 ms multiband amplitude-envelope matches once per second; independently selected bands and three-band agreement",
+    "Absolute stream-origin regression fix when SONIC starts after microphone monitoring"
+  ],
+  "offline_checks": {
+    "bench_tests": {
+      "passed": true,
+      "count": 51
+    },
+    "browser_ui": {
+      "passed": true,
+      "viewports_px": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "uses_synthetic_fixtures": true,
+      "opens_audio_hardware": false
+    },
+    "source_smoke_test": {
+      "passed": true,
+      "opens_audio_hardware": false
+    },
+    "timing_analysis_tests": {
+      "passed": true,
+      "count": 42
+    },
+    "scientific_model_and_browser_audio_tests": {
+      "passed": true,
+      "count": 31
+    },
+    "mac_standalone_build": {
+      "passed": true,
+      "packaged_smoke_test_passed": true,
+      "smoke_test_opens_audio_hardware": false
+    },
+    "static_source_and_bundle": {
+      "passed": true,
+      "source_links": 577,
+      "published_links": 591,
+      "evidence_paths": 120,
+      "tracked_files_only_export": true,
+      "unrelated_local_pdf_rename_excluded": true
+    }
+  },
+  "native_observations": {
+    "interface": "Audient iD14",
+    "sample_rate_hz": 96000,
+    "microphone": "Earthworks M50 on input 1",
+    "reported_geometry_m": 0.1,
+    "physical_gain_or_output_level_independently_read": false,
+    "initial_quiet_chirps": {
+      "digital_peak_dbfs": -36,
+      "accepted_trials": 0,
+      "total_trials": 10,
+      "valid_transport": true
+    },
+    "audible_speaker_output_user_confirmation": "Not established: initial affirmative response was subsequently corrected",
+    "live_probe_and_loop": {
+      "native_audio_performed": true,
+      "raw_monitor_audio_saved": false,
+      "stream_active_when_checked": true,
+      "sonic_active_when_checked": false,
+      "transport_errors_when_checked": [],
+      "recent_window_count": 32,
+      "recent_accepted_windows": 15,
+      "recent_rejected_windows": 17,
+      "recent_accepted_delay_range_ms": [
+        36.510416666666664,
+        37.239583333333336
+      ],
+      "latest_screened_waveform_delay_ms": null,
+      "match_band_hz": null,
+      "independently_calibrated_accuracy": false,
+      "matcher_revision": "Initial bandpassed waveform matcher before envelope optimization"
+    }
+  },
+  "evidence_limits": [
+    "Live waveform delay includes host/interface buffering, converters and acoustic/microphone path; not isolated speaker propagation delay",
+    "No neural recorder or ECU connected; no neural-clock alignment established",
+    "Repeated tones can produce ambiguous candidates; rejected windows have no delay value",
+    "Digital dBFS is not calibrated SPL; ultrasonic acoustic delivery remains unqualified",
+    "Diagnostic waveform matches do not establish a unique physical onset or calibrated timing accuracy",
+    "Private diagnostic audio files remain outside Git; no raw room audio or temporary captures are published"
+  ],
+  "owning_sources": [
+    "bench_app/engine.py",
+    "bench_app/live.py",
+    "bench_app/live_delay.py",
+    "bench_app/server.py",
+    "bench_app/ui/app.js",
+    "latency/stimulus.py",
+    "latency/analysis.py"
+  ],
+  "sonic_matcher_comparison": {
+    "purpose": "Private offline comparison of already authorized bench capture; sanitized numbers only",
+    "capture_directory": "20261026-132213-sonic-e14-preview",
+    "raw_audio_included": false,
+    "sample_rate_hz": 96000,
+    "window_seconds": 0.5,
+    "old_accepted": 4,
+    "envelope_accepted": 7,
+    "total": 7,
+    "interpretation": "Playback/capture-coordinate envelope alignment includes host/interface buffering, loudspeaker/room and microphone path. Not acoustic onset, same-ADC reference timing or calibrated accuracy.",
+    "windows": [
+      {
+        "window": 0,
+        "old": {
+          "accepted": true,
+          "delay_ms": 36.5625,
+          "reasons": [],
+          "peak_correlation_abs": 0.8982596043311035,
+          "secondary_peak_ratio": 0.9319180553510734
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.8404263580883535,
+          "secondary_peak_ratio": 0.4496594773559428
+        }
+      },
+      {
+        "window": 1,
+        "old": {
+          "accepted": true,
+          "delay_ms": 36.625,
+          "reasons": [],
+          "peak_correlation_abs": 0.678568643010643,
+          "secondary_peak_ratio": 0.9393493730812017
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.997078883478201,
+          "secondary_peak_ratio": 0.3981577037382081
+        }
+      },
+      {
+        "window": 2,
+        "old": {
+          "accepted": true,
+          "delay_ms": 36.625,
+          "reasons": [],
+          "peak_correlation_abs": 0.6661140502277809,
+          "secondary_peak_ratio": 0.935114928640948
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 37.333333333333336,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.9397154537336566,
+          "secondary_peak_ratio": 0.437051444512567
+        }
+      },
+      {
+        "window": 3,
+        "old": {
+          "accepted": false,
+          "delay_ms": null,
+          "reasons": [
+            "ambiguous_peak_use_nonperiodic_probe"
+          ],
+          "peak_correlation_abs": 0.7093584848388381,
+          "secondary_peak_ratio": 0.9598377864358023
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.9968986327536866,
+          "secondary_peak_ratio": 0.363817303221507
+        }
+      },
+      {
+        "window": 4,
+        "old": {
+          "accepted": false,
+          "delay_ms": null,
+          "reasons": [
+            "ambiguous_peak_use_nonperiodic_probe"
+          ],
+          "peak_correlation_abs": 0.626228356528902,
+          "secondary_peak_ratio": 0.9707301217427234
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.9968726635668274,
+          "secondary_peak_ratio": 0.39438963338337096
+        }
+      },
+      {
+        "window": 5,
+        "old": {
+          "accepted": false,
+          "delay_ms": null,
+          "reasons": [
+            "ambiguous_peak_use_nonperiodic_probe"
+          ],
+          "peak_correlation_abs": 0.6724793190879578,
+          "secondary_peak_ratio": 0.9984752160986691
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.9971001563471633,
+          "secondary_peak_ratio": 0.4279396870267661
+        }
+      },
+      {
+        "window": 6,
+        "old": {
+          "accepted": true,
+          "delay_ms": 36.625,
+          "reasons": [],
+          "peak_correlation_abs": 0.7518978349343359,
+          "secondary_peak_ratio": 0.8694367572835187
+        },
+        "envelope": {
+          "accepted": true,
+          "delay_ms": 36.666666666666664,
+          "reasons": [],
+          "method": "multiband_amplitude_envelope",
+          "search_step_ms": 0.3333333333333333,
+          "useful_bands_hz": [
+            2000,
+            4000,
+            6000,
+            8000,
+            9000,
+            10500
+          ],
+          "peak_correlation": 0.9968373351692997,
+          "secondary_peak_ratio": 0.39287889388911745
+        }
+      }
+    ],
+    "false_match_screen": {
+      "wrong_order_seeds": [
+        8000,
+        8001,
+        8002,
+        8003,
+        8004,
+        8005,
+        8006,
+        8007,
+        8008,
+        8009,
+        8010,
+        8011,
+        8012,
+        8013,
+        8014,
+        8015,
+        8016,
+        8017,
+        8018,
+        8019,
+        8020,
+        8021,
+        8022,
+        8023,
+        8024,
+        8025,
+        8026,
+        8027,
+        8028,
+        8029,
+        8030,
+        8031,
+        8032,
+        8033,
+        8034,
+        8035,
+        8036,
+        8037,
+        8038,
+        8039,
+        8040,
+        8041,
+        8042,
+        8043,
+        8044,
+        8045,
+        8046,
+        8047,
+        8048,
+        8049,
+        8050,
+        8051,
+        8052,
+        8053,
+        8054,
+        8055,
+        8056,
+        8057,
+        8058,
+        8059,
+        8060,
+        8061,
+        8062,
+        8063,
+        8064,
+        8065,
+        8066,
+        8067,
+        8068,
+        8069,
+        8070,
+        8071,
+        8072,
+        8073,
+        8074,
+        8075,
+        8076,
+        8077,
+        8078,
+        8079,
+        8080,
+        8081,
+        8082,
+        8083,
+        8084,
+        8085,
+        8086,
+        8087,
+        8088,
+        8089,
+        8090,
+        8091,
+        8092,
+        8093,
+        8094,
+        8095,
+        8096,
+        8097,
+        8098,
+        8099
+      ],
+      "source_seed": 20261023,
+      "tones_per_frequency": 10,
+      "window_seconds": 0.5,
+      "accepted": 0,
+      "total": 100,
+      "synthetic": true
+    },
+    "envelope_quality_gates": {
+      "min_independently_eligible_bands": 3,
+      "eligibility": "source modulation and microphone envelope p99 >=4 * max(1e-6, median); independent of correlation",
+      "min_aggregate_correlation": 0.55,
+      "min_3_band_agreement_correlation": 0.45,
+      "max_competing_peak_ratio": 0.85,
+      "competing_peak_exclusion_ms": 5
+    },
+    "independent_synthetic_review": {
+      "wrong_order_windows_accepted": 0,
+      "wrong_order_windows_tested": 1400,
+      "noise_windows_accepted": 0,
+      "noise_windows_tested": 100,
+      "correct_source_windows_accepted": 14,
+      "correct_source_windows_tested": 14,
+      "note": "Independent screen preceding final stricter 0.85 competing-peak gate; accepting fewer candidates cannot create new false matches."
+    },
+    "tracker_unit_tests_passed": 18,
+    "equal_echo_regression": {
+      "delay_paths_ms": [
+        30,
+        80
+      ],
+      "equal_gains": true,
+      "windows_rejected": 14,
+      "windows_tested": 14,
+      "synthetic": true
+    }
+  },
+  "independent_synthetic_review": {
+    "wrong_order_windows": 1400,
+    "wrong_order_false_accepts": 0,
+    "noise_trials": 100,
+    "noise_false_accepts": 0,
+    "correct_delay_trials": 14,
+    "correct_delay_accepted": 14,
+    "imposed_delay_ms": 30,
+    "synthetic": true
+  },
+  "matcher_source_sha256": "5c9bf74d977b3517cfe09d9befcf714c6fc2afa3f4a76292eac6ca6e5f500f40"
+}

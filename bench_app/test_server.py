@@ -13,6 +13,9 @@ class FakeEngine:
         self.state = "idle"
         self.starts = []
         self.stops = 0
+        self.action = None
+        self.probes = 0
+        self.sonic_playing = False
 
     def status(self):
         return {"state": self.state, "result": None}
@@ -25,11 +28,31 @@ class FakeEngine:
             raise RuntimeError("A run is already active")
         self.starts.append(config)
         self.state = "running"
+        self.action = config.get("action")
         return self.status()
+
+    def live(self):
+        return {"active": self.state == "running", "frames": 0, "microphone": None,
+                "sonic_playing": self.sonic_playing}
+
+    def play_live_probe(self):
+        if self.state != "running" or self.action != "monitor":
+            raise RuntimeError("Start the live monitor first")
+        self.probes += 1
+        return {"probe_playing": True}
+
+    def set_live_sonic(self, enabled):
+        if not isinstance(enabled, bool):
+            raise ValueError("enabled must be a boolean")
+        if self.state != "running" or self.action != "monitor":
+            raise RuntimeError("Start the live monitor first")
+        self.sonic_playing = enabled
+        return {"sonic_playing": enabled}
 
     def stop(self):
         self.stops += 1
         self.state = "cancelled"
+        self.sonic_playing = False
         return self.status()
 
 
@@ -65,6 +88,44 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(self.request("GET", "/api/status")[0], 200)
         self.assertEqual(self.engine.starts, [])
         self.assertEqual(self.engine.state, "idle")
+
+    def test_live_read_is_silent_and_does_not_start_or_play(self):
+        code, payload, headers = self.request("GET", "/api/live")
+        self.assertEqual(code, 200)
+        self.assertFalse(json.loads(payload)["active"])
+        self.assertEqual(headers["Cache-Control"], "no-store")
+        self.assertEqual(self.engine.starts, [])
+        self.assertEqual(self.engine.probes, 0)
+        self.assertEqual(self.request("GET", "/api/live", headers={"Host": "evil.example"})[0], 403)
+
+    def test_live_probe_requires_session_and_running_monitor(self):
+        self.assertEqual(self.post("/api/live/probe", {})[0], 409)
+        self.assertEqual(self.post("/api/start", {"action": "monitor"})[0], 200)
+        self.assertEqual(self.post("/api/live/probe", {}, **{"X-SONIC-Token": "wrong"})[0], 403)
+        self.assertEqual(self.post("/api/live/probe", {}, **{"Origin": "https://other.example"})[0], 403)
+        self.assertEqual(self.engine.probes, 0)
+        self.assertEqual(self.post("/api/live/probe", {})[0], 200)
+        self.assertEqual(self.engine.probes, 1)
+        self.assertEqual(self.post("/api/stop", {})[0], 200)
+        self.assertEqual(self.post("/api/live/probe", {})[0], 409)
+
+    def test_live_sonic_loop_requires_explicit_boolean_and_session(self):
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": True})[0], 409)
+        self.assertEqual(self.post("/api/start", {"action": "monitor"})[0], 200)
+        for config in ({}, {"enabled": "true"}, {"enabled": 1}, {"enabled": None}):
+            with self.subTest(config=config):
+                self.assertEqual(self.post("/api/live/sonic", config)[0], 400)
+        self.assertFalse(self.engine.sonic_playing)
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": True}, **{"X-SONIC-Token": "wrong"})[0], 403)
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": True}, **{"Origin": "https://other.example"})[0], 403)
+        self.assertFalse(self.engine.sonic_playing)
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": True})[0], 200)
+        self.assertTrue(json.loads(self.request("GET", "/api/live")[1])["sonic_playing"])
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": False})[0], 200)
+        self.assertFalse(self.engine.sonic_playing)
+        self.assertEqual(self.post("/api/live/sonic", {"enabled": True})[0], 200)
+        self.assertEqual(self.post("/api/stop", {})[0], 200)
+        self.assertFalse(self.engine.sonic_playing)
 
     def test_tokens_origins_and_hosts_required(self):
         for headers in ({"X-SONIC-Token": "wrong"}, {"Origin": "https://other.example"},

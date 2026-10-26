@@ -2,9 +2,22 @@
 
 A local Mac/Windows control panel for preparing and playing the published SONIC Sheep E tone specification and checking playback-to-microphone delay. The browser provides the controls; a native Python audio stream performs playback and capture. Browser timing is not used as a measured audio clock.
 
+## Live sound
+
+The default view is a compact dashboard: microphone spectrogram, frequency spectrum and a rolling delay plot. Waveforms and measurement notes are collapsed. Settings are behind the gear button.
+
+1. Select the Audient iD14 at 96 kHz, microphone input 1 and the connected speaker output in Settings. Keep microphone monitoring excluded from the speaker mix.
+2. **Start mic** opens a silent native duplex stream. Live monitoring keeps only bounded in-memory display/analysis buffers; it does not save room audio.
+3. **Play chirps** sends a finite timing-probe train. Accepted waveform matches appear as they finish; weak, clipped or ambiguous matches have no delay value.
+4. **SONIC loop** continuously plays a locally reconstructed E14 sequence: 10 ms pips with 2 ms raised-cosine ramps, 100 pips per frequency in a balanced seeded 14-second block, repeating without added gaps. **Stop SONIC** returns to silent microphone monitoring. **Stop** closes the stream.
+
+The live **Playback → mic** estimate includes host/interface buffering, converters and the acoustic/microphone path. It is not isolated speaker propagation delay, independently established acoustic onset, or neural-clock alignment. During SONIC playback, 500 ms windows are screened once per second using amplitude envelopes around 2, 4, 6, 8, 9 and 10.5 kHz. At least three independently eligible bands must agree, with no strong competing delay. This reduces carrier-phase ambiguity; the 0.333 ms search step at 96 kHz is not calibrated accuracy. Envelope comparison cannot establish ultrasonic delivery or a unique physical onset. Failed matches remain blank. Electrical-reference measurement remains available in the separate Measure delay view when a working return cable is connected.
+
+No sound or capture starts on page load. Spectrum levels are digital dBFS, not calibrated SPL. The browser polls native telemetry; it does not supply the audio clock. A stopped or stale trace is labelled. The hosted browser tool in `web/bench/` is a separate application and is unchanged by this native live view.
+
 ## Start the app
 
-Standalone downloads are available from the [verified Mac/Windows build](https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554). Unzip the download, then open **SONIC Bench.app** on an Apple Silicon Mac or **SONIC Bench.exe** inside its folder on Windows x64. These bundles include Python. The locally built Mac app is also placed in the project root; build output stays outside Git.
+Use the source launchers below for the current live dashboard. The [earlier verified Mac/Windows build](https://github.com/HowardWHSrun/audiotory_benchmark/actions/runs/40110935554) predates the live view; its bundles include Python. The rebuilt local Mac app is placed in the project root; build output stays outside Git. A new Windows live-dashboard bundle still needs its own build and hardware check.
 
 For the source launchers below:
 

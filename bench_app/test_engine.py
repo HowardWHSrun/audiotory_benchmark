@@ -214,7 +214,7 @@ class EngineTests(unittest.TestCase):
 
     def test_provenance_is_available_without_audio(self):
         provenance = source_provenance()
-        self.assertEqual(len(provenance), 4)
+        self.assertEqual(len(provenance), 6)
         self.assertTrue(all(len(digest) == 64 for digest in provenance.values()))
         self.assertEqual(self.backend.opened, [])
 

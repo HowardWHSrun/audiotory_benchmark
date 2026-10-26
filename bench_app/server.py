@@ -89,6 +89,8 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/status":
             self.server.last_heartbeat = time.monotonic()
             return self._send(200, self.server.engine.status())
+        if self.path == "/api/live":
+            return self._send(200, self.server.engine.live())
         if self.path == "/api/devices":
             try:
                 return self._send(200, self.server.engine.devices())
@@ -127,6 +129,14 @@ class Handler(BaseHTTPRequestHandler):
             if self.path == "/api/start":
                 self.server.last_heartbeat = time.monotonic()
                 return self._send(200, self.server.engine.start(value))
+            if self.path == "/api/live/probe":
+                self.server.last_heartbeat = time.monotonic()
+                return self._send(200, self.server.engine.play_live_probe())
+            if self.path == "/api/live/sonic":
+                if set(value) != {"enabled"}:
+                    raise ValueError("SONIC loop request requires only enabled")
+                self.server.last_heartbeat = time.monotonic()
+                return self._send(200, self.server.engine.set_live_sonic(value["enabled"]))
             if self.path == "/api/stop":
                 return self._send(200, self.server.engine.stop())
             if self.path == "/api/quit":
@@ -154,7 +164,7 @@ def smoke_test():
     assert all((Path(__file__).parent / "ui" / name).is_file()
                for name in ("index.html", "app.js", "styles.css"))
     assert AudioEngine(data_root()).status()["state"] == "idle"
-    assert len(source_provenance()) == 4
+    assert len(source_provenance()) == 6
     # Explicitly import the native dependency so a frozen build cannot pass
     # while omitting the lazy sounddevice import or its PortAudio library.
     assert hasattr(AudioEngine(data_root())._audio(), "Stream")

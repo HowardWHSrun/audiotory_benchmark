@@ -25,6 +25,8 @@ import numpy as np
 from latency.analysis import analyze_trials, _normalized_correlations, _primary_lobe_bounds
 from latency.stimulus import make_probe_plan, make_sonic_e_block
 from latency.transport import assess_timestamps
+from .live import LiveAudioBuffer
+from .live_delay import LiveDelayTracker
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,7 +63,7 @@ def source_provenance():
     """Hash required bundled source files; safe for offline packaging checks."""
     return {path.relative_to(ROOT).as_posix(): _hash_file(path) for path in (
         Path(__file__).resolve(), ROOT / "latency/stimulus.py", ROOT / "latency/analysis.py",
-        ROOT / "latency/transport.py")}
+        ROOT / "latency/transport.py", ROOT / "bench_app/live.py", ROOT / "bench_app/live_delay.py")}
 
 
 def _write_pcm24(path, waveform, samplerate):
@@ -90,6 +92,18 @@ class AudioEngine:
         self._stop = threading.Event()
         self._thread = None
         self._stream = None
+        self._live_audio = LiveAudioBuffer()
+        self._live_delay = LiveDelayTracker()
+        self._probe_waveform = None
+        self._probe_plan = None
+        self._probe_pending = False
+        self._probe_position = None
+        self._monitor_frames = 0
+        self._sonic_enabled = False
+        self._sonic_waveform = None
+        self._sonic_plan = None
+        self._sonic_position = 0
+        self._sonic_next_start = 0
         self._status = {"state": "idle", "action": None, "progress": 0.0,
                         "message": "Ready. No audio has started.", "result": None,
                         "run_path": None, "errors": [], "config": None}
@@ -134,6 +148,73 @@ class AudioEngine:
         with self._lock:
             return deepcopy(self._status)
 
+    def live(self):
+        with self._lock:
+            active = self._status["state"] == "running"
+            playing = active and (self._probe_pending or self._probe_position is not None)
+        result = self._live_audio.snapshot(active=active, probe_playing=playing)
+        with self._lock:
+            result["sonic_playing"] = active and self._sonic_enabled
+        reasons = list(result["transport_errors"])
+        if result["microphone"] and result["microphone"]["clipped"]:
+            reasons.append("input_clipping")
+        if result["output"]["clipped"]:
+            reasons.append("output_clipping")
+        if reasons:
+            self._live_delay.invalidate(", ".join(reasons))
+        result["delay"] = self._live_delay.snapshot()
+        return result
+
+    def play_live_probe(self):
+        with self._lock:
+            if self._status["state"] != "running" or self._status["action"] != "monitor":
+                raise RuntimeError("Start the live microphone monitor first")
+            if self._probe_waveform is None:
+                raise RuntimeError("The microphone monitor is still starting")
+            if self._probe_pending or self._probe_position is not None:
+                raise RuntimeError("Timing chirps are already playing")
+            if self._sonic_enabled:
+                raise RuntimeError("Stop the SONIC loop before playing timing chirps")
+            self._live_delay.add_probe(self._probe_waveform, self._probe_plan, self._monitor_frames)
+            self._probe_pending = True
+        return {"state": "queued", "message": "Timing chirps queued in the live audio stream"}
+
+    def set_live_sonic(self, enabled):
+        if not isinstance(enabled, bool):
+            raise ValueError("enabled must be true or false")
+        with self._lock:
+            if self._status["state"] != "running" or self._status["action"] != "monitor":
+                raise RuntimeError("Start the live microphone monitor first")
+            if enabled and (self._probe_pending or self._probe_position is not None):
+                raise RuntimeError("Wait for the timing chirps to finish")
+            if enabled == self._sonic_enabled:
+                return {"sonic_playing": enabled}
+            if not enabled:
+                self._sonic_enabled = False
+                self._live_delay.cancel_pending()
+                return {"sonic_playing": False}
+            config = deepcopy(self._status["config"])
+            worker = self._thread
+        # Generation and manifest allocation are never done in the audio callback.
+        waveform, _ = make_sonic_e_block(config["sample_rate"], 100, config["seed"], config["peak_dbfs"])
+        fs = config["sample_rate"]
+        plan = {"sample_rate_hz": fs, "source_kind": "sonic_sequence",
+                "trials": [{"output_start": start, "output_stop": start + fs // 2}
+                           for start in range(0, len(waveform) - fs // 2 + 1, fs)]}
+        with self._lock:
+            if worker is not self._thread or self._status["state"] != "running" or self._stop.is_set():
+                raise RuntimeError("The microphone monitor stopped while preparing the SONIC loop")
+            if self._sonic_enabled or self._probe_pending or self._probe_position is not None:
+                raise RuntimeError("Another sound has already started")
+            self._live_delay.reset(fs, start_frame=self._monitor_frames)
+            self._sonic_waveform, self._sonic_plan = waveform, plan
+            self._sonic_position = 0
+            self._live_delay.add_probe(waveform, plan, self._monitor_frames)
+            self._sonic_next_start = self._monitor_frames + len(waveform)
+            self._sonic_enabled = True
+        return {"sonic_playing": True, "loop_seconds": len(waveform) / fs,
+                "pip_duration_ms": 10, "tones_per_frequency_per_loop": 100}
+
     def _update(self, **values):
         with self._lock:
             self._status.update(values)
@@ -150,9 +231,9 @@ class AudioEngine:
                       reference_channel=None, reference_output_channel=2, peak_dbfs=-36,
                       repetitions=10, tones_per_frequency=600, seed=20261023, distance_m=None)
         config.update(raw)
-        if config["action"] not in ("stimulus", "calibrate"):
-            raise ValueError("action must be stimulus or calibrate")
-        if config["action"] == "stimulus":
+        if config["action"] not in ("stimulus", "calibrate", "monitor"):
+            raise ValueError("action must be stimulus, calibrate or monitor")
+        if config["action"] in ("stimulus", "monitor"):
             # A saved calibration form must not silently drive a second output
             # when the user switches to the separate stimulus playback action.
             config["reference_channel"] = None
@@ -200,7 +281,7 @@ class AudioEngine:
         try:
             backend.check_output_settings(device=config["device"], channels=max(output_channels),
                                           dtype="float32", samplerate=config["sample_rate"])
-            if config["action"] == "calibrate":
+            if config["action"] in ("calibrate", "monitor"):
                 if max(input_channels) > int(device["max_input_channels"]):
                     raise ValueError("Selected input channel exceeds the device's available input channels")
                 backend.check_input_settings(device=config["device"], channels=max(input_channels),
@@ -218,10 +299,20 @@ class AudioEngine:
                 raise RuntimeError("An audio job is already active; stop it before starting another")
             config, device = self._validate(config)
             self._stop = threading.Event()
+            self._live_audio.reset(config["sample_rate"], has_input=config["action"] != "stimulus")
+            self._live_delay.reset(config["sample_rate"], has_reference=config["reference_channel"] is not None)
+            self._probe_waveform = self._probe_plan = None
+            self._probe_pending = False
+            self._probe_position = None
+            self._monitor_frames = 0
+            self._sonic_enabled = False
+            self._sonic_waveform = self._sonic_plan = None
+            self._sonic_position = self._sonic_next_start = 0
             self._status = {"state": "running", "action": config["action"], "progress": 0.0,
                             "message": "Preparing the explicitly requested audio job.",
                             "result": None, "run_path": None, "errors": [], "config": config}
-            self._thread = threading.Thread(target=self._worker, args=(config, device),
+            target = self._monitor if config["action"] == "monitor" else self._worker
+            self._thread = threading.Thread(target=target, args=(config, device),
                                             name="sonic-native-audio", daemon=True)
             self._thread.start()
             return deepcopy(self._status)
@@ -231,7 +322,10 @@ class AudioEngine:
             if self._status["state"] in ("running", "stopping"):
                 self._stop.set()
                 self._status.update(state="stopping", message="Stopping audio; this run will be marked cancelled.")
-                stream = self._stream
+                # Native PortAudio abort/close calls must stay on the monitor
+                # worker. Concurrent abort in HTTP and close in the worker can
+                # deadlock a real Core Audio stream.
+                stream = None if self._status["action"] == "monitor" else self._stream
             else:
                 stream = None
         if stream is not None:
@@ -242,6 +336,84 @@ class AudioEngine:
                 # before checking that event, including during a concurrent abort.
                 pass
         return self.status()
+
+    def _monitor(self, config, device):
+        """Silent duplex monitoring; probes are explicit and samples are not saved."""
+        backend = self._audio()
+        fs = config["sample_rate"]
+        mic_channel, out_channel = config["input_channel"] - 1, config["output_channel"] - 1
+        finished = threading.Event()
+        stream = None
+        try:
+            waveform, plan = make_probe_plan(fs, config["repetitions"], config["peak_dbfs"])
+            with self._lock:
+                self._probe_waveform, self._probe_plan = waveform, plan
+
+            def callback(indata, outdata, frames, timing, flags):
+                outdata.fill(0)
+                if self._stop.is_set():
+                    raise backend.CallbackAbort
+                try:
+                    with self._lock:
+                        if self._probe_pending:
+                            self._probe_pending = False
+                            self._probe_position = 0
+                        if self._sonic_enabled:
+                            offset = 0
+                            while offset < frames:
+                                count = min(frames - offset, len(self._sonic_waveform) - self._sonic_position)
+                                outdata[offset:offset + count, out_channel] = self._sonic_waveform[self._sonic_position:self._sonic_position + count]
+                                self._sonic_position = (self._sonic_position + count) % len(self._sonic_waveform)
+                                offset += count
+                        elif self._probe_position is not None:
+                            count = min(frames, len(waveform) - self._probe_position)
+                            outdata[:count, out_channel] = waveform[self._probe_position:self._probe_position + count]
+                            self._probe_position += count
+                            if self._probe_position >= len(waveform):
+                                self._probe_position = None
+                        self._live_delay.push(indata[:, mic_channel])
+                        self._monitor_frames += int(frames)
+                    microphone = indata[:, mic_channel]
+                    self._live_audio.push(outdata[:, out_channel], microphone, _flag_bits(flags))
+                except Exception:
+                    outdata.fill(0)
+                    self._live_delay.invalidate("audio_callback_error")
+                    raise backend.CallbackAbort
+
+            stream = backend.Stream(device=(config["device"], config["device"]), samplerate=fs,
+                                    channels=(mic_channel + 1, out_channel + 1), dtype="float32",
+                                    blocksize=0, latency="low", callback=callback,
+                                    finished_callback=finished.set)
+            with self._lock:
+                self._stream = stream
+            if not math.isfinite(float(stream.samplerate)) or abs(float(stream.samplerate) - fs) > 1e-6:
+                raise RuntimeError("Audio stream sample rate does not match the selected rate")
+            if not self._stop.is_set():
+                with stream:
+                    self._update(message="Live microphone. No room audio is saved.")
+                    while not self._stop.wait(.05):
+                        if finished.is_set():
+                            raise RuntimeError("Live audio stream stopped unexpectedly")
+                        with self._lock:
+                            if self._sonic_enabled and self._sonic_next_start < self._monitor_frames + fs:
+                                self._live_delay.add_probe(self._sonic_waveform, self._sonic_plan, self._sonic_next_start)
+                                self._sonic_next_start += len(self._sonic_waveform)
+                    stream.abort()
+            self._update(state="completed", message="Live monitor stopped. No room audio was saved.", progress=0)
+        except Exception as error:
+            if self._stop.is_set():
+                self._update(state="completed", message="Live monitor stopped. No room audio was saved.")
+            else:
+                self._live_delay.invalidate(str(error))
+                self._update(state="failed", message=str(error), errors=[f"{type(error).__name__}: {error}"])
+        finally:
+            if stream is not None:
+                stream.close()
+            with self._lock:
+                self._stream = None
+                self._probe_pending = False
+                self._probe_position = None
+                self._sonic_enabled = False
 
     def _capture(self, waveform, config, on_started=None):
         backend = self._audio()
@@ -275,6 +447,10 @@ class AudioEngine:
                     recording[position:position + count] = indata[:count, inputs]
                 for channel in outputs:
                     outdata[:count, channel] = waveform[position:position + count]
+                microphone = indata[:count, inputs[0]] if duplex else None
+                self._live_audio.push(waveform[position:position + count], microphone, _flag_bits(flags))
+                if duplex:
+                    self._live_delay.push(microphone, indata[:count, inputs[1]] if len(inputs) > 1 else None)
                 log[log_position] = (position, float(timing.inputBufferAdcTime) if duplex else 0.0,
                                      float(timing.outputBufferDacTime), int(frames), _flag_bits(flags))
                 log_position += 1
@@ -490,6 +666,8 @@ class AudioEngine:
                 plan["event_coordinates"] = "zero-based samples in saved padded output_float32.npy"
             if not np.isfinite(waveform).all() or np.any(np.abs(waveform) >= 1):
                 raise RuntimeError("Generated waveform is non-finite or clipped")
+            if config["action"] == "calibrate":
+                self._live_delay.add_probe(waveform, plan, 0)
             manifest.update(stimulus=plan, output_sample_count=len(waveform),
                             output_duration_seconds=len(waveform) / config["sample_rate"],
                             output_float32_sha256=hashlib.sha256(waveform.tobytes()).hexdigest(),
@@ -522,6 +700,8 @@ class AudioEngine:
                     else:
                         manifest["wav_export_capture_skipped"] = "Non-finite input retained in raw float array for diagnosis; no WAV export"
                 manifest["transport"] = transport
+                if not transport["valid_transport"]:
+                    self._live_delay.invalidate(", ".join(transport["transport_errors"]))
                 manifest["errors"].extend(transport["transport_errors"])
                 if not self._stop.is_set():
                     self._update(progress=0.97, message="Checking capture and waveform alignment.")

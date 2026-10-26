@@ -6,15 +6,29 @@
   <meta name="description" content="Explore the planned sound and neural recording connections.">
   <title>Connections · SONIC</title>
   <link rel="stylesheet" href="model-3d.css">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
   <script defer src="app.js"></script>
   <script type="module" src="model-3d.js?v=2"></script>
 </head>
 <body>
   <main>
+    <h1>Connections</h1>
+    <nav class="tabs" aria-label="Port and cable views">
+      <button type="button" data-view="overview" aria-pressed="true">Whole setup</button>
+      <button type="button" data-view="sound" aria-pressed="false">Sound &amp; microphone</button>
+      <button type="button" data-view="analog" aria-pressed="false">iD14 → ECU</button>
+      <button type="button" data-view="control" aria-pressed="false">ECU → MCU</button>
+      <button type="button" data-view="adapter" aria-pressed="false">Adapter close-up</button>
+    </nav>
+    <section class="workspace" aria-labelledby="view-title">
+      <div class="visual-heading"><div><p class="sr-only" id="view-kicker">01 / THE COMPLETE PATH</p><h2 id="view-title">The whole setup</h2></div><div class="legend"><span><i class="key solid"></i> Sound / recording</span><span><i class="key dashed"></i> Proposed cable</span></div></div>
+      <div class="visual-wrap"><svg id="diagram" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">Recording system connection overview</title><desc id="svg-desc">Select a view to inspect connections.</desc></svg></div>
+      <div class="description" aria-live="polite"><div><span class="mini-label">Function</span><p id="function"></p></div><div><span class="mini-label">Sources</span><p id="sources"></p></div></div>
+    </section>
+
     <section class="model-section" aria-labelledby="model-heading">
-      <div class="model-heading"><h1 id="model-heading">Connections</h1><p>Drag to rotate · scroll or pinch to zoom</p></div>
+      <div class="model-heading"><h2 id="model-heading">3D view</h2><p>Drag to rotate · scroll or pinch to zoom</p></div>
       <div class="model-controls" role="group" aria-label="3D connection view">
         <button type="button" class="model-btn" data-3d="all" aria-pressed="true">Whole setup</button>
         <button type="button" class="model-btn" data-3d="sound" aria-pressed="false">Sound path</button>
@@ -26,22 +40,6 @@
       <div class="model-notes" aria-live="polite"><p id="model-detail">iD14 sound, proposed microphone feed, ECU link and neural recording.</p><p><span class="legend-item"><span class="model-swatch audio"></span>Sound</span> <span class="legend-item"><span class="model-swatch proposed"></span>Proposed mic cable</span> <span class="legend-item"><span class="model-swatch control"></span>Neural</span></p></div>
       <p class="model-qualification">Illustrative models · Mic cable untested; confirm wiring before connecting · ECU 30 kHz sampling cannot faithfully capture 17–27 kHz waveforms.</p>
     </section>
-
-    <details class="flat-details">
-      <summary>Ports &amp; cables</summary>
-      <nav class="tabs" aria-label="Port and cable views">
-        <button type="button" data-view="overview" aria-pressed="true">Whole setup</button>
-        <button type="button" data-view="sound" aria-pressed="false">Sound &amp; microphone</button>
-        <button type="button" data-view="analog" aria-pressed="false">iD14 → ECU</button>
-        <button type="button" data-view="control" aria-pressed="false">ECU → MCU</button>
-        <button type="button" data-view="adapter" aria-pressed="false">Adapter close-up</button>
-      </nav>
-      <section class="workspace" aria-labelledby="view-title">
-        <div class="visual-heading"><div><p class="sr-only" id="view-kicker">01 / THE COMPLETE PATH</p><h2 id="view-title">The whole setup</h2></div><div class="legend"><span><i class="key solid"></i> Sound / recording</span><span><i class="key dashed"></i> Proposed cable</span></div></div>
-        <div class="visual-wrap"><svg id="diagram" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">Recording system connection overview</title><desc id="svg-desc">Select a view to inspect connections.</desc></svg></div>
-        <div class="description" aria-live="polite"><div><span class="mini-label">Function</span><p id="function"></p></div><div><span class="mini-label">Sources</span><p id="sources"></p></div></div>
-      </section>
-    </details>
   </main>
 </body>
 </html>

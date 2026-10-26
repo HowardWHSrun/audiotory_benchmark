@@ -132,7 +132,7 @@ try {
     selectedView = view;
     buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset['3d']===view)));
     controls.target.set(...cfg.target);
-    const fit=view==='all'?1.45 : view==='analog'||view==='control'?1.35 : view==='sound'?1.15 : .94;
+    const fit=view==='all'?1.75 : view==='analog'||view==='control'?1.35 : view==='sound'?1.15 : .94;
     const mobileScale=Math.max(1, fit/camera.aspect);
     camera.position.set(...cfg.camera).sub(controls.target).multiplyScalar(mobileScale).add(controls.target);
     controls.update();

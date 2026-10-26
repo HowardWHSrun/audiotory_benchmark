@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A visual guide to the planned Audient and SpikeGadgets recording connections.">
-  <title>Recording connections · SONIC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Explore the planned sound and neural recording connections.">
+  <title>Connections · SONIC</title>
   <link rel="stylesheet" href="model-3d.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
   <script defer src="app.js"></script>
-  <script type="module" src="model-3d.js"></script>
+  <script type="module" src="model-3d.js?v=2"></script>
 </head>
 <body>
-  <header class="topbar"><a href="../">SONIC <span>/</span> Our experiment</a><span class="toplabel">CONNECTION GUIDE</span></header>
   <main>
-    <div class="intro"><div><p class="eyebrow">AUDITORY RECORDING / PLANNED SETUP</p><h1>Follow the signal.</h1><p class="lede">A port-by-port map of the sound and neural recording setup.</p></div><div class="intro-note"><span class="dot"></span> Illustrative guide <br><span class="muted">Confirm labels on your units</span></div></div>
-
     <section class="model-section" aria-labelledby="model-heading">
-      <div class="model-heading"><div><p class="eyebrow">INTERACTIVE / 3D</p><h2 id="model-heading">Explore the connections</h2></div><p>Drag to rotate · scroll or pinch to zoom</p></div>
+      <div class="model-heading"><h1 id="model-heading">Connections</h1><p>Drag to rotate · scroll or pinch to zoom</p></div>
       <div class="model-controls" role="group" aria-label="3D connection view">
         <button type="button" class="model-btn" data-3d="all" aria-pressed="true">Whole setup</button>
         <button type="button" class="model-btn" data-3d="sound" aria-pressed="false">Sound path</button>
@@ -26,48 +23,25 @@
         <button type="button" class="model-btn" data-3d="adapter" aria-pressed="false">Adapter</button>
       </div>
       <div id="model-canvas" class="model-canvas" role="img" aria-label="Interactive 3D model of the iD14, ECU and MCU with microphone, speakers, computer and neural hardware."><p id="model-status">Loading 3D model…</p></div>
-      <div class="model-notes" aria-live="polite"><p id="model-detail"><strong>Whole setup.</strong> iD14 sound, proposed microphone feed, ECU link and neural recording are shown together.</p><p><span class="model-swatch audio"></span>Sound &amp; computer <span class="model-swatch proposed"></span>Proposed mic cable <span class="model-swatch control"></span>ECU / neural</p></div>
-      <p class="model-qualification">Illustrative models, not manufacturer CAD or measured dimensions. Compare socket labels with your units; the iD14 → ECU connection is proposed and untested. The 2D views below remain available.</p>
+      <div class="model-notes" aria-live="polite"><p id="model-detail">iD14 sound, proposed microphone feed, ECU link and neural recording.</p><p><span class="legend-item"><span class="model-swatch audio"></span>Sound</span> <span class="legend-item"><span class="model-swatch proposed"></span>Proposed mic cable</span> <span class="legend-item"><span class="model-swatch control"></span>Neural</span></p></div>
+      <p class="model-qualification">Illustrative models · Mic cable untested; confirm wiring before connecting · ECU 30 kHz sampling cannot faithfully capture 17–27 kHz waveforms.</p>
     </section>
 
-    <nav class="tabs" aria-label="Connection views">
-      <button type="button" data-view="overview" aria-pressed="true">Whole setup</button>
-      <button type="button" data-view="sound" aria-pressed="false">Sound &amp; microphone</button>
-      <button type="button" data-view="analog" aria-pressed="false">iD14 → ECU</button>
-      <button type="button" data-view="control" aria-pressed="false">ECU → MCU</button>
-      <button type="button" data-view="adapter" aria-pressed="false">Adapter close-up</button>
-    </nav>
-
-    <section class="workspace" aria-labelledby="view-title">
-      <div class="visual-heading"><div><p class="eyebrow" id="view-kicker">01 / THE COMPLETE PATH</p><h2 id="view-title">The whole setup</h2></div><div class="legend"><span><i class="key solid"></i> Sound / recording path</span><span><i class="key dashed"></i> Proposed cable</span></div></div>
-      <div class="visual-wrap"><svg id="diagram" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">Recording system connection overview</title><desc id="svg-desc">Select a view to inspect connections.</desc></svg></div>
-      <p class="visual-foot"><span>SCHEMATIC · NOT TO SCALE</span><span>FRONT AND REAR VIEWS ARE LABELED</span></p>
-      <div class="description" aria-live="polite"><div><span class="mini-label">FUNCTION</span><p id="function"></p></div><div><span class="mini-label">SOURCE / CHANGES</span><p id="sources"></p></div></div>
-    </section>
-
-    <details class="reference-photos" open>
-      <summary>Compare with the actual devices <span>Manufacturer photos · layouts may vary</span></summary>
-      <div class="photo-grid">
-        <figure><a href="https://audient.github.io/audient-documentation-site/id14/front-panel/" target="_blank" rel="noopener noreferrer"><img src="https://audient.github.io/audient-documentation-site/assets/images/id14-rear-3q-hires-76aed271b88f074d7094b2a547ff04f6.webp" alt="Audient iD14 MkII seen from behind, showing USB, line outputs and microphone inputs" loading="lazy"></a><figcaption><strong>iD14 MkII · rear</strong><span>Photo: <a href="https://audient.github.io/audient-documentation-site/id14/front-panel/" target="_blank" rel="noopener noreferrer">Audient</a></span></figcaption></figure>
-        <figure><a href="https://spikegadgets.com/products/ecu/" target="_blank" rel="noopener noreferrer"><img src="https://spikegadgets.com/wp-content/uploads/2023/11/ECU_front.jpg" alt="SpikeGadgets ECU front panel with Ain1 and other SMA sockets" loading="lazy"></a><figcaption><strong>ECU · front</strong><span>Photo: <a href="https://spikegadgets.com/products/ecu/" target="_blank" rel="noopener noreferrer">SpikeGadgets</a></span></figcaption></figure>
-        <figure><a href="https://spikegadgets.com/products/ecu/" target="_blank" rel="noopener noreferrer"><img src="https://spikegadgets.com/wp-content/uploads/2023/11/ECU_back.jpg" alt="SpikeGadgets ECU rear panel with MCU connection" loading="lazy"></a><figcaption><strong>ECU · rear</strong><span>Photo: <a href="https://spikegadgets.com/products/ecu/" target="_blank" rel="noopener noreferrer">SpikeGadgets</a></span></figcaption></figure>
-        <figure><a href="https://spikegadgets.com/products/main-control-unit/" target="_blank" rel="noopener noreferrer"><img src="https://spikegadgets.com/wp-content/uploads/2023/11/MCU_back.jpg" alt="SpikeGadgets MCU rear panel with separate ECU and headstage sockets" loading="lazy"></a><figcaption><strong>MCU · rear</strong><span>Photo: <a href="https://spikegadgets.com/products/main-control-unit/" target="_blank" rel="noopener noreferrer">SpikeGadgets</a></span></figcaption></figure>
-      </div>
+    <details class="flat-details">
+      <summary>Ports &amp; cables</summary>
+      <nav class="tabs" aria-label="Port and cable views">
+        <button type="button" data-view="overview" aria-pressed="true">Whole setup</button>
+        <button type="button" data-view="sound" aria-pressed="false">Sound &amp; microphone</button>
+        <button type="button" data-view="analog" aria-pressed="false">iD14 → ECU</button>
+        <button type="button" data-view="control" aria-pressed="false">ECU → MCU</button>
+        <button type="button" data-view="adapter" aria-pressed="false">Adapter close-up</button>
+      </nav>
+      <section class="workspace" aria-labelledby="view-title">
+        <div class="visual-heading"><div><p class="sr-only" id="view-kicker">01 / THE COMPLETE PATH</p><h2 id="view-title">The whole setup</h2></div><div class="legend"><span><i class="key solid"></i> Sound / recording</span><span><i class="key dashed"></i> Proposed cable</span></div></div>
+        <div class="visual-wrap"><svg id="diagram" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">Recording system connection overview</title><desc id="svg-desc">Select a view to inspect connections.</desc></svg></div>
+        <div class="description" aria-live="polite"><div><span class="mini-label">Function</span><p id="function"></p></div><div><span class="mini-label">Sources</span><p id="sources"></p></div></div>
+      </section>
     </details>
-
-    <section class="cables" aria-labelledby="cables-title">
-      <div class="cables-intro"><p class="eyebrow">WHAT TO GET</p><h2 id="cables-title">The missing connection</h2><p>You said you do not yet have the cable from the iD14 to the ECU. This is one proposed three-part assembly; confirm compatibility before ordering.</p></div>
-      <ol class="parts-list">
-        <li><span class="part-number">01</span><div><strong>¼-inch TRS breakout</strong><p>TRS male → two ¼-inch TS female sockets. Plug into iD14 3L; use the black tip / hot branch. Leave the red ring / cold branch open.</p><a href="https://hosatech.com/products/analog-audio/stereo-breakouts/hosa-breakouts/ypp-117/" target="_blank" rel="noopener noreferrer">Hosa YPP-117 ↗</a></div><span class="part-status">PROPOSED</span></li>
-        <li><span class="part-number">02</span><div><strong>¼-inch TS to BNC adapter</strong><p>¼-inch TS male → BNC female. Plugs into the breakout’s black socket.</p><a href="https://www.pomonaelectronics.com/products/adapters/coaxial/bnc-f-14-in-phone-plug" target="_blank" rel="noopener noreferrer">Pomona 1297 ↗</a></div><span class="part-status">PROPOSED</span></li>
-        <li><span class="part-number">03</span><div><strong>BNC to SMA coaxial cable</strong><p>BNC male → standard-polarity SMA male. Connect BNC to the adapter and SMA to ECU front Ain1.</p><a href="https://www.datapro.net/products/sma-to-bnc-antenna-cable.html" target="_blank" rel="noopener noreferrer">Example cable ↗</a></div><span class="part-status">PROPOSED</span></li>
-      </ol>
-      <p class="cable-warning"><strong>Before ordering or connecting:</strong> Confirm the ECU’s SMA center / shell assignment, input impedance, grounding, and safe signal levels with SpikeGadgets; then verify continuity and check for clipping. This cable assembly has not been tested on your setup.</p>
-      <details class="other-cables"><summary>Other cables to check on your bench</summary><p>Your microphone, iD14, and speakers are already connected, but we have not inspected their exact cable routing. Check for the M50 XLR cable, the iD14 USB-C cable, and the speaker connections. Also check the ECU-to-MCU HDMI cable and the MCU-to-computer Ethernet cable; these may be included with the respective units. Confirm the required headstage cable and any HCU / commutator against your exact hardware.</p><p><a href="https://spikegadgets.com/products/ecu/" target="_blank" rel="noopener noreferrer">ECU kit details</a> · <a href="https://spikegadgets.com/products/main-control-unit/" target="_blank" rel="noopener noreferrer">MCU kit details</a></p></details>
-    </section>
-
-    <section class="bottom" aria-labelledby="notes-title"><div><p class="eyebrow">BEFORE RECORDING</p><h2 id="notes-title">A few things to check.</h2></div><div class="notes"><div><span>01</span><p><strong>Set the mixer.</strong> Send microphone input 1 to Cue A, pan left, and assign Cue A to outputs 3/4. Keep mic monitoring out of the speaker mix.</p></div><div><span>02</span><p><strong>Confirm the cable.</strong> The output 3L → Ain1 adapter is a proposal. Confirm the ECU SMA pinout, input impedance and safe levels with SpikeGadgets before connecting; then check continuity and clipping.</p></div><div><span>03</span><p><strong>Check the bandwidth.</strong> The ECU samples analog at up to 30 kHz, so it cannot faithfully capture 17–27 kHz carriers. A pre-ECU envelope circuit needs suitable filtering and a measured delay; alternatively use faster synchronized acquisition.</p></div></div></section>
-    <footer>Built for planning · No hardware connection or timing measurement is implied <a href="../">Back to our experiment ↗</a></footer>
   </main>
 </body>
 </html>

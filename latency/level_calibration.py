@@ -1,6 +1,7 @@
 """Measure separated-tone microphone pickup; this does not establish acoustic SPL.
 
-No gain corrections are applied. Recordings stay in the ignored .work directory.
+Optional experimental corrections only attenuate individual output tones.
+Recordings stay in the ignored .work directory.
 """
 from __future__ import annotations
 
@@ -18,7 +19,7 @@ FREQUENCIES_HZ = (2000, 4000, 6000, 8000, 9000, 10500, 17000,
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def make_probe(peak_dbfs=-48.0):
+def make_probe(peak_dbfs=-48.0, corrections=None):
     """14 separated 0.6 s tones, with 0.5 s gaps and 20 ms ramps."""
     if not np.isfinite(peak_dbfs) or not -80 <= peak_dbfs <= -36:
         raise ValueError('Digital peak must be between -80 and -36 dBFS.')
@@ -33,14 +34,64 @@ def make_probe(peak_dbfs=-48.0):
     parts = [np.zeros(FS, dtype=np.float32)]
     events = []
     cursor = FS
+    if corrections is not None and set(corrections) != set(FREQUENCIES_HZ):
+        raise ValueError('Corrections must specify every test frequency exactly once.')
     for freq in FREQUENCIES_HZ:
+        correction = 0.0 if corrections is None else float(corrections[freq])
+        if not np.isfinite(correction) or correction > 0:
+            raise ValueError('Corrections must be finite, non-positive attenuation values.')
         t = np.arange(duration) / FS
-        parts.append((amplitude * envelope * np.sin(2 * np.pi * freq * t)).astype(np.float32))
-        events.append({'frequency_hz': freq, 'start_sample': cursor, 'stop_sample': cursor + duration})
+        parts.append((amplitude * 10 ** (correction / 20) * envelope * np.sin(2 * np.pi * freq * t)).astype(np.float32))
+        events.append({'frequency_hz': freq, 'start_sample': cursor, 'stop_sample': cursor + duration,
+                       'attenuation_db': correction})
         parts.append(np.zeros(gap, dtype=np.float32))
         cursor += duration + gap
     parts.append(np.zeros(FS, dtype=np.float32))
     return np.concatenate(parts), events
+
+
+def derive_attenuations(analysis, manifest, peak_dbfs):
+    """Attenuate stronger tones to the weakest measured pickup; never boost output.
+
+    Accept a screened baseline or earlier corrected run. For an earlier corrected
+    run, add further attenuation to each recorded prior setting. This does not
+    correct microphone response or establish SPL at the animal's ears.
+    """
+    if manifest.get('native_playback_and_capture_performed') is not True:
+        raise ValueError('Baseline must be an actual completed playback and capture.')
+    if manifest.get('sample_rate_hz') != FS:
+        raise ValueError('Baseline must use 96 kHz.')
+    base_peak = manifest.get('digital_peak_dbfs')
+    if isinstance(base_peak, bool) or not isinstance(base_peak, (int, float)) or not np.isfinite(base_peak) or peak_dbfs != base_peak:
+        raise ValueError('Corrected digital peak must equal the baseline digital peak.')
+    baseline_events = manifest.get('events', [])
+    if len(baseline_events) != len(FREQUENCIES_HZ) or [e.get('frequency_hz') for e in baseline_events] != list(FREQUENCIES_HZ):
+        raise ValueError('Baseline must contain the exact ordered set of frequencies.')
+    previous = {}
+    for e in baseline_events:
+        attenuation = e.get('attenuation_db', 0)
+        if (isinstance(attenuation, bool) or not isinstance(attenuation, (int, float))
+                or not np.isfinite(attenuation) or attenuation > 0):
+            raise ValueError('Prior attenuation must be a finite, non-positive value.')
+        previous[e['frequency_hz']] = float(attenuation)
+    if manifest.get('correction_source') is None and any(previous.values()):
+        raise ValueError('Uncorrected baseline cannot contain previous attenuation.')
+    if analysis.get('reference_hz') != 2000 or analysis.get('microphone_clipping_screen_failed') is not False or analysis.get('transport', {}).get('valid_transport') is not True:
+        raise ValueError('Baseline transport, clipping and 2 kHz reference must pass.')
+    rows = analysis.get('rows', [])
+    if len(rows) != len(FREQUENCIES_HZ):
+        raise ValueError('Baseline must have exactly one row for every test frequency.')
+    levels = {}
+    for row in rows:
+        freq = row.get('frequency_hz')
+        value = row.get('relative_to_2khz_db')
+        if freq not in FREQUENCIES_HZ or freq in levels or row.get('passes_background_screen') is not True or isinstance(value, bool) or not isinstance(value, (float, int)) or not np.isfinite(value):
+            raise ValueError('Every frequency needs one finite, screened baseline measurement.')
+        levels[freq] = float(value)
+    if set(levels) != set(FREQUENCIES_HZ) or abs(levels[2000]) > 1e-6:
+        raise ValueError('The baseline reference or frequency list is invalid.')
+    target = min(levels.values())
+    return {freq: float(previous[freq] + target - levels[freq]) for freq in FREQUENCIES_HZ}
 
 
 def sinusoid_amplitude(samples, frequency):
@@ -103,14 +154,38 @@ def main():
     parser.add_argument('--peak-dbfs', type=float, default=-48.)
     parser.add_argument('--generate-only', action='store_true')
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--correction-analysis', type=Path,
+                        help='Apply attenuation-only corrections from a screened previous run analysis.json')
     args = parser.parse_args()
     try:
-        waveform, events = make_probe(args.peak_dbfs)
+        corrections = None
+        correction_source = None
+        if args.correction_analysis:
+            analysis_path = args.correction_analysis.resolve()
+            analysis = json.loads(analysis_path.read_text(encoding='utf-8'))
+            manifest_path = analysis_path.parent / 'manifest.json'
+            baseline_manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+            corrections = derive_attenuations(analysis, baseline_manifest, args.peak_dbfs)
+            baseline_waveform = np.load(analysis_path.parent / 'output_float32.npy', allow_pickle=False)
+            previous_attenuations = {e['frequency_hz']: float(e.get('attenuation_db', 0))
+                                     for e in baseline_manifest['events']}
+            expected_waveform, _ = make_probe(args.peak_dbfs, previous_attenuations)
+            if (hashlib.sha256(baseline_waveform.tobytes()).hexdigest() != baseline_manifest.get('output_sha256')
+                    or not np.array_equal(baseline_waveform, expected_waveform)):
+                raise ValueError('Baseline waveform hash or per-tone source levels do not match its manifest.')
+            correction_source = {'analysis_sha256': hashlib.sha256(analysis_path.read_bytes()).hexdigest(),
+                                 'manifest_sha256': hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+                                 'baseline_output_sha256': baseline_manifest['output_sha256'],
+                                 'baseline_digital_peak_dbfs': baseline_manifest['digital_peak_dbfs'],
+                                 'method': 'cumulatively attenuate all frequencies to weakest measured relative pickup',
+                                 'attenuation_db_by_frequency_hz': {str(k): v for k, v in corrections.items()}}
+        waveform, events = make_probe(args.peak_dbfs, corrections)
         folder = args.output or ROOT / '.work/latency/runs' / (datetime.now().strftime('%Y%m%d-%H%M%S-%f') + '-separated-levels')
         folder.mkdir(parents=True, exist_ok=False)
         np.save(folder / 'output_float32.npy', waveform)
         manifest = {'utc': datetime.now(timezone.utc).isoformat(), 'sample_rate_hz': FS,
                     'digital_peak_dbfs': args.peak_dbfs, 'events': events,
+                    'correction_source': correction_source,
                     'output_sha256': hashlib.sha256(waveform.tobytes()).hexdigest(),
                     'native_playback_and_capture_performed': False,
                     'position_and_gain': 'not recorded; obtain from operator', 'raw_audio_publication_authorized': False}
@@ -127,6 +202,9 @@ def main():
             manifest.update(device=device, native_playback_and_capture_performed=True, transport=transport)
             (folder / 'manifest.json').write_text(json.dumps(manifest, indent=2, allow_nan=False) + '\n')
             result = analyze(recording, events, transport)
+            if corrections is not None:
+                result['limitations'][-1] = 'Experimental attenuation was applied; response remains uncorrected for microphone calibration.'
+                result['correction_source'] = correction_source
             (folder / 'analysis.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
             print(json.dumps(result, indent=2, allow_nan=False))
         print(f'Local data: {folder.resolve()}. Keep raw room audio outside Git.')

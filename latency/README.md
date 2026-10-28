@@ -48,7 +48,15 @@ With the speaker and microphone connected, monitoring disabled, and output and m
 .work/latency-venv/bin/python -m latency.level_calibration --peak-dbfs -48
 ```
 
-The local ignored `.work/latency/runs/` folder retains the generated waveform, metadata, capture and analysis; room audio must remain private. `--generate-only` generates a probe without accessing audio devices. The analysis compares the microphone fundamental at each frequency with the immediately preceding silent window and reports its relative pickup to 2 kHz only when the signal passes a background screen and the transport and clipping screens pass. It assumes playback-to-capture offset below 150 ms. This is an uncorrected full-chain measurement, **not dB SPL**, a perceptual loudness measurement, or evidence of clean ultrasonic reproduction. A 10 dB tone/background separation is only a screening check. No frequency gains are applied or recommended automatically. Absolute SPL calibration, the microphone's individual response, fixed geometry, distortion and verification with actual 10 ms pips remain necessary before using gains in an experiment.
+The local ignored `.work/latency/runs/` folder retains the generated waveform, metadata, capture and analysis; room audio must remain private. `--generate-only` generates a probe without accessing audio devices. The analysis compares the microphone fundamental at each frequency with the immediately preceding silent window and reports its relative pickup to 2 kHz only when the signal passes a background screen and the transport and clipping screens pass. It assumes playback-to-capture offset below 150 ms. This is an uncorrected full-chain measurement, **not dB SPL**, a perceptual loudness measurement, or evidence of clean ultrasonic reproduction. A 10 dB tone/background separation is only a screening check. The default command applies no frequency corrections. Absolute SPL calibration, the microphone's individual response, fixed geometry, distortion and verification with actual 10 ms pips remain necessary before using gains in an experiment.
+
+For an **experimental attenuation-only** follow-up, pass a screened previous run's `analysis.json` and use the same base `--peak-dbfs` as that run. Its `manifest.json` and generated `output_float32.npy` must remain alongside the analysis. For example, replace `RUN_FOLDER` with the specific local run:
+
+```sh
+.work/latency-venv/bin/python -m latency.level_calibration --peak-dbfs -36 --correction-analysis .work/latency/runs/RUN_FOLDER/analysis.json
+```
+
+This derives non-positive, cumulative per-tone gains to reduce stronger recorded components toward the weakest. It does not raise any tone above the base digital peak. The new capture must be checked: playback nonlinearity, motion and acoustic nulls can make a calculated correction inaccurate. Each iteration reduces the overall output level and may approach the noise floor. This option modifies only the separated-tone probe, not the SONIC pip player. Do not treat its corrections as qualified pip or animal-experiment settings. See the [October 28 verification record](../docs/verification/2026-10-28_Separated_Tone_Equalization.md).
 
 ## Basic speaker playback and microphone recording
 

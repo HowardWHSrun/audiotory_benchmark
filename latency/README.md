@@ -40,6 +40,16 @@ The analysis commands below access saved files only and never import an audio ba
 
 The figure script additionally requires Matplotlib. The pip command writes private per-run analysis beside the local captures; the public pip JSON retains sanitized aggregates, quality controls, raw-file hashes and source provenance. Raw room audio stays outside Git.
 
+## Preliminary separated-tone level check
+
+With the speaker and microphone connected, monitoring disabled, and output and microphone gain held fixed, run the following to play 14 separated 0.6-second tones and record the first two Audient inputs at 96 kHz. The default is deliberately low at **−48 dBFS digital peak**, which does not specify acoustic volume; stop playback if the output is unexpectedly loud. Record the microphone position and hardware settings separately.
+
+```sh
+.work/latency-venv/bin/python -m latency.level_calibration --peak-dbfs -48
+```
+
+The local ignored `.work/latency/runs/` folder retains the generated waveform, metadata, capture and analysis; room audio must remain private. `--generate-only` generates a probe without accessing audio devices. The analysis compares the microphone fundamental at each frequency with the immediately preceding silent window and reports its relative pickup to 2 kHz only when the signal passes a background screen and the transport and clipping screens pass. It assumes playback-to-capture offset below 150 ms. This is an uncorrected full-chain measurement, **not dB SPL**, a perceptual loudness measurement, or evidence of clean ultrasonic reproduction. A 10 dB tone/background separation is only a screening check. No frequency gains are applied or recommended automatically. Absolute SPL calibration, the microphone's individual response, fixed geometry, distortion and verification with actual 10 ms pips remain necessary before using gains in an experiment.
+
 ## Basic speaker playback and microphone recording
 
 Simultaneous playback through the Audient and Earthworks recording on input 1 were verified on October 23, 2026. Howard heard the locally synthesized melody, and three sections of the microphone recording matched it with 0.948–0.954 normalized waveform correlation after a 200–1600 Hz bandpass. The capture had no transport warnings or clipping. This verifies the basic sound path; it does not establish a delay, calibrated level, or full frequency response. See the [verification record](../docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json).

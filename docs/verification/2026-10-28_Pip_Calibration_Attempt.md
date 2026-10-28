@@ -50,6 +50,22 @@ At 16:20:27 the same −36 dBFS uncorrected pip sequence was recorded with the s
 
 The muted measurements were at or near local background and were not independently aligned; report them as control amplitudes, not calibrated levels. The reductions support a speaker-output-dependent contribution at 22.4 and 27 kHz, but do not establish purity, distinguish every possible coupling path, or solve the large short-window variability. Muted 27 kHz phase values were similar in three low-level windows, which is compatible with residual coherent coupling but is not evidence enough to identify the source. The muted control does not validate the attempted equalization or restore an adequate 2 kHz signal-to-noise margin.
 
+## Lateral-position check
+
+At 16:22:24 Howard reported moving the microphone approximately 5 mm sideways and restoring speaker output after the muted control; exact displacement and orientation were not independently measured. The same uncorrected digital pip waveform at a −36 dBFS nominal peak was used. Both captures passed transport, digital-clipping, common-alignment and all stated narrowband trial screens. The relative frequency-specific values below use the 2 kHz reference within each respective capture.
+
+| Frequency (kHz) | Before move relative dB | After move relative dB | Change dB |
+| ---: | ---: | ---: | ---: |
+| 2 | +0.0 | +0.0 | +0.0 |
+| 8 | -27.2 | -27.1 | +0.1 |
+| 20.9 | -33.8 | -33.2 | +0.6 |
+| 22.4 | -54.2 | -50.2 | +4.1 |
+| 24 | -28.0 | -28.4 | -0.3 |
+| 25.8 | -30.4 | -30.3 | +0.1 |
+| 27 | -58.0 | -52.5 | +5.5 |
+
+The three post-move central-window 22.4 kHz levels were −93.9, −95.9 and −94.6 dBFS, a 2.0 dB span. The corresponding 27 kHz levels were −100.9, −95.7 and −97.0 dBFS, a 5.2 dB span. Improvement with the reported position change is consistent with a position-dependent acoustic field, but the small set of observations does not exclude other path variation. These values remain uncorrected relative microphone fundamental measurements, not verified free-field SPL or equal loudness. The 27 kHz component remains more than 50 dB below the 2 kHz component in this capture; the prior attenuation-to-weakest approach failed its noise and alignment screens and is not yet a qualified 14-frequency solution.
+
 ## Data provenance
 
 The following hashes identify local files; the raw room audio and source arrays remain private in ignored `.work` storage.
@@ -89,3 +105,10 @@ The following hashes identify local files; the raw room audio and source arrays 
 - `output_float32.npy` SHA-256 `c7f40a0cbbe4dca02d937f37d704148fb2e6fd498dfa49f1b06d028047beb91a`
 - `capture.npz` SHA-256 `219152be79a6df8d43c3d2934b9fba3e2421ca49b6bf6761b08f46298fe76fc0`
 - `analysis.json` SHA-256 `eace207a155d16d03d384fb0f0f77e3283007c1fc7b20fe49b6be0b6afce7608`
+
+### 20261028-162224-697932-isolated-corrected-pips
+
+- `manifest.json` SHA-256 `2eef12c7da8ca461f83db45c5469f12bcf2c9da1329f35b0175d2b3816460536`
+- `output_float32.npy` SHA-256 `c7f40a0cbbe4dca02d937f37d704148fb2e6fd498dfa49f1b06d028047beb91a`
+- `capture.npz` SHA-256 `ea90696c02349abb49933fb5dbb7986d0524ed4b72d7d31e0ca4d204712a9c27`
+- `analysis.json` SHA-256 `9bc71d1ae724d148ccbd028a7c9685e7e2961b66c6b1b25b8f8221fc2cc086d8`

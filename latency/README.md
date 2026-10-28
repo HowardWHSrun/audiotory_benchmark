@@ -72,7 +72,17 @@ For an uncorrected diagnostic baseline, `--flat-output` plays all frequencies at
 
 ### Experimental consecutive-pip preview
 
-Double-click [Play Corrected SONIC Pips.command](../Play%20Corrected%20SONIC%20Pips.command) to play and record a seven-second reconstructed consecutive-pip preview with one second of silence before and after. This is an opt-in experimental profile, not the default player or an animal-ready protocol. Its local measured profile is `.work/latency/runs/20261028-162448-897345-isolated-corrected-pips`, and playback stops with an explanation if the profile is absent. Keep input monitoring off. The profile applies to the measured speaker, reported approximately 10 cm microphone position, orientation and the then-current hardware gains; changes require remeasurement. Digital base is fixed at −36 dBFS; the script verifies the isolated-pip profile and records the profile hashes, but that does not establish calibrated SPL or generalization to a different animal-ear geometry.
+Double-click [Play Corrected SONIC Pips.command](../Play%20Corrected%20SONIC%20Pips.command) to play and record a seven-second reconstructed consecutive-pip preview with one second of silence before and after. This is an opt-in experimental profile, not the default player or an animal-ready protocol. Its local measured profile is `.work/latency/runs/20261028-164420-221594-isolated-corrected-pips`, and playback stops with an explanation if the profile is absent. Keep input monitoring off. The profile applies to the measured speaker, reported approximately 10 cm microphone position after two approximately 5 mm lateral moves, orientation and the then-current hardware gains; changes require remeasurement. Digital base is fixed at −36 dBFS; the script verifies the isolated-pip profile and records the profile hashes, but that does not establish calibrated SPL or generalization to a different animal-ear geometry. The updated profile has been checked in one consecutive-pip preview, not qualified for an experiment.
+
+### Conditional 10 ms pip level estimate
+
+For an offline, conditional estimate of the central 6 ms tone component in an existing isolated-pip capture, retain the saved microphone reference, generated waveform, capture, metadata and analysis in their original ignored `.work/latency/runs/` folders. For example:
+
+```sh
+.work/latency-venv/bin/python -m latency.pip_spl_estimate --reference .work/latency/runs/20261028-155950-720092-calibrator-reference --pips .work/latency/runs/20261028-164420-221594-isolated-corrected-pips --reference-spl 114 --assume-same-gain --assume-calibrator-fit
+```
+
+The explicit flags state assumptions rather than verifying gain, routing or the physical seal. The user's reported REED R8090 114 dB reference establishes only a provisional near-1 kHz anchor; the command assumes flat microphone response unless supplied a validated, normalized frequency-response file. It reanalyses the captured pip waveform and screens saved source and transport evidence. Its results are central-component equivalent-sine estimates, **not measured whole-pip RMS SPL, standardized peak-equivalent SPL, or an uncertainty bound**. Broadband background, 1 kHz pressure-to-free-field differences, microphone response, orientation, ultrasonic distortion and the intended ear geometry remain to be resolved. See the [conditional reference and pip estimates](../docs/verification/2026-10-28_Conditional_Pip_SPL_Estimates.md).
 
 ## Basic speaker playback and microphone recording
 

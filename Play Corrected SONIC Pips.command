@@ -7,7 +7,7 @@ if [[ ! -x .work/latency-venv/bin/python ]]; then
   exit 1
 fi
 
-profile_dir='.work/latency/runs/20261028-162448-897345-isolated-corrected-pips'
+profile_dir='.work/latency/runs/20261028-164420-221594-isolated-corrected-pips'
 for profile_file in manifest.json analysis.json output_float32.npy; do
   if [[ ! -r "$profile_dir/$profile_file" ]]; then
     print -u2 "The measured local correction profile is missing: $profile_dir/$profile_file"

@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 from latency.pip_level_check import FS, FREQUENCIES_HZ, N, make_pips, analyze, derive_pip_corrections
 from latency.stimulus import _envelope
+from latency.sonic_check import make_stimulus
 
 
 class PipLevelChecks(unittest.TestCase):
@@ -64,6 +65,8 @@ class PipLevelChecks(unittest.TestCase):
             self.assertAlmostEqual(corrected[2000],-12,delta=.1)
             self.assertAlmostEqual(corrected[4000],0,delta=.1)
             self.assertTrue(all(x<=0 for x in corrected.values()))
+            reused,_=derive_pip_corrections(folder,reuse_profile=True)
+            self.assertEqual(reused,gains)
             # Background-qualified recordings can still be too variable to
             # support a stable correction. Three dB is only a local screen.
             unstable=json.loads(json.dumps(analysis))
@@ -75,6 +78,23 @@ class PipLevelChecks(unittest.TestCase):
             (folder/'analysis.json').write_text(json.dumps(analysis))
             with self.assertRaises(ValueError):
                 derive_pip_corrections(folder)
+
+    def test_continuous_preview_profile_is_opt_in_and_attenuation_only(self):
+        unmodified,plan=make_stimulus(preview=True,peak_dbfs=-36)
+        gains={f:0.0 for f in FREQUENCIES_HZ}
+        gains[4000]=-6.0
+        adjusted,adj_plan=make_stimulus(preview=True,peak_dbfs=-36,pip_gains=gains)
+        self.assertNotIn('experimental_pip_attenuation_db_by_frequency_hz',plan)
+        self.assertEqual(adj_plan['tone_count'],plan['tone_count'])
+        for old,new in zip(plan['events'],adj_plan['events']):
+            a=FS+old['output_start']; b=FS+old['output_stop']
+            np.testing.assert_allclose(adjusted[a:b],unmodified[a:b]*10**(gains[old['frequency_hz']]/20),atol=1e-8)
+            self.assertEqual(new['attenuation_db'],gains[old['frequency_hz']])
+        with self.assertRaises(ValueError):
+            make_stimulus(preview=True,peak_dbfs=-24,pip_gains=gains)
+        gains[4000]=1.0
+        with self.assertRaises(ValueError):
+            make_stimulus(preview=True,peak_dbfs=-36,pip_gains=gains)
 
 if __name__=='__main__':
     unittest.main()

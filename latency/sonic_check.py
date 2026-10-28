@@ -16,12 +16,26 @@ from .music_check import FS, ROOT, _input_summary, write_pcm24
 from .stimulus import make_sonic_e_block
 
 
-def make_stimulus(preview=False, peak_dbfs=-24):
-    """Return the padded output and original, unmodified reconstruction plan."""
+def make_stimulus(preview=False, peak_dbfs=-24, pip_gains=None):
+    """Return padded reconstructed pips with optional experimental attenuation."""
     block, plan = make_sonic_e_block(
         samplerate=FS, tones_per_frequency=50 if preview else 600,
         peak_dbfs=peak_dbfs,
     )
+    if pip_gains is not None:
+        from .pip_level_check import FREQUENCIES_HZ
+        if peak_dbfs != -36 or set(pip_gains) != set(FREQUENCIES_HZ):
+            raise ValueError('An experimental pip profile requires the -36 dBFS base and all frequencies.')
+        for event in plan['events']:
+            gain=float(pip_gains[event['frequency_hz']])
+            if not np.isfinite(gain) or gain > 0:
+                raise ValueError('All pip profile gains must be finite and non-positive.')
+            block[event['output_start']:event['output_stop']] *= 10**(gain/20)
+            event['attenuation_db']=gain
+        plan['observed_digital_peak']=float(np.max(np.abs(block)))
+        plan['experimental_pip_attenuation_db_by_frequency_hz']={str(f):float(pip_gains[f]) for f in FREQUENCIES_HZ}
+        plan['local_choices'].append('Experimental measured isolated-pip attenuation applied by frequency; consecutive playback unqualified.')
+        plan['limitations'].append('Isolated-pip correction does not establish equal levels in the consecutive sequence or an animal protocol.')
     waveform = np.concatenate((np.zeros(FS, dtype=np.float32), block,
                                np.zeros(FS, dtype=np.float32)))
     return waveform, plan
@@ -41,9 +55,18 @@ def main():
                         help="Digital peak, -60 to -18 dBFS (default -24); acoustic SPL is uncalibrated")
     parser.add_argument("--output", type=Path,
                         help="New output folder; default ignored .work/latency/runs/timestamp-sonic-e14-full or preview")
+    parser.add_argument("--pip-correction-from", type=Path,
+                        help="Experimentally apply the validated profile of a prior isolated-pip run; requires --peak-dbfs -36")
     args = parser.parse_args()
     try:
-        waveform, plan = make_stimulus(args.preview, args.peak_dbfs)
+        gains=None
+        profile=None
+        if args.pip_correction_from:
+            if args.peak_dbfs != -36:
+                raise ValueError('Experimental pip correction requires --peak-dbfs -36.')
+            from .pip_level_check import derive_pip_corrections
+            gains,profile=derive_pip_corrections(args.pip_correction_from,reuse_profile=True)
+        waveform, plan = make_stimulus(args.preview, args.peak_dbfs, gains)
         scope = "preview" if args.preview else "full"
         folder = args.output or ROOT / ".work/latency/runs" / (
             datetime.now().strftime("%Y%m%d-%H%M%S") + f"-sonic-e14-{scope}")
@@ -62,6 +85,7 @@ def main():
             "observed_digital_peak_fs": float(np.max(np.abs(waveform))),
             "acoustic_spl_calibrated": False,
             "frequency_response_qualified": False,
+            "experimental_pip_profile": profile,
             "stimulus_plan_file": "stimulus-plan.json",
             "stimulus_plan_describes": "unpadded generated block; sound_played in that plan describes generation only",
             "block_duration_seconds": plan["duration_seconds"],
@@ -86,6 +110,7 @@ def main():
                 "High-frequency pips may be inaudible; audibility does not establish speaker bandwidth.",
                 "Digital peak does not establish acoustic SPL. Keep the established hardware volume and microphone gain.",
                 "Repeated pure tones are not analyzed here for timing; no latency result is inferred.",
+                "Any experimental pip correction applies only the isolated-pip profile; consecutive playback is not qualified.",
             ],
         }
         _write_json(folder / "manifest.json", manifest)

@@ -71,7 +71,7 @@ def make_pips(gains, repeats=3):
     return wave, events
 
 
-def derive_pip_corrections(folder):
+def derive_pip_corrections(folder, reuse_profile=False):
     """Attenuate previously measured isolated pips to the quietest component.
 
     All frequencies must have passed. Never boost any tone, and verify the saved
@@ -134,8 +134,10 @@ def derive_pip_corrections(folder):
     if set(levels)!=set(FREQUENCIES_HZ):
         raise ValueError('Every frequency requires three valid measured pips.')
     target=min(levels.values())
-    corrected={f:float(gains[f]+target-levels[f]) for f in FREQUENCIES_HZ}
-    provenance={'method':'cumulative pip-specific attenuation to weakest measured frequency',
+    corrected=({f:float(gains[f]) for f in FREQUENCIES_HZ} if reuse_profile else
+               {f:float(gains[f]+target-levels[f]) for f in FREQUENCIES_HZ})
+    provenance={'method':('reuse validated isolated-pip attenuation profile' if reuse_profile else
+                          'cumulative pip-specific attenuation to weakest measured frequency'),
                 'manifest_sha256':hashlib.sha256((folder/'manifest.json').read_bytes()).hexdigest(),
                 'analysis_sha256':hashlib.sha256((folder/'analysis.json').read_bytes()).hexdigest(),
                 'source_output_sha256':manifest['output_sha256'],

@@ -1,0 +1,45 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.78in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\definecolor{riceblue}{HTML}{124E78}
+\begin{document}
+{\Large\bfseries Sound Calibration: Bench Report}\\[-2pt]
+{\small Rice Auditory Benchmarking \quad | \quad 28 October 2026}
+
+\textbf{Purpose.} Make the measured sound components of 14 short tone pips more consistent across frequency. This is a bench test, not a validated animal stimulus.
+
+\textbf{Setup and method.} An Audient iD14 played reconstructed 10 ms pips with 2 ms ramps at 96 kHz; an Earthworks M50 recorded the sound. Howard reported the microphone about 10 cm from the speaker, then moved it sideways twice by about 5 mm to improve high-frequency pickup. The final correction applies to that position and the same gain settings. A REED R8090 calibrator, reported set to 114 dB and fitted using an adapter, supplied a near-1 kHz reference.
+
+The software reduces the digital level of stronger frequencies to bring their measured microphone components closer together; no frequency was boosted above the $-36$ dBFS base. The numbers below are \emph{not} the digital playback settings.
+
+\textbf{Results.} Two seven-second tests each presented 700 consecutive pips. The spread across the 14 frequency-group medians was \textbf{1.13 dB} and \textbf{0.77 dB}. These compare the recorded frequency component in the middle 6 ms, not every individual pip.
+
+\begin{center}
+\small
+\begin{tabular}{@{}rr@{\hspace{1.8em}}rr@{}}
+\toprule
+Frequency & Estimate & Frequency & Estimate\\
+(kHz) & (dB) & (kHz) & (dB)\\
+\midrule
+2    & 41.3 & 18.2 & 41.6\\
+4    & 42.1 & 19.5 & 41.8\\
+6    & 41.6 & 20.9 & 41.6\\
+8    & 41.6 & 22.4 & 41.7\\
+9    & 41.7 & 24   & 41.7\\
+10.5 & 41.9 & 25.8 & 41.7\\
+17   & 41.6 & 27   & 41.9\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\footnotesize\textit{Table:} Repeat-run frequency-group median estimates for the central component, expressed as equivalent-sine levels relative to 20 $\mu$Pa. Values assume the nominal 114 dB reference, unchanged linear gain and flat microphone response. Decimal places aid comparison; accuracy is not established.}
+
+\textbf{Limits and next steps.} These estimates are \textbf{not validated whole-pip dB SPL or standardized peak-equivalent SPL}. Background sound was substantial in full 10 ms windows; the microphone's individual electronic response, distortion and measurement uncertainty have not been verified. Equal measured pressure also does not establish equal perceived loudness. Recheck the reference, define the pip-level measurement, and repeat at the intended sheep-ear position before experimental use.
+
+{\footnotesize Evidence: \href{https://howardwhsrun.github.io/audiotory_benchmark/web/calibration/}{Sound calibration page} and \href{https://github.com/HowardWHSrun/audiotory_benchmark/blob/main/docs/verification/2026-10-28_Conditional_Pip_SPL_Estimates.md}{measurement record}.}
+\end{document}

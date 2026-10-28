@@ -22,6 +22,8 @@ N = FS // 100
 RAMP = FS // 500
 SPACING = round(.3 * FS)
 SEARCH = round(.15 * FS)
+# Local screening choice for three within-run pip levels; not an uncertainty bound.
+MAX_TRIAL_SPREAD_DB = 3.0
 
 
 def load_corrections(folder):
@@ -67,6 +69,80 @@ def make_pips(gains, repeats=3):
             events.append({'frequency_hz': freq, 'repeat': trial, 'start_sample': start,
                            'stop_sample': start+N, 'attenuation_db': gain})
     return wave, events
+
+
+def derive_pip_corrections(folder):
+    """Attenuate previously measured isolated pips to the quietest component.
+
+    All frequencies must have passed. Never boost any tone, and verify the saved
+    source and capture screens before using it as a correction reference.
+    """
+    folder = Path(folder)
+    manifest = json.loads((folder / 'manifest.json').read_text())
+    analysis = json.loads((folder / 'analysis.json').read_text())
+    if (manifest.get('native_playback_and_capture_performed') is not True
+        or manifest.get('sample_rate_hz') != FS
+        or manifest.get('digital_base_peak_dbfs') != -36
+        or analysis.get('transport', {}).get('valid_transport') is not True
+        or analysis.get('microphone_clipping_screen_failed') is not False
+        or analysis.get('timing_reference', {}).get('valid') is not True):
+        raise ValueError('Pip reference capture, timing, clipping, transport or sample rate is invalid.')
+    events = manifest.get('events', [])
+    if len(events) != 3 * len(FREQUENCIES_HZ):
+        raise ValueError('Pip reference must contain three pips per frequency.')
+    gains = {}
+    for e in events:
+        frequency=e.get('frequency_hz')
+        try:
+            gain=float(e['attenuation_db'])
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError('Pip reference has invalid gain.') from error
+        if frequency not in FREQUENCIES_HZ or not np.isfinite(gain) or gain > 0:
+            raise ValueError('Pip reference has an invalid or positive gain.')
+        if frequency in gains and gain != gains[frequency]:
+            raise ValueError('Pip reference has inconsistent gains.')
+        gains[frequency]=gain
+    expected, expected_events = make_pips(gains)
+    if events != expected_events:
+        raise ValueError('Pip reference event sequence does not match generated pips.')
+    wave=np.load(folder / 'output_float32.npy', allow_pickle=False)
+    if (not np.array_equal(wave,expected)
+        or hashlib.sha256(wave.tobytes()).hexdigest() != manifest.get('output_sha256')):
+        raise ValueError('Pip reference waveform does not match the manifest.')
+    levels={}
+    for row in analysis.get('rows', []):
+        frequency=row.get('frequency_hz')
+        value=row.get('median_central_fundamental_peak_dbfs')
+        if (frequency not in FREQUENCIES_HZ or frequency in levels
+            or row.get('passed_trials') != 3
+            or isinstance(value,bool) or not isinstance(value,(int,float)) or not np.isfinite(value)
+            or row.get('relative_to_2khz_db') is None):
+            raise ValueError('Every frequency requires three valid measured pips.')
+        trials=row.get('pip_trials', [])
+        if len(trials)!=3 or any(t.get('passes_background_screen') is not True for t in trials):
+            raise ValueError('Every frequency requires three background-qualified trials.')
+        trial_levels=[t.get('central_fundamental_peak_dbfs') for t in trials]
+        if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not np.isfinite(v) for v in trial_levels):
+            raise ValueError('Every qualifying trial must have a finite measured level.')
+        if abs(float(np.median(trial_levels))-float(value)) > 1e-6:
+            raise ValueError('The pip median does not agree with its three measured trials.')
+        spread=max(trial_levels)-min(trial_levels)
+        if spread > MAX_TRIAL_SPREAD_DB:
+            raise ValueError(f'{frequency:g} Hz pip levels vary {spread:.2f} dB across trials; '
+                             f'local screen allows at most {MAX_TRIAL_SPREAD_DB:g} dB.')
+        levels[frequency]=float(value)
+    if set(levels)!=set(FREQUENCIES_HZ):
+        raise ValueError('Every frequency requires three valid measured pips.')
+    target=min(levels.values())
+    corrected={f:float(gains[f]+target-levels[f]) for f in FREQUENCIES_HZ}
+    provenance={'method':'cumulative pip-specific attenuation to weakest measured frequency',
+                'manifest_sha256':hashlib.sha256((folder/'manifest.json').read_bytes()).hexdigest(),
+                'analysis_sha256':hashlib.sha256((folder/'analysis.json').read_bytes()).hexdigest(),
+                'source_output_sha256':manifest['output_sha256'],
+                'target_mic_peak_dbfs':target,
+                'maximum_within_frequency_trial_spread_db':MAX_TRIAL_SPREAD_DB,
+                'attenuation_db_by_frequency_hz':{str(f):corrected[f] for f in FREQUENCIES_HZ}}
+    return corrected, provenance
 
 
 def _max_matched(segment, freq):
@@ -149,11 +225,22 @@ def analyze(recording, events, transport):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--reference',type=Path,required=True)
+    source=parser.add_mutually_exclusive_group(required=True)
+    source.add_argument('--reference',type=Path)
+    source.add_argument('--flat-output',action='store_true',
+                        help='Uncorrected pips: all frequencies at -36 dBFS digital peak')
+    source.add_argument('--pip-reference',type=Path,
+                        help='Derive attenuation-only correction from a screened prior pip run')
     parser.add_argument('--generate-only',action='store_true')
     args=parser.parse_args()
     try:
-        gains, provenance=load_corrections(args.reference)
+        if args.flat_output:
+            gains={f:0.0 for f in FREQUENCIES_HZ}
+            provenance={'method':'uncorrected flat digital peak output'}
+        elif args.pip_reference:
+            gains, provenance=derive_pip_corrections(args.pip_reference)
+        else:
+            gains, provenance=load_corrections(args.reference)
         wave, events=make_pips(gains)
         folder=ROOT/'.work/latency/runs'/(datetime.now().strftime('%Y%m%d-%H%M%S-%f')+'-isolated-corrected-pips')
         folder.mkdir(parents=True,exist_ok=False)

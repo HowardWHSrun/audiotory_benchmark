@@ -58,6 +58,16 @@ For an **experimental attenuation-only** follow-up, pass a screened previous run
 
 This derives non-positive, cumulative per-tone gains to reduce stronger recorded components toward the weakest. It does not raise any tone above the base digital peak. The new capture must be checked: playback nonlinearity, motion and acoustic nulls can make a calculated correction inaccurate. Each iteration reduces the overall output level and may approach the noise floor. This option modifies only the separated-tone probe, not the SONIC pip player. Do not treat its corrections as qualified pip or animal-experiment settings. See the [October 28 verification record](../docs/verification/2026-10-28_Separated_Tone_Equalization.md).
 
+## Isolated 10 ms pip level check
+
+A separate diagnostic can apply the measured, attenuation-only steady-tone correction to 14 reconstructed SONIC E14 10 ms pips, using three isolated presentations per frequency at 96 kHz. It verifies the correction source and waveform, and never raises a tone above the prior −36 dBFS digital base. Replace `RUN_FOLDER` with the screened steady-tone correction run folder, retain the same microphone/speaker geometry and gains, and disable input monitoring before playback:
+
+```sh
+.work/latency-venv/bin/python -m latency.pip_level_check --reference .work/latency/runs/RUN_FOLDER
+```
+
+`--generate-only` generates the probe without recording or playback. A native run plays the 42 isolated pips and records the Audient inputs, keeping raw audio in ignored `.work/`. The analysis finds a common alignment from the current capture's 2 kHz pips, checks timing stability, and measures the matched-frequency component over each pip's central 2–8 ms window against a silent baseline. It requires three qualifying trials per frequency and suppresses relative levels for bad transport, clipped input, invalid timing, weak background separation, or an unavailable 2 kHz reference. This screen is not broadband pip SPL; frequency-dependent delays, ultrasonic fidelity, harmonics, microphone response, acoustic geometry and absolute uncertainty remain unverified. Isolated pips do not reproduce consecutive-pip ringing and the diagnostic does not modify the SONIC player. See the [October 28 pip check](../docs/verification/2026-10-28_Isolated_10ms_Pip_Levels.md).
+
 ## Basic speaker playback and microphone recording
 
 Simultaneous playback through the Audient and Earthworks recording on input 1 were verified on October 23, 2026. Howard heard the locally synthesized melody, and three sections of the microphone recording matched it with 0.948–0.954 normalized waveform correlation after a 200–1600 Hz bandpass. The capture had no transport warnings or clipping. This verifies the basic sound path; it does not establish a delay, calibrated level, or full frequency response. See the [verification record](../docs/verification/2026-10-23_Audient_Basic_Playback_Recording.json).
